@@ -1,0 +1,49 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Script.Services;
+using System.Web.Services;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+using BLL = IB.Progress.BLL;
+
+public partial class Capa_Presentacion_Home_Principal : System.Web.UI.Page
+{
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        BLL.ImagenHome cIH = new BLL.ImagenHome();
+        try
+        {
+            this.imghome.Src = "data:image/jpeg;base64," + Convert.ToBase64String(cIH.obtenerImagen());
+        }
+        catch (Exception)
+        {
+            PieMenu.sErrores = "msgerr = 'Ocurrió un error obteniendo la imagen de la HOME';";
+        }
+        finally
+        {
+            cIH.Dispose();
+        }
+    }
+
+    /// <summary>
+    /// Envío de correo a 
+    /// </summary>
+    /// <param name="texto"></param>
+    [WebMethod]
+    [ScriptMethod(ResponseFormat = ResponseFormat.Json)]
+    public static void enviarCorreo(string texto)
+    {
+        try
+        {
+            Correo.Enviar("PROGRESS: Correo a la oficina técnica", texto, "otrrhh@ibermatica.com");
+        }
+        catch (Exception ex)
+        {
+
+            throw ex;
+        }
+    }
+}

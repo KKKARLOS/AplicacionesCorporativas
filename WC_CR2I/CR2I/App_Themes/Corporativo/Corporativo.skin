@@ -1,0 +1,37 @@
+<%--
+Default skin template. The following skins are provided as examples only.
+
+1. Named control skin. The SkinId should be uniquely defined because
+   duplicate SkinId's per control type are not allowed in the same theme.
+
+<asp:GridView runat="server" SkinId="gridviewSkin" BackColor="White" >
+   <AlternatingRowStyle BackColor="Blue" />
+</asp:GridView>
+
+2. Default skin. The SkinId is not defined. Only one default 
+   control skin per control type is allowed in the same theme.
+
+<asp:Image runat="server" ImageUrl="~/images/image1.jpg" />
+--%>
+<asp:Label Runat="server" CssClass="texto" />
+<asp:Label Runat="server" CssClass="textoCal" SkinID="Calendario" />
+<asp:Label Runat="server" CssClass="textoCalFinde" SkinID="CalendarioFinde" />
+<asp:Label Runat="server" CssClass="textoCalFes" SkinID="CalendarioFestivo" />
+<asp:Label Runat="server" CssClass="enlace" SkinID="enlace" />
+<asp:Label Runat="server" CssClass="Horas" SkinID="Horas" />
+
+<asp:TextBox Runat="server" CssClass="txtM" />
+<asp:TextBox Runat="server" CssClass="txtMultiM" SkinID="Multi" />
+<asp:TextBox Runat="server" CssClass="txtNumM" SkinID="Numero" />
+<asp:TextBox Runat="server" CssClass="txtL" SkinID="Label" />
+
+<asp:DropDownList Runat="server" CssClass="combo" />
+
+<asp:Table Runat="server" CssClass="texto" />
+<asp:Table Runat="server" CssClass="textoCal" SkinID="Calendario" />
+<asp:TableCell Runat="server" CssClass="TDCal" SkinID="TDCal" />
+
+<asp:CheckBoxList runat="server" CssClass="texto" />
+<asp:CheckBox Runat="server" CssClass="check" />
+
+<asp:RadioButtonList runat="server" CssClass="radio texto" SkinID="Radio" />

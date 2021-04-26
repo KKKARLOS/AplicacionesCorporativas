@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuracion>
+  
+  <solicitudquirofano>
+    
+    <asa>
+      <bloque>ANESTESIA QUIRÓFANO</bloque>
+      <observacion>INFINT002</observacion>
+    </asa>
+    
+    <lateralidad>
+      <bloque>BLOQUE_LATERALIDAD</bloque>
+      <observacion1>INFINT003</observacion1>
+      <observacion2>LATERA002</observacion2>
+      <observacion3>LATERA003</observacion3>
+    </lateralidad>
+
+    <anestesia>
+      <bloque>ANESTESIA QUIRÓFANO</bloque>
+      <observacion>INFINT001</observacion>
+    </anestesia>
+
+    <unidadtransfusion>
+      <bloque>SOLICITUD TRANSFUSIONES</bloque>
+      <observacion>INFINT011</observacion>
+    </unidadtransfusion>
+
+    <gruposanguineo>
+      <bloque>SOLICITUD TRANSFUSIONES</bloque>
+      <observacion>HL7_00573</observacion>
+    </gruposanguineo>
+
+    <factorrh>
+      <bloque>SOLICITUD TRANSFUSIONES</bloque>
+      <observacion>HL7_00573.2</observacion>
+    </factorrh>
+
+    <rxquirofano>
+      <bloque>SOLICITUD REQUERIMIENTOS QUIRÓFANO</bloque>
+      <observacion>INFINT023</observacion>
+    </rxquirofano>
+
+    <anatomiapatologica>
+      <bloque>SOLICITUD REQUERIMIENTOS QUIRÓFANO</bloque>
+      <observacion>INFINT021</observacion>
+    </anatomiapatologica>
+
+    <uci>
+      <bloque>SOLICITUD RECURSOS POST QUIRURGICOS</bloque>
+      <observacion>INFINT031</observacion>
+    </uci>
+
+    <reanimacion>
+      <bloque>SOLICITUD RECURSOS POST QUIRURGICOS</bloque>
+      <observacion>INFINT032</observacion>
+    </reanimacion>    
+    
+  </solicitudquirofano>
+
+  <realizacionquirofano>
+
+    <asa>
+      <bloque>ANESTESIA QUIRÓFANO</bloque>
+      <observacion>INFINT002</observacion>
+    </asa>
+
+    <lateralidad>
+      <bloque>BLOQUE_LATERALIDAD</bloque>
+      <observacion1>INFINT003</observacion1>
+      <observacion2>LATERA002</observacion2>
+      <observacion3>LATERA003</observacion3>
+    </lateralidad>
+
+    <anestesia>
+      <bloque>ANESTESIA QUIRÓFANO</bloque>
+      <observacion>INFINT001</observacion>
+    </anestesia>
+
+    <unidadtransfusion>
+      <bloque>TRANSFUSIONES</bloque>
+      <observacion>INFINT011</observacion>
+    </unidadtransfusion>
+
+    <gruposanguineo>
+      <bloque>TRANSFUSIONES</bloque>
+      <observacion>HL7_00573</observacion>
+    </gruposanguineo>
+
+    <factorrh>
+      <bloque>TRANSFUSIONES</bloque>
+      <observacion>HL7_00573.2</observacion>
+    </factorrh>
+
+    <rxquirofano>
+      <bloque>REQUERIMIENTOS EN QUIRÓFANO</bloque>
+      <observacion>INFINT023</observacion>
+    </rxquirofano>
+
+    <anatomiapatologica>
+      <bloque>REQUERIMIENTOS EN QUIRÓFANO</bloque>
+      <observacion>INFINT021</observacion>
+    </anatomiapatologica>
+
+    <uci>
+      <bloque>RECURSOS POST OPERATORIOS</bloque>
+      <observacion>INFINT031</observacion>
+    </uci>
+
+    <reanimacion>
+      <bloque>RECURSOS POST OPERATORIOS</bloque>
+      <observacion>INFINT032</observacion>
+    </reanimacion>
+
+    <diagnostico>
+      <bloque>DIAGNOSTICO QUIRÓFANO</bloque>
+      <observacion>DIAG01</observacion>
+    </diagnostico>
+
+    <informe>
+      <observacion>INFINT099</observacion>
+    </informe>
+
+  </realizacionquirofano>
+  
+</configuracion>

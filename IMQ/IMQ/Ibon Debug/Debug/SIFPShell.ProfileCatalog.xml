@@ -1,0 +1,33 @@
+﻿<SolutionProfile xmlns="http://schemas.microsoft.com/pag/cab-profile/2.0">
+	<Section Name="Layout">
+		<Modules>
+			<ModuleInfo AssemblyFile="Infrastructure.Layout.dll" />
+		</Modules>
+	</Section>
+	<Section Name="Services">
+		<Dependencies>
+			<Dependency Name="Layout" />
+		</Dependencies>
+		<Modules>
+			<ModuleInfo AssemblyFile="Infrastructure.Module.dll" />
+			<ModuleInfo AssemblyFile="SIFP.Common.dll" />
+			<ModuleInfo AssemblyFile="SIFP.Common.UI.dll" />
+      <ModuleInfo AssemblyFile="ReportingFoundationalModule.dll" />
+		</Modules>
+	</Section>
+	<Section Name="Apps">
+		<Dependencies>
+			<Dependency Name="Layout" />
+			<Dependency Name="Services" />
+		</Dependencies>
+		<Modules>
+      <ModuleInfo AssemblyFile="IB.IMQ.AdministrativeModule.dll" />
+      <ModuleInfo AssemblyFile="SII.HCD.ApplicationModule.dll" />
+      <ModuleInfo AssemblyFile="SII.HCD.ProtocolsModule.dll" /> 
+      <ModuleInfo AssemblyFile="SII.HCD.AssistanceModule.dll" />
+      <ModuleInfo AssemblyFile="SII.HCD.AdministrativeModule.dll" />
+      <ModuleInfo AssemblyFile="SII.HCD.BackOfficeModule.dll" />
+      <ModuleInfo AssemblyFile="SII.SecurityModule.dll" />      
+    </Modules>
+	</Section>
+</SolutionProfile>

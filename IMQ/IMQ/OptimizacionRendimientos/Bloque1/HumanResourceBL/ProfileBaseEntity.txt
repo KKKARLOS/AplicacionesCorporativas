@@ -1,0 +1,82 @@
+using System;
+using System.IO;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
+using SII.Framework.Interfaces;
+using SII.HCD.Common.Entities;
+
+namespace SII.HCD.BackOffice.Entities
+{
+    [DataContract()]
+    [Serializable()]
+    public class ProfileBaseEntity : IStatusEntity, ICloneable
+    {
+        #region Properties
+        [DataMember()]
+        public int ID { get; set; }
+        [DataMember()]
+        public int CategoryID { get; set; }
+        [DataMember]
+        public string CategoryName { get; set; }
+        [DataMember()]
+        public string Code { get; set; }
+        [DataMember()]
+        public string Name { get; set; }
+
+        //[DataMember]
+        //public bool InUse { get; set; }
+
+        [DataMember]
+        public StatusEnum Status { get; set; }
+        [DataMember]
+        public DateTime LastUpdated { get; set; }
+        [DataMember]
+        public string ModifiedBy { get; set; }
+
+        [DataMember()]
+        public Int64 DBTimeStamp { get; set; }
+        [DataMember()]
+        public EditStatusEntity EditStatus { get; set; }
+
+        #endregion
+
+        #region Constructors
+        public ProfileBaseEntity() : this(0, 0, String.Empty, String.Empty, String.Empty, StatusEnum.Active, DateTime.Now, string.Empty, 0) { }
+
+        public ProfileBaseEntity(int id, int categoryID, string categoryName, string code, string name, StatusEnum status, DateTime lastUpdated, string modifiedBy, Int64 dbTimeStamp)
+        {
+            ID = id;
+            CategoryID = categoryID;
+            CategoryName = categoryName;
+            Code = code;
+            Name = name;
+            Status = status;
+            LastUpdated = lastUpdated;
+            ModifiedBy = modifiedBy;
+            DBTimeStamp = dbTimeStamp;
+            EditStatus = new EditStatusEntity();
+        }
+        #endregion
+
+        #region ICloneable Members
+        public virtual object Clone()
+        {
+            object clonedObject = null;
+            MemoryStream ms = new MemoryStream();
+            try
+            {
+                BinaryFormatter bf = new BinaryFormatter();
+
+                bf.Serialize(ms, this);
+                ms.Seek(0, SeekOrigin.Begin);
+                clonedObject = bf.Deserialize(ms);
+            }
+            finally
+            {
+                ms.Close();
+            }
+            return clonedObject;
+        }
+        #endregion
+    }
+}

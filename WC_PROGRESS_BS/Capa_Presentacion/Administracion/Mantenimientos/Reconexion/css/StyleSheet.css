@@ -1,0 +1,23 @@
+﻿#lisEvaluadores {
+    max-height:38vh;
+    overflow:auto;
+}
+
+#lisEvaluadores li {
+    cursor:pointer;
+}
+
+
+#btnObtener {
+    margin-top: 27px;
+    margin-left: 15px;
+}
+
+@media only screen and (min-device-width:768px) and (max-device-width:1024px) {
+    #btnObtener {    
+        margin-left: 3px;
+    }
+
+
+  
+}

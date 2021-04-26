@@ -1,0 +1,279 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="HomeOld.aspx.cs" Inherits="Capa_Presentacion_Home" %>
+
+<%@ Register  Src="~/uc/CabeceraMenu.ascx" TagName="CabeceraMenu" TagPrefix="cb1" %>
+<%@ Register  Src="~/uc/PieMenu.ascx" TagName="PieMenu" TagPrefix="cb1" %>
+<%@ Register  Src="~/uc/uc_Session.ascx" TagName="mensajeSession" TagPrefix="uc3" %>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HOME PROGRESS</title>
+    <script>
+    </script>
+    <style>
+    
+/*HOME BOCETO VÍCTOR*/
+#imgDibujoProgress {
+    /*margin-left: 25%;*/
+}
+
+.ML10 {
+    margin-left: 10px;
+}
+
+#panelOpciones {
+    min-width: 34%;
+    position:absolute;
+    top:100px;
+    right:10px;
+    z-index: 1000;    
+}
+
+.panel-default > .panel-heading {
+    background-color: #E8E8E8 !important;    
+}
+
+.panel-default  .panel-body {
+    background-color: #F1F1F1 !important;
+}
+
+.sombraTexto {
+    text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+    font-size: 40px;
+    font-weight: bold;
+    font-family: 'Arial Black';
+    color:black;
+    text-decoration:none;
+}
+
+.sombraTexto:hover, .sombraTexto:visited, .sombraTexto:link {
+    color:black;
+    text-decoration:none;
+}
+
+.bajorrelieve {
+    background: #deb027;
+    font-size: 40px;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0px 3px 3px rgba(255,255,255,0.5),0px -1px 1px rgba(0,0,0,.3);
+}
+
+</style>
+</head>
+    
+<body>
+    <uc3:mensajeSession ID="MensajeSession" runat="server" />
+    <cb1:CabeceraMenu runat="server" ID="CabeceraMenu"></cb1:CabeceraMenu>
+    <br />
+    <br class="hidden-xs" />
+    <br class="hidden-xs" />
+
+
+    <div class="container">
+        <div class="row">
+            <div class="hidden-xs col-md-offset-2">
+                <img id="imgDibujoProgress" src="../../imagenes/DibujoProgress.png" class="img-responsive" />
+            </div>
+
+            <br class="visible-xs" /><br class="visible-xs" /><br class="visible-xs" />
+            <br class="visible-xs" /><br class="visible-xs" /><br class="visible-xs" />
+            <br class="visible-xs" /><br class="visible-xs" /><br class="visible-xs" />
+            <br class="visible-xs" /><br class="visible-xs" /><br class="visible-xs" />
+            <br class="visible-xs" /><br class="visible-xs" /><br class="visible-xs" />
+            <br class="visible-xs" /><br class="visible-xs" /><br class="visible-xs" />
+
+            <div id="panelOpciones">
+                <div class="panel-group" id="accordion">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">                                
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Decálogo y modelos en blanco
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseOne" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                1. <a href="../../Docs/DECÁLOGOYMODELOENBLANCO/CAU.pdf" target="_blank">Decálogo + Modelo en blanco del Colectivo PROGRESS</a>
+                                <br />
+                                2. <a href="../../Docs/DECÁLOGOYMODELOENBLANCO/Decálogo.pdf" target="_blank">Colectivo ATENCIÓN A USUARIOS</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a href="../../Docs/VALORES_CORPORATIVOS/Valores.pdf" target="_blank">Valores corporativos</a>
+                            </h4>
+                        </div>
+                        <div id="collapseTwo" class="panel-collapse collapse">
+                            <div class="panel-body">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a href="../../Docs/ENTREVISTA/Guia_de_entrevista.pdf" target="_blank">Guía entrevista</a>
+                            </h4>
+                        </div>
+                        <div id="collapseThree" class="panel-collapse collapse">
+                            <div class="panel-body">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">                                
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseFour">Procedimiento</a>  
+                                
+                            </h4>
+                        </div>
+                        <div id="collapseFour" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                1. <a href="../../Docs/PROCEDIMIENTO/Procedimiento_de_evaluación_del_desempeño.pdf" target="_blank">Procedimiento de evaluación del desempeño</a>
+                                <br />
+                                2. <a href="../../Docs/PROCEDIMIENTO/Resumen_del_procedimiento_de_evaluación_del_desempeño.pdf" target="_blank">Resumen del procedimiento de evaluación del desempeño</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                     <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseFive">Ejemplos
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseFive" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <span>Evaluación del desempeño</span><br />
+                                <span class="ML10">1.</span> <a href="../../Docs/EJEMPLOS/Evaluación_del_desempeño_TÉCNICO_DE_SISTEMAS.pdf" target="_blank">Técnico de sistemas</a><br />                                
+                                <span class="ML10">2.</span> <a href="../../Docs/EJEMPLOS/Evaluación_del_desempeño_TÉCNICO_DE_SOPORTE_AL_NEGOCIO.pdf" target="_blank">Técnico de soporte al negocio</a><br />                                
+                                <span class="ML10">3.</span> <a href="../../Docs/EJEMPLOS/Evaluación_del_desempeño_TÉCNICO_DE_DESARROLLO.pdf" target="_blank">Técnico de desarrollo</a><br />                                
+                                <span class="ML10">4.</span> <a href="../../Docs/EJEMPLOS/Evaluación_del_desempeño_CONSULTOR_DE_PROCESOS.pdf" target="_blank">Consultor de procesos</a><br />                                
+                                <span class="ML10">5.</span> <a href="../../Docs/EJEMPLOS/Evaluación_del_desempeño COMERCIAL.pdf" target="_blank">Comercial</a><br />                                
+                                <span class="ML10">6.</span> <a href="../../Docs/EJEMPLOS/Evaluación_del_desempeño_ATENCIÓN_A_USUARIOS.pdf" target="_blank">Atención a usuarios</a><br />                                
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a href="../../Docs/HABILIDADES/Habilidades.pdf" target="_blank">Habilidades</a>
+                            </h4>
+                        </div>
+                        <div id="collapseSix" class="panel-collapse collapse">
+                            <div class="panel-body">
+                            </div>
+                        </div>
+                    </div>
+
+                     <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a href="http://www.intranet.ibermatica/profesionales/DesarrolloProfesional/NivelesCompetenciaRoles.htm" target="_blank">Competencias / Roles</a>
+                            </h4>
+                        </div>
+                        <div id="collapseSeven" class="panel-collapse collapse">
+                            <div class="panel-body">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="modal" href='#modal-correo'>Oficina técnica</a>
+                            </h4>
+                        </div>
+                        <div id="collapseEight" class="panel-collapse collapse">
+                            <div class="panel-body">
+                            </div>
+                        </div>
+                    </div>
+
+
+                    
+
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="hidden-xs col-xs-6 col-xs-offset-2">
+            <a href="http://www.intranet.ibermatica/profesionales/EvaluacionDesempeno/Progress2015Comunicados.htm" target="_blank" class="sombraTexto">Progress</a>                          
+            <span id="anyoactual" class="sombraTexto" runat="server"></span><br />            
+            <span style="margin-left:80px" >Del</span>
+            <span id="desde" runat="server"></span>
+            <span>al</span>
+            <span id="hasta" runat="server"></span>
+        </div>
+
+        <hr />
+
+        <br /><br /><br />
+        <br class="visible-xs" />   <br class="visible-xs" />   <br class="visible-xs" />
+
+        <div class="row">
+            <div class="col-md-12">
+                  <b>DECÁLOGO</b> <br /><br />
+
+                1. <b>No es un trámite.</b> <br />
+                2. Es el contraste entre evaluador y evaluado del desempeño del profesional en un periodo (no es algo puntual). <b>Se analizan los meses anteriores y se enfoca el futuro. </b><br />
+                3. Tiene que ser <b>coherente</b> con otras decisiones vinculadas al futuro del profesional (cambios, formación, potenciales, etc.) <br />
+                4. Recoge <b>evidencias de la aCtitud y aPtitud</b> del profesional<br />
+                5. Si no hay dos profesionales ni dos años idénticos, <b>no habrá dos evaluaciones iguales. </b><br />
+                6. No sirve si solo hablamos de lo que va bien. <br />
+                7. <b>Evaluador</b>, para dar <b>coherencia y objetividad</b> prepara el antes, el durante y el después de la evaluación<br />
+                8. <b>Evaluado</b>, la evaluación es cosa de dos, <b>¡prepáratela! </b><br />
+                9. <b>Mantén actualizado</b> el árbol de dependencias, roles de tu <b>equipo</b>, etc. Aprovecha el momento de la evaluación para comunicar cambios<br />
+                10. Después de cada evaluación piensa: <b>¿ha sido objetiva, coherente, con calidad, aporta valor añadido? </b><br />
+            </div>
+          
+        </div>
+    </div>
+
+
+<!--Modal Correo a oficina técnica -->
+  <div class="modal fade" id="modal-correo">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header btn-primary">
+                    <h4 class="modal-title">Envío de correo a oficina técnica</h4>
+                </div>
+                <div class="modal-body">                    
+                    <div class="row">
+                        <div class="col-xs-8">
+                            <span>Texto a enviar por correo</span><br />
+                            <textarea autofocus id="txtComentario" maxlength="750" style="width: 570px; height: 100px"></textarea>
+                            <br />                            
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <b><button id="btnEnviar" class="btn btn-primary" data-toggle="modal" data-backdrop="static" data-keyboard="false" data-target="#modal-finalizar">Enviar</button></b>
+                    <button id="btnCancelar" style="margin-left:7px" type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>                                            
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+<!-- FIN Modal Correo a oficina técnica-->
+
+
+</body>
+</html>
+
+<cb1:PieMenu runat="server" ID="PieMenu"></cb1:PieMenu>

@@ -1,0 +1,70 @@
+﻿#fldPersonales {
+    width:400px;
+    padding-left:15px;
+    margin-left:10px;
+}
+
+.Titulo{
+    width:80px;
+    margin-top:10px !important;
+}
+
+
+#fldEmpresariales {
+    width:400px;
+    padding-left:15px;
+    margin-left:10px;
+    margin-top:5px;
+}   
+
+#fldCredenciales {
+    width:400px;
+    padding-left:15px;
+    margin-left:10px;
+    margin-top:5px;
+}   
+
+#txtProfesional, #txtProm, #txtPreg, #txtResp, #txtApe1, #txtApe2, #txtNombre, #txtCal {width:300px;}
+
+#txtPass {width:200px;}
+
+#txtCip, #txtTel {width:150px;}
+
+#txtFAlta, #txtfultacc,  #txtFCrea{width:60px;}
+ 
+#divForaneo{margin: 8px 0px 0px 5px;}
+ 
+#fldSexo{
+    width:120px;
+    float:right; 
+    margin-top: -25px;
+    margin-right:11px;
+    height:35px;
+ }
+
+#rdbSexo{
+    cursor:pointer; 
+    width:120px;
+    margin-left:10px;
+}
+
+button{
+    float:left;
+}
+
+#btnGrabar{
+    margin-left:110px;
+    margin-right:40px;
+}
+
+#txtProfesional, #txtProm, #txtPreg, #txtResp, #txtPass,#txtCip, #txtTel, #txtFAlta, #txtfultacc,  #txtFCrea{
+    border-top: #848284 1px solid;
+    border-right: #EEEEEE 1px solid;
+    border-bottom: #EEEEEE 1px solid;
+    border-left: #848284 1px solid;
+    PADDING: 0px 0px 2px 2px;
+    MARGIN: 0px;
+    FONT-SIZE: 11px;
+    FONT-FAMILY: Arial, Helvetica, sans-serif;
+    /*COLOR: #B2B0B0;*/
+}

@@ -1,0 +1,262 @@
+﻿.container {
+    width:970px !important;
+}
+
+/*#tblResultados div.panel-body {
+    height: 500px;
+    overflow: auto;
+}*/
+ /*HEADER FIXED*/
+.header-fixed {
+    width: 100%;
+}
+
+.header-fixed > thead,
+.header-fixed > tbody,
+.header-fixed > thead > tr,
+.header-fixed > tbody > tr,
+.header-fixed > thead > tr > th,
+.header-fixed > tbody > tr > td {
+    display: block;
+}
+
+thead {
+    width: 100%; /* scrollbar is average 1em/16px width, remove it from thead width */
+}
+
+.header-fixed > tbody > tr:after,
+.header-fixed > thead > tr:after {
+    content: ' ';
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+
+/*Alto del contenedor de la tabla (tbody)*/
+.header-fixed > tbody {
+    overflow-y: auto;
+    height: 40vh;
+}
+
+/*COLUMNA 1*/
+
+.header-fixed > tbody > tr > td:nth-child(1) {
+    width: 3%;   
+    float: left;
+}
+
+.header-fixed > thead > tr > th:nth-child(1) {
+    width: 3%;  
+    float: left;
+}
+
+
+.header-fixed > tbody > tr > td:nth-child(2) {
+    width: 33%;   
+    float: left;
+}
+
+.header-fixed > thead > tr > th:nth-child(2) {
+    width: 33%;  
+    float: left;
+}
+
+/*COLUMNA 2*/
+.header-fixed > tbody > tr > td:nth-child(3) {
+    width: 29%;  
+    float: left; 
+}
+
+.header-fixed > thead > tr > th:nth-child(3) {
+    width: 29%;  
+    float: left;
+}
+
+/*COLUMNA 3*/
+.header-fixed > tbody > tr > td:nth-child(4) {
+    width: 15%;  
+    float: left; 
+}
+
+.header-fixed > thead > tr > th:nth-child(4) {
+    width: 15%;  
+    float: left;
+}
+
+/*COLUMNA 4*/
+.header-fixed > tbody > tr > td:nth-child(5) {
+    width: 10%;  
+    float: left; 
+}
+
+.header-fixed > thead > tr > th:nth-child(5) {
+    width: 10%;              
+    float: left;
+}
+
+/*COLUMNA 5*/
+.header-fixed > tbody > tr > td:nth-child(6) {
+    width: 10%;  
+    float: left; 
+}
+
+.header-fixed > thead > tr > th:nth-child(6) {
+    width: 10%;  
+    float: left;
+}
+    /*FIN HEADER FIXED*/
+
+
+
+.panel-primary > .panel-heading {
+    background-color: #428bca !important;
+}
+
+.list-group {
+    margin-top: 8px;
+    max-height: 45vh;
+    overflow: auto;
+    margin-bottom:10px;    
+}
+
+.list-group-item {
+    /*padding:0 15px;*/
+    cursor:pointer;
+}
+
+#tbdEval {
+    cursor:pointer;
+}
+
+.fieldset {
+    margin-top:10px !important;
+}
+
+#lblEvaluado, #lblEvaluador, #lblCR, #lblRol {
+    text-decoration:underline;
+}
+
+#tbdEval > tr.active {
+    background-color:#D8D8D8 !important;
+}
+
+/*Tenemos que heredar la clase activa del padre(tr)*/
+#tbdEval > tr.active > td {
+    background-color:inherit;
+}
+
+input#evaluador, input#evaluado {
+    width:280px;
+}
+
+input#evaluador {
+    margin-left:12px;
+}
+
+#divNivel {
+    margin-right:16px;    
+}
+
+/*input {
+    height:20px;
+}*/
+
+
+input#txtCR, input#txtRol {
+    width: 360px;
+}
+
+input[name=rdbFigura] {
+    margin-top:0;
+}
+
+/*Intereses de carrera*/
+#lisEstIntCar .list-group-item, #lisCAUIntCar .list-group-item{
+    padding:3px 10px;
+    cursor:pointer;
+}
+
+.panel-heading {
+    background-color: #DEDEDE !important;
+}
+#divHabilidades .panel-body , #divHabilidades2 .panel-body {
+    padding-top:0;
+    padding-bottom:0;
+}
+
+
+#tblFiltros, #tblFiltros2 , #tblFiltros3, #tblFiltros4   {
+    background-color: #F1F1F1;
+}
+
+#tblFiltros2 {    
+    margin-top:10px;
+}
+
+#tblFiltros2, #tblFiltros4 {    
+    margin-top:10px;
+}
+
+#cboEstReconocer, #cboEstMejorar, #cboCAUMejorar {
+    width:200px;
+    margin-left:4px;
+}
+
+#cboProfundizacion {
+    margin-left:2px;
+}
+
+input[type=checkbox] {
+    height:15px;
+}
+
+.checkbox-inline {
+    margin-top:-8px !important;
+}
+
+#divEvolucionar {
+    display:inline-block;
+    margin-left:40px;
+}
+
+#divEvolucionar span {
+    margin-left:20px;
+}
+
+#linkFormularioEstandar, #linkFormularioCAU {
+    color:#000;    
+}
+
+#linkFormularioEstandar:hover, #linkFormularioCAU:hover {
+    text-decoration:none;
+}
+
+.glyphicon-plus, .glyphicon-minus {
+    margin-right:5px;
+    font-weight:normal;
+}
+
+
+.glyphicon.glyphicon-repeat {
+    cursor:pointer;
+}
+
+.pagination {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.page-range {
+    margin-left: 4px !important;
+    float: right;
+    margin-top: 2px;
+    height: 32px;
+}
+
+#modal-evaluadores input[type=text] {
+    width:150px;
+}
+
+#btnCancelar {
+    margin-left:7px;
+}

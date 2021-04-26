@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="e83ce38f-b09a-48e8-a388-96fd59d2df24" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://ibservioffice:8450/IBOffice/svcSUPER/" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="item.xsd" MetadataType="Schema" ID="e6f5c04b-5e00-4fee-9c07-dc1d56a7c389" SourceId="1" SourceUrl="http://ibservioffice:8450/IBOffice/svcSUPER/?xsd=xsd4" />
+    <MetadataFile FileName="item1.xsd" MetadataType="Schema" ID="87c1cd21-73fc-4cc3-9817-ffaf5f180e26" SourceId="1" SourceUrl="http://ibservioffice:8450/IBOffice/svcSUPER/?xsd=xsd2" />
+    <MetadataFile FileName="item2.xsd" MetadataType="Schema" ID="bd517012-ab9b-45d4-9c9f-a8054a825f65" SourceId="1" SourceUrl="http://ibservioffice:8450/IBOffice/svcSUPER/?xsd=xsd3" />
+    <MetadataFile FileName="item3.xsd" MetadataType="Schema" ID="cff66a8b-f9e7-4092-a09c-2facaf19897a" SourceId="1" SourceUrl="http://ibservioffice:8450/IBOffice/svcSUPER/?xsd=xsd0" />
+    <MetadataFile FileName="item4.xsd" MetadataType="Schema" ID="63286a6b-dc4d-4556-a9dc-12ad60cd7320" SourceId="1" SourceUrl="http://ibservioffice:8450/IBOffice/svcSUPER/?xsd=xsd1" />
+    <MetadataFile FileName="item.wsdl" MetadataType="Wsdl" ID="741a1400-b4bc-4f86-9a1c-68793eb36186" SourceId="1" SourceUrl="http://ibservioffice:8450/IBOffice/svcSUPER/?wsdl=wsdl0" />
+    <MetadataFile FileName="svcSUPER.wsdl" MetadataType="Wsdl" ID="f701671b-3679-4ded-ad9c-cfe3c0743c32" SourceId="1" SourceUrl="http://ibservioffice:8450/IBOffice/svcSUPER/?wsdl" />
+    <MetadataFile FileName="item.disco" MetadataType="Disco" ID="8c20a121-16db-4afb-b82e-91c57d8cba6e" SourceId="1" SourceUrl="http://ibservioffice:8450/IBOffice/svcSUPER/?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

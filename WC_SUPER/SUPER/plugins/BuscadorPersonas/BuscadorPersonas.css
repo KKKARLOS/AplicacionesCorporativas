@@ -1,0 +1,49 @@
+﻿.magin-bottom {
+    margin-bottom: 10px;
+}
+
+label{
+    /*display: initial;
+    max-width: inherit;
+    margin-bottom: 0;*/
+    font-weight: normal;
+}
+
+#divLeyenda{
+	font-size:1.2rem;
+	padding:1.5rem;
+    padding-bottom: 0px;
+    padding-left:0px;
+    float:left;	
+}
+
+
+.externo{
+	color:rgb(105, 68, 30);
+}
+
+
+.chk {
+    margin-left: 15px;
+    width: 20px;
+}
+
+#listaProfesionales tbody tr{
+    cursor:pointer;
+}
+
+/*table.dataTable thead th{
+    padding-left:20px!important;
+}
+
+table.dataTable thead .sorting{
+    background-position:center left!important;
+}
+
+table.dataTable thead .sorting_asc{
+    background-position:center left!important;
+}
+
+table.dataTable thead .sorting_desc{
+    background-position:center left!important;
+}*/

@@ -1,0 +1,48 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Plantilla.master.cs" Inherits="Plantilla" %>
+<%@ Register Src="~/Capa_Presentacion/UserControls/Cabecera/cabecera.ascx" TagName="cabecera" TagPrefix="uc1" %>
+<%@ Register Src="~/Capa_Presentacion/UserControls/Procesando.ascx" TagName="Procesando" TagPrefix="ucproc" %>
+<%@ Register Src="~/Capa_Presentacion/UserControls/Msg/mmoff.ascx" TagName="mmoff" TagPrefix="uc_mmoff" %>
+<%@ Register Src="~/Capa_Presentacion/UserControls/JQConfirm/JQConfirm.ascx" TagPrefix="uc_JQConfirm" TagName="JQConfirm" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es">
+<head runat="server" id="HeaderMaster"></head>
+<body style="overflow:hidden" class='FondoBody' onload="res();mostrarErrores();init();ocultarProcesando();" onbeforeunload="ConfirmClose();unload();mostrarProcesando();" onunload="HandleOnClose()">
+    <form id="frmDatos" name="frmDatos" runat="server" accept-charset="iso-8859-15">
+        <ucproc:Procesando ID="Procesando" runat="server" />
+        <script type="text/javascript">
+            var strServer = "<% =Session["strServer"].ToString() %>";
+            var nResolucion = <% =nResolucion.ToString() %>;
+            var bLectura = false;
+        </script>
+        <table width="100%" cellpadding="0" cellspacing="0" border="0">
+            <tr>
+                <td>
+                    <uc1:cabecera id="Cabecera1" runat="server"></uc1:cabecera>
+                </td>
+            </tr>
+            <tr>
+                <td style="border-bottom-color: #569BBD; 
+                            border-bottom-style: solid; 
+                            border-bottom-width: 0px;"><asp:ContentPlaceHolder ID="CPHB" runat="server">
+                        </asp:ContentPlaceHolder></td>
+            </tr>
+            <tr>
+                <td>
+                    <div style="padding:10px;" class="texto">
+                        <asp:contentplaceholder id="CPHC" runat="server">
+                        </asp:contentplaceholder>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+            </tr>
+        </table>
+        <asp:TextBox ID="hdnErrores" runat="server" ReadOnly=true style="visibility:hidden"></asp:TextBox>
+        <asp:TextBox ID="hdnInputExcel" runat="server" ReadOnly=true style="visibility:hidden"></asp:TextBox>
+        <uc_mmoff:mmoff ID="mmoff1" runat="server" />
+        <uc_JQConfirm:JQConfirm runat="server" ID="JQConfirm" />
+    </form>
+    <asp:ContentPlaceHolder ID="CPHD" runat="server"></asp:ContentPlaceHolder>
+    </body>
+</html>

@@ -1,0 +1,23 @@
+﻿#fstProcedimientos {
+    width: 400px;
+    height: 300px;
+    margin-top: 15px;
+    margin-left: 294px;
+}
+#fstParametros {
+    width: 400px;
+    height: 180px;
+    margin-top: 15px;
+    margin-left: 294px;
+}
+#btnEjecutar, #ctl00_CPHC_btnEjecutar{
+    position: absolute;
+    top: 660px;
+    left: 465px;
+}
+#tblProcedimientos, #tblParametros { table-layout:fixed; width: 370px; }
+#tblProcedimientos tr { height: 16px; cursor: pointer; }
+#tblParametros tr { height: 20px; cursor: pointer; }
+#tblProcedimientos td, #tblParametros td { padding: 0px 2px 0px 2px; }
+
+

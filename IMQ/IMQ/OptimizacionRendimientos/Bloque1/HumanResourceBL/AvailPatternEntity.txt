@@ -1,0 +1,428 @@
+#region Usings
+using System;
+using System.Collections.Generic;
+using System.Drawing;
+using System.IO;
+using System.Linq;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
+using SII.Framework.Interfaces;
+using SII.HCD.Misc;
+using CommonEntities = SII.HCD.Common.Entities;
+#endregion
+
+namespace SII.HCD.BackOffice.Entities
+{
+    [DataContract()]
+    [Serializable()]
+    [KnownType(typeof(AvailPatternDTO))]
+    [KnownType(typeof(RelatedAvailPatternDTO))]
+    public class AvailPatternEntity : IStatusEntity, ICloneable
+    {
+
+        #region Properties
+        [DataMember()]
+        public int ID { get; set; }
+        [DataMember()]
+        public String Description { get; set; }
+        [DataMember()]
+        public FillPatternEnum FillPattern { get; set; }
+        [DataMember()]
+        public bool InUse { get; set; }
+        [DataMember()]
+        public int CalendarCellCapacity { get; set; }
+        [DataMember()]
+        public int OverbookingCapacity { get; set; }
+        [DataMember()]
+        public TimeSlotIntervalEnum CalendarFractionation { get; set; }
+        [DataMember]
+        public TimePatternBaseEntity Availability { get; set; }
+        [DataMember]
+        public Color AvailPatternColor { get; set; }
+        [DataMember()]
+        public DateTime? StartAt { get; set; }
+        [DataMember()]
+        public DateTime? EndingIn { get; set; }
+        [DataMember()]
+        public int RepeatPatternEvery { get; set; }
+        [DataMember()]
+        public String AdditionalInformation { get; set; }
+        [DataMember()]
+        public CommonEntities.StatusEnum Status { get; set; }
+        [DataMember]
+        public Int64 DBTimeStamp { get; set; }
+        [DataMember]
+        public EditStatusEntity EditStatus { get; set; }
+        [DataMember()]
+        public Int64 MainDBTimeStamp { get; set; }
+        #endregion
+
+        #region Constructors
+        public AvailPatternEntity()
+            : this(0, String.Empty, FillPatternEnum.WithoutFillPattern,
+                false, 0, 0, TimeSlotIntervalEnum.None, null, Color.AliceBlue, DateTime.Now,
+                null, 0, String.Empty, CommonEntities.StatusEnum.Active, 0, 0) { }
+
+        public AvailPatternEntity(int id, String description, FillPatternEnum fillPattern,
+            bool inUse, int calendarCellCapacity, int overbookingCapacity,
+            TimeSlotIntervalEnum calendarFractionation, TimePatternBaseEntity availability, Color availPatternColor,
+            DateTime? startAt, DateTime? endingIn, int repeatPatternEvery,
+            String additionalInformation, CommonEntities.StatusEnum status, Int64 dbTimeStamp,
+            Int64 mainDBTimeStamp)
+        {
+            ID = id;
+            Description = description;
+            FillPattern = fillPattern;
+            InUse = inUse;
+            CalendarCellCapacity = calendarCellCapacity;
+            OverbookingCapacity = overbookingCapacity;
+            Availability = availability;
+            CalendarFractionation = calendarFractionation;
+            AvailPatternColor = availPatternColor;
+            StartAt = startAt;
+            EndingIn = endingIn;
+            RepeatPatternEvery = repeatPatternEvery;
+            AdditionalInformation = additionalInformation;
+            Status = status;
+            DBTimeStamp = dbTimeStamp;
+            MainDBTimeStamp = mainDBTimeStamp;
+            EditStatus = new EditStatusEntity();
+        }
+        #endregion
+
+        #region Private methods
+        private TimeSpan CalculateRequiredSlots(TimeSpan duration)
+        {
+            if (duration == null)
+                return TimeSpan.Zero;
+
+            double slotNumberOfMinutes = TimeSlotIntervalEnumTimeSpan.GetTimeSpan(CalendarFractionation).TotalMinutes;
+            double slotAsDouble = duration.TotalMinutes / slotNumberOfMinutes;
+            bool exact = (slotAsDouble - Math.Floor(slotAsDouble) == 0);
+            int nSlots = (int)Math.Truncate(slotAsDouble)
+                + ((exact) ? 0 : 1);
+
+            return TimeSpan.FromMinutes(slotNumberOfMinutes * nSlots);
+        }
+
+        private TimeSlotItem[] CalculateTimeSlots(DateTimeRange timeSlotsDateRange)
+        {
+            if (timeSlotsDateRange == null || !timeSlotsDateRange.Start.HasValue || !timeSlotsDateRange.End.HasValue)
+                return null;
+
+            int timeSlotCapacity = 0;
+            switch (FillPattern)
+            {
+                case FillPatternEnum.SingleFillPattern:
+                    timeSlotCapacity = CalendarCellCapacity;
+                    break;
+                case FillPatternEnum.CellOverbookFillPattern:
+                    timeSlotCapacity = CalendarCellCapacity + OverbookingCapacity;
+                    break;
+                case FillPatternEnum.OverbookFillPattern:
+                    timeSlotCapacity = CalendarCellCapacity;
+                    break;
+                default:
+                    timeSlotCapacity = 0;
+                    break;
+            }
+
+            List<TimeSlotItem> result = new List<TimeSlotItem>();
+            DateTime timeSlotStart = timeSlotsDateRange.Start.Value;
+            while (timeSlotStart < timeSlotsDateRange.End.Value)
+            {
+                DateTime timeSlotEnd = timeSlotStart.Add(TimeSlotIntervalEnumTimeSpan.GetTimeSpan(CalendarFractionation));
+                result.Add(TimeSlotItem.Create(timeSlotStart, timeSlotEnd, timeSlotCapacity));
+
+                timeSlotStart = timeSlotEnd;
+            }
+
+            return result.ToArray();
+        }
+
+        private AvailabilityInterval CalculateInterval(DateTime fromDate, TimeSpan duration, DateTimeRange timeSlotsDateRange)
+        {
+            if (timeSlotsDateRange == null || !timeSlotsDateRange.Start.HasValue || !timeSlotsDateRange.End.HasValue)
+                return null;
+
+            AvailabilityInterval result = new AvailabilityInterval();
+            result.StartDateTime = timeSlotsDateRange.Start.Value;
+            result.EndDateTime = timeSlotsDateRange.Start.Value.Add(duration);
+            result.TimeSlotsStartDateTime = timeSlotsDateRange.Start.Value;
+            result.TimeSlotsEndDateTime = timeSlotsDateRange.End.Value;
+            result.TimeSlots = CalculateTimeSlots(timeSlotsDateRange);
+
+            return result;
+        }
+
+        #endregion
+
+        #region Public methods
+        public IEnumerable<DateTime> GetAvailableDays(DateTime startDate, DateTime endDate)
+        {
+            DateTime start = startDate.Date;
+            DateTime end = endDate.Date;
+            if (start > end || Availability == null || string.IsNullOrWhiteSpace(Availability.Meaning))
+                return Enumerable.Empty<DateTime>();
+
+            TimePatternEditionEntity tp = new TimePatternEditionEntity(Availability.Meaning);
+            if (tp == null)
+                return Enumerable.Empty<DateTime>();
+
+            List<DateTime> result = new List<DateTime>();
+            DateTime current = start;
+            do
+            {
+                if (tp.IsAvailable(current))
+                    result.Add(current);
+
+                current = current.AddDays(1);
+            }
+            while (current <= end);
+
+            return result.ToArray();
+        }
+
+        public IEnumerable<DateTime> GetAvailableDaysWithOverbooked(DateTime startDate, DateTime endDate)
+        {
+            DateTime start = startDate.Date;
+            DateTime end = endDate.Date;
+            if (start > end || Availability == null || string.IsNullOrWhiteSpace(Availability.Meaning))
+                return Enumerable.Empty<DateTime>();
+
+            TimePatternEditionEntity tp = new TimePatternEditionEntity(Availability.Meaning);
+            if (tp == null)
+                return Enumerable.Empty<DateTime>();
+
+            List<DateTime> result = new List<DateTime>();
+            DateTime current = start;
+            do
+            {
+                if (tp.IsAvailable(current) && ((FillPattern == FillPatternEnum.CellOverbookFillPattern) || (FillPattern == FillPatternEnum.OverbookFillPattern)))
+                    result.Add(current);
+
+                current = current.AddDays(1);
+            }
+            while (current <= end);
+
+            return result.ToArray();
+        }
+
+        public IEnumerable<DateTime> GetUnavailableDays(DateTime startDate, DateTime endDate)
+        {
+            DateTime start = startDate.Date;
+            DateTime end = endDate.Date;
+            if (start > end || Availability == null || string.IsNullOrWhiteSpace(Availability.Meaning))
+                return Enumerable.Empty<DateTime>();
+
+            TimePatternEditionEntity tp = new TimePatternEditionEntity(Availability.Meaning);
+            if (tp == null)
+                return Enumerable.Empty<DateTime>();
+
+            List<DateTime> result = new List<DateTime>();
+            DateTime current = start;
+            do
+            {
+                if (!tp.IsAvailable(current))
+                    result.Add(current);
+
+                current = current.AddDays(1);
+            }
+            while (current <= end);
+
+            return result.ToArray();
+        }
+
+        public TimeSpan GetSlotSize()
+        {
+            if (FillPattern == FillPatternEnum.WithoutFillPattern)
+                return TimeSpan.Zero;
+
+            return TimeSlotIntervalEnumTimeSpan.GetTimeSpan(CalendarFractionation);
+        }
+
+        public DateTimeRange GetSlotBasedRange(DateTimeRange dateTimeRange)
+        {
+            //Si el rango es nulo o no está limitado o no tiene patron de relleno, no devuelve nada
+            if (dateTimeRange == null || !dateTimeRange.Start.HasValue || !dateTimeRange.End.HasValue
+                || FillPattern == FillPatternEnum.WithoutFillPattern)
+                return null;
+
+            //Establecer el rango de análisis
+            DateTimeRange analysisRange = new DateTimeRange(StartAt, EndingIn).GetIntersection(dateTimeRange);
+            if (analysisRange == null)
+                return null;
+
+            TimeSpan interval = TimeSlotIntervalEnumTimeSpan.GetTimeSpan(CalendarFractionation);
+            DateTimeRange result = new DateTimeRange();
+            result.Start = (dateTimeRange.Start.HasValue)
+                ? DateUtils.RoundDown(dateTimeRange.Start.Value, interval)
+                : (DateTime?)null;
+            result.End = (dateTimeRange.End.HasValue)
+                ? DateUtils.RoundUp(dateTimeRange.End.Value, interval)
+                : (DateTime?)null;
+
+            return result;
+        }
+
+        public IEnumerable<DateTimeRange> GetSlotsInRange(DateTimeRange dateTimeRange)
+        {
+            //Si el rango es nulo o no está limitado o no tiene patron de relleno, no devuelve nada
+            if (dateTimeRange == null || !dateTimeRange.Start.HasValue || !dateTimeRange.End.HasValue
+                || FillPattern == FillPatternEnum.WithoutFillPattern)
+                return Enumerable.Empty<DateTimeRange>();
+
+            List<DateTimeRange> result = new List<DateTimeRange>();
+
+            //Establecer el rango de análisis
+            DateTimeRange analysisRange = new DateTimeRange(StartAt, EndingIn).GetIntersection(dateTimeRange);
+            if (analysisRange == null)
+                return Enumerable.Empty<DateTimeRange>();
+
+            //Crea el patron de desponibilidad
+            TimePatternEditionEntity tpe = new TimePatternEditionEntity(Availability.Meaning);
+            if (tpe == null || tpe.PatternType != PatternTypeEnum.ActivityAndAvailabilityTypes)
+            {
+                return Enumerable.Empty<DateTimeRange>();
+            }
+
+            TimeSpan interval = TimeSlotIntervalEnumTimeSpan.GetTimeSpan(CalendarFractionation);
+            DateTime analysisDay = analysisRange.Start.Value;
+            while (analysisDay <= analysisRange.End.Value)
+            {
+                DateTimeRange availability = tpe.GetAvailabilityRange(analysisDay);
+                if (availability != null && availability.Start.HasValue && availability.End.HasValue)
+                {
+                    //Calculamos la disponibilidad que podemos analizar en el día seleccionado
+                    DateTimeRange currentAnalysisRange = availability.GetIntersection(analysisRange);
+                    if (currentAnalysisRange != null)
+                    {
+                        DateTime current = DateUtils.RoundUp(currentAnalysisRange.Start.Value, interval);
+                        while (current < currentAnalysisRange.End.Value)
+                        {
+                            result.Add(new DateTimeRange(current, current.Add(interval)));
+                            current = current.Add(interval);
+                        }
+                    }
+                }
+
+                analysisDay = analysisDay.AddDays(1).Date;
+            }
+
+            return result;
+        }
+
+        public DateTime GetAvailabilityDate(DateTime dateTime)
+        {
+            DateTime result = dateTime.Date;
+            //Crea el patron de desponibilidad
+            TimePatternEditionEntity tpe = new TimePatternEditionEntity(Availability.Meaning);
+            if (tpe == null || tpe.PatternType != PatternTypeEnum.ActivityAndAvailabilityTypes)
+                return result;
+
+            if (tpe.UserTimes[0].Time.TimeOfDay < tpe.UserTimes[1].Time.TimeOfDay)
+                return result;
+
+            DateTimeRange dtr = new DateTimeRange(result.Date, result.Add(tpe.UserTimes[1].Time.TimeOfDay));
+            return (dtr.Contains(dateTime))
+                ? result.AddDays(-1)
+                : result;
+        }
+
+        public DateTimeRange GetAvailability(DateTime dateTime)
+        {
+            //Crea el patron de desponibilidad
+            TimePatternEditionEntity tpe = new TimePatternEditionEntity(Availability.Meaning);
+            if (tpe == null || tpe.PatternType != PatternTypeEnum.ActivityAndAvailabilityTypes)
+                return null;
+
+            return tpe.GetAvailabilityRange(dateTime);
+        }
+
+        public AvailabilityInterval FindInterval(DateTimeRange dateTimeRange, TimeSpan duration)
+        {
+            //Si no tiene patrón de relleno, no devuelve nada
+            if (FillPattern == FillPatternEnum.WithoutFillPattern || dateTimeRange == null || !dateTimeRange.Start.HasValue)
+                return null;
+
+            //Calcular el número de slots requeridos
+            TimeSpan requiredSlots = CalculateRequiredSlots(duration);
+
+            //Establecer el rango de análisis
+            DateTimeRange analysisRange = new DateTimeRange(StartAt, EndingIn).GetIntersection(dateTimeRange);
+            if (analysisRange == null)
+                return null;
+
+            //Crea el patron de desponibilidad
+            TimePatternEditionEntity tpe = new TimePatternEditionEntity(Availability.Meaning);
+            if (tpe == null || tpe.PatternType != PatternTypeEnum.ActivityAndAvailabilityTypes)
+            {
+                return null;
+            }
+
+            //Putos UserTimes en orden inverso!!!
+            DateTime currentDateTime = (tpe.UserTimes[0].Time > tpe.UserTimes[1].Time)
+                ? analysisRange.Start.Value.Date.AddDays(-1)
+                : analysisRange.Start.Value.Date;
+
+            while (!analysisRange.End.HasValue || currentDateTime <= analysisRange.End.Value)
+            {
+                DateTimeRange availability = tpe.GetAvailabilityRange(currentDateTime);
+
+                if (availability != null && availability.Start.HasValue && availability.End.HasValue)
+                {
+                    //Calculamos la disponibilidad que podemos analizar en el día seleccionado
+                    DateTimeRange currentAnalysisRange = availability.GetIntersection(analysisRange);
+                    if (currentAnalysisRange != null)
+                    {
+                        currentAnalysisRange.Start = DateUtils.RoundUp(currentAnalysisRange.Start.Value,
+                                TimeSlotIntervalEnumTimeSpan.GetTimeSpan(CalendarFractionation));
+
+                        //Calculamos el intervalo de tiempo necesario para cubrir la duración solicitada
+                        //basada en timeslots
+                        DateTimeRange timeSlotsDateRange = new DateTimeRange(
+                            currentAnalysisRange.Start,
+                            currentAnalysisRange.Start.Value.Add(requiredSlots));
+
+                        if (currentAnalysisRange.Contains(timeSlotsDateRange))
+                        {
+                            return CalculateInterval(dateTimeRange.Start.Value, duration, timeSlotsDateRange);
+                        }
+                    }
+                }
+
+                currentDateTime = currentDateTime.AddDays(1).Date;
+            }
+
+            return null;
+        }
+
+        public bool Contains(DateTime dateTime)
+        {
+            DateTimeRange dtr = GetAvailability(dateTime.Date);
+            return (dtr != null && dtr.Contains(dateTime));
+        }
+        #endregion
+
+        #region ICloneable Members
+        public virtual object Clone()
+        {
+            object clonedObject = null;
+            MemoryStream ms = new MemoryStream();
+            try
+            {
+                BinaryFormatter bf = new BinaryFormatter();
+
+                bf.Serialize(ms, this);
+                ms.Seek(0, SeekOrigin.Begin);
+                clonedObject = bf.Deserialize(ms);
+            }
+            finally
+            {
+                ms.Close();
+            }
+            return clonedObject;
+        }
+        #endregion
+    }
+}

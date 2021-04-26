@@ -1,0 +1,52 @@
+using System;
+using System.Data;
+using System.Configuration;
+using System.Collections;
+using System.Web;
+using System.Web.Security;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Web.UI.WebControls.WebParts;
+using System.Web.UI.HtmlControls;
+
+public partial class Login : BaseWebForm
+{
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        //Reset Error
+        lblError.Text = "";
+    }
+    protected void btnLogin_Click(object sender, EventArgs e)
+    {
+        try
+        {
+            
+            if (
+                txtUserName.Text.Trim().ToLower() == ConfigurationManager.AppSettings.Get("UserName").Trim().ToLower()
+                &&
+                txtPassword.Text.Trim().ToLower() == ConfigurationManager.AppSettings.Get("UserPassword").Trim().ToLower()
+                )
+            {
+                Session["UserName"] = txtUserName.Text;
+                FormsAuthentication.SetAuthCookie(txtUserName.Text, false);
+                
+                FormsAuthentication.RedirectFromLoginPage(txtUserName.Text, false);
+                //Response.Redirect("Default.aspx", false);
+            }
+            else
+            {
+                lblError.Text = "Invalid Login";
+
+            }
+
+        }
+        catch (Exception ex)
+        {
+            lblError.Text = ex.Message;
+
+        }
+        finally
+        {
+        }
+    }
+}

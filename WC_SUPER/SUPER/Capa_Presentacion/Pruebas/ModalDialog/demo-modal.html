@@ -1,0 +1,40 @@
+﻿
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>showModalDialog modal demo</title>
+      <script src="showModalDialog.js"></script>
+    </head>
+    <body>
+      <h1>showModalDialog modal demo</h1>
+      <p>Dialog argments: <span id="arg"></span></p>
+	<p>
+	  <input id="button2" type="button" value="Show Modal Dialog using eval">
+	</p>      
+      
+      </form>
+      <script>
+	document.getElementById('arg').innerHTML = window.dialogArguments;
+	window.returnValue = "some return value";
+
+	if (typeof document.attachEvent != 'undefined') {
+	    alert("xxx");
+	    //              document.getElementById('button2').attachEvent("click", function() {
+	    //                  alert("llega");
+	    //                  var ret = window.showModalDialog("demo-modal.html", self, "dialogWidth:500px;dialogHeight:200px");
+	    //                  alert("Returned from modal: " + ret);
+	    //              });
+	    document.getElementById('button2').onclick = function() {
+	        alert("llega");
+	        var ret = window.showModalDialog("demo-modal.html", self, "dialogWidth:500px;dialogHeight:200px");
+	        alert("Returned from modal: " + ret);
+	    };
+	} else {
+	    document.getElementById('button2').addEventListener("click", function() {
+	        var ret = window.showModalDialog("demo-modal.html", self, "dialogWidth:500px;dialogHeight:200px");
+	        alert("Returned from modal: " + ret);
+	    });
+	}	
+      </script>
+    </body>
+</html>

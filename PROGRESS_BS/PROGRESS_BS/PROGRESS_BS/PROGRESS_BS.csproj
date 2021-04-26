@@ -1,0 +1,1007 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D3FA3028-8324-45EB-B2E7-0D841006AEE3}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PROGRESS_BS</RootNamespace>
+    <AssemblyName>PROGRESS_BS</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App_WebReferences\svcEmail\svcEmail.disco" />
+    <None Include="App_WebReferences\svcEXCEL\configuration.svcinfo" />
+    <None Include="App_WebReferences\svcEXCEL\configuration91.svcinfo" />
+    <None Include="App_WebReferences\svcEXCEL\item.disco" />
+    <None Include="App_WebReferences\svcEXCEL\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
+    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml" />
+    <Content Include="Capa_Presentacion\Administracion\AdmEstadisticasRRHH\css\StyleSheet.css" />
+    <Content Include="Capa_Presentacion\Administracion\AdmEstadisticasRRHH\Default.aspx" />
+    <Content Include="Capa_Presentacion\Administracion\AdmEstadisticasRRHH\js\JavaScript.js" />
+    <Content Include="Capa_Presentacion\Administracion\AdmEstadisticasRRHH\js\models.js" />
+    <Content Include="Capa_Presentacion\Administracion\CuadroMandoCambioRol\css\StyleSheet.css" />
+    <Content Include="Capa_Presentacion\Administracion\CuadroMandoCambioRol\Default.aspx" />
+    <Content Include="Capa_Presentacion\Administracion\CuadroMandoCambioRol\js\JavaScript.js" />
+    <Content Include="Capa_Presentacion\Administracion\CuadroMandoCambioRol\SolicitudesAprobadasStandby\css\StyleSheet.css" />
+    <Content Include="Capa_Presentacion\Administracion\CuadroMandoCambioRol\SolicitudesAprobadasStandby\Default.aspx" />
+    <Content Include="Capa_Presentacion\Administracion\CuadroMandoCambioRol\SolicitudesAprobadasStandby\js\JavaScript.js" />
+    <Content Include="Capa_Presentacion\Administracion\CuadroMandoCambioRol\SolicitudesAprobadas\css\StyleSheet.css" />
+    <Content Include="Capa_Presentacion\Administracion\CuadroMandoCambioRol\SolicitudesAprobadas\Default.aspx" />
+    <Content Include="Capa_Presentacion\Administracion\CuadroMandoCambioRol\SolicitudesAprobadas\js\JavaScript.js" />
+    <Content Include="Capa_Presentacion\Administracion\CuadroMandoCambioRol\SolicitudesNoAprobadasStandby\css\StyleSheet.css" />
+    <Content Include="Capa_Presentacion\Administracion\CuadroMandoCambioRol\SolicitudesNoAprobadasStandby\Default.aspx" />
+    <Content Include="Capa_Presentacion\Administracion\CuadroMandoCambioRol\SolicitudesNoAprobadasStandby\js\JavaScript.js" />
+    <Content Include="Capa_Presentacion\Administracion\CuadroMandoCambioRol\SolicitudesNoAprobadas\css\StyleSheet.css" />
+    <Content Include="Capa_Presentacion\Administracion\CuadroMandoCambioRol\SolicitudesNoAprobadas\Default.aspx" />
+    <Content Include="Capa_Presentacion\Administracion\CuadroMandoCambioRol\SolicitudesNoAprobadas\js\JavaScript.js" />
+    <Content Include="Capa_Presentacion\Administracion\Estadisticas\css\StyleSheet.css" />
+    <Content Include="Capa_Presentacion\Administracion\Estadisticas\Default.aspx" />
+    <Content Include="Capa_Presentacion\Administracion\Estadisticas\Informe\Default.aspx" />
+    <Content Include="Capa_Presentacion\Administracion\Estadisticas\Informe\Filtros.aspx" />
+    <Content Include="Capa_Presentacion\Administracion\Estadisticas\js\JavaScript.js" />
+    <Content Include="Capa_Presentacion\Administracion\Estadisticas\js\models.js" />
+    <Content Include="Capa_Presentacion\Administracion\FormacionDemandada\css\StyleSheet.css" />
+    <Content Include="Capa_Presentacion\Administracion\FormacionDemandada\Default.aspx" />
+    <Content Include="Capa_Presentacion\Administracion\FormacionDemandada\js\JavaScript.js" />
+    <Content Include="Capa_Presentacion\Administracion\HistoricoRoles\css\StyleSheet.css" />
+    <Content Include="Capa_Presentacion\Administracion\HistoricoRoles\Default.aspx" />
+    <Content Include="Capa_Presentacion\Administracion\HistoricoRoles\js\JavaScript.js" />
+    <Content Include="Capa_Presentacion\Administracion\Mantenimientos\BulaDeAvisos\css\StyleSheet.css" />
+    <Content Include="Capa_Presentacion\Administracion\Mantenimientos\BulaDeAvisos\Default.aspx" />
+    <Content Include="Capa_Presentacion\Administracion\Mantenimientos\BulaDeAvisos\js\JavaScript.js" />
+    <Content Include="Capa_Presentacion\Administracion\Mantenimientos\CategoriaColectivo\css\StyleSheet.css" />
+    <Content Include="Capa_Presentacion\Administracion\Mantenimientos\CategoriaColectivo\Default.aspx" />
+    <Content Include="Capa_Presentacion\Administracion\Mantenimientos\CategoriaColectivo\js\JavaScript.js" />
+    <Content Include="Capa_Presentacion\Administracion\Mantenimientos\ColectivoForzado\css\StyleSheet.css" />
+    <Content Include="Capa_Presentacion\Administracion\Mantenimientos\ColectivoForzado\Default.aspx" />
+    <Content Include="Capa_Presentacion\Administracion\Mantenimientos\ColectivoForzado\js\JavaScript.js" />
+    <Content Include="Capa_Presentacion\Administracion\Mantenimientos\ComunidadProgess\css\StyleSheet.css" />
+    <Content Include="Capa_Presentacion\Administracion\Mantenimientos\ComunidadProgess\Default.aspx" />
+    <Content Include="Capa_Presentacion\Administracion\Mantenimientos\ComunidadProgess\js\JavaScript.js" />
+    <Content Include="Capa_Presentacion\Administracion\Mantenimientos\FechaAntiguedad\Default.aspx" />
+    <Content Include="Capa_Presentacion\Administracion\Mantenimientos\FechaAntiguedad\js\JavaScript.js" />
+    <Content Include="Capa_Presentacion\Administracion\Mantenimientos\GestionCambioResponsable\css\StyleSheet.css" />
+    <Content Include="Capa_Presentacion\Administracion\Mantenimientos\GestionCambioResponsable\Default.aspx" />
+    <Content Include="Capa_Presentacion\Administracion\Mantenimientos\GestionCambioResponsable\js\JavaScript.js" />
+    <Content Include="Capa_Presentacion\Administracion\Mantenimientos\ImagenHome\css\StyleSheet.css" />
+    <Content Include="Capa_Presentacion\Administracion\Mantenimientos\ImagenHome\Default.aspx" />
+    <Content Include="Capa_Presentacion\Administracion\Mantenimientos\ImagenHome\js\JavaScript.js" />
+    <Content Include="Capa_Presentacion\Administracion\Mantenimientos\ModeloFormulario\css\StyleSheet.css" />
+    <Content Include="Capa_Presentacion\Administracion\Mantenimientos\ModeloFormulario\Default.aspx" />
+    <Content Include="Capa_Presentacion\Administracion\Mantenimientos\ModeloFormulario\js\JavaScript.js" />
+    <Content Include="Capa_Presentacion\Administracion\Mantenimientos\Perfiles\css\StyleSheet.css" />
+    <Content Include="Capa_Presentacion\Administracion\Mantenimientos\Perfiles\Default.aspx" />
+    <Content Include="Capa_Presentacion\Administracion\Mantenimientos\Perfiles\js\JavaScript.js" />
+    <Content Include="Capa_Presentacion\Administracion\Mantenimientos\Reconexion\css\StyleSheet.css" />
+    <Content Include="Capa_Presentacion\Administracion\Mantenimientos\Reconexion\Default.aspx" />
+    <Content Include="Capa_Presentacion\Administracion\Mantenimientos\Reconexion\js\JavaScript.js" />
+    <Content Include="Capa_Presentacion\Administracion\Mantenimientos\RolesAprobadores\css\StyleSheet.css" />
+    <Content Include="Capa_Presentacion\Administracion\Mantenimientos\RolesAprobadores\Default.aspx" />
+    <Content Include="Capa_Presentacion\Administracion\Mantenimientos\RolesAprobadores\js\JavaScript.js" />
+    <Content Include="Capa_Presentacion\Administracion\Mantenimientos\TemporadaProgress\css\StyleSheet.css" />
+    <Content Include="Capa_Presentacion\Administracion\Mantenimientos\TemporadaProgress\Default.aspx" />
+    <Content Include="Capa_Presentacion\Administracion\Mantenimientos\TemporadaProgress\js\JavaScript.js" />
+    <Content Include="Capa_Presentacion\Administracion\Mantenimientos\VisionesAjenasArbol2\css\StyleSheet.css" />
+    <Content Include="Capa_Presentacion\Administracion\Mantenimientos\VisionesAjenasArbol2\Default.aspx" />
+    <Content Include="Capa_Presentacion\Administracion\Mantenimientos\VisionesAjenasArbol2\js\JavaScript.js" />
+    <Content Include="Capa_Presentacion\Administracion\Mantenimientos\VisionesAjenasArbol\css\StyleSheet.css" />
+    <Content Include="Capa_Presentacion\Administracion\Mantenimientos\VisionesAjenasArbol\Default.aspx" />
+    <Content Include="Capa_Presentacion\Administracion\Mantenimientos\VisionesAjenasArbol\js\JavaScript.js" />
+    <Content Include="Capa_Presentacion\Evaluacion\Abrir\css\StyleSheet.css" />
+    <Content Include="Capa_Presentacion\Evaluacion\Abrir\Default.aspx" />
+    <Content Include="Capa_Presentacion\Evaluacion\Abrir\js\JavaScript.js" />
+    <Content Include="Capa_Presentacion\Evaluacion\Busqueda\css\StyleSheet.css" />
+    <Content Include="Capa_Presentacion\Evaluacion\Busqueda\Default.aspx" />
+    <Content Include="Capa_Presentacion\Evaluacion\Busqueda\js\JavaScript.js" />
+    <Content Include="Capa_Presentacion\Evaluacion\Busqueda\js\models.js" />
+    <Content Include="Capa_Presentacion\Evaluacion\CompletarAbierta\css\StyleSheet.css" />
+    <Content Include="Capa_Presentacion\Evaluacion\CompletarAbierta\Default.aspx" />
+    <Content Include="Capa_Presentacion\Evaluacion\CompletarAbierta\js\JavaScript.js" />
+    <Content Include="Capa_Presentacion\Evaluacion\DeMiEquipo\css\StyleSheet.css" />
+    <Content Include="Capa_Presentacion\Evaluacion\DeMiEquipo\Default.aspx" />
+    <Content Include="Capa_Presentacion\Evaluacion\DeMiEquipo\js\JavaScript.js" />
+    <Content Include="Capa_Presentacion\Evaluacion\Formularios\Modelo1\css\StyleSheet.css" />
+    <Content Include="Capa_Presentacion\Evaluacion\Formularios\Modelo1\Default.aspx" />
+    <Content Include="Capa_Presentacion\Evaluacion\Formularios\Modelo1\Informe\botonOff.jpg" />
+    <Content Include="Capa_Presentacion\Evaluacion\Formularios\Modelo1\Informe\botonOn.jpg" />
+    <Content Include="Capa_Presentacion\Evaluacion\Formularios\Modelo1\Informe\cuadradoOff.jpg" />
+    <Content Include="Capa_Presentacion\Evaluacion\Formularios\Modelo1\Informe\cuadradoOn.jpg" />
+    <Content Include="Capa_Presentacion\Evaluacion\Formularios\Modelo1\Informe\Default.aspx" />
+    <Content Include="Capa_Presentacion\Evaluacion\Formularios\Modelo1\Informe\estadoAbierta.jpg" />
+    <Content Include="Capa_Presentacion\Evaluacion\Formularios\Modelo1\Informe\estadoCerrada.jpg" />
+    <Content Include="Capa_Presentacion\Evaluacion\Formularios\Modelo1\Informe\estadoCerradaFirmada.jpg" />
+    <Content Include="Capa_Presentacion\Evaluacion\Formularios\Modelo1\Informe\estadoCerradaSinFirma.jpg" />
+    <Content Include="Capa_Presentacion\Evaluacion\Formularios\Modelo1\Informe\estadoEnCurso.jpg" />
+    <Content Include="Capa_Presentacion\Evaluacion\Formularios\Modelo1\Informe\imgSeparador.jpg" />
+    <Content Include="Capa_Presentacion\Evaluacion\Formularios\Modelo1\js\JavaScript.js" />
+    <Content Include="Capa_Presentacion\Evaluacion\Formularios\Modelo2\css\StyleSheet.css" />
+    <Content Include="Capa_Presentacion\Evaluacion\Formularios\Modelo2\Default.aspx" />
+    <Content Include="Capa_Presentacion\Evaluacion\Formularios\Modelo2\js\JavaScript.js" />
+    <Content Include="Capa_Presentacion\Evaluacion\Formularios\models.js" />
+    <Content Include="Capa_Presentacion\Evaluacion\MisEvaluaciones2\Default.aspx" />
+    <Content Include="Capa_Presentacion\Evaluacion\MisEvaluaciones\css\StyleSheet.css" />
+    <Content Include="Capa_Presentacion\Evaluacion\MisEvaluaciones\Default.aspx" />
+    <Content Include="Capa_Presentacion\Evaluacion\MisEvaluaciones\js\JavaScript.js" />
+    <Content Include="Capa_Presentacion\Evaluacion\Nueva\css\firmaEvaluador\FeliX.svg" />
+    <Content Include="Capa_Presentacion\Evaluacion\Nueva\css\firmaEvaluado\Scriptina.svg" />
+    <Content Include="Capa_Presentacion\Home\css\StyleSheet.css" />
+    <Content Include="Capa_Presentacion\Home\Home.aspx" />
+    <Content Include="Capa_Presentacion\Home\js\JavaScript.js" />
+    <Content Include="Capa_Presentacion\MiEquipo\ArbolDependencias\css\StyleSheet.css" />
+    <Content Include="Capa_Presentacion\MiEquipo\ArbolDependencias\Default.aspx" />
+    <Content Include="Capa_Presentacion\MiEquipo\ArbolDependencias\js\JavaScript.js" />
+    <Content Include="Capa_Presentacion\MiEquipo\Confirmarlo\css\StyleSheet.css" />
+    <Content Include="Capa_Presentacion\MiEquipo\Confirmarlo\Default.aspx" />
+    <Content Include="Capa_Presentacion\MiEquipo\Confirmarlo\js\JavaScript.js" />
+    <Content Include="Capa_Presentacion\MiEquipo\DesgloseRol\css\StyleSheet.css" />
+    <Content Include="Capa_Presentacion\MiEquipo\DesgloseRol\Default.aspx" />
+    <Content Include="Capa_Presentacion\MiEquipo\DesgloseRol\js\JavaScript.js" />
+    <Content Include="Capa_Presentacion\MiEquipo\GestIncorporaciones\css\StyleSheet.css" />
+    <Content Include="Capa_Presentacion\MiEquipo\GestIncorporaciones\Default.aspx" />
+    <Content Include="Capa_Presentacion\MiEquipo\GestIncorporaciones\js\JavaScript.js" />
+    <Content Include="Capa_Presentacion\MiEquipo\GestionarSolicitudCambioRol\css\StyleSheet.css" />
+    <Content Include="Capa_Presentacion\MiEquipo\GestionarSolicitudCambioRol\Default.aspx" />
+    <Content Include="Capa_Presentacion\MiEquipo\GestionarSolicitudCambioRol\js\JavaScript.js" />
+    <Content Include="Capa_Presentacion\MiEquipo\SolicitarCambioRol\css\StyleSheet.css" />
+    <Content Include="Capa_Presentacion\MiEquipo\SolicitarCambioRol\Default.aspx" />
+    <Content Include="Capa_Presentacion\MiEquipo\SolicitarCambioRol\js\JavaScript.js" />
+    <Content Include="Capa_Presentacion\MiEquipo\SolicitarCambioRol\js\models.js" />
+    <Content Include="Capa_Presentacion\MiEquipo\TramitarSalidas\css\StyleSheet.css" />
+    <Content Include="Capa_Presentacion\MiEquipo\TramitarSalidas\Default.aspx" />
+    <Content Include="Capa_Presentacion\MiEquipo\TramitarSalidas\js\JavaScript.js" />
+    <Content Include="Capa_Presentacion\Utilidades\ExportarExcel.aspx" />
+    <Content Include="css\bootstrap-theme.css" />
+    <Content Include="css\bootstrap-theme.min.css" />
+    <Content Include="css\bootstrap.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\datepicker.css" />
+    <Content Include="css\font-awesome.css" />
+    <Content Include="css\font-awesome.min.css" />
+    <Content Include="css\main.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="Docs\COMPETENCIAS\acceso a  intranet.htm" />
+    <Content Include="Docs\COMPETENCIAS\acceso a  intranet_archivos\dpBtnPinchaRol.gif" />
+    <Content Include="Docs\COMPETENCIAS\acceso a  intranet_archivos\dpVB.gif" />
+    <Content Include="Docs\COMPETENCIAS\acceso a  intranet_archivos\general.css" />
+    <Content Include="Docs\COMPETENCIAS\acceso a  intranet_archivos\Volver.jpg" />
+    <Content Include="Docs\OFICINA TÉCNICA\mailto a otrrhh%40ibermatica.com.txt" />
+    <Content Include="Docs\PROGRESSS_2015\acceso a Intranet.htm" />
+    <Content Include="Docs\PROGRESSS_2015\acceso a Intranet_archivos\edProgress2015.jpg" />
+    <Content Include="Docs\PROGRESSS_2015\acceso a Intranet_archivos\general.css" />
+    <Content Include="Docs\PROGRESSS_2015\acceso a Intranet_archivos\Volver.jpg" />
+    <Content Include="errores.aspx" />
+    <Content Include="FileDownload.aspx" />
+    <Content Include="fonts\firmaEvaluador\FeliX.svg" />
+    <Content Include="fonts\firmaEvaluado\Scriptina.svg" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="imagenes\accesoEvaluaciones.png" />
+    <Content Include="imagenes\accesoMiEquipo.png" />
+    <Content Include="imagenes\business-opportunity.png" />
+    <Content Include="imagenes\business-plan.png" />
+    <Content Include="imagenes\business-plan2.png" />
+    <Content Include="imagenes\DibujoProgress.png" />
+    <Content Include="imagenes\disposicion.png" />
+    <Content Include="imagenes\entrevista.jpg" />
+    <Content Include="imagenes\equipo.png" />
+    <Content Include="imagenes\estadoAbierta.png" />
+    <Content Include="imagenes\estadoCerrada.png" />
+    <Content Include="imagenes\estadoCerradaFirmada.png" />
+    <Content Include="imagenes\estadoCerradaSinFirma.png" />
+    <Content Include="imagenes\estadoEnCurso.png" />
+    <Content Include="imagenes\evaluaciones.jpg" />
+    <Content Include="imagenes\evaluaciones.PNG" />
+    <Content Include="imagenes\fondoHome2.png" />
+    <Content Include="imagenes\fondoHomeHabilidades.png" />
+    <Content Include="imagenes\fondoHomeValores.png" />
+    <Content Include="imagenes\home.png" />
+    <Content Include="imagenes\imagenFondo.png" />
+    <Content Include="imagenes\imagenHome1.png" />
+    <Content Include="imagenes\imagenHome3.png" />
+    <Content Include="imagenes\imgAdministracion2.png" />
+    <Content Include="imagenes\imgCalidad.png" />
+    <Content Include="imagenes\imgChrome.png" />
+    <Content Include="imagenes\imgCoherencia.png" />
+    <Content Include="imagenes\imgCompetenciasTile.png" />
+    <Content Include="imagenes\imgDecalogoTile.png" />
+    <Content Include="imagenes\imgEjemplosTile.png" />
+    <Content Include="imagenes\imgEquipo2.png" />
+    <Content Include="imagenes\imgEquipoTile.png" />
+    <Content Include="imagenes\imgEvaluaciones2.png" />
+    <Content Include="imagenes\imgEvaluacionesTile.png" />
+    <Content Include="imagenes\imgEvaluacionesTile2.png" />
+    <Content Include="imagenes\imgExplorer.png" />
+    <Content Include="imagenes\imgFirefox.png" />
+    <Content Include="imagenes\imgGuiaTile.png" />
+    <Content Include="imagenes\imgHabilidades.png" />
+    <Content Include="imagenes\imgHabilidadesTile.png" />
+    <Content Include="imagenes\imgIniciando.gif" />
+    <Content Include="imagenes\imgIniciando.png" />
+    <Content Include="imagenes\imgLoading.png" />
+    <Content Include="imagenes\imgNOvalida.png" />
+    <Content Include="imagenes\imgObjetividad.png" />
+    <Content Include="imagenes\imgOficinaTile.png" />
+    <Content Include="imagenes\imgPostit.png" />
+    <Content Include="imagenes\imgProcedimientoTile.png" />
+    <Content Include="imagenes\imgQueesperodeti1.png" />
+    <Content Include="imagenes\imgQueesperodeti2.png" />
+    <Content Include="imagenes\imgQueNecesito1.png" />
+    <Content Include="imagenes\imgQueNecesito2.png" />
+    <Content Include="imagenes\imgRecortesTile.png" />
+    <Content Include="imagenes\imgRoles2.png" />
+    <Content Include="imagenes\imgRolesTile.png" />
+    <Content Include="imagenes\imgSafari.png" />
+    <Content Include="imagenes\imgValida.png" />
+    <Content Include="imagenes\imgValor.png" />
+    <Content Include="imagenes\imgValores.png" />
+    <Content Include="imagenes\imgValoresTile.png" />
+    <Content Include="imagenes\learning.png" />
+    <Content Include="imagenes\logo1.png" />
+    <Content Include="imagenes\logo2.png" />
+    <Content Include="imagenes\logo3.png" />
+    <Content Include="imagenes\logo4.png" />
+    <Content Include="imagenes\logo5.png" />
+    <Content Include="imagenes\logo6.png" />
+    <Content Include="imagenes\logoProgress.png" />
+    <Content Include="imagenes\logoProgress2.png" />
+    <Content Include="imagenes\logoProgress2_old %282%29.png" />
+    <Content Include="imagenes\logoProgress2_old.png" />
+    <Content Include="imagenes\logoProgressCorreo.jpg" />
+    <Content Include="imagenes\logoTEST.png" />
+    <Content Include="imagenes\logoTexto.png" />
+    <Content Include="imagenes\Logo_Ibermatica.png" />
+    <Content Include="imagenes\mantenimiento--1-.jpg" />
+    <Content Include="imagenes\mantenimiento--1-.png" />
+    <Content Include="imagenes\nivel1.png" />
+    <Content Include="imagenes\nivel2.png" />
+    <Content Include="imagenes\preloader.gif" />
+    <Content Include="imagenes\preloader.png" />
+    <Content Include="imagenes\Progress-bar.jpg" />
+    <Content Include="imagenes\progressANYO.png" />
+    <Content Include="imagenes\progressCorreo.jpg" />
+    <Content Include="imagenes\progressOriginal.png" />
+    <Content Include="imagenes\Pupil-progress-009.jpg" />
+    <Content Include="imagenes\roles.jpeg" />
+    <Content Include="imagenes\roles.png" />
+    <Content Include="imagenes\Session\bckBoton.gif" />
+    <Content Include="imagenes\Session\imgAceptar.gif" />
+    <Content Include="imagenes\Session\imgBtnDer.gif" />
+    <Content Include="imagenes\Session\imgBtnIzda.gif" />
+    <Content Include="imagenes\Session\imgCerrarBanner.gif" />
+    <Content Include="imagenes\Session\imgInfo.gif" />
+    <Content Include="imagenes\Session\imgNO.gif" />
+    <Content Include="imagenes\Session\imgSI.gif" />
+    <Content Include="imagenes\tileAdministracion.png" />
+    <Content Include="imagenes\tileAyuda.png" />
+    <Content Include="imagenes\tileEquipo.png" />
+    <Content Include="imagenes\tileEvaluaciones.png" />
+    <Content Include="imagenes\tileRoles.png" />
+    <Content Include="imagenes\timeline.png" />
+    <Content Include="imagenes\timelinecolor.png" />
+    <Content Include="imagenes\work-in-progress.png" />
+    <Content Include="js\bootstrap.js" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\bowser.js" />
+    <Content Include="js\bowser.min.js" />
+    <Content Include="js\browser-update.min.js" />
+    <Content Include="js\ios-orientationchange-fix.js" />
+    <Content Include="js\JavaScript.js" />
+    <Content Include="js\jq.functions.js" />
+    <Content Include="js\jquery-2.2.1.min.js" />
+    <Content Include="js\jquery-latest.js" />
+    <Content Include="js\jquery-ui.js" />
+    <Content Include="js\jquery.fixedHeaderTable.js" />
+    <Content Include="js\jquery.freezeheader.js" />
+    <Content Include="js\jquery.min.js" />
+    <Content Include="js\jquery.ui.widget.js" />
+    <Content Include="js\json_parse.js" />
+    <Content Include="js\moment.locale.min.js" />
+    <Content Include="js\pagination.js" />
+    <Content Include="js\plugins\datatables\dataTables.bootstrap.css" />
+    <Content Include="js\plugins\datatables\dataTables.responsive.css" />
+    <Content Include="js\plugins\datatables\dataTables.responsive.js" />
+    <Content Include="js\plugins\datatables\jquery.dataTables.min.css" />
+    <Content Include="js\plugins\datatables\jquery.dataTables.min.js" />
+    <Content Include="js\plugins\datatables\Spanish.txt" />
+    <Content Include="js\plugins\datepicker\bootstrap-datepicker.js" />
+    <Content Include="js\plugins\datepicker\datepicker3.css" />
+    <Content Include="js\plugins\datepicker\locales\bootstrap-datepicker.ar.js" />
+    <Content Include="js\plugins\datepicker\locales\bootstrap-datepicker.az.js" />
+    <Content Include="js\plugins\datepicker\locales\bootstrap-datepicker.bg.js" />
+    <Content Include="js\plugins\datepicker\locales\bootstrap-datepicker.ca.js" />
+    <Content Include="js\plugins\datepicker\locales\bootstrap-datepicker.cs.js" />
+    <Content Include="js\plugins\datepicker\locales\bootstrap-datepicker.cy.js" />
+    <Content Include="js\plugins\datepicker\locales\bootstrap-datepicker.da.js" />
+    <Content Include="js\plugins\datepicker\locales\bootstrap-datepicker.de.js" />
+    <Content Include="js\plugins\datepicker\locales\bootstrap-datepicker.el.js" />
+    <Content Include="js\plugins\datepicker\locales\bootstrap-datepicker.es.js" />
+    <Content Include="js\plugins\datepicker\locales\bootstrap-datepicker.et.js" />
+    <Content Include="js\plugins\datepicker\locales\bootstrap-datepicker.fa.js" />
+    <Content Include="js\plugins\datepicker\locales\bootstrap-datepicker.fi.js" />
+    <Content Include="js\plugins\datepicker\locales\bootstrap-datepicker.fr.js" />
+    <Content Include="js\plugins\datepicker\locales\bootstrap-datepicker.gl.js" />
+    <Content Include="js\plugins\datepicker\locales\bootstrap-datepicker.he.js" />
+    <Content Include="js\plugins\datepicker\locales\bootstrap-datepicker.hr.js" />
+    <Content Include="js\plugins\datepicker\locales\bootstrap-datepicker.hu.js" />
+    <Content Include="js\plugins\datepicker\locales\bootstrap-datepicker.id.js" />
+    <Content Include="js\plugins\datepicker\locales\bootstrap-datepicker.is.js" />
+    <Content Include="js\plugins\datepicker\locales\bootstrap-datepicker.it.js" />
+    <Content Include="js\plugins\datepicker\locales\bootstrap-datepicker.ja.js" />
+    <Content Include="js\plugins\datepicker\locales\bootstrap-datepicker.ka.js" />
+    <Content Include="js\plugins\datepicker\locales\bootstrap-datepicker.kk.js" />
+    <Content Include="js\plugins\datepicker\locales\bootstrap-datepicker.kr.js" />
+    <Content Include="js\plugins\datepicker\locales\bootstrap-datepicker.lt.js" />
+    <Content Include="js\plugins\datepicker\locales\bootstrap-datepicker.lv.js" />
+    <Content Include="js\plugins\datepicker\locales\bootstrap-datepicker.mk.js" />
+    <Content Include="js\plugins\datepicker\locales\bootstrap-datepicker.ms.js" />
+    <Content Include="js\plugins\datepicker\locales\bootstrap-datepicker.nb.js" />
+    <Content Include="js\plugins\datepicker\locales\bootstrap-datepicker.nl-BE.js" />
+    <Content Include="js\plugins\datepicker\locales\bootstrap-datepicker.nl.js" />
+    <Content Include="js\plugins\datepicker\locales\bootstrap-datepicker.no.js" />
+    <Content Include="js\plugins\datepicker\locales\bootstrap-datepicker.pl.js" />
+    <Content Include="js\plugins\datepicker\locales\bootstrap-datepicker.pt-BR.js" />
+    <Content Include="js\plugins\datepicker\locales\bootstrap-datepicker.pt.js" />
+    <Content Include="js\plugins\datepicker\locales\bootstrap-datepicker.ro.js" />
+    <Content Include="js\plugins\datepicker\locales\bootstrap-datepicker.rs-latin.js" />
+    <Content Include="js\plugins\datepicker\locales\bootstrap-datepicker.rs.js" />
+    <Content Include="js\plugins\datepicker\locales\bootstrap-datepicker.ru.js" />
+    <Content Include="js\plugins\datepicker\locales\bootstrap-datepicker.sk.js" />
+    <Content Include="js\plugins\datepicker\locales\bootstrap-datepicker.sl.js" />
+    <Content Include="js\plugins\datepicker\locales\bootstrap-datepicker.sq.js" />
+    <Content Include="js\plugins\datepicker\locales\bootstrap-datepicker.sv.js" />
+    <Content Include="js\plugins\datepicker\locales\bootstrap-datepicker.sw.js" />
+    <Content Include="js\plugins\datepicker\locales\bootstrap-datepicker.th.js" />
+    <Content Include="js\plugins\datepicker\locales\bootstrap-datepicker.tr.js" />
+    <Content Include="js\plugins\datepicker\locales\bootstrap-datepicker.ua.js" />
+    <Content Include="js\plugins\datepicker\locales\bootstrap-datepicker.vi.js" />
+    <Content Include="js\plugins\datepicker\locales\bootstrap-datepicker.zh-CN.js" />
+    <Content Include="js\plugins\datepicker\locales\bootstrap-datepicker.zh-TW.js" />
+    <Content Include="js\plugins\fileinput\fileinput.min.css" />
+    <Content Include="js\plugins\fileinput\fileinput.min.js" />
+    <Content Include="js\plugins\fileinput\fileinput_locale_es.js" />
+    <Content Include="js\plugins\images\sort_asc.png" />
+    <Content Include="js\plugins\images\sort_asc_disabled.png" />
+    <Content Include="js\plugins\images\sort_both.png" />
+    <Content Include="js\plugins\images\sort_desc.png" />
+    <Content Include="js\plugins\images\sort_desc_disabled.png" />
+    <Content Include="js\plugins\jQueryUI\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="js\plugins\jQueryUI\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="js\plugins\jQueryUI\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="js\plugins\jQueryUI\images\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="js\plugins\jQueryUI\images\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="js\plugins\jQueryUI\images\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="js\plugins\jQueryUI\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="js\plugins\jQueryUI\images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="js\plugins\jQueryUI\images\ui-icons_222222_256x240.png" />
+    <Content Include="js\plugins\jQueryUI\images\ui-icons_228ef1_256x240.png" />
+    <Content Include="js\plugins\jQueryUI\images\ui-icons_ef8c08_256x240.png" />
+    <Content Include="js\plugins\jQueryUI\images\ui-icons_ffd27a_256x240.png" />
+    <Content Include="js\plugins\jQueryUI\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="js\plugins\jQueryUI\jquery-ui-1.10.3.js" />
+    <Content Include="js\plugins\jQueryUI\jquery-ui-1.10.3.min.js" />
+    <Content Include="js\plugins\jQueryUI\jquery-ui.css" />
+    <Content Include="js\plugins\jQueryUI\jquery-ui.js" />
+    <Content Include="js\plugins\jQueryUI\jquery-ui.min.css" />
+    <Content Include="js\plugins\jQueryUI\jquery-ui.min.js" />
+    <Content Include="js\plugins\tablesorter\css\asc.gif" />
+    <Content Include="js\plugins\tablesorter\css\bg.gif" />
+    <Content Include="js\plugins\tablesorter\css\desc.gif" />
+    <Content Include="js\plugins\tablesorter\css\style.css" />
+    <Content Include="js\plugins\tablesorter\jquery.tablesorter.min.js" />
+    <Content Include="js\plugins\tablesorter\jquery.tablesorter.min_old.js" />
+    <Content Include="js\plugins\tablesorter\parser.js" />
+    <Content Include="js\procesando.js" />
+    <Content Include="NoAutorizado.aspx" />
+    <Content Include="reconexion.aspx" />
+    <Content Include="uc\CabeceraEntrada.ascx" />
+    <Content Include="uc\CabeceraMenu.ascx" />
+    <Content Include="uc\ControlSesion.aspx" />
+    <Content Include="uc\HeaderMeta.ascx" />
+    <Content Include="uc\Menu\css\ionicons.min.css" />
+    <Content Include="uc\Menu\css\responsivemultimenu.css" />
+    <Content Include="uc\Menu\css\sm-clean.css" />
+    <Content Include="uc\Menu\css\sm-core-css.css" />
+    <Content Include="uc\Menu\css\StyleSheet.css" />
+    <Content Include="uc\Menu\fonts\icomoon.dev.svg" />
+    <Content Include="uc\Menu\fonts\icomoon.svg" />
+    <Content Include="uc\Menu\fonts\license.txt" />
+    <Content Include="uc\Menu\js\jquery.smartmenus.js" />
+    <Content Include="uc\Menu\js\responsivemultimenu.js" />
+    <Content Include="uc\PieMenu.ascx" />
+    <Content Include="uc\SesionCaducada.aspx" />
+    <Content Include="uc\SoloCabecera.ascx" />
+    <Content Include="uc\uc_Session.ascx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Code\BLL\ArbolDependencias.cs" />
+    <Content Include="App_Code\BLL\BulaAvisos.cs" />
+    <Content Include="App_Code\BLL\CategoriaColectivo.cs" />
+    <Content Include="App_Code\BLL\Colectivo.cs" />
+    <Content Include="App_Code\BLL\ColectivoFormulario.cs" />
+    <Content Include="App_Code\BLL\ComunidadProgress.cs" />
+    <Content Include="App_Code\BLL\DesgloseRol.cs" />
+    <Content Include="App_Code\BLL\Estadisticas.cs" />
+    <Content Include="App_Code\BLL\FormacionDemandada.cs" />
+    <Content Include="App_Code\BLL\Foto.cs" />
+    <Content Include="App_Code\BLL\GestionarIncorporaciones.cs" />
+    <Content Include="App_Code\BLL\GestionCambioResponsable.cs" />
+    <Content Include="App_Code\BLL\ImagenHome.cs" />
+    <Content Include="App_Code\BLL\MIEQUIPO.cs" />
+    <Content Include="App_Code\BLL\Perfiles.cs" />
+    <Content Include="App_Code\BLL\Profesional.cs" />
+    <Content Include="App_Code\BLL\ROLIB.cs" />
+    <Content Include="App_Code\BLL\TRAMITACIONCAMBIOROL.cs" />
+    <Content Include="App_Code\BLL\TramitarSalidas.cs" />
+    <Content Include="App_Code\BLL\VALORACIONESPROGRESS.cs" />
+    <Content Include="App_Code\BLL\VisionesAjeasArbol.cs" />
+    <Content Include="App_Code\DAL\Aplicacion.cs" />
+    <Content Include="App_Code\DAL\ArbolDependencias.cs" />
+    <Content Include="App_Code\DAL\BulaAvisos.cs" />
+    <Content Include="App_Code\DAL\CategoriaColectivo.cs" />
+    <Content Include="App_Code\DAL\Colectivo.cs" />
+    <Content Include="App_Code\DAL\ColectivoFormulario.cs" />
+    <Content Include="App_Code\DAL\ComunidadProgress.cs" />
+    <Content Include="App_Code\DAL\DesgloseRol.cs" />
+    <Content Include="App_Code\DAL\Estadisticas.cs" />
+    <Content Include="App_Code\DAL\FormacionDemandada.cs" />
+    <Content Include="App_Code\DAL\Foto.cs" />
+    <Content Include="App_Code\DAL\GestionarIncorporaciones.cs" />
+    <Content Include="App_Code\DAL\GestionCambioResponsable.cs" />
+    <Content Include="App_Code\DAL\ImagenHome.cs" />
+    <Content Include="App_Code\DAL\MIEQUIPO.cs" />
+    <Content Include="App_Code\DAL\Perfiles.cs" />
+    <Content Include="App_Code\DAL\Profesional.cs" />
+    <Content Include="App_Code\DAL\ROLIB.cs" />
+    <Content Include="App_Code\DAL\TRAMITACIONCAMBIOROL.cs" />
+    <Content Include="App_Code\DAL\TramitarSalidas.cs" />
+    <Content Include="App_Code\DAL\VALORACIONESPROGRESS.cs" />
+    <Content Include="App_Code\DAL\VisionesAjenasArbol.cs" />
+    <Content Include="App_Code\Models\Aplicacion.cs" />
+    <Content Include="App_Code\Models\ArbolDependencias.cs" />
+    <Content Include="App_Code\Models\CategoriaColectivo.cs" />
+    <Content Include="App_Code\Models\Colectivo.cs" />
+    <Content Include="App_Code\Models\ColectivoFormulario.cs" />
+    <Content Include="App_Code\Models\ComunidadProgress.cs" />
+    <Content Include="App_Code\Models\DesgloseRol.cs" />
+    <Content Include="App_Code\Models\Estadisticas.cs" />
+    <Content Include="App_Code\Models\FormacionDemandada.cs" />
+    <Content Include="App_Code\Models\Foto.cs" />
+    <Content Include="App_Code\Models\GestionarIncorporaciones.cs" />
+    <Content Include="App_Code\Models\GestionCambioResponsable.cs" />
+    <Content Include="App_Code\Models\MIEQUIPO.cs" />
+    <Content Include="App_Code\Models\ParamsRPT.cs" />
+    <Content Include="App_Code\Models\Perfiles.cs" />
+    <Content Include="App_Code\Models\Profesional.cs" />
+    <Content Include="App_Code\Models\ROLIB.cs" />
+    <Content Include="App_Code\Models\TRAMITACIONCAMBIOROL.cs" />
+    <Content Include="App_Code\Models\TramitarSalidas.cs" />
+    <Content Include="App_Code\Models\VALORACIONESPROGRESS.cs" />
+    <Content Include="App_Code\Models\VisionesAjenasArbol.cs" />
+    <Content Include="App_Code\Shared\Correo.cs" />
+    <Content Include="App_Code\Shared\Database.cs" />
+    <Content Include="App_Code\Shared\DbConn.cs" />
+    <Content Include="App_Code\Shared\Errores.cs" />
+    <Content Include="App_Code\Shared\Extensiones.cs" />
+    <Content Include="App_Code\Shared\IBException.cs" />
+    <Content Include="App_Code\Shared\Smtp.cs" />
+    <Content Include="App_Code\Shared\Utils.cs" />
+    <Compile Include="App_WebReferences\svcEXCEL\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Capa_Presentacion\Administracion\AdmEstadisticasRRHH\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Capa_Presentacion\Administracion\CuadroMandoCambioRol\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Capa_Presentacion\Administracion\CuadroMandoCambioRol\SolicitudesAprobadasStandby\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Capa_Presentacion\Administracion\CuadroMandoCambioRol\SolicitudesAprobadas\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Capa_Presentacion\Administracion\CuadroMandoCambioRol\SolicitudesNoAprobadasStandby\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Capa_Presentacion\Administracion\CuadroMandoCambioRol\SolicitudesNoAprobadas\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Capa_Presentacion\Administracion\Estadisticas\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Capa_Presentacion\Administracion\Estadisticas\Informe\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Capa_Presentacion\Administracion\Estadisticas\Informe\Filtros.aspx.cs">
+      <DependentUpon>Filtros.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Capa_Presentacion\Administracion\FormacionDemandada\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Capa_Presentacion\Administracion\HistoricoRoles\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Capa_Presentacion\Administracion\Mantenimientos\BulaDeAvisos\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Capa_Presentacion\Administracion\Mantenimientos\CategoriaColectivo\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Capa_Presentacion\Administracion\Mantenimientos\ColectivoForzado\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Capa_Presentacion\Administracion\Mantenimientos\ComunidadProgess\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Capa_Presentacion\Administracion\Mantenimientos\FechaAntiguedad\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Capa_Presentacion\Administracion\Mantenimientos\GestionCambioResponsable\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Capa_Presentacion\Administracion\Mantenimientos\ImagenHome\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Capa_Presentacion\Administracion\Mantenimientos\ModeloFormulario\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Capa_Presentacion\Administracion\Mantenimientos\Perfiles\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Capa_Presentacion\Administracion\Mantenimientos\Reconexion\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Capa_Presentacion\Administracion\Mantenimientos\RolesAprobadores\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Capa_Presentacion\Administracion\Mantenimientos\TemporadaProgress\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Capa_Presentacion\Administracion\Mantenimientos\VisionesAjenasArbol2\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Capa_Presentacion\Administracion\Mantenimientos\VisionesAjenasArbol\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Capa_Presentacion\Evaluacion\Abrir\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Capa_Presentacion\Evaluacion\Busqueda\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Capa_Presentacion\Evaluacion\CompletarAbierta\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Capa_Presentacion\Evaluacion\DeMiEquipo\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Capa_Presentacion\Evaluacion\Formularios\Modelo1\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Capa_Presentacion\Evaluacion\Formularios\Modelo1\Informe\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Capa_Presentacion\Evaluacion\Formularios\Modelo2\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Capa_Presentacion\Evaluacion\MisEvaluaciones2\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Capa_Presentacion\Evaluacion\MisEvaluaciones\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Capa_Presentacion\Home\Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Capa_Presentacion\MiEquipo\ArbolDependencias\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Capa_Presentacion\MiEquipo\Confirmarlo\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Capa_Presentacion\MiEquipo\DesgloseRol\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Capa_Presentacion\MiEquipo\GestIncorporaciones\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Capa_Presentacion\MiEquipo\GestionarSolicitudCambioRol\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Capa_Presentacion\MiEquipo\SolicitarCambioRol\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Capa_Presentacion\MiEquipo\TramitarSalidas\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Capa_Presentacion\Utilidades\ExportarExcel.aspx.cs">
+      <DependentUpon>ExportarExcel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="errores.aspx.cs">
+      <DependentUpon>errores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FileDownload.aspx.cs">
+      <DependentUpon>FileDownload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NoAutorizado.aspx.cs">
+      <DependentUpon>NoAutorizado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="reconexion.aspx.cs">
+      <DependentUpon>reconexion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="uc\CabeceraEntrada.ascx.cs">
+      <DependentUpon>CabeceraEntrada.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="uc\CabeceraMenu.ascx.cs">
+      <DependentUpon>CabeceraMenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="uc\ControlSesion.aspx.cs">
+      <DependentUpon>ControlSesion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="uc\HeaderMeta.ascx.cs">
+      <DependentUpon>HeaderMeta.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="uc\PieMenu.ascx.cs">
+      <DependentUpon>PieMenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="uc\SesionCaducada.aspx.cs">
+      <DependentUpon>SesionCaducada.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="uc\SoloCabecera.ascx.cs">
+      <DependentUpon>SoloCabecera.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="uc\uc_Session.ascx.cs">
+      <DependentUpon>uc_Session.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App_WebReferences\svcEmail\svcEmail.discomap" />
+    <None Include="App_WebReferences\svcEmail\svcEmail.wsdl" />
+    <None Include="App_WebReferences\svcEXCEL\item.wsdl" />
+    <None Include="App_WebReferences\svcEXCEL\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_WebReferences\svcEXCEL\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_WebReferences\svcEXCEL\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_WebReferences\svcEXCEL\item3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_WebReferences\svcEXCEL\item4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_WebReferences\svcEXCEL\svcEXCEL.wsdl" />
+    <Content Include="Capa_Presentacion\Administracion\Estadisticas\Informe\estadisticas_modelo_1.rpt" />
+    <Content Include="Capa_Presentacion\Administracion\Estadisticas\Informe\estadisticas_modelo_2.rpt" />
+    <Content Include="Capa_Presentacion\Administracion\Estadisticas\Informe\estadisticas_modelo_3.rpt" />
+    <Content Include="Capa_Presentacion\Administracion\Estadisticas\Informe\estadisticas_modelo_4.rpt" />
+    <Content Include="Capa_Presentacion\Administracion\Estadisticas\Informe\estadisticas_valores_1.rpt" />
+    <Content Include="Capa_Presentacion\Administracion\Mantenimientos\ImagenHome\UploadImage.ashx" />
+    <Content Include="Capa_Presentacion\Evaluacion\Default.aspx.cs.exclude" />
+    <Content Include="Capa_Presentacion\Evaluacion\Default.aspx.exclude" />
+    <Content Include="Capa_Presentacion\Evaluacion\Formularios\Modelo1\Informe\pro_formulario_mod_1.rpt" />
+    <Content Include="Capa_Presentacion\Evaluacion\Formularios\Modelo1\Informe\pro_formulario_mod_1_salto.rpt" />
+    <Content Include="Capa_Presentacion\Evaluacion\Formularios\Modelo1\Informe\pro_formulario_mod_1_salto_10_05_2016.rpt" />
+    <Content Include="Capa_Presentacion\Evaluacion\Formularios\Modelo1\Informe\pro_formulario_mod_1_salto_old.rpt" />
+    <Content Include="Capa_Presentacion\Evaluacion\Formularios\Modelo1\Informe\pro_formulario_mod_2.rpt" />
+    <Content Include="Capa_Presentacion\Evaluacion\Formularios\Modelo1\Informe\pro_formulario_mod_2_salto.rpt" />
+    <Content Include="Capa_Presentacion\Evaluacion\Formularios\Modelo1\Informe\pro_formulario_mod_2_salto_10_05_2016.rpt" />
+    <Content Include="Capa_Presentacion\Evaluacion\Formularios\Modelo1\Informe\pro_formulario_mod_2_salto_old.rpt" />
+    <Content Include="Capa_Presentacion\Evaluacion\Nueva\CompletarForm.aspx.cs.exclude" />
+    <Content Include="Capa_Presentacion\Evaluacion\Nueva\CompletarForm.aspx.exclude" />
+    <Content Include="Capa_Presentacion\Evaluacion\Nueva\css\firmaEvaluador\FeliX.eot" />
+    <Content Include="Capa_Presentacion\Evaluacion\Nueva\css\firmaEvaluador\FeliX.ttf" />
+    <Content Include="Capa_Presentacion\Evaluacion\Nueva\css\firmaEvaluador\FeliX.woff" />
+    <Content Include="Capa_Presentacion\Evaluacion\Nueva\css\firmaEvaluador\FeliX.woff2" />
+    <Content Include="Capa_Presentacion\Evaluacion\Nueva\css\firmaEvaluado\Scriptina.eot" />
+    <Content Include="Capa_Presentacion\Evaluacion\Nueva\css\firmaEvaluado\Scriptina.ttf" />
+    <Content Include="Capa_Presentacion\Evaluacion\Nueva\css\firmaEvaluado\Scriptina.woff" />
+    <Content Include="Capa_Presentacion\Evaluacion\Nueva\css\firmaEvaluado\Scriptina.woff2" />
+    <Content Include="Capa_Presentacion\Evaluacion\Nueva\css\StyleSheet.css.exclude" />
+    <Content Include="Capa_Presentacion\Evaluacion\Nueva\estadoAbierta.png.exclude" />
+    <Content Include="Capa_Presentacion\Evaluacion\Nueva\estadoCerrada.png.exclude" />
+    <Content Include="Capa_Presentacion\Evaluacion\Nueva\estadoEnCurso.png.exclude" />
+    <Content Include="Capa_Presentacion\Home\Documentos\Guia de entrevista.pdf" />
+    <Content Include="Capa_Presentacion\Home\Home.aspx.cs.exclude" />
+    <Content Include="Capa_Presentacion\Home\Home.aspx.exclude" />
+    <Content Include="Capa_Presentacion\Home\Home3.aspx.cs.exclude" />
+    <Content Include="Capa_Presentacion\Home\Home3.aspx.exclude" />
+    <Content Include="Capa_Presentacion\Home\Home4.aspx.cs.exclude" />
+    <Content Include="Capa_Presentacion\Home\Home4.aspx.exclude" />
+    <Content Include="Capa_Presentacion\Home\Home768.aspx.cs.exclude" />
+    <Content Include="Capa_Presentacion\Home\Home768.aspx.exclude" />
+    <Content Include="Capa_Presentacion\Home\HomeOld.aspx.cs.exclude" />
+    <Content Include="Capa_Presentacion\Home\HomeOld.aspx.exclude" />
+    <Content Include="Capa_Presentacion\Home\HomeOLD2.aspx.cs.exclude" />
+    <Content Include="Capa_Presentacion\Home\PRUEBA.aspx.cs.exclude" />
+    <Content Include="Capa_Presentacion\Home\PRUEBA.aspx.exclude" />
+    <Content Include="Certificado\RHNET.pfx" />
+    <Content Include="css\bootstrap-theme.css.map" />
+    <Content Include="css\bootstrap.css.map" />
+    <Content Include="Docs\Ayudas\Administracion\AntiguedadDeReferencia.pdf" />
+    <Content Include="Docs\Ayudas\Administracion\ArbolDeDependencias-adm.pdf" />
+    <Content Include="Docs\Ayudas\Administracion\BulaDeAvisos.pdf" />
+    <Content Include="Docs\Ayudas\Administracion\BuscarEvaluaciones.pdf" />
+    <Content Include="Docs\Ayudas\Administracion\CambiarEvaluador.pdf" />
+    <Content Include="Docs\Ayudas\Administracion\Categoriaprofesional-colectivo.pdf" />
+    <Content Include="Docs\Ayudas\Administracion\Colectivo-modeloDeFormulario.pdf" />
+    <Content Include="Docs\Ayudas\Administracion\ColectivoForzado.pdf" />
+    <Content Include="Docs\Ayudas\Administracion\ComunidadProgress.pdf" />
+    <Content Include="Docs\Ayudas\Administracion\Estadisticasglobales.pdf" />
+    <Content Include="Docs\Ayudas\Administracion\EstadisticasPorEvaluador.pdf" />
+    <Content Include="Docs\Ayudas\Administracion\FormacionDemandada.pdf" />
+    <Content Include="Docs\Ayudas\Administracion\HistoricoDeRoles.pdf" />
+    <Content Include="Docs\Ayudas\Administracion\MantenimientoDePerfiles.pdf" />
+    <Content Include="Docs\Ayudas\Administracion\Perfiles.pdf" />
+    <Content Include="Docs\Ayudas\Administracion\ProfesionalesPorRol-adm.pdf" />
+    <Content Include="Docs\Ayudas\Administracion\RolesAprobadores.pdf" />
+    <Content Include="Docs\Ayudas\Administracion\TemporadaProgress.pdf" />
+    <Content Include="Docs\Ayudas\Administracion\VisualizacionForzadaAgregada.pdf" />
+    <Content Include="Docs\Ayudas\Administracion\VisualizacionForzadaDirecta.pdf" />
+    <Content Include="Docs\Ayudas\Equipo\ArbolDeDependencias.pdf" />
+    <Content Include="Docs\Ayudas\Equipo\ConfirmarMiEquipo.pdf" />
+    <Content Include="Docs\Ayudas\Equipo\GestionarEntradasAMiEquipo.pdf" />
+    <Content Include="Docs\Ayudas\Equipo\TramitarSalidasDeMiEquipo.pdf" />
+    <Content Include="Docs\Ayudas\Evaluaciones\AbirNuevasEvaluaciones.pdf" />
+    <Content Include="Docs\Ayudas\Evaluaciones\CompletarEvaluacionesAbiertas.pdf" />
+    <Content Include="Docs\Ayudas\Evaluaciones\Estadisticas.pdf" />
+    <Content Include="Docs\Ayudas\Evaluaciones\EvaluacionesDeMiEquipo.pdf" />
+    <Content Include="Docs\Ayudas\Evaluaciones\MisEvaluaciones.pdf" />
+    <Content Include="Docs\Ayudas\Roles\GestionarSolicitudesDeCambioDeRol.pdf" />
+    <Content Include="Docs\Ayudas\Roles\ProfesionalesPorRol.pdf" />
+    <Content Include="Docs\Ayudas\Roles\SolicitarCambioDeRol.pdf" />
+    <Content Include="Docs\DECALOGOYMODELOENBLANCO\CAU.pdf" />
+    <Content Include="Docs\DECALOGOYMODELOENBLANCO\Decalogo + Formulario 2016 Atención a Clientes.doc" />
+    <Content Include="Docs\DECALOGOYMODELOENBLANCO\Decalogo + Formulario 2016.doc" />
+    <Content Include="Docs\DECALOGOYMODELOENBLANCO\Decalogo.pdf" />
+    <Content Include="Docs\DECALOGOYMODELOENBLANCO\Decalogo_Formulario_2016.pdf" />
+    <Content Include="Docs\DECALOGOYMODELOENBLANCO\Decalogo_Formulario_2016_Atencion_Clientes.pdf" />
+    <Content Include="Docs\DECÁLOGOYMODELOENBLANCO\CAU.pdf" />
+    <Content Include="Docs\DECÁLOGOYMODELOENBLANCO\Decalogo + Formulario 2016 Atención a Clientes.doc" />
+    <Content Include="Docs\DECÁLOGOYMODELOENBLANCO\Decalogo + Formulario 2016.doc" />
+    <Content Include="Docs\DECÁLOGOYMODELOENBLANCO\Decalogo.pdf" />
+    <Content Include="Docs\DECÁLOGOYMODELOENBLANCO\Decalogo_Formulario_2016.pdf" />
+    <Content Include="Docs\DECÁLOGOYMODELOENBLANCO\Decalogo_Formulario_2016_Atención_Clientes.pdf" />
+    <Content Include="Docs\EJEMPLOS\Comercial.pdf" />
+    <Content Include="Docs\EJEMPLOS\Consultor_procesos.pdf" />
+    <Content Include="Docs\EJEMPLOS\Evaluación_del_desempeño COMERCIAL.pdf" />
+    <Content Include="Docs\EJEMPLOS\Evaluación_del_desempeño_ATENCIÓN_A_USUARIOS.pdf" />
+    <Content Include="Docs\EJEMPLOS\Evaluación_del_desempeño_CONSULTOR_DE_PROCESOS.pdf" />
+    <Content Include="Docs\EJEMPLOS\Evaluación_del_desempeño_TÉCNICO_DE_DESARROLLO.pdf" />
+    <Content Include="Docs\EJEMPLOS\Evaluación_del_desempeño_TÉCNICO_DE_SISTEMAS.pdf" />
+    <Content Include="Docs\EJEMPLOS\Evaluación_del_desempeño_TÉCNICO_DE_SOPORTE_AL_NEGOCIO.pdf" />
+    <Content Include="Docs\EJEMPLOS\Modelo Formato Evaluacion Desempeño Comercial.doc" />
+    <Content Include="Docs\EJEMPLOS\Modelo Formato Evaluacion Desempeño Consultor de procesos.doc" />
+    <Content Include="Docs\EJEMPLOS\Modelo Formato Evaluacion Desempeño Tecnico de desarrollo.doc" />
+    <Content Include="Docs\EJEMPLOS\Modelo Formato Evaluacion Desempeño Tecnico de soporte al negocio.doc" />
+    <Content Include="Docs\EJEMPLOS\Tecnico_desarrollo.pdf" />
+    <Content Include="Docs\EJEMPLOS\Tecnico_soporte_negocio.pdf" />
+    <Content Include="Docs\ENTREVISTA\edGuiaEntrevista 16.pdf" />
+    <Content Include="Docs\ENTREVISTA\edGuiaEntrevista 16.ppt" />
+    <Content Include="Docs\ENTREVISTA\Guia_de_entrevista.pdf" />
+    <Content Include="Docs\EQUIPO\Equipo en Progress 2016.docx" />
+    <Content Include="Docs\EQUIPO\Equipo.pdf" />
+    <Content Include="Docs\EVALUACIONES\Evaluacion_del_desempeno.pdf" />
+    <Content Include="Docs\HABILIDADES\Habilidades Progress 2016.ppt" />
+    <Content Include="Docs\HABILIDADES\Habilidades.pdf" />
+    <Content Include="Docs\HABILIDADES\Habilidades_Progress_2016.pdf" />
+    <Content Include="Docs\PROCEDIMIENTO\Esquema procedimiento de evaluación del desempeño2016.ppt" />
+    <Content Include="Docs\PROCEDIMIENTO\Esquema_evaluacion_del_desempeno.pdf" />
+    <Content Include="Docs\PROCEDIMIENTO\Evaluacion_del_desempeno.pdf" />
+    <Content Include="Docs\PROCEDIMIENTO\Evaluación del desempeño - 2016.doc" />
+    <Content Include="Docs\PROCEDIMIENTO\Procedimiento_de_evaluación_del_desempeño.pdf" />
+    <Content Include="Docs\PROCEDIMIENTO\Resumen_del_procedimiento_de_evaluación_del_desempeño.pdf" />
+    <Content Include="Docs\ROLES\Roles en Progress 2016.docx" />
+    <Content Include="Docs\ROLES\Roles.pdf" />
+    <Content Include="Docs\VALORES_CORPORATIVOS\Valores.pdf" />
+    <Content Include="Docs\VALORES_CORPORATIVOS\Valores.ppt" />
+    <Content Include="fonts\firmaEvaluador\FeliX.eot" />
+    <Content Include="fonts\firmaEvaluador\FeliX.ttf" />
+    <Content Include="fonts\firmaEvaluador\FeliX.woff" />
+    <Content Include="fonts\firmaEvaluador\FeliX.woff2" />
+    <Content Include="fonts\firmaEvaluado\Scriptina.eot" />
+    <Content Include="fonts\firmaEvaluado\Scriptina.ttf" />
+    <Content Include="fonts\firmaEvaluado\Scriptina.woff" />
+    <Content Include="fonts\firmaEvaluado\Scriptina.woff2" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="imagenes\Iniciando.psd" />
+    <Content Include="js\plugins\datatables\jquery.dataTables.min.css_VERSIONNUEVA" />
+    <Content Include="js\plugins\datepicker\bootstrap-datepicker.js_old" />
+    <Content Include="js\plugins\tablesorter\css\blue.zip" />
+    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Content Include="obj\Debug\PROGRESS_BS.csproj.CoreCompileInputs.cache" />
+    <Content Include="obj\Debug\PROGRESS_BS.csprojAssemblyReference.cache" />
+    <None Include="packages.config" />
+    <Content Include="uc\Menu\fonts\icomoon.eot" />
+    <Content Include="uc\Menu\fonts\icomoon.ttf" />
+    <Content Include="uc\Menu\fonts\icomoon.woff" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="obj\Debug\TempPE\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50137</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:50137/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

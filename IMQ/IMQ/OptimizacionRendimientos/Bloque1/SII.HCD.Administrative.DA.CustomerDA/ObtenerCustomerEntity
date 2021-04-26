@@ -1,0 +1,49 @@
+-- TableNames.CustomerTable
+
+SELECT 		[ID], 
+			PersonID, 
+			IdentificationNumber, 
+			ShortIDNumber, 
+			CHNumber, 
+			CurrentAdmissionID, 
+			CurrentEpisodeID, 
+			ProfileID, 
+			CustomerClassificationID, 
+			OrganizationID, 
+			CustomerNameConfidentiality, 
+			CustomerIdentifierConfidentiality, 
+			PoorlyIdentified, 
+			LastUpdated, 
+			ModifiedBy, 
+			CAST(DBTimeStamp as bigint) DBTimeStamp
+			
+FROM 		Customer
+WHERE 		PersonID=@PersonID	
+
+-- TableNames.ProfileTable
+
+SELECT 		P.[ID], 
+			P.[Code], 
+			P.[Name], 
+			P.[CategoryID], 
+			C.[Name] CategoryName, 
+			P.[Status], 
+			P.LastUpdated, 
+			P.ModifiedBy,
+			CAST(P.DBTimeStamp as bigint) DBTimeStamp
+			
+FROM 		[Profile] P
+JOIN		[Customer] S
+ON			P.[ID] = S.ProfileID AND S.ID = @PersonID
+
+LEFT JOIN 	[Category] C ON P.CategoryID=C.[ID]
+
+-- TableNames.CustomerAdmissionTable
+
+SELECT 		CAST(A.DBTimeStamp as bigint) DBTimeStamp, 
+			A.* 
+
+FROM 		CustomerAdmission A 
+JOIN		[Customer] S
+ON			A.[ID] = S.CurrentAdmissionID AND S.ID = @PersonID
+

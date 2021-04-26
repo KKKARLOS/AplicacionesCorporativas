@@ -1,0 +1,22 @@
+using System;
+using System.Collections;
+#UsingNameSpace#
+namespace #NameSpace#
+{
+   [Serializable ]
+   public class #ClassName##ClassParents#
+    {
+
+        /// <summary>
+        /// Summary description for #ClassName#
+        /// </summary>
+		#region Private Variables
+#PrivateVariables#
+		#endregion
+
+		#region Public Properties
+#PublicProperties#
+        #endregion
+
+	}
+}

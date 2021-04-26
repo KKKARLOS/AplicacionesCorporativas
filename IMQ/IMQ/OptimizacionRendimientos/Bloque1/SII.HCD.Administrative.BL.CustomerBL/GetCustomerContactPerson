@@ -1,0 +1,61 @@
+      public CustomerContactPersonEntity GetCustomerContactPerson(int customerContactPersonID)
+        {
+            try
+            {
+                PersonBL personBL = new PersonBL();
+
+                DataSet ds = _customerContactPersonDA.GetCustomerContactPerson(customerContactPersonID);
+                if ((ds.Tables != null) && (ds.Tables.Contains(SII.HCD.Administrative.Entities.TableNames.CustomerContactPersonTable)) && (ds.Tables[SII.HCD.Administrative.Entities.TableNames.CustomerContactPersonTable].Rows.Count > 0))
+                {
+                    int personID = SIIConvert.ToInteger(ds.Tables[SII.HCD.Administrative.Entities.TableNames.CustomerContactPersonTable].Rows[0]["PersonID"].ToString(), 0);
+                    int contactTypeID = SIIConvert.ToInteger(ds.Tables[SII.HCD.Administrative.Entities.TableNames.CustomerContactPersonTable].Rows[0]["ContactTypeID"].ToString(), 0);
+
+                    DataSet ds2;
+
+                    #region Contact Types
+                    ds2 = _contactTypeDA.GetContactTypeByID(contactTypeID);
+                    if ((ds2 != null) && (ds2.Tables.Contains(SII.HCD.Administrative.Entities.TableNames.ContactTypeTable)))
+                    {
+                        DataTable dt = ds2.Tables[SII.HCD.Administrative.Entities.TableNames.ContactTypeTable].Copy();
+                        ds.Tables.Add(dt);
+                    }
+                    #endregion
+
+                    #region Person
+                    if (personID <= 0)
+                    {
+                        throw new Exception(Properties.Resources.ERROR_CustomerContactPersonNotFound);
+                    }
+                    SII.HCD.BackOffice.Entities.PersonEntity myPerson = personBL.GetPerson(personID);
+                    #endregion
+
+                    CustomerContactPersonAdvancedAdapter customerContactPersonAdapter = new CustomerContactPersonAdvancedAdapter();
+                    CustomerContactPersonEntity result = customerContactPersonAdapter.GetInfo(ds.Tables[SII.HCD.Administrative.Entities.TableNames.CustomerContactPersonTable].Rows[0], ds);
+                    result.Person = myPerson;
+                    LOPDLogger.Write(EntityNames.CustomerContactPersonEntityName, customerContactPersonID, ActionType.View);
+                    return result;
+                }
+                else
+                    return null;
+            }
+            catch (Exception ex)
+            {
+                if (ExceptionPolicy.HandleException(ex, ExceptionPolicies.Service)) throw;
+                return null;
+            }
+        }
+        #endregion
+
+
+Obtener_CustomerContactPerson_Entity
+		
+		
+SELECT [ID], PersonID, ContactTypeID, CustomerID, UrgentContact, AlternativeContact, " + Environment.NewLine +
+                       "LastUpdated, ModifiedBy, CAST(DBTimeStamp as bigint) DBTimeStamp" + Environment.NewLine +
+                       "FROM CustomerContactPerson WHERE [ID]=@ID
+
+
+
+"SELECT [ID], [Code], [Name], [Description], [Type], LastUpdated, ModifiedBy, CAST(DBTimeStamp as bigint) DBTimeStamp" + Environment.NewLine +
+                       "FROM ContactType WHERE [ID]=@ID";
+            }					   

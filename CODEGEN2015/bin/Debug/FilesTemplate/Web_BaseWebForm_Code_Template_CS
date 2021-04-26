@@ -1,0 +1,138 @@
+using System;
+using System.Data;
+using System.Configuration;
+using System.Collections;
+using System.Web;
+using System.Web.Security;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Web.UI.WebControls.WebParts;
+using System.Web.UI.HtmlControls;
+using System.Threading;
+using System.Globalization;
+
+
+    public partial class BaseWebForm : System.Web.UI.Page
+    {
+       #region virtual methods
+    protected virtual void LoadDate()
+    {
+          
+    }
+    protected virtual int GetId()
+    {
+        return -1;
+    }
+
+    protected virtual void FillLists()
+    {
+        
+    }
+    protected virtual void AddValidations()
+    {
+       
+    }
+    protected virtual bool Validation()
+    {
+        return true;
+    }
+    protected virtual bool PerformSave()
+    {
+        if(Validation())
+        {
+        return true;
+        }
+        return false;
+    }
+    protected virtual bool PerformDelete()
+    {
+        return true;
+    }
+
+
+    protected bool AfterSave(int result, Label lblMessage,string redirectTo)
+    {
+        if (result > -1)
+        {
+            string strScript = "alert('" + Resources.Main.SavedSuccessfully + "');  window.location.href = '" + redirectTo + "';";
+            ScriptManager.RegisterClientScriptBlock(this.Page, this.GetType(), "saveSuccessfully", strScript, true);
+                    return true;
+        }
+        else
+        {
+            string strScript = "alert('" + Resources.Main.SavedFaild + "');" ;
+            ScriptManager.RegisterClientScriptBlock(this.Page, this.GetType(), "saveFaild", strScript, true);
+            return false;
+        }
+
+
+
+    }
+    protected bool AfterDelete(int result, Label lblMessage, string redirectTo)
+    {
+        if (result > -1)
+        {
+            string strScript = "alert('" + Resources.Main.DeletedSuccessfully + "');  window.location.href = '" + redirectTo + "';";
+            ScriptManager.RegisterClientScriptBlock(this.Page,this.GetType(), "deleteSuccessfully", strScript, true);
+        //    Response.Redirect(redirectTo,false);
+            return true;
+        }
+        else
+        {
+            string strScript = "alert('" + Resources.Main.DeletedFaild + "');";
+            ScriptManager.RegisterClientScriptBlock(this.Page, this.GetType(), "deleteFaild", strScript, true);
+            return false;
+        }
+    }
+
+
+    protected bool LogException(Exception ex, Label lblMessage)
+    {
+        lblMessage.Text=ex.Message;
+        return true;
+    }
+
+    protected string GetMessage(Exception ex)
+    {
+        return "";
+    }
+    #endregion
+    
+        private void SetPageCulture()
+        {
+           
+            if (Session["LanguageID"] == null)
+            {
+                Session["LanguageID"] = 1;
+            }
+            string strLang = "";
+            int intLang = Convert.ToInt32(Session["LanguageID"]);
+            if (intLang > 0)
+            {
+                strLang = Convert.ToString(((Lang)intLang)).Replace("_", "-");
+
+                CultureInfo cultureInfo = new System.Globalization.CultureInfo(strLang);
+                Thread.CurrentThread.CurrentCulture = cultureInfo;
+                Thread.CurrentThread.CurrentUICulture = cultureInfo;
+            }
+
+        }
+
+        protected override void InitializeCulture()
+        {
+            try
+            {
+                SetPageCulture();
+                base.InitializeCulture();
+              
+            }
+            catch (Exception ex)
+            {
+
+                Response.Write(ex.ToString());
+            }
+           
+        }
+        
+    }
+

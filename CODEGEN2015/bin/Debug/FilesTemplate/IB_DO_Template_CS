@@ -1,0 +1,25 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+#UsingNameSpace#
+
+namespace #NameSpace#
+{
+   #DataContract#
+   public class #ClassName##ClassParents#
+    {
+
+        /// <summary>
+        /// Summary description for #ClassName#
+        /// </summary>
+		#region Private Variables
+#PrivateVariables#
+		#endregion
+
+		#region Public Properties
+#PublicProperties#
+        #endregion
+
+	}
+}

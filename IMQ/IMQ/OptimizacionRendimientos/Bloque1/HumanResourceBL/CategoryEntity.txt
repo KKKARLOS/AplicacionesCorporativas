@@ -1,0 +1,71 @@
+#region Usings
+using System;
+using System.IO;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
+using Microsoft.Practices.EnterpriseLibrary.Validation.Validators;
+using SII.Framework.Interfaces;
+#endregion
+
+namespace SII.HCD.BackOffice.Entities
+{
+    [DataContract()]
+    [Serializable()]
+    public class CategoryEntity : IStatusEntity, ICloneable
+    {
+        #region Properties
+        [DataMember()]
+        public int ID { get; set; }
+        [DataMember()]
+        [NotNullValidator()]
+        public int CategoryKey { get; set; }
+        [DataMember()]
+        [NotNullValidator()]
+        [StringLengthValidator(1, 100)]
+        public string Name { get; set; }
+        [DataMember()]
+        [NotNullValidator()]
+        public CategoryTypeEnum Type { get; set; }
+        [DataMember()]
+        public Int64 DBTimeStamp { get; set; }
+        [DataMember()]
+        public EditStatusEntity EditStatus { get; set; }
+        #endregion
+
+        #region Constructors
+        public CategoryEntity() : this(0, 0, String.Empty, CategoryTypeEnum.None, 0) { }
+
+        public CategoryEntity(int id, int categoryKey, string name, CategoryTypeEnum type, Int64 dbTimeStamp)
+        {
+            ID = id;
+            CategoryKey = categoryKey;
+            Name = name;
+            Type = type;
+            DBTimeStamp = dbTimeStamp;
+            EditStatus = new EditStatusEntity();
+        }
+        #endregion
+
+        #region ICloneable Members
+        public virtual object Clone()
+        {
+            object clonedObject = null;
+            MemoryStream ms = new MemoryStream();
+            try
+            {
+                BinaryFormatter bf = new BinaryFormatter();
+
+                bf.Serialize(ms, this);
+                ms.Seek(0, SeekOrigin.Begin);
+                clonedObject = bf.Deserialize(ms);
+            }
+            finally
+            {
+                ms.Close();
+            }
+            return clonedObject;
+        }
+        #endregion
+
+    }
+}

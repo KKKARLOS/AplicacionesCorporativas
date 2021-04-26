@@ -1,0 +1,93 @@
+using System;
+using System.IO;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
+using SII.Framework.Interfaces;
+using CommonEntities = SII.HCD.Common.Entities;
+
+namespace SII.HCD.BackOffice.Entities
+{
+    [DataContract]
+    [Serializable]
+    public class DeviceBaseEntity : IStatusEntity, ICloneable
+    {
+        #region Properties
+        [DataMember]
+        public int ID { get; set; }
+
+        [DataMember]
+        public string Name { get; set; }
+
+        [DataMember]
+        public string Code { get; set; }
+
+        [DataMember]
+        public string DeviceIP { get; set; }
+
+        [DataMember]
+        public CommonEntities.StatusEnum Status { get; set; }
+
+        [DataMember]
+        public DateTime LastUpdated { get; set; }
+
+        [DataMember]
+        public string ModifiedBy { get; set; }
+
+        [DataMember]
+        public long DBTimeStamp { get; set; }
+
+        [DataMember]
+        public EditStatusEntity EditStatus { get; set; }
+        #endregion
+
+        #region Constructors
+        public DeviceBaseEntity()
+            : this(0, string.Empty, string.Empty, string.Empty, CommonEntities.StatusEnum.None, string.Empty, DateTime.MinValue, 0) { }
+
+        public DeviceBaseEntity(int id, string deviceCode, string deviceName, string deviceIP, CommonEntities.StatusEnum status, string modifiedBy, DateTime lastUpdated, long dbTimeStamp)
+        {
+            ID = id;
+            DBTimeStamp = dbTimeStamp;
+            LastUpdated = lastUpdated;
+            ModifiedBy = modifiedBy;
+            Status = status;
+            DeviceIP = deviceIP;
+            Name = deviceName;
+            Code = deviceCode;
+            EditStatus = new EditStatusEntity();
+        }
+        #endregion
+
+        #region ICloneable Members
+        public virtual object Clone()
+        {
+            object clonedObject = null;
+            MemoryStream ms = new MemoryStream();
+            try
+            {
+                BinaryFormatter bf = new BinaryFormatter();
+
+                bf.Serialize(ms, this);
+                ms.Seek(0, SeekOrigin.Begin);
+                clonedObject = bf.Deserialize(ms);
+            }
+            finally
+            {
+                ms.Close();
+            }
+            return clonedObject;
+        }
+        #endregion
+    }
+}
+ ojo
+ 
+ IStatusEntity
+ 
+     public interface IStatusEntity
+    {
+        EditStatusEntity EditStatus { get; }
+    }
+
+
+

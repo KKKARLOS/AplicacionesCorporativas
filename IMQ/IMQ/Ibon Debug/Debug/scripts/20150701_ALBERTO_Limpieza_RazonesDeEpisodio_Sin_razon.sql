@@ -1,0 +1,1 @@
+DELETE FROM EpisodeTypeReasonRel WHERE (EpisodeReasonTypeID=0)

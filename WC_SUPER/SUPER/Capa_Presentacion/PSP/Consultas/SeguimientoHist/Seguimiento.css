@@ -1,0 +1,113 @@
+﻿#tblDatos TD{border-right: solid 1px #A6C3D2; padding-right:1px;}
+#tblDatos2 TD{border-right: solid 1px #A6C3D2; padding-right:1px;}
+#tblResultado TD{border-right: solid 1px #A6C3D2; padding-right:1px;}
+#tblResultado2 TD{border-right: solid 1px #A6C3D2; padding-right:1px;}
+
+.tdcol1
+{
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-left-color: #000000;
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-right-color: #000000;
+    /*padding-left: 3px;*/
+}
+.tddr
+{
+    text-align:right;
+}
+.tdcol
+{
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-right-color: #000000;
+}
+.colTabla
+{
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-left-color: #569BBD;
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-top-color: #569BBD;
+    background-color: #E4EFF3;
+}
+.colTabla1
+{
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-left-color: #569BBD;
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-top-color: #569BBD;
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-right-color: #569BBD;
+    background-color: #E4EFF3;
+}
+.FAM1
+{
+	CURSOR: pointer;
+	HEIGHT:16px;
+    FONT-SIZE: 11px;
+    COLOR: #000000;
+    FONT-FAMILY: Arial, Helvetica, sans-serif;
+    BACKGROUND-COLOR: #FFFF84;
+    TEXT-DECORATION: none;
+}
+.FAM2
+{
+	CURSOR: pointer;
+	HEIGHT:16px;	
+    FONT-SIZE: 11px;
+    COLOR: #000000;
+    FONT-FAMILY: Arial, Helvetica, sans-serif;
+    BACKGROUND-COLOR: #FFFFC6;
+    TEXT-DECORATION: none;
+}
+.FAM3
+{
+	CURSOR: pointer;
+	HEIGHT:16px;
+    FONT-SIZE: 11px;
+    COLOR: #000000;
+    FONT-FAMILY: Arial, Helvetica, sans-serif;
+    BACKGROUND-COLOR: #E0FCE2;
+    TEXT-DECORATION: none;
+}
+.FAM4
+{
+	CURSOR: pointer;
+	HEIGHT:16px;	
+    FONT-SIZE: 11px;
+    COLOR: #000000;
+    FONT-FAMILY: Arial, Helvetica, sans-serif;
+    BACKGROUND-COLOR: #F2FBF3;
+    TEXT-DECORATION: none;
+}
+.blue
+{
+    color: Blue;
+}
+.SR
+{
+    /* Semaforo rojo 
+    background-color: RED;*/
+    BACKGROUND-COLOR: #F45C5C;
+}
+.SV
+{
+    /* Semaforo verde */
+    BACKGROUND-COLOR: #00ff00;
+}
+.SA
+{
+    /* Semaforo amarillo */
+    BACKGROUND-COLOR: yellow;
+}
+.ST
+{
+    /* Sin Semaforo */
+    BACKGROUND-COLOR: Transparent;
+}

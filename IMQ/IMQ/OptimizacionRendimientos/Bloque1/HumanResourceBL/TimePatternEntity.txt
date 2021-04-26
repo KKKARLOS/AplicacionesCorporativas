@@ -1,0 +1,308 @@
+using System;
+using System.IO;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
+using Microsoft.Practices.EnterpriseLibrary.Validation;
+using Microsoft.Practices.EnterpriseLibrary.Validation.Validators;
+using CommonEntities = SII.HCD.Common.Entities;
+
+namespace SII.HCD.BackOffice.Entities
+{
+    [DataContract]
+    [Serializable]
+    [HasSelfValidation]
+    public class TimePatternEntity : TimePatternBaseEntity, ICloneable
+    {
+        #region Constructors
+        public TimePatternEntity()
+            : this(0, string.Empty, string.Empty, PatternTypeEnum.Unknown,
+            string.Empty, 0, 0, string.Empty, 0, TimeSchemeEnum.WithoutScheme, CommonEntities.UnitTimeEnum.Default,
+            CommonEntities.UnitTimeEnum.Default, false, null, false, CommonEntities.StatusEnum.None, string.Empty, DateTime.MinValue, 0)
+        { }
+
+        public TimePatternEntity(int id, string meaning, string description,
+            PatternTypeEnum patternType, string daysOfWeek, int numberOfTimes, int quantity,
+            string selectedDays, int timeInterval, TimeSchemeEnum timeScheme, CommonEntities.UnitTimeEnum unit,
+            CommonEntities.UnitTimeEnum unitInterval, bool holidays, UserTimeEntity[] userTimes, bool inUse,
+            CommonEntities.StatusEnum status, string modifiedBy, DateTime lastUpdated, long dbTimeStamp)
+            : base(id, description, meaning, status, modifiedBy, lastUpdated, dbTimeStamp)
+        {
+            Unit = unit;
+            UnitInterval = unitInterval;
+            TimeScheme = timeScheme;
+            TimeInterval = timeInterval;
+            SelectedDays = selectedDays;
+            Quantity = quantity;
+            NumberOfTimes = numberOfTimes;
+            DaysOfWeek = daysOfWeek;
+            PatternType = patternType;
+            UserTimes = userTimes;
+            Holidays = holidays;
+            InUse = inUse;
+        }
+
+        #endregion
+
+        #region Public methods
+        public DateTime EstimateEndOverDurationParams(DateTime startDateTime)
+        {
+            switch (Unit)
+            {
+                case CommonEntities.UnitTimeEnum.Default:
+                    return startDateTime;
+                case CommonEntities.UnitTimeEnum.Minutes:
+                    return startDateTime.AddMinutes(Quantity);
+                case CommonEntities.UnitTimeEnum.Hours:
+                    return startDateTime.AddHours(Quantity);
+                case CommonEntities.UnitTimeEnum.Days:
+                    return startDateTime.AddDays(Quantity);
+                case CommonEntities.UnitTimeEnum.Weeks:
+                    return startDateTime.AddDays(Quantity * 7);
+                case CommonEntities.UnitTimeEnum.Months:
+                    return startDateTime.AddMonths(Quantity);
+                case CommonEntities.UnitTimeEnum.Years:
+                    return startDateTime.AddYears(Quantity);
+                default:
+                    throw new ArgumentOutOfRangeException("interval");
+            }
+        }
+
+        public TimeSpan GetDuration()
+        {
+            if (PatternType != PatternTypeEnum.DurationTypes)
+                return TimeSpan.Zero;
+
+            switch (Unit)
+            {
+                case CommonEntities.UnitTimeEnum.Minutes:
+                    return TimeSpan.FromMinutes(Quantity);
+                case CommonEntities.UnitTimeEnum.Hours:
+                    return TimeSpan.FromHours(Quantity);
+                case CommonEntities.UnitTimeEnum.Days:
+                    return TimeSpan.FromDays(Quantity);
+                case CommonEntities.UnitTimeEnum.Weeks:
+                    return TimeSpan.FromDays(Quantity * 7);
+                case CommonEntities.UnitTimeEnum.Months:
+                    return TimeSpan.FromDays(Quantity * 30);
+                case CommonEntities.UnitTimeEnum.Years:
+                    return TimeSpan.FromDays(Quantity * 365);
+                default: return TimeSpan.FromHours(0);
+            }
+        }
+
+        public void AssingToTimePatternDTO(TimePatternDTO tpDTO)
+        {
+            tpDTO.ID = ID;
+            tpDTO.Meaning = Meaning;
+            tpDTO.Description = Description;
+            tpDTO.Quantity = Quantity;
+            tpDTO.TimeInterval = TimeInterval;
+            tpDTO.NumberOfTimes = NumberOfTimes;
+            tpDTO.UserTimesString = this.UserTimesString();
+            tpDTO.PatternType = PatternType;
+            tpDTO.Unit = Unit;
+            tpDTO.Status = Status;
+            tpDTO.InUse = InUse;
+            tpDTO.DBTimeStamp = DBTimeStamp;
+        }
+
+        [SelfValidation]
+        public void Validate(ValidationResults validationResults)
+        {
+            switch (PatternType)
+            {
+                case PatternTypeEnum.Unknown:
+                    break;
+                case PatternTypeEnum.ActivityAndAvailabilityTypes:
+                    this.ValidateActivityAndAvailabilityTypes(validationResults);
+                    break;
+                case PatternTypeEnum.DurationTypes:
+                    this.ValidateDurationTypes(validationResults);
+                    break;
+                case PatternTypeEnum.FixedPatternActionTime:
+                    this.ValidateFixedPatternActionTime(validationResults);
+                    break;
+                case PatternTypeEnum.RepeatedPatternActionTime:
+                    this.ValidateRepeatedPatternActionTime(validationResults);
+                    break;
+                case PatternTypeEnum.TimeInterval:
+                    this.ValidateTimeInterval(validationResults);
+                    break;
+                case PatternTypeEnum.FractionationPattern:
+                    this.ValidateFractionationPattern(validationResults);
+                    break;
+                case PatternTypeEnum.PatternBetweenTwoActions:
+                    this.ValidatePatternBetweenTwoActions(validationResults);
+                    break;
+                case PatternTypeEnum.RepeatIntervalAction:
+                    this.ValidateRepeatIntervalAction(validationResults);
+                    break;
+                default:
+                    break;
+            }
+        }
+        #endregion
+
+        #region Private methods
+        private void ValidateActivityAndAvailabilityTypes(ValidationResults validationResults)
+        {
+            if (NumberOfTimes != 2)
+            {
+                validationResults.AddResult(new ValidationResult(
+                    string.Format(Properties.Resources.ERROR_InvalidValueNotEqualTo, Properties.Resources.NumberOfTimes, 2),
+                    this, "NumberOfTimes", null, null));
+            }
+        }
+
+        private void ValidateDurationTypes(ValidationResults validationResults)
+        {
+            if (Quantity <= 0)
+            {
+                validationResults.AddResult(new ValidationResult(
+                    string.Format(Properties.Resources.ERROR_InvalidValueNotGreaterThanZero, Properties.Resources.Quantity),
+                    this, "Quantity", null, null));
+            }
+        }
+
+        private void ValidateFixedPatternActionTime(ValidationResults validationResults)
+        {
+            if (Quantity < 0)
+            {
+                validationResults.AddResult(new ValidationResult(
+                    string.Format(Properties.Resources.ERROR_InvalidValueNotGreaterOrEqualThanZero, Properties.Resources.Quantity),
+                    this, "Quantity", null, null));
+            }
+        }
+
+        private void ValidateRepeatedPatternActionTime(ValidationResults validationResults)
+        {
+            if (NumberOfTimes <= 0)
+            {
+                validationResults.AddResult(new ValidationResult(
+                    string.Format(Properties.Resources.ERROR_InvalidValueNotGreaterThanZero, Properties.Resources.NumberOfTimes),
+                    this, "NumberOfTimes", null, null));
+            }
+
+            if (TimeInterval <= 0)
+            {
+                validationResults.AddResult(new ValidationResult(
+                    string.Format(Properties.Resources.ERROR_InvalidValueNotGreaterThanZero, Properties.Resources.TimeInterval),
+                    this, "TimeInterval", null, null));
+            }
+        }
+
+        private void ValidateTimeInterval(ValidationResults validationResults)
+        {
+            if (TimeInterval <= 0)
+            {
+                validationResults.AddResult(new ValidationResult(
+                    string.Format(Properties.Resources.ERROR_InvalidValueNotGreaterThanZero, Properties.Resources.TimeInterval),
+                    this, "TimeInterval", null, null));
+            }
+        }
+
+        private void ValidateFractionationPattern(ValidationResults validationResults)
+        {
+
+        }
+
+        private void ValidatePatternBetweenTwoActions(ValidationResults validationResults)
+        {
+            if (TimeInterval <= 0)
+            {
+                validationResults.AddResult(new ValidationResult(
+                    string.Format(Properties.Resources.ERROR_InvalidValueNotGreaterThanZero, Properties.Resources.TimeInterval),
+                    this, "TimeInterval", null, null));
+            }
+        }
+
+        private void ValidateRepeatIntervalAction(ValidationResults validationResults)
+        {
+            if (Quantity <= 0)
+            {
+                validationResults.AddResult(new ValidationResult(
+                    string.Format(Properties.Resources.ERROR_InvalidValueNotGreaterThanZero, Properties.Resources.Quantity),
+                    this, "Quantity", null, null));
+            }
+
+            if (TimeInterval <= 0)
+            {
+                validationResults.AddResult(new ValidationResult(
+                    string.Format(Properties.Resources.ERROR_InvalidValueNotGreaterThanZero, Properties.Resources.TimeInterval),
+                    this, "TimeInterval", null, null));
+            }
+        }
+
+        private string UserTimesString()
+        {
+            string uts = string.Empty;
+            if ((UserTimes == null) || (UserTimes.Length <= 0)) return uts;
+            foreach (UserTimeEntity ut in UserTimes)
+            {
+                uts = string.Concat(uts, ", ", ut.Time.ToString("t"));
+            }
+            return uts;
+        }
+
+        #endregion
+
+        #region Properties
+        [DataMember]
+        public int Quantity { get; set; }
+
+        [DataMember]
+        public int TimeInterval { get; set; }
+
+        [DataMember]
+        public int NumberOfTimes { get; set; }
+
+        [DataMember]
+        public UserTimeEntity[] UserTimes { get; set; }
+
+        [DataMember]
+        public PatternTypeEnum PatternType { get; set; }
+
+        [DataMember]
+        public CommonEntities.UnitTimeEnum Unit { get; set; }
+
+        [DataMember]
+        public CommonEntities.UnitTimeEnum UnitInterval { get; set; }
+
+        [DataMember]
+        public string SelectedDays { get; set; }
+
+        [DataMember]
+        public string DaysOfWeek { get; set; }
+
+        [DataMember]
+        public TimeSchemeEnum TimeScheme { get; set; }
+
+        [DataMember]
+        public bool InUse { get; set; }
+
+        [DataMember]
+        public bool Holidays { get; set; }
+        #endregion
+
+        #region ICloneable Members
+        public override object Clone()
+        {
+            object clonedObject = null;
+            MemoryStream ms = new MemoryStream();
+            try
+            {
+                BinaryFormatter bf = new BinaryFormatter();
+
+                bf.Serialize(ms, this);
+                ms.Seek(0, SeekOrigin.Begin);
+                clonedObject = bf.Deserialize(ms);
+            }
+            finally
+            {
+                ms.Close();
+            }
+            return clonedObject;
+        }
+        #endregion
+    }
+}

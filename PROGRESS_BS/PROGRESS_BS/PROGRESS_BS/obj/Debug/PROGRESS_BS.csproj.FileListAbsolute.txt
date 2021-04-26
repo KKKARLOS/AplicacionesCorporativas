@@ -1,0 +1,2 @@
+C:\Datos\Aplicaciones Corporativas\PROGRESS_BS\PROGRESS_BS\PROGRESS_BS\obj\Debug\PROGRESS_BS.csprojAssemblyReference.cache
+C:\Datos\Aplicaciones Corporativas\PROGRESS_BS\PROGRESS_BS\PROGRESS_BS\obj\Debug\PROGRESS_BS.csproj.CoreCompileInputs.cache

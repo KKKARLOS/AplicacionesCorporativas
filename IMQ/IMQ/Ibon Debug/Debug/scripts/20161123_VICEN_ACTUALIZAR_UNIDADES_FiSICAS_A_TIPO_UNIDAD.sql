@@ -1,0 +1,16 @@
+UPDATE PhysicalUnit SET UnitType = 1 WHERE ID = 1
+UPDATE PhysicalUnit SET UnitType = 1 WHERE ID = 20
+UPDATE PhysicalUnit SET UnitType = 1 WHERE ID = 42
+UPDATE PhysicalUnit SET UnitType = 1 WHERE ID = 47
+UPDATE PhysicalUnit SET UnitType = 1 WHERE ID = 48
+UPDATE PhysicalUnit SET UnitType = 1 WHERE ID = 49
+UPDATE PhysicalUnit SET UnitType = 1 WHERE ID = 62
+UPDATE PhysicalUnit SET UnitType = 1 WHERE ID = 69
+UPDATE PhysicalUnit SET UnitType = 1 WHERE ID = 70
+UPDATE PhysicalUnit SET UnitType = 1 WHERE ID = 81
+UPDATE PhysicalUnit SET UnitType = 1 WHERE ID = 83
+UPDATE PhysicalUnit SET UnitType = 1 WHERE ID = 85
+UPDATE PhysicalUnit SET UnitType = 1 WHERE ID = 89
+UPDATE PhysicalUnit SET UnitType = 1 WHERE ID = 108
+UPDATE PhysicalUnit SET UnitType = 1 WHERE ID = 109
+UPDATE PhysicalUnit SET UnitType = 1 WHERE ID = 110

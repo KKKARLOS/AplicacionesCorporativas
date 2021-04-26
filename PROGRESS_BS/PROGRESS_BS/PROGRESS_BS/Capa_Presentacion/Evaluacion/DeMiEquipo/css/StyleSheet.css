@@ -1,0 +1,91 @@
+﻿ .container  {
+    width:970px !important;
+}
+
+.rojo {
+    color:red;
+}
+
+#inputEvaluado, #inputEvaluador{
+    width: 350px;
+}
+
+
+
+#lblEvaluado, #lblEvaluador {
+    text-decoration:underline;
+}
+
+
+.list-group {
+    margin-top: 8px;
+    max-height: 45vh;
+    overflow: auto;
+    margin-bottom:10px;    
+}
+
+.list-group-item {
+    /*padding:0 15px;*/
+    cursor:pointer;
+}
+
+/*MANO EN ELEMENTOS LISTA EVALUADOS*/
+#lisEvaluados li {
+    cursor:pointer;
+}
+
+#lisEvaluados .list-group-item{
+    /*padding: 0 15px;*/
+}
+
+#modal-evaluados input {
+    width:150px;
+}
+
+#btnObtener {
+    margin-top: 22px;
+}
+
+
+.glyphicon.glyphicon-repeat {
+    cursor:pointer;
+}
+
+#btnRestablecer {
+    margin-left:45px;
+    margin-top:1px;
+}
+
+.ML45 {
+    margin-left:45px;
+}
+
+#btnCancelarEvaluador {
+    margin-left:7px;
+}
+
+@media only screen and (max-device-height:768px) {
+     #spanEstado {
+        margin-left:17px;
+    }
+
+    /*#tbdEval {
+        height:240px;
+    }*/
+
+    #fldPeriodo {
+        width:500px;
+    }
+
+    #inputEvaluado, #inputEvaluador{
+        width: 270px;
+    }
+
+}
+
+/*Para resoluciones mayores*/
+@media (min-width: 1200px) {
+    .container {
+        width:1170px !important;
+    }
+}

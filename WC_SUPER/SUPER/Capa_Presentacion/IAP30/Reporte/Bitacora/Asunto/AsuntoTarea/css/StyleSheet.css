@@ -1,0 +1,210 @@
+﻿/*Se sobreescribe la propiedad position de la clase sr-only ya que debido a su position absolute, en safari 
+  al expandir todas las líneas, las no visibles por la altura de la tabla ocupan espacio en el navegador y 
+  genera un scroll de pantalla.*/
+.sr-only {
+  position:fixed;
+}
+body {
+}
+/*Linea seleccionada en la tabla*/
+.activa {
+    background-color: #d9edf7 !important;
+}
+.txtLinkU {
+    color: #23527c;
+    text-decoration: underline;
+}
+.marcadoParaBorrar {
+    text-decoration: line-through !important;
+}
+.desmarcarParaBorrar {
+    text-decoration: none !important;
+}
+table tbody tr.selected {
+    background-color: #e8e5e5 !important;
+}
+.align-verti {
+  margin-top: 100px;
+}
+.titulo {
+    font-weight: bold;
+    font-size: 12px;
+}
+.numeroDecimal {
+    text-align: right;
+}
+.container {
+    visibility: hidden;
+}
+.ibox-title-principal.ibox-title {
+    border-style: none solid none;
+    padding: 0px 15px 7px;
+}
+
+.ibox-title-first.ibox-title{
+    border-style: none solid none;
+}
+
+/*tblProfesionales HEADER FIXED*/
+#tblProfesionales.header-fixed {
+    width: 100%;
+}
+
+    #tblProfesionales.header-fixed > thead,
+    #tblProfesionales.header-fixed > tbody,
+    #tblProfesionales.header-fixed > thead > tr,
+    #tblProfesionales.header-fixed > tbody > tr,
+    #tblProfesionales.header-fixed > thead > tr > th,
+    #tblProfesionales.header-fixed > tbody > tr > td {
+        display: block;
+    }
+
+    
+#tblProfesionales thead {
+    width: 100%; /* scrollbar is average 1em/16px width, remove it from thead width */
+}
+
+#tblProfesionales.header-fixed > tbody > tr:after,
+#tblProfesionales.header-fixed > thead > tr:after {
+    content: ' ';
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+
+
+
+/*Alto del contenedor de la tabla (tbody)*/
+#tblProfesionales.header-fixed > tbody {
+    overflow-y: auto;
+    height: 16vh;
+    border: solid 1px #e4e2e2;
+}
+
+/*COLUMNA 1*/
+
+#tblProfesionales.header-fixed > tbody > tr > td:nth-child(1) {
+    width: 100%;
+    float: left;
+    height:29px;
+}
+
+#tblProfesionales.header-fixed > thead > tr > th:nth-child(1) {
+    width: 100%;
+    float: left;
+    height:29px;
+}
+
+
+/*FIN tblProfesionales HEADER FIXED*/
+
+/*tblProfesionalesSel HEADER FIXED*/
+#tblProfesionalesSel.header-fixed {
+    width: 100%;
+}
+
+    #tblProfesionalesSel.header-fixed > thead,
+    #tblProfesionalesSel.header-fixed > tbody,
+    #tblProfesionalesSel.header-fixed > thead > tr,
+    #tblProfesionalesSel.header-fixed > tbody > tr,
+    #tblProfesionalesSel.header-fixed > thead > tr > th,
+    #tblProfesionalesSel.header-fixed > tbody > tr > td {
+        display: block;
+    }
+
+#tblProfesionales > tbody > tr,
+#tblProfesionalesSel > tbody > tr
+ {cursor:pointer}
+
+
+#tblProfesionalesSel thead {
+    width: 100%; /* scrollbar is average 1em/16px width, remove it from thead width */
+}
+
+#tblProfesionalesSel.header-fixed > tbody > tr:after,
+#tblProfesionalesSel.header-fixed > thead > tr:after {
+    content: ' ';
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+
+table {
+    table-layout:fixed;
+}
+
+/*Alto del contenedor de la tabla (tbody)*/
+#tblProfesionalesSel.header-fixed > tbody {
+    overflow-y: auto;
+    height: 16vh;
+    border: solid 1px #e4e2e2;
+}
+
+/*COLUMNA 1*/
+
+#tblProfesionalesSel.header-fixed > tbody > tr > td:nth-child(1) {
+    width: 80%;
+    float: left;
+    height:29px;
+}
+
+#tblProfesionalesSel.header-fixed > thead > tr > th:nth-child(1) {
+    width: 80%;
+    float: left;
+    height:29px;
+}
+
+
+/*COLUMNA 2*/
+#tblProfesionalesSel.header-fixed > tbody > tr > td:nth-child(2) {
+    width: 20%;
+    float: left;
+    height:29px;
+    padding-top: 0px
+}
+
+#tblProfesionalesSel.header-fixed > thead > tr > th:nth-child(2) {
+    width: 20%;
+    float: left;
+    height:29px;
+
+}
+
+
+/*FIN tblProfesionalesSel HEADER FIXED*/
+
+
+
+@media (min-width: 752px) and (max-width: 992px) {
+    #btnSeleccionar {
+      margin-top: 90px !important;
+    }
+    #cabprofe {
+      margin-top: 75px !important;
+    }
+}
+
+@media (max-width: 752px) {
+    #btnMarca{
+        margin-left: -15px !important;
+    }
+    #btnMarcarDesmarcarOrigen{
+       margin-top: 10px !important;
+       margin-left: 0px !important;
+    }
+    .criterios {
+       margin-left: 0px !important;
+    }
+    .align-verti {
+      margin-top: 0px !important;
+    }
+    #btnSeleccionar {
+      margin-top: 0px !important;
+      margin-bottom: 20px !important;
+    }
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+    #txtResponsable{
+      margin-left:7px !important;
+    }    
+}

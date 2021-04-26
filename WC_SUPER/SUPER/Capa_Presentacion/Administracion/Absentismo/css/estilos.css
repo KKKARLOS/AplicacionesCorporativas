@@ -1,0 +1,26 @@
+﻿#flsCriterios{
+    width: 960px;
+}
+#tblCriterios {
+    width:960px;
+    margin:5px 0px 5px 5px;
+}
+#imgAM, #imgSM {
+    cursor: pointer;
+    vertical-align: middle;
+    border: 0px;
+}
+#ctl00_CPHC_txtMesBase{
+    width: 90px;
+    text-align:center;
+    vertical-align: middle;
+}
+#ctl00_CPHC_btnObtener {
+    margin-left: 213px;
+}
+
+#tblDatos tr { height: 20px; }
+#tblDatos td { padding: 0px 3px 0px 3px; }
+#tblDatos .num { text-align:right; }
+
+

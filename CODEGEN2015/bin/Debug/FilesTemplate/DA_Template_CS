@@ -1,0 +1,159 @@
+using System;
+using System.Data;
+using System.Configuration;
+using System.Collections;
+#UsingNameSpace#
+/// <summary>
+/// Summary description for #ClassName#
+/// </summary>
+namespace #NameSpace# 
+{
+    
+    public class #ClassName# #ClassParents#
+    {
+    	#region Private Variables
+#PrivateVariables#
+		#endregion
+		
+ #region Public Constructors
+        public #ClassName#()
+        {
+            //
+            // TODO: Add constructor logic here
+            //
+            #Constructor#
+        }
+ #endregion       
+
+	
+		
+#region Public Methods
+        public int Insert(#InsertParameters#)
+        {
+            #InsertQuery#
+            #ProviderType#Command #ProviderType#comm = new #ProviderType#Command();
+            #ProviderType#comm.CommandType =  #CommandType#;
+            #ProviderType#comm.CommandText =  #InsertCommandText#;
+            #InitiateParameter#
+
+            #InsertCommandParameters#
+           
+            int result =base.ExecuteNoneQuery(#ProviderType#comm);
+            
+            #InsertReturnParameter#
+            return result;
+        }
+
+        public int Update(#UpdateParameters#)
+        {
+            #UpdateQuery#
+            #ProviderType#Command #ProviderType#comm = new #ProviderType#Command();
+            #ProviderType#comm.CommandType =  #CommandType#;
+            #ProviderType#comm.CommandText =  #UpdateCommandText#;
+            #InitiateParameter#
+
+            #UpdateCommandParameters#
+            
+            Sqlparam = new SqlParameter("@ErrorCode", SqlDbType.Int);
+            Sqlparam.Direction = ParameterDirection.ReturnValue;
+            #ProviderType#comm.Parameters.Add(Sqlparam);
+            
+            int result=base.ExecuteNoneQuery(#ProviderType#comm);
+            
+             if (!Convert.IsDBNull(Sqlcomm.Parameters["@ErrorCode"]))
+                result = Convert.ToInt32(Sqlcomm.Parameters["@ErrorCode"].Value);
+                
+            return result;
+
+           
+        }
+
+        public int Delete(#PKParameters#)
+        {
+            #DeleteQuery#
+            #ProviderType#Command #ProviderType#comm = new #ProviderType#Command();
+            #ProviderType#comm.CommandType =  #CommandType#;
+            #ProviderType#comm.CommandText =  #DeleteCommandText#;
+            #InitiateParameter#
+
+
+            #PKCommandParameters#
+            
+            int result=base.ExecuteNoneQuery(#ProviderType#comm);
+            return result;
+        }
+
+         public int DeleteAll()
+        {
+            #DeleteAllQuery#
+            #ProviderType#Command #ProviderType#comm = new #ProviderType#Command();
+            #ProviderType#comm.CommandType =  #CommandType#;
+            #ProviderType#comm.CommandText =  #DeleteAllCommandText#;
+
+            int result=base.ExecuteNoneQuery(#ProviderType#comm);
+            return result;
+        }
+
+        public #SelectReturnType# Select(#PKParameters#)
+        {
+            #SelectQuery#
+            #ProviderType#Command #ProviderType#comm = new #ProviderType#Command();
+            #ProviderType#comm.CommandType =  #CommandType#;
+            #ProviderType#comm.CommandText =  #SelectCommandText#;
+            #InitiateParameter#
+  
+
+            #PKCommandParameters#
+            
+            DataSet ds = base.GetDataSet(#ProviderType#comm);
+            DataRow dr = null;
+            if (ds != null && ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
+            {
+                dr = ds.Tables[0].Rows[0];
+                #SelectMapping#
+            }
+             #SelectReturn#
+        }
+
+        public #SelectAllReturnType# SelectAll1( )
+        {
+			#SelectAllQuery#
+            #ProviderType#Command #ProviderType#comm = new #ProviderType#Command();
+            #ProviderType#comm.CommandType =  #CommandType#;
+            #ProviderType#comm.CommandText =  #SelectAllCommandText#;
+            
+            DataSet ds = base.GetDataSet(#ProviderType#comm);
+            DataTable dt = null;
+            #SelectAllReturnObject#
+            if (ds != null && ds.Tables.Count > 0)
+            {
+                dt = ds.Tables[0];
+                #SelectAllMapping#
+            }
+               #SelectAllReturn#
+        }
+        
+        public DataTable SelectAll( )
+        {
+			#SelectAllQuery#
+            #ProviderType#Command #ProviderType#comm = new #ProviderType#Command();
+            #ProviderType#comm.CommandType =  #CommandType#;
+            #ProviderType#comm.CommandText =  #SelectAllCommandText#;
+            
+            DataSet ds = base.GetDataSet(#ProviderType#comm);
+            DataTable dt = null;
+          
+            if (ds != null && ds.Tables.Count > 0)
+            {
+                dt = ds.Tables[0];
+                
+            }
+               return dt;
+        }
+
+     
+#endregion          
+    
+    }
+
+}

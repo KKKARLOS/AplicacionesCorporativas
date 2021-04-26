@@ -1,0 +1,67 @@
+﻿<!-- modal edicion/alta de documento -->
+  <div class='modal fade' id='modalDocumentacionEdicion' title="::: SUPER ::: - Edición de ficha de documento" role='dialog' tabindex='-1'>
+
+    <div class='modal-dialog' role="dialog">
+        <div class='modal-content'>
+            <div class='modal-header btn-primary'>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar"><span aria-hidden="true">&times;</span></button>
+                <h1 class='modal-title'>titulo modal</h1>
+            </div>
+
+            <div class='modal-body'>
+                <form class="form-horizontal collapsed in" role="form">
+
+                    <div class='form-group'>
+                        <label class='col-sm-2 control-label' for='mde-descripcion'>Descripción<span class="text-danger">*</span></label>
+                        <div class='col-sm-10'>
+                            <textarea id='mde-descripcion' class='form-control' rows='3' maxlength="250"></textarea>
+                        </div>
+                    </div>
+
+                    <div class='form-group'>
+                        <label class='col-sm-2 control-label' for='mde-autor'>Link</label>
+                        <div class='col-sm-10'>
+                            <input type='text' id='mde-weblink' class='form-control' value=''>
+                        </div>
+                    </div>
+
+                    <div class='form-group'>
+                        <label class='col-sm-2 control-label' for='mde-documento'>Características</label>
+                        <div class='col-sm-3'>
+                            <input id="mde-chkPrivado" type="checkbox" />Privado
+                        </div>
+                        <div class='col-sm-3'>
+                            <input id="mde-chkLectura" type="checkbox" />Sólo lectura
+                        </div>
+                    </div>
+
+                    <div class='form-group'>
+                        <label class='col-sm-2 control-label' for='mde-autor'>Autor</label>
+                        <div class='col-sm-10'>
+                            <input type='text' id='mde-autor' class='form-control' value='' disabled=''>
+                        </div>
+                    </div>
+
+                    <div class='form-group' id="mde-divautormodif" style="display:none">
+                        <label class='col-sm-2 control-label' for='mde-autormodif'>Modificado</label>
+                        <div class='col-sm-10'>
+                            <input type='text' id='mde-autormodif' class='form-control' value='' disabled=''>
+                        </div>
+                    </div>
+
+                    <div class='form-group'>
+                        <label class='col-sm-2 control-label' for='mde-fileuploaderplugin'>Archivo<span class="text-danger"> *</span></label>
+                        <div class='col-sm-10'>
+                            <div id='mde-fileuploaderplugin'></div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class='modal-footer clear'>
+                <button type='button' title="Aceptar" class='btn btn-primary fk_mde-btnGrabar'>Aceptar</button>
+                <button type='button' title="Cancelar" class='btn btn-default' data-dismiss='modal'>Cancelar</button>
+            </div>
+        </div>
+    </div>
+</div>
+            <!-- modal edicion/alta de documento -->

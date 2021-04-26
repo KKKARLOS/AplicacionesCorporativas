@@ -1,0 +1,157 @@
+﻿/*div.panel-body {
+    max-height: 42vh;
+    overflow: auto;
+}*/
+
+textarea {
+    width: 250px;
+    height: 100px;
+}
+
+table tr, #lisEvaluadores li {
+    cursor:pointer;
+}
+
+
+/*HEADER FIXED*/
+.header-fixed {
+    width: 100%;
+}
+
+.header-fixed > thead,
+.header-fixed > tbody,
+.header-fixed > thead > tr,
+.header-fixed > tbody > tr,
+.header-fixed > thead > tr > th,
+.header-fixed > tbody > tr > td {
+    display: block;
+}
+
+
+thead {
+    width: 100%; /* scrollbar is average 1em/16px width, remove it from thead width */
+}
+
+.header-fixed > tbody > tr:after,
+.header-fixed > thead > tr:after {
+    content: ' ';
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+
+/*Alto del contenedor de la tabla (tbody)*/
+.header-fixed > tbody {
+    overflow-y: auto;
+    height: 40vh;
+}
+
+/*COLUMNA 1*/
+.header-fixed > tbody > tr > td:nth-child(1) {
+    width: 50%;
+    float: left;
+}
+
+.header-fixed > thead > tr > th:nth-child(1) {
+    width: 50%;
+    float: left;
+}
+
+/*COLUMNA 2*/
+.header-fixed > tbody > tr > td:nth-child(2) {
+    width: 20%;
+    float: left;
+}
+
+.header-fixed > thead > tr > th:nth-child(2) {
+    width: 20%;
+    float: left;
+}
+
+/*COLUMNA 3*/
+.header-fixed > tbody > tr > td:nth-child(3) {
+    width: 15%;
+    float: left;
+}
+
+.header-fixed > thead > tr > th:nth-child(3) {
+    width: 15%;
+    float: left;
+}
+
+/*COLUMNA 4*/
+.header-fixed > tbody > tr > td:nth-child(4) {
+    width: 15%;
+    float: left;
+}
+
+.header-fixed > thead > tr > th:nth-child(4) {
+    width: 15%;
+    float: left;
+}
+
+/*COLUMNA 5*/
+/*.header-fixed > tbody > tr > td:nth-child(5) {
+    width: 15%;
+    float: left;
+}
+
+.header-fixed > thead > tr > th:nth-child(5) {
+    width: 15%;
+    float: left;
+}*/
+
+/*FIN HEADER FIXED*/
+
+W17PER {
+    width:17.666667%;
+}
+
+/*Fila activa*/
+/*.table > tbody > tr.active > td {
+    background-color: #D8D8D8 !important;
+    color: #000;
+}*/
+
+.table > tbody > tr.active {
+    background-color: #D8D8D8 !important;
+    color: #000;
+}
+
+table > tbody > tr.active > td {
+    background-color: inherit !important;
+}
+
+
+/*Alto de fila personalizada*/
+/*.table > tbody > tr > td {
+    height:25px !important;
+}*/
+
+#lisEvaluadores {
+    max-height:48vh;
+    overflow:auto;
+}
+
+#lisEvaluadores .list-group-item{
+    /*padding: 0 15px;*/
+}
+
+#modal-evaluadores input, #divNombre input {
+    width:150px;
+}
+
+#modal-footer button {
+    margin-left:7px;
+}
+
+
+/* Quitamos padding a las celdas*/
+/*.table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
+    padding-top:4px !important;
+    padding-bottom:4px !important;
+}*/
+
+#btnCancelar {
+    margin-left:7px;
+}

@@ -1,0 +1,149 @@
+﻿.link {
+    color: #337ab7;
+}
+
+.link:hover {
+    color: #23527c;
+    cursor: pointer;
+}
+.numericCol{
+  text-align:right;
+}
+.fa-info-circle {
+    color: #adadad;
+    font-size: 20px;
+}
+
+/*#tablaResultados {
+    width: 100%;
+}*/
+.selector span i {
+    top: 4px;
+}
+
+.dataTables_scrollBody {
+    border: solid 1px #e4e2e2 !important;
+}
+
+.btn-inline-input {
+    height: 22px;
+    padding: 0 5px 0 5px;
+}
+
+/*Datatable principal*/
+
+.fa-file-pdf-o {
+    color: red !important;
+}
+
+#btnExportar {
+    bottom: -5px;
+    left: 13px;
+}
+
+.container {
+    visibility: hidden;
+}
+
+div.datatables_wrapper {
+    width: 1082px;
+    margin: 0 auto;
+}
+
+.dataTables_filter {
+    float:left !important;
+}
+
+thead > tr > th, tbody > tr > td { 
+    white-space: nowrap; 
+}
+
+/*Super.css le da un margin que no nos interesa*/
+#lblDesde, #lblHasta {
+    margin-top: 0 !important;
+}
+
+ul.fk_lista:empty:after{
+  content: "<Todos>";
+}
+
+.leyenda {
+    margin-left: 15px;
+}
+
+.fa-diamond {
+    padding-left: 0 !important;
+}
+
+.fk_verde {
+    color: green;
+}
+
+/*Botonera*/
+
+#divBotones {
+    padding-right: 15px;
+    float: right;
+}
+
+/*Header fixed de la tabla de la pantalla*/
+/*Alto del contenedor de la tabla (tbody)*/
+.header-fixed > tbody {
+    overflow-y: auto;
+    max-height: 300px;
+}
+
+.fa-sort {
+    color: #ffffff;
+}
+
+.fa-sort-b {
+    color: black;
+}
+
+.fa-eraser:hover {
+    cursor: pointer;
+}
+
+.activa {
+    background-color: #d9edf7 !important;
+}
+
+.activa>td.sorting_1 {
+    background-color: #d9edf7 !important;
+}
+
+.list-arrows {
+    padding-top: 40px;
+}
+
+#leyendas > .fa {
+    padding-right: 2px;
+}
+
+/*Fin Modal selección de proyecto*/
+
+/*Modal de selección de cliente*/
+
+.float-right-sm {
+    float: right;
+}
+
+.fa-user-no {
+    color:#9dbedb;
+}
+
+@media (max-width: 768px) {    
+
+    .float-right-sm {
+        float: none;
+    }
+
+    .list-arrows {
+        padding-top: 0;
+    }
+
+    .MT100 {
+        margin-top: 0;
+    }
+}

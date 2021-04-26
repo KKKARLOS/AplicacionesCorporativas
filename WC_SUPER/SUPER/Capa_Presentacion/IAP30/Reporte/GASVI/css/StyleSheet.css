@@ -1,0 +1,525 @@
+﻿.container {
+    visibility: hidden;
+}
+
+tfoot {
+    font-size: 12px;
+}
+.paddingCeldaNum{padding-right:2px;}
+.table{
+    margin-bottom:0px;
+}
+/*.modal-body{
+    padding-bottom: 0px;
+    margin-left:20px;
+    margin-right:20px;
+}
+.modal-footer{
+    border-top: 0px;
+}*/
+
+.sinPadding {
+    padding:0;
+}
+
+.botonesPie {
+    margin-bottom: 20px;
+}
+
+/*COLUMNA 1*/
+/*.cabeceraFija > tr > td:nth-child(1) {
+    width: 8%;
+    float: left;
+    height: 25px;
+}*/
+.cabeceraFija > tr > th:nth-child(1) {
+    width: 8%;
+    float: left;
+}
+/*COLUMNA 2*/
+/*.cabeceraFija > tr > td:nth-child(2) {
+    width: 20%;
+    float: left;
+    height: 25px;
+}*/
+.cabeceraFija > tr > th:nth-child(2) {
+    width: 14%;
+    float: left;
+}
+/*COLUMNA 3*/
+/*.cabeceraFija > tr > td:nth-child(3) {
+    width: 40%;
+    float: left;
+    height: 25px;
+}*/
+.cabeceraFija > tr > th:nth-child(3) {
+    width: 40%;
+    float: left;
+}
+/*COLUMNA 4*/
+/*.cabeceraFija > tr > td:nth-child(4) {
+    width: 15%;
+    float: left;
+    height: 25px;
+}*/
+.cabeceraFija > tr > th:nth-child(4) {
+    width: 15%;
+    float: left;
+}
+/*COLUMNA 5*/
+/*.cabeceraFija > tr > td:nth-child(5) {
+    width: 15%;
+    float: left;
+    height: 25px;
+}*/
+.cabeceraFija > tr > th:nth-child(5) {
+    width: 15%;
+    float: left;
+}
+/*COLUMNA 6*/
+/*.cabeceraFija > tr > td:nth-child(6) {
+    width: 4%;
+    float: left;
+    height: 25px;
+}*/
+.cabeceraFija > tr > th:nth-child(6) {
+    width: 8%;
+    float: left;
+}
+#tbodyDesplaza>tr>td{
+    padding-left: 5px;
+    padding-right: 5px;
+}
+/*FIN HEADER FIXED*/
+
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+    padding: 2px;
+}
+
+.fa, .fa-blanco {
+    color: #adadad;
+}
+.fa-chevron-up, .fa-chevron-down {
+    color: #000;
+}
+
+.btn-default {
+    background-color: transparent;
+}
+
+.fieldset {
+    padding: 0 1em 0.4em 1em !important;
+}
+
+.txtArea {
+    width: 100%;
+}
+
+/*.txtDatos2{
+    width: 100%;
+    text-align: right;
+}*/
+
+.fa-times-circle{
+    color: #f00;
+}
+
+.fa-check-circle{
+    color: #3ea512;
+}
+
+/*inputs de la parte superior*/
+
+/*#txtnomBene{
+    width: 393px;
+    margin-left: 24px;
+}*/
+
+/*#txtRefe{
+    width: 393px;
+    margin-left: 86px;
+}*/
+
+/*#txtConcepto {
+    width: 393px;
+    margin-left: 23px;
+}*/
+
+/*#txtEmpresa{
+    width: 393px;
+    margin-left: 100px;
+}*/
+
+/*#slMotivo{
+    width: 393px;
+    margin-left: 58px;
+}*/
+
+/*#txtOfi{
+    width: 393px;
+    margin-left: 38px;
+}*/
+
+/*#txtPro {
+    width: 393px;
+    margin-left: 28px;
+}*/
+
+/*#slMone{
+    width: 393px;
+    margin-left: 105px;
+}*/
+
+.fa-question-circle {
+    color: #337ab7;
+}
+
+#txtObser {
+    margin-bottom: 5px;
+}
+
+.cabecera{
+    background-color: #337ab7 !important;
+    color: #fff;
+    text-align: center;
+    border: 1px solid #ddd;   
+    white-space: nowrap;
+}
+
+.celdaGastos {
+    text-align: center;
+}
+
+.txtSemana{
+    font-weight: bold;
+    font-size: 16px;
+    vertical-align: top;
+}
+
+/*inputs de la tabla*/
+
+.form-control-fila {
+    padding-right: 2px !important;
+    padding-left: 2px !important;
+}
+
+.txtFecha {
+    min-width: 90px;
+    text-align: center;
+}
+.txtDest{
+    min-width: 90px;
+}
+.txtDieta {
+    min-width: 30px;
+    text-align: center;
+    padding:0px 0px;
+}
+
+.txtImpDieta {
+    min-width: 80px;
+    text-align: right;
+}
+
+.txtKm {
+    min-width: 50px;
+    text-align: right;
+}
+
+.txtImpKms  {
+    text-align: right;
+}
+
+.txtJusti{
+    min-width: 75px;    
+    text-align: right;
+}
+
+.txtTotal {
+    min-width: 90px;
+    text-align: right;
+}
+
+.celdaComentario {
+    cursor:pointer;
+}
+
+#NFilaGasto:hover, #EFilaGasto:hover, #DFilaGasto:hover {
+    cursor:pointer;
+}
+
+/*Cambio del tamaño del modal para la calculadora*/
+.modal-dialog-calc {
+    width: 450px !important;
+}
+
+#btnCalc {
+    float: right;
+    padding-right: 15px;
+}
+
+#btnCalc:hover {
+    cursor: pointer;
+}
+
+/*Tablas de las pestañas*/
+
+#tablaAnticipado, #tablaDevuelto, #tablaAclaraciones, #tablaTerritorio, #tablaHistorial {
+    margin-bottom: 0px;
+}
+
+#pieTramitar {
+        float: right;
+        /*margin-right: -15px;*/
+    }
+
+#divTramitar, #divCancelar {
+    display: inline;
+}
+
+#btnAnot {
+    cursor:pointer;
+}
+
+.col-info {
+    color: #000000;
+}
+
+.fa-plus {
+    color: #2d800a
+}
+
+.fa-minus {
+    color: #ffd800
+}
+
+.listaTabla {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: -webkit-box;
+} 
+
+#NFilaGasto, #EFilaGasto {
+    padding-right: 10px;
+}
+
+/*#FAnti, #ImpoAnti, #FDev, #ImpoDev {
+    float: left;
+}*/
+
+/*#FDev, #ImpoDev {
+    float: left;
+}*/
+
+/*#OfiAnti, OfiDev {
+    width: 100%;
+}*/
+
+.text-red {
+    font-weight: bold;
+    color: red;
+    margin-bottom: -8px;
+}
+
+
+/*Modal selección proyecto*/
+#lisProyectos.dual-list {
+    margin-top: 8px;
+    max-height: 35vh;
+    overflow: auto;
+    margin-bottom: 10px;
+}
+
+#tablaProyectos {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-bottom-color: grey;
+}
+
+#tablaProyectos tr:not(#lineaCabecera) {
+    cursor: pointer;
+}
+
+.well {
+    margin-bottom: 0; 
+}
+
+.fa-sort {
+    color: white;
+    cursor: pointer;
+}
+#gastos {padding: 15px 0 20px 0;}        
+#tablaGastos > thead > tr > th { border: 1px solid #ddd;}  
+#lblSinRet, #lblEnNomina {margin-top:0;}   
+#TViaje{text-align:right}                
+#EnNomina, #SinRet {width: 75px; text-align: right;} 
+    /*Linea seleccionada en la tabla*/
+    .activa {
+        background-color: #d9edf7;
+    }
+    .activa:hover {
+        background-color: #d9edf7 !important;
+    }
+    .rojo{color:red;}
+    .negro{color:black;}
+
+    .blink_me {
+        -webkit-animation-name: blinker;
+        -webkit-animation-duration: 1s;
+        -webkit-animation-timing-function: linear;
+        -webkit-animation-iteration-count: infinite;
+
+        -moz-animation-name: blinker;
+        -moz-animation-duration: 1s;
+        -moz-animation-timing-function: linear;
+        -moz-animation-iteration-count: infinite;
+
+        animation-name: blinker;
+        animation-duration: 1s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+
+    @-moz-keyframes blinker {  
+        0% { opacity: 1.0; }
+        50% { opacity: 0.0; }
+        100% { opacity: 1.0; }
+    }
+
+    @-webkit-keyframes blinker {  
+        0% { opacity: 1.0; }
+        50% { opacity: 0.0; }
+        100% { opacity: 1.0; }
+    }
+
+    @keyframes blinker {  
+        0% { opacity: 1.0; }
+        50% { opacity: 0.0; }
+        100% { opacity: 1.0; }
+    }
+
+/*Cambios para Ipad*/
+@media (max-width: 1200px) {   
+
+    /*Clases de la tabla*/
+    .table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+        padding: 1px;
+        }
+    #tablaGastos {
+        font-size: 12px;
+      }
+
+    .txtFecha {
+        width: 70px;
+    }
+
+    .txtdieta {
+        width: 25px;
+    }
+
+    .txtImpDieta {
+        width: 65px;
+    }
+
+    .txtKm {
+        width: 45px;
+    }
+
+    .txtJusti{
+        width: 65px;    
+    }
+
+    .txtTotal {
+        width: 115px;
+        text-align: right;
+    }
+    
+}
+/*Cambios para Ipad*/
+@media (max-width: 991px) {
+        /*#txtnomBene {
+            width: 288px;
+            margin-left: 0px;
+            display: block;
+        }*/
+
+        /*#txtRefe {
+            width: 288px;
+            margin-left: 0px;
+            display: block;
+        }*/
+
+        /*#txtConcepto {
+            width: 288px;
+            margin-left: 0px;
+            display: block;
+        }*/
+
+        /*#txtEmpresa {
+            width: 288px;
+            margin-left: 0px;
+            display: block;
+        }*/
+
+        /*#slMotivo {
+            width: 288px;
+            margin-left: 0px;
+            display: block;
+        }*/
+
+        /*#txtOfi {
+            width: 288px;
+            margin-left: 0px;
+            display: block;
+        }*/
+
+        /*#txtPro {
+            width: 288px;
+            margin-left: 0px;
+            display: block;
+        }*/
+
+        /*#slMone {
+            width: 288px;
+            margin-left: 0px;
+            display: block;
+        }*/
+
+        #btnCalc {
+            display: none;
+        }
+                
+        #pieTramitar {
+            float: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            background: #222;
+            width: 100%;
+            border-top: 1px solid rgb(80,132,159);
+            text-align: center;
+        }       
+
+        .btn-default-lite {
+        color: #f2f2f2;
+        border-color: transparent;
+        }   
+
+        .fa-blanco {
+            color: #fff;
+        }
+
+        .btn-default-lite:hover .fa{     
+            color: #000;
+        }
+
+        #divTramitar{
+            margin-left: 20%
+        }              
+
+        .letraLinea {
+            font-size: 8px;
+            top: -6px;
+        }
+    }

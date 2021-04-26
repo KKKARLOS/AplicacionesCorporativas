@@ -1,0 +1,582 @@
+/* Overall wrapper */
+.monthly {
+	background: #F3F3F5;
+	color:#545454;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	position: relative;
+    border-collapse: separate!important;
+	border: 0.1rem solid #d9d5d5;
+	border-radius:0.1rem;
+    width: 100%;
+}
+
+.monthly thead{
+    background: #ddd;
+    border-bottom: 0.1rem solid #EBEBEB;
+}
+
+.monthly caption{
+    padding:0;
+}
+
+.monthly th{
+    text-align: center;
+}
+
+/* Contains title & nav */
+.monthly-header {
+	position: relative;
+	text-align:center;
+	padding:1rem;
+	background: #337ab7;    
+	height: 4rem;
+	box-sizing: border-box;
+	border-top-left-radius: 0.8rem;
+	border-top-right-radius: 0.8rem;
+}
+
+.monthly-header-title {
+	font-size:2rem;
+	color:white;	
+}
+
+.selectMonth, .selectYear {	
+    font-size:2rem !important;
+    height: 28px !important;
+    width: 130px;
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    position:relative;
+      background-image:
+        linear-gradient(45deg, transparent 50%, white 50%),
+        linear-gradient(135deg, white 50%, transparent 50%);
+        /*linear-gradient(to right, #ccc, #ccc);*/
+      background-position:
+        /*calc(100% - 20px) calc(1em + 2px),
+        calc(100% - 15px) calc(1em + 2px),
+        calc(100% - 2.5em) 0.5em;*/
+        calc(100% - 5px) calc(0.5em + 2px),      
+        calc(100% - 0px) calc(0.5em + 2px),      
+        calc(100% - 2.5em) 0.5em;
+      background-size:
+        5px 5px,
+        5px 5px,
+        1px 1.5em;
+      background-repeat: no-repeat;    
+      direction: initial;
+      text-align-last: center;
+      -moz-text-align-last: center; 
+      -ms-text-align-last:center;
+      -webkit-text-align: center;
+      
+}
+.selectMonth::-ms-expand {
+    display: none;
+}
+
+.selectYear::-ms-expand {
+    display: none;
+}
+.selectMonth option, .selectYear option{
+    background-color:white;
+    color:#555555;
+    font-size: 1.5rem;   
+}
+
+.selectYear{
+    width:70px;
+    text-align-last: left;
+    -moz-text-align-last: left; 
+    -ms-text-align-last:left;
+    -webkit-text-align: left;
+}
+
+
+/* wrapper for left button to make the clickable area bigger */
+.monthly-prev {
+	position: absolute;
+	top:0;
+	left:0;
+	width:5rem;
+	height:100%;
+    cursor: pointer;
+}
+
+.monthly-prev:hover {
+	opacity: 1;
+}
+/* Left Arrow */
+.monthly-prev:after{
+	content:'';
+	position: absolute;
+	top:50%;
+	left:50%;
+	border-left:0.2rem solid white;
+	border-bottom:0.2rem solid white;
+	width:1rem;
+	height:1rem;
+	margin:-0.3rem 0 0 -0.5rem;
+	-webkit-transform:rotate(45deg) ;
+		-ms-transform:rotate(45deg) ;
+	        transform:rotate(45deg) ;
+}
+/* wrapper for right button to make the clickable area bigger */
+.monthly-next {
+	position: absolute;
+	top:0;
+	right:0;
+	width:5rem;
+	height:100%;
+    cursor: pointer;
+}
+.monthly-next:hover {
+	opacity: 1;
+}
+/* Right Arrow */
+.monthly-next:after{
+	content:'';
+	position: absolute;
+	top:50%;
+	right:50%;
+	border-right:0.2rem solid white;
+	border-top:0.2rem solid white;
+	width:1rem;
+	height:1rem;
+	margin:-0.3rem 0 0 -0.5rem;
+	-webkit-transform:rotate(45deg) ;
+		-ms-transform:rotate(45deg) ;
+	        transform:rotate(45deg) ;
+}
+
+/* Day of the week headings */
+.monthly-day-title-wrap {
+	width:100%;
+	background: #ddd;
+	border-bottom: 0.1rem solid #EBEBEB;
+}
+.monthly-day-title-wrap div {
+	width: 14.28%!important;
+	/*mmdisplay:table-cell;*/
+	box-sizing:border-box;
+	position: relative;
+	font-weight: bold;
+	text-align:center;
+	font-size:1.2rem;
+}
+
+.diaFestivo{
+	color:#bd2806;
+}
+
+.diaFuturo{
+	color: #9C27B0;
+}
+
+.diaRegistrado{
+	color: #23527c!important;
+}
+
+.diaVacaciones{
+	color: #9e5e01;
+}
+
+.diaEstandar{
+    color:black;
+}
+
+.diaSinRegistrar{
+    color: #067607;	
+}
+
+.horas{
+	font-weight: normal;
+}
+
+/* Calendar days wrapper */
+.monthly-day-wrap {	
+	width:100%;
+	overflow: hidden;
+}
+.monthly-week {
+	/*mmdisplay:table-row;*/
+	width:100%;
+	background-color:white;
+    cursor:pointer;
+}
+
+.opciones {
+	/*mmdisplay:table-row;*/
+	width:100%;
+}
+
+/* Calendar Days */
+.monthly-day, .monthly-day-blank {
+	width: 14.28%!important;
+	/*mmdisplay:table-cell;*/
+	vertical-align: top;
+	box-sizing:border-box;
+	/*position: relative;*/
+	font-weight: bold;
+	color:inherit;
+	background: #fff;
+	-webkit-transition: .25s;
+	transition:.25s;
+	padding:0;
+	text-decoration: none;
+    border: 0.1rem solid;
+	/*border-bottom-left-radius:0.8rem;
+	border-bottom-right-radius:0.8rem;
+	border-top-left-radius:0.8rem;
+	border-top-right-radius:0.8rem;*/
+    border-color: #e4e2e2;
+}
+
+/* Trick to make the days' width equal their height */
+.monthly-day:before {
+	content: "";
+	display: block;
+	padding-top: 100%;
+	float: left;
+}
+
+/* Hover effect for non event calendar days */
+.monthly-day-wrap :hover {
+	text-decoration:none;
+	
+}
+
+/* Days that are part of previous or next month */
+.monthly-day-blank {
+	background:#F3F3F5;
+}
+
+/* Event calendar day number styles */
+.monthly-day-event > .monthly-day-number {
+	position: absolute;
+	line-height: 1em;
+	top:0.2rem;
+	left:0.2rem;
+	font-size:1.5rem;
+}
+
+/* Non-Event calendar day number styles */
+.monthly-day-pick {
+	
+}
+.monthly-day-pick > .monthly-day-number {
+	line-height: 1em;
+	font-size:3.5rem;
+	padding-top:30%;
+}
+
+.monthly-day-pick > .monthly-time-number {
+	line-height: 1em;
+	font-size:1.2rem;
+	padding-top:5%;
+}
+
+.monthly-day-pick > .monthly-indicator-wrap {
+	margin:0;
+}
+
+.diaCerrado .monthly-day-pick {
+    opacity: 0.3;
+    text-shadow: 1px 1px 1px #afadad;
+}
+
+.diaCerrado{	
+	cursor: not-allowed;
+    /*pointer-events: none;	*/
+}
+
+.diaCerrado .monthly-day{
+	
+    background-color: #f3f3f5;
+    /*background: -webkit-repeating-linear-gradient(45deg, #f2f2f2, #c9cdce 40px, #eee 20px, #eee 20px);
+    background-size: 10px 10px;*/
+    
+}
+
+.diaCerrado  .monthly-day-number{
+	font-weight: normal;
+	/*text-shadow : 3px 3px 2px #ddd;*/
+}
+
+/* Days in the past in "picker" mode */
+.monthly-past-day:after{
+	content: '';
+	width: 150%;
+	height: 0.2rem;
+	-webkit-transform-origin: left top;
+		-ms-transform-origin: left top;
+	        transform-origin: left top;
+	-webkit-transform: rotate(45deg);
+		-ms-transform: rotate(45deg);
+	        transform: rotate(45deg);
+	background: rgba(0, 0, 0, 0.1);
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.monthly-past-day:hover {
+	background: #fff!important;
+}
+
+.monthly-today {
+	
+    border: 0.2rem solid #337ab7;
+    border-style: dashed;
+    /*border-radius: 1rem;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin: 20px;*/
+}
+
+/* Button to reset to current month */
+.monthly-reset {
+	display: inline-block;
+	width: 0.9rem;
+	height: 0.9rem;
+	border: 0.2rem solid #222;
+	border-radius: 0.9rem;
+	position: relative;
+	opacity: .5;
+	margin-left: 0.5rem;
+	vertical-align: middle;
+    cursor: pointer;
+}
+.monthly-reset:hover {
+	opacity: 1;
+}
+/* Makes the little arrow on the reset button */
+.monthly-reset:before {
+	content: '';
+	border: 0.3rem solid transparent;
+	border-left: 0.3rem solid #fff;
+	border-bottom: 0.3rem solid #fff;
+	position: absolute;
+	left: 0.2rem;
+	top: 0.6rem;
+}
+.monthly-reset:after {
+	content: '';
+	border: 0.3rem solid transparent;
+	border-left: 0.3rem solid #222;
+	border-bottom: 0.3rem solid #222;
+	position: absolute;
+	left: 0.5rem;
+	top: 0.5rem;
+}
+/* Button to return to month view */
+.monthly-cal {
+	display: inline-block;
+	height:1.1rem;
+	width:1.3rem;
+	background:#222;
+	position: relative;
+	top:0.1rem;
+	margin-right:0.5rem;
+	opacity: .5;
+}
+.monthly-cal:hover {
+	cursor: pointer;
+	opacity: 1;
+}
+.monthly-cal:before {
+	content:'';
+	position: absolute;
+	width:0.2rem;
+	height: 0.3rem;
+	border:0.1rem solid #fff;
+	background:#222;
+	top:-0.2rem;
+	left:0.2rem;
+}
+.monthly-cal:after {
+	content:'';
+	position: absolute;
+	width:0.2rem;
+	height: 0.3rem;
+	border:0.1rem solid #fff;
+	background:#222;
+	top:-0.2rem;
+	right:0.2rem;
+}
+.monthly-cal div {
+	background: #fff;
+	height:0.6rem;
+	width:1.1rem;
+	position: absolute;
+	top:0.4rem;
+	left:0.1rem;
+}
+
+
+/* Wrapper around events */
+.monthly-indicator-wrap {
+	position: relative;
+	text-align: center;
+	line-height: 0;
+	max-width: 2rem;
+	margin:0 auto;
+	padding-top:40%;
+}
+
+/* Event indicator dots */
+.monthly-day .monthly-event-indicator {
+	/*display: inline-block;
+	margin: 0.1rem;
+	width: 0.8rem;
+	height: 0.8rem;
+	border-radius: 0.6rem;
+	vertical-align: middle;
+	border-radius: 0.6rem;
+	background:#7BA7CE;
+	font-size:0;
+	color:transparent;*/
+}
+
+.monthly-day .monthly-event-indicator:hover {
+	/*cursor: pointer;*/
+}
+/* Listing of events under calendar */
+.monthly-event-list {
+	background: rgba(233, 235, 236, 0.9);
+	overflow: auto;
+	position: absolute;
+	top: 4.2rem;
+	width: 100%;
+	height: calc(100% - 4.2rem);
+	display: none;
+	-webkit-transition: .25s;
+	transition:.25s;
+	-webkit-transform:scale(0);
+		-ms-transform:scale(0);
+	        transform:scale(0);
+}
+
+/* Days in Events List */
+.monthly-list-item {
+	position: relative;
+	padding:1rem 1rem 0.5rem 0.5rem;
+	display: none;
+	border-top: 0.1rem solid #D6D6D6;
+	text-align: left;
+}
+
+.monthly-list-item:after{
+    content:'No Events';
+    padding:0.4rem 1rem;
+    display:block;
+    margin-bottom:0.5rem;
+ }
+
+.monthly-event-list .monthly-today .monthly-event-list-date {
+	color: #EA6565;
+}
+
+/* Events in Events List */
+.monthly-event-list .listed-event {
+	display: block;
+	color:#fff;
+	padding:0.4rem 1rem;
+	border-radius:0.2rem;
+	margin-bottom: 0.5rem;
+}
+
+.monthly-list-item a:link, .monthly-list-item a:visited {
+	text-decoration: none;
+}
+
+.item-has-event {
+	display: block;
+}
+
+.item-has-event:after{
+    display:none!important;
+}
+
+.monthly-event-list-date {
+	width:5rem;
+	position: absolute;
+	left:0;
+	top:1.3rem;
+	text-align: center;
+	font-size: 1.2rem;
+    font-weight: bold;
+    line-height: 1.2em;
+}
+
+.monthly-list-time-start,
+.monthly-list-time-end {
+	font-size:.8em;
+	display: inline-block;
+}
+.monthly-list-time-start:not(:empty):after {
+	content:' -';
+	padding-right:0.5rem;
+}
+
+/* Events List custom webkit scrollbar */
+
+.monthly-event-list::-webkit-scrollbar {width: 0.5rem;}
+
+/* Track */
+.monthly-event-list::-webkit-scrollbar-track {background: none;}
+
+/* Handle */
+.monthly-event-list::-webkit-scrollbar-thumb {
+	background:#ccc;
+	border:0.1rem solid #E9EBEC;
+	border-radius: 1rem;
+}
+.monthly-event-list::-webkit-scrollbar-thumb:hover {background:#555;}
+
+/* Increase font & spacing over larger size */
+@media (min-width: 400px) {
+	.monthly-day-number {
+		top: 0.5rem;
+		left: 0.5rem;
+		font-size: 1.2rem;
+	}
+}
+/* Styles for large mode where text is revealed within events */
+@media (min-width: 600px) {
+	.monthly-day-event {
+		padding-top: 2rem;
+	}
+	.monthly-day-event:before {
+		padding-top: 77%;
+	}
+	.monthly-day-event > .monthly-indicator-wrap {
+		width:auto;
+		max-width: none;
+	}
+	.monthly-indicator-wrap {
+		padding:0;
+	}
+	.monthly-day .monthly-event-indicator {
+		display: block;
+		margin: 0 0 0.1rem 0;
+		width: auto;
+		height:2rem;
+		font-size: 1rem;
+		padding: 0.4rem;
+		border-radius:0;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		color:#fff;
+		text-shadow:0 0 0.2rem rgba(0,0,0,.2);
+		text-decoration: none;
+		line-height: 1em;
+		white-space: nowrap;
+		box-sizing: border-box;
+	}
+}

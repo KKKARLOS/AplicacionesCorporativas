@@ -1,0 +1,1 @@
+update customerprocess set CloseDateTime = LastUpdated where [status]=2

@@ -1,0 +1,71 @@
+using System;
+using System.IO;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
+using SII.Framework.Interfaces;
+using CommonEntities = SII.HCD.Common.Entities;
+#endregion
+
+namespace SII.HCD.BackOffice.Entities
+{
+    [DataContract()]
+    [Serializable()]
+    public class ResourceDeviceEntity : IStatusEntity, ICloneable
+    {
+        #region Properties
+        [DataMember()]
+        public int ID { get; set; }
+        [DataMember()]
+        public int HumanResourceID { get; set; }
+        [DataMember()]
+        public DateTime ActiveAt { get; set; }
+        [DataMember()]
+        public DeviceEntity Device { get; set; }
+        [DataMember()]
+        public CommonEntities.StatusEnum Status { get; set; }
+        [DataMember()]
+        public Int64 DBTimeStamp { get; set; }
+        [DataMember()]
+        public EditStatusEntity EditStatus { get; set; }
+        #endregion
+
+        #region Constructors
+        public ResourceDeviceEntity()
+            : this(0, 0, DateTime.MinValue, null,
+                CommonEntities.StatusEnum.None, 0) { }
+
+        public ResourceDeviceEntity(int id, int humanResourceID, DateTime activeAt, DeviceEntity device,
+                                    CommonEntities.StatusEnum status, Int64 dbTimeStamp)
+        {
+            ID = id;
+            HumanResourceID = humanResourceID;
+            ActiveAt = activeAt;
+            Device = device;
+            Status = status;
+            DBTimeStamp = dbTimeStamp;
+            EditStatus = new EditStatusEntity();
+        }
+        #endregion
+
+        #region ICloneable Members
+        public virtual object Clone()
+        {
+            object clonedObject = null;
+            MemoryStream ms = new MemoryStream();
+            try
+            {
+                BinaryFormatter bf = new BinaryFormatter();
+
+                bf.Serialize(ms, this);
+                ms.Seek(0, SeekOrigin.Begin);
+                clonedObject = bf.Deserialize(ms);
+            }
+            finally
+            {
+                ms.Close();
+            }
+            return clonedObject;
+        }
+        #endregion
+    }
+}

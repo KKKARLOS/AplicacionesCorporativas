@@ -1,0 +1,136 @@
+﻿.margenCabecerasOrdenables {
+    margin-left:10px;   
+}
+
+div.panel-body {
+    max-height: 55vh;
+    overflow: auto;
+    padding-bottom:0;
+}
+
+#tbdFormacion tr {
+    cursor: pointer;
+}
+
+#tbdFormacion > tr.active {
+    background-color: #D8D8D8 !important;
+}
+
+/*Tenemos que heredar la clase activa del padre(tr)*/
+#tbdFormacion > tr.active > td {
+    background-color: inherit;
+}
+
+#spanEstado {
+    margin-left: 49px;
+}
+
+#divColectivo {
+    margin-top: 30px;
+}
+
+
+/*HEADER FIXED*/
+.header-fixed {
+    width: 100%;
+}
+
+.header-fixed > thead,
+.header-fixed > tbody,
+.header-fixed > thead > tr,
+.header-fixed > tbody > tr,
+.header-fixed > thead > tr > th,
+.header-fixed > tbody > tr > td {
+    display: block;
+}
+
+thead {
+    width: 100%; /* scrollbar is average 1em/16px width, remove it from thead width */
+}
+
+.header-fixed > tbody > tr:after,
+.header-fixed > thead > tr:after {
+    content: ' ';
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+
+/*Alto del contenedor de la tabla (tbody)*/
+.header-fixed > tbody {
+    overflow-y: auto;
+    overflow-x:hidden;
+    height: 30vh;
+}
+
+/*COLUMNA 1*/
+
+.header-fixed > tbody > tr > td:nth-child(1) {
+    width: 5%;
+    float: left;
+}
+
+.header-fixed > thead > tr > th:nth-child(1) {
+    width: 5%;
+    float: left;
+}
+
+.header-fixed > tbody > tr > td:nth-child(2) {
+    width: 30%;
+    float: left;
+}
+
+.header-fixed > thead > tr > th:nth-child(2) {
+    width: 30%;
+    float: left;
+}
+
+/*COLUMNA 2*/
+.header-fixed > tbody > tr > td:nth-child(3) {
+    width: 30%;
+    float: left;
+}
+
+.header-fixed > thead > tr > th:nth-child(3) {
+    width: 30%;
+    float: left;
+}
+
+/*COLUMNA 3*/
+.header-fixed > tbody > tr > td:nth-child(4) {
+    width: 35%;
+    float: left;
+}
+
+.header-fixed > thead > tr > th:nth-child(4) {
+    width: 35%;
+    float: left;
+}
+
+table.fkPijama tbody tr {
+    background-color:#F2F2F2;
+}
+
+.table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
+    padding-top:4px !important;
+    padding-bottom:4px !important;
+}
+
+
+/*@media (max-height: 768px) {
+    div.panel-body {
+        max-height: 40vh;        
+    }
+}*/
+
+@media only screen and (min-device-height: 768px) and (max-device-height:899px) {
+     div.panel-body {
+        max-height: 50vh;   
+        padding-bottom:0;     
+    }
+
+    .header-fixed > tbody {       
+        height: 255px;
+    }
+
+}

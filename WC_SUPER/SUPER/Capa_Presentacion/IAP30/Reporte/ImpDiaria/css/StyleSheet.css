@@ -1,0 +1,774 @@
+﻿/*Se sobreescribe la propiedad position de la clase sr-only ya que debido a su position absolute, en safari 
+  al expandir todas las líneas, las no visibles por la altura de la tabla ocupan espacio en el navegador y 
+  genera un scroll de pantalla.*/
+.sr-only {
+  position:fixed;
+}
+
+.ibox-title-principal.ibox-title {
+    border-style: none solid none;
+    padding: 0px 15px 7px;
+}
+
+.ibox-title-first.ibox-title{
+    border-style: none solid none;
+}
+
+.container{
+    visibility: hidden;
+}
+#tipoImputacion {    
+    padding-bottom: 0;
+}
+
+.glyphicon{
+     padding-left: 15px;
+}
+
+.glyphicon-minus:before, .glyphicon-plus:before {
+    font-size: 2em;
+    line-height: 0;
+    vertical-align: middle;
+    color: #a2a2a2;
+}
+
+.glyphicon-minus span, .glyphicon-plus span {
+    vertical-align: middle;
+    /*line-height: 0;*/
+}
+
+table {
+    table-layout:fixed;
+}
+
+.oculta {
+    /*visibility: hidden;*/
+    display: none;
+}
+
+.div-table-content {
+    overflow-y: auto;
+    /*max-height: 56vh;*/
+    height:70vh;
+    overflow-x: hidden;
+    min-width: 1082px;
+}
+
+.div-table {
+    min-width: 1082px;
+}
+
+#tabla {
+    margin-bottom: 0;
+}
+
+#tablaCabecera, #tablaPie {
+    margin-bottom: 0;
+    /*width: 1082px;*/
+}
+
+#botoneraInferior {
+    margin-bottom: 5px; 
+    /*padding-top: 15px;*/
+    text-align: left;
+    padding-left: 0;
+}
+
+#botonesApertura {
+    padding-top: 15px;
+}
+
+/*#nivel1 {
+    border: 1px solid rgba(80, 132, 159, 0.6);
+}*/
+
+.leyenda {
+    /*font-size: 11px !important;*/
+    font-size: 1.1rem !important;
+    min-width: 1082px;
+    margin-top: 5px;
+}
+
+.txtLeyenda {
+    width: 30px;
+    margin: 2px;
+    display: inline;
+    padding: 0;
+}
+
+.txtOT {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.spanLeyenda {    
+    margin: 2px;
+}
+
+#DEN div {
+    text-align: center;
+    box-sizing: border-box;
+    position: relative;
+}
+#DEN .fa {
+    color: white !important;
+}
+
+#btnBuscarSiguiente {
+    display: none;
+}
+
+#btnBusqueda, #btnCerrarBusqueda, #btnBuscarSiguiente {
+    cursor:pointer;
+}
+
+/*COLUMNA 1*/
+.cabeceraFija > tr > td:nth-child(1) {
+    width: 31%;
+}
+
+.cabeceraFija > tr > th:nth-child(1) {
+    width: 31%;
+}
+
+/*COLUMNA  de la 2 a la 8*/
+.cabeceraFija > tr > td:nth-child(2), .cabeceraFija > tr > td:nth-child(3), .cabeceraFija > tr > td:nth-child(4), .cabeceraFija > tr > td:nth-child(5),
+.cabeceraFija > tr > td:nth-child(6), .cabeceraFija > tr > td:nth-child(7), .cabeceraFija > tr > td:nth-child(8) {
+    width: 4%;
+}
+
+.cabeceraFija > tr > th:nth-child(2), .cabeceraFija > tr > th:nth-child(3), .cabeceraFija > tr > th:nth-child(4), .cabeceraFija > tr > th:nth-child(5),
+.cabeceraFija > tr > th:nth-child(6), .cabeceraFija > tr > th:nth-child(7), .cabeceraFija > tr > th:nth-child(8) {
+    width: 4%;
+}
+
+/*COLUMNA  de la 9 a la 10*/
+.cabeceraFija > tr > td:nth-child(9), .cabeceraFija > tr > td:nth-child(10) {
+    width: 7%;
+}
+
+.cabeceraFija > tr > th:nth-child(9), .cabeceraFija > tr > th:nth-child(10) {
+    width: 7%;
+}
+
+/*COLUMNA  11*/
+.cabeceraFija > tr > td:nth-child(11) {
+    width: 6%;
+}
+
+.cabeceraFija > tr > th:nth-child(11) {
+    width: 6%;
+}
+
+
+/*COLUMNA  12*/
+.cabeceraFija > tr > td:nth-child(12) {
+    width: 8%;
+}
+
+.cabeceraFija > tr > th:nth-child(12) {
+    width: 8%;
+}
+
+/*COLUMNA  13*/
+.cabeceraFija > tr > td:nth-child(13) {
+    width: 3%;
+}
+
+.cabeceraFija > tr > th:nth-child(13) {
+    width: 3%;
+}
+
+/*COLUMNA  14 y 15*/
+.cabeceraFija > tr > td:nth-child(14), tr > td:nth-child(15) {
+    width: 5%;
+}
+
+.cabeceraFija > tr > th:nth-child(14), tr > th:nth-child(15) {
+    width: 5%;
+}
+
+/*FIN HEADER FIXED*/
+
+
+/*Correción de alturas*/
+
+
+/*Clases jerarquia de proyectos*/
+.Nivel1 {
+    vertical-align: middle;
+}
+
+.Nivel2 {
+    vertical-align: middle !important; 
+    padding-left: 10px !important; 
+}
+
+.Nivel3 {
+    vertical-align: middle !important;  
+    padding-left: 15px !important; 
+}
+
+.Nivel4 {
+    vertical-align: middle !important;
+    padding-left: 20px !important;
+}
+
+.Nivel5 {
+    vertical-align: middle !important; 
+    padding-left: 25px !important; 
+}
+
+.FC-C {
+    vertical-align: middle !important; 
+    padding-left: 30px !important; 
+}
+
+.fk-label:hover {
+    cursor: pointer;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+.row-modal {
+    margin-bottom: 15px;
+}
+
+/*.table-no-border > thead > tr > th,
+.table-no-border > tbody > tr > th,
+.table-no-border > tfoot > tr > th,
+.table-no-border > thead > tr > td,
+.table-no-border > tbody > tr > td,
+.table-no-border > tfoot > tr > td,
+.table-no-border > tbody,
+.table-no-border > thead,
+.table-no-border > tfoot {
+    border-top: none !important;
+    border-bottom: none !important;
+}*/
+
+.fk-elementosvacios:after {
+    content: '\00A0';
+}
+
+
+th {
+    text-align: center;
+    white-space: nowrap;
+}
+
+tr:not() {
+    border-right: 1px solid #d9d5d5;
+    border-left: 1px solid #d9d5d5;
+}
+
+.cabecera {
+    color: #fff;
+}
+
+.nombreLinea {
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+.txtHoras, .txtFecha {
+    display: table-cell;
+    padding: 0;
+}
+
+.txtHoras {
+    text-align: right;
+}
+
+.txtFecha {
+    text-align: center;
+}
+
+
+/*Estados de tareas*/
+
+.finalizada
+{
+    color: Purple;
+}
+
+.cerrada, .anulada
+{
+    color: DimGray;
+}
+
+.paralizada
+{
+    color: Red;
+}
+
+.pendiente
+{
+    color: Orange;
+}
+
+.obligaest
+{
+    color: blue;
+}
+
+/*Estados de inputs de días*/
+
+.noLaborable {
+    color: #333;
+    background-color: #F58D8D !important;
+}
+
+.comentario {
+   /* border-color: #F58D8D !important;*/
+    border-color: #d22f2f !important;
+    border-width: 1.5px;
+}
+
+.vacaciones{    
+    background-color: orange !important;
+}
+
+.fueraProyecto
+{
+    background-color: #EE0BE6 !important;
+}
+
+.fueraVigencia
+{
+    background-color: DimGray !important;
+}
+
+.chkHoras {
+    height: 28px;
+}
+
+.celdaHoras {
+    /*text-align: center;*/
+    text-align: right;
+}
+
+.celdaFecha{
+    text-align: center;
+}
+
+.celdaTotal {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    text-align: right;
+}
+
+.totalResp {
+    float: right;
+}
+
+.comentLite {
+    font-size: 5vw;
+}
+
+.table > tbody > tr > td, .table > tbody > tr > th, .table > tfoot > tr > td, .table > tfoot > tr > th, .table > thead > tr > td, .table > thead > tr > th {
+    vertical-align: middle;
+}
+
+.txtclass {
+    font-weight: bold;
+    /*font-size: 14px;*/    
+    font-size: 1.4rem;
+}
+
+.txtSemanaMini {
+        display:none;
+    }
+
+.fa {
+    color: #337ab7;
+}
+
+/*Linea seleccionada en la tabla*/
+.activa {
+    background-color: #d9edf7;
+}
+
+.activa:hover {
+    background-color: #d9edf7 !important;
+}
+
+#botonera {
+    position: fixed;
+    left: 0;
+    background-color: #fff;
+    z-index: 1;
+    border-right: 5px solid rgb(80,132,159);
+    padding-left: 9px;
+    padding-right: 0;
+    color: #337ab7;
+}
+#botonera .fa {
+    color: #337ab7;
+    margin-left: 0;
+}
+#botonera ul {
+    /*display: table;*/
+}
+#botonera li {
+    display: block;
+    float: none;
+    clear: both;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    text-align: left;
+}
+#botonera li span {
+    display: inline-block;
+    vertical-align: middle;
+}
+#botonera li span.fa-stack {
+    display: inline-block;
+    font-size: 13px;
+    padding: 0;
+}
+#botonera li span.txtclass {
+    white-space: nowrap;
+    display: inline-block;
+    text-align: left;
+    padding-left: 6px;
+    width: 0.1px;
+    overflow: hidden;
+    -webkit-transition: width 0.2s; /* Safari */
+    transition: width 1s;
+}
+.ibox-content {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+#tipoImputacion.ibox-content {
+    padding-top: 1em;
+    border-style: none;
+}
+#botonera input#chkMostrarBotonera {
+    display: none;
+}
+#botonera label[for=chkMostrarBotonera] {
+    cursor: pointer;
+    display: inline;
+}
+#botonera label[for=chkMostrarBotonera] .fa {
+    background-color: #337ab7;
+    color: white;
+    padding: 0.5em;
+    position: absolute;
+    right: -2em;
+    top: 0;
+    border-top-right-radius: 0.5em;
+    border-bottom-right-radius: 0.5em;
+}
+#botonera input#chkMostrarBotonera ~ label i:before  {
+    content: "\f054";
+}
+#botonera input#chkMostrarBotonera:checked ~ label i:before  {
+    content: "\f053";
+}
+#botonera input#chkMostrarBotonera:checked ~ div li span.txtclass {
+    width: 8em;
+}
+#tabla td {
+    padding: 1px 5px;
+}
+
+.panel-group {
+    margin-bottom: 10px;
+}
+
+.listaBotones {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.boton {
+    text-align: center;
+    opacity: 1;
+}
+
+.boton:hover .fa {
+    color: #286090;
+    cursor: pointer;
+}
+
+.boton:hover {
+    color: #286090;
+    cursor: pointer;
+}
+
+.botonDeshabilitado {
+    opacity: 0.2;
+}
+
+#btnGasvi {
+    float: right;
+}
+
+#pieTabla:hover {
+    background-color: #d9edf7;
+}
+
+/*Cambio de tamaño para que cuadre con los iconos stack*/
+
+.fa-3x-1 {
+    font-size: 2em;
+}
+
+#botonera .fa-stack {
+     line-height: inherit;
+}
+#botonera .fa-stack-1x, .fa-stack-2x {
+    position: relative;
+    left: inherit;
+    width: auto;
+}
+.overlay-upper-right {
+    position: relative;
+    bottom: 0.8em;
+    left: 0.85em;
+    width: fit-content;
+    height: fit-content;
+}
+#botonera .overlay-upper-right {
+    position: absolute;
+    top: -0.5em;
+    right: -0.25em;
+}
+
+/*Reverse de icono font awesome*/
+
+.fa-share-square-o-rev:before {
+    content: "\f045";
+}
+
+.fa-share-square-o-rev {
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+}
+
+/*Cambios de colores en iconos font awesome*/
+
+.fa-plane-btn:before {
+    content: "\f072";
+}
+
+.fa-plane-btn {
+    color: #fff;
+    font-size: 22px;
+    vertical-align: bottom;
+}
+
+.fa-bomb {
+    font-size: 24px;
+    cursor: pointer;
+    vertical-align: bottom;
+    padding-left: 5px;
+}
+
+.fa-anchor {
+    font-size: 24px;
+    cursor: pointer;
+    vertical-align: bottom;
+    padding-left: 5px;
+    float: right;
+}
+
+.fa-plane {
+    font-size: 24px;
+    cursor: pointer;
+    vertical-align: bottom;
+    padding-left: 5px;
+}
+
+/*Controles de profundización del arbol*/
+
+#imgExpandirTodo, #imgExpandirMedio, #imgPlegarTodo {
+    height: 22px;
+    width: 8.5px;
+    cursor: pointer;
+}
+
+.txtSemana, .txtSemanaMini {
+    padding-left: 5%;
+    padding-right: 5%;
+    font-weight: bold;
+    /*font-size: 16px;*/
+    font-size: 1.6rem;
+    vertical-align: text-bottom;
+}
+
+.col-pie {
+    padding: 0;
+    text-align: center;
+}
+
+/*#btnGasviLite {
+    display:none;
+}*/
+#btnGasvi span:nth-child(2) {
+    font-weight: bold;
+    font-size: 16px;
+    vertical-align: top;
+}
+
+
+/*Modal detalle tarea*/
+
+/*#modalDetalleTarea .modal-dialog{
+    overflow-y: initial !important;
+}*/
+/*Si no hubiera pestañas el scroll se haría sobre el body del modal*/
+/*#modalDetalleTarea .modal-body{
+    height: 80vh;
+    overflow-y: auto;
+}*/
+/**#modalDetalleTarea .tab-content {
+    max-height: 60vh;
+    overflow-y: auto;
+}*/
+
+@media (max-width: 992px) {
+
+    #imgExpandirTodo, #imgExpandirMedio, #imgPlegarTodo {
+        width: 6%;
+        padding-right: 8px;
+    }
+
+    .fa-anchor {
+        float: none;
+    }
+
+    #pieTarea {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        background: #222;
+        width: 100%;
+        border-top: 1px solid rgb(80,132,159);
+        padding: 5px
+    }
+
+     #pieTareaOculto {
+        height: 50px;
+    }
+
+    .fa-blanco {
+        color: #fff;
+    }
+
+    .boton {
+        color: #fff;
+        background-color: transparent;
+        border-color: transparent;
+    }
+
+    .boton:hover {
+        color: #000;
+        background-color: #d9d5d5;
+        border-color: transparent;
+    }
+
+    .boton:hover .fa {
+        color: #000;
+    }
+
+    .botonDeshabilitado {
+        opacity: 0.4;
+        color: #fff;
+        background-color: transparent;
+        border-color: transparent;
+    }
+
+    .botonDeshabilitado:hover {
+        cursor: default;
+     }
+
+    /*.header-fixed > tbody > tr > td:nth-child(2) {
+        width:100%;
+    }*/
+
+    /*#btnGasvi {
+        display: none;
+    }
+
+    #btnGasviLite {
+        display: initial;
+    }*/
+
+    #botoneraInferior {
+        text-align: center;
+        padding-top: 0;
+    }
+    
+}
+
+@media (max-width: 768px) {
+
+    /*#btnGasvi {
+        margin-top: 15px;
+    }*/
+
+    #imgExpandirTodo, #imgExpandirMedio, #imgPlegarTodo {
+        width: 12%;
+        padding-right: 10px;
+    }
+    
+}
+
+/*Sobrecarga boostrap*/
+
+@media (min-width: 768px) {
+    .col-sm-1-8 {
+        width: 12.5%;
+    }
+}
+
+/*Fin sobrecarga*/
+
+@media (max-width: 492px) {
+
+    .txtSemana {
+        display:none;
+    }
+
+    .txtSemanaMini {
+        display:inline;
+    }
+}
+
+
+/*Media queries altura de tablas*/
+
+@media (max-height: 768px) and (max-width: 1024px) {
+    .div-table-content {
+        max-height: 62vh;
+    }
+}
+
+@media (max-height: 720px) and (max-width: 992px) {
+    .div-table-content {
+        max-height: 64vh;
+    }
+}
+
+@media (max-height: 720px) and (min-width: 992px) {
+
+    .div-table-content {
+        max-height: 58vh;
+    }
+}

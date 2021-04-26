@@ -1,0 +1,320 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Home768.aspx.cs" Inherits="Capa_Presentacion_Home_Home768" %>
+
+<%@ Register  Src="~/uc/CabeceraMenu.ascx" TagName="CabeceraMenu" TagPrefix="cb1" %>
+<%@ Register  Src="~/uc/PieMenu.ascx" TagName="PieMenu" TagPrefix="cb1" %>
+<%@ Register  Src="~/uc/uc_Session.ascx" TagName="mensajeSession" TagPrefix="uc3" %>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HOME PROGRESS</title>
+    <script>
+    </script>
+    <style>
+
+    #fila1 {
+        background-color:white;
+        height:200px;
+    }
+
+    .item {
+        margin-top:10px
+    }
+       
+    #imgTileayuda {
+        margin-left:88px;
+        cursor: pointer;
+    }
+
+    .ajustarMarqueIz {
+        margin-left:-15px;
+    }
+
+    #containerNoticias {
+        background-color:white; 
+        width:750px; 
+        height:335px;
+        position:absolute;
+        top:0; 
+        left:3.8%;
+    }
+
+     /*Para ajustar un elemento que está posicionado absolute*/
+    @media (max-width: 1000px) {
+        #containerNoticias {            
+            clear:both;
+            position:initial;     
+            width:100%;   
+        }
+    }
+
+    
+     img {
+            width:70%;
+        }
+</style>
+</head>
+    
+<body>
+    <uc3:mensajeSession ID="MensajeSession" runat="server" />
+    <cb1:CabeceraMenu runat="server" ID="CabeceraMenu"></cb1:CabeceraMenu>
+   
+    <br class="hidden-xs" />
+    <br class="hidden-xs" />
+
+<div class="container">
+    <div id="fila1" class="row">
+
+
+
+        <div class="col-xs-12 col-md-4">
+            <img id="imgEvaluaciones" src="../../imagenes/tileEvaluaciones.png" style="margin-left:-5px" />
+        </div>
+
+         <div class="col-xs-12 col-md-4">
+                  <div id="tile7" class="tile">
+                <div class="carousel slide" data-ride="carousel">
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner">                       
+                        <div class="item active">
+                            <img src="../../imagenes/imgQueNecesito1.png" class="img-responsive" />
+                        </div>
+
+                        <div class="item">
+                            <img src="../../imagenes/imgObjetividad.png" class="img-responsive" />
+                        </div>
+
+                        <div class="item">
+                            <img src="../../imagenes/imgQueesperodeti2.png" class="img-responsive" />
+                        </div>
+                         
+                         <div class="item">
+                            <img src="../../imagenes/imgCoherencia.png" class="img-responsive" />
+                        </div>
+                        
+                        <div class="item">
+                            <img src="../../imagenes/imgQueesperodeti1.png" class="img-responsive" />
+                        </div>
+                       
+                         <div class="item">
+                            <img src="../../imagenes/imgValor.png" class="img-responsive" />
+                        </div>
+
+                        <div class="item">
+                            <img src="../../imagenes/imgQueNecesito2.png" class="img-responsive" />
+                        </div>
+
+                         <div class="item">
+                            <img src="../../imagenes/imgCalidad.png" class="img-responsive" />
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="col-xs-12 col-md-4">
+            <img id="imgTileayuda" src="../../imagenes/tileAyuda.png" />
+        </div>
+   
+       
+    </div>
+
+    <br />
+
+    <div class="row">
+        <div class="col-xs-12 col-md-4">
+            <img id="imgEquipo" class="ajustarMarqueIz" src="../../imagenes/tileEquipo.png" />
+        </div>
+
+        <div class="col-xs-8">
+            <div id="containerNoticias">
+                <%--<img class="img-responsive" src="../../imagenes/home.png" style="width:755px; height:415px" />--%>
+            </div>
+        </div>
+    </div>
+    
+    <br />
+
+    <div class="row">
+        <div class="col-xs-12 col-md-4">
+            <img id="imgRoles" class="ajustarMarqueIz" src="../../imagenes/tileRoles.png" />
+        </div>
+    </div>
+
+  
+</div>
+
+
+    <script type="text/javascript">
+
+        if ($("#CabeceraMenu_ulPrincipal li[data-name=Evaluaciones]").length > 0) $("#imgEvaluaciones").css("cursor", "pointer");
+        if ($("#CabeceraMenu_ulPrincipal li[data-name=Equipo]").length > 0) $("#imgEquipo").css("cursor", "pointer");
+        if ($("#CabeceraMenu_ulPrincipal li[data-name=Roles]").length > 0) $("#imgRoles").css("cursor", "pointer");
+        if ($("#CabeceraMenu_ulPrincipal li[data-name=Administración]").length > 0) $("#imgAdministracion").css("cursor", "pointer");
+
+        $("#imgEvaluaciones").on("click", function (e) {
+            $("#CabeceraMenu_ulPrincipal li[data-name=Evaluaciones] ").toggleClass('open', true);
+            $("#CabeceraMenu_ulPrincipal li[data-name!=Evaluaciones]").toggleClass("open", false);
+            e.stopPropagation();
+        })
+
+
+        $("#imgEquipo").on("click", function (e) {
+
+            $("#CabeceraMenu_ulPrincipal li[data-name=Equipo] ").toggleClass('open', true);
+            $("#CabeceraMenu_ulPrincipal li[data-name!=Equipo]").toggleClass("open", false);
+            e.stopPropagation();
+        })
+
+        $("#imgRoles").on("click", function (e) {
+            $("#CabeceraMenu_ulPrincipal li[data-name=Roles] ").toggleClass('open', true);
+            $("#CabeceraMenu_ulPrincipal li[data-name!=Roles]").toggleClass("open", false);
+            e.stopPropagation();
+        })
+
+        $("#imgTileayuda").on("click", function (e) {
+            $("#CabeceraMenu_ulPrincipal li[data-name=Ayuda] ").toggleClass('open', true);
+            $("#CabeceraMenu_ulPrincipal li[data-name!=Ayuda]").toggleClass("open", false);
+            e.stopPropagation();
+        })
+
+        //
+        $("li[data-name= 'Colectivo PROGRESS'], li[data-name= 'Colectivo ATENCIÓN A USUARIOS'], li[data-name= 'Valores corporativos'], li[data-name= 'Guía entrevista'], li[data-name= 'Procedimiento de evaluación del desempeño'], li[data-name= 'Resumen del procedimiento de evaluación del desempeño'], li[data-name= 'Técnico de sistemas'], li[data-name= 'Técnico de soporte al negocio'], li[data-name= 'Técnico de desarrollo'], li[data-name= 'Comercial'], li[data-name= 'Atención a usuarios'], li[data-name= 'Habilidades'], li[data-name= 'Competencias y roles'], li[data-name= 'Consultor de procesos']").on("click", function () {
+            $(this).children().attr("target", "_blank");
+        })
+
+        $("li[data-name= 'Oficina técnica']").on("click", function () {
+            $(this).children().attr("data-toggle", "modal");
+        })
+
+        /*Carrousel*/
+        $(document).ready(function () {
+            $(".tile").height($("#tile1").width());
+            $(".carousel").height($("#tile1").width());
+            $(".item").height($("#tile1").width());
+
+            $(window).resize(function () {
+                if (this.resizeTO) clearTimeout(this.resizeTO);
+                this.resizeTO = setTimeout(function () {
+                    $(this).trigger('resizeEnd');
+                }, 10);
+            });
+
+            $(window).bind('resizeEnd', function () {
+                $(".tile").height($("#tile1").width());
+                $(".carousel").height($("#tile1").width());
+                $(".item").height($("#tile1").width());
+            });
+
+            //Modal Oficina técnica
+            $("#btnEnviar").on("click", function () {
+
+                if ($("#txtComentario").val().length == 0) {
+                    alertNew("warning", "No se permite enviar un correo vacío.");
+                    return;
+                };
+
+                $("#btnEnviar").prop("disabled", true);
+
+                $.ajax({
+                    url: "Home.aspx/enviarCorreo",
+                    data: JSON.stringify({ texto: $("#txtComentario").val() }),  // parameter map as JSON
+                    type: "POST",
+                    async: true,
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    timeout: 20000,
+                    success: function (result) {
+                        $("#txtComentario").val("");
+                        $("#modal-correo").modal("hide");
+                        $("#btnEnviar").prop("disabled", false);
+                    },
+                    error: function (ex, status) {
+                        mostrarErrorAplicacion("Ocurrió un error al enviar el correo.", e.message)
+                    }
+                });
+            })
+
+
+            $("#btnCancelar").on("click", function () {
+                $("#txtComentario").val("");
+            })
+
+        });
+
+        //Ponemos foco al campo comentario de la modal
+        $(window).on('shown.bs.modal', function () {
+            $("#txtComentario").focus();
+        });
+
+</script>
+
+
+
+    <!--Modal Correo a oficina técnica -->
+  <div class="modal fade" id="modal-correo">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header btn-primary">
+                    <h4 class="modal-title">Envío de correo a oficina técnica</h4>
+                </div>
+                <div class="modal-body">                    
+                    <div class="row">
+                        <div class="col-xs-8">
+                            <span>Texto a enviar por correo</span><br />
+                            <textarea autofocus id="txtComentario" maxlength="750" style="width: 570px; height: 100px"></textarea>
+                            <br />                            
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <b><button id="btnEnviar" class="btn btn-primary" data-toggle="modal" data-backdrop="static" data-keyboard="false" data-target="#modal-finalizar">Enviar</button></b>
+                    <button id="btnCancelar" style="margin-left:7px" type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>                                            
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+<!-- FIN Modal Correo a oficina técnica-->
+
+
+
+     <div class="modal fade" id="modal-procedimiento">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header btn-primary">
+                    <h4 class="modal-title">Procedimiento-Documentación</h4>
+                </div>
+                <div class="modal-body">                    
+                    <div class="row">
+                      <ol>
+                          <li><a href="#">Procedimiento de evaluación del desempeño</a></li>
+                          <li><a href="#">Resumen del procedimiento de evaluación del desempeño</a></li>
+                      </ol>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    
+                    <button style="margin-left:7px" type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>                                            
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+
+
+</body>
+</html>
+
+<cb1:PieMenu runat="server" ID="PieMenu"></cb1:PieMenu></html>

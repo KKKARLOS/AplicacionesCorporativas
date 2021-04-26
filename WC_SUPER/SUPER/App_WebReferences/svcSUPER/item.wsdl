@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://IBOffice.ibermatica.com/SUPER" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://IBOffice.ibermatica.com/SUPER" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://IBOffice.ibermatica.com/SUPER/Imports">
+      <xsd:import schemaLocation="http://ibservioffice:8450/IBOffice/svcSUPER/?xsd=xsd0" namespace="http://IBOffice.ibermatica.com/SUPER" />
+      <xsd:import schemaLocation="http://ibservioffice:8450/IBOffice/svcSUPER/?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/IBOffice.code.Services" />
+      <xsd:import schemaLocation="http://ibservioffice:8450/IBOffice/svcSUPER/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://ibservioffice:8450/IBOffice/svcSUPER/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/System.Data" />
+      <xsd:import schemaLocation="http://ibservioffice:8450/IBOffice/svcSUPER/?xsd=xsd4" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IsvcSUPER_getExcelVencimientoFacturas_InputMessage">
+    <wsdl:part name="parameters" element="tns:getExcelVencimientoFacturas" />
+  </wsdl:message>
+  <wsdl:message name="IsvcSUPER_getExcelVencimientoFacturas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getExcelVencimientoFacturasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IsvcSUPER_getExcelVencimientoFacturas_IBOfficeExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/IBOffice.code.Services" name="detail" element="q1:IBOfficeException" />
+  </wsdl:message>
+  <wsdl:message name="IsvcSUPER_getExcelValorGanado_InputMessage">
+    <wsdl:part name="parameters" element="tns:getExcelValorGanado" />
+  </wsdl:message>
+  <wsdl:message name="IsvcSUPER_getExcelValorGanado_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getExcelValorGanadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IsvcSUPER_getExcelValorGanado_IBOfficeExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/IBOffice.code.Services" name="detail" element="q2:IBOfficeException" />
+  </wsdl:message>
+  <wsdl:portType name="IsvcSUPER">
+    <wsdl:operation name="getExcelVencimientoFacturas">
+      <wsdl:input wsaw:Action="http://IBOffice.ibermatica.com/SUPER/IsvcSUPER/getExcelVencimientoFacturas" message="tns:IsvcSUPER_getExcelVencimientoFacturas_InputMessage" />
+      <wsdl:output wsaw:Action="http://IBOffice.ibermatica.com/SUPER/IsvcSUPER/getExcelVencimientoFacturasResponse" message="tns:IsvcSUPER_getExcelVencimientoFacturas_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://IBOffice.ibermatica.com/SUPER/IsvcSUPER/getExcelVencimientoFacturasIBOfficeExceptionFault" name="IBOfficeExceptionFault" message="tns:IsvcSUPER_getExcelVencimientoFacturas_IBOfficeExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getExcelValorGanado">
+      <wsdl:input wsaw:Action="http://IBOffice.ibermatica.com/SUPER/IsvcSUPER/getExcelValorGanado" message="tns:IsvcSUPER_getExcelValorGanado_InputMessage" />
+      <wsdl:output wsaw:Action="http://IBOffice.ibermatica.com/SUPER/IsvcSUPER/getExcelValorGanadoResponse" message="tns:IsvcSUPER_getExcelValorGanado_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://IBOffice.ibermatica.com/SUPER/IsvcSUPER/getExcelValorGanadoIBOfficeExceptionFault" name="IBOfficeExceptionFault" message="tns:IsvcSUPER_getExcelValorGanado_IBOfficeExceptionFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

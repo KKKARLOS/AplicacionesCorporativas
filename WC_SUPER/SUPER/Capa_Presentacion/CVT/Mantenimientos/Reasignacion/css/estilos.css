@@ -1,0 +1,4 @@
+﻿#tblDatos tr, #tblDatos2 tr, #tblProf tr { height: 16px; }
+#tblDatos td, #tblDatos2 td, #tblProf td, #tblElementosAsociado td, #tblTituloElementos td { padding: 0px 2px 0px 5px; }
+
+#tblElementosAsociado tr { height: 16px; }

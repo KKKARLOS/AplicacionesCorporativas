@@ -1,0 +1,71 @@
+using System;
+using System.Data;
+using System.Configuration;
+using System.Collections;
+#UsingNameSpace#
+/// <summary>
+/// Summary description for #ClassName#
+/// </summary>
+namespace #NameSpace# 
+{
+    public class #ClassName# #ClassParents#
+    {
+    	#region Private Variables
+		#DAName# obj#DAName#;
+		#endregion
+		
+        #region Public Constructors
+        public #ClassName#()
+        {
+            //
+            // TODO: Add constructor logic here
+            //
+            obj#DAName#=new #DAName#();
+        }
+        #endregion       
+
+        #region Public Methods
+        public int Insert(#InsertParameters#)
+        {
+            return obj#DAName#.Insert(#DAInsertParameters#);
+        }
+
+        public int Update(#UpdateParameters#)
+        {
+             return obj#DAName#.Update(#DAUpdateParameters#);
+
+        }
+
+        public int Delete(#PKParameters#)
+        {
+             return obj#DAName#.Delete(#DAPKParameters#);
+
+        }
+
+         public int DeleteAll()
+        {
+             return obj#DAName#.DeleteAll();
+        }
+
+        public #SelectReturnType# Select(#PKParameters#)
+        {
+            return obj#DAName#.Select(#DAPKParameters#);
+        }
+
+        public #SelectAllReturnType# SelectAll1( )
+        {
+         return obj#DAName#.SelectAll1();
+        }
+        
+        public DataTable SelectAll( )
+        {
+         return obj#DAName#.SelectAll();
+        }
+
+
+     
+#endregion          
+    
+    }
+
+}

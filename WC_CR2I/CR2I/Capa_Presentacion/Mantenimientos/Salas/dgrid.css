@@ -1,0 +1,48 @@
+.Catalogo 
+{
+	OVERFLOW-X: hidden; 
+	OVERFLOW: auto; 
+	WIDTH: 516px; 
+	HEIGHT: 463px; 
+}
+.TablaDatos 
+{ 
+	WIDTH: 500px; 
+}
+.textareaTexto 
+{
+	BORDER-RIGHT: #315d6b 1px solid; 
+	PADDING-RIGHT: 0px; 
+	BORDER-TOP: #315d6b 1px solid; 
+	PADDING-LEFT: 2px; 
+	FONT-SIZE: 11px; 
+	LEFT: 0px; 
+	BACKGROUND-IMAGE: url(../../../images/fondoTxt.gif); 
+	PADDING-BOTTOM: 0px; 
+	MARGIN: 1px 1px 1px 4px; 
+	BORDER-LEFT: #315d6b 1px solid; 
+	PADDING-TOP: 0px; 
+	BORDER-BOTTOM: #315d6b 1px solid; 
+	FONT-FAMILY: Arial, Helvetica, sans-serif; 
+	TOP: 0px; 
+	HEIGHT: 16px; 
+}
+.combo 
+{ 
+	BORDER-RIGHT: #315d6b 1px solid; 
+	PADDING-RIGHT: 0px; 
+	BORDER-TOP: #315d6b 1px solid; 
+	PADDING-LEFT: 2px; 
+	FONT-SIZE: 11px; 
+	LEFT: 0px; 
+	PADDING-BOTTOM: 0px; 
+	MARGIN: 1px 1px 1px 4px; 
+	BORDER-LEFT: #315d6b 1px solid; 
+	PADDING-TOP: 0px; 
+	BORDER-BOTTOM: #315d6b 1px solid; 
+	FONT-FAMILY: Arial, Helvetica, sans-serif; 
+	TOP: 0px; 
+	HEIGHT: 16px; 
+	BACKGROUND-COLOR: #fbfdfb; 
+}
+		

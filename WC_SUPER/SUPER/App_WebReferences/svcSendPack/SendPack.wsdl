@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://ibWEBCORP01:102/SendPack" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://ibWEBCORP01:102/SendPack" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://ibWEBCORP01:102/SendPack/Imports">
+      <xsd:import schemaLocation="http://services.intranet.ibermatica/SendPack/SendPack.svc?xsd=xsd0" namespace="http://ibWEBCORP01:102/SendPack" />
+      <xsd:import schemaLocation="http://services.intranet.ibermatica/SendPack/SendPack.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://services.intranet.ibermatica/SendPack/SendPack.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/IB.Services.WcfSendPack" />
+      <xsd:import schemaLocation="http://services.intranet.ibermatica/SendPack/SendPack.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/Message" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ISendPack_Saludar_InputMessage">
+    <wsdl:part name="parameters" element="tns:Saludar" />
+  </wsdl:message>
+  <wsdl:message name="ISendPack_Saludar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaludarResponse" />
+  </wsdl:message>
+  <wsdl:message name="Ficheros">
+    <wsdl:part name="parameters" element="tns:Ficheros" />
+  </wsdl:message>
+  <wsdl:message name="Ficheros_Headers">
+    <wsdl:part name="NombreFichero" element="tns:NombreFichero" />
+    <wsdl:part name="sXml" element="tns:sXml" />
+  </wsdl:message>
+  <wsdl:message name="ISendPack_CrearPaqueteCV_OutputMessage" />
+  <wsdl:message name="ISendPack_CrearPaqueteCV_PackExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/IB.Services.WcfSendPack" name="detail" element="q1:PackException" />
+  </wsdl:message>
+  <wsdl:message name="ISendPack_CrearPaqueteIberDok_InputMessage">
+    <wsdl:part name="parameters" element="tns:CrearPaqueteIberDok" />
+  </wsdl:message>
+  <wsdl:message name="ISendPack_CrearPaqueteIberDok_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CrearPaqueteIberDokResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISendPack_CrearPaqueteIberDok_PackExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/IB.Services.WcfSendPack" name="detail" element="q2:PackException" />
+  </wsdl:message>
+  <wsdl:message name="ISendPack_CrearPaqueteMulti_InputMessage">
+    <wsdl:part name="parameters" element="tns:CrearPaqueteMulti" />
+  </wsdl:message>
+  <wsdl:message name="ISendPack_CrearPaqueteMulti_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CrearPaqueteMultiResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISendPack_AgregarFichero_OutputMessage" />
+  <wsdl:message name="ISendPack_AgregarFichero_PackExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/IB.Services.WcfSendPack" name="detail" element="q3:PackException" />
+  </wsdl:message>
+  <wsdl:portType name="ISendPack">
+    <wsdl:operation name="Saludar">
+      <wsdl:input wsaw:Action="http://ibWEBCORP01:102/SendPack/ISendPack/Saludar" message="tns:ISendPack_Saludar_InputMessage" />
+      <wsdl:output wsaw:Action="http://ibWEBCORP01:102/SendPack/ISendPack/SaludarResponse" message="tns:ISendPack_Saludar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CrearPaqueteCV">
+      <wsdl:input wsaw:Action="http://ibWEBCORP01:102/SendPack/ISendPack/CrearPaqueteCV" name="Ficheros" message="tns:Ficheros" />
+      <wsdl:output wsaw:Action="http://ibWEBCORP01:102/SendPack/ISendPack/CrearPaqueteCVResponse" message="tns:ISendPack_CrearPaqueteCV_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://ibWEBCORP01:102/SendPack/ISendPack/CrearPaqueteCVPackExceptionFault" name="PackExceptionFault" message="tns:ISendPack_CrearPaqueteCV_PackExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CrearPaqueteIberDok">
+      <wsdl:input wsaw:Action="http://ibWEBCORP01:102/SendPack/ISendPack/CrearPaqueteIberDok" message="tns:ISendPack_CrearPaqueteIberDok_InputMessage" />
+      <wsdl:output wsaw:Action="http://ibWEBCORP01:102/SendPack/ISendPack/CrearPaqueteIberDokResponse" message="tns:ISendPack_CrearPaqueteIberDok_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://ibWEBCORP01:102/SendPack/ISendPack/CrearPaqueteIberDokPackExceptionFault" name="PackExceptionFault" message="tns:ISendPack_CrearPaqueteIberDok_PackExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CrearPaqueteMulti">
+      <wsdl:input wsaw:Action="http://ibWEBCORP01:102/SendPack/ISendPack/CrearPaqueteMulti" message="tns:ISendPack_CrearPaqueteMulti_InputMessage" />
+      <wsdl:output wsaw:Action="http://ibWEBCORP01:102/SendPack/ISendPack/CrearPaqueteMultiResponse" message="tns:ISendPack_CrearPaqueteMulti_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AgregarFichero">
+      <wsdl:input wsaw:Action="http://ibWEBCORP01:102/SendPack/ISendPack/AgregarFichero" name="Ficheros" message="tns:Ficheros" />
+      <wsdl:output wsaw:Action="http://ibWEBCORP01:102/SendPack/ISendPack/AgregarFicheroResponse" message="tns:ISendPack_AgregarFichero_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://ibWEBCORP01:102/SendPack/ISendPack/AgregarFicheroPackExceptionFault" name="PackExceptionFault" message="tns:ISendPack_AgregarFichero_PackExceptionFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

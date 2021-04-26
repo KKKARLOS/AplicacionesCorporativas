@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title> ::: PREVENTA ::: </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <link href="../../css/bootstrap.min.css" rel="stylesheet" />
+    <style type="text/css">
+        #divNavegador {
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body onload="init()">
+    <div class="hide" style="text-align:center" id="divNavegador">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Información sobre el navegador</h4>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Tu navegador, o la versión del mismo, no es compatible con esta aplicación.
+                    </p>
+                    <br />
+                    <p>
+                        Te sugerimos que utilices uno de los que se muestra a continuación.
+                        <br /><br /><br /><br />
+                        Si necesitas ayuda, ponte en contacto con el CAU.
+                    </p>
+
+                    <br />
+
+                    <a target="_blank" href="https://www.google.com.mx/chrome/browser/desktop/?brand=CHBD&gclid=EAIaIQobChMI8dzM6Iux1gIVi4eyCh07nA-rEAAYASAAEgL7VvD_BwE"><img title="Navegador Chrome" alt="Navegador Chrome" src="../../Images/imgChrome.png" style="width: 64px" /></a>
+                    <a target="_blank" href="https://www.mozilla.org/es-ES/firefox/new/"><img title="Navegador Firefox" alt="Navegador Firefox" src="../../Images/imgFirefox.png" style="width: 64px" /></a>
+                    <a target="_blank" href="https://support.apple.com/es_ES/downloads/safari"><img title="Navegador Safari de macOS" alt="Navegador Safari de macOS" src="../../Images/imgSafari.png" style="width: 64px" /></a>
+                    <a target="_blank" href="https://www.microsoft.com/es-es/download/internet-explorer-11-for-windows-7-details.aspx"><img title="Navegador Internet Explorer" alt="Navegador Internet Explorer" src="../../Images/imgExplorer.png" style="width: 64px" /></a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="../../Javascript/bowser.min.js"></script>
+    <script>
+        function init() {
+
+
+            if ('querySelector' in document && 'localStorage' in window && 'addEventListener' in window) {
+                if (bowser.msie && parseInt(bowser.version) < 11) {
+                    document.getElementById("divNavegador").className = "show";
+                }
+                else {
+                    location.href = "Login.ashx?" + location.href.substring(location.href.indexOf("?") + 1)
+                }
+            }
+
+        }
+    </script>
+</body>
+</html>

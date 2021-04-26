@@ -1,0 +1,114 @@
+﻿#tblSuperior td {
+    padding: 3px;
+}
+div {
+    margin: 0px;
+    padding: 0px;
+}	
+.divTitulo {
+    background-image: url('../../../../../Images/fondoTituloDoble.gif');
+    background-repeat: repeat-x;
+    height: 34px;
+}
+#tblTituloFijo, #tblTituloMovil{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 8pt;
+    COLOR: #FFFFFF;
+    FONT-FAMILY: Arial;
+    text-align: center;
+}
+#tblTituloFijo td, #tblTituloMovil td{
+    border: 1px solid #FFFFFF;
+	border-collapse:collapse;
+    border-spacing:0px;
+    vertical-align:middle;
+}
+#tblBodyFijo td, #tblBodyMovil td {
+	border-collapse: separate;
+    border-spacing: 0px;
+    /*font-size: 9pt;*/
+	border: 1px solid #A6C3D2;
+	padding-left: 2px;
+    padding-right: 2px;
+}
+#tblPieFijo td, #tblPieMovil td {
+	border-collapse: separate;
+    border-spacing: 0px;
+    /*font-size: 9pt;*/
+	border-left: 1px solid #A6C3D2;
+	border-right: 1px solid #A6C3D2;
+	padding-left: 2px;
+    padding-right: 2px;
+}
+
+#tblBodyFijo td, #tblBodyMovil td,
+#tblPieFijo td, #tblPieMovil td {
+	FONT-SIZE: 8pt;
+}
+#tblBodyMovil td, #tblBodyFijo .num, #tblPieFijo .num {
+    text-align: right;
+}
+#tblPieMovil td {
+    padding-right: 2px;
+    font-size: 8pt;
+    text-align:center;
+}
+.comTD {
+    background-image: url('../../../../../Images/imgComentarioCelda.gif');
+    background-position: right;
+    background-repeat: no-repeat;
+}
+.comMes {
+    background-image: url('../../../../../Images/imgComentarioMes.gif');
+    background-position: right;
+    background-repeat: no-repeat;
+}
+
+#contextMenu {
+    background: #d4d0c8;
+    box-shadow: 0 0 12px rgba( 0, 0, 0, .3 );
+    border-top: 1px solid #ffffff;
+    border-left: 1px solid #ffffff;
+    border-right: 1px solid #808080;
+    border-bottom: 1px solid #808080;
+    display: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 120px;
+}
+#divCC {
+    border-top: 1px solid #d4d0c8;
+    border-left: 1px solid #d4d0c8;
+    border-right: 1px solid #404040;
+    border-bottom: 1px solid #404040;
+    position: absolute;
+    top: 0; left: 0;
+    display: none;
+    margin: 0;
+    padding: 0;
+}
+ 
+#contextMenu li {
+    position: relative;
+}
+ 
+#contextMenu li:hover {
+    background: #0a246a;
+}
+ 
+#contextMenu a {
+    color: #000000;
+    display: inline-block;
+    padding: 5px;
+    text-decoration: none;
+    width: 85%;
+}
+ 
+#contextMenu li:hover a {
+    color: #FFFFFF;
+}
+ 
+#contextMenu li:last-child a {
+	border-bottom: none;
+}

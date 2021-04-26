@@ -1,0 +1,187 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Web;
+using System.ServiceModel;
+using Shared
+#UsingNameSpace#
+
+
+namespace WSAL
+{
+    
+    public class #ClassName# 
+    {
+    	#region variables privadas y constructor
+		public #ClassName#()
+		{
+		}
+		#endregion
+	
+		#region funciones publicas
+		/// <summary>
+        /// Obtiene todos los #ClassName#
+        /// </summary>
+		internal static List<svc#ClassName#.#ClassName#> Catalogo(#SelectAllParameters#)
+		{
+			List<svc#ClassName#.#ClassName#> lst = new List<svc#ClassName#.#ClassName#>();
+            
+			string keycache = "";
+ 
+             //comprobar si el objeto está en la cache.
+            if (HttpContext.Current.Cache[keycache] == null)
+            {
+
+                svc#ClassName#.#ClassName#Client cSvc#ClassName# = new svc#ClassName#.#ClassName#Client();
+
+                try
+                {
+                    using (var scope = new System.ServiceModel.OperationContextScope(cSvc#ClassName#.InnerChannel))
+                    {
+                        //HEADERS
+                        OperationContext.Current.OutgoingMessageHeaders.Add(Shared.ServiceRequest.AuthHeader());
+                        OperationContext.Current.OutgoingMessageHeaders.Add(Shared.ServiceRequest.UserHeader());
+
+                        //obtener pedidos y cachear
+                        lst = cSvc#ClassName#.Catalogo(#WSSelectAllParameters#);
+
+                        HttpContext.Current.Cache.Insert(keycache, lst, null, DateTime.Now.AddMinutes(5), TimeSpan.Zero, System.Web.Caching.CacheItemPriority.High, null);
+
+                        return lst;
+                    }
+                }
+                catch (FaultException<svcProveedor.FException> fex)
+                {
+                    throw new IBException(fex.Detail.ErrorCode, fex.Detail.Message + " " + fex.Detail.InnerMessage);
+                }
+                catch (Exception ex)
+                {
+                    LogError.LogearError("Error no controlado.", 0, "Usuario: RecodarDatosAcceso", ex);
+                    throw new IBException(500, ex.Message);
+                }
+                finally
+                {
+                    if (cSvc#ClassName# != null && cSvc#ClassName#.State != System.ServiceModel.CommunicationState.Closed)
+                    {
+                        if (cSvc#ClassName#.State != System.ServiceModel.CommunicationState.Faulted) cSvc#ClassName#.Close();
+                        else cSvc#ClassName#.Abort();
+                    }
+                }
+            }
+            else
+            {
+                //obtener la lista de pedidos abiertos de la cache.
+                return (List<svc#ClassName#.#ClassName#>)HttpContext.Current.Cache[keycache];
+            }
+		}
+
+		/// <summary>
+        /// Inserta un #ClassName#
+        /// </summary>
+		internal int Insert(#InsertParameters#)
+        {
+			try
+			{
+				#InsertEnumParameters#
+
+				return (int)cDblib.Execute(#InsertCommandText#, dbparams);
+			}
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+		
+		/// <summary>
+        /// Obtiene un #ClassName# a partir del id
+        /// </summary>
+        internal Models.#SelectReturnType# Select(#PKParameters#)
+        {
+            Models.#SelectReturnType# #SelectDBReturn# = null;
+            IDataReader dr = null;
+
+            try
+            {
+				#PKDBParameters#
+
+				dr = cDblib.DataReader(#SelectCommandText#, dbparams);
+				if (dr.Read())
+				{
+					#SelectDBMapping#
+				}
+				return #SelectDBReturn#;
+				
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                if (dr != null)
+                {
+                    if (!dr.IsClosed) dr.Close();
+                    dr.Dispose();
+                }
+            }
+        }
+		
+		/// <summary>
+        /// Actualiza un #ClassName# a partir del id
+        /// </summary>
+		internal int Update(#UpdateParameters#)
+        {
+			try
+			{
+				#UpdateEnumParameters#
+                           
+				return (int)cDblib.Execute(#UpdateCommandText#, dbparams);
+			}
+			catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+		
+		/// <summary>
+        /// Elimina un #ClassName# a partir del id
+        /// </summary>
+        internal int Delete(#PKParameters#)
+        {
+			try
+			{
+				#PKDBParameters#
+            
+				return (int)cDblib.Execute(#DeleteCommandText#, dbparams);
+			}
+			catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+		
+		#endregion
+		
+		#region funciones privadas
+		private System.Data.Common.DbParameter Param(ParameterDirection paramDirection, enumDBFields dbField, string strValue)
+        {
+            System.Data.Common.DbParameter dbParam = null;
+            string paramName = null;
+            System.Data.DbType paramType = default(System.Data.DbType);
+            int paramSize = 0;
+
+			#EnumDBInf#
+
+            dbParam = cDblib.dbParameter(paramName, paramType, paramSize);
+            dbParam.Direction = paramDirection;
+            if (paramDirection == ParameterDirection.Input | paramDirection == ParameterDirection.InputOutput) dbParam.Value = strValue;
+
+            return dbParam;
+
+        }
+		
+		#endregion
+    
+    }
+
+}

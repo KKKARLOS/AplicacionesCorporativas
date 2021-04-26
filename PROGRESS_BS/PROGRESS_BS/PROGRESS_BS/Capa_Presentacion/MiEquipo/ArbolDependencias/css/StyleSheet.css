@@ -1,0 +1,286 @@
+﻿
+
+.container {
+    width:970px !important;
+}
+
+#tbdEval > tr.active {
+    background-color: #D8D8D8 !important;
+}
+
+/*Tenemos que heredar la clase activa del padre(tr)*/
+#tbdEval > tr.active > td {
+    background-color: inherit;
+}
+
+#lisEvaluadores li {
+    cursor: pointer;
+}
+
+#lisEvaluadores .list-group-item {
+    /*padding: 0 15px;*/
+}
+
+#tblDocPotencial tr, #tblDocYO tr {
+    cursor: pointer;
+}
+
+#modal-evaluadores input, #divNombre input {
+    width: 150px;
+}
+
+
+
+#evaluador {
+    width: 400px;
+    padding-left: 3px;
+}
+
+#lblEvaluador {
+    text-decoration: underline;
+}
+
+#lblFigura {
+    margin-top: 6px;
+}
+
+#divFigura {
+    margin-top: 4px;
+}
+
+#tblEvaluador tr > td {
+    background-color: #D5D5D5;
+}
+
+.glyphicon.glyphicon-arrow-up, .glyphicon.glyphicon-arrow-down, .fa {
+    cursor: pointer;
+}
+
+/*#headerEvaluador {
+    width: 67%;
+}*/
+
+#evaluadoresTabla {
+    /*max-height: 250px;
+    overflow: auto;*/
+    margin-top: -20px;
+}
+
+
+/*#tblEvaluado {
+    height:50vh !important;
+    overflow-y:auto;
+    display:block;
+}*/
+
+/*header*/
+.header-fixed {
+    width: 100% 
+}
+
+.header-fixed > thead,
+.header-fixed > tbody,
+.header-fixed > thead > tr,
+.header-fixed > tbody > tr,
+.header-fixed > thead > tr > th,
+.header-fixed > tbody > tr > td {
+    display: block;
+}
+
+.header-fixed > tbody > tr:after,
+.header-fixed > thead > tr:after {
+    content: ' ';
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+
+
+#tablaEvaluador.header-fixed > tbody {
+    overflow-y: auto;
+    height: auto; 
+}
+
+
+#tablaEvaluador.header-fixed > tbody > tr > td:nth-child(1) {
+    width: 15%;
+    float: left;
+    
+}
+
+#tablaEvaluador.header-fixed > tbody > tr > td:nth-child(2) {
+    width: 4%;
+    float: left;
+    
+}
+
+#tablaEvaluador.header-fixed > tbody > tr > td:nth-child(3) {
+    width: 34.5%;
+    float: left;
+    
+}
+
+#tablaEvaluador.header-fixed > tbody > tr > td:nth-child(4) {
+    width: 4%;
+    float: left;
+    
+}
+
+#tablaEvaluador.header-fixed > tbody > tr > td:nth-child(5) {
+    width: 4%;
+    float: left;
+    
+}
+
+#tablaEvaluador.header-fixed > tbody > tr > td:nth-child(6) {
+    width: 4%;
+    float: left;
+    
+}
+#tablaEvaluador.header-fixed > tbody > tr > td:nth-child(7) {
+    width: 34.5%;
+    float: left;
+    
+}
+
+
+/*Evaluado*/
+#tablaEvaluado.header-fixed > tbody {
+    overflow-y: auto;
+    height: 50vh;
+}
+
+
+#tablaEvaluado.header-fixed > tbody > tr > td:nth-child(1) {
+    width: 15%;
+    float: left;
+    
+}
+
+#tablaEvaluado.header-fixed > tbody > tr > td:nth-child(2) {
+    width: 4%;
+    float: left;
+    
+}
+
+#tablaEvaluado.header-fixed > tbody > tr > td:nth-child(3) {
+    width: 34.5%;
+    float: left;
+    
+}
+
+#tablaEvaluado.header-fixed > tbody > tr > td:nth-child(4) {
+    width: 4%;
+    float: left;
+    
+}
+
+#tablaEvaluado.header-fixed > tbody > tr > td:nth-child(5) {
+    width: 4%;
+    float: left;
+    
+}
+
+#tablaEvaluado.header-fixed > tbody > tr > td:nth-child(6) {
+    width: 4%;
+    float: left;
+    
+}
+#tablaEvaluado.header-fixed > tbody > tr > td:nth-child(7) {
+    width: 34.5%;
+    float: left;
+    
+}
+
+/*fin header*/
+
+
+/*#tblEvaluado tr td{
+    width:auto;
+}*/
+
+/*Damos margen entre botones (excluímos el botón obtener)*/
+#modal-evaluadores button:not(#btnObtener) {
+    margin-left: 10px;
+}
+
+#btnObtener {
+    margin-top: 27px;
+    margin-left: -15px;
+}
+
+#lisEvaluadores {
+    max-height: 300px;
+    overflow: auto;
+}
+
+.MR {
+    margin-right: 15px;
+}
+
+/*Damos margen entre botones*/
+#modal-potencial button {
+    margin-left: 10px;
+}
+
+.transparent {
+    color:transparent !important;
+    cursor:default !important;
+}
+
+#fecha {
+    width:80px;
+}
+
+#origen, #txtPruebasRealizadas {
+    width:250px;
+}
+
+.showInline {
+    display:inline-block;
+}
+/*@media only screen and (max-device-height:768px) {
+    #headerEvaluado {
+        width:52.8% !important;
+    }
+  
+}*/
+
+#divCabecera {
+    padding: 5px;
+}
+
+#divCabecera span:nth-child(1), #divCabecera span:nth-child(2) {
+    display:inline-block; 
+    width:4%;
+}
+
+#headerEvaluador {
+    margin-left:-4px;
+}
+
+#headerEvaluado {
+    position:absolute;
+    left:20.5%;
+}
+
+#headerRol {
+    position:absolute;
+    left:66%;
+}
+
+#spanNumero {
+    display:inline !important;
+}
+
+
+
+
+
+@media (min-width: 1200px) {
+    .container {
+        width:1170px !important;
+    }
+}
+
+

@@ -1,0 +1,62 @@
+#region Ensamblado SIFP.LLDA.dll, v1.0.0.0
+// D:\tmp\Clientes\IMQ\IndigoHis\src-Optimizacion\Lib\SIFP.LLDA.dll
+#endregion
+
+using System;
+using System.Data;
+
+namespace SII.Framework.LLDA
+{
+    public class Gateway
+    {
+        protected Gateway();
+        public Gateway(string DatabaseName);
+
+        public void BeginTransaction();
+        public void BeginTransaction(IsolationLevel isolationLevel);
+        public void Commit();
+        protected void CreateConnection();
+        public void ExecuteQuery(string query);
+        public void ExecuteQuery(string query, params StoredProcParam[] parameters);
+        public DataSet ExecuteQueryDataSet(string query);
+        public DataSet ExecuteQueryDataSet(string query, params StoredProcParam[] parameters);
+        public DataSet ExecuteQueryDataSet(string query, string tableName);
+        public DataSet ExecuteQueryDataSet(string query, string tableName, params StoredProcParam[] parameters);
+        public DataSet ExecuteQueryDataSet(string query, string tableName, int timeout, params StoredProcParam[] parameters);
+        public DataTable ExecuteQueryDataTable(string query);
+        public DataTable ExecuteQueryDataTable(string query, params StoredProcParam[] parameters);
+        public DataTable ExecuteQueryDataTable(string query, string tableName);
+        public DataTable ExecuteQueryDataTable(string query, string tableName, params StoredProcParam[] parameters);
+        public int ExecuteQueryNonQuery(string query);
+        public int ExecuteQueryNonQuery(string query, params StoredProcParam[] parameters);
+        public IDataReader ExecuteQueryReader(string query);
+        public IDataReader ExecuteQueryReader(string query, params StoredProcParam[] parameters);
+        public object ExecuteQueryScalar(string query);
+        public object ExecuteQueryScalar(string query, params StoredProcParam[] parameters);
+        public int ExecuteQueryWithReturnValue(string query);
+        public int ExecuteQueryWithReturnValue(string query, params StoredProcParam[] parameters);
+        public void ExecuteStoredProcedure(string name);
+        public void ExecuteStoredProcedure(string name, params StoredProcParam[] parameters);
+        public DataSet ExecuteStoredProcedureDataSet(string name);
+        public DataSet ExecuteStoredProcedureDataSet(string name, params StoredProcParam[] parameters);
+        public DataSet ExecuteStoredProcedureDataSet(string name, string tableName);
+        public DataSet ExecuteStoredProcedureDataSet(string name, string tableName, int timeout);
+        public DataSet ExecuteStoredProcedureDataSet(string name, string tableName, params StoredProcParam[] parameters);
+        public DataSet ExecuteStoredProcedureDataSet(string name, string tableName, int timeout, params StoredProcParam[] parameters);
+        public DataTable ExecuteStoredProcedureDataTable(string name);
+        public DataTable ExecuteStoredProcedureDataTable(string name, params StoredProcParam[] parameters);
+        public DataTable ExecuteStoredProcedureDataTable(string name, string tableName);
+        public DataTable ExecuteStoredProcedureDataTable(string name, string tableName, params StoredProcParam[] parameters);
+        public int ExecuteStoredProcedureNonQuery(string name);
+        public int ExecuteStoredProcedureNonQuery(string name, params StoredProcParam[] parameters);
+        public IDataReader ExecuteStoredProcedureReader(string name);
+        public IDataReader ExecuteStoredProcedureReader(string name, params StoredProcParam[] parameters);
+        public object ExecuteStoredProcedureScalar(string name);
+        public object ExecuteStoredProcedureScalar(string name, params StoredProcParam[] parameters);
+        public int ExecuteStoredProcedureWithReturnValue(string name);
+        public int ExecuteStoredProcedureWithReturnValue(string name, params StoredProcParam[] parameters);
+        public static Gateway GetInstance(string DatabaseName);
+        public bool IsInTransaction();
+        public void Rollback();
+    }
+}

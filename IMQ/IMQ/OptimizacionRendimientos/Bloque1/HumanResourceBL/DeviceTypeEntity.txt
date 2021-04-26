@@ -1,0 +1,96 @@
+#region
+using System;
+using System.IO;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
+using Microsoft.Practices.EnterpriseLibrary.Validation.Validators;
+using SII.Framework.Interfaces;
+#endregion
+
+namespace SII.HCD.BackOffice.Entities
+{
+    [DataContract()]
+    [Serializable()]
+    public class DeviceTypeEntity : IStatusEntity, ICloneable
+    {
+
+        #region Properties
+        [DataMember()]
+        public int ID { get; set; }
+
+        [DataMember()]
+        [NotNullValidator()] [StringLengthValidator(1, 50)] public string Code { get; set; }
+
+        [DataMember()]
+        [NotNullValidator()] [StringLengthValidator(1, 100)] public string Name { get; set; }
+
+        [DataMember()]
+        [StringLengthValidator(0, 200)] public string Description { get; set; }
+
+        [DataMember()]
+        [StringLengthValidator(0, 100)] public string AudioInputTypeFormat { get; set; }
+
+        [DataMember()]
+        [StringLengthValidator(0, 100)] public string AudioOutputTypeFormat { get; set; }
+
+        [DataMember()]
+        [StringLengthValidator(0, 100)] public string MsgInputTypeFormat { get; set; }
+
+        [DataMember()]
+        [StringLengthValidator(0, 100)] public string MsgOutputTypeFormat { get; set; }
+        [DataMember()]
+        public bool Localizable { get; set; }
+        [DataMember()]
+        public bool CanReceiveCall { get; set; }
+        [DataMember()]
+        public Int64 DBTimeStamp { get; set; }
+        [DataMember()]
+        public EditStatusEntity EditStatus { get; set; }
+        #endregion
+
+        #region Constructors
+        public DeviceTypeEntity()
+            : this(0, String.Empty, String.Empty, String.Empty, String.Empty, String.Empty,
+            String.Empty, String.Empty, false, false, 0) { }
+
+        public DeviceTypeEntity(int id, string code, string name, string description, 
+            string audioInputTypeFormat, string audioOutputTypeFormat, string msgInputTypeFormat,
+            string msgOutputTypeFormat, bool localizable, bool canReceiveCall, Int64 dbTimeStamp)
+        {
+            ID = id;
+            Code = code;
+            Name = name;
+            AudioInputTypeFormat = audioInputTypeFormat;
+            AudioOutputTypeFormat = audioOutputTypeFormat;
+            MsgInputTypeFormat = msgInputTypeFormat;
+            MsgOutputTypeFormat = msgOutputTypeFormat;
+            Description = description;
+            Localizable = localizable;
+            CanReceiveCall = canReceiveCall;
+            DBTimeStamp = dbTimeStamp;
+            EditStatus = new EditStatusEntity();
+        }
+        #endregion
+
+        #region ICloneable Members
+        public virtual object Clone()
+        {
+            object clonedObject = null;
+            MemoryStream ms = new MemoryStream();
+            try
+            {
+                BinaryFormatter bf = new BinaryFormatter();
+
+                bf.Serialize(ms, this);
+                ms.Seek(0, SeekOrigin.Begin);
+                clonedObject = bf.Deserialize(ms);
+            }
+            finally
+            {
+                ms.Close();
+            }
+            return clonedObject;
+        }
+        #endregion
+    }
+}

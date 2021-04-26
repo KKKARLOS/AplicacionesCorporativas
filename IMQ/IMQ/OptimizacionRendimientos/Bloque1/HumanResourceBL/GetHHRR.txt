@@ -1,0 +1,1186 @@
+		- Desde HumanResourceBL
+		
+			public HumanResourceEntity GetHHRR(int hhrrID)
+			{
+				try
+				{
+					HumanResourceAdapter humanResourceAdapter = new HumanResourceAdapter();
+					PersonBL personBL = new PersonBL();
+
+					DataSet ds = _humanResourceDA.GetByID(hhrrID);
+					if ((ds.Tables != null) && (ds.Tables.Contains(SII.HCD.BackOffice.Entities.TableNames.HumanResourceTable)) && (ds.Tables[SII.HCD.BackOffice.Entities.TableNames.HumanResourceTable].Rows.Count > 0))
+					{
+						int personID = SIIConvert.ToInteger(ds.Tables[SII.HCD.BackOffice.Entities.TableNames.HumanResourceTable].Rows[0]["PersonID"].ToString(), 0);
+						//int profileID = SIIConvert.ToInteger(ds.Tables[SII.HCD.Administrative.Entities.TableNames.CustomerTable].Rows[0]["ProfileID"].ToString(), 0);
+
+						DataSet ds2;
+
+						#region Profiles
+						#region Human Resource Profile Rel
+						ds2 = _humanResourceProfileRelDA.GetHHRRProfileRelByHumanResource(hhrrID);
+						if ((ds2 != null) && (ds2.Tables.Contains(SII.HCD.BackOffice.Entities.TableNames.HHRRProfileRelTable)))
+						{
+							DataTable dt = ds2.Tables[SII.HCD.BackOffice.Entities.TableNames.HHRRProfileRelTable].Copy();
+							ds.Tables.Add(dt);
+						}
+						#endregion
+
+						#region Profiles
+						ds2 = _profileDA.GetListProfileByHumanResourceID(hhrrID);
+						if ((ds2 != null) && (ds2.Tables.Contains(SII.HCD.BackOffice.Entities.TableNames.ProfileTable)))
+						{
+							DataTable dt = ds2.Tables[SII.HCD.BackOffice.Entities.TableNames.ProfileTable].Copy();
+							ds.Tables.Add(dt);
+						}
+						ds2 = _participateAsProfileRelDA.GetParticipateAsProfileRelsByHumanResourceID(hhrrID);
+						if ((ds2 != null) && (ds2.Tables.Contains(SII.HCD.BackOffice.Entities.TableNames.ParticipateAsProfileRelTable)))
+						{
+							DataTable dt = ds2.Tables[SII.HCD.BackOffice.Entities.TableNames.ParticipateAsProfileRelTable].Copy();
+							ds.Tables.Add(dt);
+						}
+						ds2 = _participateAsDA.GetParticipatesAsByHumanResourceID(hhrrID);
+						if ((ds2 != null) && (ds2.Tables.Contains(SII.HCD.BackOffice.Entities.TableNames.ParticipateAsTable)))
+						{
+							DataTable dt = ds2.Tables[SII.HCD.BackOffice.Entities.TableNames.ParticipateAsTable].Copy();
+							ds.Tables.Add(dt);
+						}
+						#endregion
+						#endregion
+
+						#region Devices
+						#region ResourceDeviceRel Table
+						ds2 = _resourceDeviceRelDA.GetResourceRelsByHumanResource(hhrrID);
+						if ((ds2 != null) && (ds2.Tables.Contains(SII.HCD.BackOffice.Entities.TableNames.ResourceDeviceRelTable)))
+						{
+							DataTable dt = ds2.Tables[SII.HCD.BackOffice.Entities.TableNames.ResourceDeviceRelTable].Copy();
+							ds.Tables.Add(dt);
+						}
+						#endregion
+
+						#region Devices By ResourceDeviceRel
+						ds2 = _deviceDA.GetByHumanResource(hhrrID);
+						if ((ds2 != null) && (ds2.Tables.Contains(SII.HCD.BackOffice.Entities.TableNames.DeviceTable)))
+						{
+							DataTable dt = ds2.Tables[SII.HCD.BackOffice.Entities.TableNames.DeviceTable].Copy();
+							ds.Tables.Add(dt);
+						}
+						#endregion
+
+						#region Device Types By Human Resource
+						ds2 = _deviceTypeDA.GetListDeviceTypeByHumanResource(hhrrID);
+						if ((ds2 != null) && (ds2.Tables.Contains(SII.HCD.BackOffice.Entities.TableNames.DeviceTypeTable)))
+						{
+							DataTable dt = ds2.Tables[SII.HCD.BackOffice.Entities.TableNames.DeviceTypeTable].Copy();
+							ds.Tables.Add(dt);
+						}
+						#endregion
+						#endregion
+
+						#region Avail Patterns
+						#region HHRR Avail Patterns
+						ds2 = _personAvailPatternDA.GetPersonAvailPattern(personID);
+						if ((ds2 != null) && (ds2.Tables.Contains(SII.HCD.BackOffice.Entities.TableNames.PersonAvailPatternTable)))
+						{
+							DataTable dt = ds2.Tables[SII.HCD.BackOffice.Entities.TableNames.PersonAvailPatternTable].Copy();
+							ds.Tables.Add(dt);
+						}
+						#endregion
+
+						#region AvailPatterns
+						ds2 = _availPatternDA.GetAvailPatternsByPerson(personID);
+						if ((ds2 != null) && (ds2.Tables.Contains(SII.HCD.BackOffice.Entities.TableNames.AvailPatternTable)))
+						{
+							DataTable dt = ds2.Tables[SII.HCD.BackOffice.Entities.TableNames.AvailPatternTable].Copy();
+							ds.Tables.Add(dt);
+						}
+						#endregion
+
+						#region TimePatterns
+						ds2 = _timePatternDA.GetAvailabilityBaseByPerson(personID);
+						if ((ds2 != null) && (ds2.Tables.Contains(SII.HCD.BackOffice.Entities.TableNames.AvailabilityTable)))
+						{
+							DataTable dt = ds2.Tables[SII.HCD.BackOffice.Entities.TableNames.AvailabilityTable].Copy();
+							ds.Tables.Add(dt);
+						}
+						#endregion
+						#endregion
+
+						#region Care centers access
+						ds2 = _personCareCenterAccessDA.GetListPersonCareCenterAccessByPersonID(personID);
+						if ((ds2 != null) && (ds2.Tables.Contains(SII.HCD.BackOffice.Entities.TableNames.PersonCareCenterAccessTable)))
+						{
+							DataTable dt = ds2.Tables[SII.HCD.BackOffice.Entities.TableNames.PersonCareCenterAccessTable].Copy();
+							ds.Tables.Add(dt);
+						}
+						#endregion
+
+						#region Person
+						if (personID <= 0)
+						{
+							throw new Exception(Properties.Resources.ERROR_HumanResourcePersonNotFound);
+						}
+						SII.HCD.BackOffice.Entities.PersonEntity myPerson = personBL.GetPerson(personID);
+						#endregion
+
+						HumanResourceEntity result = humanResourceAdapter.GetInfo(ds.Tables[SII.HCD.BackOffice.Entities.TableNames.HumanResourceTable].Rows[0], ds);
+						result.Person = myPerson;
+						LOPDLogger.Write(EntityNames.HumanResourceEntityName, hhrrID, ActionType.View);
+						return result;
+					}
+					else
+						return null;
+				}
+				catch (Exception ex)
+				{
+					if (ExceptionPolicy.HandleException(ex, ExceptionPolicies.Service)) throw;
+					return null;
+				}
+
+			}
+
+			
+PersonBL.cs
+
+
+        #region DA definition
+        private PersonDA _personDA;
+
+			private PersonIdentifierRelDA _personIdentifierRelDA;
+			private IdentifierTypeDA _identifierTypeDA;
+
+			private PersonTelephoneRelDA _personTelephoneRelDA;
+			private TelephoneDA _telephoneDA;
+
+			private PersonCatRelDA _personCatRelDA;
+			private CategoryDA _categoryDA;
+
+			private SensitiveDataDA _sensitiveDataDA;
+			private AddressDA _addressDA;
+
+			private DuplicateGroupDA _duplicateGroupDA;
+
+			private DBImageStorageDA _dbImageStorageDA;
+			
+       #endregion			
+       public PersonEntity GetPerson(int personID)
+        {
+            try
+            {
+                int imageID = 0;
+
+
+                #region Person
+                DataSet ds = _personDA.GetPerson(personID);
+                #endregion
+
+                if ((ds.Tables != null) && (ds.Tables.Contains(SII.HCD.BackOffice.Entities.TableNames.PersonTable)) && (ds.Tables[SII.HCD.BackOffice.Entities.TableNames.PersonTable].Rows.Count > 0))
+                {
+                    #region Person Telephones
+                    DataSet ds2 = _personTelephoneRelDA.GetPersonTelephone(personID);
+                    if ((ds2 != null) && (ds2.Tables.Contains(SII.HCD.BackOffice.Entities.TableNames.PersonTelephoneTable)))
+                    {
+                        DataTable dt = ds2.Tables[SII.HCD.BackOffice.Entities.TableNames.PersonTelephoneTable].Copy();
+                        ds.Tables.Add(dt);
+                    }
+
+                    ds2 = _telephoneDA.GetTelephoneFromPerson(personID);
+                    if ((ds2 != null) && (ds2.Tables.Contains(SII.HCD.BackOffice.Entities.TableNames.TelephoneTable)))
+                    {
+                        DataTable dt = ds2.Tables[SII.HCD.BackOffice.Entities.TableNames.TelephoneTable].Copy();
+                        ds.Tables.Add(dt);
+                    }
+                    #endregion
+
+                    #region Address1
+                    int address1 = ds.Tables[SII.HCD.BackOffice.Entities.TableNames.PersonTable].Rows[0]["AddressID"] as int? ?? 0;
+                    if (address1 > 0)
+                    {
+                        ds2 = _addressDA.GetAddress(address1);
+                        if ((ds2 != null) && (ds2.Tables.Contains(SII.HCD.BackOffice.Entities.TableNames.AddressTable)))
+                        {
+                            DataTable dt = ds2.Tables[SII.HCD.BackOffice.Entities.TableNames.AddressTable].Copy();
+                            dt.TableName = SII.HCD.BackOffice.Entities.TableNames.AddressTable;
+                            ds.Tables.Add(dt);
+                        }
+                    }
+                    #endregion
+
+                    #region Address2
+                    int address2 = ds.Tables[SII.HCD.BackOffice.Entities.TableNames.PersonTable].Rows[0]["Address2ID"] as int? ?? 0;
+                    if (address2 > 0)
+                    {
+                        ds2 = _addressDA.GetAddress(address2);
+                        if ((ds2 != null) && (ds2.Tables.Contains(SII.HCD.BackOffice.Entities.TableNames.AddressTable)))
+                        {
+                            DataTable dt = ds2.Tables[SII.HCD.BackOffice.Entities.TableNames.AddressTable].Copy();
+                            dt.TableName = SII.HCD.BackOffice.Entities.TableNames.Address2Table;
+                            ds.Tables.Add(dt);
+                        }
+                    }
+                    #endregion
+
+                    #region Categories
+                    ds2 = _personCatRelDA.GetPersonCategory(personID);
+                    if ((ds2 != null) && (ds2.Tables.Contains(SII.HCD.BackOffice.Entities.TableNames.PersonCategoryTable)))
+                    {
+                        DataTable dt = ds2.Tables[SII.HCD.BackOffice.Entities.TableNames.PersonCategoryTable].Copy();
+                        dt.TableName = SII.HCD.BackOffice.Entities.TableNames.PersonCategoryTable;
+                        ds.Tables.Add(dt);
+                    }
+                    ds2 = _categoryDA.GetCategoryFromPerson(personID);
+                    if ((ds2 != null) && (ds2.Tables.Contains(SII.HCD.BackOffice.Entities.TableNames.CategoryTable)))
+                    {
+                        DataTable dt = ds2.Tables[SII.HCD.BackOffice.Entities.TableNames.CategoryTable].Copy();
+                        dt.TableName = SII.HCD.BackOffice.Entities.TableNames.CategoryTable;
+                        ds.Tables.Add(dt);
+                    }
+                    #endregion
+
+                    #region SensitiveData
+                    ds2 = _sensitiveDataDA.GetSensitiveDataFromPerson(personID);
+                    if ((ds2 != null) && (ds2.Tables.Contains(SII.HCD.BackOffice.Entities.TableNames.SensitiveDataTable)))
+                    {
+                        DataTable dt = ds2.Tables[SII.HCD.BackOffice.Entities.TableNames.SensitiveDataTable].Copy();
+                        dt.TableName = SII.HCD.BackOffice.Entities.TableNames.SensitiveDataTable;
+                        ds.Tables.Add(dt);
+                    }
+                    #endregion
+
+                    #region Identifiers
+                    ds2 = _personIdentifierRelDA.GetPersonIdentifier(personID);
+                    if ((ds2 != null) && (ds2.Tables.Contains(SII.HCD.BackOffice.Entities.TableNames.IdentifierTable)))
+                    {
+                        DataTable dt = ds2.Tables[SII.HCD.BackOffice.Entities.TableNames.IdentifierTable].Copy();
+                        dt.TableName = SII.HCD.BackOffice.Entities.TableNames.PersonIdentifierRelTable;
+                        ds.Tables.Add(dt);
+                    }
+                    ds2 = _identifierTypeDA.GetIdentifierFromPerson(personID);
+                    if ((ds2 != null) && (ds2.Tables.Contains(SII.HCD.BackOffice.Entities.TableNames.IdentifierTypeTable)))
+                    {
+                        DataTable dt = ds2.Tables[SII.HCD.BackOffice.Entities.TableNames.IdentifierTypeTable].Copy();
+                        dt.TableName = SII.HCD.BackOffice.Entities.TableNames.IdentifierTypeTable;
+                        ds.Tables.Add(dt);
+                    }
+                    #endregion
+
+
+                    PersonAdvancedAdapter personAdapter = new PersonAdvancedAdapter();
+                    PersonEntity result = personAdapter.GetByID(personID, ds);
+
+                    imageID = ds.Tables[SII.HCD.BackOffice.Entities.TableNames.PersonTable].Rows[0]["ImageID"] as int? ?? 0;
+                    if (imageID > 0)
+                    {
+                        result.ImageData = _dbImageStorageDA.Get(imageID);
+                    }
+
+                    LOPDLogger.Write(EntityNames.PersonEntityName, personID, ActionType.View);
+                    return result;
+                }
+                else return null;
+            }
+            catch (Exception ex)
+            {
+                if (ExceptionPolicy.HandleException(ex, ExceptionPolicies.Service)) throw;
+                return null;
+            }
+        }			
+			
+			
+			Resumen
+			-------
+		1)	DataSet ds = _humanResourceDA.GetByID(hhrrID);
+			if ((ds.Tables != null) && (ds.Tables.Contains(SII.HCD.BackOffice.Entities.TableNames.HumanResourceTable)) && (ds.Tables[SII.HCD.BackOffice.Entities.TableNames.HumanResourceTable].Rows.Count > 0))
+				#region Profiles
+		2)		ds2 = _humanResourceProfileRelDA.GetHHRRProfileRelByHumanResource(hhrrID);
+		3)		ds2 = _profileDA.GetListProfileByHumanResourceID(hhrrID);
+		4)		ds2 = _participateAsProfileRelDA.GetParticipateAsProfileRelsByHumanResourceID(hhrrID);
+		5)		ds2 = _participateAsDA.GetParticipatesAsByHumanResourceID(hhrrID);
+				#region Devices
+		6)		ds2 = _resourceDeviceRelDA.GetResourceRelsByHumanResource(hhrrID);
+				#region Devices By ResourceDeviceRel
+		7)		ds2 = _deviceDA.GetByHumanResource(hhrrID);
+				#region Device Types By Human Resource
+		8)		ds2 = _deviceTypeDA.GetListDeviceTypeByHumanResource(hhrrID);	
+				#region Avail Patterns
+		9)		ds2 = _personAvailPatternDA.GetPersonAvailPattern(personID);
+				#region AvailPatterns
+		10)		ds2 = _availPatternDA.GetAvailPatternsByPerson(personID);
+				#region TimePatterns
+		11)		ds2 = _timePatternDA.GetAvailabilityBaseByPerson(personID);			
+				#region Care centers access
+		12)		ds2 = _personCareCenterAccessDA.GetListPersonCareCenterAccessByPersonID(personID);			
+			
+		13)		#region Person
+	
+				SII.HCD.BackOffice.Entities.PersonEntity myPerson = personBL.GetPerson(personID);
+
+				
+		1)		DataSet ds = _personDA.GetPerson(personID);
+				
+				#region Person Telephones
+		
+		2)		DataSet ds2 = _personTelephoneRelDA.GetPersonTelephone(personID);				
+		
+		3)		ds2 = _telephoneDA.GetTelephoneFromPerson(personID);
+				
+				#region Address1
+				int address1 = ds.Tables[SII.HCD.BackOffice.Entities.TableNames.PersonTable].Rows[0]["AddressID"] as int? ?? 0;
+				if (address1 > 0)
+				{
+		4)			ds2 = _addressDA.GetAddress(address1);
+
+				#region Address2
+				int address2 = ds.Tables[SII.HCD.BackOffice.Entities.TableNames.PersonTable].Rows[0]["Address2ID"] as int? ?? 0;
+				if (address2 > 0)
+				{
+		5)			ds2 = _addressDA.GetAddress(address2);
+
+				#region Categories
+		6)		ds2 = _personCatRelDA.GetPersonCategory(personID);					
+
+		7)		ds2 = _categoryDA.GetCategoryFromPerson(personID);				
+					
+				#region SensitiveData
+		8)		ds2 = _sensitiveDataDA.GetSensitiveDataFromPerson(personID);
+
+				#region Identifiers
+		9)		ds2 = _personIdentifierRelDA.GetPersonIdentifier(personID);
+				
+		10)		ds2 = _identifierTypeDA.GetIdentifierFromPerson(personID);				
+					
+				HumanResourceEntity result = humanResourceAdapter.GetInfo(ds.Tables[SII.HCD.BackOffice.Entities.TableNames.HumanResourceTable].Rows[0], ds);
+				result.Person = myPerson;
+					
+					
+					
+					
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+					
+		- ds = HumanResourceDA.cs
+
+			public DataSet GetByID(int id)
+			{
+				try
+				{
+					return this.Gateway.ExecuteQueryDataSet(SQLProvider.GetHumanResourceByID,
+						TableNames.HumanResourceTable,
+						new StoredProcInParam("ID", DbType.Int32, id));
+				}
+				catch (Exception ex)
+				{
+					if (ExceptionPolicy.HandleException(ex, ExceptionPolicies.DataAccess)) throw;
+					else return null;
+				}
+			}        
+		
+			- HumanResourceQuery.cs
+			
+				public static string GetHumanResourceByID
+				{
+					get
+					{
+1)						return "SELECT	[ID], PersonID, FileNumber, HasAvailability, AdmitNotification, IncludingEmail, LastUpdated, ModifiedBy, " + Environment.NewLine +
+							   "		CAST(DBTimeStamp AS BIGINT) AS DBTimeStamp" + Environment.NewLine +
+							   "FROM	HumanResource" + Environment.NewLine +
+							   "WHERE	[ID] = @ID";
+					}
+				}
+			
+		- ds = HumanResourceProfileRelDA.cs	
+			
+			public DataSet GetHHRRProfileRelByHumanResource(int hhrrID)
+			{
+				try
+				{
+					return this.Gateway.ExecuteQueryDataSet(SQLProvider.GetHHRRProfileRelByHumanResourceCommand, TableNames.HHRRProfileRelTable,
+						new StoredProcInParam("HumanResourceID", DbType.Int32, hhrrID));
+				}
+				catch (Exception ex)
+				{
+					if (ExceptionPolicy.HandleException(ex, ExceptionPolicies.DataAccess)) throw;
+					else return null;
+				}
+			}			
+				
+			- HumanResourceProfileRelQuery.cs
+			
+				public static string GetHHRRProfileRelByHumanResourceCommand
+				{
+					get
+					{
+2)						return "SELECT [ID], HumanResourceID, ProfileID, DefaultProfile, [Status], LastUpdated, ModifiedBy, CAST(DBTimeStamp as bigint) DBTimeStamp" + Environment.NewLine +
+							   "FROM HHRRProfileRel" + Environment.NewLine +
+							   "WHERE HumanResourceID=@HumanResourceID";
+					}
+				}
+		- ds = profileDA.cs
+		
+				public DataSet GetListProfileByHumanResourceID(int hhrrID)
+				{
+					try
+					{
+						return this.Gateway.ExecuteQueryDataSet(SQLProvider.GetProfilesByHumanResourceIDCommand, TableNames.ProfileTable,
+							new StoredProcInParam("HumanResourceID", DbType.Int32, hhrrID));
+					}
+					catch (Exception ex)
+					{
+						if (ExceptionPolicy.HandleException(ex, ExceptionPolicies.DataAccess)) throw;
+						else return null;
+					}
+				}		
+
+			- ProfileQuery.cs
+			
+				public static String GetProfilesByHumanResourceIDCommand
+				{
+					get
+					{
+3)						return "SELECT P.[ID], P.[Code], P.[Name], P.[CategoryID], C.[Name] CategoryName, P.[Status], P.LastUpdated, P.ModifiedBy, CAST(P.DBTimeStamp as bigint) DBTimeStamp" + Environment.NewLine +
+							   "FROM [Profile] P JOIN HHRRProfileRel PR ON P.[ID]=PR.ProfileID" + Environment.NewLine +
+							   "LEFT JOIN [Category] C ON P.CategoryID=C.[ID]" + Environment.NewLine +
+							   "WHERE PR.HumanResourceID=@HumanResourceID";
+					}
+				}				
+				
+		- ds = participateAsProfileRelDA
+
+				public DataSet GetParticipateAsProfileRelsByHumanResourceID(int hhrrID)
+				{
+					try
+					{
+						return this.Gateway.ExecuteQueryDataSet(SQLProvider.GetParticipateAsProfileRelsByHumanResourceIDCommand, TableNames.ParticipateAsProfileRelTable,
+							new StoredProcInParam("HumanResourceID", DbType.Int32, hhrrID));
+					}
+					catch (Exception ex)
+					{
+						if (ExceptionPolicy.HandleException(ex, ExceptionPolicies.DataAccess)) throw;
+						else return null;
+					}
+				}		
+				
+			- participateAsProfileRelQuery.cs
+			
+				public static String GetParticipateAsProfileRelsByHumanResourceIDCommand
+				{
+					get
+					{
+4)					return "SELECT PAPR.[ID], PAPR.ParticipateAsID, PAPR.ProfileID," + Environment.NewLine +
+							   "PAPR.LastUpdated, PAPR.ModifiedBy, CAST(PAPR.DBTimeStamp as bigint) as DBTimeStamp" + Environment.NewLine +
+							   "FROM ParticipateAsProfileRel PAPR JOIN [Profile] P ON PAPR.[ProfileID]=P.[ID]" + Environment.NewLine +
+							   "JOIN HHRRProfileRel PR ON P.[ID]=PR.ProfileID" + Environment.NewLine +
+							   "WHERE PR.HumanResourceID=@HumanResourceID";
+					}
+				}	
+
+		- ds = participateAsDA.cs
+		
+				public DataSet GetParticipatesAsByHumanResourceID(int hhrrID)
+				{
+					try
+					{
+						return this.Gateway.ExecuteQueryDataSet(SQLProvider.GetParticipatesAsByHumanResourceIDCommand, TableNames.ParticipateAsTable,
+							new StoredProcInParam("HumanResourceID", DbType.Int32, hhrrID));
+					}
+					catch (Exception ex)
+					{
+						if (ExceptionPolicy.HandleException(ex, ExceptionPolicies.DataAccess)) throw;
+						else return null;
+					}
+				}		
+
+			- participateAsProfileRelQuery.cs
+				
+				public static String GetParticipatesAsByHumanResourceIDCommand
+				{
+					get
+					{
+5)					return "SELECT DISTINCT PA.[ID], PA.[Code], PA.[Description], PA.InUse, PA.ProviderName," + Environment.NewLine +
+							   "PA.[Status], PA.LastUpdated, PA.ModifiedBy, CAST(PA.DBTimeStamp as bigint) as DBTimeStamp" + Environment.NewLine +
+							   "FROM ParticipateAs PA JOIN ParticipateAsProfileRel PAPR ON PA.[ID]=PAPR.ParticipateAsID" + Environment.NewLine +
+							   "JOIN [Profile] P ON PAPR.[ProfileID]=P.[ID]" + Environment.NewLine +
+							   "JOIN HHRRProfileRel PR ON P.[ID]=PR.ProfileID" + Environment.NewLine +
+							   "WHERE PR.HumanResourceID=@HumanResourceID";
+					}
+				}				
+				
+		- ds = resourceDeviceRelDA.cs
+
+				public DataSet GetResourceRelsByHumanResource(int hhrrID)
+				{
+					try
+					{
+						return this.Gateway.ExecuteQueryDataSet(SQLProvider.GetResourceRelsByHumanResourceCommand, TableNames.ResourceDeviceRelTable,
+							new StoredProcInParam("HumanResourceID", DbType.Int32, hhrrID));
+					}
+					catch (Exception ex)
+					{
+						if (ExceptionPolicy.HandleException(ex, ExceptionPolicies.DataAccess)) throw;
+						else return null;
+					}
+				}		
+
+			- resourceDeviceRelQuery.cs
+			
+				public static string GetResourceRelsByHumanResourceCommand
+				{
+					get
+					{
+6)				return "SELECT [ID], HumanResourceID, DeviceID, ActiveAt, [Status], LastUpdated, ModifiedBy, CAST(DBTimeStamp as bigint) DBTimeStamp" + Environment.NewLine +
+							   "FROM ResourceDeviceRel WHERE HumanResourceID=@HumanResourceID";
+					}
+				}				
+				
+		- ds = deviceDA.cs
+		
+				public DataSet GetByHumanResource(int humanResourceID)
+				{
+					try
+					{
+						return this.Gateway.ExecuteQueryDataSet(SQLProvider.GetDeviceByHumanResourceCommand, TableNames.DeviceTable,
+							new StoredProcInParam("HumanResourceID", DbType.Int32, humanResourceID));
+					}
+					catch (Exception ex)
+					{
+						if (ExceptionPolicy.HandleException(ex, ExceptionPolicies.DataAccess)) throw;
+						else return null;
+					}
+				}		
+
+			- DeviceQuery.cs
+			
+				public static string GetDeviceByHumanResourceCommand
+				{
+					get
+					{
+7)				return "SELECT	D.[ID], D.[Code], D.[Name], D.[Description], D.DeviceTypeID, D.ParentLocationID, D.PlaceAddressID," + Environment.NewLine +
+							   "		D.DeviceIP, D.InstallationDate, D.ActiveAtDate, D.DeactiveFromDate, D.AudioInput, D.AudioOutput," + Environment.NewLine +
+							   "		D.HasAnAssignerActor, D.MaxAudioSize, D.MaxMessageSize, D.MessageInput, D.MessageOutput, D.Model, " + Environment.NewLine +
+							   "        D.Mobile, D.Screen, D.SerialNumber, D.[Status], D.LastUpdated, D.ModifiedBy, " + Environment.NewLine +
+							   "        CAST(D.DBTimeStamp AS BIGINT) AS DBTimeStamp" + Environment.NewLine +
+							   "FROM	Device D" + Environment.NewLine +
+							   "JOIN	ResourceDeviceRel R ON R.DeviceID = D.[ID]" + Environment.NewLine +
+							   "WHERE	R.[HumanResourceID]=@HumanResourceID";
+					}
+				}
+				
+		- ds = DeviceTypeDA.cs				
+		
+				public DataSet GetListDeviceTypeByHumanResource(int hhrrID)
+				{
+					try
+					{
+						return this.Gateway.ExecuteQueryDataSet(SQLProvider.GetDevicesTypeByHumanResourceCommand, TableNames.DeviceTypeTable,
+							new StoredProcInParam("HumanResourceID", DbType.Int32, hhrrID));
+					}
+					catch (Exception ex)
+					{
+						if (ExceptionPolicy.HandleException(ex, ExceptionPolicies.DataAccess)) throw;
+						else return null;
+					}
+				}		
+				
+			- DeviceTypeQuery.cs
+			
+				public static String GetDevicesTypeByHumanResourceCommand
+				{
+					get
+					{
+8)						return "SELECT DT.[ID], DT.[Code], DT.[Name], DT.[AudioInputTypeFormat], DT.[AudioOutputTypeFormat]," + Environment.NewLine +
+								"DT.[Description], DT.[MsgInputTypeFormat], DT.[MsgOutputTypeFormat], DT.[Localizable], DT.[CanReceiveCall]," + Environment.NewLine +
+								"CAST(DT.DBTimeStamp as bigint) DBTimeStamp FROM DeviceType DT" + Environment.NewLine +
+								"JOIN Device D ON DT.[ID]=D.[DeviceTypeID]" + Environment.NewLine +
+								"JOIN ResourceDeviceRel RDR ON D.[ID]=RDR.DeviceID" + Environment.NewLine +
+								"WHERE RDR.HumanResourceID=@HumanResourceID";
+					}
+				}				
+		
+		- ds = personAvailPatternDA.cs				
+
+				public DataSet GetPersonAvailPattern(int personID)
+				{
+					try
+					{
+						return this.Gateway.ExecuteQueryDataSet(SQLProvider.GetPersonAvailPatternCommand, TableNames.PersonAvailPatternTable,
+							new StoredProcInParam("PersonID", DbType.Int32, personID));
+					}
+					catch (Exception ex)
+					{
+						if (ExceptionPolicy.HandleException(ex, ExceptionPolicies.DataAccess)) throw;
+						else return null;
+					}
+				}	
+
+			- personAvailPatternQuery.cs
+			
+				public static string GetPersonAvailPatternCommand
+				{
+					get
+					{
+9)				return "SELECT PAP.[ID], PAP.PersonID, PAP.CareCenterID, O.[Name] CareCenterName, PAP.AvailPatternID, PAP.[Status], PAP.IsDefault, " + Environment.NewLine +
+							   "    PAP.StartAt, PAP.EndingIn, PAP.LastUpdated, PAP.ModifiedBy, CAST(PAP.DBTimeStamp as bigint) DBTimeStamp" + Environment.NewLine +
+							   "FROM PersonAvailPattern PAP JOIN CareCenter CC ON PAP.CareCenterID = CC.[ID] JOIN Organization O ON Cc.OrganizationID = O.[ID]" + Environment.NewLine +
+							   "WHERE (PersonID=@PersonID)";
+					}
+				}			
+				
+				
+		- ds = availPatternDA.cs
+		
+				public DataSet GetAvailPatternsByPerson(int personID)
+				{
+					try
+					{
+						return this.Gateway.ExecuteQueryDataSet(SQLProvider.GetAvailPatternsByPersonIDCommand, TableNames.AvailPatternTable,
+							new StoredProcInParam("PersonID", DbType.Int32, personID));
+					}
+					catch (Exception ex)
+					{
+						if (ExceptionPolicy.HandleException(ex, ExceptionPolicies.DataAccess)) throw;
+						else return null;
+					}
+				}		
+				
+			- availPatternQuery.cs
+			
+				public static String GetAvailPatternsByPersonIDCommand
+				{
+					get
+					{
+10)						return "SELECT AP.[ID], AP.Description, AP.FillPattern, AP.CalendarCellCapacity, AP.OverbookingCapacity," + Environment.NewLine +
+							   "AP.CalendarFractionation, AP.AvailabilityID, AP.StartAt, AP.EndingIn, AP.RepeatPatternEvery," + Environment.NewLine +
+							   "AP.AdditionalInformation, AP.AvailPatternColor, AP.InUse, AP.Status, AP.LastUpdated, AP.ModifiedBy," + Environment.NewLine +
+							   "CAST(AP.DBTimeStamp as bigint) DBTimeStamp" + Environment.NewLine +
+							   "FROM AvailPattern AP JOIN PersonAvailPattern HRAP ON AP.[ID]=HRAP.AvailPatternID" + Environment.NewLine +
+							   "WHERE HRAP.PersonID=@PersonID";
+					}
+				}	
+
+		- ds = timePatternDA.cs			
+
+				public DataSet GetAvailabilityBaseByPerson(int personID)
+				{
+					try
+					{
+						return this.Gateway.ExecuteQueryDataSet(SQLProvider.GetAvailabilityByPersonIDCommand, TableNames.AvailabilityTable,
+							new StoredProcInParam("PersonID", DbType.Int32, personID));
+					}
+					catch (Exception ex)
+					{
+						if (ExceptionPolicy.HandleException(ex, ExceptionPolicies.DataAccess)) throw;
+						else return null;
+					}
+				}	
+
+			- timePatternQuery.cs	
+				
+				public static string GetAvailabilityByPersonIDCommand
+				{
+					get
+					{
+11)						return "SELECT TP.[ID], TP.Meaning, TP.[Description], TP.PatternType, TP.[Status], TP.ModifiedBy, TP.LastUpdated," + Environment.NewLine +
+							   "CAST(TP.DBTimeStamp AS BIGINT) AS DBTimeStamp" + Environment.NewLine +
+							   "FROM TimePattern TP JOIN AvailPattern AP ON TP.[ID]=AP.AvailabilityID" + Environment.NewLine +
+							   "JOIN PersonAvailPattern HHAP ON HHAP.AvailPatternID=AP.[ID]" + Environment.NewLine +
+							   "WHERE HHAP.PersonID=@PersonID";
+					}
+				}
+
+		- ds = personCareCenterAccessDA.cs						
+
+				public DataSet GetListPersonCareCenterAccessByPersonID(int personID)
+				{
+					try
+					{
+						return this.Gateway.ExecuteQueryDataSet(SQLProvider.GetListPersonCareCenterAccessByPersonIDCommand, TableNames.PersonCareCenterAccessTable,
+							new StoredProcInParam("PersonID", DbType.Int32, personID));
+					}
+					catch (Exception ex)
+					{
+						if (ExceptionPolicy.HandleException(ex, ExceptionPolicies.DataAccess)) throw;
+						else return null;
+					}
+				}		
+				
+			- personCareCenterAccessQuery.cs	
+			
+				public static String GetListPersonCareCenterAccessByPersonIDCommand
+				{
+					get
+					{
+12)						return "SELECT PCCA.[ID], PCCA.PersonID, PCCA.CareCenterID, PCCA.Workplace, ORG.[Name] CareCenterName, PCCA.StartAccessDate, PCCA.EndAccessDate, " + Environment.NewLine +
+							   "    ORG.SocialReason CareCenterSocialReason, PCCA.LastUpdated, PCCA.ModifiedBy, CAST(PCCA.DBTimeStamp as bigint) DBTimeStamp " + Environment.NewLine +
+							   "FROM PersonCareCenterAccess PCCA JOIN Person P ON PCCA.PersonID=P.[ID] " + Environment.NewLine +
+							   "    JOIN CareCenter CC ON PCCA.CareCenterID=CC.[ID] JOIN Organization ORG ON CC.OrganizationID=ORG.[ID]" + Environment.NewLine +
+							   "WHERE (PCCA.PersonID=@PersonID)";
+					}
+				}	
+
+public PersonEntity GetPerson(int personID)
+{
+				
+		- DataSet ds = _personDA.GetPerson(personID);
+				
+				public DataSet GetPerson(int personID)
+				{
+					try
+					{
+						return this.Gateway.ExecuteQueryDataSet(SQLProvider.GetPersonCommand, TableNames.PersonTable,
+							new StoredProcInParam("ID", DbType.Int32, personID));
+					}
+					catch (Exception ex)
+					{
+						if (ExceptionPolicy.HandleException(ex, ExceptionPolicies.DataAccess)) throw;
+						else return null;
+					}
+				}			
+
+			- PersonQuery.cs
+
+				public static string GetPersonCommand
+				{
+					get
+					{
+						return "SELECT [ID], FirstName, LastName, LastName2, AsUser, EmailAddress, ImageID, RegistrationDate, AddressID, Address2ID," + Environment.NewLine +
+							   "DuplicateGroupID, RecordMerged, HasMergedRegisters, " + Environment.NewLine +
+							   "LastUpdated, Status, ModifiedBy, CAST(DBTimeStamp as bigint) DBTimeStamp" + Environment.NewLine +
+							   "FROM Person WITH(NOLOCK) WHERE [ID]=@ID";
+					}
+				}		
+			
+		- ds2 = _personTelephoneRelDA.GetPersonTelephone(personID);
+		
+				public DataSet GetPersonTelephone(int personID)
+				{
+					try
+					{
+						return this.Gateway.ExecuteQueryDataSet(SQLProvider.GetPersonTelephoneCommand, TableNames.PersonTelephoneTable,
+							 new StoredProcInParam("@PersonID", DbType.Int32, personID));
+					}
+					catch (Exception ex)
+					{
+						if (ExceptionPolicy.HandleException(ex, ExceptionPolicies.DataAccess)) throw;
+						else return null;
+					}
+				}
+			
+			- personTelephoneRelQuery.cs
+			
+				public static String GetPersonTelephoneCommand
+				{
+					get
+					{
+						return "SELECT [ID], PersonID, TelephoneID, ModifiedBy, LastUpdated, CAST(DBTimeStamp as bigint) DBTimeStamp" + Environment.NewLine +
+							   "FROM PersonTelephoneRel WHERE PersonID=@PersonID";
+					}
+				}			
+				
+		ds2 = _telephoneDA.GetTelephoneFromPerson(personID);				
+		
+				public DataSet GetTelephoneFromPerson(int personID)
+				{
+					try
+					{
+						return this.Gateway.ExecuteQueryDataSet(SQLProvider.GetTelephoneFromPersonCommand, TableNames.TelephoneTable,
+							 new StoredProcInParam("PersonID", DbType.Int32, personID));
+					}
+					catch (Exception ex)
+					{
+						if (ExceptionPolicy.HandleException(ex, ExceptionPolicies.DataAccess)) throw;
+						else return null;
+					}
+				}	
+
+			- TelephoneQuery.cs	
+				
+				public static String GetTelephoneFromPersonCommand
+				{
+					get
+					{
+						return "SELECT T.[ID], T.Telephone, T.Comments, T.TelephoneType, T.EmergencyContactPhone, T.ModifiedBy, T.LastUpdated, CAST(T.DBTimeStamp as bigint) DBTimeStamp" + Environment.NewLine +
+							   "FROM Telephone T JOIN PersonTelephoneRel P ON T.[ID]=P.TelephoneID WHERE P.PersonID=@PersonID";
+					}
+				}	
+
+		ds2 = _addressDA.GetAddress(address1);	
+
+				public DataSet GetAddress(int id)
+				{
+					try
+					{
+						return this.Gateway.ExecuteQueryDataSet(SQLProvider.GetAddressCommand, TableNames.AddressTable,
+							 new StoredProcInParam("@ID", DbType.Int32, id));
+					}
+					catch (Exception ex)
+					{
+						if (ExceptionPolicy.HandleException(ex, ExceptionPolicies.DataAccess)) throw;
+						else return null;
+					}
+				}		
+				
+			- AddressQuery.cs		
+				
+				public static String GetAddressCommand
+				{
+					get
+					{
+						return "SELECT [ID], Address1, Address2, AddressType, City, Country, Province, State, ZipCode, LastUpdated, ModifiedBy, CAST(DBTimeStamp as bigint) DBTimeStamp" + Environment.NewLine +
+							   "FROM [Address] WHERE [ID]=@ID";
+					}
+				}		
+
+
+		ds2 = _addressDA.GetAddress(address2);		
+
+				(IGUAL QUE EL DE ARRIBA PERO CON OTRA DIRECCION. ES DECIR, EN VEZ DE address1 address2)
+
+		ds2 = _personCatRelDA.GetPersonCategory(personID);
+
+				public DataSet GetPersonCategory(int personID)
+				{
+					try
+					{
+						return this.Gateway.ExecuteQueryDataSet(SQLProvider.GetPersonCategoryCommand, TableNames.PersonCategoryTable,
+							 new StoredProcInParam("@PersonID", DbType.Int32, personID));
+					}
+					catch (Exception ex)
+					{
+						if (ExceptionPolicy.HandleException(ex, ExceptionPolicies.DataAccess)) throw;
+						else return null;
+					}
+				}
+				
+			- personCatRelQuery.cs
+		
+				public static String GetPersonCategoryCommand
+				{
+					get
+					{
+						return "SELECT [ID], PersonID, CategoryID, ModifiedBy, LastUpdated, CAST(DBTimeStamp as bigint) DBTimeStamp" + Environment.NewLine +
+							   "FROM PersonCatRel WHERE PersonID=@PersonID";
+					}
+				}	
+				
+		ds2 = _categoryDA.GetCategoryFromPerson(personID);
+		
+				public DataSet GetCategoryFromPerson(int personID)
+				{
+					try
+					{
+						return this.Gateway.ExecuteQueryDataSet(SQLProvider.GetCategoryFromPersonCommand, TableNames.CategoryTable,
+							 new StoredProcInParam("@PersonID", DbType.Int32, personID));
+					}
+					catch (Exception ex)
+					{
+						if (ExceptionPolicy.HandleException(ex, ExceptionPolicies.DataAccess)) throw;
+						else return null;
+					}
+				}	
+				
+			- categoryQuery.cs	
+
+				public static String GetCategoryFromPersonCommand
+				{
+					get
+					{
+						return "SELECT C.[ID], C.CategoryKey, C.[Name], C.[Type], C.ModifiedBy, C.LastUpdated, CAST(C.DBTimeStamp as bigint) DBTimeStamp" + Environment.NewLine +
+							   "FROM Category C JOIN PersonCatRel P ON C.[ID]=P.CategoryID WHERE P.PersonID=@PersonID";
+					}
+				}				
+		ds2 = _sensitiveDataDA.GetSensitiveDataFromPerson(personID);
+
+				public DataSet GetSensitiveDataFromPerson(int personID)
+				{
+					try
+					{
+						return this.Gateway.ExecuteQueryDataSet(SQLProvider.GetSensitiveDataFromPersonCommand,
+							TableNames.SensitiveDataTable,
+							new StoredProcInParam("PersonID", DbType.Int32, personID));
+					}
+					catch (Exception ex)
+					{
+						if (ExceptionPolicy.HandleException(ex, ExceptionPolicies.DataAccess)) throw;
+						else return null;
+					}
+				}	
+				
+			- sensitiveDataQuery.cs		
+
+				public static String GetSensitiveDataFromPersonCommand
+				{
+					get
+					{
+						return "SELECT SD.[ID], SD.PersonID, SD.BirthDate, SD.Sex, SD.ReligiousPreference, SD.[Language], SD.EducationLevel, SD.MaritalStatus, " + Environment.NewLine +
+							   "    SD.BirthPlace, SD.Citizenship, SD.CitizenshipComments, " + Environment.NewLine +
+							   "    SD.DeathDateTime, SD.DeathReason, " + Environment.NewLine +
+							   "    SD.LastUpdated, SD.ModifiedBy, CAST(SD.DBTimeStamp as bigint) DBTimeStamp " + Environment.NewLine +
+							   "FROM SensitiveData SD " + Environment.NewLine +
+							   "WHERE (SD.PersonID=@PersonID)";
+					}
+				}	
+				
+		ds2 = _personIdentifierRelDA.GetPersonIdentifier(personID);
+
+				public DataSet GetPersonIdentifier(int personID)
+				{
+					try
+					{
+						return this.Gateway.ExecuteQueryDataSet(SQLProvider.GetPersonIdentifierCommand, TableNames.IdentifierTable,
+							 new StoredProcInParam("@PersonID", DbType.Int32, personID));
+					}
+					catch (Exception ex)
+					{
+						if (ExceptionPolicy.HandleException(ex, ExceptionPolicies.DataAccess)) throw;
+						else return null;
+					}
+				}
+
+			- personIdentifierRelQuery.cs			
+				
+				public static String GetPersonIdentifierCommand
+				{
+					get
+					{
+						return "SELECT [ID], PersonID, IdentifierTypeID, IDNumber, ModifiedBy, LastUpdated, CAST(DBTimeStamp as bigint) DBTimeStamp" + Environment.NewLine +
+							   "FROM PersonIdentifierRel WHERE PersonID=@PersonID";
+					}
+				}
+		
+		ds2 = _identifierTypeDA.GetIdentifierFromPerson(personID);
+		
+				public DataSet GetIdentifierFromPerson(int personID)
+				{
+					try
+					{
+						return this.Gateway.ExecuteQueryDataSet(SQLProvider.GetIdentifierFromPersonCommand, TableNames.IdentifierTypeTable,
+							 new StoredProcInParam("@PersonID", DbType.Int32, personID));
+					}
+					catch (Exception ex)
+					{
+						if (ExceptionPolicy.HandleException(ex, ExceptionPolicies.DataAccess)) throw;
+						else return null;
+					}
+				}		
+				
+			- identifierTypeQuery.cs	
+				
+				public static String GetIdentifierFromPersonCommand
+				{
+					get
+					{
+						return "SELECT I.[ID], I.[Name], I.[Description], I.[Type], I.[Status], I.[RequiredValidation], I.[ValidationClass], I.[ValidationMask], I.[ModifiedBy], I.[LastUpdated], CAST(I.[DBTimeStamp] as bigint) DBTimeStamp" + Environment.NewLine +
+							   "FROM IdentifierType I JOIN PersonIdentifierRel P ON I.[ID]=P.IdentifierTypeID WHERE P.PersonID=@PersonID";
+					}
+				}		
+		
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+PersonBL.cs
+
+        #region DA definition
+        private PersonDA _personDA;
+
+			private PersonIdentifierRelDA _personIdentifierRelDA;
+			private IdentifierTypeDA _identifierTypeDA;
+
+			private PersonTelephoneRelDA _personTelephoneRelDA;
+			private TelephoneDA _telephoneDA;
+
+			private PersonCatRelDA _personCatRelDA;
+			private CategoryDA _categoryDA;
+
+			private SensitiveDataDA _sensitiveDataDA;
+			private AddressDA _addressDA;
+
+			private DuplicateGroupDA _duplicateGroupDA;
+
+			private DBImageStorageDA _dbImageStorageDA;
+        #endregion
+
+		
+namespace SII.HCD.BackOffice.Entities
+{
+    [DataContract()]
+    [Serializable()]
+    public class PersonEntity : PersonBaseEntity, ICloneable
+    {
+        #region Properties
+        [DataMember()]
+        public AddressEntity Address { get; set; }
+        [DataMember()]
+        public AddressEntity Address2 { get; set; }
+        [DataMember()]
+        //[RegexValidator(@"^(([a-zA-Z][\w\.-]*[a-zA-Z0-9]@[a-zA-Z0-9][\w\.-]*[a-zA-Z0-9]\.[a-zA-Z][a-zA-Z\.]*[a-zA-Z])?)$")]
+        [StringLengthValidator(0, 250)]
+        public string EmailAddress { get; set; }
+        [DataMember()]
+        public PersonCategoryEntity[] Categories { get; set; }
+        [DataMember()]
+        public PersonIdentifierEntity[] Identifiers { get; set; }
+        [DataMember()]
+        public PersonTelephoneEntity[] Telephones { get; set; }
+        [DataMember()]
+        public int ImageID { get; set; }
+
+        [DataMember()]
+        public int DuplicateGroupID { get; set; }
+        [DataMember()]
+        public int RecordMerged { get; set; }
+        [DataMember()]
+        public string RecordMergedNames { get; set; }
+        [DataMember()]
+        public bool HasMergedRegisters { get; set; }
+        [DataMember()]
+        public string MergedRegisterNames { get; set; }
+
+        [DataMember()]
+        public byte[] ImageData { get; set; }
+
+        [DataMember()]
+        public bool AsUser { get; set; }
+        [DataMember()]
+        public string UserName { get; set; }
+
+        [DataMember()]
+        public SensitiveDataEntity SensitiveData { get; set; }
+        [DataMember()]
+        public DateTime RegistrationDate { get; set; }
+
+        /// <summary>
+        /// Estos atributos se utilizarán sólo y exclusivamente cuando se requiera disponer de múltiples nombres o alisar para esconder la información de un paciente
+        /// </summary>
+        public PersonAliasEntity[] PersonAliases { get; set; }
+        public ExtendedNameEntity ExtendedName { get; set; }
+
+        [XmlIgnore]
+        public bool HasDuplicate { get { return DuplicateGroupID > 0; } }
+
+        [XmlIgnore]
+        public string FullExtendedName
+        {
+            get
+            {
+                return (ExtendedName != null)
+                    ? CommonEntities.DescriptionBuilder.PersonBuildName(ExtendedName.Prefix, FirstName, LastName, ExtendedName.Patronymic, ExtendedName.Suffix)
+                    : CommonEntities.DescriptionBuilder.PersonBuildName(FirstName, LastName, LastName2);
+            }
+        }
+
+        [XmlIgnore]
+        public Image Image
+        {
+            get
+            {
+                if ((ImageData == null) || (ImageData.Length == 0))
+                    return null;
+
+                MemoryStream ms = new MemoryStream(ImageData, 0, ImageData.Length);
+                ms.Write(ImageData, 0, ImageData.Length);
+                return System.Drawing.Image.FromStream(ms, true);
+            }
+        }
+        #endregion
+
+        #region Constructors
+        public PersonEntity()
+            : this(0, String.Empty, String.Empty, String.Empty, CommonEntities.StatusEnum.Active, 0, null, null,
+                String.Empty, null, null, null, 0, 0, 0, false,
+                false, string.Empty, null, DateTime.MinValue) { }
+
+        public PersonEntity(int id, string firstName, string lastName, string lastName2, CommonEntities.StatusEnum status,
+            Int64 dbTimeStamp, AddressEntity address, AddressEntity address2, String emailAddress,
+            PersonCategoryEntity[] categories, PersonIdentifierEntity[] identifiers, PersonTelephoneEntity[] telephones,
+            int imageID, int duplicateGroupID, int recordMerged, bool hasMergedRegisters,
+
+
+            bool asUser, string userName, SensitiveDataEntity sensitiveData,
+            DateTime registrationDate)
+            : base(id, firstName, lastName, lastName2, status, dbTimeStamp)
+        {
+            Address = address;
+            Address2 = address2;
+            EmailAddress = emailAddress;
+            Categories = categories;
+            Identifiers = identifiers;
+            Telephones = telephones;
+            ImageID = imageID;
+            DuplicateGroupID = duplicateGroupID;
+            RecordMerged = recordMerged;
+            HasMergedRegisters = hasMergedRegisters;
+            AsUser = asUser;
+            UserName = userName;
+            SensitiveData = sensitiveData;
+            RegistrationDate = registrationDate;
+        }
+        #endregion
+
+        #region ICloneable Members
+        public override object Clone()
+        {
+            object clonedObject = null;
+            MemoryStream ms = new MemoryStream();
+            try
+            {
+                BinaryFormatter bf = new BinaryFormatter();
+
+                bf.Serialize(ms, this);
+                ms.Seek(0, SeekOrigin.Begin);
+                clonedObject = bf.Deserialize(ms);
+            }
+            finally
+            {
+                ms.Close();
+            }
+            return clonedObject;
+        }
+        #endregion
+
+        #region Public methods
+        public void LoadImage(Image imageToConvert, ImageFormat formatOfImage)
+        {
+            using (MemoryStream ms = new MemoryStream())
+            {
+                imageToConvert.Save(ms, formatOfImage);
+
+                ImageData = ms.ToArray();
+                ImageID = 0;
+            }
+        }
+
+        public void ClearImage()
+        {
+            ImageData = null;
+            ImageID = 0;
+        }
+
+        public string GetDefaultTelephoneNumber()
+        {
+            if (Telephones != null)
+            {
+                return Telephones
+                    .Where(tel => tel.Telephone != null)
+                    .Select(tel => tel.Telephone.Telephone)
+                    .FirstOrDefault();
+            }
+            return string.Empty;
+        }
+        #endregion
+    }
+
+    [DataContract()]
+    public enum PersonFindTypeEnum
+    {
+        [EnumMember]
+        Person = 0,
+        [EnumMember]
+        Customer = 1,
+        [EnumMember]
+        HHRR = 2,
+        [EnumMember]
+        NOK = 3,
+        [EnumMember]
+        ContactPerson = 4,
+        [EnumMember]
+        Physician = 5,
+        //[EnumMember]
+        //RequestingPhysician = 6
+    }
+}		

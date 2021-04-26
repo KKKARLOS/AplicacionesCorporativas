@@ -1,0 +1,137 @@
+﻿.panel-body {
+    padding: 4px 15px !important;
+}
+
+.row {
+    padding: 2px;
+}
+
+.header {
+    border: 1px solid #dfdfdf;
+    border-top: none;
+    background-color: rgb(80,132,159);
+    color: #FFF;
+}
+
+.grisFuente {
+    color: #666;
+}
+
+
+/*TODO Hacer genérico para poder usar la fuente tipo firma en todo el proyecto*/
+
+
+
+
+#txtEvaluado {
+    font-family: Scriptina;
+    font-size: 40px;
+}
+
+#txtEvaluador {
+    font-family: FeliX;
+    font-size: 60px;
+}
+
+
+
+/*QUITAR RESPONSIVE*/
+.container {
+    width: 970px !important;
+    position: relative;
+}
+
+#divProyecto {
+    margin-top: 8px;
+    border: 5px solid #fff;
+    padding: 10px;
+    display: none;
+}
+
+.input-group.date {
+    width: 140px !important;
+}
+
+.input-group-date span {
+    padding-top: 0px;
+}
+
+.input-group.date .input-group-addon i {
+    margin-top: -4px;
+}
+
+.form-control {
+    padding: 3px 12px !important;
+    height: 28px !important;
+}
+
+#lblProyecto {
+    display: inline-block;
+    margin-top: 4px;
+}
+
+#pieFormulario {
+    background-color: #f2f2f2;
+    width: 100% !important;
+    position: fixed;
+    z-index: 1002;
+    bottom: 0;
+}
+
+.panel-body {
+    padding: 1px 15px !important;
+}
+
+
+/*Sello*/
+#selloEvaluado.box, #selloEvaluador.box {
+    display: inline-block;
+    vertical-align: top;
+    box-sizing: border-box;
+    color: #999;
+    position: relative;
+    background-color: #F2F2F2;
+    box-shadow: none;
+    /*margin-right: 250px;*/
+}
+
+    #selloEvaluado.box.sello:after, #selloEvaluador.box.sello:after {
+        content: "27/06/2015";
+        position: absolute;
+        top: -65px;
+        left: 50px;
+        z-index: 1;
+        font-family: Arial,sans-serif;
+        -webkit-transform: rotate(-25deg); /* Safari */
+        -moz-transform: rotate(-25deg); /* Firefox */
+        -ms-transform: rotate(-25deg); /* IE */
+        -o-transform: rotate(-25deg); /* Opera */
+        transform: rotate(-25deg);
+        font-size: 20px;
+        color: #c00;
+        background: #fff;
+        border: solid 4px #c00;
+        padding: 5px;
+        border-radius: 5px;
+        zoom: 1;
+        filter: alpha(opacity=20);
+        opacity: 0.2;
+        -webkit-text-shadow: 0 0 2px #c00;
+        text-shadow: 0 0 2px #c00;
+        box-shadow: 0 0 2px #c00;
+    }
+
+
+    #selloEvaluador.box.sello:after {
+        content: "24/07/2015";
+        position: absolute;
+        top: -60px;
+        left: 730px;
+        -webkit-transform: rotate(-15deg); /* Safari */
+        -moz-transform: rotate(-15deg); /* Firefox */
+        -ms-transform: rotate(-15deg); /* IE */
+        -o-transform: rotate(-15deg); /* Opera */
+        transform: rotate(-15deg);
+    }
+
+/*Para crear un elemento con aspecto de sello*/

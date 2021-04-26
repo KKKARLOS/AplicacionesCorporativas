@@ -1,0 +1,142 @@
+.ClassicStyle
+{
+	background-color:#ffffff;
+}
+/* Cabecera 0000aa */
+.ClassicStyle .TitleStyle
+{
+	font-family:arial;
+	font-size:11px;
+	font-weight:bold;  
+	Color:navy;
+	background-color:#BCD4DF;
+}
+
+.ClassicStyle .TitleStyle td
+{
+	padding:2px;
+}
+
+/* Líneas exteriores de combos #3366FF */
+.ClassicStyle .TitleStyle .DropDownStyle,
+.ClassicStyle .TitleStyle .DropDownOutStyle
+{
+	Cursor:default;
+	Border-Style:solid;
+	Border-Width:1px;
+	Border-Color:#3366FF;
+	padding:1px,0px,0px,0px;
+	 
+}
+
+/* Líneas exteriores de combos over #88AAFF */
+.ClassicStyle .TitleStyle .DropDownOverStyle
+{
+	Cursor:default;
+	Border-Style:solid;
+	Border-Width:1px;
+	Border-Color:navy;
+	padding:1px,0px,0px,0px;
+}
+
+.ClassicStyle .TitleStyle .CloseButtonStyle
+{
+	width:15px;
+	height:13px;
+	border:0;
+}
+
+.ClassicStyle .BodyStyle
+{
+	width:190px;
+	font-family:verdana;
+	font-size:10px;
+}
+
+.ClassicStyle .BodyStyle .HeaderStyle
+{
+	font-weight:bold; 
+	padding:2px 2px 2px 0px;
+	cursor:default;
+}
+
+.ClassicStyle .BodyStyle .DateStyle
+{
+	Text-Decoration:none;
+	Color:black;
+	Cursor:pointer;
+	padding:2px 2px 2px 0px; 
+}
+/* Border de la fecha seleccionada #a0a0a0 */
+.ClassicStyle .BodyStyle .SelectedDateStyle
+{
+	border-style:solid;
+	border-width:1px;
+	border-color:navy;
+}
+/* Fecha actual */
+.ClassicStyle .BodyStyle .CurrentDateStyle
+{
+	font-weight:Bold;
+	color:#ff0000;
+}
+/* Días de fin de semana #909090 */
+.ClassicStyle .BodyStyle .WeekendStyle
+{
+	color:#D41027;
+}
+
+.ClassicStyle .BodyStyle .SpecialDayStyle
+{
+	background-color:#70FFD0;
+}
+
+.ClassicStyle .BodyStyle .HolidayStyle
+{
+	background-color:#FFDDDD;
+}
+
+.ClassicStyle .BodyStyle .DisableDateStyle
+{
+	text-decoration:line-through;
+}
+
+
+.ClassicStyle .BodyStyle .DayOverStyle
+{
+
+}
+
+.ClassicStyle .TodayStyle
+{
+	Cursor:default;
+	background-color:#f0f0f0;
+}
+
+.ClassicStyle .TodayStyle .TextStyle
+{
+	font-family:arial;
+	font-size:11px;
+	Text-decoration:none;
+	Color:black;
+	Cursor:default;	
+}
+/* Listas de mes y anno */
+.ClassicStyle .ListStyle 
+{
+	font-family:arial; 
+	font-size:11px; 
+	background-color:#FFFFDD;
+	display:inline-block;
+}
+
+.ClassicStyle .ListStyle .OptionStyle,
+.ClassicStyle .ListStyle .OptionOutStyle
+{
+
+}
+/* Mes o anno over FFCC99 */
+.ClassicStyle .ListStyle .OptionOverStyle
+{
+	background-color:#BCD4DF;
+}

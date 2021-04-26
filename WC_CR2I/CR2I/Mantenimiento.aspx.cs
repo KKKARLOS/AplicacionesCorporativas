@@ -1,0 +1,49 @@
+using System;
+using System.Collections;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Web;
+using System.Web.SessionState;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Web.UI.HtmlControls;
+
+namespace CR2I
+{
+	/// <summary>
+	/// Descripción breve de WebForm1.
+	/// </summary>
+	public partial class Mantenimiento : System.Web.UI.Page
+	{
+		protected System.Web.UI.WebControls.Button Button1;
+	
+		protected void Page_Load(object sender, System.EventArgs e)
+		{
+			this.lblMsg.Text = Session["CR2I_MOTIVO"].ToString();
+			Session["CR2I_MOTIVO"] = null;
+			Session["CR2I_ACCESO"] = null;
+		}
+
+		#region Código generado por el Diseñador de Web Forms
+		override protected void OnInit(EventArgs e)
+		{
+			//
+			// CODEGEN: llamada requerida por el Diseñador de Web Forms ASP.NET.
+			//
+			InitializeComponent();
+			base.OnInit(e);
+		}
+		
+		/// <summary>
+		/// Método necesario para admitir el Diseñador. No se puede modificar
+		/// el contenido del método con el editor de código.
+		/// </summary>
+		private void InitializeComponent()
+		{    
+
+		}
+		#endregion
+
+	}
+}

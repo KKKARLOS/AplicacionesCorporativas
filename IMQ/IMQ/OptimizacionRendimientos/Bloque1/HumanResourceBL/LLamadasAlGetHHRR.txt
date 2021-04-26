@@ -1,0 +1,22 @@
+  D:\tmp\Clientes\IMQ\IndigoHis\src-Optimizacion\SII.HCD.BackOfficeModule\Views\HHRREditView\HHRREditViewPresenter.cs(2567):  HumanResourceEntity result = proxy.GetHHRR(hhrrID);
+  D:\tmp\Clientes\IMQ\IndigoHis\src-Optimizacion\SII.HCD.BackOfficeModule\Views\HHRRListView\HHRRListViewPresenter.cs(657):   HumanResourceEntity result = proxy.GetHHRR(hhrrID);
+  D:\tmp\Clientes\IMQ\IndigoHis\src-Optimizacion\SII.HCD.BackOfficeModule\Views\HHRRWorkScheduleInfoEditView\HHRRWorkScheduleInfoEditViewPresenter.cs(558):  HumanResourceEntity result = proxy.GetHHRR(hhrrID);
+  D:\tmp\Clientes\IMQ\IndigoHis\src-Optimizacion\SII.HCD.BackOfficeModule\Views\WorkScheduleListView\WorkScheduleListViewPresenter.cs(150):  _hhrr = this.GetHHRR(_hhrrWorkScheduleInfoDTO.HumanResourceID);
+  D:\tmp\Clientes\IMQ\IndigoHis\src-Optimizacion\SII.HCD.BackOfficeModule\Views\WorkScheduleListView\WorkScheduleListViewPresenter.cs(297):  HumanResourceEntity result = proxy.GetHHRR(hhrrID);
+  D:\tmp\Clientes\IMQ\IndigoHis\src-Optimizacion\SII.HCD.AdministrativeModule\ViewParts\CustomerOrderScheduleViewPart\CustomerOrderScheduleViewPartPresenter.cs(1259):  HumanResourceEntity result = proxy.GetHHRR(hhrrID);
+  D:\tmp\Clientes\IMQ\IndigoHis\src-Optimizacion\SII.HCD.AdministrativeModule\Views\AdmissionProcessTreeView\AdmissionProcessTreeViewPresenter.cs(567):  HumanResourceEntity result = proxy.GetHHRR(humanResourceID);
+  D:\tmp\Clientes\IMQ\IndigoHis\src-Optimizacion\SII.HCD.AdministrativeModule\Views\CustomerAppointmentWizard\CustomerAppointmentWizardPresenter.cs(3356):  HumanResourceEntity result = proxy.GetHHRR(hhrrID);
+  D:\tmp\Clientes\IMQ\IndigoHis\src-Optimizacion\SII.HCD.AdministrativeModule\Views\SearchResourceAppointmentSchView\SearchResourceAppointmentSchViewPresenter.cs(782):  HumanResourceEntity result = proxy.GetHHRR(hhrrID);
+  D:\tmp\Clientes\IMQ\IndigoHis\src-Optimizacion\SII.HCD.AdministrativeModule\Views\SearchResourceAppointmentSchView\SearchResourceAppointmentSchViewPresenter.cs(879):  HumanResourceEntity result = proxy.GetHHRR(hhrrID);
+  D:\tmp\Clientes\IMQ\IndigoHis\src-Optimizacion\SII.HCD.AdministrativeModule\Views\SingleResourceAppointmentSchWizard\SingleResourceAppointmentSchWizardPresenter.cs(6114):  HumanResourceEntity result = proxy.GetHHRR(hhrrID);
+  D:\tmp\Clientes\IMQ\IndigoHis\src-Optimizacion\SII.HCD.AdministrativeModule\Views\SingleResourceAppointmentSchWizard\SingleResourceAppointmentSchWizardPresenter.cs(6520): HumanResourceEntity result = proxy.GetHHRR(hhrrID);
+  D:\tmp\Clientes\IMQ\IndigoHis\src-Optimizacion\SII.HCD.AssistanceModule\Views\ProcedureChargesEditView\ProcedureChargesEditViewPresenter.cs(532):   HumanResourceEntity result = proxy.GetHHRR(hhrrID);
+  D:\tmp\Clientes\IMQ\IndigoHis\src-Optimizacion\SII.HCD.AssistanceModule\Views\ProcedureEditView\ProcedureEditViewPresenter.cs(1636):  HumanResourceEntity result = proxy.GetHHRR(hhrrID);
+  D:\tmp\Clientes\IMQ\IndigoHis\src-Optimizacion\SII.HCD.AssistanceModule\Views\ProcedureListView\ProcedureListViewPresenter.cs(666):   HumanResourceEntity result = proxy.GetHHRR(hhrrID);
+  D:\tmp\Clientes\IMQ\IndigoHis\src-Optimizacion\SII.HCD.AssistanceModule\Views\RoutineChargesEditView\RoutineChargesEditViewPresenter.cs(507):  HumanResourceEntity result = proxy.GetHHRR(hhrrID);
+  D:\tmp\Clientes\IMQ\IndigoHis\src-Optimizacion\SII.HCD.AssistanceModule\Views\RoutineListView\RoutineListViewPresenter.cs(710):  HumanResourceEntity result = proxy.GetHHRR(hhrrID);
+  D:\tmp\Clientes\IMQ\IndigoHis\src-Optimizacion\SII.HCD.AssistanceModule\Views\RoutineNewEdit\RoutineNewEditPresenter.cs(2548):   HumanResourceEntity result = proxy.GetHHRR(hhrrID);
+  D:\tmp\Clientes\IMQ\IndigoHis\src-Optimizacion\SII.HCD.ApplicationModule\Views\AdministrativeProcessView\AdministrativeProcessViewPresenter.cs(974):    HumanResourceEntity result = proxy.GetHHRR(humanResourceID);
+  D:\tmp\Clientes\IMQ\IndigoHis\src-Optimizacion\IB.IMQ.AdministrativeModule\IB.IMQ.AdministrativeModule\Views\IBADTOrderRegistrationView\IBADTOrderRegistrationViewPresenter.cs(913):   HumanResourceEntity ent = pr.GetHHRR(RRHHID);
+  D:\tmp\Clientes\IMQ\IndigoHis\src-Optimizacion\IB.IMQ.AdministrativeModule\IB.IMQ.AdministrativeModule\Views\IBCustomerADTOrderEditView\IBCustomerADTOrderEditViewPresenter.cs(5103):  HumanResourceEntity ent = pr.GetHHRR(RRHHID);
+

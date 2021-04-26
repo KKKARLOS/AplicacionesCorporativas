@@ -1,0 +1,121 @@
+﻿<!--<div class="modal fade" id="modalDocumentacionCatalogo">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header btn-primary">
+                <button type='button' class='cierrePropioModal' data-dismiss='modal' aria-hidden='true'>&times;</button>
+                <h4 class="modal-title">Documentación</h4>
+            </div>
+            <div class="modal-body">   -->                      
+                    <!-- Nav tabs -->
+                    <div class="col-sm-5">
+                       <!-- <ul class="nav nav-tabs" role="tablist">
+                            <li role="presentation" class="active" id="litab1"><a href="#divtab1" aria-controls="home" role="tab" data-toggle="tab">De acción <span class="badge" id="tabAccionCount"></span></a></li>
+                            <li role="presentation" id="litab2"><a href="#divtab2" aria-controls="profile" role="tab" data-toggle="tab">De tarea <span class="badge" id="tabTareaCount"></span></a></li>
+                        </ul>-->
+                        <!-- Tab panes -->
+                        <!--<div class="tab-content">
+                            <div role="tabpanel" class="tab-pane active" id="divtab1"></div>
+                            <div role="tabpanel" class="tab-pane" id="divtab2"></div>
+                        </div>-->
+                        <div class="" id="divtab2"></div>
+                    </div>
+
+                    <!-- Detalle ficha-->
+                    <div id="divDetalleDocumento" class="col-sm-6">
+                        <div class="panel panel-default">
+                            <div class="list-group">
+                                <div class="list-group-item">
+                                    <a href="#">
+                                        <i class="icon-file-pdf"></i>
+                                    </a>
+                                    <h4 class="list-group-item-heading">
+                                        <a href="#" class="fk_download" id="dd_nombre" title="Descargar"></a>
+                                    </h4>                                    
+                                </div>
+
+                                <div class="list-group-item">
+                                    <span>Última actualización:</span>
+                                    <span class="list-group-item-text" id="dd_fecha"></span>
+                                </div>
+
+                                <div class="list-group-item">
+                                    <span>Link:</span>
+                                    <a class="list-group-item-text" id="dd_weblink" target="_blank"></a>
+                                </div>
+
+                                <div class="list-group-item">
+                                    <span>Autor:</span>
+                                    <span class="list-group-item-text" id="dd_autor"></span>
+                                </div>
+                                
+                                <div class="list-group-item">
+                                    <span>Descripción:</span>
+                                    <span class="list-group-item-text" id="dd_descripcion"></span>
+                                </div>
+
+                            </div>
+
+                            <div class="panel-footer clearfix">
+                                <div class="btn-group btn-group-justified">
+                                    <div class="btn-group">
+                                        <button title="Descargar" class="btn btn-default fk_download" type="button" id="dd_btnDescargar">
+                                            <i class="fa fa-download"></i>
+                                            <span class="hidden-xs">Descargar</span>
+                                        </button>
+                                    </div>
+                                    <div class="btn-group">
+                                        <button title="Editar" class="btn btn-default" type="button" id="dd_btnEditar">
+                                            <i class="fa fa-edit"></i>
+                                            <span class="hidden-xs">Editar</span>
+                                        </button>
+                                    </div>
+                                    <div class="btn-group">
+                                        <button title="Eliminar" class="btn btn-default" type="button" id="dd_btnEliminar">
+                                            <i class="fa fa-trash"></i>
+                                            <span class="hidden-xs">Eliminar</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+            
+
+           <!-- </div>
+
+        </div>
+        <!-- /.modal-content -->
+    <!--</div>-->
+    <!-- /.modal-dialog -->
+<!--</div>-->
+
+<!-- lista de documentos con opción añadir -->
+<div id="divListaDocumentosAdd" class="col-sm-5" style="display:none">
+    <div class="row">
+        <div class="col-sm-3">
+            <button title="Añadir nuevo documento" class="btn btn-xs btn-primary fk_btnAdjuntar" type="button">Añadir</button>
+        </div>
+    </div>
+    <br />
+    <span class="fk_nodoc">No se han encontrado documentos</span>
+    <br />
+    <!-- Lista de documentos de acciones -->
+    <div class="list-group h65vh">
+
+
+    </div>
+</div>
+<!-- lista de documentos con opción añadir -->
+<!-- lista de documentos sin opcion añadir -->
+<div id="divListaDocumentosRead" class="col-sm-5" style="display:none">
+    <span class="fk_nodoc">No se han encontrado documentos</span>
+    <br />
+    <div class="list-group h65vh">
+
+    </div>
+</div>
+<!-- lista de documentos sin opcion añadir -->
+
+

@@ -1,0 +1,257 @@
+﻿/*Periodo*/
+/*#txtInicio {
+    width: 77px;
+    text-align: center;
+    display: inline;
+}*/
+
+/*#txtFin {
+    width: 77px;
+    text-align: center;
+    margin-left: 5px;
+    display: inline;
+}*/
+
+.container {
+    visibility:hidden;
+}
+
+.form-control {
+    background-color: #fff !important;
+}
+
+/*En SUPER.css se pone a 0 y bootstrap lo hace por defecto por lo que lo dejamos como lo hace el framework*/
+.input-group {
+    padding-right: 0 !important; 
+    padding-left: 0 !important;
+}
+
+table th, table tfoot td { 
+    border-right: 1px solid #ddd;
+}
+
+.ibox-title {
+    border-style: none solid none;
+    padding: 0px 15px 7px;
+}
+.fa-1_6x {
+    font-size: 1.6em;
+}
+.ui-datepicker-calendar {
+    display: none;
+}
+
+#Imprimir {
+    padding-top: 5px;
+    text-align:right;
+}
+
+.fa-file-pdf-o {
+    color:red;
+    cursor:pointer;
+}
+i:focus {
+outline:none !important;
+}
+/*.datepicker-container{
+  text-align:left;
+  margin-left:0px;
+}*/
+.datepicker-center{
+  display:inline-block;
+  margin:0 auto;
+}
+.criterios {
+    padding-top: 10px;
+}
+
+table {
+    table-layout:fixed;
+}
+/*.header-fixed{
+    border-right-style: hidden;
+    border-top-style: hidden;
+}*/
+/*Header fixed de la tabla de la pantalla*/
+/*Alto del contenedor de la tabla (tbody)*/
+.header-fixed > tbody {
+    overflow-y: auto;
+    max-height: 55vh;
+}
+
+
+
+/*FIN HEADER FIXED*/
+
+#indicator{
+	display:none;
+}
+
+/*#Imprimir{
+	margin-left: 16px;
+}*/
+/*Modal*/
+
+
+        /*#txtFin {
+            margin-left: 12px;
+        }*/
+    /*TABLA TOTALES*/
+
+    /*COLUMNA 1*/
+    #tablaTotal.header-fixed > tbody > tr > td:nth-child(1) {
+        width: 85%;
+        float: left;
+    }
+
+    #tablaTotal.header-fixed > thead > tr > th:nth-child(1) {
+        width: 85%;
+        float: left;
+    }
+
+
+    /*COLUMNA 2*/
+    #tablaTotal.header-fixed > tbody > tr > td:nth-child(2) {
+        width: 15%;
+        float: left;
+    }
+
+    #tablaTotal.header-fixed > thead > tr > th:nth-child(2) {
+        width: 15%;
+        float: left;
+    }
+
+    /*FIN HEADER FIXED*/
+
+    #tablaTotal {
+        border: none !important;
+        border-bottom: 1px solid #ddd;
+    }
+
+    #tablaDetalle {
+        border: none !important;
+        border-bottom: 1px solid #ddd;
+    }
+
+    /*TABLA DETALLE*/
+
+    /*COLUMNA 1*/
+    #tablaDetalle.header-fixed > tbody > tr > td:nth-child(1) {
+        width: 34%;
+        float: left;
+    }
+
+    #tablaDetalle.header-fixed > thead > tr > th:nth-child(1) {
+        width: 34%;
+        float: left;
+    }
+
+    /*COLUMNA 2*/
+    #tablaDetalle.header-fixed > tbody > tr > td:nth-child(2) {
+        width: 33%;
+        float: left;
+    }
+
+    #tablaDetalle.header-fixed > thead > tr > th:nth-child(2) {
+        width: 33%;
+        float: left;
+    }
+
+    /*COLUMNA 3*/
+    #tablaDetalle.header-fixed > tbody > tr > td:nth-child(3) {
+        width: 33%;
+        float: left;
+    }
+
+    #tablaDetalle.header-fixed > thead > tr > th:nth-child(3) {
+        width: 33%;
+        float: left;
+    }
+    /*#selOpc {
+        width:180px;
+    }*/
+
+/*@media only screen and (max-width: 760px) {
+        #Imprimir{
+	        margin-left: 16px;
+        }
+}*/ 
+
+@media only screen and (max-width: 992px)  {
+    @media(max-width: 992px)  {
+        /*#selOpc {
+            width: 115px;
+        }*/
+        #indicator{
+			display: block;
+		}
+        /*TABLA TOTALES*/
+
+        /*COLUMNA 1*/
+        #tablaTotal.header-fixed > tbody > tr > td:nth-child(1) {
+            width: 70%;
+            float: left;
+        }
+
+        #tablaTotal.header-fixed > thead > tr > th:nth-child(1) {
+            width: 70%;
+            float: left;
+        }
+
+
+        /*COLUMNA 2*/
+        #tablaTotal.header-fixed > tbody > tr > td:nth-child(2) {
+            width: 30%;
+            float: left;
+        }
+
+        #tablaTotal.header-fixed > thead > tr > th:nth-child(2) {
+            width: 30%;
+            float: left;
+        }
+
+        /*TABLA DETALLE*/
+
+        /*COLUMNA 1*/
+        #tablaDetalle.header-fixed > tbody > tr > td:nth-child(1) {
+            width: 45%;
+            float: left;
+        }
+
+        #tablaDetalle.header-fixed > thead > tr > th:nth-child(1) {
+            width: 45%;
+            float: left;
+        }
+
+        /*COLUMNA 2*/
+        #tablaDetalle.header-fixed > tbody > tr > td:nth-child(2) {
+            width: 35%;
+            float: left;
+        }
+
+        #tablaDetalle.header-fixed > thead > tr > th:nth-child(2) {
+            width: 35%;
+            float: left;
+        }
+
+        /*COLUMNA 3*/
+        #tablaDetalle.header-fixed > tbody > tr > td:nth-child(3) {
+            width: 20%;
+            float: left;
+        }
+
+        #tablaDetalle.header-fixed > thead > tr > th:nth-child(3) {
+            width: 20%;
+            float: left;
+        }
+    }
+/*FIN HEADER FIXED*/
+}
+
+/*Media queries altura de tablas*/
+
+@media (max-height: 720px) {
+    .dataTables_scrollBody {
+        max-height: 44vh !important;
+    }
+}

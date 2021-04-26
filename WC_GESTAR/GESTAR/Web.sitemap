@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode url="~" title="" description="">
+   
+    <siteMapNode title="Archivo" roles="*" >
+      <siteMapNode url="~/Capa_Presentacion/Areas/Default.aspx" roles="*" title="Catálogo de áreas y órdenes" description="Catálogo de áreas y órdenes" />
+      <siteMapNode url="javascript:window.close();" roles="*" title="Salir" description="Salir de la aplicación" />
+    </siteMapNode>
+
+    <siteMapNode title="Informes" roles="I,E" >
+      <siteMapNode title="Órdenes" roles="I" >
+        <siteMapNode url="~/Capa_Presentacion/informes/Deficiencias/Avanzado/Default.aspx" roles="*" title="Por criterios avanzados" description="Por criterios avanzados"/>
+        <siteMapNode url="~/Capa_Presentacion/informes/Deficiencias/Vencimiento/Default.aspx" roles="*" title="Por fechas" description="Por fechas" />
+      </siteMapNode>
+      <siteMapNode title="Tareas" roles="I,E" >
+        <siteMapNode url="~/Capa_Presentacion/informes/Tareas/Avanzado/Default.aspx" roles="I" title="Por criterios avanzados" description="Por criterios avanzados"/>
+        <siteMapNode url="~/Capa_Presentacion/informes/Tareas/Propias/Default.aspx" roles="I,E" title="Tareas propias" description="Tareas propias" />
+      </siteMapNode>
+     </siteMapNode>
+    <siteMapNode title="Ayuda" roles="*" >
+      <siteMapNode url="~/Capa_Presentacion/Ayuda/Guia/Default.aspx" roles="*" title="Guía" description="" />
+    </siteMapNode>
+  </siteMapNode>
+</siteMap>

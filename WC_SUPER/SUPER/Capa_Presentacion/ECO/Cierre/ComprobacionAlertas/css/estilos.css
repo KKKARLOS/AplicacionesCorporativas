@@ -1,0 +1,3 @@
+﻿#tblLineas tr, #tblDesglose tr { height: 20px; }
+#tblLineas td, #tblTituloLineas td { padding-left: 2px; }
+#tblConsistencia td { text-align:right; }

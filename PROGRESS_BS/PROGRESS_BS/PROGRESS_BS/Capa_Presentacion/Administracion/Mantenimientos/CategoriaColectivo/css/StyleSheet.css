@@ -1,0 +1,30 @@
+﻿.container {
+    width:970px !important;
+}
+
+/*div.panel-body {
+    max-height:42vh;
+    overflow: auto;
+}*/
+
+#tbdCategoriaColectivo {
+    cursor:pointer;
+}
+
+
+
+#tbdCategoriaColectivo > tr.active {
+    background-color:#D8D8D8 !important;
+}
+
+/*Tenemos que heredar la clase activa del padre(tr)*/
+#tbdCategoriaColectivo > tr.active > td {
+    background-color:inherit;
+}
+
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px !important;
+    }
+}

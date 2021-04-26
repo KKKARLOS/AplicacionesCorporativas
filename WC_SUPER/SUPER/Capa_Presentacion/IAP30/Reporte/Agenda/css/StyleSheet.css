@@ -1,0 +1,364 @@
+﻿.container{
+    visibility:hidden;
+}
+
+.selected{
+    background-color: #d9edf7!important;        
+}
+
+.selected :hover{
+  background-color: #d9edf7!important;
+}
+
+.aviso {
+    background-color: rgb(239, 118, 118) !important;
+}
+
+.aviso :hover{
+    background-color: rgb(239, 118, 118)!important;
+}
+
+.fc-event-container .btn-danger{
+    background-color: #F58D8D;
+}
+
+.fc-event-container .btn-danger:hover{
+    background-color: #d9534f;
+}
+
+
+
+
+/*Estilos sobre la agenda*/
+.btnDeleteEvent{
+    height:1.4rem!important;
+}
+
+/*Reverse de icono font awesome*/
+
+.fa-share-square-o-rev:before {
+    content: "\f045";
+}
+
+.fa-share-square-o-rev {
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+}
+
+/*tblProfesionales HEADER FIXED*/
+#tblProfesionales.header-fixed {
+    width: 100%;
+}
+
+    #tblProfesionales.header-fixed > thead,
+    #tblProfesionales.header-fixed > tbody,
+    #tblProfesionales.header-fixed > thead > tr,
+    #tblProfesionales.header-fixed > tbody > tr,
+    #tblProfesionales.header-fixed > thead > tr > th,
+    #tblProfesionales.header-fixed > tbody > tr > td {
+        display: block;
+    }
+
+
+
+#tblProfesionales thead {
+    width: 100%; /* scrollbar is average 1em/16px width, remove it from thead width */
+}
+
+#tblProfesionales.header-fixed > tbody > tr:after,
+#tblProfesionales.header-fixed > thead > tr:after {
+    content: ' ';
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+
+
+
+/*Alto del contenedor de la tabla (tbody)*/
+#tblProfesionales.header-fixed > tbody {
+    overflow-y: auto;
+    height: 15vh;
+    border: solid 1px #e4e2e2;
+}
+
+/*COLUMNA 1*/
+
+#tblProfesionales.header-fixed > tbody > tr > td:nth-child(1) {
+    width: 100%;
+    float: left;
+    height:29px;
+}
+
+#tblProfesionales.header-fixed > thead > tr > th:nth-child(1) {
+    width: 100%;
+    float: left;
+    height:29px;
+}
+
+
+/*FIN tblProfesionales HEADER FIXED*/
+
+/*tblProfesionalesSel HEADER FIXED*/
+#tblProfesionalesSel.header-fixed {
+    width: 100%;
+}
+
+    #tblProfesionalesSel.header-fixed > thead,
+    #tblProfesionalesSel.header-fixed > tbody,
+    #tblProfesionalesSel.header-fixed > thead > tr,
+    #tblProfesionalesSel.header-fixed > tbody > tr,
+    #tblProfesionalesSel.header-fixed > thead > tr > th,
+    #tblProfesionalesSel.header-fixed > tbody > tr > td {
+        display: block;
+    }
+
+#tblProfesionales > tbody > tr,
+#tblProfesionalesSel > tbody > tr
+ {cursor:pointer}
+
+
+#tblProfesionalesSel thead {
+    width: 100%; /* scrollbar is average 1em/16px width, remove it from thead width */
+}
+
+#tblProfesionalesSel.header-fixed > tbody > tr:after,
+#tblProfesionalesSel.header-fixed > thead > tr:after {
+    content: ' ';
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+
+table {
+    table-layout:fixed;
+}
+
+/*Alto del contenedor de la tabla (tbody)*/
+#tblProfesionalesSel.header-fixed > tbody {
+    overflow-y: auto;
+    height: 15vh;
+    border: solid 1px #e4e2e2;
+}
+
+/*COLUMNA 1*/
+
+#tblProfesionalesSel.header-fixed > tbody > tr > td:nth-child(1) {
+    width: 100%;
+    float: left;
+    height:29px;
+}
+
+#tblProfesionalesSel.header-fixed > thead > tr > th:nth-child(1) {
+    width: 100%;
+    float: left;
+    height:29px;
+}
+
+
+/*COLUMNA 2*/
+#tblProfesionalesSel.header-fixed > tbody > tr > td:nth-child(2) {
+    width: 20%;
+    float: left;
+    height:29px;
+    padding-top: 0px
+}
+
+#tblProfesionalesSel.header-fixed > thead > tr > th:nth-child(2) {
+    width: 20%;
+    float: left;
+    height:29px;
+
+}
+
+
+/*FIN tblProfesionalesSel HEADER FIXED*/
+
+@media (max-width: 768px) {
+/*Cambios para que en phone parezca un menú inferior*/
+    #pieAgenda {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        background: #222;
+        width: 100%;
+        border-top: 1px solid rgb(80,132,159);
+        padding: 5px;
+    }   
+
+
+    .fa-blanco {
+        color: #fff;
+    }
+
+    .boton {
+        color: #fff;
+        background-color: transparent;
+        border-color: transparent;
+    }
+
+    .boton:hover {
+        color: #000;
+        background-color: #d9d5d5;
+        border-color: transparent;
+    }
+
+    .boton:hover .fa {
+        color: #000;
+    }
+   
+
+    .botonDeshabilitado {
+        opacity: 0.4;
+        color: #fff;
+        background-color: transparent;
+        border-color: transparent;
+    }
+
+    .botonDeshabilitado:hover {
+        cursor: default;
+     }
+
+    #botoneraInferior {
+        text-align: center;
+        padding-top: 0;
+    }
+
+  
+    #btnSeleccionar{
+         margin-top: 0!important;
+         margin-bottom: 10px!important;
+    }
+
+}
+
+@media (max-width: 768px) and (min-width: 768px) {
+    #lisProfesionales2{
+         margin-top: 45px!important;
+    }
+
+    #btnSeleccionar{
+         margin-top: 130px!important;
+    }
+}
+
+/*Media queries altura de la agenda*/
+
+@media (max-height: 720px) and (max-width: 960px) {
+
+    .fc-time-grid-container {
+        height:44vh!important;
+    }
+
+     .fc-day-grid-container {
+        height:44vh!important;
+    }
+
+    .div-table-content {
+        max-height: 44vh;
+    }
+}
+
+@media (max-height: 720px) and (min-width: 960px) {
+     .fc-time-grid-container {
+        height:38vh!important;
+    }
+
+     .fc-day-grid-container {
+        height:38vh!important;
+    }
+
+    .div-table-content {
+        max-height: 38vh;
+    }
+}
+
+@media (max-height: 720px) and (max-width: 960px) {
+
+    .fc-time-grid-container {
+        height:30vh!important;
+    }
+
+     .fc-day-grid-container {
+        height:44vh!important;
+    }
+
+}
+
+@media (max-height: 720px) and (min-width: 960px) {
+     .fc-time-grid-container {
+        height:50vh!important;
+    }
+
+    .fc-day-grid-container {
+        height: 55vh !important;
+    }
+}
+
+
+@media (min-height: 720px) and (min-width: 960px) {
+     .fc-time-grid-container {
+        height:62vh!important;
+    }
+
+     .fc-day-grid-container {
+        height:63vh!important;
+    }
+
+}
+
+@media (min-height: 720px) and (max-width: 960px) {
+     .fc-time-grid-container {
+        height:60vh!important;
+    }  
+     
+     .fc-day-grid-container {
+        height:60vh!important;
+    }   
+}
+
+/*@media (min-width: 320px) {   
+
+    .fc-time-grid-container {
+        height:180px!important;
+    }   
+     .fc-day-grid-container {
+        height:240px!important;
+    }
+
+}
+
+@media (min-width: 480px) {
+    .fc-time-grid-container {
+        height:300px!important;
+    }
+
+    .fc-day-grid-container {
+        height:350px!important;
+    }
+
+}
+
+
+@media (min-width: 960px) {
+
+    .fc-time-grid-container {
+        height:370px!important;
+    }
+
+     .fc-day-grid-container {
+        height:450px!important;
+    }
+
+}
+
+@media (min-width:1200px) {
+    .fc-time-grid-container {
+        height:450px!important;
+    }
+
+}*/

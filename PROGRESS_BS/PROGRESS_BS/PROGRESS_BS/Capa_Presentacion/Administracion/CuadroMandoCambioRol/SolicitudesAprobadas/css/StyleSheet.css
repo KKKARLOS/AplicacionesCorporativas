@@ -1,0 +1,150 @@
+﻿
+#tblSolicitudesAprobadas > tr {
+    cursor:pointer;
+}
+
+#tblSolicitudesAprobadas > tr.active {
+    background-color:#D8D8D8 !important;
+}
+
+/*Tenemos que heredar la clase activa del padre(tr)*/
+#tblSolicitudesAprobadas > tr.active > td {
+    background-color:inherit;
+}
+
+/*HEADER FIXED*/
+.header-fixed {
+    width: 100%;
+}
+
+.header-fixed > thead,
+.header-fixed > tbody,
+.header-fixed > thead > tr,
+.header-fixed > tbody > tr,
+.header-fixed > thead > tr > th,
+.header-fixed > tbody > tr > td {
+    display: block;
+}
+
+thead {
+    width: 100%; /* scrollbar is average 1em/16px width, remove it from thead width */
+}
+
+.header-fixed > tbody > tr:after,
+.header-fixed > thead > tr:after {
+    content: ' ';
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+
+/*Alto del contenedor de la tabla (tbody)*/
+.header-fixed > tbody {
+    overflow-y: auto;
+    overflow-x:hidden;
+    height: 45vh;
+}
+
+/*COLUMNA 1*/
+.header-fixed > tbody > tr > td:nth-child(1) {
+    width: 13%;
+    float: left;
+    word-wrap:break-word;
+}
+
+.header-fixed > thead > tr > th:nth-child(1) {
+    width: 13%;
+    float: left;
+    word-wrap:break-word;
+}
+
+/*COLUMNA 2*/
+.header-fixed > tbody > tr > td:nth-child(2) {
+    width: 13%;
+    float: left;
+    word-wrap:break-word;
+}
+
+.header-fixed > thead > tr > th:nth-child(2) {
+    width: 13%;
+    float: left;
+    word-wrap:break-word;
+}
+
+/*COLUMNA 3*/
+.header-fixed > tbody > tr > td:nth-child(3) {
+    width: 12%;
+    float: left;
+    word-wrap:break-word;
+}
+
+.header-fixed > thead > tr > th:nth-child(3) {
+    width: 12%;
+    float: left;
+    word-wrap:break-word;
+}
+
+/*COLUMNA 4*/
+.header-fixed > tbody > tr > td:nth-child(4) {
+    width: 13%;
+    float: left;
+    word-wrap:break-word;
+}
+
+.header-fixed > thead > tr > th:nth-child(4) {
+    width: 13%;
+    float: left;
+    word-wrap:break-word;
+}
+
+/*COLUMNA 5*/
+.header-fixed > tbody > tr > td:nth-child(5) {
+    width: 13%;
+    float: left;
+    word-wrap:break-word;
+}
+
+.header-fixed > thead > tr > th:nth-child(5) {
+    width: 13%;
+    float: left;
+    word-wrap:break-word;
+}
+
+/*COLUMNA 6*/
+.header-fixed > tbody > tr > td:nth-child(6) {
+    width: 12%;
+    float: left;
+    word-wrap:break-word;
+}
+
+.header-fixed > thead > tr > th:nth-child(6) {
+    width: 12%;
+    word-wrap:break-word;
+    float: left;
+}
+
+/*COLUMNA 7*/
+.header-fixed > tbody > tr > td:nth-child(7) {
+    width: 12%;
+    word-wrap:break-word;
+    float: left;
+}
+
+.header-fixed > thead > tr > th:nth-child(7) {
+    width: 12%;
+    float: left;
+    word-wrap:break-word;
+}
+
+/*COLUMNA 8*/
+.header-fixed > tbody > tr > td:nth-child(8) {
+    width: 10%;
+    float: left;
+    word-wrap:break-word;
+}
+
+.header-fixed > thead > tr > th:nth-child(8) {
+    width: 10%;
+    float: left;
+    word-wrap:break-word;
+}

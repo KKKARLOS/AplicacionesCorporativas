@@ -1,0 +1,147 @@
+﻿ .container  {
+    width:970px !important;
+}
+
+input.form-control {
+    display:inline-block;
+    width:100px;
+}
+
+span.glyphicon.glyphicon-info-sign{
+    color: #5bc0de;
+}
+
+span.glyphicon.glyphicon-new-window{
+    color: #b94a48;
+}
+
+i.fa.fa-compress, i.glyphicon.glyphicon-user {
+    color: #b94a48;
+}
+
+div.pull-right {
+    padding-top:7px;
+}
+
+div.table-responsive {
+    margin-top: 8px;        
+    border: 1px solid #ddd;    
+}
+
+div.table-responsive table{
+    margin-bottom: 0px;
+}
+
+#divSalTramite {
+    margin-top: 18px;
+    padding-left: 7px;
+}
+
+.table>thead>tr>th {
+    border-bottom:none;
+}
+
+.table>tbody>tr>td:first-child {
+    padding-left:25px;
+}
+
+.table>thead>tr>th:first-child {
+    padding-left:25px;
+}
+
+.table>tbody>tr>td:first-child span.glyphicon:first-child{
+    margin-left:-20px;
+    display:inline-block;
+    width:20px;
+}
+
+.table>tbody>tr>td:first-child i:first-child{
+    margin-left:-20px;
+    display:inline-block;
+    width:20px;
+}
+
+#divSalTramite i {
+    margin-left:15px;
+}
+
+.table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
+    padding-top:4px !important;
+    padding-bottom:4px !important;
+}
+
+
+/*HEADER FIXED*/
+.header-fixed {
+    width: 100%;
+}
+
+.header-fixed > thead,
+.header-fixed > tbody,
+.header-fixed > thead > tr,
+.header-fixed > tbody > tr,
+.header-fixed > thead > tr > th,
+.header-fixed > tbody > tr > td {
+    display: block;
+}
+
+
+
+thead {
+    width: 100%; /* scrollbar is average 1em/16px width, remove it from thead width */
+}
+
+.header-fixed > tbody > tr:after,
+.header-fixed > thead > tr:after {
+    content: ' ';
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+
+/*Alto del contenedor de la tabla (tbody)*/
+.header-fixed > tbody {
+    overflow-y: auto;
+    height: 50vh;
+}
+
+/*COLUMNA 1*/
+        
+    .header-fixed > tbody > tr > td:nth-child(1) {
+    width: 50%;   
+    float: left;
+}
+
+.header-fixed > thead > tr > th:nth-child(1) {
+    width: 50%;  
+    float: left;
+}
+/*COLUMNA 2*/
+.header-fixed > tbody > tr > td:nth-child(2) {
+    width: 50%;   
+    float: left;
+}
+
+.header-fixed > thead > tr > th:nth-child(2) {
+    width: 50%;  
+    float: left;
+}
+
+
+       
+/*FIN HEADER FIXED*/
+
+@media only screen and (max-device-height:768px)  {
+    .header-fixed > tbody {
+        overflow-y: auto;
+        height: 53vh;
+    }
+}
+
+
+/*Para resoluciones mayores*/
+@media (min-width: 1200px) {
+    .container {
+        width:1170px !important;
+    }
+}

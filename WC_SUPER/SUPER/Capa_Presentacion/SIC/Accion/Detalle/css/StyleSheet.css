@@ -1,0 +1,22 @@
+﻿form label{ font-weight:normal;}
+
+#estado {
+    position: relative;
+    top: -5px;
+    left: -300px
+}
+
+
+#modal_otrosLideres table th {
+    background-color: #337ab7;
+    color: #fff;
+    text-align: center;
+    border: 1px solid #ddd;   
+    white-space: nowrap;
+}
+
+#modal_otrosLideres .modal-body {
+    max-height:50vh;
+    overflow-y:auto
+}
+

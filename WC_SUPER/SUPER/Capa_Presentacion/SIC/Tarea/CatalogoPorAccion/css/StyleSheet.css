@@ -1,0 +1,14 @@
+﻿
+/*la fuente se ve más nítida*/
+form label{ font-weight:normal;}
+
+/*Modificamos el alto de las cabeceras del datatable*/
+.dataTables_wrapper .dataTables_scrollHead table.dataTable thead tr th {padding: 5px 18px !important;}
+
+table th {
+    background-color: #337ab7;
+    color: #fff;
+    text-align: center;
+    border: 1px solid #ddd;   
+    white-space: nowrap;
+}

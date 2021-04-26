@@ -1,0 +1,131 @@
+using System;
+using System.IO;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
+using Microsoft.Practices.EnterpriseLibrary.Validation.Validators;
+using CommonEntities = SII.HCD.Common.Entities;
+
+namespace SII.HCD.BackOffice.Entities
+{
+    [DataContract]
+    [Serializable]
+    public class DeviceEntity : DeviceBaseEntity, ICloneable
+    {
+        #region Properties
+        [DataMember]
+        public DeviceTypeEntity DeviceType { get; set; }
+
+        [DataMember]
+        public string DeviceDescription { get; set; }
+
+        [DataMember]
+        public bool Mobile { get; set; }
+
+        [DataMember]
+        public AddressEntity PlaceAddress { get; set; }
+
+        [DataMember]
+        public string SerialNumber { get; set; }
+
+        [DataMember]
+        [DateTimeRangeValidator("1753-01-01T00:00:00", "9999-12-31T00:00:00")]
+        public DateTime ActiveAtDate { get; set; }
+
+        [DataMember]
+        public DateTime? DeactiveFromDate { get; set; }
+
+        [DataMember]
+        [DateTimeRangeValidator("1753-01-01T00:00:00", "9999-12-31T00:00:00")]
+        public DateTime InstallationDate { get; set; }
+
+        [DataMember]
+        public bool Screen { get; set; }
+
+        [DataMember]
+        public bool AudioInput { get; set; }
+
+        [DataMember]
+        public bool AudioOutput { get; set; }
+
+        [DataMember]
+        public bool MessageInput { get; set; }
+
+        [DataMember]
+        public bool MessageOutput { get; set; }
+
+        [DataMember]
+        public int MaxAudioSize { get; set; }
+
+        [DataMember]
+        public int MaxMessageSize { get; set; }
+
+        [DataMember]
+        public int ParentLocationID { get; set; }
+
+        [DataMember]
+        public string Model { get; set; }
+
+        [DataMember]
+        public bool AssociateWithActor { get; set; }
+
+        #endregion
+
+        #region Constructors
+        public DeviceEntity()
+            : this(0, string.Empty, string.Empty, string.Empty, string.Empty,
+            string.Empty, string.Empty, false, false, false, false, false, false, false,
+            DateTime.Today, null, DateTime.Today, 0, 0, 0, null, null,
+            CommonEntities.StatusEnum.None, string.Empty, DateTime.MinValue, 0) { }
+
+        public DeviceEntity(int id, string deviceCode, string deviceName, string deviceDescription,
+            string serialNumber, string deviceIP, string model, bool mobile, bool screen,
+            bool audioInput, bool audioOutput, bool messageInput, bool messageOutput,
+            bool associateWithActor, DateTime activeAtDate, DateTime? deactiveFromDate,
+            DateTime installationDate, int maxAudioSize, int maxMessageSize, int parentLocationID,
+            DeviceTypeEntity deviceType, AddressEntity placeAddress, CommonEntities.StatusEnum status,
+            string modifiedBy, DateTime lastUpdated, long dbTimeStamp) :
+            base(id, deviceCode, deviceName, deviceIP, status, modifiedBy, lastUpdated, dbTimeStamp)
+        {
+            PlaceAddress = placeAddress;
+            DeviceType = deviceType;
+            ParentLocationID = parentLocationID;
+            MaxMessageSize = maxMessageSize;
+            MaxAudioSize = maxAudioSize;
+            InstallationDate = installationDate;
+            DeactiveFromDate = deactiveFromDate;
+            ActiveAtDate = activeAtDate;
+            AssociateWithActor = associateWithActor;
+            MessageOutput = messageOutput;
+            MessageInput = messageInput;
+            AudioOutput = audioOutput;
+            AudioInput = audioInput;
+            Screen = screen;
+            Mobile = mobile;
+            Model = model;
+            SerialNumber = serialNumber;
+            DeviceDescription = deviceDescription;
+        }
+        #endregion
+
+        #region ICloneable Members
+        public override object Clone()
+        {
+            object clonedObject = null;
+            MemoryStream ms = new MemoryStream();
+            try
+            {
+                BinaryFormatter bf = new BinaryFormatter();
+
+                bf.Serialize(ms, this);
+                ms.Seek(0, SeekOrigin.Begin);
+                clonedObject = bf.Deserialize(ms);
+            }
+            finally
+            {
+                ms.Close();
+            }
+            return clonedObject;
+        }
+        #endregion
+    }
+}

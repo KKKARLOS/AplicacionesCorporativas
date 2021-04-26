@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.7.2/URI.min.js"></script>
+    <script>
+      function closeSafariAndOpenChrome()
+      {
+        var chromeProtocol = 'googlechrome';
+        var redirectedUrl = URI(location.href)
+           .protocol(chromeProtocol);
+        location.href = redirectedUrl;
+        window.close();
+      }
+    </script>
+
+</head>
+
+<body>
+    <a href="javascript:closeSafariAndOpenChrome();">Click here to open chrome</a>
+    <br /><br />
+    <a href='javascript:location.href=" googlechrome"+location.href.substring(4);'>enlace 2</a>
+</body>
+
+</html>

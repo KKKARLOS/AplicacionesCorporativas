@@ -1,0 +1,45 @@
+<%@ Page Language="#Language#" MasterPageFile="~/Master/#MasterPageName#.master" AutoEventWireup="true" CodeFile="#TableName#Search.aspx.#Ext#" Inherits="#TableName#Search" Title="#TableName# Search" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="cphContent" Runat="Server">
+    <table style="width: 100%">
+        <tr>
+            <td style="text-align: center">
+                <asp:Label ID="lbl#TableName#Search" runat="server" Text="#TableName# Search"></asp:Label></td>
+        </tr>
+        <tr>
+            <td style="text-align: center">
+                <asp:GridView ID="gv#TableName#" runat="server"
+                    OnPageIndexChanging="gv#TableName#_PageIndexChanging"
+                    OnSorting="gv#TableName#_Sorting">
+                    <Columns>
+                        <asp:BoundField DataField="#TableName#Id" HeaderText="#TableName# Id" ReadOnly="True" Visible="False" />
+                        <asp:TemplateField HeaderText="#TableName#Name" SortExpression="#TableName#Name">
+                            <EditItemTemplate>
+                                <asp:TextBox ID="txt#TableName#Name" runat="server" Text='<%# Bind("#TableName#Name") %>'></asp:TextBox>
+                            </EditItemTemplate>
+                            <ItemTemplate>
+                                <asp:Label ID="lbl#TableName#Name" runat="server" Text='<%# Bind("#TableName#Name") %>'></asp:Label>
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                        <asp:TemplateField HeaderText="Email"  SortExpression="Email">
+                          <ItemTemplate>
+                              <asp:HyperLink ID="hl#TableName#Email" runat="server" NavigateUrl='<%#"MailTo:"+Eval("Email")%>'
+                                    Text='<%# Bind("Email") %>'></asp:HyperLink>
+                             </ItemTemplate>
+                        </asp:TemplateField>
+                        <asp:TemplateField HeaderText="Details">
+                            <ItemTemplate>
+                                <asp:HyperLink ID="hl#TableName#Id" runat="server" NavigateUrl='<%#"#TableName#Details.aspx?#TableName#Id="+Eval("#TableName#Id")%>'
+                                    Text="Details"></asp:HyperLink>
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                    </Columns>
+                 </asp:GridView>
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: center">
+                <asp:Label ID="lblError" runat="server"></asp:Label></td>
+        </tr>
+    </table>
+</asp:Content>
+

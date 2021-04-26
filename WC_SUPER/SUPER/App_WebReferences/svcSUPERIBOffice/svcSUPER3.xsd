@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://services.intranet.ibermatica/SUPER-CVT/svcSUPER.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://services.intranet.ibermatica/SUPER-CVT/svcSUPER.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/Message" />
+  <xs:element name="Saludar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sMensaje" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaludarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaludarResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaludarDesdeIbOffice">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sMensaje" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaludarDesdeIbOfficeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaludarDesdeIbOfficeResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="obtenerPlantilla">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aParam" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="extension" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idPlantilla" type="xs:int" />
+        <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="htCampos" nillable="true" type="q1:ArrayOfKeyValueOfstringstring" />
+        <xs:element minOccurs="0" name="bNDocs" type="xs:unsignedByte" />
+        <xs:element minOccurs="0" name="trackingId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="obtenerPlantillaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.microsoft.com/Message" name="obtenerPlantillaResult" type="q2:StreamBody" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="obtenerPlantilla_avanzada">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sTipoBusqueda" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="aParam" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="extension" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idPlantilla" type="xs:int" />
+        <xs:element xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="htCampos" nillable="true" type="q3:ArrayOfKeyValueOfstringstring" />
+        <xs:element minOccurs="0" name="bNDocs" type="xs:unsignedByte" />
+        <xs:element minOccurs="0" name="trackingId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="obtenerPlantilla_avanzadaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.microsoft.com/Message" name="obtenerPlantilla_avanzadaResult" type="q4:StreamBody" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getPlantilla">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aParam" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="extension" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idPlantilla" type="xs:int" />
+        <xs:element minOccurs="0" name="sCampos" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bNDocs" type="xs:unsignedByte" />
+        <xs:element minOccurs="0" name="trackingId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getPlantillaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.microsoft.com/Message" name="getPlantillaResult" type="q5:StreamBody" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CrearEnviarExcelCVT">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sXML" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sListaProfSeleccionados" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="aParam" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="aCampos" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CrearEnviarExcelCVTResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CrearEnviarExcelCVTResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getExcelCVT">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ds" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="sExtension" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sXML" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getExcelCVTResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="getExcelCVTResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CrearDatosIberDok">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sXML" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="aParam" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CrearDatosIberDokResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CrearDatosIberDokResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,137 @@
+using System;
+using System.Data;
+using System.Configuration;
+using System.Collections;
+using System.Web;
+using System.Web.Security;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Web.UI.WebControls.WebParts;
+using System.Web.UI.HtmlControls;
+#UsingNameSpace#
+
+public partial class #TableName#Search : BaseWebForm
+{
+
+
+    #region Method
+
+    private void LoadData()
+    {
+        #BusClass# obj#BusClass#;
+        try
+        {
+            obj#BusClass# = new #BusClass#();
+            ViewState["#TableName#"] = obj#BusClass# .SelectAll();
+            BindGrid();
+        }
+
+        catch (Exception ex)
+        {
+            throw ex;
+        }
+        finally
+        {
+            obj#BusClass# = null;
+        }
+
+    }
+    private void BindGrid()
+    {
+    
+         if ((DataTable)ViewState["#TableName#"] != null)
+        {
+        DataView dv#TableName# = new DataView((DataTable)ViewState["#TableName#"]);
+        string strSortExpression = Convert.ToString(ViewState["_#TableName#_SortExpression"]);
+
+        if (strSortExpression != null && strSortExpression != "")
+        {
+            dv#TableName#.Sort =strSortExpression + " " + Convert.ToString(ViewState["_#TableName#_SortOrder"]);
+        }
+        gv#TableName#.DataSource = dv#TableName#;
+        gv#TableName#.DataBind();
+        }
+    }
+
+    private void SwitchSortOrder(string strSortExpression)
+    {
+        string SortOrder=Convert.ToString(ViewState["_#TableName#_SortOrder"]) ;
+        string SortExpression =Convert.ToString(ViewState["_#TableName#_SortExpression"]);
+        //if new sort column equal old one switch order
+        if (strSortExpression == SortExpression)
+        {
+            if (SortOrder == "asc")
+            {
+                SortOrder = "desc";
+            }
+            else
+            {
+                SortOrder = "asc";
+            }
+        }
+        else
+        {
+            SortOrder = "asc";
+        }
+
+        //assign new Expression
+        ViewState["_#TableName#_SortExpression"]=strSortExpression;
+        ViewState["_#TableName#_SortOrder"] = SortOrder;
+
+    }
+    #endregion
+
+    #region Event
+    protected void Page_Load(object sender, EventArgs e)
+    {
+
+        lblError.Text = "";
+        try
+        {
+            if (!IsPostBack)
+            {
+                LoadData();
+            }
+
+        }
+
+        catch (Exception ex)
+        {
+             LogException(ex, lblError);
+        }
+
+    }
+
+    protected void gv#TableName#_Sorting(object sender, GridViewSortEventArgs e)
+    {
+
+        try
+        {
+            //Switch Sort Order so in first click sort ascending and second click sort descending
+            SwitchSortOrder(e.SortExpression);
+            //Bind Grid 
+            BindGrid();
+
+
+        }
+        catch (Exception ex)
+        {
+            LogException(ex, lblError);
+
+        }
+    }
+    protected void gv#TableName#_PageIndexChanging(object sender, GridViewPageEventArgs e)
+    {
+        try
+        {
+            gv#TableName#.PageIndex = e.NewPageIndex;
+            BindGrid();
+        }
+        catch (Exception ex)
+        {
+             LogException(ex, lblError);
+        }
+    }
+    #endregion
+  
+}

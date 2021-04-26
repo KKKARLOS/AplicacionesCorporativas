@@ -1,0 +1,123 @@
+﻿.bubblewrap{
+list-style-type:none;
+margin:0;
+padding:0;
+}
+
+.bubblewrap li{
+display:inline-block;
+zoom:1; /*Trigger haslayout in IE7 and less*/
+*display:inline; /*For IE7 and less*/
+position:relative;
+width: 62px;
+height:62px;
+list-style: none;
+}
+
+.bubblewrap li img{
+position:absolute;
+width: 62px; /*default width of each image.*/
+height: 62px; /*default height of each image.*/
+left:0;
+top:0;
+border:0;
+}
+
+.bubblewrap .tooltip{ /*CSS for image tooltip (alt attribute of image)*/
+    position:absolute;
+    font:bold 12px Arial;
+    padding:4px;
+    /*width:100px;*/
+    text-align:center;
+    background: white;
+    color:#5894ae;
+    border: solid 1px #5894ae;
+}
+
+#divMarcoAmbito
+{
+    position:absolute;
+    left:670px;
+    top: 152px;
+    width:300px;
+    height:73px;
+    /*background-image: url("../../../../images/imgMarcoAmbito.png");*/
+    z-index:0;
+    /*background-repeat: no-repeat;*/
+       box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);
+    margin: 0 2px 15px;
+    -webkit-column-break-inside: avoid;
+    -moz-column-break-inside: avoid;
+    column-break-inside: avoid;
+    padding: 15px;
+    padding-bottom: 5px;
+    background: -webkit-linear-gradient(45deg, #E9EBEC, #F9F9F9);
+    background: linear-gradient(45deg, #E9EBEC, #F9F9F9);    
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#E9EBEC', endColorstr='#F9F9F9');
+
+    
+    opacity: 1;
+    -webkit-transition: all .2s ease;
+    -moz-transition: all .2s ease;
+    -o-transition: all .2s ease;
+    transition: all .2s ease;
+    /*outline:4px solid #FFF;*/
+    border-radius:15px;
+    border:2px solid rgb(80,132,159)
+}
+
+#divAprobador { position:absolute; top:51px; left:40px; }
+#divAceptador { position:absolute; top:32px; left:145px; }
+#divAmbito { position:absolute; top:32px; left:245px; }
+
+#divSinAmbito{
+    position: absolute;
+    top: 420px;
+    left: 220px;
+    height: 75px;
+    width: 520px;
+    border: 10px solid #dfdfdf;
+    box-shadow: 0px 9px 10px -5px #DBDBDB;
+    padding: 20px;
+    /*background:10px solid #fff;*/
+    background-color: #f2f2f2;
+}
+
+#divSinAmbito span{
+    font-size : 20px;
+    float:left;
+    margin-top: 11px;
+    margin-left: 10px;
+    color: Gray;
+}
+
+#divSinAmbito img{
+    float:left;
+    margin-left:20px;
+    margin-top:10px;
+}
+
+
+#imgAprobador {
+    top:-27px;
+    width:47px;
+    height:47px;
+}
+
+#imgAceptador {
+    top:-12px;
+    width:47px;
+    height:47px;
+}
+#imgAmbito {
+    top:-12px;
+    width:47px;
+    height:47px;
+}
+#ambito {
+    position:absolute;
+    top:3px;
+    left:87px;
+    font-size:16px;
+    color:#5894ae;
+}

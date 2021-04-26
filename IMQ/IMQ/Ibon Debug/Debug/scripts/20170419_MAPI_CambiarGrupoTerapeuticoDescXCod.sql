@@ -1,0 +1,39 @@
+DECLARE @itemId INT;
+DECLARE @therapeuticGroup nvarchar(50);
+DECLARE @therapeuticGroupAnt nvarchar(200);
+DECLARE grupo_terapeutico CURSOR
+FOR SELECT I.ID, IG.Code, I.TherapeuticGroup
+FROM ITEM I
+inner join ItemGroup IG ON IG.Description=I.TherapeuticGroup
+WHERE I.ID not in (select i.id from Item i where TherapeuticGroup in(
+select ig.Description from ItemGroup ig group by ig.Description having COUNT(ig.Description)>1))
+FOR UPDATE;
+OPEN grupo_terapeutico
+FETCH NEXT FROM grupo_terapeutico 
+INTO @itemId, @therapeuticGroup,@therapeuticGroupAnt
+WHILE @@FETCH_STATUS = 0
+BEGIN
+	PRINT 'MEDICAMENTO ' + CONVERT(CHAR,@itemId) + ' ESTE ' + @therapeuticGroupAnt + ' POR ' +@therapeuticGroup
+	UPDATE [ITEM] SET
+	TherapeuticGroup = @therapeuticGroup
+	WHERE ID = @itemId
+	FETCH NEXT FROM grupo_terapeutico 
+	INTO @itemId, @therapeuticGroup,@therapeuticGroupAnt
+END
+CLOSE grupo_terapeutico;
+DEALLOCATE grupo_terapeutico;
+
+UPDATE ITEM SET THERAPEUTICGROUP='S02CA' WHERE CODE ='6547717'
+UPDATE ITEM SET THERAPEUTICGROUP='J01XE' WHERE CODE ='6634134'
+UPDATE ITEM SET THERAPEUTICGROUP='J01XE' WHERE CODE ='6634141'
+UPDATE ITEM SET THERAPEUTICGROUP='S03CA' WHERE CODE ='6720967'
+UPDATE ITEM SET THERAPEUTICGROUP='S02CA' WHERE CODE ='8311316'
+UPDATE ITEM SET THERAPEUTICGROUP='S02CA' WHERE CODE ='9038311'
+UPDATE ITEM SET THERAPEUTICGROUP='S02CA' WHERE CODE ='6547717U'
+UPDATE ITEM SET THERAPEUTICGROUP='J01XE' WHERE CODE ='6634134U'
+UPDATE ITEM SET THERAPEUTICGROUP='J01XE' WHERE CODE ='6634141U'
+UPDATE ITEM SET THERAPEUTICGROUP='S03CA' WHERE CODE ='6720967U'
+UPDATE ITEM SET THERAPEUTICGROUP='S02CA' WHERE CODE ='8311316U'
+UPDATE ITEM SET THERAPEUTICGROUP='S02CA' WHERE CODE ='9038311U';
+
+alter table druginfo drop column TherapeuticGroup;

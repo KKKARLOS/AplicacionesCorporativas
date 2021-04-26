@@ -1,0 +1,2 @@
+USE [HCDIS]
+TRUNCATE TABLE ResourceReservedRel

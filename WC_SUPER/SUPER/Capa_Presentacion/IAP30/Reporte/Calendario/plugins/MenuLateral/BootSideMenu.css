@@ -1,0 +1,213 @@
+.sidebar{
+      z-index: 1050;
+      position: fixed;
+      top: -0.1rem;
+      bottom: -0.1rem;
+      padding:0px;
+      width: auto;
+      background-color: #fff;
+      -webkit-background-clip: padding-box;
+      background-clip: padding-box;
+      border: 0.1rem solid #ccc;
+      border: 0.1rem solid rgba(0, 0, 0, .15);
+      -webkit-box-shadow: 0 0.6rem 1.2rem rgba(0, 0, 0, .175);
+      box-shadow: 0 0.6rem 1.2rem rgba(0, 0, 0, .175);
+
+}
+
+.sidebar > .row > .col-xs-12, .sidebar > .row > .col-sm-12, .sidebar > .row > .col-md-12, .sidebar > .row > .col-lg-12{
+      padding:0rem;
+      position: absolute;
+      bottom: 0rem;
+      top: 0rem;
+      overflow: auto;    
+		
+}
+
+.sidebar >.row{
+      margin:0rem;
+}
+
+.sidebar {
+      width: 95%;
+	  height: 100%;
+}
+.sidebar.sidebar-left{
+      left:0;
+      /*right:20px;*/
+}
+
+.sidebar.sidebar-right{
+      right:0;
+      /*left:20px;*/
+}
+
+#slideImp .panel-info .panel-heading{
+	height:6rem;
+	/*padding-top: 20px;*/
+}
+
+#slideImp .panel-footer {
+    padding: 0;
+}
+
+#slideImp .badge {
+    min-width: 80px;
+}
+
+#slideImp .panel-footer .badge {
+    float: right;
+}
+
+#slideImp .panel-footer .list-group-item {
+    background-color: #D8D0D0;
+    padding-bottom: 1rem;
+}
+
+@media (min-width: 400px) {
+}
+@media (min-width: 528px) {
+      .sidebar {
+            width: 95%;
+      }
+      .sidebar.sidebar-left{
+            left:0;
+            right:auto;
+      }
+
+      .sidebar.sidebar-right{
+            right:0;
+            left:auto;
+      }
+}
+@media (min-width: 768px) {
+      .sidebar {
+            width: 95%;
+      }
+      .sidebar.sidebar-left{
+            left:0;
+            right:auto;
+      }
+
+      .sidebar.sidebar-right{
+            right:0;
+            left:auto;
+      }
+	  
+}
+@media (min-width: 992px) {
+      .sidebar {
+            width: 95%;
+      }
+      .sidebar.sidebar-left{
+            left:0;
+            right:auto;
+      }
+
+      .sidebar.sidebar-right{
+            right:0;
+            left:auto;
+      }
+	  
+}
+@media (min-width: 1200px) {
+      .sidebar {
+            width: 40%;
+      }
+      .sidebar.sidebar-left{
+            left:0;
+            right:auto;
+      }
+
+      .sidebar.sidebar-right{
+            right:0;
+            left:auto;
+      }
+	  
+}
+.toggler{
+      -webkit-background-clip: padding-box;
+      background-clip: padding-box;
+      border: 0.1rem solid #ccc;
+      border: 0.1rem solid rgba(0, 0, 0, .15);
+      width: 2rem;
+      height: 4.8rem;
+      position: absolute;
+      top: 45%;
+      cursor: pointer;
+}
+.sidebar-left > .toggler{
+      -webkit-border-top-right-radius: 0.4rem;
+      -webkit-border-bottom-right-radius: 0.4rem;
+      -moz-border-radius-topright: 0.4rem;
+      -moz-border-radius-bottomright: 0.4rem;
+      border-top-right-radius: 0.4rem;
+      border-bottom-right-radius: 0.4rem;
+      border-left: 0.1rem solid #fff;
+      -webkit-box-shadow: 0.1rem 0rem 0.8rem rgba(0, 0, 0, .175);
+      box-shadow: 0.1rem 0rem 0.8rem rgba(0, 0, 0, .175);
+      right: -2rem;
+} 
+
+.sidebar-left > .toggler > span{
+      margin:1.5rem 0.2rem;
+}
+
+.sidebar-left > .toggler > .glyphicon-chevron-right{
+      display:none;
+}
+
+.sidebar-right > .toggler{
+      -webkit-border-top-left-radius: 0.4rem;
+      -webkit-border-bottom-left-radius: 0.4rem;
+      -moz-border-radius-topleft: 0.4rem;
+      -moz-border-radius-bottomleft: 0.4rem;
+      border-top-left-radius: 0.4rem;
+      border-bottom-left-radius: 0.4rem;
+      border-right: 0.1rem solid #fff;
+      -webkit-box-shadow:  0.1rem 0rem 0.8rem rgba(0, 0, 0, .175);
+      box-shadow: -0.1rem 0rem 0.8rem rgba(0, 0, 0, .175); 		
+      left: -2rem
+} 
+
+.sidebar-right > .toggler > span{
+      margin:1.5rem 0.2rem;
+}
+
+.sidebar-right > .toggler > .glyphicon-chevron-left{
+      display:none;
+}
+
+.sidebar .submenu{
+      display: none;
+      position: fixed;
+} 
+
+/*Native BootStrap Hack*/
+/*.sidebar .list-group-item:last-child, .sidebar .list-group-item:first-child{
+      border-radius:0px;
+}*/
+
+.sidebar .panel-body{
+	/*padding:0;*/
+	padding-left:1rem;
+    height: 60vh;
+}
+
+.sidebar .list-group-item{
+      border-radius:0;
+	  border:0;
+}
+
+.sidebar .list-group{
+      margin-bottom:0;
+}
+.sidebar .list-group-item{
+      padding: 1rem;
+      padding-bottom: 2rem;
+      border: 0.1rem solid #DDD;
+      border-left: 0;
+      border-right: 0;
+      margin-bottom: 0;
+      margin-top: -0.1rem;
+}

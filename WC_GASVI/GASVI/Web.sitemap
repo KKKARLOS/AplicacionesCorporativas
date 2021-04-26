@@ -1,0 +1,88 @@
+﻿<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode url="~" title="" description="">
+
+    <siteMapNode title="Archivo" roles="*" >
+        <siteMapNode url="~/Capa_Presentacion/Inicio/Default.aspx" roles="*" title="Inicio" />
+        <siteMapNode url="~/Capa_Presentacion/Archivo/Reconexion/Default.aspx" roles="REC" title="Reconexión" description="Opción de reconectarse como otro usuario" />
+        <siteMapNode roles="*" title="&lt;sup&gt;&lt;sup&gt;____________________&lt;/sup&gt;&lt;/sup&gt;" description="" />
+        <siteMapNode url="~/Capa_Presentacion/Archivo/Configuracion/Default.aspx" roles="*" title="Configuración personal" description="" />
+        <siteMapNode roles="*" title="&lt;sup&gt;&lt;sup&gt;____________________&lt;/sup&gt;&lt;/sup&gt;" description="" />
+        <siteMapNode url="javascript:goSUPER();" roles="*" title="Acceder a SUPER" description="" />
+        <siteMapNode roles="*" title="&lt;sup&gt;&lt;sup&gt;____________________&lt;/sup&gt;&lt;/sup&gt;" description="" />
+        <siteMapNode url="javascript:salir();" roles="*" title="Salir" description="Salir de la aplicación" />
+    </siteMapNode>
+
+    <siteMapNode title="Opciones" roles="" >
+      <siteMapNode roles="*" title="Nuevo" >
+        <siteMapNode url="~/Capa_Presentacion/NotaEstandar/Default.aspx" roles="*" title="Nota estándar" />
+        <siteMapNode roles="*" title="Atípicos" />
+          <siteMapNode url="~/Capa_Presentacion/BonoTransporte/Default.aspx" roles="*" title="Bono de transporte" />
+          <siteMapNode url="~/Capa_Presentacion/PagoConcertado/Default.aspx" roles="*" title="Pago concertado" />
+      </siteMapNode>
+    </siteMapNode>
+
+    <siteMapNode title="Consultas" roles="" >
+    </siteMapNode>
+
+    <!-- 
+    <siteMapNode title="Administración" roles="A" >
+      <siteMapNode title="Mantenimientos" roles="*" >          
+        <siteMapNode url="~/Capa_Presentacion/Mantenimiento/Figuras/Default.aspx" roles="*" title="Figuras" description="" />
+        <siteMapNode url="~/Capa_Presentacion/Mantenimiento/AnnoGasto/Default.aspx" roles="*" title="Año gasto" description="" />
+        <siteMapNode url="~/Capa_Presentacion/Mantenimiento/BonoTransporte/Default.aspx" roles="*" title="Bono transporte" description="" />
+        <siteMapNode url="~/Capa_Presentacion/Mantenimiento/ImportesConvenio/Default.aspx" roles="*" title="Importes convenio" description="" />
+        <siteMapNode url="~/Capa_Presentacion/Mantenimiento/Acuerdo/Default.aspx" roles="*" title="Acuerdos" description="" />
+        <siteMapNode url="~/Capa_Presentacion/Mantenimiento/Monedas/Default.aspx" roles="*" title="Monedas" description="" />
+        <siteMapNode url="~/Capa_Presentacion/Mantenimiento/Motivos/Default.aspx" roles="*" title="Motivos" description="" />
+        <siteMapNode url="~/Capa_Presentacion/Mantenimiento/ExcepcionesAuto/Default.aspx" roles="*" title="Excepciones autorización" description="" />
+        <siteMapNode url="~/Capa_Presentacion/Mantenimiento/MotivoEx/Default.aspx" roles="*" title="Motivos por excepción" description="" />
+        <siteMapNode url="~/Capa_Presentacion/Mantenimiento/OficinaLiquidacion/Default.aspx" roles="*" title="Oficinas de liquidación" description="" />
+        <siteMapNode url="~/Capa_Presentacion/Mantenimiento/Autorresponsables/Default.aspx" roles="*" title="Autorresponsables" description="" />
+        <siteMapNode url="~/Capa_Presentacion/Mantenimiento/CentrosCoste/Default.aspx" roles="*" title="Centros de coste" description="" />
+        <siteMapNode title="Textos de ayuda" roles="*">
+          <siteMapNode url="~/Capa_Presentacion/Mantenimiento/Tooltips/Default.aspx?t=0" roles="*" title="Dieta completa" description="" />
+          <siteMapNode url="~/Capa_Presentacion/Mantenimiento/Tooltips/Default.aspx?t=1" roles="*" title="Media dieta" description="" />
+          <siteMapNode url="~/Capa_Presentacion/Mantenimiento/Tooltips/Default.aspx?t=2" roles="*" title="Dieta especial" description="" />
+          <siteMapNode url="~/Capa_Presentacion/Mantenimiento/Tooltips/Default.aspx?t=3" roles="*" title="Dieta de alojamiento" description="" />
+          <siteMapNode url="~/Capa_Presentacion/Mantenimiento/Tooltips/Default.aspx?t=4" roles="*" title="Peaje y aparcamientos" description="" />
+          <siteMapNode url="~/Capa_Presentacion/Mantenimiento/Tooltips/Default.aspx?t=5" roles="*" title="Comidas e invitaciones" description="" />
+          <siteMapNode url="~/Capa_Presentacion/Mantenimiento/Tooltips/Default.aspx?t=6" roles="*" title="Transporte" description="" />
+          <siteMapNode url="~/Capa_Presentacion/Mantenimiento/Tooltips/Default.aspx?t=7" roles="*" title="Disposiciones generales" description="" />
+          <siteMapNode url="~/Capa_Presentacion/Mantenimiento/Tooltips/Default.aspx?t=8" roles="*" title="Distancias estándares" description="" />
+        </siteMapNode>
+      </siteMapNode>
+      <siteMapNode title="Consultas" roles="*" />
+    </siteMapNode>
+    -->
+    <siteMapNode title="Ayuda" roles="*" >
+        <siteMapNode url="~/Capa_Presentacion/Ayuda/Contacto/Default.aspx" roles="*" title="Contacto" description="" />
+        <siteMapNode roles="*" title="Guía" description="">
+            <siteMapNode url="javascript:mostrarAyuda(1);" roles="*" title="Aspectos generales" description="" />
+            <siteMapNode url="javascript:mostrarAyuda(2);" roles="*" title="Figuras" description="" />
+            <siteMapNode url="javascript:mostrarAyuda(3);" roles="*" title="Circuito de aprobación" description="" />
+            <siteMapNode url="javascript:mostrarAyuda(4);" roles="*" title="Justificantes" description="" />
+            <siteMapNode url="javascript:mostrarAyuda(5);" roles="*" title="Aprobación" description="" />
+            <siteMapNode url="javascript:mostrarAyuda(6);" roles="*" title="Aceptación" description="" />
+            <siteMapNode  roles="*" title="Tipos de solicitud" description="">
+                <siteMapNode url="javascript:mostrarAyuda(7);" roles="*" title="Estándar" description="" />
+                <siteMapNode url="javascript:mostrarAyuda(8);" roles="*" title="Multiproyecto" description="" />
+                <siteMapNode url="javascript:mostrarAyuda(9);" roles="*" title="Bono de transporte" description="" />
+                <siteMapNode url="javascript:mostrarAyuda(10);" roles="*" title="Pago concertado" description="" />
+            </siteMapNode>
+        </siteMapNode>
+        <siteMapNode url="~/Capa_Presentacion/Ayuda/Avisos/Default.aspx" roles="*" title="Comunicados de Administración" description="" />
+    </siteMapNode>
+
+    <siteMapNode title="Pruebas" roles="DIS" >
+      <siteMapNode url="~/Capa_Presentacion/Pruebas/Calculadora/Default.aspx" roles="*" title="Calculadora" description="" />
+      <siteMapNode url="~/Capa_Presentacion/Pruebas/ServidorOutlook/Default.aspx" roles="*" title="SMTP" description="SMTP" />
+      <siteMapNode url="~/Capa_Presentacion/Pruebas/Treeview/Default7.aspx" roles="*" title="Treeview" description="Treeview" />
+        <siteMapNode url="~/Capa_Presentacion/Pruebas/Treeview/Treeview3/Default.aspx" roles="*" title="Treeview3" description="Treeview3" />
+      <siteMapNode url="~/Capa_Presentacion/Pruebas/Treeview/treeview2/Default.aspx" roles="*" title="Treeview2" description="Treeview2" />
+      <siteMapNode url="~/Capa_Presentacion/Pruebas/DateRangePicker/Default.aspx" roles="*" title="Date Range Picker" description="" />
+        <siteMapNode url="~/Capa_Presentacion/Pruebas/Calendario/Default.aspx" roles="*" title="Calendario" description="" />
+        <siteMapNode url="~/Capa_Presentacion/Pruebas/Calendario/Default2.aspx" roles="*" title="Calendario2" description="" />
+    </siteMapNode>
+
+  </siteMapNode>
+</siteMap>

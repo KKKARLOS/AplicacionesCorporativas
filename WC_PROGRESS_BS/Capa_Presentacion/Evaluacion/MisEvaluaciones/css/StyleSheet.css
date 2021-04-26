@@ -1,0 +1,73 @@
+﻿.container {
+    width:970px !important;
+    
+}
+
+/*div.panel-body {
+    max-height:45vh;
+    overflow: auto;
+}*/
+
+#tbdEval {
+    cursor:pointer;
+}
+
+
+.bsAlert {
+    width:auto !important;
+}
+
+
+#tbdEval > tr.active {
+    background-color:#D8D8D8 !important;
+}
+
+/*Tenemos que heredar la clase activa del padre(tr)*/
+#tbdEval > tr.active > td {
+    background-color:inherit;
+}
+
+/*Para resoluciones mayores*/
+@media (min-width: 1200px) {
+    .container {
+        width:1170px !important;
+    }
+}
+
+/*#tbdEval > tr > td:nth-child(1) {
+    width:38px;
+}*/
+
+
+/*@media only screen and (max-device-height:768px) {
+    .header-fixed > tbody {
+        overflow-y: auto;
+        height: 300px;
+}
+
+}*/
+
+/* iPads (portrait and landscape) ----------- */
+/*@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) { 
+     .header-fixed > tbody {
+        overflow-y: auto;
+        height: 300px;
+    }
+}*/
+
+
+/* iPads (portrait) ----------- */
+/*@media only screen and (orientation : portrait) {
+
+    .container, nav {
+        width:100vw !important;
+    }
+
+   
+    
+    .header-fixed > tbody {
+        overflow-y: auto;
+        height: 500px;
+    }
+}*/
+

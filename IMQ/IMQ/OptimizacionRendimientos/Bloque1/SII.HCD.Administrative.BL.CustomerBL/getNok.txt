@@ -1,0 +1,131 @@
+      public NOKEntity GetNOK(int nokID)
+        {
+            try
+            {
+                NOKAdapter nokAdapter = new NOKAdapter();
+                PersonBL personBL = new PersonBL();
+
+                DataSet ds = _nokDA.GetNOK(nokID);
+                if ((ds.Tables != null) && (ds.Tables.Contains(SII.HCD.Administrative.Entities.TableNames.NOKTable)) && (ds.Tables[SII.HCD.Administrative.Entities.TableNames.NOKTable].Rows.Count > 0))
+                {
+                    int personID = SIIConvert.ToInteger(ds.Tables[SII.HCD.Administrative.Entities.TableNames.NOKTable].Rows[0]["PersonID"].ToString(), 0);
+                    int kinshipID = SIIConvert.ToInteger(ds.Tables[SII.HCD.Administrative.Entities.TableNames.NOKTable].Rows[0]["KinshipID"].ToString(), 0);
+
+                    DataSet ds2;
+
+                    #region Kinships
+                    ds2 = _kinshipDA.GetKinshipByID(kinshipID);
+                    if ((ds2 != null) && (ds2.Tables.Contains(SII.HCD.Administrative.Entities.TableNames.KinshipTable)))
+                    {
+                        DataTable dt = ds2.Tables[SII.HCD.Administrative.Entities.TableNames.KinshipTable].Copy();
+                        ds.Tables.Add(dt);
+                    }
+                    #endregion
+
+                    #region Person
+                    if (personID <= 0)
+                    {
+                        throw new Exception(Properties.Resources.ERROR_NOKPersonNotFound);
+                    }
+                    SII.HCD.BackOffice.Entities.PersonEntity myPerson = personBL.GetPerson(personID);
+                    #endregion
+
+                    NOKEntity result = nokAdapter.GetInfo(ds.Tables[SII.HCD.Administrative.Entities.TableNames.NOKTable].Rows[0], ds);
+                    result.Person = myPerson;
+                    LOPDLogger.Write(EntityNames.NOKEntityName, nokID, ActionType.View);
+                    return result;
+                }
+                else
+                    return null;
+            }
+            catch (Exception ex)
+            {
+                if (ExceptionPolicy.HandleException(ex, ExceptionPolicies.Service)) throw;
+                return null;
+            }
+        }
+        #endregion
+    }
+
+NOKDA.CS        
+		
+		public DataSet GetNOK(int id)
+        {
+            try
+            {
+                return this.Gateway.ExecuteQueryDataSet(SQLProvider.GetNOKCommand, TableNames.NOKTable,
+                    new StoredProcInParam("ID", DbType.Int32, id));
+            }
+            catch (Exception ex)
+            {
+                if (ExceptionPolicy.HandleException(ex, ExceptionPolicies.DataAccess)) throw;
+                else return null;
+            }
+        } 
+
+       public DataSet GetNOK(int id)
+       {
+            try
+            {
+                SqlParameter[] aParam = new SqlParameter[]{
+						ParametroSql.add("@ID", SqlDbType.Int, 4, id)
+					};
+                DataSet ds = SqlHelper.ExecuteDataset("ObtenerNOK", aParam);
+
+                if (ds.Tables.Count != 0)
+                {
+                    int i = 0;
+
+                    ds.Tables[i++].TableName = Administrative.Entities.TableNames.NOKTable;
+                    ds.Tables[i++].TableName = Administrative.Entities.TableNames.KinshipTable;
+                    return ds;
+                }
+                else return null;
+            }
+            catch (Exception ex)
+            {
+                if (ExceptionPolicy.HandleException(ex, ExceptionPolicies.DataAccess)) throw;
+                else return null;
+            }
+        }		
+		
+		
+		
+        public static string GetNOKCommand
+        {
+            get
+            {
+                return "SELECT [ID], PersonID, KinshipID, CustomerID, UrgentContact, AlternativeContact, " + Environment.NewLine +
+                       "LastUpdated, ModifiedBy, CAST(DBTimeStamp as bigint) DBTimeStamp" + Environment.NewLine +
+                       "FROM NOK WHERE [ID]=@ID";
+            }
+        }		
+		
+Kinshipda.cs
+
+        public DataSet GetKinshipByID(int id)
+        {
+            try
+            {
+                return this.Gateway.ExecuteQueryDataSet(SQLProvider.GetKinshipByIDCommand, TableNames.KinshipTable,
+                     new StoredProcInParam("ID", DbType.Int32, id));
+            }
+            catch (Exception ex)
+            {
+
+                if (ExceptionPolicy.HandleException(ex, ExceptionPolicies.DataAccess)) throw;
+                else return null;
+            }
+        }
+		
+
+        public static String GetKinshipByIDCommand
+        {
+            get
+            {
+                return "SELECT [ID], [Code], [Name], [Description], CAST(DBTimeStamp as bigint) DBTimeStamp" + Environment.NewLine +
+                        "FROM Kinship" + Environment.NewLine +
+                        "WHERE ([ID]=@ID)";
+            }
+        }		
+		

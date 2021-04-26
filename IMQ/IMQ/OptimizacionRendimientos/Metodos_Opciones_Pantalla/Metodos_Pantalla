@@ -1,0 +1,41 @@
+BLOQUE 1
+
+	- GetHHRR(int hhrrID)
+	
+			- Después de logarte a la aplicación se llama al método varias veces.
+			- Explorador de aplicaciones / BackOffice /Recursos y Actores / RRHH
+			
+	- GetPerson(int personID)
+	
+			- Después de logarte a la aplicación se llama al método varias veces
+			- Explorador de aplicaciones / BackOffice /Recursos y Actores / RRHH
+			
+	- GetCustomer(int customerID, bool getNOKs, bool getCCPs, bool getCCOs)		
+
+			- Explorador de aplicaciones / Administrativo /Mantenimiento de clientes / Pacientes
+			
+	- GetCustomerByPersonID(int personID)
+
+			- Admisión / Asistente de registro de pacientes (Indicar Ingresos y buscar pacientes. Por ejemplo Atorrasagasti)
+			
+BLOQUE 2
+
+	- GetFullCustomerEpisode(int id, bool showOutdatedCoverAgrees)
+		
+			- Explorador de aplicaciones / Administrativo / Hospitalización
+			
+				Desde el catálogo al marcar un paciente se activa el botón de 'Traslado'. Pulsarlo.
+
+	- GetCustomerOrderRequest(int id, bool applyLOPD)
+			
+			- Explorador de aplicaciones / Administrativo /Procesos administrativos / Planificador de cita - Radiología / Selección de ubicaciones (Agendas - Marcar Ubicación)
+			  Al lado de los calendarios pulsar el botón de 'Solicitudes Pendientes'. Luego en los filtros poner en Desde Fecha una fecha antigua y luego pulsar refrescar.
+			  De los pacientes que se muestran en el catálogo marcas uno y luego pulsas el botón 'Modificar Solicitud'
+				
+	- GetCustomerOrderRequestsByParentCustomerOrderRequestID(int parentCustomerOrderRequestID, bool applyLOPD)
+	
+	
+	- GetCustomerPreAssessment(int id)
+	
+			- Explorador de aplicaciones / Asistenciales / Censo de Enfermeria / Ubicación (Urgencias Generales) / 
+			Desde el catálogo clickear un paciente y luego al botón de Triaje

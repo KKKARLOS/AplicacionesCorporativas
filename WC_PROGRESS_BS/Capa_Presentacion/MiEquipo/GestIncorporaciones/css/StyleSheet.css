@@ -1,0 +1,169 @@
+﻿.container {
+    width:970px !important;
+}
+
+table > thead > tr > th {
+    border-bottom:0 !important;
+}
+
+.tooltip-inner {    
+    display:inline;
+}
+
+
+/* tablaMiEquipo HEADER FIXED*/
+#tablaMiEquipo.header-fixed {
+    width: 100%;
+}
+
+    #tablaMiEquipo.header-fixed > thead,
+    #tablaMiEquipo.header-fixed > tbody,
+    #tablaMiEquipo.header-fixed > thead > tr,
+    #tablaMiEquipo.header-fixed > tbody > tr,
+    #tablaMiEquipo.header-fixed > thead > tr > th,
+    #tablaMiEquipo.header-fixed > tbody > tr > td {
+        display: block;
+    }
+
+
+
+#tablaMiEquipo thead {
+    width: 100%; /* scrollbar is average 1em/16px width, remove it from thead width */
+}
+
+#tablaMiEquipo.header-fixed > tbody > tr:after,
+#tablaMiEquipo.header-fixed > thead > tr:after {
+    content: ' ';
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+
+/*Alto del contenedor de la tabla (tbody)*/
+#tablaMiEquipo.header-fixed > tbody {
+    overflow-y: auto;
+    height: 50vh;
+}
+
+/*COLUMNA 1*/
+
+#tablaMiEquipo.header-fixed > tbody > tr > td:nth-child(1) {
+    width: 100%;
+    float: left;
+    height:29px;
+}
+
+#tablaMiEquipo.header-fixed > thead > tr > th:nth-child(1) {
+    width: 100%;
+    float: left;
+    height:29px;
+}
+
+/*FIN tablaMiEquipo HEADER FIXED*/
+
+
+/*Table Incorporaciones HEADER FIXED*/
+#tablaIncorporaciones.header-fixed {
+    width: 100%;
+}
+
+    #tablaIncorporaciones.header-fixed > thead,
+    #tablaIncorporaciones.header-fixed > tbody,
+    #tablaIncorporaciones.header-fixed > thead > tr,
+    #tablaIncorporaciones.header-fixed > tbody > tr,
+    #tablaIncorporaciones.header-fixed > thead > tr > th,
+    #tablaIncorporaciones.header-fixed > tbody > tr > td {
+        display: block;
+    }
+
+
+
+#tablaIncorporaciones thead {
+    width: 100%; /* scrollbar is average 1em/16px width, remove it from thead width */
+}
+
+#tablaIncorporaciones.header-fixed > tbody > tr:after,
+#tablaIncorporaciones.header-fixed > thead > tr:after {
+    content: ' ';
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+
+/*Alto del contenedor de la tabla (tbody)*/
+#tablaIncorporaciones.header-fixed > tbody {
+    overflow-y: auto;
+    height: 45vh;
+}
+
+/*COLUMNA 1*/
+
+#tablaIncorporaciones.header-fixed > tbody > tr > td:nth-child(1) {
+    width: 35%;
+    float: left;
+    
+}
+
+#tablaIncorporaciones.header-fixed > thead > tr > th:nth-child(1) {
+    width: 35%;
+    float: left;
+    
+}
+
+#tablaIncorporaciones.header-fixed > tbody > tr > td:nth-child(2) {
+    width: 35%;
+    float: left;
+    
+}
+
+#tablaIncorporaciones.header-fixed > thead > tr > th:nth-child(2) {
+    width: 35%;
+    float: left;
+    
+}
+
+
+#tablaIncorporaciones.header-fixed > tbody > tr > td:nth-child(3) {
+    width: 20%;
+    float: left;
+    
+}
+
+#tablaIncorporaciones.header-fixed > thead > tr > th:nth-child(3) {
+    width: 20%;
+    float: left;
+    
+}
+
+#tablaIncorporaciones.header-fixed > tbody > tr > td:nth-child(4) {
+    width: 10%;
+    float: left;
+    
+}
+
+#tablaIncorporaciones.header-fixed > thead > tr > th:nth-child(4) {
+    width: 10%;
+    float: left;    
+}
+
+
+/*FIN Table Incorporaciones HEADER FIXED*/
+
+
+/*@media only screen and (max-device-height:768px){
+    #divpietablaIncorporaciones span {
+        font-size:0.9em;
+    }
+
+     #tablaMiEquipo.header-fixed > tbody , #tablaIncorporaciones.header-fixed > tbody  {
+        overflow-y: auto;
+        max-height: 320px;
+    }
+}*/
+
+
+@media (min-width: 1200px) {
+    .container {
+        width:1170px !important;
+    }
+}

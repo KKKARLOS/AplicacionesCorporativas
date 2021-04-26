@@ -1,0 +1,28 @@
+﻿
+.badge {margin-left:5px;}
+form label {font-weight: normal;}
+.modal-dialog { overflow-y: initial !important;}
+#modalDocumentacionCatalogo .modal-body { height: 85vh; }
+.card-title {padding-right: 10px;}
+.card .fa { padding-left: 10px;}   
+.card-subtitle span {padding-right: 10px;}
+/*Altura de la lista de ficheros*/
+.h65vh { height: 65vh !important;}
+#divDetalleDocumento .list-group {height:40vh !important;}
+/*Creamos la flecha de la lista de ficheros*/
+a.list-group-item::before {
+    font-family: FontAwesome;
+    content: "";
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    font-size: 14px;
+    line-height: 14px;
+    margin-top: -7px;
+    color: rgb(204, 204, 204);
+}
+/*Cambiamos los font awsome de los elementos activos (por contraste)*/
+a.list-group-item.active i {color:#FFFFFF;}
+#modalDocumentacionEdicion label {  font-weight:normal;}
+#mde-fileuploaderplugin { padding-top:5px; }
+#mde-fileuploaderplugin { padding-top:5px; }

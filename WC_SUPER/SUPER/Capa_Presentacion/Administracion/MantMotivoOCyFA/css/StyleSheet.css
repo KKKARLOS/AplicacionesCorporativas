@@ -1,0 +1,48 @@
+﻿
+/*Header fixed de la tabla de la pantalla*/
+/*Alto del contenedor de la tabla (tbody)*/
+.header-fixed > tbody {
+    overflow-y: auto;
+    max-height: 300px;
+}
+.numericCol{
+  text-align:right;
+}
+/*Linea seleccionada en la tabla*/
+.activa {
+    background-color: #d9edf7 !important;
+}
+.container {visibility: hidden;}
+.ibox-title {
+    border-style: none solid none;
+    padding: 0px 15px 7px;
+}
+/*Sobreescritura datatable buttons*/
+.fa-file-excel-o {
+    color:#1f985c;
+}
+
+#tablaAsunto_filter{
+    float:left;
+    font-size: 12px;
+    padding-left: 0px;
+}
+#tablaAsunto{
+    cursor: pointer;
+}
+
+.row {
+    margin-bottom: 15px;
+}
+
+#tabla_filter {
+    float: left;
+    font-size: 12px;
+    padding-left: 15px;
+}
+
+.dt-buttons {
+    position: relative;
+    float: left;
+    padding-right: 15px;
+}

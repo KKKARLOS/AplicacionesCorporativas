@@ -1,0 +1,1 @@
+UPDATE [Profile] SET [Status]=1 WHERE [Status]=0

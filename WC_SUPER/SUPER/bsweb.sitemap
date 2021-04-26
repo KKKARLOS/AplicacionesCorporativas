@@ -1,0 +1,628 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode url="~" title="" description="">
+    <siteMapNode title="Archivo" roles="*" >
+      <siteMapNode url="~/Capa_Presentacion/bsInicio/Default.aspx" roles="*" title="Inicio" description="" />
+      <siteMapNode url="~/Capa_Presentacion/Archivo/Reconexion/Default.aspx" roles="REC,DIS" title="Reconexión" description="Opción de reconectarse como otro usuario" />
+      <siteMapNode url="~/Capa_Presentacion/bsInicio/Default.aspx?sUS=0" roles="USUMULT" title="Selección de usuario" description="" />
+      <siteMapNode url="~/Capa_Presentacion/Archivo/MisConsultas/Default.aspx" roles="MISCONS" title="Mis consultas" description="Consultas personalizadas" />
+      <siteMapNode url="~/Capa_Presentacion/Archivo/Conexiones/Default.aspx" roles="" title="Actividad registrada" description="" />
+      <siteMapNode url="~/Capa_Presentacion/Archivo/ConexionesGrafico/Default.aspx" roles="T" title="Actividad registrada" description="" />
+      <siteMapNode roles="T" divider="1" title="&lt;sup&gt;&lt;sup&gt;____________________&lt;/sup&gt;&lt;/sup&gt;" description="" />
+      <siteMapNode url="~/Capa_Presentacion/Archivo/Configuracion/Default.aspx" roles="T" title="Configuración personal" description="" />
+      <siteMapNode url="~/Capa_Presentacion/bsInicio/Default.aspx?sMB=M" roles="T" title="Mensaje de bienvenida" description="Presenta el mensaje de bienvenida" />
+      <siteMapNode roles="T" divider="1" title="&lt;sup&gt;&lt;sup&gt;____________________&lt;/sup&gt;&lt;/sup&gt;" description="" />
+      <siteMapNode id="goGasvi" roles="T" title="Acceder a GASVI" description="" />
+      <siteMapNode roles="*" divider="1" title="&lt;sup&gt;&lt;sup&gt;____________________&lt;/sup&gt;&lt;/sup&gt;" description="" />
+      <siteMapNode url="javascript:close();" roles="*" title="Salir" description="Salir de la aplicación" />
+    </siteMapNode>
+      
+    <siteMapNode title="SIC" id="menuSIC" description="Sistema de Información Comercial" roles="A,DIS,COMS,VSF,RAPREV, DAPREV, CAPREV, IAPREV, RSAPREV, DSAPREV, CSAPREV, LACCPREV, LSAPREV, PTARPREV">
+      
+      <siteMapNode url="~/Capa_Presentacion/ECO/BBII/Default.aspx?o=sic" roles="A,DIS,COMS,VSF" title="Cuadro de mando" description="" />
+      
+      <siteMapNode title="Preventa" description="Preventa" roles="RAPREV, DAPREV, CAPREV, IAPREV, RSAPREV, DSAPREV, CSAPREV, LACCPREV, LSAPREV, PTARPREV">
+
+        <siteMapNode title="Responsable área/subárea" id="" description="Responsable área/subárea" roles="RAPREV, DAPREV, CAPREV, IAPREV, RSAPREV, DSAPREV, CSAPREV">
+          <siteMapNode url="~/Capa_Presentacion/SIC/Accion/CatalogoFigAreaSubarea/Default.aspx?b3JpZ2VubWVudT1TSUNfUkFT" roles="RAPREV, DAPREV, CAPREV, IAPREV, RSAPREV, DSAPREV, CSAPREV" title="Acciones bajo mi ámbito" description="" />
+          <siteMapNode url="~/Capa_Presentacion/SIC/Accion/CatalogoPdteLider/Default.aspx?b3JpZ2VubWVudT1TSUM=" roles="RSAPREV, DSAPREV, CSAPREV" title="Acciones pendientes de asignar líder" description="" />
+          <siteMapNode url="~/Capa_Presentacion/SIC/Solicitud/CatalogoSUPER/Default.aspx?b3JpZ2VubWVudT1TSUM=" roles="RSAPREV, DSAPREV, CSAPREV" title="Crear solicitudes y acciones" description="" />
+        </siteMapNode>
+
+        <siteMapNode title="Líder de acción" id="" description="Líder de acción" roles="LACCPREV, LSAPREV">
+          <siteMapNode url="~/Capa_Presentacion/SIC/Accion/CatalogoComoLider/Default.aspx" roles="LACCPREV, LSAPREV" title="Cuadro de mando del líder" description="" />
+          <siteMapNode url="~/Capa_Presentacion/SIC/Accion/CatalogoPosibleLider/Default.aspx" roles="LSAPREV" title="Autoasignarme líder de acciones sin líder" description="" />
+          <siteMapNode url="~/Capa_Presentacion/SIC/Accion/CatalogoFigAreaSubarea/Default.aspx?b3JpZ2VubWVudT1TSUNfTElE" roles="LACCPREV, LSAPREV" title="Acciones bajo mi ámbito" description="" />
+        </siteMapNode>
+
+        <siteMapNode title="Participante en tarea" id="" description="Participante en tarea" roles="PTARPREV">
+          <siteMapNode url="~/Capa_Presentacion/SIC/Tarea/CatalogoParticipante/Default.aspx" roles="PTARPREV" title="Mis tareas preventa en curso" description="" />
+          <siteMapNode url="~/Capa_Presentacion/SIC/Tarea/MisParticipacionesHistorico/Default.aspx" roles="PTARPREV" title="Mis participaciones en tareas" description="" />  
+        </siteMapNode>
+
+         <siteMapNode title="Exportaciones" id="" description="Exportaciones a Excel" roles="RAPREV, DAPREV, CAPREV, IAPREV, RSAPREV, DSAPREV, CSAPREV, LACCPREV">
+          <siteMapNode url="~/Capa_Presentacion/SIC/Exportaciones/Acciones/Default.aspx?b3JpZ2VubWVudT1TSUM=" roles="RAPREV, DAPREV, CAPREV, IAPREV, RSAPREV, DSAPREV, CSAPREV, LACCPREV, LSAPREV" title="Acciones" description="" />
+           <siteMapNode url="~/Capa_Presentacion/SIC/Exportaciones/CargaTrabajo/Default.aspx?b3JpZ2VubWVudT1TSUM=" roles="RAPREV, DAPREV, CAPREV, IAPREV, RSAPREV, DSAPREV, CSAPREV" title="Carga de trabajo" description="" />        
+          <siteMapNode url="~/Capa_Presentacion/SIC/Exportaciones/Tareas/Default.aspx?b3JpZ2VubWVudT1TSUM=" roles="RAPREV, DAPREV, CAPREV, IAPREV, RSAPREV, DSAPREV, CSAPREV, LACCPREV, LSAPREV" title="Tareas" description="" />
+          <siteMapNode url="~/Capa_Presentacion/SIC/Exportaciones/AccionesTareas/Default.aspx?b3JpZ2VubWVudT1TSUM=" roles="RAPREV, DAPREV, CAPREV, IAPREV, RSAPREV, DSAPREV, CSAPREV, LACCPREV, LSAPREV" title="Acciones y Tareas" description="" />
+        </siteMapNode>
+      
+        <siteMapNode title="Mantenimientos" id="" description="Mantenimientos preventa" roles="RAPREV, DAPREV, RSAPREV, DSAPREV">
+          <siteMapNode url="~/Capa_Presentacion/SIC/Mantenimientos/area-subarea/Default.aspx?b3JpZ2VubWVudT1TSUM=" roles="RAPREV, DAPREV, RSAPREV, DSAPREV" title="Áreas/Subáreas" description="" />
+          <siteMapNode url="~/Capa_Presentacion/SIC/Mantenimientos/area-subarea-masivo/Default.aspx" roles="RSAPREV, DSAPREV" title="Pool de líderes" description="" />
+        </siteMapNode>
+      
+      </siteMapNode>
+
+    </siteMapNode>
+
+    <siteMapNode title="PGE" id="menuPGE" description="Presupuesto y gestión económica" roles="T">
+      <siteMapNode title="Proyectos" roles="A,RSN4,DSN4,ISN4,GSN4,RSN3,DSN3,ISN3,GSN3,RSN2,DSN2,ISN2,GSN2,RSN1,DSN1,ISN1,GSN1,RN,DN,CN,IN,GN,RSB,DSB,ISB,GSB,RC,DC,IC,ROC,RLO,RAS,RL,DL,IL,RH,DH,IH,RQN,DQN,IQN,RQ1,DQ1,IQ1,RQ2,DQ2,IQ2,RQ3,DQ3,IQ3,RQ4,DQ4,IQ4,RP,DP,CP,SP,USA,IP,JP,GA">
+        <siteMapNode url="~/Capa_Presentacion/ECO/Proyecto/Default.aspx?sOp=nuevo" accesoHome="01" data-parent="menuPGE" roles="A,GSN4,GSN3,GSN2,GSN1,GN,GSB" title="Nuevo" description="Creación de nuevo proyecto" />
+        <siteMapNode url="~/Capa_Presentacion/ECO/Proyecto/Default.aspx?sOp=datos" accesoHome="02" data-parent="menuPGE" roles="A,RSN4,DSN4,ISN4,RSN3,DSN3,ISN3,RSN2,DSN2,ISN2,RSN1,DSN1,ISN1,RN,DN,CN,IN,RSB,DSB,ISB,RC,DC,IC,ROC,RLO,RAS,RL,DL,IL,RH,DH,IH,RQN,DQN,IQN,RQ1,DQ1,IQ1,RQ2,DQ2,IQ2,RQ3,DQ3,IQ3,RQ4,DQ4,IQ4,RP,DP,CP,USA,IP" title="Detalle" description="Datos de proyecto" />
+        <siteMapNode url="~/Capa_Presentacion/ECO/Proyecto/Borrado/Default.aspx" roles="RP,DP,CP" title="Borrado" description="Eliminación de proyecto" />
+        <siteMapNode title="USA" roles="A,USA">
+          <siteMapNode url="~/Capa_Presentacion/ECO/ProyectosUSA/Default.aspx" accesoHome="15" data-parent="menuPGE" roles="A,USA" title="Relación de proyectos" description="Relación de proyectos externalizables y externalizados" />
+          <siteMapNode url="~/Capa_Presentacion/ECO/AgendaUSA/Default.aspx?origen=menu_agen" accesoHome="14" data-parent="menuPGE" roles="A,USA" title="Agenda" description="Agenda USA" />
+          <siteMapNode url="~/Capa_Presentacion/ECO/InformeMesUSA/Default.aspx" roles="USA" title="Informe mensual" description="Informe mensual" />
+          <siteMapNode url="~/Capa_Presentacion/ECO/Proyecto/USA/Default.aspx" roles="A,USA" title="Reasignación" description="Cambio masivo de USA de proyectos" />
+          <siteMapNode title="Cierre global" roles="USA">
+            <siteMapNode url="~/Capa_Presentacion/ECO/Replica/Default.aspx?origen=menucierresat" roles="USA" title="Como SAT" description="Cierre global de los proyectos externalizados como SAT" />
+            <siteMapNode url="~/Capa_Presentacion/ECO/Replica/Default.aspx?origen=menucierresatsaa" roles="USA" title="Como SAT+SAA" description="Cierre global de los proyectos externalizados como SAT y SAA" />
+          </siteMapNode>
+        </siteMapNode>
+        <siteMapNode url="~/Capa_Presentacion/ECO/EspacioComunicacion/Default.aspx?origen=menu_espacio" accesoHome="13" data-parent="menuPGE" roles="A,RP,DP,CP,USA" title="Espacio de comunicación" description="Espacio de comunicación" />
+        <siteMapNode title="Alertas y diálogos" roles="A,GA">
+          <siteMapNode url="~/Capa_Presentacion/ECO/DialogoAlertas/DialogosGestor/Default.aspx" roles="*" title="Gestión de diálogos" description="Muestra la relación de diálogos de proyectos bajo mi ámbito de gestión" />
+          <siteMapNode url="~/Capa_Presentacion/ECO/DialogoAlertas/DialogosOCyFA/Default.aspx" roles="*" title="Diálogos cerrados de OC y FA" description="Muestra la relación de diálogos cerrados del grupo Obra en curso y Facturación anticipada" />
+          <siteMapNode url="~/Capa_Presentacion/ECO/DialogoAlertas/AlertasGestor/Default.aspx" roles="*" title="Alertas de proyectos" description="Muestra la relación de alertas de proyectos bajo mi ámbito de gestión" />
+        </siteMapNode>
+        <siteMapNode roles="A,RSN4,DSN4,ISN4,RSN3,DSN3,ISN3,RSN2,DSN2,ISN2,RSN1,DSN1,ISN1,RN,DN,CN,IN,RSB,DSB,ISB,RC,DC,IC,ROC,RLO,RAS,RL,DL,IL,RH,DH,IH,RQN,DQN,IQN,RQ1,DQ1,IQ1,RQ2,DQ2,IQ2,RQ3,DQ3,IQ3,RQ4,DQ4,IQ4,RP,DP,CP,USA,IP" divider="1" title="&lt;sup&gt;&lt;sup&gt;____________________&lt;/sup&gt;&lt;/sup&gt;" description="" />
+        <siteMapNode title="Seguimiento" roles="A,RSN4,DSN4,ISN4,RSN3,DSN3,ISN3,RSN2,DSN2,ISN2,RSN1,DSN1,ISN1,RN,DN,CN,IN,RSB,DSB,ISB,RC,DC,IC,ROC,RLO,RAS,RL,DL,IL,RH,DH,IH,RQN,DQN,IQN,RQ1,DQ1,IQ1,RQ2,DQ2,IQ2,RQ3,DQ3,IQ3,RQ4,DQ4,IQ4,RP,DP,CP,USA,IP,JP,SP">
+          <siteMapNode url="~/Capa_Presentacion/ECO/SegEco/Default.aspx" roles="A,RSN4,DSN4,ISN4,RSN3,DSN3,ISN3,RSN2,DSN2,ISN2,RSN1,DSN1,ISN1,RN,DN,CN,IN,RSB,DSB,ISB,RC,DC,IC,ROC,RLO,RAS,RL,DL,IL,RH,DH,IH,RQN,DQN,IQN,RQ1,DQ1,IQ1,RQ2,DQ2,IQ2,RQ3,DQ3,IQ3,RQ4,DQ4,IQ4,RP,DP,CP,USA,IP" accesoHome="03" data-parent="menuPGE" title="Detalle económico (Carrusel)" description="Detalle de datos económicos proyecto a proyecto" />
+          <siteMapNode url="~/Capa_Presentacion/ECO/ResumenEcoProy/Default.aspx" roles="A,RSN4,DSN4,ISN4,RSN3,DSN3,ISN3,RSN2,DSN2,ISN2,RSN1,DSN1,ISN1,RN,DN,CN,IN,RSB,DSB,ISB,RC,DC,IC,ROC,RLO,RAS,RL,DL,IL,RH,DH,IH,RQN,DQN,IQN,RQ1,DQ1,IQ1,RQ2,DQ2,IQ2,RQ3,DQ3,IQ3,RQ4,DQ4,IQ4,RP,DP,CP,USA,IP" accesoHome="04" data-parent="menuPGE" title="Resumen económico" description="Resumen económico global" />
+          <siteMapNode url="~/Capa_Presentacion/ECO/Avance/Default.aspx" accesoHome="06" roles="A,RSN4,DSN4,ISN4,RSN3,DSN3,ISN3,RSN2,DSN2,ISN2,RSN1,DSN1,ISN1,RN,DN,CN,IN,RSB,DSB,ISB,RC,DC,IC,ROC,RLO,RAS,RL,DL,IL,RH,DH,IH,RQN,DQN,IQN,RQ1,DQ1,IQ1,RQ2,DQ2,IQ2,RQ3,DQ3,IQ3,RQ4,DQ4,IQ4,RP,DP,CP,USA,IP" title="Avance global" description="Resumen de situación técnica y económica" />
+          <siteMapNode url="~/Capa_Presentacion/ECO/OrdenFacturacion/Catalogo/Default.aspx" accesoHome="11" roles="A,RP,DP,CP,USA,SP,JP" title="Órdenes de facturación" description="" />
+          <siteMapNode url="~/Capa_Presentacion/ECO/ProyGestionados/Default.aspx" roles="A,RP,DP,CP,USA" title="Proyectos gestionados" description="Proyectos contratantes y abiertos en los que soy Responsable, Delegado o Colaborador" />
+          <siteMapNode url="~/Capa_Presentacion/ECO/ValorGanado/Default.aspx?so=UEdF" roles="A,RSN4,DSN4,ISN4,RSN3,DSN3,ISN3,RSN2,DSN2,ISN2,RSN1,DSN1,ISN1,RN,DN,CN,IN,RSB,DSB,ISB,RC,DC,IC,ROC,RLO,RAS,RL,DL,IL,RH,DH,IH,RQN,DQN,IQN,RQ1,DQ1,IQ1,RQ2,DQ2,IQ2,RQ3,DQ3,IQ3,RQ4,DQ4,IQ4,RP,DP,CP,USA,IP,JP" accesoHome="07" data-parent="menuPGE" title="Valor Ganado" description="Gestión del Valor Ganado" />
+          <siteMapNode url="~/Capa_Presentacion/ECO/DialogoAlertas/MisDialogos/Default.aspx" roles="RP,DP,CP,USA" title="Mis diálogos abiertos" description="Muestra la relación de diálogos abiertos en los proyectos bajo mi ámbito de interlocución" />
+        </siteMapNode>
+        <siteMapNode title="Cierre mensual" roles="RP,DP,CP,USA">
+          <siteMapNode url="~/Capa_Presentacion/ECO/CuadreRecursos/Default.aspx" roles="" title="Cuadre de recursos" description="" />
+          <siteMapNode url="~/Capa_Presentacion/ECO/TraspasoIAP/Default.aspx" roles="RP,DP,CP,USA" accesoHome="09" data-parent="menuPGE" title="Traspaso de IAP" description="Traspaso de dedicaciones de IAP" />
+          <siteMapNode url="~/Capa_Presentacion/ECO/Replica/Default.aspx?origen=menureplica" roles="RP,DP,CP,USA" accesoHome="08" data-parent="menuPGE" title="Réplica global" description="Réplica global" />
+          <siteMapNode url="~/Capa_Presentacion/ECO/Replica/Default.aspx?origen=menucierre" accesoHome="10" data-parent="menuPGE" roles="RP,DP,CP,USA" title="Cierre global" description="Cierre global" />
+          <siteMapNode url="~/Capa_Presentacion/ECO/ProyNoCerrados/Default.aspx" roles="RP,DP,CP,USA" accesoHome="05" data-parent="menuPGE" title="Proyectos no cerrados" description="Proyectos no cerrados" />
+          <siteMapNode url="~/Capa_Presentacion/ECO/DialogoAlertas/CatalogoPendientes/Default.aspx" roles="" title="Revisión de diálogos" description="" />
+        </siteMapNode>
+        <siteMapNode url="~/Capa_Presentacion/ECO/OrdenFacturacion/ControlOrdenFact/Default.aspx" accesoHome="12" data-parent="menuPGE" roles="A,RP,DP,CP,USA,SP,JP" title="Control de facturación" description="Control de las órdenes de facturación" />
+      </siteMapNode>
+      <siteMapNode title="Consultas" roles="A,RSN4,DSN4,ISN4,RSN3,DSN3,ISN3,RSN2,DSN2,ISN2,RSN1,DSN1,ISN1,RN,DN,CN,IN,SN4,SN3,SN2,SN1,SN,RSB,DSB,ISB,RC,DC,IC,ROC,RLO,RAS,RL,DL,IL,RH,DH,IH,RQN,DQN,IQN,RQ1,DQ1,IQ1,RQ2,DQ2,IQ2,RQ3,DQ3,IQ3,RQ4,DQ4,IQ4,RP,DP,CP,USA,IP,JP,SP">
+        <siteMapNode title="Seguimiento económico" roles="*">
+          <siteMapNode url="~/Capa_Presentacion/ECO/Consultas/DatosResumidos/Default.aspx" roles="*" title="Resumen" description="" />
+          <siteMapNode url="~/Capa_Presentacion/ECO/Consultas/DatosResumidosGrafico/Default.aspx" roles="*" title="Resumen (Gráfico)" description="" />
+          <siteMapNode url="~/Capa_Presentacion/ECO/Consultas/DatosResumidosGrafico_original/Default.aspx" roles="" title="Resumen (Gráfico) original" description="" />
+          <siteMapNode url="~/Capa_Presentacion/ECO/Consultas/FichaEconomica/Default.aspx" roles="*" title="Ficha económica" description="" />
+          <siteMapNode url="~/Capa_Presentacion/ECO/Consultas/SegRenta/Default.aspx" roles="*" title="Rentabilidad" description="" />
+          <siteMapNode url="~/Capa_Presentacion/ECO/Consultas/ObraEnCurso/Default.aspx" roles="*" title="Obra en curso" description="" />
+          <siteMapNode url="~/Capa_Presentacion/ECO/Consultas/Auditoria/Default.aspx?sOP=1" roles="*" title="Auditoría de movimientos económicos" description="Auditoría de movimientos económicos" />
+        </siteMapNode>
+        <siteMapNode title="Consumo" roles="A,RSN4,DSN4,ISN4,RSN3,DSN3,ISN3,RSN2,DSN2,ISN2,RSN1,DSN1,ISN1,RN,DN,CN,IN,RSB,DSB,ISB,RC,DC,IC,ROC,RLO,RAS,RL,DL,IL,RH,DH,IH,RQN,DQN,IQN,RQ1,DQ1,IQ1,RQ2,DQ2,IQ2,RQ3,DQ3,IQ3,RQ4,DQ4,IQ4,RP,DP,CP,USA,IP">
+          <siteMapNode url="~/Capa_Presentacion/ECO/Informes/ConsumosProveedJornOtros/Default.aspx" roles="*" title="Por proveedor"  />
+          <siteMapNode url="~/Capa_Presentacion/ECO/Consultas/MasivoDatoeco/Default.aspx?sGrupo=1" roles="*" title="Masivo" description="Extracción detallada de datos económicos de proyectos" />
+          <siteMapNode url="~/Capa_Presentacion/ECO/Consultas/ConsuConta/Default.aspx" roles="*" title="Movtos. de contabilidad" description="Detalle de movimientos de contabilidad por proveedor" />
+          <siteMapNode url="~/Capa_Presentacion/ECO/Consultas/SalProv/Default.aspx" roles="*" title="Provisiones de gasto" description="Estado de las provisiones de gasto" />
+          <siteMapNode url="~/Capa_Presentacion/ECO/Consultas/Profesionales/Consumos/Default.aspx" roles="*" title="Cuadre profesionales" description="" />
+          <siteMapNode title="Profesionales" roles="*">
+            <siteMapNode url="~/Capa_Presentacion/ECO/Consultas/Profesionales/Profesional/Default.aspx" roles="*" title="Por profesional" description="" />
+            <siteMapNode url="~/Capa_Presentacion/ECO/Consultas/ProfesionalesGrafico/Default.aspx" roles="*" title="Gráfico" description="" />
+          </siteMapNode>
+        </siteMapNode>
+
+        <siteMapNode title="Producción" roles="A,RSN4,DSN4,ISN4,RSN3,DSN3,ISN3,RSN2,DSN2,ISN2,RSN1,DSN1,ISN1,RN,DN,CN,IN,RSB,DSB,ISB,RC,DC,IC,ROC,RLO,RAS,RL,DL,IL,RH,DH,IH,RQN,DQN,IQN,RQ1,DQ1,IQ1,RQ2,DQ2,IQ2,RQ3,DQ3,IQ3,RQ4,DQ4,IQ4,RP,DP,CP,USA,IP">
+          <siteMapNode url="~/Capa_Presentacion/ECO/Informes/TotalProducido/Default.aspx" roles="*" title="Total producido" description="Total producido"  />
+          <siteMapNode url="~/Capa_Presentacion/ECO/Consultas/MasivoDatoeco/Default.aspx?sGrupo=2" roles="*" title="Masivo" description="Extracción detallada de datos económicos de proyectos" />
+          <siteMapNode url="~/Capa_Presentacion/ECO/Consultas/ProducidoPorProfesional/Default.aspx" roles="*" title="Producido por profesional" description="Acumulado de la producción por profesional en un periodo" />
+        </siteMapNode>
+
+        <siteMapNode title="Facturación" roles="A,RSN4,DSN4,ISN4,RSN3,DSN3,ISN3,RSN2,DSN2,ISN2,RSN1,DSN1,ISN1,RN,DN,CN,IN,SN4,SN3,SN2,SN1,SN,RSB,DSB,ISB,RC,DC,IC,ROC,RLO,RAS,RL,DL,IL,RH,DH,IH,RQN,DQN,IQN,RQ1,DQ1,IQ1,RQ2,DQ2,IQ2,RQ3,DQ3,IQ3,RQ4,DQ4,IQ4,RP,DP,CP,IP">
+          <siteMapNode url="~/Capa_Presentacion/ECO/Consultas/MasivoDatoeco/Default.aspx?sGrupo=3" roles="A,RSN4,DSN4,ISN4,RSN3,DSN3,ISN3,RSN2,DSN2,ISN2,RSN1,DSN1,ISN1,RN,DN,CN,IN,RSB,DSB,ISB,RC,DC,IC,ROC,RLO,RAS,RL,DL,IL,RH,DH,IH,RQN,DQN,IQN,RQ1,DQ1,IQ1,RQ2,DQ2,IQ2,RQ3,DQ3,IQ3,RQ4,DQ4,IQ4,RP,DP,CP,IP" title="Masivo" description="Extracción detallada de datos económicos de proyectos" />
+          <siteMapNode url="~/Capa_Presentacion/ECO/Consultas/Contratos/Default.aspx" roles="A,SN4,SN3,SN2,SN1,SN,SP" title="Clientes/Contratos/Proyectos" description="" />
+        </siteMapNode>
+
+        <siteMapNode title="Cobros" roles="">
+
+        </siteMapNode>
+
+        <siteMapNode title="Proyectos" roles="A,RSN4,DSN4,ISN4,RSN3,DSN3,ISN3,RSN2,DSN2,ISN2,RSN1,DSN1,ISN1,RN,DN,CN,IN,RSB,DSB,ISB,RC,DC,IC,ROC,RLO,RAS,RL,DL,IL,RH,DH,IH,RQN,DQN,IQN,RQ1,DQ1,IQ1,RQ2,DQ2,IQ2,RQ3,DQ3,IQ3,RQ4,DQ4,IQ4,RP,DP,CP,IP">
+          <siteMapNode url="~/Capa_Presentacion/ECO/Informes/ProyAsignados/Default.aspx" roles="*" title="Mi ámbito de visión" description="" />
+          <siteMapNode url="~/Capa_Presentacion/ECO/Informes/ProyNoCerradosV2/Default.aspx" roles="*" title="No cerrados en el mes" description="" />
+          <siteMapNode url="~/Capa_Presentacion/ECO/Informes/CuadreContratos/Default.aspx" roles="*" title="Cuadre con contratos" description=""  />
+          <siteMapNode url="~/Capa_Presentacion/ECO/Consultas/LineaBase/Default.aspx?so=UEdF" roles="*" title="Con línea base" description="Proyectos con línea base correspondiente al Valor Ganado"  />
+          <siteMapNode url="~/Capa_Presentacion/ECO/Consultas/LineaBaseAvan/Default.aspx?so=UEdF" roles="*" title="Catálogo proyectos línea base" description="Catálogo de proyectos con línea base correspondiente al Valor Ganado (gráfico multiproyecto)"  />
+          <siteMapNode url="~/Capa_Presentacion/PSP/Informes/Masivo/Bitacora/Default.aspx" roles="*" title="Bitácoras (masivo)" />
+          <siteMapNode url="~/Capa_Presentacion/ECO/Consultas/Garantias/Default.aspx?" roles="*" title="Garantías" description="Garantías"  />
+        </siteMapNode>
+
+        <siteMapNode title="Profesionales" roles="A,RSN4,DSN4,ISN4,RSN3,DSN3,ISN3,RSN2,DSN2,ISN2,RSN1,DSN1,ISN1,RN,DN,CN,IN,RSB,DSB,ISB,RL,DL,IL,RH,DH,IH,RQN,DQN,IQN,RQ1,DQ1,IQ1,RQ2,DQ2,IQ2,RQ3,DQ3,IQ3,RQ4,DQ4,IQ4,RP,DP,CP,IP">
+          <siteMapNode url="~/Capa_Presentacion/ECO/Consultas/Profesionales/Jerarquias/Default.aspx" roles="A,RSN4,DSN4,ISN4,RSN3,DSN3,ISN3,RSN2,DSN2,ISN2,RSN1,DSN1,ISN1,RN,DN,CN,IN" title="Por dependencia jerárquica" description="Muestra las figuras de los profesionales por su dependencia jerárquica" />
+          <siteMapNode url="~/Capa_Presentacion/ECO/Informes/RecursosExternos/Default.aspx" roles="*" title="Por proveedor" description="Colaboradores externos por proveedor"/>
+          <siteMapNode url="~/Capa_Presentacion/ECO/Informes/ProfesionalesCR/Default.aspx" roles="A,RSN4,DSN4,ISN4,RSN3,DSN3,ISN3,RSN2,DSN2,ISN2,RSN1,DSN1,ISN1,RN,DN,CN,IN" title="Por centro de responsabilidad" description="Empleados internos por centro de responsabilidad"/>
+          <siteMapNode url="~/Capa_Presentacion/ECO/Informes/AsignacionProfProy/Default.aspx" roles="A,RSN4,DSN4,ISN4,RSN3,DSN3,ISN3,RSN2,DSN2,ISN2,RSN1,DSN1,ISN1,RN,DN,CN,IN,RP,DP,CP,IP" title="Asignados a proyectos" description="Profesionales asignados a proyectos y proyectos asignados a profesionales"/>
+          <siteMapNode url="~/Capa_Presentacion/ECO/Disponibilidad/Consulta/Default.aspx" roles="A,RSN4,DSN4,ISN4,RSN3,DSN3,ISN3,RSN2,DSN2,ISN2,RSN1,DSN1,ISN1,RN,DN,CN,IN,RP,DP,CP,IP" title="Disponibilidad" description="Consulta de disponibilidad"/>
+        </siteMapNode>
+
+        <siteMapNode url="~/Capa_Presentacion/ECO/BBII/Default.aspx?o=pge" accesoHome="16" data-parent="menuSIC" roles="A,RSN4,DSN4,ISN4,RSN3,DSN3,ISN3,RSN2,DSN2,ISN2,RSN1,DSN1,ISN1,RN,DN,CN,IN,SN4,SN3,SN2,SN1,SN,RSB,DSB,ISB,RC,DC,IC,ROC,RLO,RAS,RL,DL,IL,RH,DH,IH,RQN,DQN,IQN,RQ1,DQ1,IQ1,RQ2,DQ2,IQ2,RQ3,DQ3,IQ3,RQ4,DQ4,IQ4,RP,DP,CP,USA,IP,JP,SP" title="Cuadro de mando" description="" />
+      </siteMapNode>
+      <siteMapNode title="Reasignación" roles="A,RN,DN,CN,RSB,DSB">
+        <siteMapNode url="~/Capa_Presentacion/ECO/Mantenimientos/Reasignacion/Default.aspx" roles="A,RN,DN,CN" title="Proyecto (Responsable - A.N.)" description="Reasignación de responsable y/o área de negocio" />
+        <siteMapNode url="~/Capa_Presentacion/ECO/Mantenimientos/ReasignacionRespon/Default.aspx" roles="A,RSB,DSB" title="Proyecto (Responsable)" description="Reasignación de responsable" />
+        <siteMapNode url="~/Capa_Presentacion/Ayuda/Obras/Default.aspx?a=26" roles="A,RN,DN,CN" title="Contrato" description="" />
+      </siteMapNode>
+      <siteMapNode title="Mantenimientos" roles="A,RSN4,DSN4,RQ4,DQ4,RSN3,DSN3,RQ3,DQ3,RSN2,DSN2,RQ2,DQ2,RSN1,DSN1,RQ1,DQ1,RN,DN,CN,RQN,DQN,RL,DL,RC,DC,RH,DH,RP,DP,CP">
+        <siteMapNode url="~/Capa_Presentacion/ECO/Mantenimientos/TarifasNodo/Default.aspx" roles="A,RN,DN,CN" title="Perfiles por nodo" description="" />
+        <siteMapNode url="~/Capa_Presentacion/ECO/Mantenimientos/NivelesNodo/Default.aspx" roles="A,RN,DN,CN" title="Niveles por nodo" description="" />
+        <siteMapNode url="~/Capa_Presentacion/ECO/Mantenimientos/TarifasCliente/Default.aspx" roles="A,RP,DP,CP" title="Perfiles por cliente" description="" />
+        <siteMapNode url="~/Capa_Presentacion/ECO/Mantenimientos/Subnodos/Default.aspx" roles="RN,DN,CN" title="Areas de negocio" description="" />
+        <siteMapNode url="~/Capa_Presentacion/PSP/Proyecto/Acceso/Default.aspx?sOP=A" roles="A,RSN4,DSN4,ISN4,RSN3,DSN3,ISN3,RSN2,DSN2,ISN2,RSN1,DSN1,ISN1,RN,DN,CN,RP,DP,CP" title="Disp. de profesionales" description="Disponibilidad de profesionales" />
+        <siteMapNode title="Figuras" roles="A,RSN4,DSN4,RSN3,DSN3,RSN2,DSN2,RSN1,DSN1,RN,DN,RSB,DSB,RL,DL,RC,DC,RH,DH,RP">
+          <siteMapNode url="~/Capa_Presentacion/ECO/Mantenimientos/Cliente/Default.aspx" roles="A,RL,DL" title="Clientes" description="" />
+          <siteMapNode url="~/Capa_Presentacion/ECO/Mantenimientos/Contratos/Default.aspx" roles="A,RC,DC" title="Contratos" description="" />
+          <siteMapNode url="~/Capa_Presentacion/ECO/Mantenimientos/Horizontal/Default.aspx" roles="A,RH,DH" title="Horizontal" description="" />
+          <siteMapNode url="~/Capa_Presentacion/ECO/Mantenimientos/AsigFiguras/Default.aspx?nNivel=1" roles="A,RSN4,DSN4" title="Supernodo nivel 4" description="" />
+          <siteMapNode url="~/Capa_Presentacion/ECO/Mantenimientos/AsigFiguras/Default.aspx?nNivel=2" roles="A,RSN3,DSN3" title="Supernodo nivel 3" description="" />
+          <siteMapNode url="~/Capa_Presentacion/ECO/Mantenimientos/AsigFiguras/Default.aspx?nNivel=3" roles="A,RSN2,DSN2" title="Línea de negocio" description="" />
+          <siteMapNode url="~/Capa_Presentacion/ECO/Mantenimientos/AsigFiguras/Default.aspx?nNivel=4" roles="A,RSN1,DSN1" title="Unidad de negocio" description="" />
+          <siteMapNode url="~/Capa_Presentacion/ECO/Mantenimientos/AsigFiguras/Default.aspx?nNivel=5" roles="A,RN,DN" title="Centro de Responsabilidad" description="" />
+          <siteMapNode url="~/Capa_Presentacion/ECO/Mantenimientos/AsigFiguras/Default.aspx?nNivel=6" roles="A,RSB,DSB" title="Areas de negocio" description="" />
+          <siteMapNode title="Proyecto" roles="A,RP">
+            <siteMapNode url="~/Capa_Presentacion/ECO/Mantenimientos/PoolFiguras/Default.aspx?sT=R" roles="A,RP" title="Por responsable" description="" />
+            <siteMapNode url="~/Capa_Presentacion/ECO/Mantenimientos/PoolFiguras/Default.aspx?sT=N" roles="" title="Por centro de responsabilidad" description="" />
+          </siteMapNode>
+        </siteMapNode>
+        <siteMapNode url="~/Capa_Presentacion/ECO/Mantenimientos/ModoDeFactura/Default.aspx" roles="A,RSN2,DSN2" title="Modos de facturación" description="Modos de facturación a nivel de Supernodo nivel 2" />
+        <siteMapNode url="~/Capa_Presentacion/PSP/Mantenimientos/AE/Catalogo/Default.aspx?A=E" roles="A,RN,DN,CN" title="CEED" description="Criterios estadísticos económicos departamentales" />
+        <siteMapNode title="Cualificadores" roles="A,RSN4,DSN4,RQ4,DQ4,RSN3,DSN3,RQ3,DQ3,RSN2,DSN2,RQ2,DQ2,RSN1,DSN1,RQ1,DQ1,RN,DN,RQN,DQN">
+          <siteMapNode url="~/Capa_Presentacion/ECO/Mantenimientos/Cualificador/Default.aspx?nivel=0" roles="A,RN,DN,RQN,DQN" title="Centro de responsabilidad" description="Cualificador de proyectos a nivel de centro de responsabilidad" />
+          <siteMapNode url="~/Capa_Presentacion/ECO/Mantenimientos/Cualificador/Default.aspx?nivel=1" roles="A,RSN1,DSN1,RQ1,DQ1" title="Línea de negocio" description="Cualificador de proyectos a nivel de Línea de negocio" />
+          <siteMapNode url="~/Capa_Presentacion/ECO/Mantenimientos/Cualificador/Default.aspx?nivel=2" roles="A,RSN2,DSN2,RQ2,DQ2" title="Negocio" description="Cualificador de proyectos a nivel de Negocio" />
+          <siteMapNode url="~/Capa_Presentacion/ECO/Mantenimientos/Cualificador/Default.aspx?nivel=3" roles="A,RSN3,DSN3,RQ3,DQ3" title="Supernodo nivel 3" description="Cualificador de proyectos a nivel de Supernodo nivel 3" />
+          <siteMapNode url="~/Capa_Presentacion/ECO/Mantenimientos/Cualificador/Default.aspx?nivel=4" roles="A,RSN4,DSN4,RQ4,DQ4" title="Supernodo nivel 4" description="Cualificador de proyectos a nivel de Supernodo nivel 4" />
+        </siteMapNode>
+        <siteMapNode url="~/Capa_Presentacion/ECO/Mantenimientos/CRP/Default.aspx" roles="A,RN,DN,CN" title="CRP" description="Candidato a responsable de proyecto" />
+      </siteMapNode>
+      <siteMapNode roles="A,GSN4,GSN3,GSN2,GSN1,GN,GSB,RP,DP,CP" divider="1" title="&lt;sup&gt;&lt;sup&gt;____________________&lt;/sup&gt;&lt;/sup&gt;" description="" />
+      <siteMapNode title="Escenarios" roles="DIS">
+        <siteMapNode url="~/Capa_Presentacion/ECO/Escenarios/Catalogo/Default.aspx" roles="*" title="Catálogo" description="" />
+        <siteMapNode url="~/Capa_Presentacion/PSP/Proyecto/Acceso/Default.aspx?sOP=E" roles="" title="Selección" description="" />
+        <siteMapNode url="~/Capa_Presentacion/ECO/Escenarios/Oferta/Default.aspx" roles="" title="Oferta" description="" />
+        <siteMapNode url="~/Capa_Presentacion/ECO/Escenarios/Proyecto/Default.aspx" roles="*" title="Proyecto" description="" />
+      </siteMapNode>
+
+      <siteMapNode title="Utilidades" roles="A,GSN4,GSN3,GSN2,GSN1,GN,GSB,RP,DP,CP">
+        <siteMapNode title="Asignación de profesionales" roles="A,RP,DP,CP,USA">
+          <siteMapNode url="~/Capa_Presentacion/ECO/AsigProf/CopiaPorProy/Default.aspx" roles="*" title="Por copia de profesional" description="" />
+          <siteMapNode url="~/Capa_Presentacion/ECO/AsigProf/CopiaPorProfesional/Default.aspx" roles="*" title="Por copia de proyectos" description="" />
+          <siteMapNode url="~/Capa_Presentacion/ECO/AsigProf/CopiaPorBateria/Default.aspx" roles="*" title="Por batería de proyectos" description="Asignar a uno o varios profesionales a un número determinado de proyectos" />
+        </siteMapNode>
+      </siteMapNode>
+    </siteMapNode>
+
+    <siteMapNode title="PST" description="Planificación y seguimiento técnico" roles="T">
+      <siteMapNode title="Gestión" roles="A,OT,RSN4,DSN4,ISN4,RSN3,DSN3,ISN3,RSN2,DSN2,ISN2,RSN1,DSN1,ISN1,RN,DN,CN,IN,RSB,DSB,ISB,RC,DC,IC,ROC,RLO,RAS,RL,DL,IL,RH,DH,IH,RQN,DQN,IQN,RQ1,DQ1,IQ1,RQ2,DQ2,IQ2,RQ3,DQ3,IQ3,RQ4,DQ4,IQ4,RP,DP,CP,IP,JP,MP,K,BP" >
+        <siteMapNode  title="Estructura técnica" roles="A,OT,RSN4,DSN4,ISN4,RSN3,DSN3,ISN3,RSN2,DSN2,ISN2,RSN1,DSN1,ISN1,RSB,DSB,ISB,RN,DN,CN,IN,OT,RSB,DSB,ISB,RP,DP,CP,IP,JP,MP,K" >
+          <siteMapNode accesoHome="17" data-parent="menuPST" url="~/Capa_Presentacion/PSP/Proyecto/Desglose/Default.aspx" roles="A,OT,RSN4,DSN4,ISN4,RSN3,DSN3,ISN3,RSN2,DSN2,ISN2,RSN1,DSN1,ISN1,RN,DN,CN,IN,RSB,DSB,ISB,RC,DC,IC,ROC,RLO,RAS,RL,DL,IL,RH,DH,IH,RQN,DQN,IQN,RQ1,DQ1,IQ1,RQ2,DQ2,IQ2,RQ3,DQ3,IQ3,RQ4,DQ4,IQ4,RP,DP,CP,IP,JP,MP,K" title="Completa" description="" />
+          <siteMapNode url="~/Capa_Presentacion/PSP/Proyecto/Gantt/Default.aspx" title="Diagrama de Gantt" description="Diagrama de Gantt del proyecto económico" />
+          <siteMapNode roles="A,OT,RP,DP,CP,JP,MP,K" divider="1" title="&lt;sup&gt;&lt;sup&gt;____________________&lt;/sup&gt;&lt;/sup&gt;" description="" />
+          <siteMapNode title="Proyecto técnico" roles="A,OT,RP,DP,CP,JP,MP,K">
+            <siteMapNode url="~/Capa_Presentacion/PSP/Proyecto/Acceso/Default.aspx?sOP=PC" roles="*" title="Crear" description="" />
+            <siteMapNode url="~/Capa_Presentacion/PSP/Proyecto/Acceso/Default.aspx?sOP=PB" roles="*" title="Buscar" description="" />
+            <siteMapNode url="~/Capa_Presentacion/PSP/Proyecto/Acceso/Default.aspx?sOP=YC" roles="*" title="Ordenar" description="" />
+          </siteMapNode>
+          <siteMapNode title="Tarea" roles="A,OT,RP,DP,CP,JP,MP,K">
+            <siteMapNode url="~/Capa_Presentacion/PSP/Proyecto/Acceso/Default.aspx?sOP=TC" roles="*" title="Crear" description="" />
+            <siteMapNode url="~/Capa_Presentacion/PSP/Proyecto/Acceso/Default.aspx?sOP=TB" roles="*" title="Buscar" description="" />
+            <siteMapNode url="~/Capa_Presentacion/PSP/Proyecto/Acceso/Default.aspx?sOP=ZC" roles="*" title="Reestructurar" description="" />
+            <siteMapNode url="~/Capa_Presentacion/PSP/Proyecto/Acceso/Default.aspx?sOP=WC" roles="*" title="Duplicar" description="" />
+          </siteMapNode>
+        </siteMapNode>
+        <siteMapNode title="Seguimiento" roles="A,OT,RSN4,DSN4,ISN4,RSN3,DSN3,ISN3,RSN2,DSN2,ISN2,RSN1,DSN1,ISN1,RSB,DSB,ISB,RC,DC,IC,ROC,RLO,RAS,RN,DN,CN,IN,OT,RSB,DSB,ISB,RP,DP,CP,IP,JP,MP,K" >
+          <siteMapNode url="~/Capa_Presentacion/PSP/Consultas/AvanceTec/Default.aspx" accesoHome="18" data-parent="menuPST" roles="*" title="Avance técnico" description="Avance técnico global" />
+          <siteMapNode url="~/Capa_Presentacion/PSP/Consultas/SeguimientoHist/Default.aspx" roles="*" title="Histórico de instantáneas" description="Histórico de instantáneas" />
+          <siteMapNode url="~/Capa_Presentacion/ECO/ValorGanado/Default.aspx?so=UFNU" roles="A,OT,RSN4,DSN4,ISN4,RSN3,DSN3,ISN3,RSN2,DSN2,ISN2,RSN1,DSN1,ISN1,RN,DN,CN,IN,RSB,DSB,ISB,RC,DC,IC,ROC,RLO,RAS,RL,DL,IL,RH,DH,IH,RQN,DQN,IQN,RQ1,DQ1,IQ1,RQ2,DQ2,IQ2,RQ3,DQ3,IQ3,RQ4,DQ4,IQ4,RP,DP,CP,USA,IP,JP,MP" title="Valor Ganado" description="Gestión del Valor Ganado" />
+          <siteMapNode roles="*" divider="1" title="&lt;sup&gt;&lt;sup&gt;____________________&lt;/sup&gt;&lt;/sup&gt;" description="" />
+          <siteMapNode title="Bitácora" roles="A,OT,RSN4,DSN4,ISN4,RSN3,DSN3,ISN3,RSN2,DSN2,ISN2,RSN1,DSN1,ISN1,RN,DN,CN,IN,RSB,DSB,ISB,RC,DC,IC,ROC,RLO,RAS,RL,DL,IL,RH,DH,IH,RQN,DQN,IQN,RQ1,DQ1,IQ1,RQ2,DQ2,IQ2,RQ3,DQ3,IQ3,RQ4,DQ4,IQ4,RP,DP,CP,IP,JP,MP,K,BP">
+            <siteMapNode url="~/Capa_Presentacion/PSP/Proyecto/Acceso/Default.aspx?sOP=B" roles="A,OT,RSN4,DSN4,ISN4,RSN3,DSN3,ISN3,RSN2,DSN2,ISN2,RSN1,DSN1,ISN1,RN,DN,CN,IN,RSB,DSB,ISB,RC,DC,IC,ROC,RLO,RAS,RL,DL,IL,RH,DH,IH,RQN,DQN,IQN,RQ1,DQ1,IQ1,RQ2,DQ2,IQ2,RQ3,DQ3,IQ3,RQ4,DQ4,IQ4,RP,DP,CP,IP,JP,MP,BP" title="De proyecto económico" description="Bitácora de proyecto económico y sus proyectos técnicos" />
+            <siteMapNode url="~/Capa_Presentacion/PSP/Proyecto/Acceso/Default.aspx?sOP=C" roles="A,OT,RSN4,DSN4,ISN4,RSN3,DSN3,ISN3,RSN2,DSN2,ISN2,RSN1,DSN1,ISN1,RN,DN,CN,IN,RSB,DSB,ISB,RC,DC,IC,ROC,RLO,RAS,RL,DL,IL,RH,DH,IH,RQN,DQN,IQN,RQ1,DQ1,IQ1,RQ2,DQ2,IQ2,RQ3,DQ3,IQ3,RQ4,DQ4,IQ4,RP,DP,CP,IP,JP,MP,K,BP" title="De proyecto técnico" description="Bitácora de proyecto técnico y sus tareas" />
+            <siteMapNode url="~/Capa_Presentacion/PSP/Proyecto/Acceso/Default.aspx?sOP=D" roles="A,OT,RSN4,DSN4,ISN4,RSN3,DSN3,ISN3,RSN2,DSN2,ISN2,RSN1,DSN1,ISN1,RN,DN,CN,IN,RSB,DSB,ISB,RC,DC,IC,ROC,RLO,RAS,RL,DL,IL,RH,DH,IH,RQN,DQN,IQN,RQ1,DQ1,IQ1,RQ2,DQ2,IQ2,RQ3,DQ3,IQ3,RQ4,DQ4,IQ4,RP,DP,CP,IP,JP,MP,K,BP" title="De tarea" description="Bitácora de tarea" />
+          </siteMapNode>
+        </siteMapNode>
+        <siteMapNode roles="A,OT,RP,DP,CP,JP,MP,K" divider="1" title="&lt;sup&gt;&lt;sup&gt;____________________&lt;/sup&gt;&lt;/sup&gt;" description="" />
+        <siteMapNode title="Asignación de profesionales" roles="A,OT,RP,DP,CP,JP,MP,K">
+          <siteMapNode url="~/Capa_Presentacion/PSP/AsigProf/CopiaPorTarea/Default.aspx" roles="*" title="Copia de tareas asignadas" description="" />
+          <siteMapNode url="~/Capa_Presentacion/PSP/AsigProf/CopiaPorProfesional/Default.aspx" roles="*" title="Copia de profesionales asignados" description="" />
+        </siteMapNode>
+      </siteMapNode>
+      <siteMapNode title="Consultas" roles="A,OT,RSN4,DSN4,ISN4,RSN3,DSN3,ISN3,RSN2,DSN2,ISN2,RSN1,DSN1,ISN1,RN,DN,CN,IN,RSB,DSB,ISB,RC,DC,IC,ROC,RLO,RAS,RL,DL,IL,RH,DH,IH,RQN,DQN,IQN,RQ1,DQ1,IQ1,RQ2,DQ2,IQ2,RQ3,DQ3,IQ3,RQ4,DQ4,IQ4,RP,DP,CP,IP,JP,MP,K,BP,SN4,SN3,SN2,SN1,SN,RG" >
+        <siteMapNode title="Consumos" roles="A,OT,RSN4,DSN4,ISN4,RSN3,DSN3,ISN3,RSN2,DSN2,ISN2,RSN1,DSN1,ISN1,RN,DN,CN,IN,RSB,DSB,ISB,RC,DC,IC,ROC,RLO,RAS,RL,DL,IL,RH,DH,IH,RQN,DQN,IQN,RQ1,DQ1,IQ1,RQ2,DQ2,IQ2,RQ3,DQ3,IQ3,RQ4,DQ4,IQ4,RP,DP,CP,IP,JP,MP,K,SN4,SN3,SN2,SN1,SN,RG" >
+          <siteMapNode url="~/Capa_Presentacion/PSP/Consultas/JornReportadas/Default.aspx" roles="*" title="Reportados" description="" />
+          <siteMapNode title="Por profesional" roles="*" >
+            <siteMapNode url="~/Capa_Presentacion/PSP/Consultas/ConsTecnico/Default.aspx" roles="*" title="Individualizada" description="" />
+            <siteMapNode url="~/Capa_Presentacion/PSP/Informes/ConsTecnico/Default.aspx" roles="*" title="Avanzada" description="Consumos por profesional, desglosados y sin desglose" />
+            <siteMapNode url="~/Capa_Presentacion/PSP/Informes/Masivo/Profesional/Default.aspx" roles="*" title="Masiva" />
+          </siteMapNode>
+          <siteMapNode title="Por proyecto" roles="*" >
+            <siteMapNode url="~/Capa_Presentacion/PSP/Consultas/ConsProyecto/Default.aspx" roles="*" title="Individualizada" description="" />
+            <siteMapNode url="~/Capa_Presentacion/PSP/Informes/ConsProyecto/Default.aspx" roles="*" title="Avanzada" description="Consumos por proyecto, desglosados y sin desglose"/>
+            <siteMapNode url="~/Capa_Presentacion/PSP/Informes/Masivo/Proyecto/Default.aspx" roles="*" title="Masiva" />
+          </siteMapNode>
+          <siteMapNode url="~/Capa_Presentacion/PSP/Consultas/ConsTarea/Default.aspx" roles="*" title="Por tarea" description="" />
+          <siteMapNode roles="*" divider="1" title="&lt;sup&gt;&lt;sup&gt;____________________&lt;/sup&gt;&lt;/sup&gt;" description="" />
+          <siteMapNode title="Partes de actividad" roles="*" >
+            <siteMapNode url="~/Capa_Presentacion/PSP/Informes/ParteActividad/Default.aspx" roles="*" title="Masivo" description="" />
+            <siteMapNode url="~/Capa_Presentacion/PSP/Informes/ParteAct/Default.aspx?or=UFNU" roles="*" title="Formateado"  description="" />
+          </siteMapNode>
+        </siteMapNode>
+        <siteMapNode title="Ocupación" roles="A,OT,RSN4,DSN4,ISN4,RSN3,DSN3,ISN3,RSN2,DSN2,ISN2,RSN1,DSN1,ISN1,RN,DN,CN,IN,RSB,DSB,ISB,RC,DC,IC,ROC,RLO,RAS,RL,DL,IL,RH,DH,IH,RQN,DQN,IQN,RQ1,DQ1,IQ1,RQ2,DQ2,IQ2,RQ3,DQ3,IQ3,RQ4,DQ4,IQ4,RP,DP,CP,IP,JP,MP,K,SN4,SN3,SN2,SN1,SN,RG" >
+          <siteMapNode url="~/Capa_Presentacion/PSP/Consultas/Ocupacion/Default.aspx" roles="*" title="Grado" description="Grado de ocupación de profesionales" />
+          <siteMapNode url="~/Capa_Presentacion/PSP/Consultas/Ocupacion/Calendario/Default.aspx" roles="*" title="Horizonte" description="Horizonte de ocupación de profesionales" />
+          <siteMapNode url="~/Capa_Presentacion/PSP/Consultas/AsigProfTareas/Default.aspx" roles="*" title="Asignación a tareas" description="Tareas asignadas a profesionales" />
+          <siteMapNode roles="*" divider="1" title="&lt;sup&gt;&lt;sup&gt;____________________&lt;/sup&gt;&lt;/sup&gt;" description="" />
+          <siteMapNode url="~/Capa_Presentacion/PSP/Consultas/FacturabilidadPSP/Default.aspx" roles="*" title="Facturabilidad" description="Muestra la facturación y disponibilidad teóricas de los profesionales" />
+        </siteMapNode>
+        <siteMapNode url="~/Capa_Presentacion/ECO/Consultas/LineaBase/Default.aspx?so=UFNU" roles="A,OT,RSN4,DSN4,ISN4,RSN3,DSN3,ISN3,RSN2,DSN2,ISN2,RSN1,DSN1,ISN1,RN,DN,CN,IN,RSB,DSB,ISB,RC,DC,IC,ROC,RLO,RAS,RL,DL,IL,RH,DH,IH,RQN,DQN,IQN,RQ1,DQ1,IQ1,RQ2,DQ2,IQ2,RQ3,DQ3,IQ3,RQ4,DQ4,IQ4,RP,DP,CP,IP,JP,MP" title="Proyectos con línea base" description="Proyectos con línea base correspondiente al Valor Ganado"  />
+        <siteMapNode url="~/Capa_Presentacion/ECO/Consultas/LineaBaseAvan/Default.aspx?so=UFNU" roles="A,OT,RSN4,DSN4,ISN4,RSN3,DSN3,ISN3,RSN2,DSN2,ISN2,RSN1,DSN1,ISN1,RN,DN,CN,IN,RSB,DSB,ISB,RC,DC,IC,ROC,RLO,RAS,RL,DL,IL,RH,DH,IH,RQN,DQN,IQN,RQ1,DQ1,IQ1,RQ2,DQ2,IQ2,RQ3,DQ3,IQ3,RQ4,DQ4,IQ4,RP,DP,CP,IP,JP,MP" title="Catálogo proyectos línea base" description="Catálogo de proyectos con línea base correspondiente al Valor Ganado (gráfico multiproyecto)"  />
+        <siteMapNode roles="*" divider="1" title="&lt;sup&gt;&lt;sup&gt;____________________&lt;/sup&gt;&lt;/sup&gt;" description="" />
+        <siteMapNode title="Bitácora" roles="A,OT,RSN4,DSN4,ISN4,RSN3,DSN3,ISN3,RSN2,DSN2,ISN2,RSN1,DSN1,ISN1,RN,DN,CN,IN,RSB,DSB,ISB,RC,DC,IC,ROC,RLO,RAS,RL,DL,IL,RH,DH,IH,RQN,DQN,IQN,RQ1,DQ1,IQ1,RQ2,DQ2,IQ2,RQ3,DQ3,IQ3,RQ4,DQ4,IQ4,RP,DP,CP,IP,JP,MP,K,BP,SN4,SN3,SN2,SN1,SN">
+          <siteMapNode url="~/Capa_Presentacion/PSP/Proyecto/Bitacora/Consulta/Default.aspx" roles="*" title="Proyecto económico" description="" />
+          <siteMapNode url="~/Capa_Presentacion/PSP/ProyTec/Bitacora/Consulta/Default.aspx" roles="*" title="Proyecto técnico" description="" />
+          <siteMapNode url="~/Capa_Presentacion/PSP/Tarea/Bitacora/Consulta/Default.aspx" roles="*" title="Tarea" description="" />
+        </siteMapNode>
+      </siteMapNode>
+
+      <siteMapNode title="Mantenimientos" roles="A,OT,RN,DN,CN,RP,DP,CP,JP,MP,RG,K" >
+
+        <siteMapNode title="Plantillas" roles="A,OT,RN,DN,CN,RP,DP,CP,JP,MP,K">
+          <siteMapNode url="~/Capa_Presentacion/PSP/Plantilla/Catalogo/Default.aspx?sTipo=E1" roles="A,OT,RN,DN,CN,RP,DP,CP,JP,MP" title="De proyecto económico" description="" />
+          <siteMapNode url="~/Capa_Presentacion/PSP/Plantilla/Catalogo/Default.aspx?sTipo=T1" roles="A,OT,RN,DN,CN,RP,DP,CP,JP,MP,K" title="De proyecto técnico" description="" />
+          <siteMapNode url="~/Capa_Presentacion/PSP/Plantilla/Maestro/Default.aspx" title="Maestro de plantilla"  description="" />
+          <siteMapNode url="~/Capa_Presentacion/PSP/Plantilla/Detalle/Default.aspx" title="Detalle de plantilla"  description="" />
+        </siteMapNode>
+        <siteMapNode title="Funciones" roles="A,OT,RN,DN,CN">
+          <siteMapNode url="~/Capa_Presentacion/PSP/Mantenimientos/Funciones/Default.aspx" roles="*" title="Relación" description="" />
+          <siteMapNode url="~/Capa_Presentacion/PSP/Mantenimientos/FuncionesTecnico/Default.aspx" roles="*" title="Asignación a profesionales" description="" />
+        </siteMapNode>
+        <siteMapNode url="~/Capa_Presentacion/PSP/Mantenimientos/AE/Catalogo/Default.aspx?A=T" roles="A,OT,RN,DN,CN" title="CET" description="Criterios estadísticos técnicos" />
+        <siteMapNode url="~/Capa_Presentacion/PSP/Mantenimientos/PST/Catalogo/Default.aspx" roles="A,OT,RN,DN,CN" title="OTC" description="Ordenes de trabajo codificadas">
+
+        </siteMapNode>
+        <siteMapNode url="~/Capa_Presentacion/PSP/Mantenimientos/CodigoExterno/Catalogo/Default.aspx" roles="A,OT,RN,DN,CN" title="Códigos externos" description="" />
+        <siteMapNode url="~/Capa_Presentacion/PSP/Mantenimientos/OrigenTarea/Default.aspx" roles="A,OT,RN,DN,CN" title="Orígenes de tareas" description="" />
+
+        <!--<siteMapNode title="Calendarios" roles="A,RN,DN,CN,OT">
+          <siteMapNode url="~/Capa_Presentacion/Administracion/Calendario/Catalogo/Default.aspx?A=1" title="Relación"  description="" />
+          <siteMapNode url="~/Capa_Presentacion/Administracion/Calendario/Detalle/Default.aspx?A=1" title="Detalle de calendario"  description="" />
+          <siteMapNode url="~/Capa_Presentacion/Administracion/Calendario/Horario/Default.aspx?A=1" title="Horario de calendario"  description="" />
+          <siteMapNode url="~/Capa_Presentacion/PSP/Mantenimientos/CalendarioTecnico/Default.aspx?A=1" roles="*" title="Asignación a profesionales" description="" />
+        </siteMapNode>-->
+
+        <siteMapNode roles="A,OT,RN,DN,CN,RG" divider="1" title="&lt;sup&gt;&lt;sup&gt;____________________&lt;/sup&gt;&lt;/sup&gt;" description="" />
+        <siteMapNode url="~/Capa_Presentacion/PSP/Mantenimientos/OT/Catalogo/Default.aspx" roles="A,RN,DN,CN" title="Miembros de OT" description="Miembros de oficina técnica" />
+        <siteMapNode url="~/Capa_Presentacion/PSP/Mantenimientos/GF/Catalogo/Default.aspx" roles="A,OT,RN,DN,CN,RG" title="Grupos funcionales" description="" />
+        <siteMapNode url="~/Capa_Presentacion/PSP/Mantenimientos/GF/Detalle/Default.aspx" title="Detalle de grupo funcional" description="" />
+      </siteMapNode>
+    </siteMapNode>
+
+    <!--<siteMapNode title="IAP_OLD" description="Informe de actividad y progreso" roles="DIS" >
+      <siteMapNode title="Agenda">
+        <siteMapNode url="~/Capa_Presentacion/IAP/Agenda/Consulta/Default.aspx" title=" > IAP > Agenda > Consulta" description="" />
+        <siteMapNode url="~/Capa_Presentacion/IAP/Agenda/Detalle/Default.aspx" title=" IAP > Agenda > Detalle" description="" />
+      </siteMapNode>
+      <siteMapNode title="Reporte" roles="*">
+        <siteMapNode url="~/Capa_Presentacion/IAP/Calendario/Default.aspx?or=bWVudQ==" accesoHome="19" data-parent="menuIAP" roles="*" title="Calendario"  description="Calendario de reportes" />
+        <siteMapNode url="~/Capa_Presentacion/IAP/ImpMasiva/Default.aspx" accesoHome="20" data-parent="menuIAP" roles="*" title="Masivo"  description="Reporte masivo de consumos" />
+        <siteMapNode roles="A,SN4,SN3,SN2,SN1,SN" divider="1" title="&lt;sup&gt;&lt;sup&gt;____________________&lt;/sup&gt;&lt;/sup&gt;" description="" />
+        <siteMapNode url="~/Capa_Presentacion/IAP/CargarDatos/Default.aspx" roles="A,SN4,SN3,SN2,SN1,SN" title="Fichero" description="Cargar datos desde un fichero" />
+      </siteMapNode>
+      <siteMapNode title="Consultas" roles="*">
+        <siteMapNode url="~/Capa_Presentacion/IAP/ConsultaImp/Default.aspx" roles="*" title="Imputaciones"  description="Consulta de imputaciones" />
+        <siteMapNode url="~/Capa_Presentacion/IAP/Facturabilidad/Default.aspx" roles="*" title="Facturabilidad"  description="Consulta de facturabilidad" />
+        <siteMapNode url="~/Capa_Presentacion/IAP/ParteAct/Default.aspx?or=SUFQ" roles="*" title="Partes de actividad"  description="" />
+        <siteMapNode url="~/Capa_Presentacion/IAP/InformeImputacionMensual/Default.aspx" roles="*"  title="Resumen mensual" description="" />
+      </siteMapNode>
+    </siteMapNode>-->
+
+    <siteMapNode title="IAP" description="Informe de actividad y progreso" roles="T,PER,A" >
+      <siteMapNode title="Reporte" roles="*">
+        <siteMapNode url="~/Capa_Presentacion/IAP30/Reporte/Calendario/Default.aspx?or=bWVudQ==" accesoHome="19" roles="*" title="Calendario"  description="Calendario de reportes" />
+        <siteMapNode url="~/Capa_Presentacion/IAP30/Reporte/ImpMasiva/Default.aspx" accesoHome="20" roles="*" title="Masivo"  description="Reporte masivo de consumos" />
+        <siteMapNode roles="A,SN4,SN3,SN2,SN1,SN" divider="1" title="&lt;sup&gt;&lt;sup&gt;____________________&lt;/sup&gt;&lt;/sup&gt;" description="" />
+        <siteMapNode url="~/Capa_Presentacion/IAP30/Reporte/Fichero/Default.aspx" roles="A,SN4,SN3,SN2,SN1,SN" title="Fichero" description="Cargar datos desde un fichero" />
+      </siteMapNode>
+      <siteMapNode title="Consultas" roles="*">
+        <siteMapNode url="~/Capa_Presentacion/IAP30/Consultas/Imputaciones/Default.aspx" roles="*" title="Imputaciones"  description="Consulta de imputaciones" />
+        <siteMapNode url="~/Capa_Presentacion/IAP30/Consultas/Facturabilidad/Default.aspx" roles="*" title="Facturabilidad"  description="Consulta de facturabilidad" />
+        <siteMapNode url="~/Capa_Presentacion/IAP30/Consultas/ParteAct/Default.aspx?or=SUFQ" roles="*" title="Partes de actividad"  description="" />
+        <siteMapNode url="~/Capa_Presentacion/IAP30/Consultas/ResMensual/Default.aspx" roles="*"  title="Resumen mensual" description="" />
+        <siteMapNode title="Bitácora" roles="*">
+          <siteMapNode url="~/Capa_Presentacion/IAP30/Consultas/Bitacora/PE/Default.aspx" roles="NINGUNO" title="Proyecto económico"  description="Consulta de bitácora de proyecto económico" />
+          <siteMapNode url="~/Capa_Presentacion/IAP30/Consultas/Bitacora/PT/Default.aspx" roles="NINGUNO" title="Proyecto técnico"  description="Consulta de bitácora de proyecto técnico" />
+          <siteMapNode url="~/Capa_Presentacion/IAP30/Consultas/Bitacora/Tarea/Default.aspx" roles="*" title="Tarea"  description="Consulta de bitácora de tarea" />
+        </siteMapNode>
+      </siteMapNode>
+    </siteMapNode>
+
+    <siteMapNode title="CVT" description="Gestión de Curriculums" roles="UCV,ACV,ECV,DIS">
+      <siteMapNode title="Mantenimientos" roles="ACV,DIS">
+        <siteMapNode url="~/Capa_Presentacion/CVT/Mantenimientos/CuentasCVT/Default.aspx" roles="*" title="Clientes no IB" description="" />
+        <siteMapNode url="~/Capa_Presentacion/CVT/Mantenimientos/EntornoTecno/Default.aspx" roles="*" title="Entorno tecnológico/funcional" description="" />
+        <siteMapNode url="~/Capa_Presentacion/CVT/Mantenimientos/AreaConocimiento/Default.aspx?OPCION=1" roles="*" title="Área de Con. Sectorial" description="Área de conocimiento sectorial" />
+        <siteMapNode url="~/Capa_Presentacion/CVT/Mantenimientos/AreaConocimiento/Default.aspx?OPCION=2" roles="*" title="Área de Con. Tecnológico" description="Área de conocimiento tecnológico" />
+        <siteMapNode url="~/Capa_Presentacion/CVT/Mantenimientos/Titulaciones/Default.aspx" roles="*" title="Titulaciones"  description="" />
+        <siteMapNode url="~/Capa_Presentacion/CVT/Mantenimientos/Idiomas/Default.aspx" roles="*" title="Idiomas"  description="" />
+        <siteMapNode url="~/Capa_Presentacion/CVT/Mantenimientos/Perfiles/Default.aspx" roles="*" title="Perfiles"  description="" />
+        <siteMapNode url="~/Capa_Presentacion/CVT/Mantenimientos/Exclusiones/Default.aspx" roles="*" title="Nivel de exclusión"  description="" />
+        <siteMapNode url="~/Capa_Presentacion/CVT/Mantenimientos/Figuras/Default.aspx" roles="*" title="Figuras"  description="" />
+      </siteMapNode>
+      <siteMapNode url="~/Capa_Presentacion/CVT/MiCV/Default.aspx?origen=1" roles="*" title="Mi Curriculum"  description="Consulta tu curriculum vitae" />
+      <siteMapNode url="~/Capa_Presentacion/CVT/MantCV/Default.aspx" roles="ECV,DIS" title="Gestión CV"  description="Mantenimiento de los curriculum vitae" />
+      <siteMapNode url="~/Capa_Presentacion/CVT/Consultas/ExpProf/Default.aspx" roles="ECV,DIS" title="Mto. Experiencias"  description="Mantenimiento de experiencias profesionales" />
+      <siteMapNode url="~/Capa_Presentacion/CVT/Consultas/Simple/Simple.aspx" roles="EVAL,VSN4,VSN3,VSN2,VSN1,VN,DIS,CCV" title="Consultas"  description="Consultas" />
+      <siteMapNode url="~/Capa_Presentacion/CVT/PerfilMercado/Default.aspx" roles=" NINGUNO" title="Asignar perfiles"  description="Asignación de perfiles de mercado (EVAL,DIS)" />
+      <siteMapNode url="~/Capa_Presentacion/CVT/Validacion/Default.aspx" roles="NINGUNO" title="Validación"  description="Validación" />
+      <siteMapNode url="~/Capa_Presentacion/CVT/Cualificacion/Default.aspx" roles="NINGUNO" title="Cualificación de proyectos"  description="Validación" />
+    </siteMapNode>
+
+    <siteMapNode title="ADM" description="Administración" roles="A,DIS">
+      <siteMapNode title="Procesos" roles="*" >
+        <siteMapNode title="Facturación" roles="*" description="Acceso a procesos de facturación" >
+          <siteMapNode title="Interface SAP" roles="*" descri0ption="" >
+            <siteMapNode url="~/Capa_Presentacion/Administracion/Facturacion/EnlaceSAP/Importar/Default.aspx" roles="*" title="Seleccionar entrada" description="Importación de facturas del fichero SAP" />
+            <siteMapNode url="~/Capa_Presentacion/Administracion/Facturacion/EnlaceSAP/Cargar/Default.aspx" roles="*" title="Cargar datos" description="Carga de la tabla de trabago INTERFACTSAP en datos económicos" />
+          </siteMapNode>
+          <siteMapNode url="~/Capa_Presentacion/Administracion/DecalajeBorrado/Default.aspx" roles="*" title="Decalaje y borrado" description="Decalaje y borrado de órdenes de facturación" />
+          <siteMapNode url="~/Capa_Presentacion/Administracion/ReasigFact/Default.aspx" roles="*" title="Reasignación" description="Reasignación de líneas de factura a proyectos" />
+        </siteMapNode>
+        <siteMapNode title="Cobro" roles="*" description="Acceso a procesos de cobro" >         
+           <siteMapNode url="~/Capa_Presentacion/Administracion/CargaCobrosSAP/Default.aspx" roles="*" title="Cargar cobros desde SAP" description="" />
+        </siteMapNode>
+        <siteMapNode title="Proyecto" roles="*" description="Acceso a la administración de proyectos" >
+          <siteMapNode title="Apertura / Cierre" roles="*" description="Acceso a procesos sobre proyecto" >
+            <siteMapNode url="~/Capa_Presentacion/Administracion/Proyecto/Estado/Default.aspx" roles="*" title="Individual" description="Apertura o cierre de un proyectos económico" />
+            <siteMapNode url="~/Capa_Presentacion/Administracion/Proyecto/EstadoMultiple/Default.aspx" roles="*" title="Masivo" description="Apertura o cierre  de múltiples proyectos económicos" />
+            <siteMapNode url="~/Capa_Presentacion/Administracion/Proyecto/EstadoMes/Default.aspx" roles="*" title="Mensual" description="Apertura o cierre de meses de proyectos económicos" />
+          </siteMapNode>
+          <siteMapNode title="Borrado" roles="*" description="" >
+            <siteMapNode url="~/Capa_Presentacion/Administracion/Proyecto/Borrar/Default.aspx" roles="*" title="De proyecto" description="" />
+            <siteMapNode url="~/Capa_Presentacion/Administracion/BorrarDato/Default.aspx" roles="*" title="De dato económico" description="" />
+          </siteMapNode>
+          <siteMapNode url="~/Capa_Presentacion/ECO/Cierre/Default.aspx?origen=QURN" roles="*"  title="Cierre mensual global" description="" />
+          <siteMapNode url="~/Capa_Presentacion/Administracion/Proyecto/Reasignar/Default.aspx" roles="DIS" title="Reasignar" description="Reasignación de contrato, cliente, tipología, ..." />
+          <siteMapNode url="~/Capa_Presentacion/Administracion/Dialogos/Generar/Default.aspx" roles="" title="Generar diálogos" description="Generación de diálogos de alerta para proyectos cerrados" />
+          <siteMapNode url="~/Capa_Presentacion/Administracion/Proyecto/NaturalezaContrato/Default.aspx" roles="*" title="Cambio de naturaleza/contrato/cliente" description=""/>
+        </siteMapNode>
+        <siteMapNode title="Cierre" roles="*" description="Acceso a cierres" >
+          <siteMapNode title="Mensual" roles="*" description="" >
+            <siteMapNode url="~/Capa_Presentacion/Administracion/Cierre/Mensual/Default.aspx" roles="*" title="IAP o Económico" description="" />
+            <siteMapNode url="~/Capa_Presentacion/Administracion/ObraEnCursoDotacion/Default.aspx" roles="*" title="Ajuste-Dotación Obra en curso" description="" />
+          </siteMapNode>
+          <siteMapNode title="Anual" roles="*" description="" >
+            <siteMapNode url="~/Capa_Presentacion/Administracion/20ObraEnCurso/Default.aspx" roles="*" title="Paso 20% obra en curso" description="" />
+          </siteMapNode>
+          <siteMapNode url="~/Capa_Presentacion/Administracion/FechasCierre/Default.aspx" roles="*" title="Fechas de cierre" description="" />
+        </siteMapNode>
+        <siteMapNode roles="*" title="Cambio estructura" description="" >
+          <siteMapNode url="~/Capa_Presentacion/Administracion/CambioEstructura/Usuarios/Default.aspx" roles="*" title="Usuarios" description="" />
+          <siteMapNode url="~/Capa_Presentacion/Administracion/CambioEstructura/Proyectos/Default.aspx" roles="*" title="Proyectos" description="" />
+          <siteMapNode url="~/Capa_Presentacion/Administracion/CambioEstructura/Contratos/Default.aspx" roles="*" title="Contratos" description="" />
+        </siteMapNode>
+        <siteMapNode url="~/Capa_Presentacion/Administracion/CopiaFiguras/Default.aspx" roles="*" title="Copia permisos usuario" description="" />       
+        <siteMapNode url="~/Capa_Presentacion/Administracion/GastosFinancieros/Default.aspx" roles="*" title="Gastos financieros" description="" />
+        <siteMapNode url="~/Capa_Presentacion/Administracion/PIG/Default.aspx" roles="*" title="Improductivos genéricos" description="Creación de proyectos improductivos genéricos" />
+        <siteMapNode title="Carga de datos" roles="*" description="Carga de datos" >
+          <siteMapNode url="~/Capa_Presentacion/Administracion/CargarDatos/DesdeFichero/Default.aspx" roles="*" title="Desde un fichero" description="Cargar datos desde un fichero de texto con el tabulador como separador" />
+          <siteMapNode url="~/Capa_Presentacion/Administracion/CargarDatos/DesdeTabla/Default.aspx" roles="*" title="Desde una tabla" description="Cargar datos desde una tabla de base de datos" />
+        </siteMapNode>
+        <siteMapNode url="~/Capa_Presentacion/Administracion/ConsuConta/Default.aspx" roles="*" title="Consumos de contabilidad" description="" />
+        <siteMapNode url="~/Capa_Presentacion/Administracion/SalProv/Default.aspx" roles="*" title="Saldo de proveedores" description="" />
+        <siteMapNode title="Recálculo costes personal" roles="*" description="" >
+          <siteMapNode url="~/Capa_Presentacion/Administracion/RecalculoCostes/Default.aspx" roles="*" title="Base IBERPER" description="" />
+          <siteMapNode url="~/Capa_Presentacion/Administracion/RecalculoCostesSuper/Default.aspx" roles="*" title="Base SUPER" description="" />
+        </siteMapNode>
+        <siteMapNode url="~/Capa_Presentacion/Administracion/Incentivos/Default.aspx" roles="*" title="Incentivos de productividad" description="" />
+		    <siteMapNode url="~/Capa_Presentacion/Administracion/GenerarFichCRAnoMes/Default.aspx" roles="*" title="Generación de ficheros para IAP" description="" />              		
+        <siteMapNode url="~/Capa_Presentacion/Administracion/EjecutarPA/Default.aspx" roles="DIS" title="Ejecutar procedimientos" description="" />
+      </siteMapNode>
+      <siteMapNode title="Mantenimientos" roles="*">
+        <siteMapNode title="Calendarios" roles="*" >
+          <siteMapNode url="~/Capa_Presentacion/Administracion/Calendario/Catalogo/Default.aspx" roles="*" title="Relación"  description="" >
+          </siteMapNode>
+          <siteMapNode url="~/Capa_Presentacion/Administracion/CalenOfiEmp/Default.aspx" roles="*" title="Selección de estándares"  description="" />
+          <siteMapNode url="~/Capa_Presentacion/PSP/Mantenimientos/CalendarioTecnico/Default.aspx" roles="*" title="Asignación a profesionales" description="" />
+          <siteMapNode url="~/Capa_Presentacion/Administracion/Calendario/FestivosProvincia/Default.aspx" roles="*" title="Asignación de festivos por provincia" description="" />
+        </siteMapNode>
+        <siteMapNode url="~/Capa_Presentacion/PSP/Plantilla/Catalogo/Default.aspx?sTipo=E2" roles="*" title="Plantillas de proyecto" description="" />
+        <siteMapNode url="~/Capa_Presentacion/ECO/Mantenimientos/ClaseEco/Default.aspx" roles="*" title="Clases económicas" description="" />
+        <siteMapNode title="Estructura organizativa" roles="*" description="Acceso al mantenimiento de la estructura organizativa y a la asignación de figuras" >
+          <siteMapNode url="~/Capa_Presentacion/Administracion/EstructuraOrg/Default.aspx?nNE=1" roles="*" title="Supernodo nivel 4" description="" />
+          <siteMapNode url="~/Capa_Presentacion/Administracion/EstructuraOrg/Default.aspx?nNE=2" roles="*" title="Negocio" description="" />
+          <siteMapNode url="~/Capa_Presentacion/Administracion/EstructuraOrg/Default.aspx?nNE=3" roles="*" title="Línea de Negocio" description="" />
+          <siteMapNode url="~/Capa_Presentacion/Administracion/EstructuraOrg/Default.aspx?nNE=4" roles="*" title="Unidad de negocio" description="" />
+          <siteMapNode url="~/Capa_Presentacion/Administracion/EstructuraOrg/Default.aspx?nNE=5" roles="*" title="Centro de responsabilidad" description="" />
+          <siteMapNode url="~/Capa_Presentacion/Administracion/EstructuraOrg/Default.aspx?nNE=6" roles="*" title="Areas de negocio" description="" />
+        </siteMapNode>
+        <siteMapNode url="~/Capa_Presentacion/Administracion/EstructuraNat/Default.aspx?nNE=1" roles="*" title="Tipología y Naturaleza" description="Tipologías de proyecto y naturalezas de producción" />
+        <siteMapNode url="~/Capa_Presentacion/Administracion/Clientes/Catalogo/Default.aspx" roles="*" title="Clientes" description="" />
+        <siteMapNode url="~/Capa_Presentacion/Administracion/Proveedores/Default.aspx" roles="*" title="Proveedores" description="" />
+        <siteMapNode url="~/Capa_Presentacion/Administracion/Contratos/Catalogo/Default.aspx" roles="*" title="Contratos" description="" />
+        <siteMapNode url="~/Capa_Presentacion/Administracion/Horizontal/Catalogo/Default.aspx" roles="*" title="Horizontal" description="" />
+        <siteMapNode url="~/Capa_Presentacion/Administracion/Empresas/Catalogo/Default.aspx" roles="*" title="Empresas" description="" />
+        <siteMapNode url="~/Capa_Presentacion/Administracion/MantUsuarios/Catalogo/Default.aspx" roles="*" title="Usuarios" description="" />
+        <siteMapNode url="~/Capa_Presentacion/Administracion/MantUsuariosIAUTO/Default.aspx?o=a" roles="*" title="Imputaciones automáticas" description="" />
+        <siteMapNode url="~/Capa_Presentacion/Administracion/MantUsuariosCATP/Default.aspx?o=a" roles="*" title="Contratos a tiempo parcial" description="" />
+        <siteMapNode url="~/Capa_Presentacion/Administracion/AccesoUsuarios/Default.aspx" roles="*" title="Acceso usuarios" description="Habilita/deshabilita el acceso de usuarios a la aplicación" />
+        <siteMapNode title="Consultas personalizadas" roles="*" description="" >
+          <siteMapNode url="~/Capa_Presentacion/Administracion/ConsultasPer/Catalogo/Default.aspx" roles="*" title="Catálogo" description="" />
+          <siteMapNode url="~/Capa_Presentacion/Administracion/ConsultasPer/Asignacion/Default.aspx" roles="*" title="Asignación a usuarios" description="" />
+        </siteMapNode>
+        <siteMapNode url="~/Capa_Presentacion/PSP/Mantenimientos/TipoAsunto/Default.aspx" roles="*" title="Tipos de asunto (Bitácora)" description="" />
+        <siteMapNode url="~/Capa_Presentacion/Administracion/Avisos/Catalogo/Default.aspx" roles="*" title="Avisos" description="" />
+        <siteMapNode url="~/Capa_Presentacion/Administracion/Confidencialidad/Default.aspx" roles="*" title="Confidencialidad" description="Confidencialidad de costes" />
+        <siteMapNode url="~/Capa_Presentacion/ECO/Mantenimientos/AE_Corporativos/Catalogo/Default.aspx" roles="*" title="CEEC" description="Criterios estadísticos económicos corporativos" />
+        <siteMapNode url="~/Capa_Presentacion/Administracion/AccesoApliModulos/Default.aspx" roles="*" title="Acceso Apli./Mód." description="Actualización de datos para el acceso a la aplicación y sus módulos" />
+        <siteMapNode url="~/Capa_Presentacion/Administracion/Administradores/Default.aspx" roles="*" title="Administradores" description="Proceso para la asignación/desasignación de administradores y super-administradores" />
+        <siteMapNode url="~/Capa_Presentacion/Administracion/USA/Default.aspx" roles="*" title="USA" description="Proceso para la asignación/desasignación de usuarios de soporte administrativo" />
+        
+        <siteMapNode title="Facturación" roles="*" description="Mantenimiento de datos relacionados con las órdenes de facturación" >
+          <siteMapNode url="~/Capa_Presentacion/Administracion/OrgVtas/Default.aspx" roles="*" title="Organizaciones de venta" description="" />
+          <siteMapNode url="~/Capa_Presentacion/Administracion/CentroTrabCanalDis/Default.aspx" roles="*" title="Centros/Canales de distribución" description="" />
+          <siteMapNode url="~/Capa_Presentacion/Administracion/FechasCierre/Default.aspx?o=lfa" roles="*" title="Límite de facturación" description="" />
+          <siteMapNode url="~/Capa_Presentacion/Administracion/ControlOrdenFactADM/Default.aspx" roles="*" title="Acceso OF + PF" description="Acceso a órdenes y plantillas de facturación" />
+          <siteMapNode url="~/Capa_Presentacion/Administracion/UsuariosSinAvisoVtoFras/Default.aspx" roles="*" title="Exclusión aviso vencimiento" description="Profesionales excluidos del aviso de vencimiento de facturas"/>
+        </siteMapNode>
+        <siteMapNode url="~/Capa_Presentacion/Administracion/Correo/Default.aspx" roles="*" title="Envío de correos" description=""/>
+        <siteMapNode url="~/Capa_Presentacion/Administracion/Parametrizacion/Default.aspx" roles="*" title="Parametrización SUPER" description=""/>
+        <siteMapNode url="~/Capa_Presentacion/Administracion/Monedas/Default.aspx" roles="*" title="Monedas" description=""/>
+        <siteMapNode title="Alertas" roles="*" description="" >
+          <siteMapNode url="~/Capa_Presentacion/Administracion/setAlertaProyecto/Default.aspx" roles="*" title="Por proyecto" description="" />
+          <siteMapNode url="~/Capa_Presentacion/Administracion/Excepciones/Default.aspx" roles="*" title="Excepciones" description="Excepciones a las alertas" />
+          <siteMapNode url="~/Capa_Presentacion/Administracion/MantGestoresAlertas/Default.aspx" roles="*" title="Gestores MR" description="Mantenimiento de gestores de margen y rentabilidad" />
+          <siteMapNode url="~/Capa_Presentacion/Administracion/MantGestoresSAP/Default.aspx" roles="*" title="Gestores SAP" description="Mantenimiento de gestores SAP" />
+          <siteMapNode url="~/Capa_Presentacion/Administracion/FechasCierre/Default.aspx?o=flr" roles="*" title="Fecha límite de respuesta" description="Mantenimiento de fecha límite de respuesta" />
+          <siteMapNode url="~/Capa_Presentacion/Administracion/MantGenMensual/Default.aspx" roles="*" title="Generación mensual" description="Alertas sobre resultado de proyectos" />
+          <siteMapNode url="~/Capa_Presentacion/Administracion/MantMotivoOCyFA/Default.aspx" roles="*" title="Motivos OC y FA" description="Motivos de Obra en Curso y Facturación Anticipada" />
+          <siteMapNode url="~/Capa_Presentacion/Administracion/AlertasPrioridad/Default.aspx" roles="*" title="Prioridades en alertas" description="" />
+        </siteMapNode>
+        <siteMapNode url="~/Capa_Presentacion/Administracion/MantPaisesProvin/Default.aspx" roles="*" title="Países y Provincias" description="" />
+        <siteMapNode url="~/Capa_Presentacion/Administracion/MantSectoresSegmentos/Default.aspx" roles="*" title="Sectores y Segmentos" description="" />
+        <siteMapNode url="~/Capa_Presentacion/Administracion/MantAmbitosZonas/Default.aspx" roles="*" title="Ámbitos y Zonas" description="" />
+        <siteMapNode url="~/Capa_Presentacion/Administracion/AsigZonaProvincias/Default.aspx" roles="*" title="Asignación zona/provincia" description="" />
+      </siteMapNode>
+      <siteMapNode title="Test desarrollo" roles="DIS">
+        <siteMapNode url="~/Capa_Presentacion/Administracion/Consultas/ActividadSuper/Default.aspx" roles="*" title="Actividad SUPER" description="" />
+        <siteMapNode url="~/Capa_Presentacion/Administracion/Consultas/UsuariosConectados/Default.aspx" roles="" title="Usuarios conectados" description="" />
+      </siteMapNode>
+      <siteMapNode title="Consultas" roles="*">
+        <siteMapNode url="~/Capa_Presentacion/Administracion/Consultas/FigurasUsuarios/Default.aspx" roles="*" title="Figuras" description="" />
+        <siteMapNode url="~/Capa_Presentacion/Administracion/ControlUsuCATP/Default.aspx" roles="*" title="Profesionales CATP" description="Profesionales con contrato a tiempo parcial" />
+        <siteMapNode url="~/Capa_Presentacion/PSP/Proyecto/Acceso/Default.aspx?sOP=F" roles="" title="Alta" description="" />
+        <siteMapNode url="~/Capa_Presentacion/Administracion/Foraneos/Consultas/Catalogo/Default.aspx" roles="*" title="Foráneos" description=""/>
+        <siteMapNode url="~/Capa_Presentacion/Administracion/Formulas/Default.aspx" roles="*" title="Fórmulas" description=""/>
+      </siteMapNode>  
+      <siteMapNode title="Preventa" roles="*">
+        <siteMapNode title="Mantenimientos" roles="*">
+          <siteMapNode url="~/Capa_Presentacion/Administracion/Preventa/Estructura/Default.aspx" roles="*" title="Estructura" description="Estructura preventa" />
+          <siteMapNode url="~/Capa_Presentacion/SIC/Mantenimientos/area-subarea/Default.aspx?b3JpZ2VubWVudT1BRE0=" roles="*" title="Áreas/Subáreas" description="" />
+          <siteMapNode url="~/Capa_Presentacion/Administracion/Preventa/Acciones/Default.aspx" roles="*" title="Tipos de acciones" description="Tipos de acciones preventa" />
+          <siteMapNode url="~/Capa_Presentacion/Administracion/Preventa/Tareas/Default.aspx" roles="*" title="Tipos de tareas" description="Tipos de tareas preventa" />
+          <siteMapNode url="~/Capa_Presentacion/Administracion/Preventa/ParametrizacionPT/Default.aspx" roles="*" title="Parametrización PT" description="Parametrización de los Proyectos Técnicos de destino por Organización Comercial y Profesional" />
+          <siteMapNode url="~/Capa_Presentacion/Administracion/Preventa/TipoDocumento/Default.aspx" roles="*" title="Tipos de documento" description="Tipos de documentos de preventa" />
+        </siteMapNode>
+		    <siteMapNode url="~/Capa_Presentacion/SIC/Accion/CatalogoFigAreaSubarea/Default.aspx?b3JpZ2VubWVudT1BRE0=" roles="*" title="Consulta de acciones" description="" />
+        <siteMapNode url="~/Capa_Presentacion/SIC/Solicitud/CatalogoSUPER/Default.aspx?b3JpZ2VubWVudT1BRE0=" roles="*" title="Crear solicitudes y acciones" description="" />
+		    <siteMapNode title="Exportaciones" id="" description="Exportaciones a Excel" roles="*">
+			    <siteMapNode url="~/Capa_Presentacion/SIC/Exportaciones/Acciones/Default.aspx?b3JpZ2VubWVudT1BRE0=" roles="*" title="Acciones" description="" />
+			    <siteMapNode url="~/Capa_Presentacion/SIC/Exportaciones/CargaTrabajo/Default.aspx?b3JpZ2VubWVudT1BRE0=" roles="*" title="Carga de trabajo" description="" />        
+			    <siteMapNode url="~/Capa_Presentacion/SIC/Exportaciones/Tareas/Default.aspx?b3JpZ2VubWVudT1BRE0=" roles="*" title="Tareas" description="" />
+		    </siteMapNode>
+      
+      </siteMapNode>     
+    </siteMapNode>
+
+    <siteMapNode title="ADP" description="Administración de personal" roles="PER,DIS">
+      <siteMapNode title="Mantenimientos" roles="*">
+        <siteMapNode url="~/Capa_Presentacion/Administracion/MantUsuarios/Catalogo/Default.aspx?o=p" roles="*" title="Usuarios" description="" />
+        <siteMapNode url="~/Capa_Presentacion/Administracion/MantUsuariosIAUTO/Default.aspx?o=p" roles="*" title="Imputaciones automáticas" description="" />
+        <siteMapNode url="~/Capa_Presentacion/Administracion/MantUsuariosCATP/Default.aspx?o=p" roles="*" title="Contratos a tiempo parcial" description="" />
+      </siteMapNode>
+      <siteMapNode title="Consultas" roles="*">
+        <siteMapNode url="~/Capa_Presentacion/Administracion/ControlUsuCATP/Default.aspx?o=p" roles="*" title="Profesionales CATP" description="Profesionales con contrato a tiempo parcial" />
+        <siteMapNode url="~/Capa_Presentacion/Administracion/Absentismo/Default.aspx" roles="*" title="Control de absentismo" description="" />
+        <siteMapNode url="~/Capa_Presentacion/PSP/Consultas/ConsTecnico/Default.aspx?o=ADP" roles="*" title="Consumos IAP" description="Consumos IAP de un profesional" />
+      </siteMapNode>
+    </siteMapNode>
+
+    <siteMapNode title="Ayuda" roles="*">
+      <siteMapNode url="~/Capa_Presentacion/Ayuda/FigurasUsuario/Default.aspx" roles="*" title="¿Qué soy yo en SUPER?" description="Relación de responsabilidades y figuras del profesional en SUPER" />
+      <siteMapNode url="~/Capa_Presentacion/Ayuda/Contacto/Default.aspx" roles="*" title="Contacto" description="" />
+      <siteMapNode url="~/Capa_Presentacion/Ayuda/Guia/Default.aspx" roles="*" title="Guía" description=""/>
+      <siteMapNode url="~/Capa_Presentacion/Ayuda/Novedades/Default.aspx" roles="*" title="Novedades" description=""/>
+      <siteMapNode url="~/Capa_Presentacion/Ayuda/Requisitos/Default.aspx" roles="*" title="Requisitos" description=""/>
+      <siteMapNode url="~/Capa_Presentacion/Ayuda/Obras/Default.aspx?a=24" roles="" title="Página obras" description=""/>
+      <siteMapNode url="~/Capa_Presentacion/Ayuda/Avisos/Default.aspx" roles="*" title="Comunicados de Administración" description=""/>
+    </siteMapNode>
+
+    <siteMapNode title="Pruebas" roles="DIS">
+      <siteMapNode url="~/Capa_Presentacion/Pruebas/EstructuraTecnica/Default.aspx" roles="*" title="Estructura técnica" description="array en servidor"/>
+      <siteMapNode url="~/Capa_Presentacion/Pruebas/JsonNet/Default.aspx" roles="*" title="JsonNet" description=""/>
+      <siteMapNode url="~/Capa_Presentacion/ECO/BBII_V2/Default.aspx?o=pge" roles="*" title="BBII jScrollTable" description="" />
+      <siteMapNode url="~/Capa_Presentacion/Pruebas/Navegador/Default.aspx" roles="" title="Navegador" description=""/>
+      <siteMapNode url="~/Capa_Presentacion/Pruebas/TablaDinamica/Default.aspx" roles="" title="Tabla Dinamica Cliente" description=""/>
+      <siteMapNode url="~/Capa_Presentacion/Pruebas/TablaDinamica2/Default.aspx" roles="" title="Tabla Dinamica Servidor" description=""/>
+      <siteMapNode url="~/Capa_Presentacion/Pruebas/TablaDinamica3/Default.aspx" roles="" title="Tabla Dinamica Servidor V3" description=""/>
+      <siteMapNode url="~/Capa_Presentacion/Pruebas/TablaDinamica4/Default.aspx" roles="" title="Tabla Dinamica Servidor V4" description=""/>
+      <siteMapNode url="~/Capa_Presentacion/Pruebas/ColumnDrag/Default.aspx" roles="" title="ColumnDrag" description=""/>
+      <siteMapNode url="~/Capa_Presentacion/Pruebas/EmailHTML/Default.aspx" roles="*" title="Test Email HTML" description=""/>
+      <siteMapNode url="~/Capa_Presentacion/Pruebas/EmailHTML2/Default.aspx" roles="*" title="Email HTML 2" description=""/>
+      <siteMapNode url="~/Capa_Presentacion/Pruebas/ImageData/Default.aspx" roles="*" title="ImageData" description=""/>
+      <siteMapNode url="~/Capa_Presentacion/Pruebas/ExperienciaProfesional/Default.aspx" roles="" title="Experiencia profesional" description=""/>
+      <siteMapNode url="~/Capa_Presentacion/Pruebas/PanelTareas/Default.aspx" roles="*" title="Tareas pendientes" description=""/>
+      <siteMapNode url="~/Capa_Presentacion/Pruebas/Msg/Default.aspx" roles="*" title="Mensaje" description=""/>
+      <siteMapNode title="Gasvi" roles="*">
+        <siteMapNode url="~/Capa_Presentacion/Pruebas/Gasvi/Carga/Default.aspx" roles="*" title="Carga de datos" description=""/>
+      </siteMapNode>
+      <siteMapNode title="Gráficos" roles="*">
+        <siteMapNode url="~/Capa_Presentacion/Pruebas/Graficos/Prueba1/Default.aspx" roles="*" title="Prueba1" description=""/>
+        <siteMapNode url="~/Capa_Presentacion/Pruebas/Graficos/Prueba2/Default.aspx" roles="*" title="Prueba2" description=""/>
+      </siteMapNode>
+      <siteMapNode url="~/Capa_Presentacion/Pruebas/ArraysNodos/Default.aspx" roles="" title="Acceso Nodos" description=""/>
+      <siteMapNode url="~/Capa_Presentacion/Pruebas/SubPestanas/Default.aspx" roles="" title="Subpestañas" description="Muestra un sistema de pestañas de segundo nivel" />
+      <siteMapNode url="~/Capa_Presentacion/Pruebas/Calendarios/Default.aspx" roles="" title="Calendarios" description="Muestra calendarios con goma y sin ella, en modo edición o lectura" />
+      <siteMapNode url="~/Capa_Presentacion/Pruebas/OT/Default.aspx" roles="" title="Oficina Técnica" description="Mantenimiento de los miembros de la oficina técnica" />
+      <siteMapNode url="~/Capa_Presentacion/Pruebas/Solapa/Default.aspx" roles="" title="Solapa información" description="" />
+      <siteMapNode url="~/Capa_Presentacion/Pruebas/Botones/Default.aspx" roles="" title="Botones" description="" />
+      <siteMapNode url="~/Capa_Presentacion/Pruebas/DDNodes/Default.aspx" roles="" title="Drag and drop nodos" description="" />
+      <siteMapNode url="~/Capa_Presentacion/Pruebas/DDLI/Default.aspx" roles="" title="Drag and drop LI" description="" />
+      <siteMapNode url="~/Capa_Presentacion/Pruebas/DDIMG/Default.aspx" roles="" title="Drag and drop IMG" description="" />
+      <siteMapNode url="~/Capa_Presentacion/Pruebas/DDFilas/Default.aspx" roles="" title="Drag and drop Filas" description="" />
+      <siteMapNode title="Arbol" roles="" >
+        <siteMapNode url="~/Capa_Presentacion/Pruebas/Arbol/Default.aspx?nNE=1" roles="*" title="Arbol Nivel 1" description="" />
+        <siteMapNode url="~/Capa_Presentacion/Pruebas/Arbol/Default.aspx?nNE=2" roles="*" title="Arbol Nivel 2" description="" />
+        <siteMapNode url="~/Capa_Presentacion/Pruebas/Arbol/Default.aspx?nNE=3" roles="*" title="Arbol Nivel 3" description="" />
+        <siteMapNode url="~/Capa_Presentacion/Pruebas/Arbol/Default.aspx?nNE=4" roles="*" title="Arbol Nivel 4" description="" />
+        <siteMapNode url="~/Capa_Presentacion/Pruebas/Arbol/Default.aspx?nNE=5" roles="*" title="Arbol Nivel 5" description="" />
+      </siteMapNode>
+      <siteMapNode title="Arbol Tabla" roles="" >
+        <siteMapNode url="~/Capa_Presentacion/Pruebas/ArbolTabla/Default.aspx?nNE=1" roles="*" title="Arbol Tabla Nivel 1" description="" />
+        <siteMapNode url="~/Capa_Presentacion/Pruebas/ArbolTabla/Default.aspx?nNE=2" roles="*" title="Arbol Tabla Nivel 2" description="" />
+        <siteMapNode url="~/Capa_Presentacion/Pruebas/ArbolTabla/Default.aspx?nNE=3" roles="*" title="Arbol Tabla Nivel 3" description="" />
+        <siteMapNode url="~/Capa_Presentacion/Pruebas/ArbolTabla/Default.aspx?nNE=4" roles="*" title="Arbol Tabla Nivel 4" description="" />
+        <siteMapNode url="~/Capa_Presentacion/Pruebas/ArbolTabla/Default.aspx?nNE=5" roles="*" title="Arbol Tabla Nivel 5" description="" />
+      </siteMapNode>
+      <siteMapNode url="~/Capa_Presentacion/Pruebas/Alert/Default.aspx" roles="" title="Alert" description="" />
+      <siteMapNode url="~/Capa_Presentacion/Pruebas/Vacio/Default.aspx" roles="" title="Vacío" description="" />
+      <siteMapNode url="~/Capa_Presentacion/Pruebas/Avance/Default.aspx" roles="" title="Scroll fijo" description="" />
+      <siteMapNode url="~/Capa_Presentacion/Pruebas/Avance2/Default.aspx" roles="" title="Scroll fijo 2" description="" />
+      <siteMapNode url="~/Capa_Presentacion/Pruebas/Columnas/Default.aspx" roles="" title="Columnas" description="" />
+      <siteMapNode url="~/Capa_Presentacion/Pruebas/Retractil/Default.aspx" roles="" title="Pestaña retractil" description="" />
+      <siteMapNode url="~/Capa_Presentacion/Pruebas/Parser/Default.aspx" roles="" title="HTML Parser" description="" />
+      <siteMapNode url="~/Capa_Presentacion/Pruebas/CopiarProy/Default.aspx" roles="" title="Copia de proyecto" description="" />
+      <siteMapNode url="~/Capa_Presentacion/Pruebas/TooltipSelect/Default.aspx" roles="" title="Tooltip Select" description="" />
+      <siteMapNode url="~/Capa_Presentacion/Pruebas/GASVISAPWS/Default.aspx" roles="*" title="Servicio web GASVI" description="" />
+      <siteMapNode url="~/Capa_Presentacion/Pruebas/ROBOMOVILWS/Default.aspx" roles="*" title="Servicio web ROBOMOVIL" description="" />
+      <siteMapNode url="~/Capa_Presentacion/Pruebas/ROBOMOVILWS/Default2.aspx" roles="*" title="Consulta ROBOMOVIL" description="" />
+      <siteMapNode url="~/Capa_Presentacion/Pruebas/CatalCtas/Default.aspx" roles="*" title="Prueba estructura técnica" description="array en cliente" />
+      <siteMapNode url="~/Capa_Presentacion/Pruebas/MtoCtasCur/Catalogo/Default.aspx" roles="*" title="Catálogo de Mantenimiento de cuentas" description="" />
+      <siteMapNode url="~/Capa_Presentacion/Pruebas/TreeView-EO/Default.aspx" roles="*" title="TreeView" description="" />
+      <siteMapNode url="~/Capa_Presentacion/Pruebas/TreeView-Fancy/Default.aspx" roles="*" title="FancyTreeView" description="" />
+      <siteMapNode url="~/Capa_Presentacion/Pruebas/GridEditable-Fancy/Default.aspx" roles="*" title="Editable Grid" description="" />
+      <siteMapNode url="~/Capa_Presentacion/Pruebas/TestsvcSUPER/Default.aspx" roles="*" title="TestsvcSUPER" description="" />
+
+      <siteMapNode title="Word" roles="*" >
+        <siteMapNode url="~/Capa_Presentacion/Pruebas/Word/Default01.aspx" roles="*" title="Prueba 1" description="" />
+      </siteMapNode>
+      <siteMapNode url="~/Capa_Presentacion/Pruebas/Thread/Default.aspx" roles="*" title="Thread" description="" />
+      <siteMapNode url="~/Capa_Presentacion/Pruebas/EjecutarPA/Default.aspx" roles="*" title="EjecutarPA" description="" />
+    </siteMapNode>
+  </siteMapNode>
+</siteMap>

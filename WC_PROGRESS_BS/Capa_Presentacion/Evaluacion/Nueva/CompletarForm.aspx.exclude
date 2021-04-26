@@ -1,0 +1,641 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="CompletarForm.aspx.cs" Inherits="Capa_Presentacion_Evaluacion_Nueva_Default" %>
+<%@ Register  Src="~/uc/CabeceraMenu.ascx" TagName="CabeceraMenu" TagPrefix="cb1" %>
+<%@ Register  Src="~/uc/PieMenu.ascx" TagName="PieMenu" TagPrefix="cb1" %>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <%--<meta name="viewport" content="width=device-width, initial-scale=1">--%>
+    
+    <link href="/js/plugins/datepicker/datepicker3.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/StyleSheet.css" />
+    <title>HOME PROGRESS</title>
+
+
+     <style type="text/css">
+
+
+          @font-face {
+             font-family: 'Scriptina';
+             src: url('css/firmaEvaluado/Scriptina.eot');
+             src: url('css/firmaEvaluado/Scriptina.eot?#iefix') format('embedded-opentype'), url('css/firmaEvaluado/Scriptina.woff2') format('woff2'), url('css/firmaEvaluado/Scriptina.woff') format('woff'), url('css/firmaEvaluado/Scriptina.ttf') format('truetype'), url('css/firmaEvaluado/Scriptina.svg#Scriptina') format('svg');
+             font-weight: normal;
+             font-style: normal;
+         }
+
+
+         @font-face {
+             font-family: 'FeliX';
+             src: url('css/firmaEvaluador/FeliX.eot');
+             src: url('css/firmaEvaluador/FeliX.eot?#iefix') format('embedded-opentype'), url('css/firmaEvaluador/FeliX.woff2') format('woff2'), url('css/firmaEvaluador/FeliX.woff') format('woff'), url('css/firmaEvaluador/FeliX.ttf') format('truetype'), url('css/firmaEvaluador/FeliX.svg#FeliX') format('svg');
+             font-weight: normal;
+             font-style: normal;
+         }
+        
+    </style>
+
+</head>
+
+   
+
+<body>
+
+
+   <cb1:CabeceraMenu runat="server" ID="CabeceraMenu"></cb1:CabeceraMenu>
+     <br /><br />
+    
+
+    
+
+    <div class="container">       
+        <!-- Imagen estados -->
+        <img style="position:absolute; top: -20px;right: 30px;z-index: 1000;" src="estadoAbierta.png" />
+       
+        <!--Evaluador -->
+        <div class="row">
+
+            <div class="col-xs-6">
+                <fieldset class="fieldset">
+                    <legend class="fieldset">Evaluador</legend>
+
+                     <div class="col-xs-12">                                                                                               
+                         <strong><span>Víctor Izaguirre Aldama</span></strong>                    
+                     </div>                                   
+                </fieldset>
+            </div>
+
+            <div class="col-xs-6">
+                <fieldset class="fieldset">
+                    <legend class="fieldset">Evaluación</legend>
+                     <b style="margin-left:15px;margin-right:2px;"> <span>Apertura</span></b>                    
+                    <input type="text" style="width:80px" value="27/04/2015" />
+                    <b style="margin-left:25px;margin-right:2px"><span>Cierre</span></b>
+                    <input type="text" style="width:80px" value="30/04/2015" />
+                </fieldset>
+                
+            </div>
+
+
+        </div>
+
+        <!--Evaluado-->
+        <div class="row">
+            <div class="col-xs-12">
+                <fieldset class="fieldset">
+                    <legend class="fieldset">Evaluado</legend>
+                    <div class="row">
+                    <div class="col-xs-4">
+                        <strong><span style="margin-left:14px">David Velázquez Montaña</span></strong>
+                    </div>
+
+
+                    <div class="col-xs-5 col-xs-offset-3">
+                        <strong><span style="display:inline-block;margin-left:38px">Rol</span></strong>
+                        <input style="width:280px" type="text" />
+                    </div>
+                
+                    </div>
+
+                    <!--Actividad-->
+
+
+                    <div class="row">
+                        <div class="col-xs-12">
+                            
+                        </div>
+
+                        <div class="col-xs-7">
+                         <fieldset class="fieldset">
+                            <legend class="fieldset">Actividad</legend>                                              
+                        
+                            <label class="checkbox-inline">
+                                <input type="radio" name="rdbActividad" id="" value="">
+                                Técnica
+                            </label>
+
+                            <label class="checkbox-inline">
+                                <input type="radio" name="rdbActividad" id="" value="">
+                                Gestión
+                            </label>
+
+                            <label class="checkbox-inline">
+                                <input type="radio" name="rdbActividad" id="" value="">
+                                Comercial
+                            </label>
+
+                            <label class="checkbox-inline">
+                                <input type="radio" name="rdbActividad" id="" value="">
+                                Directiva
+                            </label>
+                        
+                        </fieldset>
+                        </div>
+
+                        <div class="col-xs-5" style="margin-top:25px">
+                              <strong><span style="display:inline-block;margin-left:33px">C.R.</span></strong>
+                            <input style="width:280px" type="text" />
+                        </div>
+                    </div>                      
+                </fieldset>
+            </div>
+        </div>
+
+        <!-- Objeto de evaluación-->
+        <div class="row">
+            <div class="col-xs-12">
+                <fieldset class="fieldset">
+                    <legend class="fieldset">Objeto de la evaluación</legend>
+
+                    <div class="row">
+                        <div class="col-xs-7 col-xs-offset-3">                            
+                            <input id="rdbEvalDesempeno" checked type="radio" name="evaluacion" style="margin-left: 12px; margin-right: 2px" id="" />Evaluación global del desempeño
+                            <input id="rdbEvalProyecto" type="radio" name="evaluacion" style="margin-left: 12px; margin-right: 2px" id="" />Evaluación de un proyecto
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <fieldset class="fieldset">
+                                <legend class="fieldset">Período de evaluación</legend>
+
+                                <div class="col-xs-6">
+                                    <select>
+                                            <option>Enero</option>
+                                            <option>Febrero</option>
+                                            <option>Marzo</option>
+                                    </select>
+                                   
+                                    <select>
+                                            <option>2010</option>
+                                            <option>2011</option>
+                                            <option>2012</option>
+                                            <option>2013</option>
+                                            <option>2014</option>
+                                    </select>
+                                </div>
+                                 
+                                <div class="col-xs-6">
+                                     <select>
+                                            <option>Enero</option>
+                                            <option>Febrero</option>
+                                            <option>Marzo</option>
+                                    </select>
+
+                                     <select>
+                                            <option>2010</option>
+                                            <option>2011</option>
+                                            <option>2012</option>
+                                    </select>
+                                </div>
+
+                            </fieldset>
+                        </div>
+
+
+                        <!-- Div Proyecto (sólo aparece si Evaluación de un proyecto está activo) -->
+                        <div class="col-xs-6">
+                            <div id="divProyecto" class="row">
+
+                                <div class="col-xs-2">
+                                    <strong><span id="lblProyecto">Proyecto</span></strong>
+                                </div>
+                                <div class="col-xs-10">
+                                    <input type="text" placeholder="Selecciona el proyecto" class="form-control" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </fieldset>
+            </div>
+        </div>
+
+
+
+        <div class="row">
+            <div class="col-xs-12">
+                <span>1. Aspectos más importantes a reconocer del trabajo realizado en el período que se valora (es imprescindible identificar las situaciones concretas de trabajo en que esos aspectos fueron puestos de manifiesto)</span>
+            </div>
+
+            <div class="col-xs-12">
+                <textarea style="width:100%;height:80px"></textarea>
+            </div>
+
+        </div>
+        
+        <br />
+
+        <div class="row">
+            <div class="col-xs-12">
+                <span>2. Aspectos más importantes que deben ser mejorados (es imprescindible identificar las situaciones concretas de trabajo en que esos aspectos fueron puestos de manifiesto)</span>
+            </div>
+
+            <div class="col-xs-12">
+                <textarea style="width:100%;height:80px"></textarea>
+            </div>
+        </div>
+
+
+
+    </div>
+
+    <br />
+    
+
+     <!-- PUNTO 3-->
+
+    <!-- HABILIDADES-->
+    <div class="container">        
+        <span>3. Evalúa de modo general el desempeño del empleado en las siguientes habilidades y valores corporativos.</span>
+        <div class="panel panel-default clearfix">
+            
+            <div class="panel-heading">                
+                <h2 class="panel-title">Habilidades</h2>
+            </div>
+
+            <div>
+                <div class="col-xs-4"> </div>                                                                 
+                <div class="col-xs-2 text-center header">
+                    <span class="hidden-xs">A mejorar</span>
+                    <span class="visible-xs">S</span>
+                </div>
+                <div class="col-xs-2 text-center header">
+                    <span class="hidden-xs">Suficiente</span>
+                    <span class="visible-xs">M</span>
+                </div>
+                <div class="col-xs-2 text-center header">
+                    <span class="hidden-xs">Bueno</span>
+                    <span class="visible-xs">L</span>
+                </div>
+                    <div class="col-xs-2 text-center header">
+                    <span class="hidden-xs">Alto</span>
+                    <span class="visible-xs">L</span>
+                </div>
+            </div>
+
+                
+            <div id="divHabilidades">
+                <!--Liderazgo / Gestión de equipo-->
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-xs-4">
+                            A) Gestión de relación de clientes                                          
+                        </div>
+                        <div class="col-xs-2 text-center">
+                            <input type="radio" name="habilidades" id=""/>
+                        </div>
+                        <div class="col-xs-2 text-center">
+                            <input type="radio" name="habilidades" id=""/>
+                        </div>
+                        <div class="col-xs-2 text-center">
+                            <input type="radio" name="habilidades" id=""/>
+                        </div>
+                            <div class="col-xs-2 text-center">
+                            <input type="radio" name="habilidades" id=""/>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Liderazgo / Gestión de equipo-->
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-xs-4">
+                            B) Liderazgo / Gestión de equipo
+                        </div>
+                        <div class="col-xs-2 text-center">
+                            <input type="radio" name="habilidades2"/>
+                        </div>
+                        <div class="col-xs-2 text-center">
+                            <input type="radio" name="habilidades2"/>
+                        </div>
+                        <div class="col-xs-2 text-center">
+                            <input type="radio" name="habilidades2" />
+                        </div>
+                            <div class="col-xs-2 text-center">
+                            <input type="radio" name="habilidades2" />
+                        </div>
+                    </div>
+                       
+                </div>
+
+                <!-- Planificación / Organización-->
+                <div class="panel-body">
+                        <div class="row">
+                        <div class="col-xs-4">
+                            C) Planificación / Organización
+                        </div>
+                        <div class="col-xs-2 text-center">
+                            <input type="radio" name="habilidades3"/>
+                        </div>
+                        <div class="col-xs-2 text-center">
+                            <input type="radio" name="habilidades3"/>
+                        </div>
+                        <div class="col-xs-2 text-center">
+                            <input type="radio" name="habilidades3"/>
+                        </div>
+
+                         <div class="col-xs-2 text-center">
+                            <input type="radio" name="habilidades3"/>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Expertise / Técnico-->
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-xs-4">
+                            D) Expertise / Técnico
+                        </div>
+                        <div class="col-xs-2 text-center">
+                            <input type="radio" name="habilidades4"/>
+                        </div>
+                        <div class="col-xs-2 text-center">
+                            <input type="radio" name="habilidades4"/>
+                        </div>
+                        <div class="col-xs-2 text-center">
+                            <input type="radio" name="habilidades4"/>
+                        </div>
+                         <div class="col-xs-2 text-center">
+                            <input type="radio" name="habilidades4"/>
+                        </div>
+                    </div>
+ 
+                </div>
+
+            </div>
+        </div>        
+    </div>
+
+
+
+
+    <!-- VALORES CORPORATIVOS-->
+    <div class="container">        
+        <div class="panel panel-default clearfix">
+            <div class="panel-heading">
+                <h2 class="panel-title">Valores Corporativos</h2>
+            </div>
+
+            <div>
+                <div class="col-xs-4"> </div>                                                                 
+                <div class="col-xs-2 text-center header">
+                    <span class="hidden-xs">A mejorar</span>
+                    <span class="visible-xs">S</span>
+                </div>
+                <div class="col-xs-2 text-center header">
+                    <span class="hidden-xs">Suficiente</span>
+                    <span class="visible-xs">M</span>
+                </div>
+                <div class="col-xs-2 text-center header">
+                    <span class="hidden-xs">Bueno</span>
+                    <span class="visible-xs">L</span>
+                </div>
+                    <div class="col-xs-2 text-center header">
+                    <span class="hidden-xs">Alto</span>
+                    <span class="visible-xs">L</span>
+                </div>
+            </div>
+
+                
+            <div id="divValores">
+                <!--Cooperación-->
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-xs-4">
+                            A) Cooperación
+                        </div>
+                        <div class="col-xs-2 text-center">
+                            <input type="radio" name="valores" id=""/>
+                        </div>
+                        <div class="col-xs-2 text-center">
+                            <input type="radio" name="valores" id=""/>
+                        </div>
+                        <div class="col-xs-2 text-center">
+                            <input type="radio" name="valores" id=""/>
+                        </div>
+                            <div class="col-xs-2 text-center">
+                            <input type="radio" name="valores" id=""/>
+                        </div>
+                    </div>
+                </div>
+
+              <!-- Iniciativa-->
+              <div class="panel-body">
+                    <div class="row">
+                        <div class="col-xs-4">
+                            B) Iniciativa
+                        </div>
+                        <div class="col-xs-2 text-center">
+                            <input type="radio" name="valores2" id=""/>
+                        </div>
+                        <div class="col-xs-2 text-center">
+                            <input type="radio" name="valores2" id=""/>
+                        </div>
+                        <div class="col-xs-2 text-center">
+                            <input type="radio" name="valores2" id=""/>
+                        </div>
+                            <div class="col-xs-2 text-center">
+                            <input type="radio" name="valores2" id=""/>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Perseverancia-->
+              <div class="panel-body">
+                    <div class="row">
+                        <div class="col-xs-4">
+                            C) Perseverancia
+                        </div>
+                        <div class="col-xs-2 text-center">
+                            <input type="radio" name="valores3" id=""/>
+                        </div>
+                        <div class="col-xs-2 text-center">
+                            <input type="radio" name="valores3" id=""/>
+                        </div>
+                        <div class="col-xs-2 text-center">
+                            <input type="radio" name="valores3" id=""/>
+                        </div>
+                            <div class="col-xs-2 text-center">
+                            <input type="radio" name="valores3" id=""/>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>        
+    </div>
+
+    <!-- PUNTO 4-->
+    <div class="container">
+        <span>4. Intereses de carrera.  (Seleccionar una oopción)</span>
+        <div class="panel panel-default">           
+            <div class="panel panel-body">     
+                <div class="row">
+                    <span class="checkbox-inline" style="padding-left: 10px;">(A) Seguir la línea actual. Refuerzo del rol actual.</span>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" style="margin-top: -5px;" id="" value="comercial"> 
+                    </label>                   
+                </div>
+
+                <div class="row">
+                    
+                    <span class="checkbox-inline" style="padding-left: 10px;">(B) Evolucionar hacia función</span>                   
+                    <label class="checkbox-inline" style="padding-left:5px;">
+                        <input type="radio" name="rdbEvolucion" id="" value="comercial"> Comercial
+                    </label>
+
+                     <label  class="checkbox-inline" style="padding-left:5px;">
+                        <input type="radio"  name="rdbEvolucion" id="" value="comercial"> Técnica
+                    </label>
+
+                     <label class="checkbox-inline" style="padding-left:5px;" >
+                        <input type="radio"  name="rdbEvolucion" id="" value="comercial"> Gestión / Admón / RRHH
+                    </label>
+
+                    <label class="checkbox-inline" style="padding-left:5px;">
+                        <input type="radio"  name="rdbEvolucion" id="" value="comercial"> Directiva
+                    </label>
+                </div>      
+                
+                <div class="row">
+                    <span class="checkbox-inline" style="padding-left: 10px;">(C) Interesado en trayectoria internacional</span>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" style="margin-top: -5px;" id="" value="trayectoriaInt"> 
+                    </label>     
+                </div>
+
+                <div class="row">
+                    <span class="checkbox-inline" style="padding-left: 10px;">(D) Otros intereses profesionales (cambio de proyecto, geografía, tecnología, etc.)</span>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" style="margin-top: -5px;" id="" value="trayectoriaInt"> 
+                    </label>     
+                </div>
+                     
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <!-- 5. Prioridades de formación-->
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <span>5. Prioridades de formación</span>
+                
+            </div>
+
+         </div>  
+
+        <span style="display: inline-block;margin-top: 3px;">
+            La detección de necesidades de formación técnica se realizará a través de la dirección de cada unidad (plan de formación). Las acciones de competencias
+        y habilidades se publicarán en En Forma, cada profesional previo acuerdo con su responsable se apuntará a las que respondan a sus intereses / necesidades.
+        </span>
+
+        <br />
+
+        <span style="margin-top: 7px;display: inline-block;">
+            Anota en esta sección las prioridades de formación sobre las que trabajará el profesional (cursos, autoaprendizaje, etc.) os servirá de contraste en la siguiente evaluación.
+        </span>
+
+        <textarea style="width: 100%; height: 80px"></textarea>
+                   
+    </div>
+
+    <br />
+
+    <!-- 6. Campo de empleado-->
+    <div class="container">        
+        <span>6. Campo de empleado. Autoevaluación con datos y anotaciones concretas</span>   <br />             
+        <textarea style="width:100%;height:80px"></textarea>
+
+    </div>
+
+    <hr /><br />
+    
+    <div class="container">
+
+        <div class="pull-left">
+            <span id="txtEvaluado">David Velázquez</span>
+        </div>
+
+        <div class="pull-right">
+            <span id="txtEvaluador">Víctor Izaguirre</span>
+        </div>
+    </div>
+
+   
+    
+    <br /><br />
+
+    
+    <div class="container">
+        <div id="selloEvaluado" class="box sello"></div>
+        <div id="selloEvaluador" class="box sello"></div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="pull-left">
+                <span class="checkbox-inline" style="margin-left:60px;">El evaluado</span>
+               
+            </div>
+
+            <div class="pull-right" style="margin-right:13px">
+                <span class="checkbox-inline" style="margin-right:100px">El evaluador</span>
+              
+            </div>
+        </div>
+    </div>
+
+
+    <hr />
+
+
+    <div id="pieFormulario" class="container">
+        <div class="row">
+            <b><span style="margin-left:50px">Nota: Esta documentación es confidencial. No dejar a la vista.</span></b>
+        </div>
+    </div>
+
+
+</body>
+</html>
+
+<cb1:PieMenu runat="server" ID="PieMenu"></cb1:PieMenu>
+<!-- Aquí iría el js de la página-->
+<script src="/js/plugins/datepicker/bootstrap-datepicker.js"></script>
+<script src="/js/plugins/datepicker/locales/bootstrap-datepicker.es.js"></script>
+
+<script>
+  
+
+    $("#rdbEvalProyecto").bind("click", function () {
+        if ($("#rdbEvalProyecto").val() == "on") {            
+            $("#divProyecto").fadeIn("slow");
+            $("#divProyecto input[type=text]").focus();
+        }       
+    })
+
+    $("#rdbEvalDesempeno").bind("click", function () {        
+        $("#divProyecto").fadeOut("slow");        
+    })
+
+    $('.input-group.date').datepicker({
+        language: 'es',
+        autoclose: true,
+        format: 'dd/mm/yyyy'        
+    });
+
+
+</script>
+
+

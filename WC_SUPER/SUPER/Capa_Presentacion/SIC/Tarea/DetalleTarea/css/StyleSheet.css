@@ -1,0 +1,52 @@
+﻿form label{ font-weight:normal;}
+#lblSello {
+    position: relative;
+    top: 40px;
+    left: 37px;
+}
+
+
+.sello:after {
+    content: attr(data-after);    
+    position: absolute;
+    top: -55px;   
+    left: 80px; 
+    z-index: 100;    
+    -webkit-transform: rotate(-5deg); /* Safari */
+    -moz-transform: rotate(-5deg); /* Firefox */
+    -ms-transform: rotate(-5deg); /* IE */
+    -o-transform: rotate(-5deg); /* Opera */
+    transform: rotate(-5deg);
+    font-size: 15px;    
+    background: #fff;    
+    padding: 5px;
+    border-radius: 5px;
+    zoom: 1;
+    filter: alpha(opacity=50);
+    opacity: 0.5;   
+}
+
+
+#btnGrabar { margin-right:5px}
+
+/*Modificamos el alto de las cabeceras del datatable*/
+.dataTables_wrapper .dataTables_scrollHead table.dataTable thead tr th {
+    padding-top: 3px !important;
+    padding-bottom: 3px !important;    
+}
+
+#ta207_denominacion {
+    width:118%;
+    margin-left:8px;
+}
+
+.dataTables_wrapper .dataTables_scrollHead table.dataTable thead tr th:nth-child(1) { border-right:1px solid;}
+.dataTables_wrapper.no-footer .dataTables_scrollBody {border-bottom: 1px solid #DDD !important;}
+
+
+
+
+    
+
+    
+

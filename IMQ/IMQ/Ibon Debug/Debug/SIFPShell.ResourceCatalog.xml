@@ -1,0 +1,2310 @@
+﻿<ResourceCatalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.sii.com/framework/1.0">
+  <ApplicationCatalog Title="HCDIS Project">
+    <Application Name="Security.Application" PrimaryWorkspaceName="Security.Workspace" ExplorerWorkspaceName="Security.ApplicationExplorer"
+		   ToolbarManagerWorkspaceName="Security.Manager" MainMenuElementName="Security.MenuManager" Title=" Security"
+		   Description="Select this to access  security Application" AllowFloatingExplorer="false" AllowFloatingMainMenu="false"
+		   AllowFloatingMainToolbar="false">
+      <SmallImage Source="file" FileName="images/SIFP16.png" />
+      <LargeImage Source="file" FileName="images/SIFP32.png" />
+      <CommandCatalog />
+      <MenuCatalog />
+      <ToolCatalog />
+      <ApplicationExplorerCatalog>
+        <ExplorerTab Name="Security.Tab" Title="SECURITY" Description="Security">
+          <SmallImage Source="file" FileName="images/SIFP16.png" />
+          <LargeImage Source="file" FileName="images/SIFP32.png" />
+          <Group Name="Security.Group" Title="Configuration Security" Description="Select to access options configuration security" GroupType="Container">
+            <SmallImage />
+            <LargeImage />
+          </Group>
+        </ExplorerTab>
+      </ApplicationExplorerCatalog>
+    </Application>
+
+    <Application Name="BackOffice.Application" PrimaryWorkspaceName="BackOffice.Workspace" ExplorerWorkspaceName="BackOffice.ApplicationExplorer"
+			 ToolbarManagerWorkspaceName="BackOffice.Manager" MainMenuElementName="BackOffice.MenuManager" Title=" Back Office"
+			 Description="Select this to access  Back Office Application" AllowFloatingExplorer="false" AllowFloatingMainMenu="false"
+			 AllowFloatingMainToolbar="false">
+      <SmallImage Source="file" FileName="images/BackOffice16.png"/>
+      <LargeImage Source="file" FileName="images/BackOffice32.png"/>
+      <CommandCatalog>
+        <!--DATABASE-->
+        <Command Name="EntityListView.Command" Title="Entity List View" Description="Entity List View">
+          <SmallImage Source="file" FileName="images/components16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/components32.png"></LargeImage>
+        </Command>
+
+        <Command Name="PersonListView.Command" Title="Person List View" Description="Person List View">
+          <SmallImage Source="file" FileName="images/others16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/others32.png"></LargeImage>
+        </Command>
+        <Command Name="OrganizationListView.Command" Title="Organization List View" Description="Organization List View">
+          <SmallImage Source="file" FileName="images/HealthCenter16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/HealthCenter32.png"></LargeImage>
+        </Command>
+        <Command Name="HHRRListView.Command" Title="HHRR List View" Description="HHRR List View">
+          <SmallImage Source="file" FileName="images/HHRR16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/HHRR32.png"></LargeImage>
+        </Command>
+        <Command Name="CategoryListView.Command" Title="Category List View" Description="Category List View">
+          <SmallImage Source="file" FileName="images/Administrative16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/Administrative32.png"></LargeImage>
+        </Command>
+        <Command Name="ZipCode.Command" Title="Zip Code" Description="Zip Code">
+          <SmallImage Source="file" FileName="images/Zip16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/Zip32.png"></LargeImage>
+        </Command>
+        <Command Name="IdentifierTypeList.Command" Title="Identifier Type List" Description="Identifier Type List">
+          <SmallImage Source="file" FileName="images/user16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/user32.png"></LargeImage>
+        </Command>
+        <Command Name="LocationClassification.Command" Title="Location Classification" Description="Location Classification">
+          <SmallImage Source="file" FileName="images/bed16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/bed32.png"></LargeImage>
+        </Command>
+        <Command Name="EquipmentType.Command" Title="Equipment Type" Description="Equipment Type">
+          <SmallImage Source="file" FileName="images/equipment16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/equipment32.png"></LargeImage>
+        </Command>
+        <Command Name="DeviceType.Command" Title="Device Type" Description="Device Type">
+          <SmallImage Source="file" FileName="images/Device16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/Device32.png"></LargeImage>
+        </Command>
+        <!--END DATABASE 
+         HIERARCHY-->
+        <Command Name="HierarchyView.Command" Title="Hierarchy View" Description="Hierarchy View">
+          <SmallImage Source="file" FileName="images/basicdata16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/basicdata32.png"></LargeImage>
+        </Command>
+        <Command Name="LocationTypeListView.Command" Title="Location Type List View" Description="Location Type List View">
+          <SmallImage Source="file" FileName="images/HospitalizationArea16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/HospitalizationArea32.png"></LargeImage>
+        </Command>
+        <Command Name="LocationListView.Command" Title="Location List View" Description="Location List View">
+          <SmallImage Source="file" FileName="images/room16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/room32.png"></LargeImage>
+        </Command>
+        <Command Name="EquipmentListView.Command" Title="Equipment List View" Description="Equipment List View">
+          <SmallImage Source="file" FileName="images/Equipment16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/Equipment32.png"></LargeImage>
+        </Command>
+        <Command Name="DeviceListView.Command" Title="Device List View" Description="Device List View">
+          <SmallImage Source="file" FileName="images/Device16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/Device32.png"></LargeImage>
+        </Command>
+        <!--END HIERARCHY 
+         SERVICES COMMANDS-->
+        <Command Name="Services.Command" Title="Services" Description="Select to access Services options">
+          <SmallImage Source="file" FileName="images/services16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/services32.png"></LargeImage>
+        </Command>
+        <Command Name="ServicesCharges.Command" Title="Services Charges" Description="Select to access Services Charges options">
+          <SmallImage Source="file" FileName="images/charges16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/charges32.png"></LargeImage>
+        </Command>
+        <Command Name="ServicesChargesPriceAndTariff.Command" Title="Services Charges Price And Tariff" Description="Select to access Services Charges Price And Tariff options">
+          <SmallImage Source="file" FileName="images/priceandtariff16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/priceandtariff32.png"></LargeImage>
+        </Command>
+        <Command Name="AgreementConditions.Command" Title="Agreement Conditions" Description="Select to access Agreement Conditions options">
+          <SmallImage Source="file" FileName="images/agreementcond16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/agreementcond32.png"></LargeImage>
+        </Command>
+        <Command Name="Agreement.Command" Title="Agreement" Description="Select to access Agreement options">
+          <SmallImage Source="file" FileName="images/agreement16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/agreement32.png"></LargeImage>
+        </Command>
+        <Command Name="AssistanceAgreement.Command" Title="Assistance Agreement" Description="Select to access Assistance Agreement options">
+          <SmallImage Source="file" FileName="images/hcassistagree16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/hcassistagree32.png"></LargeImage>
+        </Command>
+        <Command Name="AssistanceServices.Command" Title="Assistance Services" Description="Select to access Assistance Services options">
+          <SmallImage Source="file" FileName="images/AdministratorDB16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/AdministratorDB32.png"></LargeImage>
+        </Command>
+
+        <Command Name="Insurers.Command" Title="Insurer List" Description="Select to access Insurer List options">
+          <SmallImage Source="file" FileName="images/Insurer16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/Insurer32.png"></LargeImage>
+        </Command>
+        <Command Name="InsurerCoverAgreement.Command" Title="Insurer Coverage Agreement" Description="Select to access Insurer Coverage Agreement options">
+          <SmallImage Source="file" FileName="images/CoverAgreement16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/CoverAgreement32.png"></LargeImage>
+        </Command>
+        <Command Name="InsurerAgreements.Command" Title="Insurer Agreements" Description="Select to access Insurer Agreements options of the Insurer">
+          <SmallImage Source="file" FileName="images/Agreement16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/Agreement32.png"></LargeImage>
+        </Command>
+        <Command Name="InsurerAgreementConditions.Command" Title=" Insurer Agreement Conditions" Description="Select to access Insurer Agreement Conditions options of the Insurer">
+          <SmallImage Source="file" FileName="images/AgreementCond16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/AgreementCond32.png"></LargeImage>
+        </Command>
+        <!--END SERVICES COMMANDS-->
+        <Command Name="BackOfficeReportExtensions" />
+
+
+
+        <!--command for change gridrangecolor-->
+        <Command Name="DefaultColorCommand" Title="Set Default Grid Color Range" Description="Select to access Set Default Grid Color Range"></Command>
+        <Command Name="BlueColorCommand" Title="Set Blue based Grid Color Range" Description="Select to access Set Blue based Grid Color Range"></Command>
+        <Command Name="GrayColorCommand" Title="Set Gray based Grid Color Range" Description="Select to access Set Gray based Grid Color Range"></Command>
+
+
+      </CommandCatalog>
+      <MenuCatalog>
+        <!--<MenuItem Name="ThirdBasicData.Menu" Title="Third Basic Data Process" Description="Third Basic Data Process" MergeOrder="2000">
+					<SmallImage Source="file" FileName="images/thirdinformation16.png"></SmallImage>
+					<LargeImage Source="file" FileName="images/thirdinformation32.png"></LargeImage>
+					<MenuItem Name="PersonListView.Menu" CommandName="PersonListView.Command"/>
+					<MenuItem Name="OrganizationListView.Menu" CommandName="OrganizationListView.Command"/>
+				</MenuItem>
+				<MenuItem Name="HumanResource.Menu" Title="Human Resource Data Process" Description="Human Resource Data Process" MergeOrder="2000">
+					<SmallImage Source="file" FileName="images/HHRR16.png"></SmallImage>
+					<LargeImage Source="file" FileName="images/HHRR32.png"></LargeImage>
+					<MenuItem Name="HHRRListView.Menu" CommandName="HHRRListView.Command"/>
+				</MenuItem>-->
+        <MenuItem Name="HierarchyProcess.Menu" Title="Hierarchy Process" Description="Hierarchy Process" MergeOrder="2000">
+          <SmallImage Source="file" FileName="images/basicdata16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/basicdata32.png"></LargeImage>
+          <MenuItem Name="HierarchyView.Menu" CommandName="HierarchyView.Command"/>
+          <MenuItem Name="LocationTypeListView.Menu" CommandName="LocationTypeListView.Command"/>
+          <MenuItem Name="LocationListView.Menu" CommandName="LocationListView.Command"/>
+          <MenuItem Name="EquipmentListView.Menu" CommandName="EquipmentListView.Command"/>
+          <MenuItem Name="DeviceListView.Menu" CommandName="DeviceListView.Command"/>
+        </MenuItem>
+        <MenuItem Name="BackOfficeDataBaseProcess.Menu" Title="Data Base Process" Description="Data Base Process" MergeOrder="2000">
+          <SmallImage Source="file" FileName="images/database16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/database32.png"></LargeImage>
+          <MenuItem Name="EntityListView.Menu" CommandName="EntityListView.Command"/>
+          <MenuItem Name="CategoryListView.Menu" CommandName="CategoryListView.Command"/>
+          <MenuItem Name="ZipCode.Menu" CommandName="ZipCode.Command"/>
+          <MenuItem Name="IdentifierTypeList.Menu" CommandName="IdentifierTypeList.Command"/>
+          <MenuItem Name="LocationClassification.Menu" CommandName="LocationClassification.Command"/>
+          <MenuItem Name="EquipmentType.Menu" CommandName="EquipmentType.Command"/>
+          <MenuItem Name="DeviceType.Menu" CommandName="DeviceType.Command"/>
+          <MenuItem Name="PersonListView.Menu" CommandName="PersonListView.Command"/>
+          <MenuItem Name="OrganizationListView.Menu" CommandName="OrganizationListView.Command"/>
+          <MenuItem Name="HHRRListView.Menu" CommandName="HHRRListView.Command"/>
+          <MenuItem Name="Insurers.Menu" CommandName="Insurers.Command"/>
+        </MenuItem>
+        <MenuItem Name="ServicesAndAgreementsProcess.Menu" Title="Services and Agreements Process" Description="Services and Agreements Process" MergeOrder="2000">
+          <SmallImage Source="file" FileName="images/servicetype16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/servicetype32.png"></LargeImage>
+          <MenuItem Name="Services.Menu" CommandName="Services.Command"/>
+          <MenuItem Name="ServicesCharges.Menu" CommandName="ServicesCharges.Command"/>
+          <MenuItem Name="ServicesChargesPriceAndTariff.Menu" CommandName="ServicesChargesPriceAndTariff.Command"/>
+          <MenuItem Name="AgreementConditions.Menu" CommandName="AgreementConditions.Command"/>
+          <MenuItem Name="Agreement.Menu" CommandName="Agreement.Command"/>
+          <MenuItem Name="AssistanceAgreement.Menu" CommandName="AssistanceAgreement.Command"/>
+          <MenuItem Name="InsurerCoverAgreement.Menu" CommandName="InsurerCoverAgreement.Command"/>
+          <MenuItem Name="InsurerAgreements.Menu" CommandName="InsurerAgreements.Command"/>
+          <MenuItem Name="InsurerAgreementConditions.Menu" CommandName="InsurerAgreementConditions.Command"/>
+        </MenuItem>
+        <!--<MenuItem Name="BackOfficeReports.Menu" Title="BackOffice Reports" Description="BackOffice Reports" MergeOrder="2000">
+          <MenuItem Name="BackOfficeReports.Reports.Services" Title="Services report" CommandName="BackOfficeReportExtensions" URL="hcdreport://ReportViewer?reportname=/HCDV2/TipoServicios&amp;ReportServer=http://hosting.sistemasinfo.com/ReportServer&amp;ReportTitle=/HCDV2/TipoServicios&amp;ShowDialog=false"/>
+        </MenuItem>-->
+        <MenuItem Name="BackOfficeReports.Menu" Title="Reports" Description="BackOffice Reports" MergeOrder="2000">
+          <MenuItem Name="BackOfficeReports.Reports.Agreements" Title="Agreements" CommandName="BackOfficeReportExtensions" URL="hcdreport://ReportViewer?reportname=/Acuerdos&amp;ReportServer=http://luis-ppc/ReportServer&amp;ReportTitle=Informe de acuerdos&amp;ShowDialog=false"/>
+          <MenuItem Name="BackOfficeReports.Reports.CoverAgreements" Title="Cover agreements" CommandName="BackOfficeReportExtensions" URL="hcdreport://ReportViewer?reportname=/Acuerdos_de_cobertura&amp;ReportServer=http://luis-ppc/ReportServer&amp;ReportTitle=Informe de acuerdos de cobertura&amp;ShowDialog=false"/>
+          <MenuItem Name="BackOfficeReports.Reports.AgreeConditions" Title="Agreements and conditions" CommandName="BackOfficeReportExtensions" URL="hcdreport://ReportViewer?reportname=/Acuerdos_y_condiciones&amp;ReportServer=http://luis-ppc/ReportServer&amp;ReportTitle=Informe de acuerdos y condiciones&amp;ShowDialog=false"/>
+          <MenuItem Name="BackOfficeReports.Reports.ChargesByServiceType" Title="Charges by service type" CommandName="BackOfficeReportExtensions" URL="hcdreport://ReportViewer?reportname=/Cargos_por_Tipo_de_Servicio&amp;ReportServer=http://luis-ppc/ReportServer&amp;ReportTitle=Informe de cargos por tipo de servicio&amp;ShowDialog=false"/>
+          <MenuItem Name="BackOfficeReports.Reports.ProcedureAndRoutines" Title="Procedure and routines" CommandName="BackOfficeReportExtensions" URL="hcdreport://ReportViewer?reportname=/Procedimientos_y_Rutinas&amp;ReportServer=http://luis-ppc/ReportServer&amp;ReportTitle=Informe de procedimientos y rutinas&amp;ShowDialog=false"/>
+          <MenuItem Name="BackOfficeReports.Reports.Services" Title="Services report" CommandName="BackOfficeReportExtensions" URL="hcdreport://ReportViewer?reportname=/Servicios_Asistenciales&amp;ReportServer=http://luis-ppc/ReportServer&amp;ReportTitle=Informe de servicios asistenciales&amp;ShowDialog=false"/>
+        </MenuItem>
+        <MenuItem Name="GridRangeColor.Menu" Title="Grid Range Color" Description="Grid Range Color" MergeOrder="2000">
+          <MenuItem Name="DefaultColor.Menu" CommandName="DefaultColorCommand"/>
+          <MenuItem Name="BlueColor.Menu" CommandName="BlueColorCommand"/>
+          <MenuItem Name="GrayColor.Menu" CommandName="GrayColorCommand"/>
+        </MenuItem>
+
+      </MenuCatalog>
+      <ToolCatalog>
+        <!--<Toolbar Name="ThirdBasicData.Toolbar" Title="Third Basic Data Process toolbar" Description="" DockedRow="1" DockedColumn="2">
+					<ToolItem Name="PersonListView.Tool" CommandName="PersonListView.Command"/>
+					<ToolItem Name="OrganizationListView.Tool" CommandName="OrganizationListView.Command"/>
+				</Toolbar>
+				<Toolbar Name="HumanResource.Toolbar" Title="Human Resource Data Process toolbar" Description="" DockedRow="1" DockedColumn="2">
+					<ToolItem Name="HHRRListView.Tool" CommandName="HHRRListView.Command"/>
+				</Toolbar>-->
+        <Toolbar Name="HierarchyProcess.Toolbar" Title="Hierarchy Process toolbar" Description="" DockedRow="1" DockedColumn="2">
+          <ToolItem Name="HierarchyView.Tool" CommandName="HierarchyView.Command"/>
+          <ToolItem Name="LocationTypeListView.Tool" CommandName="LocationTypeListView.Command"/>
+          <ToolItem Name="LocationListView.Tool" CommandName="LocationListView.Command"/>
+          <ToolItem Name="EquipmentListView.Tool" CommandName="EquipmentListView.Command"/>
+          <ToolItem Name="DeviceListView.Tool" CommandName="DeviceListView.Command"/>
+        </Toolbar>
+        <Toolbar Name="BackOfficeDataBaseProcess.Toolbar" Title="Data Base Process Toolbar" Description="" DockedRow="1" DockedColumn="2">
+          <ToolItem Name="EntityListView.Tool" CommandName="EntityListView.Command"/>
+          <ToolItem Name="CategoryListView.Tool" CommandName="CategoryListView.Command"/>
+          <ToolItem Name="ZipCode.Tool" CommandName="ZipCode.Command"/>
+          <ToolItem Name="IdentifierTypeList.Tool" CommandName="IdentifierTypeList.Command"/>
+          <ToolItem Name="LocationClassification.Tool" CommandName="LocationClassification.Command"/>
+          <ToolItem Name="EquipmentType.Tool" CommandName="EquipmentType.Command"/>
+          <ToolItem Name="DeviceType.Tool" CommandName="DeviceType.Command"/>
+          <ToolItem Name="PersonListView.Tool" CommandName="PersonListView.Command"/>
+          <ToolItem Name="OrganizationListView.Tool" CommandName="OrganizationListView.Command"/>
+          <ToolItem Name="HHRRListView.Tool" CommandName="HHRRListView.Command"/>
+          <ToolItem Name="Insurers.Tool" CommandName="Insurers.Command"/>
+        </Toolbar>
+        <Toolbar Name="ServicesAndAgreementsProcess.Toolbar" Title="Services and Agreements Process Toolbar" Description="" DockedRow="1" DockedColumn="2">
+          <ToolItem Name="Services.Tool" CommandName="Services.Command"/>
+          <ToolItem Name="ServicesCharges.Tool" CommandName="ServicesCharges.Command"/>
+          <ToolItem Name="ServicesChargesPriceAndTariff.Tool" CommandName="ServicesChargesPriceAndTariff.Command"/>
+          <ToolItem Name="AgreementConditions.Tool" CommandName="AgreementConditions.Command"/>
+          <ToolItem Name="Agreement.Tool" CommandName="Agreement.Command"/>
+          <ToolItem Name="AssistanceAgreement.Tool" CommandName="AssistanceAgreement.Command"/>
+          <ToolItem Name="InsurerCoverAgreement.Tool" CommandName="InsurerCoverAgreement.Command"/>
+          <ToolItem Name="InsurerAgreements.Tool" CommandName="InsurerAgreements.Command"/>
+          <ToolItem Name="InsurerAgreementConditions.Tool" CommandName="InsurerAgreementConditions.Command"/>
+        </Toolbar>
+      </ToolCatalog>
+
+      <ApplicationExplorerCatalog>
+        <ExplorerTab Name="BackOffice.Tab" Title="BACKOFFICE" Description=" Back Office">
+          <SmallImage Source="file" FileName="images/BackOffice16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/BackOffice32.png"></LargeImage>
+          <Group Name="ThirdBasicData.Group" Title="Third Basic Data Process" Description="Select to access to Third Basic Data Process" MergeOrder="2000">
+					</Group>
+					<Group Name="HumanResource.Group" Title="Human Resource" Description="Select to access to Human Resource options" MergeOrder="2000">
+						<Item Name="HHRRListView.Item" CommandName="HHRRListView.Command"/>
+					</Group>
+          <Group Name="HierarchyProcess.Group" Title="Hierarchy Process" Description="Select to access to Hierarchy Process" GroupType="Container">
+          </Group>
+          <Group Name="BackOfficeDataBaseProcess.Group" Title="BackOffice DB Process" Description="Select to access to BackOffice Data Base Process" GroupType="Container">
+          </Group>
+          <Group Name="ServicesAndAgreementsProcess.Group" Title="Services and Agreements Process" Description="Select to access to Services and Agreements Process" GroupType="Container">
+          </Group>
+          <Group Name="FlowChartProcess.Group" Title="Flow Chart Process" Description="Select to access to Flow Chart Process" GroupType="Container">
+          </Group>
+          <Group Name="WarehouseAndPurchaseProcess.Group" Title="Warehouse And Purchase Process" Description="Select to access to Warehouse And Purchase Process" GroupType="Container">
+          </Group>
+          <Group Name="BusinessMonitorProcess.Group" Title="Business Monitor Process" Description="Select to access to Business Monitor Process" GroupType="Container">
+          </Group>
+        </ExplorerTab>
+      </ApplicationExplorerCatalog>
+
+
+
+
+    </Application>
+
+    <Application Name="Administrative.Application" PrimaryWorkspaceName="Administrative.Workspace" ExplorerWorkspaceName="Administrative.ApplicationExplorer"
+		   ToolbarManagerWorkspaceName="Administrative.Manager" MainMenuElementName="Administrative.MenuManager" Title=" Administrative"
+		   Description="Select this to access  Administrative Application" AllowFloatingExplorer="false" AllowFloatingMainMenu="false"
+		   AllowFloatingMainToolbar="false">
+      <SmallImage Source="file" FileName="images/ADAS16.png"/>
+      <LargeImage Source="file" FileName="images/ADAS32.png"/>
+      <CommandCatalog>
+        <Command Name="CustomerListView.Command" Title="Customer List View" Description="Customer List View">
+          <SmallImage Source="file" FileName="images/pacientes16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/pacientes32.png"></LargeImage>
+        </Command>
+        <Command Name="CustomerClassification.Command" Title="Customer Classification" Description="Customer Classification">
+          <SmallImage Source="file" FileName="images/client16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/client32.png"></LargeImage>
+        </Command>
+        <Command Name="Kinships.Command" Title="Kinships" Description="Kinships">
+          <SmallImage Source="file" FileName="images/nok16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/nok32.png"></LargeImage>
+        </Command>
+        <Command Name="ContactPersons.Command" Title="Contact Persons" Description="Contact Persons">
+          <SmallImage Source="file" FileName="images/contact16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/contact32.png"></LargeImage>
+        </Command>
+        <Command Name="ContactOrganizations.Command" Title="Contact Organizations" Description="Contact Organizations">
+          <SmallImage Source="file" FileName="images/healthcenter16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/healthcenter32.png"></LargeImage>
+        </Command>
+        <!-- ADMISSION PROCESS-->
+        <Command Name="DataOfInterest.Command" Title="Data Of Interest" Description="Data Of Interest">
+          <SmallImage Source="file" FileName="images/contact16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/contact32.png"></LargeImage>
+        </Command>
+        <Command Name="OnLineData.Command" Title="OnLine Data" Description="On Line Data">
+          <SmallImage Source="file" FileName="images/contact16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/contact32.png"></LargeImage>
+        </Command>
+        <Command Name="Contacts.Command" Title="Contacts information" Description="Contacts information">
+          <SmallImage Source="file" FileName="images/contact16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/contact32.png"></LargeImage>
+        </Command>
+        <Command Name="Visits.Command" Title="Visits information" Description="Visits information">
+          <SmallImage Source="file" FileName="images/contact16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/contact32.png"></LargeImage>
+        </Command>
+        <Command Name="PriorValuation.Command" Title="Prior Valuation" Description="Prior Valuation">
+          <SmallImage Source="file" FileName="images/contact16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/contact32.png"></LargeImage>
+        </Command>
+        <Command Name="Budgets.Command" Title="Budgets information" Description="Budgets information">
+          <SmallImage Source="file" FileName="images/contact16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/contact32.png"></LargeImage>
+        </Command>
+        <Command Name="Contracts.Command" Title="Contracts information" Description="Contracts information">
+          <SmallImage Source="file" FileName="images/contact16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/contact32.png"></LargeImage>
+        </Command>
+        <Command Name="CustomerAdmissionProcess.Command" Title="Customer Admission Process" Description="Customer Admission Process">
+          <SmallImage Source="file" FileName="images/contact16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/contact32.png"></LargeImage>
+        </Command>
+        <Command Name="LeaveProcess.Command" Title="Leave Process" Description="Leave Process">
+          <SmallImage Source="file" FileName="images/contact16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/contact32.png"></LargeImage>
+        </Command>
+        <Command Name="ReservationProcess.Command" Title="Reservation Process" Description="Reservation Process">
+          <SmallImage Source="file" FileName="images/contact16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/contact32.png"></LargeImage>
+        </Command>
+        <Command Name="TransferProcess.Command" Title="Transfer Process" Description="Transfer Process">
+          <SmallImage Source="file" FileName="images/contact16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/contact32.png"></LargeImage>
+        </Command>
+        <Command Name="WaitingListProcess.Command" Title="Waiting List Process" Description="Waiting List Process">
+          <SmallImage Source="file" FileName="images/contact16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/contact32.png"></LargeImage>
+        </Command>
+        <Command Name="GoodsAndChattels.Command" Title="Goods And Chattels" Description="Goods And Chattels">
+          <SmallImage Source="file" FileName="images/contact16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/contact32.png"></LargeImage>
+        </Command>
+        <Command Name="CustomerGoodsAndChattels.Command" Title="Customer Goods And Chattels" Description="Customer Goods And Chattels">
+          <SmallImage Source="file" FileName="images/contact16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/contact32.png"></LargeImage>
+        </Command>
+
+        <!--FINAL ADMISSION PROCESS-->
+
+
+      </CommandCatalog>
+      <MenuCatalog>
+        <!--<MenuItem Name="AdmissionProccess.Menu" Title="Admission Process" Description="Admission Process" MergeOrder="2000">
+					<SmallImage Source="file" FileName="images/Admission16.png"></SmallImage>
+					<LargeImage Source="file" FileName="images/Admission32.png"></LargeImage>
+					<MenuItem Name="CustomerListView.Menu" CommandName="CustomerListView.Command"/>
+				</MenuItem>-->
+        <MenuItem Name="AdministrativeDataBaseProcess.Menu" Title="Data Base Process" Description="Data Base Process" MergeOrder="2000">
+          <SmallImage Source="file" FileName="images/database16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/database32.png"></LargeImage>
+          <MenuItem Name="CustomerListView.Menu" CommandName="CustomerListView.Command"/>
+          <MenuItem Name="CustomerClassification.Menu" CommandName="CustomerClassification.Command"/>
+          <MenuItem Name="Kinships.Menu" CommandName="Kinships.Command"/>
+          <MenuItem Name="ContactPersons.Menu" CommandName="ContactPersons.Command"/>
+          <MenuItem Name="ContactOrganizations.Menu" CommandName="ContactOrganizations.Command"/>
+        </MenuItem>
+      </MenuCatalog>
+      <ToolCatalog>
+        <!--<Toolbar Name="AdmissionProccess.Toolbar" Title="Admission Process toolbar" Description="" DockedRow="1" DockedColumn="3">
+					<ToolItem Name="CustomerListView.Tool" CommandName="CustomerListView.Command"/>
+				</Toolbar>-->
+        <Toolbar Name="AdministrativeDataBaseProcess.Toolbar" Title="Data Base Process Toolbar" Description="" DockedRow="1" DockedColumn="2">
+          <ToolItem Name="CustomerListView.Tool" CommandName="CustomerListView.Command"/>
+          <ToolItem Name="CustomerClassification.Tool" CommandName="CustomerClassification.Command"/>
+          <ToolItem Name="Kinships.Tool" CommandName="Kinships.Command"/>
+          <ToolItem Name="ContactPersons.Tool" CommandName="ContactPersons.Command"/>
+          <ToolItem Name="ContactOrganizations.Tool" CommandName="ContactOrganizations.Command"/>
+        </Toolbar>
+      </ToolCatalog>
+      <ApplicationExplorerCatalog>
+        <ExplorerTab Name="Administrative.Tab" Title="ADMINISTRATION" Description=" Administrative">
+          <SmallImage Source="file" FileName="images/ADAS16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/ADAS32.png"></LargeImage>
+          <!--<Group Name="AdmissionProccess.Group" Title="Admission Process" Description="Admission Process" MergeOrder="3000">
+						<Item Name="CustomerListView.Item" CommandName="CustomerListView.Command"/>
+					</Group>-->
+          <Group Name="AdministrativeDataBaseProcess.Group" Title="Administrative DB Process" Description="Select to access to Administrative Data Base Process" GroupType="Container">
+            <!--<Item Name="CustomerListView.Item" CommandName="CustomerListView.Command"/>
+						<Item Name="CustomerClassification.Item" CommandName="CustomerClassification.Command"/>
+						<Item Name="Kinships.Item" CommandName="Kinships.Command"/>
+						<Item Name="ContactPersons.Item" CommandName="ContactPersons.Command"/>
+						<Item Name="ContactOrganizations.Item" CommandName="ContactOrganizations.Command"/>-->
+          </Group>
+          <Group Name="AdministrativeProcess.Group" Title="Administrative Process" Description="Select to access to Administrative Process" GroupType="Container">
+          </Group>
+        </ExplorerTab>
+      </ApplicationExplorerCatalog>
+    </Application>
+
+    <Application Name="Assistance.Application" PrimaryWorkspaceName="Assistance.Workspace" ExplorerWorkspaceName="Assistance.ApplicationExplorer"
+		   ToolbarManagerWorkspaceName="Assistance.Manager" MainMenuElementName="Assistance.MenuManager" Title=" Assistance"
+		   Description="Select this to access  Assistance Application" AllowFloatingExplorer="false" AllowFloatingMainMenu="false"
+		   AllowFloatingMainToolbar="false">
+      <SmallImage Source="file" FileName="images/nurseprotocols16.png"/>
+      <LargeImage Source="file" FileName="images/nurseprotocols32.png"/>
+      <CommandCatalog>
+        <!-- routines -->
+        <Command Name="RoutineTypeListView.Command" Title="Routine Type List View" Description="Routine Type List View">
+          <SmallImage Source="file" FileName="images/AssistanceProtocols16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/AssistanceProtocols32.png"></LargeImage>
+        </Command>
+        <Command Name="RoutineListView.Command" Title="Routine List View" Description="Routine List View">
+          <SmallImage Source="file" FileName="images/form_blue16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/form_blue32.png"></LargeImage>
+        </Command>
+        <Command Name="RoutineTemplateListView.Command" Title="Routine Template List View" Description="Routine Template List View">
+          <SmallImage Source="file" FileName="images/form_green16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/form_green32.png"></LargeImage>
+        </Command>
+        <!-- Assistance Calendar -->
+        <Command Name="TimePatternsListView.Command" Title="Time Patterns List View" Description="Time Patterns List View">
+          <SmallImage Source="file" FileName="images/timepatterns16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/timepatterns32.png"></LargeImage>
+        </Command>
+        <Command Name="ResourceAvailPatterns.Command" Title="Resource Avail Patterns List View" Description="Resource Avail Patterns List View">
+          <SmallImage Source="file" FileName="images/schtask16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/schtask32.png"></LargeImage>
+        </Command>
+        <!-- Activity Scheduling-->
+        <Command Name="CustomerActivityScheduling.Command" Title="Customer Activity Scheduling List View" Description="Customer Activity Scheduling List View">
+          <SmallImage Source="file" FileName="images/schpatients16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/schpatients32.png"></LargeImage>
+        </Command>
+        <Command Name="ResourceActivityScheduling.Command" Title="Resource Activity Scheduling List View" Description="Resource Activity Scheduling List View">
+          <SmallImage Source="file" FileName="images/resourceschconfig16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/resourceschconfig32.png"></LargeImage>
+        </Command>
+      </CommandCatalog>
+      <MenuCatalog>
+        <MenuItem Name="AssistanceDataBaseProcess.Menu" Title="Data Base Process" Description="Data Base Process" MergeOrder="2000">
+          <SmallImage Source="file" FileName="images/database16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/database32.png"></LargeImage>
+          <MenuItem Name="RoutineTypeListView.Menu" CommandName="RoutineTypeListView.Command"/>
+          <MenuItem Name="RoutineListView.Menu" CommandName="RoutineListView.Command"/>
+          <MenuItem Name="RoutineTemplateListView.Menu" CommandName="RoutineTemplateListView.Command"/>
+          <MenuItem Name="TimePatternsListView.Menu" CommandName="TimePatternsListView.Command"/>
+          <MenuItem Name="ResourceAvailPatterns.Menu" CommandName="ResourceAvailPatterns.Command"/>
+        </MenuItem>
+        <!--<MenuItem Name="RoutineProccess.Menu" Title="Routine Process" Description="Routine Process" MergeOrder="2000">
+          <SmallImage Source="file" FileName="images/AssistanceProtocols16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/AssistanceProtocols32.png"></LargeImage>
+          <MenuItem Name="RoutineTypeListView.Menu" CommandName="RoutineTypeListView.Command"/>
+          <MenuItem Name="RoutineListView.Menu" CommandName="RoutineListView.Command"/>
+          <MenuItem Name="RoutineTemplateListView.Menu" CommandName="RoutineTemplateListView.Command"/>
+        </MenuItem>
+        <MenuItem Name="CalendarElementsProcess.Menu" Title="Calendar Elements Process" Description="Calendar Elements Process" MergeOrder="2000">
+          <SmallImage Source="file" FileName="images/SchPatterns16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/SchPatterns32.png"></LargeImage>
+          <MenuItem Name="TimePatternsListView.Menu" CommandName="TimePatternsListView.Command"/>
+          <MenuItem Name="ResourceAvailPatterns.Menu" CommandName="ResourceAvailPatterns.Command"/>
+        </MenuItem>-->
+        <MenuItem Name="ActivitySchedulingProcess.Menu" Title="Activity Scheduling Process" Description="Activity Scheduling Process" MergeOrder="2000">
+          <SmallImage Source="file" FileName="images/SchPatients16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/SchPatients32.png"></LargeImage>
+          <MenuItem Name="CustomerActivityScheduling.Menu" CommandName="CustomerActivityScheduling.Command"/>
+          <MenuItem Name="ResourceActivityScheduling.Menu" CommandName="ResourceActivityScheduling.Command"/>
+        </MenuItem>
+      </MenuCatalog>
+      <ToolCatalog>
+        <Toolbar Name="AssistanceDataBaseProcess.Toolbar" Title="Data Base Process Toolbar" Description="" DockedRow="1" DockedColumn="2">
+          <ToolItem Name="RoutineTypeListView.Tool" CommandName="RoutineTypeListView.Command"/>
+          <ToolItem Name="RoutineListView.Tool" CommandName="RoutineListView.Command"/>
+          <ToolItem Name="RoutineTemplateListView.Tool" CommandName="RoutineTemplateListView.Command"/>
+          <ToolItem Name="TimePatternsListView.Tool" CommandName="TimePatternsListView.Command"/>
+          <ToolItem Name="ResourceAvailPatterns.Tool" CommandName="ResourceAvailPatterns.Command"/>
+        </Toolbar>
+        <!--<Toolbar Name="RoutineProccess.Toolbar" Title="Routine Process toolbar" Description="" DockedRow="1" DockedColumn="3">
+          <ToolItem Name="RoutineTypeListView.Tool" CommandName="RoutineTypeListView.Command"/>
+          <ToolItem Name="RoutineListView.Tool" CommandName="RoutineListView.Command"/>
+          <ToolItem Name="RoutineTemplateListView.Tool" CommandName="RoutineTemplateListView.Command"/>
+        </Toolbar>
+        <Toolbar Name="CalendarElementsProcess.Toolbar" Title="Calendar Elements Process Toolbar" Description="" DockedRow="1" DockedColumn="2">
+          <ToolItem Name="TimePatternsListView.Tool" CommandName="TimePatternsListView.Command"/>
+          <ToolItem Name="ResourceAvailPatterns.Tool" CommandName="ResourceAvailPatterns.Command"/>
+        </Toolbar>-->
+        <Toolbar Name="ActivitySchedulingProcess.Toolbar" Title="Activity Scheduling Process Toolbar" Description="" DockedRow="1" DockedColumn="2">
+          <ToolItem Name="CustomerActivityScheduling.Tool" CommandName="CustomerActivityScheduling.Command"/>
+          <ToolItem Name="ResourceActivityScheduling.Tool" CommandName="ResourceActivityScheduling.Command"/>
+        </Toolbar>
+      </ToolCatalog>
+      <ApplicationExplorerCatalog>
+        <ExplorerTab Name="Assistance.Tab" Title="ASSISTANCE" Description=" Assistance">
+          <SmallImage Source="file" FileName="images/nurseprotocols16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/nurseprotocols32.png"></LargeImage>
+          <Group Name="AssistanceDataBaseProcess.Group" Title="Assistance DB Process" Description="Select to access to Assistance Data Base Process" GroupType="Container">
+            <!--						<Item Name="RoutineTypeListView.Item" CommandName="RoutineTypeListView.Command"/>
+						<Item Name="RoutineListView.Item" CommandName="RoutineListView.Command"/>
+						<Item Name="RoutineTemplateListView.Item" CommandName="RoutineTemplateListView.Command"/>
+						<Item Name="TimePatternsListView.Item" CommandName="TimePatternsListView.Command"/>
+						<Item Name="ResourceAvailPatterns.Item" CommandName="ResourceAvailPatterns.Command"/>-->
+          </Group>
+          <!--<Group Name="RoutineProccess.Group" Title="Routine Process" Description="Select to access to Routine Process" MergeOrder="3000">
+            <Item Name="RoutineTypeListView.Item" CommandName="RoutineTypeListView.Command"/>
+            <Item Name="RoutineListView.Item" CommandName="RoutineListView.Command"/>
+            <Item Name="RoutineTemplateListView.Item" CommandName="RoutineTemplateListView.Command"/>
+          </Group>
+          <Group Name="CalendarElementsProcess.Group" Title="Calendar Elements Process" Description="Select to access to Calendar Elements Process" MergeOrder="2000">
+            <Item Name="TimePatternsListView.Item" CommandName="TimePatternsListView.Command"/>
+            <Item Name="ResourceAvailPatterns.Item" CommandName="ResourceAvailPatterns.Command"/>
+          </Group>-->
+          <!--<Group Name="ActivitySchedulingProcess.Group" Title="Activity Scheduling Process" Description="Select to access to Activity Scheduling Process" MergeOrder="2000">
+						<Item Name="CustomerActivityScheduling.Item" CommandName="CustomerActivityScheduling.Command"/>
+						<Item Name="ResourceActivityScheduling.Item" CommandName="ResourceActivityScheduling.Command"/>
+					</Group>
+					<Group Name="ActivityLogByCutomers.Group" Title="Activity Log by Cutomers" Description="Select to access Activity Log by Cutomers options" GroupType="Container">
+						<SmallImage Source="file" FileName="images/schpatients16.png">
+							<Binary></Binary>
+						</SmallImage>
+						<LargeImage Source="file" FileName="images/schpatients32.png">
+							<Binary></Binary>
+						</LargeImage>
+					</Group>-->
+          <Group Name="AssistanceProcess.Group" Title="Assistance Process" Description="Select to access Assistance Process options" GroupType="Container">
+            </Group>
+        </ExplorerTab>
+      </ApplicationExplorerCatalog>
+    </Application>
+
+    <Application Name="Protocols.Application" PrimaryWorkspaceName="Protocols.Workspace" ExplorerWorkspaceName="Protocols.ApplicationExplorer"
+   ToolbarManagerWorkspaceName="Protocols.Manager" MainMenuElementName="Protocols.MenuManager" Title=" Protocols"
+   Description="Select this to access  Protocols Application" AllowFloatingExplorer="false" AllowFloatingMainMenu="false"
+   AllowFloatingMainToolbar="false">
+      <SmallImage Source="file" FileName="images/episodesprotocols16.png"/>
+      <LargeImage Source="file" FileName="images/episodesprotocols32.png"/>
+      <CommandCatalog>
+      </CommandCatalog>
+      <MenuCatalog>
+      </MenuCatalog>
+      <ToolCatalog>
+      </ToolCatalog>
+      <ApplicationExplorerCatalog>
+        <ExplorerTab Name="Protocols.Tab" Title="MEDICAL" Description=" Protocols">
+          <SmallImage Source="file" FileName="images/episodesprotocols16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/episodesprotocols32.png"></LargeImage>
+          <Group Name="ProtocolsDataBaseProcess.Group" Title="Protocols DB Process" Description="Select to access to Protocols Data Base Process" GroupType="Container">
+          </Group>
+          <Group Name="EpisodesProcess.Group" Title="Episodes Process" Description="Select to access Episodes Process options" GroupType="Container">
+          </Group>
+        </ExplorerTab>
+      </ApplicationExplorerCatalog>
+    </Application>
+
+    <Application Name="Application.Application" PrimaryWorkspaceName="Application.Workspace" ExplorerWorkspaceName="Application.ApplicationExplorer"
+	   ToolbarManagerWorkspaceName="Application.Manager" MainMenuElementName="Application.MenuManager" Title=" User Application"
+	   Description="Select this to access HCDIS User Application" AllowFloatingExplorer="false" AllowFloatingMainMenu="false"
+	   AllowFloatingMainToolbar="false">
+      <SmallImage Source="file" FileName="images/IndigoHIS1.png"></SmallImage>
+      <LargeImage Source="file" FileName="images/IndigoHIS1.png"></LargeImage>
+
+      <!--<CommandCatalog>
+        --><!--BasicData.Group --><!--
+        <Command Name="AppEntity.Command" Title="Entity" Description="Entity">
+          <SmallImage Source="file" FileName="Appimages/components16.png"></SmallImage>
+          <LargeImage Source="file" FileName="Appimages/components32.png"></LargeImage>
+        </Command>
+        <Command Name="AppCounterAndMask.Command" Title="CounterAndMask" Description="CounterAndMask">
+          <SmallImage Source="file" FileName="Appimages/addtolist16.png"></SmallImage>
+          <LargeImage Source="file" FileName="Appimages/addtolist32.png"></LargeImage>
+        </Command>
+        <Command Name="AppTaxType.Command" Title="TaxType" Description="TaxType">
+          <SmallImage Source="file" FileName="Appimages/tax16.png"></SmallImage>
+          <LargeImage Source="file" FileName="Appimages/tax32.png"></LargeImage>
+        </Command>
+        <Command Name="AppTariff.Command" Title="Tariff" Description="Tariff">
+          <SmallImage Source="file" FileName="Appimages/tariff16.png"></SmallImage>
+          <LargeImage Source="file" FileName="Appimages/tariff32.png"></LargeImage>
+        </Command>
+        <Command Name="AppIdentifierType.Command" Title="IdentifierType" Description="IdentifierType">
+          <SmallImage Source="file" FileName="Appimages/user16.png"></SmallImage>
+          <LargeImage Source="file" FileName="Appimages/user32.png"></LargeImage>
+        </Command>
+        <Command Name="AppCategory.Command" Title="Access to categories" Description="Access to categories">
+          <SmallImage Source="file" FileName="Appimages/Administrative16.png"></SmallImage>
+          <LargeImage Source="file" FileName="Appimages/Administrative32.png"></LargeImage>
+        </Command>
+        <Command Name="AppProfile.Command" Title="Profile" Description="Profile">
+          <SmallImage Source="file" FileName="Appimages/HHRR16.jpg"/>
+          <LargeImage Source="file" FileName="Appimages/HHRR32.jpg"/>
+        </Command>
+        <Command Name="AppTimePattern.Command" Title="TimePattern" Description="TimePattern">
+          <SmallImage Source="file" FileName="Appimages/TimePatterns16.png"></SmallImage>
+          <LargeImage Source="file" FileName="Appimages/TimePatterns32.png"></LargeImage>
+        </Command>
+        <Command Name="AppAvailPattern.Command" Title="AvailPattern" Description="AvailPattern">
+          <SmallImage Source="file" FileName="Appimages/SchPatterns16.png"></SmallImage>
+          <LargeImage Source="file" FileName="Appimages/SchPatterns32.png"></LargeImage>
+        </Command>
+        <Command Name="AppPhysUnit.Command" Title="PhysUnit" Description="PhysUnit">
+          <SmallImage Source="file" FileName="Appimages/PhysUnit16.png"></SmallImage>
+          <LargeImage Source="file" FileName="Appimages/PhysUnit32.png"></LargeImage>
+        </Command>
+        <Command Name="AppZipCode.Command" Title="ZipCode" Description="ZipCode">
+          <SmallImage Source="file" FileName="Appimages/Zip16.png"></SmallImage>
+          <LargeImage Source="file" FileName="Appimages/Zip32.png"></LargeImage>
+        </Command>
+        --><!--Encoders.Group --><!--
+        <Command Name="AppEncoder.Command" Title="Encoder" Description="Encoder">
+          <SmallImage Source="file" FileName="Appimages/basicdata16.jpg"/>
+          <LargeImage Source="file" FileName="Appimages/basicdata32.jpg"/>
+        </Command>
+        <Command Name="AppDiagnosisEncoding.Command" Title="DiagnosisEncoding" Description="DiagnosisEncoding">
+          <SmallImage Source="file" FileName="Appimages/doctor16.jpg"/>
+          <LargeImage Source="file" FileName="Appimages/doctor32.jpg"/>
+        </Command>
+        <Command Name="AppMorphologyEncoding.Command" Title="MorphologyEncoding" Description="MorphologyEncoding">
+          <SmallImage Source="file" FileName="Appimages/surgeon16.jpg"/>
+          <LargeImage Source="file" FileName="Appimages/surgeon32.jpg"/>
+        </Command>
+        <Command Name="AppProcedureEncoding.Command" Title="ProcedureEncoding" Description="ProcedureEncoding">
+          <SmallImage Source="file" FileName="Appimages/Nurse16.jpg"/>
+          <LargeImage Source="file" FileName="Appimages/Nurse32.jpg"/>
+        </Command>
+        <Command Name="AppCodedCategoryClass.Command" Title="CodedCategoryClass" Description="CodedCategoryClass">
+          <SmallImage Source="file" FileName="Appimages/eptype16.jpg"/>
+          <LargeImage Source="file" FileName="Appimages/eptype32.jpg"/>
+        </Command>
+        <Command Name="AppCodedCategory.Command" Title="CodedCategory" Description="CodedCategory">
+          <SmallImage Source="file" FileName="Appimages/agreementcond16.jpg"/>
+          <LargeImage Source="file" FileName="Appimages/agreementcond32.jpg"/>
+        </Command>
+        <Command Name="AppMDC.Command" Title="MDC" Description="MDC">
+          <SmallImage Source="file" FileName="Appimages/doctor16.jpg"/>
+          <LargeImage Source="file" FileName="Appimages/doctor32.jpg"/>
+        </Command>
+        <Command Name="AppDRG.Command" Title="DRG" Description="DRG">
+          <SmallImage Source="file" FileName="Appimages/episodesprotocols16.jpg"/>
+          <LargeImage Source="file" FileName="Appimages/episodesprotocols32.jpg"/>
+        </Command>
+        <Command Name="AppCaseMixGroup.Command" Title="CaseMixGroup" Description="CaseMixGroup">
+          <SmallImage Source="file" FileName="Appimages/form_blue16.jpg"/>
+          <LargeImage Source="file" FileName="Appimages/form_blue32.jpg"/>
+        </Command>
+        <Command Name="AppAct.Command" Title="Act" Description="Act">
+          <SmallImage Source="file" FileName="Appimages/book_blue16.jpg"/>
+          <LargeImage Source="file" FileName="Appimages/book_blue32.jpg"/>
+        </Command>
+        <Command Name="AppActType.Command" Title="Act Type" Description="Act Type">
+          <SmallImage Source="file" FileName="Appimages/book_green16.jpg"/>
+          <LargeImage Source="file" FileName="Appimages/book_green32.jpg"/>
+        </Command>
+        <Command Name="AppActClassification.Command" Title="ActClassification" Description="ActClassification">
+          <SmallImage Source="file" FileName="Appimages/book_red16.jpg"/>
+          <LargeImage Source="file" FileName="Appimages/book_red32.jpg"/>
+        </Command>
+        <Command Name="AppGroupAct.Command" Title="GroupAct" Description="GroupAct">
+          <SmallImage Source="file" FileName="Appimages/books16.jpg"/>
+          <LargeImage Source="file" FileName="Appimages/books32.jpg"/>
+        </Command>
+        <Command Name="AppSubGroupAct.Command" Title="SubGroupAct" Description="SubGroupAct">
+          <SmallImage Source="file" FileName="Appimages/branch16.jpg"/>
+          <LargeImage Source="file" FileName="Appimages/branch32.jpg"/>
+        </Command>
+        --><!-- Hierarchy.Group --><!--
+        <Command Name="AppHierarchy.Command" Title="Hierarchy" Description="Hierarchy">
+          <SmallImage Source="file" FileName="Appimages/basicdata16.png"></SmallImage>
+          <LargeImage Source="file" FileName="Appimages/basicdata32.png"></LargeImage>
+        </Command>
+        <Command Name="AppCareCenterType.Command" Title="CareCenterType" Description="CareCenterType">
+          <SmallImage Source="file" FileName="Appimages/CenterClass16.png"></SmallImage>
+          <LargeImage Source="file" FileName="Appimages/CenterClass32.png"></LargeImage>
+        </Command>
+        <Command Name="AppCareCenter.Command" Title="CareCenter" Description="CareCenter">
+          <SmallImage Source="file" FileName="Appimages/HealthCenter16.png"></SmallImage>
+          <LargeImage Source="file" FileName="Appimages/HealthCenter32.png"></LargeImage>
+        </Command>
+        <Command Name="AppLocationType.Command" Title="LocationType" Description="LocationType">
+          <SmallImage Source="file" FileName="Appimages/HospitalizationArea16.png"></SmallImage>
+          <LargeImage Source="file" FileName="Appimages/HospitalizationArea32.png"></LargeImage>
+        </Command>
+        <Command Name="AppLocationClass.Command" Title="LocationClass" Description="LocationClass">
+          <SmallImage Source="file" FileName="Appimages/bed16.png"></SmallImage>
+          <LargeImage Source="file" FileName="Appimages/bed32.png"></LargeImage>
+        </Command>
+        <Command Name="AppLocation.Command" Title="Location" Description="Location">
+          <SmallImage Source="file" FileName="Appimages/room16.png"></SmallImage>
+          <LargeImage Source="file" FileName="Appimages/room32.png"></LargeImage>
+        </Command>
+        <Command Name="AppEquipmentType.Command" Title="EquipmentType" Description="EquipmentType">
+          <SmallImage Source="file" FileName="Appimages/equipment16.png"></SmallImage>
+          <LargeImage Source="file" FileName="Appimages/equipment32.png"></LargeImage>
+        </Command>
+        <Command Name="AppEquipment.Command" Title="Equipment" Description="Equipment">
+          <SmallImage Source="file" FileName="Appimages/Equipment16.png"></SmallImage>
+          <LargeImage Source="file" FileName="Appimages/Equipment32.png"></LargeImage>
+        </Command>
+        <Command Name="AppDeviceType.Command" Title="DeviceType" Description="DeviceType">
+          <SmallImage Source="file" FileName="Appimages/Device16.png"></SmallImage>
+          <LargeImage Source="file" FileName="Appimages/Device32.png"></LargeImage>
+        </Command>
+        <Command Name="AppDevice.Command" Title="Device" Description="Device">
+          <SmallImage Source="file" FileName="Appimages/Device16.png"></SmallImage>
+          <LargeImage Source="file" FileName="Appimages/Device32.png"></LargeImage>
+        </Command>
+        --><!-- ActorRoles.Group --><!--
+        <Command Name="AppHHRR.Command" Title="HHRR" Description="HHRR">
+          <SmallImage Source="file" FileName="Appimages/HHRR16.png"></SmallImage>
+          <LargeImage Source="file" FileName="Appimages/HHRR32.png"></LargeImage>
+        </Command>
+        <Command Name="AppPosition.Command" Title="Position" Description="Position">
+          <SmallImage Source="file" FileName="Appimages/Administrative16.png"></SmallImage>
+          <LargeImage Source="file" FileName="Appimages/Administrative32.png"></LargeImage>
+        </Command>
+        <Command Name="AppOccupationalProfile.Command" Title="OccupationalProfile" Description="OccupationalProfile">
+          <SmallImage Source="file" FileName="Appimages/doctor16.png"></SmallImage>
+          <LargeImage Source="file" FileName="Appimages/doctor32.png"></LargeImage>
+        </Command>
+        <Command Name="AppSkillAndPermission.Command" Title="SkillAndPermission" Description="SkillAndPermission">
+          <SmallImage Source="file" FileName="Appimages/flag_blue16.png"></SmallImage>
+          <LargeImage Source="file" FileName="Appimages/flag_blue32.png"></LargeImage>
+        </Command>
+        <Command Name="AppWorkConditionType.Command" Title="WorkConditionType" Description="WorkConditionType">
+          <SmallImage Source="file" FileName="Appimages/folderbeige16.png"></SmallImage>
+          <LargeImage Source="file" FileName="Appimages/folderbeige32.png"></LargeImage>
+        </Command>
+        <Command Name="AppHHRRWorkScheduleInfo.Command" Title="HHRRWorkScheduleInfo" Description="HHRRWorkScheduleInfo">
+          <SmallImage Source="file" FileName="Appimages/resourceschconfig16.png"></SmallImage>
+          <LargeImage Source="file" FileName="Appimages/resourceschconfig32.png"></LargeImage>
+        </Command>
+        <Command Name="AppPhysician.Command" Title="Physician" Description="Physician">
+          <SmallImage Source="file" FileName="Appimages/doctor16.png"></SmallImage>
+          <LargeImage Source="file" FileName="Appimages/doctor32.png"></LargeImage>
+        </Command>
+        <Command Name="AppMedicalSpecialty.Command" Title="MedicalSpecialty" Description="MedicalSpecialty">
+          <SmallImage Source="file" FileName="Appimages/PhysicianAgreement16.png"></SmallImage>
+          <LargeImage Source="file" FileName="Appimages/PhysicianAgreement32.png"></LargeImage>
+        </Command>
+        <Command Name="AppWorkGroup.Command" Title="WorkGroup" Description="WorkGroup.Command">
+          <SmallImage Source="file" FileName="Appimages/WorkingGroup16.png"></SmallImage>
+          <LargeImage Source="file" FileName="Appimages/WorkingGroup32.png"></LargeImage>
+        </Command>
+        --><!-- AssistanceServicesAndAgreements.Group --><!--
+        <Command Name="AppAssistanceServiceType.Command" Title="AssistanceServiceType" Description="AssistanceServiceType">
+          <SmallImage Source="file" FileName="Appimages/folderbluedocs16.png"></SmallImage>
+          <LargeImage Source="file" FileName="Appimages/folderbluedocs32.png"></LargeImage>
+        </Command>
+        <Command Name="AppAssistanceService.Command" Title="AssistanceService" Description="AssistanceService">
+          <SmallImage Source="file" FileName="Appimages/AdministratorDB16.png"></SmallImage>
+          <LargeImage Source="file" FileName="Appimages/AdministratorDB32.png"></LargeImage>
+        </Command>
+        <Command Name="AppServiceTypeView" Title="ServiceTypeView" Description="ServiceTypeView">
+          <SmallImage Source="file" FileName="Appimages/servicetype16.png"></SmallImage>
+          <LargeImage Source="file" FileName="Appimages/servicetype32.png"></LargeImage>
+        </Command>
+        <Command Name="AppService.Command" Title="Service" Description="Service">
+          <SmallImage Source="file" FileName="Appimages/services16.png"></SmallImage>
+          <LargeImage Source="file" FileName="Appimages/services32.png"></LargeImage>
+        </Command>
+        <Command Name="AppServiceCharge.Command" Title="ServiceCharge" Description="ServiceCharge">
+          <SmallImage Source="file" FileName="Appimages/charges16.png"></SmallImage>
+          <LargeImage Source="file" FileName="Appimages/charges32.png"></LargeImage>
+        </Command>
+        <Command Name="AppAssistanceAgreement.Command" Title="AssistanceAgreement" Description="AssistanceAgreement">
+          <SmallImage Source="file" FileName="Appimages/hcassistagree16.png"></SmallImage>
+          <LargeImage Source="file" FileName="Appimages/hcassistagree32.png"></LargeImage>
+        </Command>
+        <Command Name="AppAgreement.Command" Title="Agreement" Description="Agreement">
+          <SmallImage Source="file" FileName="Appimages/agreement16.png"></SmallImage>
+          <LargeImage Source="file" FileName="Appimages/agreement32.png"></LargeImage>
+        </Command>
+        <Command Name="AppAgreeCondition.Command" Title="AgreeCondition" Description="AgreeCondition">
+          <SmallImage Source="file" FileName="Appimages/agreementcond16.png"></SmallImage>
+          <LargeImage Source="file" FileName="Appimages/agreementcond32.png"></LargeImage>
+        </Command>
+        <Command Name="AppAssistanceCoverGroup.Command" Title="AssistanceCoverGroup" Description="AssistanceCoverGroup">
+          <SmallImage Source="file" FileName="Appimages/reports16.png"></SmallImage>
+          <LargeImage Source="file" FileName="Appimages/reports32.png"></LargeImage>
+        </Command>
+        --><!-- Insurers.Group --><!--
+        <Command Name="AppInsurer.Command" Title="Insurer" Description="Insurer">
+          <SmallImage Source="file" FileName="Appimages/Insurer16.png"></SmallImage>
+          <LargeImage Source="file" FileName="Appimages/Insurer32.png"></LargeImage>
+        </Command>
+        <Command Name="AppPolicyType.Command" Title="PolicyType" Description="PolicyType">
+          <SmallImage Source="file" FileName="Appimages/shield_green16.png"></SmallImage>
+          <LargeImage Source="file" FileName="Appimages/shield_green32.png"></LargeImage>
+        </Command>
+        <Command Name="AppInsurerCoverAgreement.Command" Title="InsurerCoverAgreement" Description="InsurerCoverAgreement">
+          <SmallImage Source="file" FileName="Appimages/CoverAgreement16.png"></SmallImage>
+          <LargeImage Source="file" FileName="Appimages/CoverAgreement32.png"></LargeImage>
+        </Command>
+        <Command Name="AppInsurerAgreement.Command" Title="InsurerAgreement" Description="InsurerAgreement">
+          <SmallImage Source="file" FileName="Appimages/Agreement16.png"></SmallImage>
+          <LargeImage Source="file" FileName="Appimages/Agreement32.png"></LargeImage>
+        </Command>
+        <Command Name="AppInsurerCondition.Command" Title="InsurerCondition" Description="InsurerCondition">
+          <SmallImage Source="file" FileName="Appimages/AgreementCond16.png"></SmallImage>
+          <LargeImage Source="file" FileName="Appimages/AgreementCond32.png"></LargeImage>
+        </Command>
+        <Command Name="AppAuthorizationType.Command" Title="AuthorizationType" Description="AuthorizationType">
+          <SmallImage Source="file" FileName="Appimages/InvoiceInformation16.png"></SmallImage>
+          <LargeImage Source="file" FileName="Appimages/InvoiceInformation32.png"></LargeImage>
+        </Command>
+        <Command Name="AppInvoicePrintRule.Command" Title="InvoicePrintRule" Description="InvoicePrintRule">
+          <SmallImage Source="file" FileName="Appimages/printerrules16.png"></SmallImage>
+          <LargeImage Source="file" FileName="Appimages/printerrules32.png"></LargeImage>
+        </Command>
+        <Command Name="AppInvoiceAgreement.Command" Title="InvoiceAgreement" Description="InvoiceAgreement">
+          <SmallImage Source="file" FileName="Appimages/blocknotes16.png"></SmallImage>
+          <LargeImage Source="file" FileName="Appimages/blocknotes32.png"></LargeImage>
+        </Command>
+        <Command Name="AppInsurerInvoiceAgreement.Command" Title="InsurerInvoiceAgreement" Description="InsurerInvoiceAgreement">
+          <SmallImage Source="file" FileName="Appimages/guartype16.png"></SmallImage>
+          <LargeImage Source="file" FileName="Appimages/guartype32.png"></LargeImage>
+        </Command>
+        --><!-- AssistanceActs.Group --><!--
+        <Command Name="AppReasonChange.Command" Title="ReasonChange" Description="ReasonChange">
+          <SmallImage Source="file" FileName="Appimages/movements16.jpg"/>
+          <LargeImage Source="file" FileName="Appimages/movements32.jpg"/>
+        </Command>
+        <Command Name="AppObservationType.Command" Title="ObservationType" Description="ObservationType">
+          <SmallImage Source="file" FileName="Appimages/obstype16.jpg"/>
+          <LargeImage Source="file" FileName="Appimages/obstype32.jpg"/>
+        </Command>
+        <Command Name="AppDimensionCriteria.Command" Title="DimensionCriteria" Description="DimensionCriteria">
+          <SmallImage Source="file" FileName="Appimages/cube_molecule16.jpg"/>
+          <LargeImage Source="file" FileName="Appimages/cube_molecule32.jpg"/>
+        </Command>
+        <Command Name="AppCriteriaValue.Command" Title="CriteriaValue" Description="CriteriaValue">
+          <SmallImage Source="file" FileName="Appimages/cube_molecule_view16.jpg"/>
+          <LargeImage Source="file" FileName="Appimages/cube_molecule_view32.jpg"/>
+        </Command>
+        <Command Name="AppObservation.Command" Title="Observation" Description="Observation">
+          <SmallImage Source="file" FileName="Appimages/obs16.jpg"/>
+          <LargeImage Source="file" FileName="Appimages/obs32.jpg"/>
+        </Command>
+        <Command Name="AppObservationBlock.Command" Title="ObservationBlock" Description="ObservationBlock">
+          <SmallImage Source="file" FileName="Appimages/obsblock16.jpg"/>
+          <LargeImage Source="file" FileName="Appimages/obsblock32.jpg"/>
+        </Command>
+        <Command Name="AppObservationTemplate.Command" Title="ObservationTemplate" Description="ObservationTemplate">
+          <SmallImage Source="file" FileName="Appimages/obstemplate16.jpg"/>
+          <LargeImage Source="file" FileName="Appimages/obstemplate32.jpg"/>
+        </Command>
+        <Command Name="AppSpecialCategory.Command" Title="SpecialCategory" Description="SpecialCategory">
+          <SmallImage Source="file" FileName="Appimages/warning16.jpg"/>
+          <LargeImage Source="file" FileName="Appimages/warning32.jpg"/>
+        </Command>
+        <Command Name="AppRoutineType.Command" Title="RoutineType" Description="RoutineType">
+          <SmallImage Source="file" FileName="Appimages/AssistanceProtocols16.jpg"/>
+          <LargeImage Source="file" FileName="Appimages/AssistanceProtocols32.jpg"/>
+        </Command>
+        <Command Name="AppRoutineClassification.Command" Title="RoutineClassification" Description="RoutineClassification">
+          <SmallImage Source="file" FileName="Appimages/tariff16.jpg"/>
+          <LargeImage Source="file" FileName="Appimages/tariff32.jpg"/>
+        </Command>
+        <Command Name="AppPrecaution.Command" Title="Precaution" Description="Precaution">
+          <SmallImage Source="file" FileName="Appimages/shield_green16.jpg"/>
+          <LargeImage Source="file" FileName="Appimages/shield_green32.jpg"/>
+        </Command>
+        <Command Name="AppContraindication.Command" Title="Contraindication" Description="Contraindication">
+          <SmallImage Source="file" FileName="Appimages/colorbystatus16.jpg"/>
+          <LargeImage Source="file" FileName="Appimages/colorbystatus32.jpg"/>
+        </Command>
+        <Command Name="AppRoutine.Command" Title="Routine" Description="Routine">
+          <SmallImage Source="file" FileName="Appimages/form_blue16.jpg"/>
+          <LargeImage Source="file" FileName="Appimages/form_blue32.jpg"/>
+        </Command>
+        <Command Name="AppRoutineTemplate.Command" Title="RoutineTemplate" Description="RoutineTemplate">
+          <SmallImage Source="file" FileName="Appimages/form_green16.jpg"/>
+          <LargeImage Source="file" FileName="Appimages/form_green32.jpg"/>
+        </Command>
+        <Command Name="AppProcedureClassification.Command" Title="ProcedureClassification" Description="ProcedureClassification">
+          <SmallImage Source="file" FileName="Appimages/indexpreferences16.jpg"/>
+          <LargeImage Source="file" FileName="Appimages/indexpreferences32.jpg"/>
+        </Command>
+        <Command Name="AppProcedure.Command" Title="Procedure" Description="Procedure">
+          <SmallImage Source="file" FileName="Appimages/AdministratorDB16.jpg"/>
+          <LargeImage Source="file" FileName="Appimages/AdministratorDB32.jpg"/>
+        </Command>
+        <Command Name="AppOrderType.Command" Title="OrderType" Description="OrderType">
+          <SmallImage Source="file" FileName="Appimages/foldercubes16.jpg"/>
+          <LargeImage Source="file" FileName="Appimages/foldercubes32.jpg"/>
+        </Command>
+        <Command Name="AppOrderClassification.Command" Title="OrderClassification" Description="OrderClassification">
+          <SmallImage Source="file" FileName="Appimages/foldergear16.jpg"/>
+          <LargeImage Source="file" FileName="Appimages/foldergear32.jpg"/>
+        </Command>
+        <Command Name="AppOrder.Command" Title="Order" Description="Order">
+          <SmallImage Source="file" FileName="Appimages/folderedit16.jpg"/>
+          <LargeImage Source="file" FileName="Appimages/folderedit32.jpg"/>
+        </Command>
+        --><!-- ProcessCharts.Group --><!--
+        <Command Name="AppEpisodeReasonType.Command" Title="EpisodeReasonType" Description="EpisodeReasonType">
+          <SmallImage Source="file" FileName="Appimages/EpReasonType16.png"></SmallImage>
+          <LargeImage Source="file" FileName="Appimages/EpReasonType32.png"></LargeImage>
+        </Command>
+        <Command Name="AppPreAssessmentType.Command" Title="PreAssessmentType" Description="PreAssessmentType">
+          <SmallImage Source="file" FileName="Appimages/form_blue16.png"></SmallImage>
+          <LargeImage Source="file" FileName="Appimages/form_blue32.png"></LargeImage>
+        </Command>
+        <Command Name="AppAssistanceDegree.Command" Title="AssistanceDegree" Description="AssistanceDegree">
+          <SmallImage Source="file" FileName="Appimages/nurseprotocols16.png"></SmallImage>
+          <LargeImage Source="file" FileName="Appimages/nurseprotocols32.png"></LargeImage>
+        </Command>
+        <Command Name="AppEpisodeType.Command" Title="EpisodeType" Description="EpisodeType">
+          <SmallImage Source="file" FileName="Appimages/episode16.png"></SmallImage>
+          <LargeImage Source="file" FileName="Appimages/episode32.png"></LargeImage>
+        </Command>
+        <Command Name="AppEpisodeCloseMode.Command" Title="EpisodeCloseMode" Description="EpisodeCloseMode">
+          <SmallImage Source="file" FileName="Appimages/folderout16.png"></SmallImage>
+          <LargeImage Source="file" FileName="Appimages/folderout32.png"></LargeImage>
+        </Command>
+        <Command Name="AppMedEpisodeType.Command" Title="MedEpisodeType" Description="MedEpisodeType">
+          <SmallImage Source="file" FileName="Appimages/episodesprotocols16.png"></SmallImage>
+          <LargeImage Source="file" FileName="Appimages/episodesprotocols32.png"></LargeImage>
+        </Command>
+        <Command Name="AppMedEpisodeProcessChart.Command" Title="MedEpisodeProcessChart" Description="MedEpisodeProcessChart">
+          <SmallImage Source="file" FileName="Appimages/entitytype16.png"></SmallImage>
+          <LargeImage Source="file" FileName="Appimages/entitytype32.png"></LargeImage>
+        </Command>
+        <Command Name="AppAssistanceProcessChart.Command" Title="AssistanceProcessChart" Description="AssistanceProcessChart">
+          <SmallImage Source="file" FileName="Appimages/branch16.png"></SmallImage>
+          <LargeImage Source="file" FileName="Appimages/branch32.png"></LargeImage>
+        </Command>
+        <Command Name="AppProcessChart.Command" Title="ProcessChart" Description="ProcessChart">
+          <SmallImage Source="file" FileName="Appimages/branchelement16.png"></SmallImage>
+          <LargeImage Source="file" FileName="Appimages/branchelement32.png"></LargeImage>
+        </Command>
+
+      </CommandCatalog>-->
+
+
+      <!--<MenuCatalog>
+        <MenuItem Name="AppGridRangeColor.Menu" Title="Grid color set" Description="Grid color set" MergeOrder="2000">
+          <SmallImage Source="file" FileName="images/loadlayout16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/loadlayout32.png"></LargeImage>
+          <MenuItem Name="AppDefaultColor.Menu" CommandName="AppDefaultColor.Command"/>
+          <MenuItem Name="AppBlueColor.Menu" CommandName="AppBlueColor.Command"/>
+          <MenuItem Name="AppGrayColor.Menu" CommandName="AppGrayColor.Command"/>
+        </MenuItem>
+
+        <MenuItem Name="AppBasicProcess.Menu" Title="Admission and Care processes" Description="Admission and Care processes" MergeOrder="2000">
+          <SmallImage Source="file" FileName="images/AdministratorDB16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/AdministratorDB32.png"></LargeImage>
+          <MenuItem Name="AppHierarchyView.Menu" CommandName="AppHierarchyView.Command"/>
+          <MenuItem Name="AppAvailabilitiesView.Menu" CommandName="AppAvailabilitiesView.Command"/>
+          <MenuItem Name="AppCustomerListView.Menu" CommandName="AppCustomerListView.Command"/>
+        </MenuItem>
+        <MenuItem Name="AppProcessWarehouse.Menu" Title="Warehouse and Requests" Description="Warehouse and Requests" MergeOrder="2001">
+          <SmallImage Source="file" FileName="images/AdministrativeChores16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/AdministrativeChores32.png"></LargeImage>
+          <MenuItem Name="AppWarehouseManagement.Menu" CommandName="AppWarehouseManagement.Command"/>
+          <MenuItem Name="AppInventoryManagement.Menu" CommandName="AppInventoryManagement.Command"/>
+          <MenuItem Name="AppMovementManagement.Menu" CommandName="AppMovementManagement.Command"/>
+        </MenuItem>
+
+        <MenuItem Name="AppItemProcessManagement.Menu" Title="Item and families management" Description="Item and families management" MergeOrder="2001">
+          <SmallImage Source="file" FileName="images/DrugManagement16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/DrugManagement32.png"></LargeImage>
+          <MenuItem Name="AppItemsManagement.Menu" CommandName="AppItemsManagement.Command"/>
+          <MenuItem Name="AppFamilies.Menu" CommandName="AppFamilies.Command"/>
+          <MenuItem Name="AppItemGroup.Menu" CommandName="AppItemGroup.Command"/>
+        </MenuItem>
+        <MenuItem Name="AppSupplierProcessManagement.Menu" Title="Supplier management" Description="Supplier management" MergeOrder="2001">
+          <SmallImage Source="file" FileName="images/supplier16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/supplier32.png"></LargeImage>
+          <MenuItem Name="AppSupplierManagement.Menu" CommandName="AppSupplierManagement.Command"/>
+          <MenuItem Name="AppPurchaseOrdersManagement.Menu" CommandName="AppPurchaseOrdersManagement.Command"/>
+          <MenuItem Name="AppInvoicePurchaseOrdersManagement.Menu" CommandName="AppInvoicePurchaseOrdersManagement.Command"/>
+        </MenuItem>
+        <MenuItem Name="AppBuyerProcessManagement.Menu" Title="Customer and sales management" Description="Customer and sales management" MergeOrder="2001">
+          <SmallImage Source="file" FileName="images/pacientes16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/pacientes32.png"></LargeImage>
+          <MenuItem Name="AppBuyerManagement.Menu" CommandName="AppBuyerManagement.Command"/>
+          <MenuItem Name="AppSalesOrdersManagement.Menu" CommandName="AppSalesOrdersManagement.Command"/>
+          <MenuItem Name="AppInvoiceSalesOrdersManagement.Menu" CommandName="AppInvoiceSalesOrdersManagement.Command"/>
+        </MenuItem>
+
+        <MenuItem Name="AppAdministrativeProcess.Menu" Title="Realization, coverage and invoice management" Description="Realization, coverage and invoice management" MergeOrder="2001">
+          <SmallImage Source="file" FileName="images/resourcefulfill16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/resourcefulfill32.png"></LargeImage>
+          <MenuItem Name="AppCustomerRealizationManagement.Menu" CommandName="AppCustomerRealizationManagement.Command"/>
+          <MenuItem Name="AppCustomerAdministrativeManagement.Menu" CommandName="AppCustomerAdministrativeManagement.Command"/>
+          <MenuItem Name="AppMultipleEpisodeAdministrativeManagement.Menu" CommandName="AppMultipleEpisodeAdministrativeManagement.Command"/>
+          <MenuItem Name="AppMultipleInsurerInvoicesManagement.Menu" CommandName="AppMultipleInsurerInvoicesManagement.Command"/>
+          <MenuItem Name="AppRemittancesManagement.Menu" CommandName="AppRemittancesManagement.Command"/>
+        </MenuItem>
+
+
+        <MenuItem Name="AppMedicalEpisodeProcess.Menu" Title="Medical episodes management" Description="Medical episodes management" MergeOrder="2001">
+          <SmallImage Source="file" FileName="images/PhysicianAgreement16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/PhysicianAgreement32.png"></LargeImage>
+          <MenuItem Name="AppMedicalEpisodeManagement.Menu" CommandName="AppMedicalEpisodeManagement.Command"/>
+          <MenuItem Name="AppReportManagement.Menu" CommandName="AppReportManagement.Command"/>
+        </MenuItem>
+
+      </MenuCatalog>
+      <ToolCatalog>
+        <Toolbar Name="AppGridRangeColor.Toolbar" Title="Grid color set" Description="Grid color set" DockedRow="1" DockedColumn="0">
+          <ToolItem Name="AppDefaultColor.Tool" CommandName="AppDefaultColor.Command"/>
+          <ToolItem Name="AppBlueColor.Tool" CommandName="AppBlueColor.Command"/>
+          <ToolItem Name="AppGrayColor.Tool" CommandName="AppGrayColor.Command"/>
+        </Toolbar>
+
+        <Toolbar Name="AppBasicProcess.Toolbar" Title="Admission and assistance processes" Description="Admission and assistance processes" DockedRow="1" DockedColumn="1">
+          <ToolItem Name="AppHierarchyView.Tool" CommandName="AppHierarchyView.Command"/>
+          <ToolItem Name="AppAvailabilitiesView.Tool" CommandName="AppAvailabilitiesView.Command"/>
+          <ToolItem Name="AppCustomerListView.Tool" CommandName="AppCustomerListView.Command"/>
+        </Toolbar>
+
+        <Toolbar Name="AppProcessWarehouse.Toolbar" Title="Warehouse and requests" Description="Warehouse and requests" DockedRow="1" DockedColumn="2">
+          <ToolItem Name="AppWarehouseManagement.Tool" CommandName="AppWarehouseManagement.Command"/>
+          <ToolItem Name="AppInventoryManagement.Tool" CommandName="AppInventoryManagement.Command"/>
+          <ToolItem Name="AppMovementManagement.Tool" CommandName="AppMovementManagement.Command"/>
+        </Toolbar>
+        <Toolbar Name="AppItemProcessManagement.Toolbar" Title="Item and families management" Description="Item and families management" DockedRow="1" DockedColumn="3">
+          <ToolItem Name="AppItemsManagement.Tool" CommandName="AppItemsManagement.Command"/>
+          <ToolItem Name="AppFamilies.Tool" CommandName="AppFamilies.Command"/>
+          <ToolItem Name="AppItemGroup.Tool" CommandName="AppItemGroup.Command"/>
+        </Toolbar>
+        <Toolbar Name="AppSupplierProcessManagement.Toolbar" Title="Supplier management" Description="Supplier management" DockedRow="1" DockedColumn="4">
+          <ToolItem Name="AppSupplierManagement.Tool" CommandName="AppSupplierManagement.Command"/>
+          <ToolItem Name="AppPurchaseOrdersManagement.Tool" CommandName="AppPurchaseOrdersManagement.Command"/>
+          <ToolItem Name="AppInvoicePurchaseOrdersManagement.Tool" CommandName="AppInvoicePurchaseOrdersManagement.Command"/>
+        </Toolbar>
+        <Toolbar Name="AppBuyerProcessManagement.Toolbar" Title="Customer and sales management" Description="Customer and sales management" DockedRow="1" DockedColumn="5">
+          <ToolItem Name="AppBuyerManagement.Tool" CommandName="AppBuyerManagement.Command"/>
+          <ToolItem Name="AppSalesOrdersManagement.Tool" CommandName="AppSalesOrdersManagement.Command"/>
+          <ToolItem Name="AppInvoiceSalesOrdersManagement.Tool" CommandName="AppInvoiceSalesOrdersManagement.Command"/>
+        </Toolbar>
+
+        <Toolbar Name="AppAdministrativeProcess.Tool" Title="Realization, coverages and invoices management" Description="Realization, coverages and invoices management" DockedRow="1" DockedColumn="6">
+          <ToolItem Name="AppCustomerRealizationManagement.Tool" CommandName="AppCustomerRealizationManagement.Command"/>
+          <ToolItem Name="AppCustomerAdministrativeManagement.Tool" CommandName="AppCustomerAdministrativeManagement.Command"/>
+          <ToolItem Name="AppMultipleEpisodeAdministrativeManagement.Tool" CommandName="AppMultipleEpisodeAdministrativeManagement.Command"/>
+          <ToolItem Name="AppMultipleInsurerInvoicesManagement.Tool" CommandName="AppMultipleInsurerInvoicesManagement.Command"/>
+          <ToolItem Name="AppRemittancesManagement.Tool" CommandName="AppRemittancesManagement.Command"/>
+        </Toolbar>
+
+        <Toolbar Name="AppMedicalEpisodeProcess.Tool" Title="Medical consultation management" Description="Medical consultation management" DockedRow="1" DockedColumn="7">
+          <ToolItem Name="AppMedicalEpisodeManagement.Tool" CommandName="AppMedicalEpisodeManagement.Command"/>
+          <ToolItem Name="AppReportManagement.Tool" CommandName="AppReportManagement.Command"/>
+        </Toolbar>
+
+
+      </ToolCatalog>-->
+
+      <ApplicationExplorerCatalog>
+
+        <ExplorerTab Name="AppBackOffice.Tab" Title= "Back Office">
+          <SmallImage Source="file" FileName="images/BackOffice32.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/BackOffice32.png"></LargeImage>
+          <Group Name="BasicData.Group" Title="Basic Data" Description="Access To Basic Data" GroupType="Container"/>
+          <Group Name="Encoders.Group" Title="Encoders" Description="Access To Encoders " GroupType="Container"/>
+          <Group Name="Hierarchy.Group" Title="Hierarchy" Description="Access To Hierarchy" GroupType="Container"/>
+          <Group Name="ActorRoles.Group" Title="Actor Roles" Description="Access To Actor Roles" GroupType="Container"/>
+          <Group Name="AssistanceServicesAndAgreements.Group" Title="Assistance Services And Agreements" Description="Access To Assistance Services And Agreements" GroupType="Container"/>
+          <Group Name="Insurers.Group" Title="Insurers" Description="Access To Insurers" GroupType="Container"/>
+          <Group Name="AssistanceActs.Group" Title="Assistance Acts" Description="Access To Assistance Acts" GroupType="Container"/>
+          <Group Name="ProcessCharts.Group" Title="Process Charts" Description="Access To Process Charts" GroupType="Container"/>
+        </ExplorerTab>
+
+        <ExplorerTab Name="AppAdministrative.Tab" Title= "Administrative">
+          <SmallImage Source="file" FileName="images/ADAS16.png"/>
+          <LargeImage Source="file" FileName="images/ADAS32.png"/>
+          <Group Name="Notifications.Group" Title="Notifications" Description="Access To Notifications" GroupType="Container"/>
+          <Group Name="CustomerManagement.Group" Title="Customer Management" Description="Access To Customer Management" GroupType="Container"/>
+          <Group Name="AppAdministrativeProcess.Group" Title="Administrative Process" Description="Access To Administrative Process" GroupType="Container"/>
+          <Group Name="ReportsAndResults.Group" Title="Reports And Results" Description="Access To Reports And Results" GroupType="Container"/>
+          <Group Name="CoveragesAndInvoicing.Group" Title="Coverages And Invoicing" Description="Access To Coverages And Invoicing" GroupType="Container"/>
+          <Group Name="Codification.Group" Title="Codification" Description="Access To Codification" GroupType="Container"/>
+        </ExplorerTab>
+
+        <ExplorerTab Name="AppAssistance.Tab" Title= "Assistance">
+          <SmallImage Source="file" FileName="images/nurseprotocols16.png"/>
+          <LargeImage Source="file" FileName="images/nurseprotocols32.png"/>
+          <Group Name="AppAssistanceProcess.Group" Title="Assistance Process" Description="Access To Assistance Process" GroupType="Container"/>
+          <Group Name="AppDietProcess.Group" Title="Diet Process" Description="Access To Diet Process" GroupType="Container"/>
+        </ExplorerTab>
+
+        <ExplorerTab Name="AppMedical.Tab" Title= "Medical">
+          <SmallImage Source="file" FileName="images/episodesprotocols16.png"/>
+          <LargeImage Source="file" FileName="images/episodesprotocols32.png"/>
+          <Group Name="AppMedicalProcess.Group" Title="Medical Process" Description="Access To Medical Process" GroupType="Container"/>
+        </ExplorerTab>
+
+        <ExplorerTab Name="AppSupport.Tab" Title= "Support">
+          <SmallImage Source="file" FileName="images/dataedit16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/dataedit32.png"></LargeImage>
+
+          <Group Name="Items.Group" Title="Items" Description="Access To Items" GroupType="Container"/>
+          <Group Name="Warehouse.Group" Title="Warehouse" Description="Access To Warehouse" GroupType="Container"/>
+          <Group Name="SuppliersAndPurchases.Group" Title="Suppliers And Purchases" Description="Access To Suppliers And Purchases" GroupType="Container"/>
+          <Group Name="BuyerAndSales.Group" Title="Buyer And Sales" Description="Access To Buyer And Sales" GroupType="Container"/>
+          <Group Name="CashRegisters.Group" Title="Cash Registers" Description="Access To Cash Registers" GroupType="Container"/>
+          <Group Name="Indicators.Group" Title="Indicators" Description="Access To Indicators" GroupType="Container"/>
+          <Group Name="Documents.Group" Title="Documents" Description="Access To Documents" GroupType="Container"/>
+          <Group Name="Addins.Group" Title="Addins" Description="Access To Addins" GroupType="Container"/>
+
+
+        </ExplorerTab>
+      </ApplicationExplorerCatalog>
+
+    </Application>
+
+  </ApplicationCatalog>
+
+  <ApplicationCatalog Language="es"  Title="Proyecto IndigoHIS">
+    <Application Name="Security.Application" PrimaryWorkspaceName="Security.Workspace" ExplorerWorkspaceName="Security.ApplicationExplorer"
+		   ToolbarManagerWorkspaceName="Security.Manager" MainMenuElementName="Security.MenuManager" Title="Seguridad"
+		   Description="Seleccione para Acceder al apartado de Seguridad" AllowFloatingExplorer="false" AllowFloatingMainMenu="false"
+		   AllowFloatingMainToolbar="false">
+      <SmallImage Source="file" FileName="images/SIFP16.png" />
+      <LargeImage Source="file" FileName="images/SIFP32.png" />
+      <CommandCatalog />
+      <MenuCatalog />
+      <ToolCatalog />
+      <ApplicationExplorerCatalog>
+        <ExplorerTab Name="Security.Tab" Title="SEGURIDAD" Description="Seguridad">
+          <SmallImage Source="file" FileName="images/SIFP16.png" />
+          <LargeImage Source="file" FileName="images/SIFP32.png" />
+          <Group Name="Security.Group" Title="Configuración de Seguridad" Description="Seleccione para acceder a Configurar la Seguridad" GroupType="Container">
+            <SmallImage />
+            <LargeImage />
+          </Group>
+        </ExplorerTab>
+      </ApplicationExplorerCatalog>
+    </Application>
+
+    <Application Name="BackOffice.Application" PrimaryWorkspaceName="BackOffice.Workspace" ExplorerWorkspaceName="BackOffice.ApplicationExplorer"
+			 ToolbarManagerWorkspaceName="BackOffice.Manager" MainMenuElementName="BackOffice.MenuManager" Title="Back Office"
+			 Description="Seleccione para Acceder al apartado de Back Office" AllowFloatingExplorer="false" AllowFloatingMainMenu="false"
+			 AllowFloatingMainToolbar="false">
+      <SmallImage Source="file" FileName="images/BackOffice16.png"/>
+      <LargeImage Source="file" FileName="images/BackOffice32.png"/>
+      <CommandCatalog>
+        <!-- DATABASE -->
+        <Command Name="EntityListView.Command" Title="Entidades" Description="Entidades">
+          <SmallImage Source="file" FileName="images/components16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/components32.png"></LargeImage>
+        </Command>
+
+        <Command Name="PersonListView.Command" Title="Personas" Description="Personas">
+          <SmallImage Source="file" FileName="images/others16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/others32.png"></LargeImage>
+        </Command>
+        <Command Name="OrganizationListView.Command" Title="Organizaciones" Description="Organizaciones">
+          <SmallImage Source="file" FileName="images/HealthCenter16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/HealthCenter32.png"></LargeImage>
+        </Command>
+        <Command Name="HHRRListView.Command" Title="Recursos Humanos" Description="Recursos Humanos">
+          <SmallImage Source="file" FileName="images/HHRR16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/HHRR32.png"></LargeImage>
+        </Command>
+        <Command Name="CategoryListView.Command" Title="Categorías" Description="Categorías">
+          <SmallImage Source="file" FileName="images/Administrative16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/Administrative32.png"></LargeImage>
+        </Command>
+        <Command Name="ZipCode.Command" Title="Códigos Postales" Description="Códigos Postales">
+          <SmallImage Source="file" FileName="images/Zip16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/Zip32.png"></LargeImage>
+        </Command>
+        <Command Name="IdentifierTypeList.Command" Title="Tipos de Identificadores" Description="Tipos de Identificadores">
+          <SmallImage Source="file" FileName="images/user16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/user32.png"></LargeImage>
+        </Command>
+        <Command Name="LocationClassification.Command" Title="Clasificación de Ubicaciones" Description="Clasificación de Ubicaciones">
+          <SmallImage Source="file" FileName="images/bed16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/bed32.png"></LargeImage>
+        </Command>
+        <Command Name="EquipmentType.Command" Title="Tipos de Equipo" Description="Tipos de Equipo">
+          <SmallImage Source="file" FileName="images/equipment16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/equipment32.png"></LargeImage>
+        </Command>
+        <Command Name="DeviceType.Command" Title="Tipos de Dispositivo" Description="Tipos de Dispositivo">
+          <SmallImage Source="file" FileName="images/Device16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/Device32.png"></LargeImage>
+        </Command>
+        <!-- END DATABASE -->
+        <!-- HIERARCHY -->
+        <Command Name="HierarchyView.Command" Title="Jerarquía" Description="Jerarquía">
+          <SmallImage Source="file" FileName="images/basicdata16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/basicdata32.png"></LargeImage>
+        </Command>
+        <Command Name="LocationTypeListView.Command" Title="Tipos de Ubicación" Description="Tipos de Ubicación">
+          <SmallImage Source="file" FileName="images/HospitalizationArea16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/HospitalizationArea32.png"></LargeImage>
+        </Command>
+        <Command Name="LocationListView.Command" Title="Ubicaciones" Description="Ubicaciones">
+          <SmallImage Source="file" FileName="images/room16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/room32.png"></LargeImage>
+        </Command>
+        <Command Name="EquipmentListView.Command" Title="Equipos" Description="Equipos">
+          <SmallImage Source="file" FileName="images/Equipment16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/Equipment32.png"></LargeImage>
+        </Command>
+        <Command Name="DeviceListView.Command" Title="Dispositivos" Description="Dispositivos">
+          <SmallImage Source="file" FileName="images/Device16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/Device32.png"></LargeImage>
+        </Command>
+        <!--  END HIERARCHY -->
+        <!-- SERVICES COMMANDS-->
+        <Command Name="Services.Command" Title="Servicios" Description="Servicios">
+          <SmallImage Source="file" FileName="images/services16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/services32.png"></LargeImage>
+        </Command>
+        <Command Name="ServicesCharges.Command" Title="Cargos" Description="Cargos">
+          <SmallImage Source="file" FileName="images/charges16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/charges32.png"></LargeImage>
+        </Command>
+        <Command Name="ServicesChargesPriceAndTariff.Command" Title="Precios de Cargos y Tarifas" Description="Precios de Cargos y Tarifas">
+          <SmallImage Source="file" FileName="images/priceandtariff16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/priceandtariff32.png"></LargeImage>
+        </Command>
+        <Command Name="AgreementConditions.Command" Title="Condiciones" Description="Condiciones">
+          <SmallImage Source="file" FileName="images/agreementcond16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/agreementcond32.png"></LargeImage>
+        </Command>
+        <Command Name="Agreement.Command" Title="Acuerdos" Description="Acuerdos">
+          <SmallImage Source="file" FileName="images/agreement16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/agreement32.png"></LargeImage>
+        </Command>
+        <Command Name="AssistanceAgreement.Command" Title="Acuerdos Asistenciales" Description="Acuerdos Asistenciales">
+          <SmallImage Source="file" FileName="images/hcassistagree16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/hcassistagree32.png"></LargeImage>
+        </Command>
+        <Command Name="AssistanceServices.Command" Title="Servicios Asistenciales" Description="Servicios Asistenciales">
+          <SmallImage Source="file" FileName="images/AdministratorDB16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/AdministratorDB32.png"></LargeImage>
+        </Command>
+
+        <Command Name="Insurers.Command" Title="Aseguradoras" Description="Aseguradoras">
+          <SmallImage Source="file" FileName="images/Insurer16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/Insurer32.png"></LargeImage>
+        </Command>
+        <Command Name="InsurerCoverAgreement.Command" Title="Acuerdos de Cobertura" Description="Acuerdos de Cobertura de Aseguradoras">
+          <SmallImage Source="file" FileName="images/CoverAgreement16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/CoverAgreement32.png"></LargeImage>
+        </Command>
+        <Command Name="InsurerAgreements.Command" Title="Acuerdos de Aseguradora" Description="Acuerdos de Aseguradoras">
+          <SmallImage Source="file" FileName="images/Agreement16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/Agreement32.png"></LargeImage>
+        </Command>
+        <Command Name="InsurerAgreementConditions.Command" Title="Condiciones de Aseguradora" Description="Condiciones de Aseguradora">
+          <SmallImage Source="file" FileName="images/AgreementCond16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/AgreementCond32.png"></LargeImage>
+        </Command>
+        <!-- END SERVICES COMMANDS-->
+        <Command Name="BackOfficeReportExtensions" />
+
+
+
+        <!-- command for change gridrangecolor-->
+        <Command Name="DefaultColorCommand" Title="Color de Fondo Predeterminado" Description="Seleccione para establecer el fondo de color Predeterminado"></Command>
+        <Command Name="BlueColorCommand" Title="Color de Fondo Azul" Description="Seleccione para establecer el fondo de Color Azul"></Command>
+        <Command Name="GrayColorCommand" Title="Color de Fondo Gris" Description="Seleccione para establecer el fondo de Color Gris"></Command>
+
+
+      </CommandCatalog>
+      <MenuCatalog>
+        <!--<MenuItem Name="ThirdBasicData.Menu" Title="Datos Básicos de Terceros" Description="Datos Básicos de Terceros" MergeOrder="2000">
+					<SmallImage Source="file" FileName="images/thirdinformation16.png"></SmallImage>
+					<LargeImage Source="file" FileName="images/thirdinformation32.png"></LargeImage>
+					<MenuItem Name="PersonListView.Menu" CommandName="PersonListView.Command"/>
+					<MenuItem Name="OrganizationListView.Menu" CommandName="OrganizationListView.Command"/>
+				</MenuItem>
+				<MenuItem Name="HumanResource.Menu" Title="Recursos Humanos del Proceso" Description="Recursos Humanos del Proceso" MergeOrder="2000">
+					<SmallImage Source="file" FileName="images/HHRR16.png"></SmallImage>
+					<LargeImage Source="file" FileName="images/HHRR32.png"></LargeImage>
+					<MenuItem Name="HHRRListView.Menu" CommandName="HHRRListView.Command"/>
+				</MenuItem>-->
+        <MenuItem Name="HierarchyProcess.Menu" Title="Proceso de Jerarquía" Description="Proceso de Jerarquía" MergeOrder="2000">
+          <SmallImage Source="file" FileName="images/basicdata16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/basicdata32.png"></LargeImage>
+          <MenuItem Name="HierarchyView.Menu" CommandName="HierarchyView.Command"/>
+          <MenuItem Name="LocationTypeListView.Menu" CommandName="LocationTypeListView.Command"/>
+          <MenuItem Name="LocationListView.Menu" CommandName="LocationListView.Command"/>
+          <MenuItem Name="EquipmentListView.Menu" CommandName="EquipmentListView.Command"/>
+          <MenuItem Name="DeviceListView.Menu" CommandName="DeviceListView.Command"/>
+        </MenuItem>
+        <MenuItem Name="BackOfficeDataBaseProcess.Menu" Title="Proceso de Base de Datos" Description="Proceso de Base de Datos" MergeOrder="2000">
+          <SmallImage Source="file" FileName="images/database16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/database32.png"></LargeImage>
+          <MenuItem Name="EntityListView.Menu" CommandName="EntityListView.Command"/>
+          <MenuItem Name="CategoryListView.Menu" CommandName="CategoryListView.Command"/>
+          <MenuItem Name="ZipCode.Menu" CommandName="ZipCode.Command"/>
+          <MenuItem Name="IdentifierTypeList.Menu" CommandName="IdentifierTypeList.Command"/>
+          <MenuItem Name="LocationClassification.Menu" CommandName="LocationClassification.Command"/>
+          <MenuItem Name="EquipmentType.Menu" CommandName="EquipmentType.Command"/>
+          <MenuItem Name="DeviceType.Menu" CommandName="DeviceType.Command"/>
+          <MenuItem Name="PersonListView.Menu" CommandName="PersonListView.Command"/>
+          <MenuItem Name="OrganizationListView.Menu" CommandName="OrganizationListView.Command"/>
+          <MenuItem Name="HHRRListView.Menu" CommandName="HHRRListView.Command"/>
+          <MenuItem Name="Insurers.Menu" CommandName="Insurers.Command"/>
+        </MenuItem>
+        <MenuItem Name="ServicesAndAgreementsProcess.Menu" Title="Proceso de Servicios y Acuerdos" Description="Proceso de Servicios y Acuerdos" MergeOrder="2000">
+          <SmallImage Source="file" FileName="images/servicetype16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/servicetype32.png"></LargeImage>
+          <MenuItem Name="Services.Menu" CommandName="Services.Command"/>
+          <MenuItem Name="ServicesCharges.Menu" CommandName="ServicesCharges.Command"/>
+          <MenuItem Name="ServicesChargesPriceAndTariff.Menu" CommandName="ServicesChargesPriceAndTariff.Command"/>
+          <MenuItem Name="AgreementConditions.Menu" CommandName="AgreementConditions.Command"/>
+          <MenuItem Name="Agreement.Menu" CommandName="Agreement.Command"/>
+          <MenuItem Name="AssistanceAgreement.Menu" CommandName="AssistanceAgreement.Command"/>
+          <MenuItem Name="InsurerCoverAgreement.Menu" CommandName="InsurerCoverAgreement.Command"/>
+          <MenuItem Name="InsurerAgreements.Menu" CommandName="InsurerAgreements.Command"/>
+          <MenuItem Name="InsurerAgreementConditions.Menu" CommandName="InsurerAgreementConditions.Command"/>
+        </MenuItem>
+        <!--<MenuItem Name="BackOfficeReports.Menu" Title="Informes de Back Office" Description="Informes de Back Office" MergeOrder="2000">
+          <MenuItem Name="BackOfficeReports.Reports.Services" Title="Services report" CommandName="BackOfficeReportExtensions" URL="hcdreport://ReportViewer?reportname=/HCDV2/TipoServicios&amp;ReportServer=http://hosting.sistemasinfo.com/ReportServer&amp;ReportTitle=/HCDV2/TipoServicios&amp;ShowDialog=false"/>
+        </MenuItem>-->
+        <MenuItem Name="BackOfficeReports.Menu" Title="Informes" Description="Informes de Back Office" MergeOrder="2000">
+          <MenuItem Name="BackOfficeReports.Reports.Agreements" Title="Acuerdos" CommandName="BackOfficeReportExtensions" URL="hcdreport://ReportViewer?reportname=/Acuerdos&amp;ReportServer=http://luis-ppc/ReportServer&amp;ReportTitle=Informe de acuerdos&amp;ShowDialog=false"/>
+          <MenuItem Name="BackOfficeReports.Reports.CoverAgreements" Title="Acuerdos de Cobertura" CommandName="BackOfficeReportExtensions" URL="hcdreport://ReportViewer?reportname=/Acuerdos_de_cobertura&amp;ReportServer=http://luis-ppc/ReportServer&amp;ReportTitle=Informe de acuerdos de cobertura&amp;ShowDialog=false"/>
+          <MenuItem Name="BackOfficeReports.Reports.AgreeConditions" Title="Acuerdos y Condiciones" CommandName="BackOfficeReportExtensions" URL="hcdreport://ReportViewer?reportname=/Acuerdos_y_condiciones&amp;ReportServer=http://luis-ppc/ReportServer&amp;ReportTitle=Informe de acuerdos y condiciones&amp;ShowDialog=false"/>
+          <MenuItem Name="BackOfficeReports.Reports.ChargesByServiceType" Title="Cargos por Tipo de Servicio" CommandName="BackOfficeReportExtensions" URL="hcdreport://ReportViewer?reportname=/Cargos_por_Tipo_de_Servicio&amp;ReportServer=http://luis-ppc/ReportServer&amp;ReportTitle=Informe de cargos por tipo de servicio&amp;ShowDialog=false"/>
+          <MenuItem Name="BackOfficeReports.Reports.ProcedureAndRoutines" Title="Procedimientos y Rutinas" CommandName="BackOfficeReportExtensions" URL="hcdreport://ReportViewer?reportname=/Procedimientos_y_Rutinas&amp;ReportServer=http://luis-ppc/ReportServer&amp;ReportTitle=Informe de procedimientos y rutinas&amp;ShowDialog=false"/>
+          <MenuItem Name="BackOfficeReports.Reports.Services" Title="Servicios" CommandName="BackOfficeReportExtensions" URL="hcdreport://ReportViewer?reportname=/Servicios_Asistenciales&amp;ReportServer=http://luis-ppc/ReportServer&amp;ReportTitle=Informe de servicios asistenciales&amp;ShowDialog=false"/>
+        </MenuItem>
+        <MenuItem Name="GridRangeColor.Menu" Title="Color Fondo de Tablas" Description="Color Fondo de Tablas" MergeOrder="2000">
+          <MenuItem Name="DefaultColor.Menu" CommandName="DefaultColorCommand"/>
+          <MenuItem Name="BlueColor.Menu" CommandName="BlueColorCommand"/>
+          <MenuItem Name="GrayColor.Menu" CommandName="GrayColorCommand"/>
+        </MenuItem>
+
+      </MenuCatalog>
+      <ToolCatalog>
+        <!--<Toolbar Name="ThirdBasicData.Toolbar" Title="Datos Básicos de Terceros" Description="Datos Básicos de Terceros" DockedRow="1" DockedColumn="2">
+					<ToolItem Name="PersonListView.Tool" CommandName="PersonListView.Command"/>
+					<ToolItem Name="OrganizationListView.Tool" CommandName="OrganizationListView.Command"/>
+				</Toolbar>
+				<Toolbar Name="HumanResource.Toolbar" Title="Recursos Humanos del Proceso" Description="Recursos Humanos del Proceso"" DockedRow="1" DockedColumn="2">
+					<ToolItem Name="HHRRListView.Tool" CommandName="HHRRListView.Command"/>
+				</Toolbar>-->
+        <Toolbar Name="HierarchyProcess.Toolbar" Title="Jerarquía" Description="Jerarquía" DockedRow="1" DockedColumn="2">
+          <ToolItem Name="HierarchyView.Tool" CommandName="HierarchyView.Command"/>
+          <ToolItem Name="LocationTypeListView.Tool" CommandName="LocationTypeListView.Command"/>
+          <ToolItem Name="LocationListView.Tool" CommandName="LocationListView.Command"/>
+          <ToolItem Name="EquipmentListView.Tool" CommandName="EquipmentListView.Command"/>
+          <ToolItem Name="DeviceListView.Tool" CommandName="DeviceListView.Command"/>
+        </Toolbar>
+        <Toolbar Name="BackOfficeDataBaseProcess.Toolbar" Title="Base de Datos" Description="Base de Datos" DockedRow="1" DockedColumn="2">
+          <ToolItem Name="EntityListView.Tool" CommandName="EntityListView.Command"/>
+          <ToolItem Name="CategoryListView.Tool" CommandName="CategoryListView.Command"/>
+          <ToolItem Name="ZipCode.Tool" CommandName="ZipCode.Command"/>
+          <ToolItem Name="IdentifierTypeList.Tool" CommandName="IdentifierTypeList.Command"/>
+          <ToolItem Name="LocationClassification.Tool" CommandName="LocationClassification.Command"/>
+          <ToolItem Name="EquipmentType.Tool" CommandName="EquipmentType.Command"/>
+          <ToolItem Name="DeviceType.Tool" CommandName="DeviceType.Command"/>
+          <ToolItem Name="PersonListView.Tool" CommandName="PersonListView.Command"/>
+          <ToolItem Name="OrganizationListView.Tool" CommandName="OrganizationListView.Command"/>
+          <ToolItem Name="HHRRListView.Tool" CommandName="HHRRListView.Command"/>
+          <ToolItem Name="Insurers.Tool" CommandName="Insurers.Command"/>
+        </Toolbar>
+        <Toolbar Name="ServicesAndAgreementsProcess.Toolbar" Title="Servicios y Acuerdos" Description="Servicios y Acuerdos" DockedRow="1" DockedColumn="2">
+          <ToolItem Name="Services.Tool" CommandName="Services.Command"/>
+          <ToolItem Name="ServicesCharges.Tool" CommandName="ServicesCharges.Command"/>
+          <ToolItem Name="ServicesChargesPriceAndTariff.Tool" CommandName="ServicesChargesPriceAndTariff.Command"/>
+          <ToolItem Name="AgreementConditions.Tool" CommandName="AgreementConditions.Command"/>
+          <ToolItem Name="Agreement.Tool" CommandName="Agreement.Command"/>
+          <ToolItem Name="AssistanceAgreement.Tool" CommandName="AssistanceAgreement.Command"/>
+          <ToolItem Name="InsurerCoverAgreement.Tool" CommandName="InsurerCoverAgreement.Command"/>
+          <ToolItem Name="InsurerAgreements.Tool" CommandName="InsurerAgreements.Command"/>
+          <ToolItem Name="InsurerAgreementConditions.Tool" CommandName="InsurerAgreementConditions.Command"/>
+        </Toolbar>
+      </ToolCatalog>
+      <ApplicationExplorerCatalog>
+        <ExplorerTab Name="BackOffice.Tab" Title="BACKOFFICE" Description="Back Office">
+          <SmallImage Source="file" FileName="images/BackOffice16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/BackOffice32.png"></LargeImage>
+          <!--<Group Name="ThirdBasicData.Group" Title="Datos Básicos de Terceros" Description="Seleccione para Acceder a Datos Básicos de Terceros" MergeOrder="2000">
+						<Item Name="PersonListView.Item" CommandName="PersonListView.Command"/>
+						<Item Name="OrganizationListView.Item" CommandName="OrganizationListView.Command"/>
+					</Group>
+					<Group Name="HumanResource.Group" Title="Recurso Humano" Description="Seleccione para Acceder a Recurso Humano" MergeOrder="2000">
+						<Item Name="HHRRListView.Item" CommandName="HHRRListView.Command"/>
+					</Group>-->
+          <Group Name="HierarchyProcess.Group" Title="Jerarquía" Description="Seleccione para Acceder a Jerarquía" GroupType="Container">
+            <!--<Item Name="HierarchyView.Item" CommandName="HierarchyView.Command"/>
+						<Item Name="LocationTypeListView.Item" CommandName="LocationTypeListView.Command"/>
+						<Item Name="LocationListView.Item" CommandName="LocationListView.Command"/>
+						<Item Name="EquipmentListView.Item" CommandName="EquipmentListView.Command"/>
+						<Item Name="DeviceListView.Item" CommandName="DeviceListView.Command"/>-->
+          </Group>
+          <Group Name="BackOfficeDataBaseProcess.Group" Title="Back Office" Description="Seleccione para Acceder a Back Office" GroupType="Container">
+            <!--<Item Name="EntityListView.Item" CommandName="EntityListView.Command"/>
+						<Item Name="CategoryListView.Item" CommandName="CategoryListView.Command"/>
+						<Item Name="ZipCode.Item" CommandName="ZipCode.Command"/>
+						<Item Name="IdentifierTypeList.Item" CommandName="IdentifierTypeList.Command"/>
+						<Item Name="LocationClassification.Item" CommandName="LocationClassification.Command"/>
+						<Item Name="EquipmentType.Item" CommandName="EquipmentType.Command"/>
+						<Item Name="DeviceType.Item" CommandName="DeviceType.Command"/>
+						<Item Name="PersonListView.Item" CommandName="PersonListView.Command"/>
+						<Item Name="OrganizationListView.Item" CommandName="OrganizationListView.Command"/>
+						<Item Name="HHRRListView.Item" CommandName="HHRRListView.Command"/>
+						<Item Name="Insurers.Item" CommandName="Insurers.Command"/>-->
+          </Group>
+          <Group Name="ServicesAndAgreementsProcess.Group" Title="Servicios y Acuerdos" Description="Seleccione para Acceder a Servicios y Acuerdos" GroupType="Container">
+            <!--
+						<Item Name="Services.Item" CommandName="Services.Command"/>
+						<Item Name="ServicesCharges.Item" CommandName="ServicesCharges.Command"/>
+						<Item Name="ServicesChargesPriceAndTariff.Item" CommandName="ServicesChargesPriceAndTariff.Command"/>
+						<Item Name="AgreementConditions.Item" CommandName="AgreementConditions.Command"/>
+						<Item Name="Agreement.Item" CommandName="Agreement.Command"/>
+						<Item Name="AssistanceServiceAgreement.Item" CommandName="AssistanceServiceAgreement.Command"/>
+						<Item Name="InsurerCoverAgreement.Item" CommandName="InsurerCoverAgreement.Command"/>
+						<Item Name="InsurerAgreements.Item" CommandName="InsurerAgreements.Command"/>
+						<Item Name="InsurerAgreementConditions.Item" CommandName="InsurerAgreementConditions.Command"/>-->
+          </Group>
+          <Group Name="FlowChartProcess.Group" Title="Flujos de Procesos" Description="Seleccione para Acceder a Flujos de Procesos" GroupType="Container">
+          </Group>
+          <Group Name="WarehouseAndPurchaseProcess.Group" Title="Almacenes y Compras" Description="Seleccione para Acceder a Almacenes y Compras" GroupType="Container">
+          </Group>
+
+          <Group Name="BusinessMonitorProcess.Group" Title="Indicadores y Codificadores" Description="Seleccione para Acceder a Indicadores y Codificadores" GroupType="Container">
+          </Group>
+        </ExplorerTab>
+      </ApplicationExplorerCatalog>
+    </Application>
+
+    <Application Name="Administrative.Application" PrimaryWorkspaceName="Administrative.Workspace" ExplorerWorkspaceName="Administrative.ApplicationExplorer"
+		   ToolbarManagerWorkspaceName="Administrative.Manager" MainMenuElementName="Administrative.MenuManager" Title="Proceso Administrativo"
+		   Description="Seleccione para Acceder al Proceso Administrativo" AllowFloatingExplorer="false" AllowFloatingMainMenu="false"
+		   AllowFloatingMainToolbar="false">
+      <SmallImage Source="file" FileName="images/ADAS16.png"/>
+      <LargeImage Source="file" FileName="images/ADAS32.png"/>
+      <CommandCatalog>
+        <Command Name="CustomerListView.Command" Title="Clientes" Description="Clientes">
+          <SmallImage Source="file" FileName="images/pacientes16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/pacientes32.png"></LargeImage>
+        </Command>
+        <Command Name="CustomerClassification.Command" Title="Clasisficación de Clientes" Description="Clasisficación de Clientes">
+          <SmallImage Source="file" FileName="images/client16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/client32.png"></LargeImage>
+        </Command>
+        <Command Name="Kinships.Command" Title="Parientes" Description="Parientes">
+          <SmallImage Source="file" FileName="images/nok16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/nok32.png"></LargeImage>
+        </Command>
+        <Command Name="ContactPersons.Command" Title="Contactos: Personas" Description="Contactos: Personas">
+          <SmallImage Source="file" FileName="images/contact16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/contact32.png"></LargeImage>
+        </Command>
+        <Command Name="ContactOrganizations.Command" Title="Contactos: Organizaciones" Description="Contactos: Organizaciones">
+          <SmallImage Source="file" FileName="images/healthcenter16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/healthcenter32.png"></LargeImage>
+        </Command>
+        <!-- ADMISSION PROCESS-->
+        <Command Name="DataOfInterest.Command" Title="Datos de Interés" Description="Datos de Interés">
+          <SmallImage Source="file" FileName="images/contact16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/contact32.png"></LargeImage>
+        </Command>
+        <Command Name="OnLineData.Command" Title="Datos On-Line" Description="Datos On-Line">
+          <SmallImage Source="file" FileName="images/contact16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/contact32.png"></LargeImage>
+        </Command>
+        <Command Name="Contacts.Command" Title="Contactos" Description="Información de Contactos">
+          <SmallImage Source="file" FileName="images/contact16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/contact32.png"></LargeImage>
+        </Command>
+        <Command Name="Visits.Command" Title="Visitas" Description="Información de Visitas">
+          <SmallImage Source="file" FileName="images/contact16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/contact32.png"></LargeImage>
+        </Command>
+        <Command Name="PriorValuation.Command" Title="Valoración Previa" Description="Valoración Previa">
+          <SmallImage Source="file" FileName="images/contact16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/contact32.png"></LargeImage>
+        </Command>
+        <Command Name="Budgets.Command" Title="Presupuestos" Description="Información de Presupuestos">
+          <SmallImage Source="file" FileName="images/contact16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/contact32.png"></LargeImage>
+        </Command>
+        <Command Name="Contracts.Command" Title="Contratos" Description="Información de Contratos">
+          <SmallImage Source="file" FileName="images/contact16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/contact32.png"></LargeImage>
+        </Command>
+        <Command Name="CustomerAdmissionProcess.Command" Title="Admisión" Description="Proceso de Admisión del Paciente">
+          <SmallImage Source="file" FileName="images/contact16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/contact32.png"></LargeImage>
+        </Command>
+        <Command Name="LeaveProcess.Command" Title="Alta" Description="Proceso de Alta">
+          <SmallImage Source="file" FileName="images/contact16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/contact32.png"></LargeImage>
+        </Command>
+        <Command Name="ReservationProcess.Command" Title="Reservas" Description="Proceso de Reservas">
+          <SmallImage Source="file" FileName="images/contact16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/contact32.png"></LargeImage>
+        </Command>
+        <Command Name="TransferProcess.Command" Title="Transpaso" Description="Proceso de Traspaso">
+          <SmallImage Source="file" FileName="images/contact16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/contact32.png"></LargeImage>
+        </Command>
+        <Command Name="WaitingListProcess.Command" Title="Lista de Espera" Description="Proceso de Lista de Espera">
+          <SmallImage Source="file" FileName="images/contact16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/contact32.png"></LargeImage>
+        </Command>
+        <Command Name="GoodsAndChattels.Command" Title="Bienes y Enseres" Description="Bienes y Enseres">
+          <SmallImage Source="file" FileName="images/contact16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/contact32.png"></LargeImage>
+        </Command>
+        <Command Name="CustomerGoodsAndChattels.Command" Title="Bienes y Enseres del Cliente" Description="Bienes y Enseres del Cliente">
+          <SmallImage Source="file" FileName="images/contact16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/contact32.png"></LargeImage>
+        </Command>
+
+        <!--FINAL ADMISSION PROCESS-->
+
+
+      </CommandCatalog>
+      <MenuCatalog>
+        <!--<MenuItem Name="AdmissionProccess.Menu" Title="Admisión" Description="Admisión" MergeOrder="2000">
+					<SmallImage Source="file" FileName="images/Admission16.png"></SmallImage>
+					<LargeImage Source="file" FileName="images/Admission32.png"></LargeImage>
+					<MenuItem Name="CustomerListView.Menu" CommandName="CustomerListView.Command"/>
+				</MenuItem>-->
+        <MenuItem Name="AdministrativeDataBaseProcess.Menu" Title="Base de Datos" Description="Base de Datos" MergeOrder="2000">
+          <SmallImage Source="file" FileName="images/database16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/database32.png"></LargeImage>
+          <MenuItem Name="CustomerListView.Menu" CommandName="CustomerListView.Command"/>
+          <MenuItem Name="CustomerClassification.Menu" CommandName="CustomerClassification.Command"/>
+          <MenuItem Name="Kinships.Menu" CommandName="Kinships.Command"/>
+          <MenuItem Name="ContactPersons.Menu" CommandName="ContactPersons.Command"/>
+          <MenuItem Name="ContactOrganizations.Menu" CommandName="ContactOrganizations.Command"/>
+        </MenuItem>
+      </MenuCatalog>
+      <ToolCatalog>
+        <!--<Toolbar Name="AdmissionProccess.Toolbar" Title="Proceso de Admisión" Description="Proceso de Admisión" DockedRow="1" DockedColumn="3">
+					<ToolItem Name="CustomerListView.Tool" CommandName="CustomerListView.Command"/>
+				</Toolbar>-->
+        <Toolbar Name="AdministrativeDataBaseProcess.Toolbar" Title="Base de Datos" Description="Base de Datos" DockedRow="1" DockedColumn="2">
+          <ToolItem Name="CustomerListView.Tool" CommandName="CustomerListView.Command"/>
+          <ToolItem Name="CustomerClassification.Tool" CommandName="CustomerClassification.Command"/>
+          <ToolItem Name="Kinships.Tool" CommandName="Kinships.Command"/>
+          <ToolItem Name="ContactPersons.Tool" CommandName="ContactPersons.Command"/>
+          <ToolItem Name="ContactOrganizations.Tool" CommandName="ContactOrganizations.Command"/>
+        </Toolbar>
+      </ToolCatalog>
+      <ApplicationExplorerCatalog>
+        <ExplorerTab Name="Administrative.Tab" Title="ADMINISTRACIÓN" Description="Proceso Administrativo">
+          <SmallImage Source="file" FileName="images/ADAS16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/ADAS32.png"></LargeImage>
+          <!--<Group Name="AdmissionProccess.Group" Title="Proceso de Admisión" Description="Proceso de Admisión" MergeOrder="3000">
+						<Item Name="CustomerListView.Item" CommandName="CustomerListView.Command"/>
+					</Group>-->
+          <Group Name="AdministrativeDataBaseProcess.Group" Title="Datos Administrativos" Description="Seleccione para Acceder a Datos Administrativos" GroupType="Container">
+            <!--<Item Name="CustomerListView.Item" CommandName="CustomerListView.Command"/>
+						<Item Name="CustomerClassification.Item" CommandName="CustomerClassification.Command"/>
+						<Item Name="Kinships.Item" CommandName="Kinships.Command"/>
+						<Item Name="ContactPersons.Item" CommandName="ContactPersons.Command"/>
+						<Item Name="ContactOrganizations.Item" CommandName="ContactOrganizations.Command"/>-->
+          </Group>
+          <Group Name="AdministrativeProcess.Group" Title="Proceso Administrativo" Description="Seleccione para Acceder al Proceso Administrativo" GroupType="Container">
+          </Group>
+        </ExplorerTab>
+      </ApplicationExplorerCatalog>
+    </Application>
+
+    <Application Name="Assistance.Application" PrimaryWorkspaceName="Assistance.Workspace" ExplorerWorkspaceName="Assistance.ApplicationExplorer"
+		   ToolbarManagerWorkspaceName="Assistance.Manager" MainMenuElementName="Assistance.MenuManager" Title="Proceso Asistencial"
+		   Description="Seleccione para Acceder al Proceso Asistencial" AllowFloatingExplorer="false" AllowFloatingMainMenu="false"
+		   AllowFloatingMainToolbar="false">
+      <SmallImage Source="file" FileName="images/nurseprotocols16.png"/>
+      <LargeImage Source="file" FileName="images/nurseprotocols32.png"/>
+      <CommandCatalog>
+        <!-- routines -->
+        <Command Name="RoutineTypeListView.Command" Title="Tipos de Rutina" Description="Tipos de Rutina">
+          <SmallImage Source="file" FileName="images/AssistanceProtocols16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/AssistanceProtocols32.png"></LargeImage>
+        </Command>
+        <Command Name="RoutineListView.Command" Title="Rutinas" Description="Rutinas">
+          <SmallImage Source="file" FileName="images/form_blue16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/form_blue32.png"></LargeImage>
+        </Command>
+        <Command Name="RoutineTemplateListView.Command" Title="Plantillas de Rutina" Description="Plantillas de Rutina">
+          <SmallImage Source="file" FileName="images/form_green16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/form_green32.png"></LargeImage>
+        </Command>
+        <!-- Assistance Calendar -->
+        <Command Name="TimePatternsListView.Command" Title="Patrones de Tiempo" Description="Patrones de Tiempo">
+          <SmallImage Source="file" FileName="images/timepatterns16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/timepatterns32.png"></LargeImage>
+        </Command>
+        <Command Name="ResourceAvailPatterns.Command" Title="Patrones de Disponibilidad" Description="Patrones de Disponibilidad">
+          <SmallImage Source="file" FileName="images/schtask16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/schtask32.png"></LargeImage>
+        </Command>
+        <!-- Activity Scheduling-->
+        <Command Name="CustomerActivityScheduling.Command" Title="Pacientes: Plan de Actividades" Description="Plan de Actividades para Pacientes">
+          <SmallImage Source="file" FileName="images/schpatients16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/schpatients32.png"></LargeImage>
+        </Command>
+        <Command Name="ResourceActivityScheduling.Command" Title="Disponibilidad de los RRHH" Description="Disponibilidad de los Recursos Humanos">
+          <SmallImage Source="file" FileName="images/resourceschconfig16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/resourceschconfig32.png"></LargeImage>
+        </Command>
+      </CommandCatalog>
+      <MenuCatalog>
+        <MenuItem Name="AssistanceDataBaseProcess.Menu" Title="Base de Datos" Description="Base de Datos" MergeOrder="2000">
+          <SmallImage Source="file" FileName="images/database16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/database32.png"></LargeImage>
+          <MenuItem Name="RoutineTypeListView.Menu" CommandName="RoutineTypeListView.Command"/>
+          <MenuItem Name="RoutineListView.Menu" CommandName="RoutineListView.Command"/>
+          <MenuItem Name="RoutineTemplateListView.Menu" CommandName="RoutineTemplateListView.Command"/>
+          <MenuItem Name="TimePatternsListView.Menu" CommandName="TimePatternsListView.Command"/>
+          <MenuItem Name="ResourceAvailPatterns.Menu" CommandName="ResourceAvailPatterns.Command"/>
+        </MenuItem>
+        <!--<MenuItem Name="RoutineProccess.Menu" Title="Rutinas" Description="Rutinas" MergeOrder="2000">
+          <SmallImage Source="file" FileName="images/AssistanceProtocols16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/AssistanceProtocols32.png"></LargeImage>
+          <MenuItem Name="RoutineTypeListView.Menu" CommandName="RoutineTypeListView.Command"/>
+          <MenuItem Name="RoutineListView.Menu" CommandName="RoutineListView.Command"/>
+          <MenuItem Name="RoutineTemplateListView.Menu" CommandName="RoutineTemplateListView.Command"/>
+        </MenuItem>
+        <MenuItem Name="CalendarElementsProcess.Menu" Title="Calendario" Description="Calendario" MergeOrder="2000">
+          <SmallImage Source="file" FileName="images/SchPatterns16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/SchPatterns32.png"></LargeImage>
+          <MenuItem Name="TimePatternsListView.Menu" CommandName="TimePatternsListView.Command"/>
+          <MenuItem Name="ResourceAvailPatterns.Menu" CommandName="ResourceAvailPatterns.Command"/>
+        </MenuItem>-->
+        <MenuItem Name="ActivitySchedulingProcess.Menu" Title="Planificación de la Actividad" Description="Planificación de la Actividad" MergeOrder="2000">
+          <SmallImage Source="file" FileName="images/SchPatients16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/SchPatients32.png"></LargeImage>
+          <MenuItem Name="CustomerActivityScheduling.Menu" CommandName="CustomerActivityScheduling.Command"/>
+          <MenuItem Name="ResourceActivityScheduling.Menu" CommandName="ResourceActivityScheduling.Command"/>
+        </MenuItem>
+      </MenuCatalog>
+      <ToolCatalog>
+        <Toolbar Name="AssistanceDataBaseProcess.Toolbar" Title="Base de Datos" Description="Base de Datos" DockedRow="1" DockedColumn="2">
+          <ToolItem Name="RoutineTypeListView.Tool" CommandName="RoutineTypeListView.Command"/>
+          <ToolItem Name="RoutineListView.Tool" CommandName="RoutineListView.Command"/>
+          <ToolItem Name="RoutineTemplateListView.Tool" CommandName="RoutineTemplateListView.Command"/>
+          <ToolItem Name="TimePatternsListView.Tool" CommandName="TimePatternsListView.Command"/>
+          <ToolItem Name="ResourceAvailPatterns.Tool" CommandName="ResourceAvailPatterns.Command"/>
+        </Toolbar>
+        <!--<Toolbar Name="RoutineProccess.Toolbar" Title="Rutinas" Description="Rutinas" DockedRow="1" DockedColumn="3">
+          <ToolItem Name="RoutineTypeListView.Tool" CommandName="RoutineTypeListView.Command"/>
+          <ToolItem Name="RoutineListView.Tool" CommandName="RoutineListView.Command"/>
+          <ToolItem Name="RoutineTemplateListView.Tool" CommandName="RoutineTemplateListView.Command"/>
+        </Toolbar>
+        <Toolbar Name="CalendarElementsProcess.Toolbar" Title="Calendario" Description="Calendario" DockedRow="1" DockedColumn="2">
+          <ToolItem Name="TimePatternsListView.Tool" CommandName="TimePatternsListView.Command"/>
+          <ToolItem Name="ResourceAvailPatterns.Tool" CommandName="ResourceAvailPatterns.Command"/>
+        </Toolbar>-->
+        <Toolbar Name="ActivitySchedulingProcess.Toolbar" Title="Planificación de la Actividad" Description="Planificación de la Actividad del Centro" DockedRow="1" DockedColumn="2">
+          <ToolItem Name="CustomerActivityScheduling.Tool" CommandName="CustomerActivityScheduling.Command"/>
+          <ToolItem Name="ResourceActivityScheduling.Tool" CommandName="ResourceActivityScheduling.Command"/>
+        </Toolbar>
+      </ToolCatalog>
+      <ApplicationExplorerCatalog>
+        <ExplorerTab Name="Assistance.Tab" Title="ASISTENCIAL" Description="Proceso Asistencial">
+          <SmallImage Source="file" FileName="images/nurseprotocols16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/nurseprotocols32.png"></LargeImage>
+          <Group Name="AssistanceDataBaseProcess.Group" Title="Config. Patrones, Rutinas y Procedimientos" Description="Seleccione para Acceder a Configuración de Patrones, Rutinas y Procedimientos" GroupType="Container">
+            <!--						<Item Name="RoutineTypeListView.Item" CommandName="RoutineTypeListView.Command"/>
+						<Item Name="RoutineListView.Item" CommandName="RoutineListView.Command"/>
+						<Item Name="RoutineTemplateListView.Item" CommandName="RoutineTemplateListView.Command"/>
+						<Item Name="TimePatternsListView.Item" CommandName="TimePatternsListView.Command"/>
+						<Item Name="ResourceAvailPatterns.Item" CommandName="ResourceAvailPatterns.Command"/>-->
+          </Group>
+          <!--<Group Name="RoutineProccess.Group" Title="Rutinas" Description="Seleccione para Acceder a Rutinas" MergeOrder="3000">
+            <Item Name="RoutineTypeListView.Item" CommandName="RoutineTypeListView.Command"/>
+            <Item Name="RoutineListView.Item" CommandName="RoutineListView.Command"/>
+            <Item Name="RoutineTemplateListView.Item" CommandName="RoutineTemplateListView.Command"/>
+          </Group>
+          <Group Name="CalendarElementsProcess.Group" Title="Calendario" Description="Seleccione para Acceder al Calendario" MergeOrder="2000">
+            <Item Name="TimePatternsListView.Item" CommandName="TimePatternsListView.Command"/>
+            <Item Name="ResourceAvailPatterns.Item" CommandName="ResourceAvailPatterns.Command"/>
+          </Group>-->
+          <!--<Group Name="ActivitySchedulingProcess.Group" Title="Plan de Actividad" Description="Seleccione para Acceder al Plan de Actividad" MergeOrder="2000">
+						<Item Name="CustomerActivityScheduling.Item" CommandName="CustomerActivityScheduling.Command"/>
+						<Item Name="ResourceActivityScheduling.Item" CommandName="ResourceActivityScheduling.Command"/>
+					</Group>
+					<Group Name="ActivityLogByCutomers.Group" Title="Actividad por Clientes" Description="Seleccione para ver la Actividad por Clientes" GroupType="Container">
+						<SmallImage Source="file" FileName="images/schpatients16.png">
+							<Binary></Binary>
+						</SmallImage>
+						<LargeImage Source="file" FileName="images/schpatients32.png">
+							<Binary></Binary>
+						</LargeImage>
+					</Group>-->
+          <Group Name="AssistanceProcess.Group" Title="Proceso Asistencial" Description="Seleccione para Acceder al Proceso Asistencial" GroupType="Container">
+          </Group>
+        </ExplorerTab>
+      </ApplicationExplorerCatalog>
+    </Application>
+
+    <Application Name="Protocols.Application" PrimaryWorkspaceName="Protocols.Workspace" ExplorerWorkspaceName="Protocols.ApplicationExplorer"
+   ToolbarManagerWorkspaceName="Protocols.Manager" MainMenuElementName="Protocols.MenuManager" Title="Observaciones y Órdenes"
+   Description="Seleccione para Acceder a Observaciones y Órdenes" AllowFloatingExplorer="false" AllowFloatingMainMenu="false"
+   AllowFloatingMainToolbar="false">
+      <SmallImage Source="file" FileName="images/episodesprotocols16.png"/>
+      <LargeImage Source="file" FileName="images/episodesprotocols32.png"/>
+      <CommandCatalog>
+      </CommandCatalog>
+      <MenuCatalog>
+      </MenuCatalog>
+      <ToolCatalog>
+      </ToolCatalog>
+      <ApplicationExplorerCatalog>
+        <ExplorerTab Name="Protocols.Tab" Title="MÉDICO" Description="Observaciones y Órdenes">
+          <SmallImage Source="file" FileName="images/episodesprotocols16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/episodesprotocols32.png"></LargeImage>
+          <Group Name="ProtocolsDataBaseProcess.Group" Title="Configuración de Notas Clínicas y Órdenes" Description="Seleccione para Acceder a Configuración de Notas Clínicas y Órdenes" GroupType="Container">
+          </Group>
+          <Group Name="EpisodesProcess.Group" Title="Episodios" Description="Seleccione para Acceder a Episodios" GroupType="Container">
+          </Group>
+        </ExplorerTab>
+      </ApplicationExplorerCatalog>
+    </Application>
+
+    <Application Name="Application.Application" PrimaryWorkspaceName="Application.Workspace" ExplorerWorkspaceName="Application.ApplicationExplorer"
+	   ToolbarManagerWorkspaceName="Application.Manager" MainMenuElementName="Application.MenuManager" Title=" User Application"
+	   Description="Seleccione para acceder a IndigoHIS" AllowFloatingExplorer="false" AllowFloatingMainMenu="false"
+	   AllowFloatingMainToolbar="false">
+      <SmallImage Source="file" FileName="images/IndigoHIS1.png"></SmallImage>
+      <LargeImage Source="file" FileName="images/IndigoHIS1.png"></LargeImage>
+
+      <!--<CommandCatalog>
+        -->
+      <!--BasicData.Group -->
+      <!--
+        <Command Name="AppEntity.Command" Title="Entity" Description="Entity">
+          <SmallImage Source="file" FileName="Appimages/components16.png"></SmallImage>
+          <LargeImage Source="file" FileName="Appimages/components32.png"></LargeImage>
+        </Command>
+        <Command Name="AppCounterAndMask.Command" Title="CounterAndMask" Description="CounterAndMask">
+          <SmallImage Source="file" FileName="Appimages/addtolist16.png"></SmallImage>
+          <LargeImage Source="file" FileName="Appimages/addtolist32.png"></LargeImage>
+        </Command>
+        <Command Name="AppTaxType.Command" Title="TaxType" Description="TaxType">
+          <SmallImage Source="file" FileName="Appimages/tax16.png"></SmallImage>
+          <LargeImage Source="file" FileName="Appimages/tax32.png"></LargeImage>
+        </Command>
+        <Command Name="AppTariff.Command" Title="Tariff" Description="Tariff">
+          <SmallImage Source="file" FileName="Appimages/tariff16.png"></SmallImage>
+          <LargeImage Source="file" FileName="Appimages/tariff32.png"></LargeImage>
+        </Command>
+        <Command Name="AppIdentifierType.Command" Title="IdentifierType" Description="IdentifierType">
+          <SmallImage Source="file" FileName="Appimages/user16.png"></SmallImage>
+          <LargeImage Source="file" FileName="Appimages/user32.png"></LargeImage>
+        </Command>
+        <Command Name="AppCategory.Command" Title="Access to categories" Description="Access to categories">
+          <SmallImage Source="file" FileName="Appimages/Administrative16.png"></SmallImage>
+          <LargeImage Source="file" FileName="Appimages/Administrative32.png"></LargeImage>
+        </Command>
+        <Command Name="AppProfile.Command" Title="Profile" Description="Profile">
+          <SmallImage Source="file" FileName="Appimages/HHRR16.jpg"/>
+          <LargeImage Source="file" FileName="Appimages/HHRR32.jpg"/>
+        </Command>
+        <Command Name="AppTimePattern.Command" Title="TimePattern" Description="TimePattern">
+          <SmallImage Source="file" FileName="Appimages/TimePatterns16.png"></SmallImage>
+          <LargeImage Source="file" FileName="Appimages/TimePatterns32.png"></LargeImage>
+        </Command>
+        <Command Name="AppAvailPattern.Command" Title="AvailPattern" Description="AvailPattern">
+          <SmallImage Source="file" FileName="Appimages/SchPatterns16.png"></SmallImage>
+          <LargeImage Source="file" FileName="Appimages/SchPatterns32.png"></LargeImage>
+        </Command>
+        <Command Name="AppPhysUnit.Command" Title="PhysUnit" Description="PhysUnit">
+          <SmallImage Source="file" FileName="Appimages/PhysUnit16.png"></SmallImage>
+          <LargeImage Source="file" FileName="Appimages/PhysUnit32.png"></LargeImage>
+        </Command>
+        <Command Name="AppZipCode.Command" Title="ZipCode" Description="ZipCode">
+          <SmallImage Source="file" FileName="Appimages/Zip16.png"></SmallImage>
+          <LargeImage Source="file" FileName="Appimages/Zip32.png"></LargeImage>
+        </Command>
+        -->
+      <!--Encoders.Group -->
+      <!--
+        <Command Name="AppEncoder.Command" Title="Encoder" Description="Encoder">
+          <SmallImage Source="file" FileName="Appimages/basicdata16.jpg"/>
+          <LargeImage Source="file" FileName="Appimages/basicdata32.jpg"/>
+        </Command>
+        <Command Name="AppDiagnosisEncoding.Command" Title="DiagnosisEncoding" Description="DiagnosisEncoding">
+          <SmallImage Source="file" FileName="Appimages/doctor16.jpg"/>
+          <LargeImage Source="file" FileName="Appimages/doctor32.jpg"/>
+        </Command>
+        <Command Name="AppMorphologyEncoding.Command" Title="MorphologyEncoding" Description="MorphologyEncoding">
+          <SmallImage Source="file" FileName="Appimages/surgeon16.jpg"/>
+          <LargeImage Source="file" FileName="Appimages/surgeon32.jpg"/>
+        </Command>
+        <Command Name="AppProcedureEncoding.Command" Title="ProcedureEncoding" Description="ProcedureEncoding">
+          <SmallImage Source="file" FileName="Appimages/Nurse16.jpg"/>
+          <LargeImage Source="file" FileName="Appimages/Nurse32.jpg"/>
+        </Command>
+        <Command Name="AppCodedCategoryClass.Command" Title="CodedCategoryClass" Description="CodedCategoryClass">
+          <SmallImage Source="file" FileName="Appimages/eptype16.jpg"/>
+          <LargeImage Source="file" FileName="Appimages/eptype32.jpg"/>
+        </Command>
+        <Command Name="AppCodedCategory.Command" Title="CodedCategory" Description="CodedCategory">
+          <SmallImage Source="file" FileName="Appimages/agreementcond16.jpg"/>
+          <LargeImage Source="file" FileName="Appimages/agreementcond32.jpg"/>
+        </Command>
+        <Command Name="AppMDC.Command" Title="MDC" Description="MDC">
+          <SmallImage Source="file" FileName="Appimages/doctor16.jpg"/>
+          <LargeImage Source="file" FileName="Appimages/doctor32.jpg"/>
+        </Command>
+        <Command Name="AppDRG.Command" Title="DRG" Description="DRG">
+          <SmallImage Source="file" FileName="Appimages/episodesprotocols16.jpg"/>
+          <LargeImage Source="file" FileName="Appimages/episodesprotocols32.jpg"/>
+        </Command>
+        <Command Name="AppCaseMixGroup.Command" Title="CaseMixGroup" Description="CaseMixGroup">
+          <SmallImage Source="file" FileName="Appimages/form_blue16.jpg"/>
+          <LargeImage Source="file" FileName="Appimages/form_blue32.jpg"/>
+        </Command>
+        <Command Name="AppAct.Command" Title="Act" Description="Act">
+          <SmallImage Source="file" FileName="Appimages/book_blue16.jpg"/>
+          <LargeImage Source="file" FileName="Appimages/book_blue32.jpg"/>
+        </Command>
+        <Command Name="AppActType.Command" Title="Act Type" Description="Act Type">
+          <SmallImage Source="file" FileName="Appimages/book_green16.jpg"/>
+          <LargeImage Source="file" FileName="Appimages/book_green32.jpg"/>
+        </Command>
+        <Command Name="AppActClassification.Command" Title="ActClassification" Description="ActClassification">
+          <SmallImage Source="file" FileName="Appimages/book_red16.jpg"/>
+          <LargeImage Source="file" FileName="Appimages/book_red32.jpg"/>
+        </Command>
+        <Command Name="AppGroupAct.Command" Title="GroupAct" Description="GroupAct">
+          <SmallImage Source="file" FileName="Appimages/books16.jpg"/>
+          <LargeImage Source="file" FileName="Appimages/books32.jpg"/>
+        </Command>
+        <Command Name="AppSubGroupAct.Command" Title="SubGroupAct" Description="SubGroupAct">
+          <SmallImage Source="file" FileName="Appimages/branch16.jpg"/>
+          <LargeImage Source="file" FileName="Appimages/branch32.jpg"/>
+        </Command>
+        -->
+      <!-- Hierarchy.Group -->
+      <!--
+        <Command Name="AppHierarchy.Command" Title="Hierarchy" Description="Hierarchy">
+          <SmallImage Source="file" FileName="Appimages/basicdata16.png"></SmallImage>
+          <LargeImage Source="file" FileName="Appimages/basicdata32.png"></LargeImage>
+        </Command>
+        <Command Name="AppCareCenterType.Command" Title="CareCenterType" Description="CareCenterType">
+          <SmallImage Source="file" FileName="Appimages/CenterClass16.png"></SmallImage>
+          <LargeImage Source="file" FileName="Appimages/CenterClass32.png"></LargeImage>
+        </Command>
+        <Command Name="AppCareCenter.Command" Title="CareCenter" Description="CareCenter">
+          <SmallImage Source="file" FileName="Appimages/HealthCenter16.png"></SmallImage>
+          <LargeImage Source="file" FileName="Appimages/HealthCenter32.png"></LargeImage>
+        </Command>
+        <Command Name="AppLocationType.Command" Title="LocationType" Description="LocationType">
+          <SmallImage Source="file" FileName="Appimages/HospitalizationArea16.png"></SmallImage>
+          <LargeImage Source="file" FileName="Appimages/HospitalizationArea32.png"></LargeImage>
+        </Command>
+        <Command Name="AppLocationClass.Command" Title="LocationClass" Description="LocationClass">
+          <SmallImage Source="file" FileName="Appimages/bed16.png"></SmallImage>
+          <LargeImage Source="file" FileName="Appimages/bed32.png"></LargeImage>
+        </Command>
+        <Command Name="AppLocation.Command" Title="Location" Description="Location">
+          <SmallImage Source="file" FileName="Appimages/room16.png"></SmallImage>
+          <LargeImage Source="file" FileName="Appimages/room32.png"></LargeImage>
+        </Command>
+        <Command Name="AppEquipmentType.Command" Title="EquipmentType" Description="EquipmentType">
+          <SmallImage Source="file" FileName="Appimages/equipment16.png"></SmallImage>
+          <LargeImage Source="file" FileName="Appimages/equipment32.png"></LargeImage>
+        </Command>
+        <Command Name="AppEquipment.Command" Title="Equipment" Description="Equipment">
+          <SmallImage Source="file" FileName="Appimages/Equipment16.png"></SmallImage>
+          <LargeImage Source="file" FileName="Appimages/Equipment32.png"></LargeImage>
+        </Command>
+        <Command Name="AppDeviceType.Command" Title="DeviceType" Description="DeviceType">
+          <SmallImage Source="file" FileName="Appimages/Device16.png"></SmallImage>
+          <LargeImage Source="file" FileName="Appimages/Device32.png"></LargeImage>
+        </Command>
+        <Command Name="AppDevice.Command" Title="Device" Description="Device">
+          <SmallImage Source="file" FileName="Appimages/Device16.png"></SmallImage>
+          <LargeImage Source="file" FileName="Appimages/Device32.png"></LargeImage>
+        </Command>
+        -->
+      <!-- ActorRoles.Group -->
+      <!--
+        <Command Name="AppHHRR.Command" Title="HHRR" Description="HHRR">
+          <SmallImage Source="file" FileName="Appimages/HHRR16.png"></SmallImage>
+          <LargeImage Source="file" FileName="Appimages/HHRR32.png"></LargeImage>
+        </Command>
+        <Command Name="AppPosition.Command" Title="Position" Description="Position">
+          <SmallImage Source="file" FileName="Appimages/Administrative16.png"></SmallImage>
+          <LargeImage Source="file" FileName="Appimages/Administrative32.png"></LargeImage>
+        </Command>
+        <Command Name="AppOccupationalProfile.Command" Title="OccupationalProfile" Description="OccupationalProfile">
+          <SmallImage Source="file" FileName="Appimages/doctor16.png"></SmallImage>
+          <LargeImage Source="file" FileName="Appimages/doctor32.png"></LargeImage>
+        </Command>
+        <Command Name="AppSkillAndPermission.Command" Title="SkillAndPermission" Description="SkillAndPermission">
+          <SmallImage Source="file" FileName="Appimages/flag_blue16.png"></SmallImage>
+          <LargeImage Source="file" FileName="Appimages/flag_blue32.png"></LargeImage>
+        </Command>
+        <Command Name="AppWorkConditionType.Command" Title="WorkConditionType" Description="WorkConditionType">
+          <SmallImage Source="file" FileName="Appimages/folderbeige16.png"></SmallImage>
+          <LargeImage Source="file" FileName="Appimages/folderbeige32.png"></LargeImage>
+        </Command>
+        <Command Name="AppHHRRWorkScheduleInfo.Command" Title="HHRRWorkScheduleInfo" Description="HHRRWorkScheduleInfo">
+          <SmallImage Source="file" FileName="Appimages/resourceschconfig16.png"></SmallImage>
+          <LargeImage Source="file" FileName="Appimages/resourceschconfig32.png"></LargeImage>
+        </Command>
+        <Command Name="AppPhysician.Command" Title="Physician" Description="Physician">
+          <SmallImage Source="file" FileName="Appimages/doctor16.png"></SmallImage>
+          <LargeImage Source="file" FileName="Appimages/doctor32.png"></LargeImage>
+        </Command>
+        <Command Name="AppMedicalSpecialty.Command" Title="MedicalSpecialty" Description="MedicalSpecialty">
+          <SmallImage Source="file" FileName="Appimages/PhysicianAgreement16.png"></SmallImage>
+          <LargeImage Source="file" FileName="Appimages/PhysicianAgreement32.png"></LargeImage>
+        </Command>
+        <Command Name="AppWorkGroup.Command" Title="WorkGroup" Description="WorkGroup.Command">
+          <SmallImage Source="file" FileName="Appimages/WorkingGroup16.png"></SmallImage>
+          <LargeImage Source="file" FileName="Appimages/WorkingGroup32.png"></LargeImage>
+        </Command>
+        -->
+      <!-- AssistanceServicesAndAgreements.Group -->
+      <!--
+        <Command Name="AppAssistanceServiceType.Command" Title="AssistanceServiceType" Description="AssistanceServiceType">
+          <SmallImage Source="file" FileName="Appimages/folderbluedocs16.png"></SmallImage>
+          <LargeImage Source="file" FileName="Appimages/folderbluedocs32.png"></LargeImage>
+        </Command>
+        <Command Name="AppAssistanceService.Command" Title="AssistanceService" Description="AssistanceService">
+          <SmallImage Source="file" FileName="Appimages/AdministratorDB16.png"></SmallImage>
+          <LargeImage Source="file" FileName="Appimages/AdministratorDB32.png"></LargeImage>
+        </Command>
+        <Command Name="AppServiceTypeView" Title="ServiceTypeView" Description="ServiceTypeView">
+          <SmallImage Source="file" FileName="Appimages/servicetype16.png"></SmallImage>
+          <LargeImage Source="file" FileName="Appimages/servicetype32.png"></LargeImage>
+        </Command>
+        <Command Name="AppService.Command" Title="Service" Description="Service">
+          <SmallImage Source="file" FileName="Appimages/services16.png"></SmallImage>
+          <LargeImage Source="file" FileName="Appimages/services32.png"></LargeImage>
+        </Command>
+        <Command Name="AppServiceCharge.Command" Title="ServiceCharge" Description="ServiceCharge">
+          <SmallImage Source="file" FileName="Appimages/charges16.png"></SmallImage>
+          <LargeImage Source="file" FileName="Appimages/charges32.png"></LargeImage>
+        </Command>
+        <Command Name="AppAssistanceAgreement.Command" Title="AssistanceAgreement" Description="AssistanceAgreement">
+          <SmallImage Source="file" FileName="Appimages/hcassistagree16.png"></SmallImage>
+          <LargeImage Source="file" FileName="Appimages/hcassistagree32.png"></LargeImage>
+        </Command>
+        <Command Name="AppAgreement.Command" Title="Agreement" Description="Agreement">
+          <SmallImage Source="file" FileName="Appimages/agreement16.png"></SmallImage>
+          <LargeImage Source="file" FileName="Appimages/agreement32.png"></LargeImage>
+        </Command>
+        <Command Name="AppAgreeCondition.Command" Title="AgreeCondition" Description="AgreeCondition">
+          <SmallImage Source="file" FileName="Appimages/agreementcond16.png"></SmallImage>
+          <LargeImage Source="file" FileName="Appimages/agreementcond32.png"></LargeImage>
+        </Command>
+        <Command Name="AppAssistanceCoverGroup.Command" Title="AssistanceCoverGroup" Description="AssistanceCoverGroup">
+          <SmallImage Source="file" FileName="Appimages/reports16.png"></SmallImage>
+          <LargeImage Source="file" FileName="Appimages/reports32.png"></LargeImage>
+        </Command>
+        -->
+      <!-- Insurers.Group -->
+      <!--
+        <Command Name="AppInsurer.Command" Title="Insurer" Description="Insurer">
+          <SmallImage Source="file" FileName="Appimages/Insurer16.png"></SmallImage>
+          <LargeImage Source="file" FileName="Appimages/Insurer32.png"></LargeImage>
+        </Command>
+        <Command Name="AppPolicyType.Command" Title="PolicyType" Description="PolicyType">
+          <SmallImage Source="file" FileName="Appimages/shield_green16.png"></SmallImage>
+          <LargeImage Source="file" FileName="Appimages/shield_green32.png"></LargeImage>
+        </Command>
+        <Command Name="AppInsurerCoverAgreement.Command" Title="InsurerCoverAgreement" Description="InsurerCoverAgreement">
+          <SmallImage Source="file" FileName="Appimages/CoverAgreement16.png"></SmallImage>
+          <LargeImage Source="file" FileName="Appimages/CoverAgreement32.png"></LargeImage>
+        </Command>
+        <Command Name="AppInsurerAgreement.Command" Title="InsurerAgreement" Description="InsurerAgreement">
+          <SmallImage Source="file" FileName="Appimages/Agreement16.png"></SmallImage>
+          <LargeImage Source="file" FileName="Appimages/Agreement32.png"></LargeImage>
+        </Command>
+        <Command Name="AppInsurerCondition.Command" Title="InsurerCondition" Description="InsurerCondition">
+          <SmallImage Source="file" FileName="Appimages/AgreementCond16.png"></SmallImage>
+          <LargeImage Source="file" FileName="Appimages/AgreementCond32.png"></LargeImage>
+        </Command>
+        <Command Name="AppAuthorizationType.Command" Title="AuthorizationType" Description="AuthorizationType">
+          <SmallImage Source="file" FileName="Appimages/InvoiceInformation16.png"></SmallImage>
+          <LargeImage Source="file" FileName="Appimages/InvoiceInformation32.png"></LargeImage>
+        </Command>
+        <Command Name="AppInvoicePrintRule.Command" Title="InvoicePrintRule" Description="InvoicePrintRule">
+          <SmallImage Source="file" FileName="Appimages/printerrules16.png"></SmallImage>
+          <LargeImage Source="file" FileName="Appimages/printerrules32.png"></LargeImage>
+        </Command>
+        <Command Name="AppInvoiceAgreement.Command" Title="InvoiceAgreement" Description="InvoiceAgreement">
+          <SmallImage Source="file" FileName="Appimages/blocknotes16.png"></SmallImage>
+          <LargeImage Source="file" FileName="Appimages/blocknotes32.png"></LargeImage>
+        </Command>
+        <Command Name="AppInsurerInvoiceAgreement.Command" Title="InsurerInvoiceAgreement" Description="InsurerInvoiceAgreement">
+          <SmallImage Source="file" FileName="Appimages/guartype16.png"></SmallImage>
+          <LargeImage Source="file" FileName="Appimages/guartype32.png"></LargeImage>
+        </Command>
+        -->
+      <!-- AssistanceActs.Group -->
+      <!--
+        <Command Name="AppReasonChange.Command" Title="ReasonChange" Description="ReasonChange">
+          <SmallImage Source="file" FileName="Appimages/movements16.jpg"/>
+          <LargeImage Source="file" FileName="Appimages/movements32.jpg"/>
+        </Command>
+        <Command Name="AppObservationType.Command" Title="ObservationType" Description="ObservationType">
+          <SmallImage Source="file" FileName="Appimages/obstype16.jpg"/>
+          <LargeImage Source="file" FileName="Appimages/obstype32.jpg"/>
+        </Command>
+        <Command Name="AppDimensionCriteria.Command" Title="DimensionCriteria" Description="DimensionCriteria">
+          <SmallImage Source="file" FileName="Appimages/cube_molecule16.jpg"/>
+          <LargeImage Source="file" FileName="Appimages/cube_molecule32.jpg"/>
+        </Command>
+        <Command Name="AppCriteriaValue.Command" Title="CriteriaValue" Description="CriteriaValue">
+          <SmallImage Source="file" FileName="Appimages/cube_molecule_view16.jpg"/>
+          <LargeImage Source="file" FileName="Appimages/cube_molecule_view32.jpg"/>
+        </Command>
+        <Command Name="AppObservation.Command" Title="Observation" Description="Observation">
+          <SmallImage Source="file" FileName="Appimages/obs16.jpg"/>
+          <LargeImage Source="file" FileName="Appimages/obs32.jpg"/>
+        </Command>
+        <Command Name="AppObservationBlock.Command" Title="ObservationBlock" Description="ObservationBlock">
+          <SmallImage Source="file" FileName="Appimages/obsblock16.jpg"/>
+          <LargeImage Source="file" FileName="Appimages/obsblock32.jpg"/>
+        </Command>
+        <Command Name="AppObservationTemplate.Command" Title="ObservationTemplate" Description="ObservationTemplate">
+          <SmallImage Source="file" FileName="Appimages/obstemplate16.jpg"/>
+          <LargeImage Source="file" FileName="Appimages/obstemplate32.jpg"/>
+        </Command>
+        <Command Name="AppSpecialCategory.Command" Title="SpecialCategory" Description="SpecialCategory">
+          <SmallImage Source="file" FileName="Appimages/warning16.jpg"/>
+          <LargeImage Source="file" FileName="Appimages/warning32.jpg"/>
+        </Command>
+        <Command Name="AppRoutineType.Command" Title="RoutineType" Description="RoutineType">
+          <SmallImage Source="file" FileName="Appimages/AssistanceProtocols16.jpg"/>
+          <LargeImage Source="file" FileName="Appimages/AssistanceProtocols32.jpg"/>
+        </Command>
+        <Command Name="AppRoutineClassification.Command" Title="RoutineClassification" Description="RoutineClassification">
+          <SmallImage Source="file" FileName="Appimages/tariff16.jpg"/>
+          <LargeImage Source="file" FileName="Appimages/tariff32.jpg"/>
+        </Command>
+        <Command Name="AppPrecaution.Command" Title="Precaution" Description="Precaution">
+          <SmallImage Source="file" FileName="Appimages/shield_green16.jpg"/>
+          <LargeImage Source="file" FileName="Appimages/shield_green32.jpg"/>
+        </Command>
+        <Command Name="AppContraindication.Command" Title="Contraindication" Description="Contraindication">
+          <SmallImage Source="file" FileName="Appimages/colorbystatus16.jpg"/>
+          <LargeImage Source="file" FileName="Appimages/colorbystatus32.jpg"/>
+        </Command>
+        <Command Name="AppRoutine.Command" Title="Routine" Description="Routine">
+          <SmallImage Source="file" FileName="Appimages/form_blue16.jpg"/>
+          <LargeImage Source="file" FileName="Appimages/form_blue32.jpg"/>
+        </Command>
+        <Command Name="AppRoutineTemplate.Command" Title="RoutineTemplate" Description="RoutineTemplate">
+          <SmallImage Source="file" FileName="Appimages/form_green16.jpg"/>
+          <LargeImage Source="file" FileName="Appimages/form_green32.jpg"/>
+        </Command>
+        <Command Name="AppProcedureClassification.Command" Title="ProcedureClassification" Description="ProcedureClassification">
+          <SmallImage Source="file" FileName="Appimages/indexpreferences16.jpg"/>
+          <LargeImage Source="file" FileName="Appimages/indexpreferences32.jpg"/>
+        </Command>
+        <Command Name="AppProcedure.Command" Title="Procedure" Description="Procedure">
+          <SmallImage Source="file" FileName="Appimages/AdministratorDB16.jpg"/>
+          <LargeImage Source="file" FileName="Appimages/AdministratorDB32.jpg"/>
+        </Command>
+        <Command Name="AppOrderType.Command" Title="OrderType" Description="OrderType">
+          <SmallImage Source="file" FileName="Appimages/foldercubes16.jpg"/>
+          <LargeImage Source="file" FileName="Appimages/foldercubes32.jpg"/>
+        </Command>
+        <Command Name="AppOrderClassification.Command" Title="OrderClassification" Description="OrderClassification">
+          <SmallImage Source="file" FileName="Appimages/foldergear16.jpg"/>
+          <LargeImage Source="file" FileName="Appimages/foldergear32.jpg"/>
+        </Command>
+        <Command Name="AppOrder.Command" Title="Order" Description="Order">
+          <SmallImage Source="file" FileName="Appimages/folderedit16.jpg"/>
+          <LargeImage Source="file" FileName="Appimages/folderedit32.jpg"/>
+        </Command>
+        -->
+      <!-- ProcessCharts.Group -->
+      <!--
+        <Command Name="AppEpisodeReasonType.Command" Title="EpisodeReasonType" Description="EpisodeReasonType">
+          <SmallImage Source="file" FileName="Appimages/EpReasonType16.png"></SmallImage>
+          <LargeImage Source="file" FileName="Appimages/EpReasonType32.png"></LargeImage>
+        </Command>
+        <Command Name="AppPreAssessmentType.Command" Title="PreAssessmentType" Description="PreAssessmentType">
+          <SmallImage Source="file" FileName="Appimages/form_blue16.png"></SmallImage>
+          <LargeImage Source="file" FileName="Appimages/form_blue32.png"></LargeImage>
+        </Command>
+        <Command Name="AppAssistanceDegree.Command" Title="AssistanceDegree" Description="AssistanceDegree">
+          <SmallImage Source="file" FileName="Appimages/nurseprotocols16.png"></SmallImage>
+          <LargeImage Source="file" FileName="Appimages/nurseprotocols32.png"></LargeImage>
+        </Command>
+        <Command Name="AppEpisodeType.Command" Title="EpisodeType" Description="EpisodeType">
+          <SmallImage Source="file" FileName="Appimages/episode16.png"></SmallImage>
+          <LargeImage Source="file" FileName="Appimages/episode32.png"></LargeImage>
+        </Command>
+        <Command Name="AppEpisodeCloseMode.Command" Title="EpisodeCloseMode" Description="EpisodeCloseMode">
+          <SmallImage Source="file" FileName="Appimages/folderout16.png"></SmallImage>
+          <LargeImage Source="file" FileName="Appimages/folderout32.png"></LargeImage>
+        </Command>
+        <Command Name="AppMedEpisodeType.Command" Title="MedEpisodeType" Description="MedEpisodeType">
+          <SmallImage Source="file" FileName="Appimages/episodesprotocols16.png"></SmallImage>
+          <LargeImage Source="file" FileName="Appimages/episodesprotocols32.png"></LargeImage>
+        </Command>
+        <Command Name="AppMedEpisodeProcessChart.Command" Title="MedEpisodeProcessChart" Description="MedEpisodeProcessChart">
+          <SmallImage Source="file" FileName="Appimages/entitytype16.png"></SmallImage>
+          <LargeImage Source="file" FileName="Appimages/entitytype32.png"></LargeImage>
+        </Command>
+        <Command Name="AppAssistanceProcessChart.Command" Title="AssistanceProcessChart" Description="AssistanceProcessChart">
+          <SmallImage Source="file" FileName="Appimages/branch16.png"></SmallImage>
+          <LargeImage Source="file" FileName="Appimages/branch32.png"></LargeImage>
+        </Command>
+        <Command Name="AppProcessChart.Command" Title="ProcessChart" Description="ProcessChart">
+          <SmallImage Source="file" FileName="Appimages/branchelement16.png"></SmallImage>
+          <LargeImage Source="file" FileName="Appimages/branchelement32.png"></LargeImage>
+        </Command>
+
+      </CommandCatalog>-->
+
+
+      <!--<MenuCatalog>
+        <MenuItem Name="AppGridRangeColor.Menu" Title="Grid color set" Description="Grid color set" MergeOrder="2000">
+          <SmallImage Source="file" FileName="images/loadlayout16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/loadlayout32.png"></LargeImage>
+          <MenuItem Name="AppDefaultColor.Menu" CommandName="AppDefaultColor.Command"/>
+          <MenuItem Name="AppBlueColor.Menu" CommandName="AppBlueColor.Command"/>
+          <MenuItem Name="AppGrayColor.Menu" CommandName="AppGrayColor.Command"/>
+        </MenuItem>
+
+        <MenuItem Name="AppBasicProcess.Menu" Title="Admission and Care processes" Description="Admission and Care processes" MergeOrder="2000">
+          <SmallImage Source="file" FileName="images/AdministratorDB16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/AdministratorDB32.png"></LargeImage>
+          <MenuItem Name="AppHierarchyView.Menu" CommandName="AppHierarchyView.Command"/>
+          <MenuItem Name="AppAvailabilitiesView.Menu" CommandName="AppAvailabilitiesView.Command"/>
+          <MenuItem Name="AppCustomerListView.Menu" CommandName="AppCustomerListView.Command"/>
+        </MenuItem>
+        <MenuItem Name="AppProcessWarehouse.Menu" Title="Warehouse and Requests" Description="Warehouse and Requests" MergeOrder="2001">
+          <SmallImage Source="file" FileName="images/AdministrativeChores16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/AdministrativeChores32.png"></LargeImage>
+          <MenuItem Name="AppWarehouseManagement.Menu" CommandName="AppWarehouseManagement.Command"/>
+          <MenuItem Name="AppInventoryManagement.Menu" CommandName="AppInventoryManagement.Command"/>
+          <MenuItem Name="AppMovementManagement.Menu" CommandName="AppMovementManagement.Command"/>
+        </MenuItem>
+
+        <MenuItem Name="AppItemProcessManagement.Menu" Title="Item and families management" Description="Item and families management" MergeOrder="2001">
+          <SmallImage Source="file" FileName="images/DrugManagement16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/DrugManagement32.png"></LargeImage>
+          <MenuItem Name="AppItemsManagement.Menu" CommandName="AppItemsManagement.Command"/>
+          <MenuItem Name="AppFamilies.Menu" CommandName="AppFamilies.Command"/>
+          <MenuItem Name="AppItemGroup.Menu" CommandName="AppItemGroup.Command"/>
+        </MenuItem>
+        <MenuItem Name="AppSupplierProcessManagement.Menu" Title="Supplier management" Description="Supplier management" MergeOrder="2001">
+          <SmallImage Source="file" FileName="images/supplier16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/supplier32.png"></LargeImage>
+          <MenuItem Name="AppSupplierManagement.Menu" CommandName="AppSupplierManagement.Command"/>
+          <MenuItem Name="AppPurchaseOrdersManagement.Menu" CommandName="AppPurchaseOrdersManagement.Command"/>
+          <MenuItem Name="AppInvoicePurchaseOrdersManagement.Menu" CommandName="AppInvoicePurchaseOrdersManagement.Command"/>
+        </MenuItem>
+        <MenuItem Name="AppBuyerProcessManagement.Menu" Title="Customer and sales management" Description="Customer and sales management" MergeOrder="2001">
+          <SmallImage Source="file" FileName="images/pacientes16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/pacientes32.png"></LargeImage>
+          <MenuItem Name="AppBuyerManagement.Menu" CommandName="AppBuyerManagement.Command"/>
+          <MenuItem Name="AppSalesOrdersManagement.Menu" CommandName="AppSalesOrdersManagement.Command"/>
+          <MenuItem Name="AppInvoiceSalesOrdersManagement.Menu" CommandName="AppInvoiceSalesOrdersManagement.Command"/>
+        </MenuItem>
+
+        <MenuItem Name="AppAdministrativeProcess.Menu" Title="Realization, coverage and invoice management" Description="Realization, coverage and invoice management" MergeOrder="2001">
+          <SmallImage Source="file" FileName="images/resourcefulfill16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/resourcefulfill32.png"></LargeImage>
+          <MenuItem Name="AppCustomerRealizationManagement.Menu" CommandName="AppCustomerRealizationManagement.Command"/>
+          <MenuItem Name="AppCustomerAdministrativeManagement.Menu" CommandName="AppCustomerAdministrativeManagement.Command"/>
+          <MenuItem Name="AppMultipleEpisodeAdministrativeManagement.Menu" CommandName="AppMultipleEpisodeAdministrativeManagement.Command"/>
+          <MenuItem Name="AppMultipleInsurerInvoicesManagement.Menu" CommandName="AppMultipleInsurerInvoicesManagement.Command"/>
+          <MenuItem Name="AppRemittancesManagement.Menu" CommandName="AppRemittancesManagement.Command"/>
+        </MenuItem>
+
+
+        <MenuItem Name="AppMedicalEpisodeProcess.Menu" Title="Medical episodes management" Description="Medical episodes management" MergeOrder="2001">
+          <SmallImage Source="file" FileName="images/PhysicianAgreement16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/PhysicianAgreement32.png"></LargeImage>
+          <MenuItem Name="AppMedicalEpisodeManagement.Menu" CommandName="AppMedicalEpisodeManagement.Command"/>
+          <MenuItem Name="AppReportManagement.Menu" CommandName="AppReportManagement.Command"/>
+        </MenuItem>
+
+      </MenuCatalog>
+      <ToolCatalog>
+        <Toolbar Name="AppGridRangeColor.Toolbar" Title="Grid color set" Description="Grid color set" DockedRow="1" DockedColumn="0">
+          <ToolItem Name="AppDefaultColor.Tool" CommandName="AppDefaultColor.Command"/>
+          <ToolItem Name="AppBlueColor.Tool" CommandName="AppBlueColor.Command"/>
+          <ToolItem Name="AppGrayColor.Tool" CommandName="AppGrayColor.Command"/>
+        </Toolbar>
+
+        <Toolbar Name="AppBasicProcess.Toolbar" Title="Admission and assistance processes" Description="Admission and assistance processes" DockedRow="1" DockedColumn="1">
+          <ToolItem Name="AppHierarchyView.Tool" CommandName="AppHierarchyView.Command"/>
+          <ToolItem Name="AppAvailabilitiesView.Tool" CommandName="AppAvailabilitiesView.Command"/>
+          <ToolItem Name="AppCustomerListView.Tool" CommandName="AppCustomerListView.Command"/>
+        </Toolbar>
+
+        <Toolbar Name="AppProcessWarehouse.Toolbar" Title="Warehouse and requests" Description="Warehouse and requests" DockedRow="1" DockedColumn="2">
+          <ToolItem Name="AppWarehouseManagement.Tool" CommandName="AppWarehouseManagement.Command"/>
+          <ToolItem Name="AppInventoryManagement.Tool" CommandName="AppInventoryManagement.Command"/>
+          <ToolItem Name="AppMovementManagement.Tool" CommandName="AppMovementManagement.Command"/>
+        </Toolbar>
+        <Toolbar Name="AppItemProcessManagement.Toolbar" Title="Item and families management" Description="Item and families management" DockedRow="1" DockedColumn="3">
+          <ToolItem Name="AppItemsManagement.Tool" CommandName="AppItemsManagement.Command"/>
+          <ToolItem Name="AppFamilies.Tool" CommandName="AppFamilies.Command"/>
+          <ToolItem Name="AppItemGroup.Tool" CommandName="AppItemGroup.Command"/>
+        </Toolbar>
+        <Toolbar Name="AppSupplierProcessManagement.Toolbar" Title="Supplier management" Description="Supplier management" DockedRow="1" DockedColumn="4">
+          <ToolItem Name="AppSupplierManagement.Tool" CommandName="AppSupplierManagement.Command"/>
+          <ToolItem Name="AppPurchaseOrdersManagement.Tool" CommandName="AppPurchaseOrdersManagement.Command"/>
+          <ToolItem Name="AppInvoicePurchaseOrdersManagement.Tool" CommandName="AppInvoicePurchaseOrdersManagement.Command"/>
+        </Toolbar>
+        <Toolbar Name="AppBuyerProcessManagement.Toolbar" Title="Customer and sales management" Description="Customer and sales management" DockedRow="1" DockedColumn="5">
+          <ToolItem Name="AppBuyerManagement.Tool" CommandName="AppBuyerManagement.Command"/>
+          <ToolItem Name="AppSalesOrdersManagement.Tool" CommandName="AppSalesOrdersManagement.Command"/>
+          <ToolItem Name="AppInvoiceSalesOrdersManagement.Tool" CommandName="AppInvoiceSalesOrdersManagement.Command"/>
+        </Toolbar>
+
+        <Toolbar Name="AppAdministrativeProcess.Tool" Title="Realization, coverages and invoices management" Description="Realization, coverages and invoices management" DockedRow="1" DockedColumn="6">
+          <ToolItem Name="AppCustomerRealizationManagement.Tool" CommandName="AppCustomerRealizationManagement.Command"/>
+          <ToolItem Name="AppCustomerAdministrativeManagement.Tool" CommandName="AppCustomerAdministrativeManagement.Command"/>
+          <ToolItem Name="AppMultipleEpisodeAdministrativeManagement.Tool" CommandName="AppMultipleEpisodeAdministrativeManagement.Command"/>
+          <ToolItem Name="AppMultipleInsurerInvoicesManagement.Tool" CommandName="AppMultipleInsurerInvoicesManagement.Command"/>
+          <ToolItem Name="AppRemittancesManagement.Tool" CommandName="AppRemittancesManagement.Command"/>
+        </Toolbar>
+
+        <Toolbar Name="AppMedicalEpisodeProcess.Tool" Title="Medical consultation management" Description="Medical consultation management" DockedRow="1" DockedColumn="7">
+          <ToolItem Name="AppMedicalEpisodeManagement.Tool" CommandName="AppMedicalEpisodeManagement.Command"/>
+          <ToolItem Name="AppReportManagement.Tool" CommandName="AppReportManagement.Command"/>
+        </Toolbar>
+
+
+      </ToolCatalog>-->
+
+      <ApplicationExplorerCatalog>
+
+        <ExplorerTab Name="AppBackOffice.Tab" Title= "Back Office">
+          <SmallImage Source="file" FileName="images/BackOffice32.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/BackOffice32.png"></LargeImage>
+          <Group Name="BasicData.Group" Title="Datos Básicos" Description="Acceso a Datos Básicos" GroupType="Container"/>
+          <Group Name="Encoders.Group" Title="Codificadores" Description="Acceso a Codificadores" GroupType="Container"/>
+          <Group Name="Hierarchy.Group" Title="Jerarquía" Description="Acceso a la Jerarquía" GroupType="Container"/>
+          <Group Name="ActorRoles.Group" Title="Recursos y Actores" Description="Acceso a los Recursos y Actores" GroupType="Container"/>
+          <Group Name="AssistanceServicesAndAgreements.Group" Title="Servicios y Acuerdos Asistenciales" Description="Acceso a los Servicios y Acuerdos Asistenciales" GroupType="Container"/>
+          <Group Name="Insurers.Group" Title="Aseguradoras" Description="Acceso a Aseguradoras" GroupType="Container"/>
+          <Group Name="AssistanceActs.Group" Title="Actos Asistenciales" Description="Acceso a los Actos Asistenciales" GroupType="Container"/>
+          <Group Name="ProcessCharts.Group" Title="Procesos" Description="Acceso a los Procesos" GroupType="Container"/>
+        </ExplorerTab>
+
+        <ExplorerTab Name="AppAdministrative.Tab" Title= "Administrativos">
+          <SmallImage Source="file" FileName="images/ADAS16.png"/>
+          <LargeImage Source="file" FileName="images/ADAS32.png"/>
+          <Group Name="Notifications.Group" Title="Notificaciones" Description="Acceso a las Notificaciones" GroupType="Container"/>
+          <Group Name="CustomerManagement.Group" Title="Mantenimiento de Clientes" Description="Acceso al Mantenimiento de Clientes" GroupType="Container"/>
+          <Group Name="AppAdministrativeProcess.Group" Title="Procesos Administrativos" Description="Acceso a Procesos Administrativos" GroupType="Container"/>
+          <Group Name="ReportsAndResults.Group" Title="Informes y Resultados" Description="Acceso a Informes y Resultados" GroupType="Container"/>
+          <Group Name="CoveragesAndInvoicing.Group" Title="Coberturas y Facturación" Description="Acceso a Coberturas y Facturación" GroupType="Container"/>
+          <Group Name="Codification.Group" Title="Codificación" Description="Acceso a Codificación" GroupType="Container"/>
+        </ExplorerTab>
+
+        <ExplorerTab Name="AppAssistance.Tab" Title= "Asistenciales">
+          <SmallImage Source="file" FileName="images/nurseprotocols16.png"/>
+          <LargeImage Source="file" FileName="images/nurseprotocols32.png"/>
+          <Group Name="AppAssistanceProcess.Group" Title="Procesos Asistenciales" Description="Acceso a Procesos Asistenciales" GroupType="Container"/>
+          <Group Name="AppDietProcess.Group" Title="Procesos Dietéticos" Description="Acceso a Procesos Dietéticos" GroupType="Container"/>
+        </ExplorerTab>
+
+        <ExplorerTab Name="AppMedical.Tab" Title= "Médicos">
+          <SmallImage Source="file" FileName="images/episodesprotocols16.png"/>
+          <LargeImage Source="file" FileName="images/episodesprotocols32.png"/>
+          <Group Name="AppMedicalProcess.Group" Title="Procesos Médicos" Description="Acceso a Procesos Médicos" GroupType="Container"/>
+        </ExplorerTab>
+
+        <ExplorerTab Name="AppSupport.Tab" Title= "Soporte">
+          <SmallImage Source="file" FileName="images/dataedit16.png"></SmallImage>
+          <LargeImage Source="file" FileName="images/dataedit32.png"></LargeImage>
+
+          <Group Name="Items.Group" Title="Artículos" Description="Acceso a Gestión de Artículos" GroupType="Container"/>
+          <Group Name="Warehouse.Group" Title="Almacenes" Description="Acceso a  Almacenes" GroupType="Container"/>
+          <Group Name="SuppliersAndPurchases.Group" Title="Proveedores y Compras" Description="Acceso a Proveedores y Compras" GroupType="Container"/>
+          <Group Name="BuyerAndSales.Group" Title="Ventas medicación/materiales" Description="Acceso a Ventas medicación/materiales" GroupType="Container"/>
+          <Group Name="CashRegisters.Group" Title="Cajas" Description="Acceso a Cajas" GroupType="Container"/>
+          <Group Name="Indicators.Group" Title="Indicadores" Description="Acceso a Indicadores" GroupType="Container"/>
+          <Group Name="Documents.Group" Title="Documentos" Description="Acceso a Documentos" GroupType="Container"/>
+
+          <Group Name="Addins.Group" Title="Otros" Description="Acceso a Otros" GroupType="Container"/>
+
+        </ExplorerTab>
+      </ApplicationExplorerCatalog>
+
+    </Application>
+
+  </ApplicationCatalog>
+
+</ResourceCatalog>

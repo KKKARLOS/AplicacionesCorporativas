@@ -1,0 +1,135 @@
+﻿.textoCalFinde
+{
+    text-align:center;
+    COLOR: #F14E4E;
+}
+.textoCal
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    COLOR: #315D6B;
+    FONT-FAMILY: Arial, Helvetica, sans-serif;
+    TEXT-DECORATION: none;
+}
+.textoCalFes
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    COLOR: red;
+    FONT-FAMILY: Arial, Helvetica, sans-serif;
+    TEXT-DECORATION: none;
+}
+
+#divMesesInicio
+{
+    position:absolute;
+    left:10px;
+    top: 30px;
+    width:420px;
+    height:210px;
+}
+#divMesesFin
+{
+    position:absolute;
+    left:10px;
+    top: 270px;
+    width:420px;
+    height:210px;
+}
+
+.TituloMeses
+{
+    text-align: center;
+    background-image: url(../../../Images/imgFondoCal3.gif);
+    background-repeat: no-repeat;
+    width: 90px; 
+    height: 23px; 
+    position: absolute; 
+    top: -11px; 
+    left: 20px; 
+    padding-top: 5px;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    COLOR: #315D6B;
+    FONT-FAMILY: Arial, Helvetica, sans-serif;
+    TEXT-DECORATION: none;
+}
+
+.LiteralFecha
+{
+    text-align: center;
+    width: 405px; 
+    height: 23px; 
+    position: absolute; 
+    top: 10px; 
+    left: 0px; 
+    padding-top: 5px;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    COLOR: #315D6B;
+    FONT-FAMILY: Arial, Helvetica, sans-serif;
+    TEXT-DECORATION: none;
+}
+
+.spanBotones
+{
+    position:absolute;
+    top: 10px;
+    left: 340px;
+    z-index:5;
+}
+
+.LiteralMes1
+{
+    position:absolute;
+    left:25px;
+    top: 35px;
+    width:154px;
+    text-align:center;
+}
+.LiteralMes2
+{
+    position:absolute;
+    left:225px;
+    top: 35px;
+    width:154px;
+    text-align:center;
+}
+
+.TablaMes1
+{
+    position:absolute;
+    left:25px;
+    top: 50px;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    COLOR: #315D6B;
+    FONT-FAMILY: Arial, Helvetica, sans-serif;
+    TEXT-DECORATION: none;
+    width:154px;
+    height:150px;
+    background-color:#e0e0e0;    
+}
+
+.TablaMes2
+{
+    position:absolute;
+    left:225px;
+    top: 50px;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    COLOR: #315D6B;
+    FONT-FAMILY: Arial, Helvetica, sans-serif;
+    TEXT-DECORATION: none;
+    width:154px;
+    height:150px;
+    background-color:#ffffff;   
+    border: dotted 1px navy; 
+}
+
+#tblBotonera
+{
+    position:absolute;
+    top: 495px;
+    left: 120px;
+}

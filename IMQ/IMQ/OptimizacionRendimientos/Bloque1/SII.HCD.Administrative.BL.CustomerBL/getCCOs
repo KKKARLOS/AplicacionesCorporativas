@@ -1,0 +1,278 @@
+                    if (getCCOs)
+                    {
+                        List<CustomerContactOrganizationEntity> customerContactOrganizations = new List<CustomerContactOrganizationEntity>();
+                        ds2 = DataAccess.CustomerContactOrganizationDA.GetCustomerContactOrganizations(customerID);
+                        if ((ds2 != null) && (ds2.Tables.Contains(Administrative.Entities.TableNames.CustomerContactOrganizationListDTOTable)))
+                        {
+                            foreach (DataRow row in ds2.Tables[Administrative.Entities.TableNames.CustomerContactOrganizationListDTOTable].Rows)
+                            {
+                                int customerContactOrganizationID = SIIConvert.ToInteger(row["ID"].ToString(), 0);
+                                if (customerContactOrganizationID > 0)
+                                    customerContactOrganizations.Add(CustomerContactOrganizationBL.GetCustomerContactOrganization(customerContactOrganizationID));
+                            }
+                        }
+
+                        result.ContactOrganizations = customerContactOrganizations.Count > 0 ? customerContactOrganizations.ToArray() : null;
+                    }
+        public static string GetCustomerContactOrganizationsCommand
+        {
+            get
+            {
+                return "SELECT CCO.[ID], CCO.OrganizationID, Organization.[Name], CCO.CustomerID," + Environment.NewLine +
+                       "(SELECT TOP 1 Telephone FROM Telephone JOIN OrganizationTelephoneRel ON Telephone.[ID]=OrganizationTelephoneRel.TelephoneID WHERE OrganizationTelephoneRel.OrganizationID=Organization.[ID] AND Telephone.EmergencyContactPhone=1) DefaultTelephone," + Environment.NewLine +
+                       "CCO.UrgentContact, CAST(CCO.DBTimeStamp as bigint) DBTimeStamp, ContactType.[Name] ContactType" + Environment.NewLine +
+                       "FROM CustomerContactOrganization CCO JOIN Organization ON CCO.OrganizationID=Organization.[ID] " + Environment.NewLine +
+                       "LEFT JOIN ContactType ON CCO.ContactTypeID=ContactType.[ID] " + Environment.NewLine +
+                       "WHERE CCO.CustomerID=@CustomerID";
+            }
+        }
+
+
+
+--------------------------------------------------------------------------------------------------------------------------
+"SELECT [ID], OrganizationID, ContactTypeID, CustomerID, UrgentContact, AlternativeContact, " + Environment.NewLine +
+                       "LastUpdated, ModifiedBy, CAST(DBTimeStamp as bigint) DBTimeStamp" + Environment.NewLine +
+                       "FROM CustomerContactOrganization WHERE [ID]=@ID"
+
+                return "SELECT [ID], [Code], [Name], [Description], [Type], LastUpdated, ModifiedBy, CAST(DBTimeStamp as bigint) DBTimeStamp" + Environment.NewLine +
+                       "FROM ContactType WHERE [ID]=@ID";
+
+
+					   
+1)---------------------------------------------------------------------------------------------------------------		
+   public CustomerContactOrganizationEntity GetCustomerContactOrganization(int customerContactOrganizationID)
+        {
+            try
+            {
+                OrganizationBL organizationBL = new OrganizationBL();
+
+                DataSet ds = _customerContactOrganizationDA.GetCustomerContactOrganization(customerContactOrganizationID);
+                if ((ds.Tables != null) && (ds.Tables.Contains(SII.HCD.Administrative.Entities.TableNames.CustomerContactOrganizationTable)) && (ds.Tables[SII.HCD.Administrative.Entities.TableNames.CustomerContactOrganizationTable].Rows.Count > 0))
+                {
+                    int organizationID = SIIConvert.ToInteger(ds.Tables[SII.HCD.Administrative.Entities.TableNames.CustomerContactOrganizationTable].Rows[0]["OrganizationID"].ToString(), 0);
+                    int contactTypeID = SIIConvert.ToInteger(ds.Tables[SII.HCD.Administrative.Entities.TableNames.CustomerContactOrganizationTable].Rows[0]["ContactTypeID"].ToString(), 0);
+
+                    DataSet ds2;
+
+                    #region Contact Types
+                    ds2 = _contactTypeDA.GetContactTypeByID(contactTypeID);
+                    if ((ds2 != null) && (ds2.Tables.Contains(SII.HCD.Administrative.Entities.TableNames.ContactTypeTable)))
+                    {
+                        DataTable dt = ds2.Tables[SII.HCD.Administrative.Entities.TableNames.ContactTypeTable].Copy();
+                        ds.Tables.Add(dt);
+                    }
+                    #endregion
+
+                    #region Organization
+                    if (organizationID <= 0)
+                    {
+                        throw new Exception(Properties.Resources.ERROR_CustomerContactOrganizationNotFound);
+                    }
+                    SII.HCD.BackOffice.Entities.OrganizationEntity myOrganization = organizationBL.GetOrganization(organizationID);
+                    #endregion
+
+                    CustomerContactOrganizationAdvancedAdapter customerContactOrganizationAdapter = new CustomerContactOrganizationAdvancedAdapter();
+                    CustomerContactOrganizationEntity result = customerContactOrganizationAdapter.GetInfo(ds.Tables[SII.HCD.Administrative.Entities.TableNames.CustomerContactOrganizationTable].Rows[0], ds);
+                    result.Organization = myOrganization;
+                    LOPDLogger.Write(EntityNames.CustomerContactOrganizationEntityName, customerContactOrganizationID, ActionType.View);
+                    return result;
+                }
+                else
+                    return null;
+            }
+            catch (Exception ex)
+            {
+                if (ExceptionPolicy.HandleException(ex, ExceptionPolicies.Service)) throw;
+                return null;
+            }
+        }		
+2)----------------------------------------------------------
+       public OrganizationEntity GetOrganization(int organizationID)
+        {
+            try
+            {
+                OrganizationAdapter organizationAdapter = new OrganizationAdapter();
+
+                #region Organization
+                DataSet ds = _organizationDA.GetOrganization(organizationID);
+                #endregion
+
+				
+        public static string GetOrganizationCommand
+        {
+            get
+            {
+                return "SELECT [ID], [Name], SocialReason, Comments, TelecomAddress, RegistrationDate, AddressID, Address2ID," + Environment.NewLine +
+                       "LastUpdated, Status, ModifiedBy, CAST(DBTimeStamp as bigint) DBTimeStamp" + Environment.NewLine +
+                       "FROM Organization WHERE [ID]=@ID";
+            }
+        }
+		
+		
+                #region Organization Telephones
+                DataSet ds2 = _orgTelephoneRelDA.GetOrganizationTelephone(organizationID);
+				
+				
+
+        public static String GetOrganizationTelephoneCommand
+        {
+            get
+            {
+                return "SELECT [ID], OrganizationID, TelephoneID, ModifiedBy, LastUpdated, CAST(DBTimeStamp as bigint) DBTimeStamp" + Environment.NewLine +
+                       "FROM OrganizationTelephoneRel WHERE OrganizationID=@OrganizationID";
+            }
+        }			
+				
+                if ((ds2 != null) && (ds2.Tables.Contains(TableNames.OrganizationTelephoneTable)))
+                {
+                    DataTable dt = ds2.Tables[TableNames.OrganizationTelephoneTable].Copy();
+                    ds.Tables.Add(dt);
+
+
+					}
+
+                ds2 = _telephoneDA.GetTelephoneFromOrganization(organizationID);
+				
+       public static String GetTelephoneFromOrganizationCommand
+        {
+            get
+            {
+                return "SELECT T.[ID], T.Telephone, T.Comments, T.TelephoneType, T.EmergencyContactPhone, T.ModifiedBy, T.LastUpdated, CAST(T.DBTimeStamp as bigint) DBTimeStamp" + Environment.NewLine +
+                       "FROM Telephone T JOIN OrganizationTelephoneRel O ON T.[ID]=O.TelephoneID WHERE O.OrganizationID=@OrganizationID";
+            }
+        }				
+                if ((ds2 != null) && (ds2.Tables.Contains(TableNames.TelephoneTable)))
+                {
+                    DataTable dt = ds2.Tables[TableNames.TelephoneTable].Copy();
+                    ds.Tables.Add(dt);
+                }
+                #endregion
+
+                #region Address1
+                ds2 = _addressDA.GetAddress(SIIConvert.ToInteger(ds.Tables[TableNames.OrganizationTable].Rows[0]["AddressID"].ToString(), 0));
+        public static String GetAddressCommand
+        {
+            get
+            {
+                return "SELECT [ID], Address1, Address2, AddressType, City, Country, Province, State, ZipCode, LastUpdated, ModifiedBy, CAST(DBTimeStamp as bigint) DBTimeStamp" + Environment.NewLine +
+                       "FROM [Address] WHERE [ID]=@ID";
+            }
+        }				
+                if ((ds2 != null) && (ds2.Tables.Contains(TableNames.AddressTable)))
+                {
+                    DataTable dt = ds2.Tables[TableNames.AddressTable].Copy();
+                    dt.TableName = TableNames.AddressTable;
+                    ds.Tables.Add(dt);
+                }
+                #endregion
+
+                #region Address2
+                ds2 = _addressDA.GetAddress(SIIConvert.ToInteger(ds.Tables[TableNames.OrganizationTable].Rows[0]["Address2ID"].ToString(), 0));
+				
+        public static String GetAddressCommand
+        {
+            get
+            {
+                return "SELECT [ID], Address1, Address2, AddressType, City, Country, Province, State, ZipCode, LastUpdated, ModifiedBy, CAST(DBTimeStamp as bigint) DBTimeStamp" + Environment.NewLine +
+                       "FROM [Address] WHERE [ID]=@ID";
+            }
+        }					
+                if ((ds2 != null) && (ds2.Tables.Contains(TableNames.AddressTable)))
+                {
+                    DataTable dt = ds2.Tables[TableNames.AddressTable].Copy();
+                    dt.TableName = TableNames.Address2Table;
+                    ds.Tables.Add(dt);
+                }
+                #endregion
+
+                #region Categories
+                ds2 = _organizationCatRelDA.GetOrganizationCategory(organizationID);
+				
+
+        public static String GetOrganizationCategoryCommand
+        {
+            get
+            {
+                return "SELECT [ID], OrganizationID, CategoryID, ModifiedBy, LastUpdated, CAST(DBTimeStamp as bigint) DBTimeStamp" + Environment.NewLine +
+                       "FROM OrganizationCatRel WHERE OrganizationID=@OrganizationID";
+            }
+        }
+					   
+                if ((ds2 != null) && (ds2.Tables.Contains(TableNames.OrganizationCategoryTable)))
+                {
+                    DataTable dt = ds2.Tables[TableNames.OrganizationCategoryTable].Copy();
+                    dt.TableName = TableNames.OrganizationCategoryTable;
+                    ds.Tables.Add(dt);
+                }
+                ds2 = _categoryDA.GetCategoryFromOrganization(organizationID);
+				
+        public static String GetCategoryFromOrganizationCommand
+        {
+            get
+            {
+                return "SELECT C.[ID], C.CategoryKey, C.[Name], C.[Type], C.ModifiedBy, C.LastUpdated, CAST(C.DBTimeStamp as bigint) DBTimeStamp" + Environment.NewLine +
+                       "FROM Category C JOIN OrganizationCatRel O ON C.[ID]=O.CategoryID WHERE O.OrganizationID=@OrganizationID";
+            }
+        }				
+                if ((ds2 != null) && (ds2.Tables.Contains(TableNames.CategoryTable)))
+                {
+                    DataTable dt = ds2.Tables[TableNames.CategoryTable].Copy();
+                    dt.TableName = TableNames.CategoryTable;
+                    ds.Tables.Add(dt);
+                }
+                #endregion
+
+                #region contact Persons
+                //TODO: a la espera de que se haga...
+                #endregion
+
+                #region Identifiers
+                ds2 = _orgIdentifierRelDA.GetOrganizationIdentifier(organizationID);
+        public static String GetOrganizationIdentifierCommand
+        {
+            get
+            {
+                return "SELECT [ID], OrganizationID, IdentifierTypeID, IDNumber, ModifiedBy, LastUpdated, CAST(DBTimeStamp as bigint) DBTimeStamp" + Environment.NewLine +
+                       "FROM OrganizationIdentifierRel WHERE OrganizationID=@OrganizationID";
+            }
+        }				
+                if ((ds2 != null) && (ds2.Tables.Contains(TableNames.IdentifierTable)))
+                {
+                    DataTable dt = ds2.Tables[TableNames.IdentifierTable].Copy();
+                    dt.TableName = TableNames.IdentifierTable;
+                    ds.Tables.Add(dt);
+                }
+                ds2 = _identifierTypeDA.GetIdentifierFromOrganization(organizationID);
+
+        public static String GetIdentifierFromOrganizationCommand
+        {
+            get
+            {
+                return "SELECT I.[ID], I.[Name], I.[Description], I.[Type], I.[Status], I.[RequiredValidation], I.[ValidationClass], I.[ValidationMask], I.[ModifiedBy], I.[LastUpdated], CAST(I.[DBTimeStamp] as bigint) DBTimeStamp" + Environment.NewLine +
+                       "FROM IdentifierType I JOIN OrganizationIdentifierRel O ON I.[ID]=O.IdentifierTypeID WHERE O.OrganizationID=@OrganizationID";
+            }
+        }				
+                if ((ds2 != null) && (ds2.Tables.Contains(TableNames.IdentifierTypeTable)))
+                {
+                    DataTable dt = ds2.Tables[TableNames.IdentifierTypeTable].Copy();
+                    dt.TableName = TableNames.IdentifierTypeTable;
+                    ds.Tables.Add(dt);
+                }
+                #endregion
+
+                if ((ds.Tables != null) && (ds.Tables.Contains(TableNames.OrganizationTable)) && (ds.Tables[TableNames.OrganizationTable].Rows.Count > 0))
+                {
+                    OrganizationEntity result = organizationAdapter.GetInfo(ds.Tables[TableNames.OrganizationTable].Rows[0], ds);
+                    LOPDLogger.Write(EntityNames.OrganizationEntityName, organizationID, ActionType.View);
+                    return result;
+                }
+                else
+                    return null;
+            }
+            catch (Exception ex)
+            {
+                if (ExceptionPolicy.HandleException(ex, ExceptionPolicies.Service)) throw;
+                return null;
+            }
+        }
+		

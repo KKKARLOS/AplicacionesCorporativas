@@ -1,0 +1,150 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPages/Plantilla.master" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="Capa_Presentacion_CVT_Mantenimientos_Exclusiones_Default" %>
+<%@ MasterType VirtualPath="~/MasterPages/Plantilla.master" %>
+<%@ Register Src="~/Capa_Presentacion/UserControls/Msg/mmoff.ascx" TagName="mmoff" TagPrefix="uc_mmoff" %>
+<%@ Register Src="~/Capa_Presentacion/UserControls/RestaurarFila.ascx" TagName="RestaurarFila" TagPrefix="uc2" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="CPHB" Runat="Server">
+</asp:Content>
+
+<asp:Content ID="Content2" ContentPlaceHolderID="CPHC" Runat="Server">
+<script type="text/javascript" language="javascript">
+    var strCombo = "<%=strHTMLCombo %>";
+</script>
+<div id="principal" style="margin-top:40px;">
+    <table id="tblFiltros" style="height:17px; margin-top:20px; margin-left:140px;" width="700px" >
+    <colgroup>
+        <col style='width:70px;' />
+        <col style='width:250px;' />
+        <col style='width:130px;' />
+        <col style='width:250px;' />
+    </colgroup>
+    <tr>
+        <td>
+            <label style="margin-left:10px;">Apellido1 </label>
+        </td>
+        <td>
+            <input name="txtApellido1" id="txtApellido1" class="txtM" runat="server" style="width:220px; margin-left:10px;" maxlength="25" onkeypress="javascript:if(event.keyCode==13){buscar();event.keyCode=0;}"/>    
+        </td>
+        <td>
+            <label style="margin-left:40px;">Apellido2 </label>
+        </td>
+        <td>
+            <input name="txtApellido2" id="txtApellido2" class="txtM" runat="server" style="width:200px; margin-left:10px;" maxlength="25" onkeypress="javascript:if(event.keyCode==13){buscar();event.keyCode=0;}"/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label style="margin-left:10px;">Nombre </label>
+        </td>
+        <td>
+            <input name="txtNombre" id="txtNombre" class="txtM" runat="server" style="width:220px; margin-left:10px;" maxlength="20" onkeypress="javascript:if(event.keyCode==13){buscar();event.keyCode=0;}"/>
+        </td>
+        <td>
+            <label style="margin-left:40px;">Nivel de Exclusión </label>
+        </td>
+        <td>
+            <asp:DropDownList id="cbonivelExclusion" runat="server" style="width:130px; margin-left:10px;" AppendDataBoundItems="true" CssClass="combo" onchange="buscar();">
+                <asp:ListItem Selected="True" Text="" Value=""></asp:ListItem>
+                <asp:ListItem Text="Total" Value="1"></asp:ListItem>
+                <asp:ListItem Text="Parcial" Value="2"></asp:ListItem>
+            </asp:DropDownList>
+        </td>
+    </tr>
+    
+    </table>
+
+    <table id="tblTitulo" style="height:17px; margin-top:20px; margin-left:140px;" width="700px" >
+        <colgroup>
+            <col style='width:20px;' />
+            <col style='width:500px;' />
+            <col style='width:180px;' />
+        </colgroup>
+        <tr class="TBLINI">
+            <td>
+            </td>
+	        <td style="padding-left:5px" title="Profesionales de Ibermática.">
+		        Profesional
+                &nbsp;<img id="imgLupa1" style="DISPLAY: none; CURSOR: pointer" onclick="buscarSiguiente('tblCatalogo',1,'divCatalogo','imgLupa1')" height="11" 
+                src="../../../../Images/imgLupaMas.gif" width="20" tipolupa="2"> 
+                <img style="DISPLAY: none; CURSOR: pointer" onclick="buscarDescripcion('tblCatalogo',1,'divCatalogo','imgLupa1',event)" height="11" 
+                src="../../../../Images/imgLupa.gif" width="20" tipolupa="1">			        
+            </td>
+            <td style="padding-left:5px">
+		        Nivel de exclusión
+                &nbsp;<img id="imgLupa2" style="DISPLAY: none; CURSOR: pointer" onclick="buscarSiguiente('tblCatalogo',2,'divCatalogo','imgLupa2')" height="11" 
+                src="../../../../Images/imgLupaMas.gif" width="20" tipolupa="2"> 
+                <img style="DISPLAY: none; CURSOR: pointer" onclick="buscarDescripcion('tblCatalogo',2,'divCatalogo','imgLupa2',event)" height="11" 
+                src="../../../../Images/imgLupa.gif" width="20" tipolupa="1">			        
+            </td>
+            <td style="text-align:center;" title="Activado=cliente vigente / Desactivado=cliente no vigente.">
+            </td>
+        </tr>
+    </table>       
+    <div id="divCatalogo" style="overflow-x:hidden; overflow-y:auto; WIDTH: 716px; height:396px; margin-left:140px;" runat="server"  name="divCatalogo" onscroll="scrollTabla()">
+        <div style="background-image:url('../../../../Images/imgFT22.gif'); background-repeat:repeat; width:700px; height:auto;">
+                <%=strTablaHTML%>
+        </div>
+    </div>
+    <table id="tblResultado" style="height:17px; margin-left:140px;"  width="700px">
+        <tr class="TBLFIN">
+            <td>
+            </td>
+        </tr>
+    </table>
+</div>
+<uc_mmoff:mmoff ID="mmoff1" runat="server" />
+<uc2:RestaurarFila ID="RestaurarFila1" runat="server" />
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="CPHD" Runat="Server">
+<script type="text/javascript">
+<!--
+    function __doPostBack(eventTarget, eventArgument) {
+        var bEnviar = true;
+        if (eventTarget.split("$")[2] == "Botonera") {
+            var strBoton = Botonera.botonID(eventArgument).toLowerCase();
+            switch (strBoton) {
+
+                case "grabar":
+                    {
+                        bEnviar = false;
+                        grabar();
+                        break;
+                    }
+                case "buscar":
+                    {
+                        bEnviar = false;
+                        buscar();
+                        break;
+                    }
+            }
+        }
+
+        var theform = document.forms[0];
+        theform.__EVENTTARGET.value = eventTarget.split("$").join(":");
+        theform.__EVENTARGUMENT.value = eventArgument;
+        if (bEnviar) {
+            theform.submit();
+        }
+    }
+
+    function WebForm_CallbackComplete() {
+        for (var i = 0; i < __pendingCallbacks.length; i++) {
+            callbackObject = __pendingCallbacks[i];
+            if (callbackObject && callbackObject.xmlRequest && (callbackObject.xmlRequest.readyState == 4)) {
+                WebForm_ExecuteCallback(callbackObject);
+                if (!__pendingCallbacks[i].async) {
+                    __synchronousCallBackIndex = -1;
+                }
+                __pendingCallbacks[i] = null;
+                var callbackFrameID = "__CALLBACKFRAME" + i;
+                var xmlRequestFrame = document.getElementById(callbackFrameID);
+                if (xmlRequestFrame) {
+                    xmlRequestFrame.parentNode.removeChild(xmlRequestFrame);
+                }
+            }
+        }
+    }
+    
+-->
+</script>
+</asp:Content>

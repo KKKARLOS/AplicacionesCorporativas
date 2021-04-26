@@ -1,0 +1,135 @@
+﻿.ibox-title {
+    border-style: none solid none;
+    padding: 0px 15px 7px;
+}
+
+input[type=file] {
+    display: inline-block;
+}
+
+#inputFichero {    
+    border: 1px ridge #ddd;
+    background-color: #ddd;
+    border-radius: 2px;
+}
+
+.filegroup {
+    /*width: 100%;*/
+    float:left;
+    vertical-align: middle;
+}
+
+.linkAyuda:hover {
+    color: #23527c;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/*Header fixed de la tabla de la pantalla*/
+/*Alto del contenedor de la tabla (tbody)*/
+.header-fixed > tbody {
+    overflow-y: auto;
+    max-height: 200px;
+}
+
+/*HEADER FIXED TABLA 1*/
+
+/*COLUMNA 1*/
+#tabla.header-fixed > tbody > tr > td:nth-child(1) {
+    width: 25%;
+    float: left;
+}
+
+#tabla.header-fixed > thead > tr > th:nth-child(1) {
+    width: 25%;
+    float: left;
+}
+
+/*COLUMNA 2*/
+#tabla.header-fixed > tbody > tr > td:nth-child(2) {
+    width: 10%;
+    float: left;
+}
+
+#tabla.header-fixed > thead > tr > th:nth-child(2) {
+    width: 10%;
+    float: left;
+}
+
+/*COLUMNA 3*/
+#tabla.header-fixed > tbody > tr > td:nth-child(3) {
+    width: 27%;
+    float: left;
+}
+
+#tabla.header-fixed > thead > tr > th:nth-child(3) {
+    width: 27%;
+    float: left;
+}
+
+/*COLUMNA 4*/
+#tabla.header-fixed > tbody > tr > td:nth-child(4) {
+    width: 11%;
+    float: left;
+}
+
+#tabla.header-fixed > thead > tr > th:nth-child(4) {
+    width: 11%;
+    float: left;
+}
+
+/*COLUMNA 5*/
+#tabla.header-fixed > tbody > tr > td:nth-child(5) {
+    width: 27%;
+    float: left;
+}
+
+#tabla.header-fixed > thead > tr > th:nth-child(5) {
+    width: 27%;
+    float: left;
+}
+
+/*HEADER FIXED TABLA 1*/
+
+/*COLUMNA 1*/
+#tabla2.header-fixed > tbody > tr > td:nth-child(1) {
+    width: 15%;
+    float: left;
+}
+
+#tabla2.header-fixed > thead > tr > th:nth-child(1) {
+    width: 15%;
+    float: left;
+}
+
+/*COLUMNA 2*/
+#tabla2.header-fixed > tbody > tr > td:nth-child(2) {
+    width: 85%;
+    float: left;
+}
+
+#tabla2.header-fixed > thead > tr > th:nth-child(2) {
+    width: 85%;
+    float: left;
+}
+
+/*FIN HEADER FIXED*/
+
+.st-head-row-main {
+        color: #fff;
+        background-color: #337ab7;
+    }
+
+.fa-file-excel-o {
+    color:#1f985c;
+}
+/*Sobreescritura datatable buttons*/
+/*a.dt-button {
+    margin-right: 18px !important;
+}*/
+
+#tablaV_filter, #tablaVM_filter, #tablaG_filter{
+    float:left;
+    font-size: 12px;
+    padding-left: 15px;
+}

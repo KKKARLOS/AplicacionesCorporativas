@@ -1,0 +1,40 @@
+﻿form label{
+    font-weight: normal;
+}
+
+/*Modificamos el alto de las cabeceras del datatable*/
+/*.dataTables_wrapper .dataTables_scrollHead table.dataTable thead tr th {padding: 5px 18px !important;}*/
+
+table th {
+    background-color: #337ab7;
+    color: #fff;
+    text-align: center;
+    border: 1px solid #ddd;
+    white-space: nowrap;
+}
+
+.btn-inline-input {
+    height: 22px;
+    padding: 0 5px 0 5px;
+}
+
+.fieldset .list-group-item {
+    padding: 0 5px 0 5px;
+}
+
+.fieldset {
+    margin: 0 15px 0 15px !important;
+    padding: 5px !important;
+}
+.fieldset-container-scroll {
+    height:10vh;
+    overflow-y:auto;
+}
+legend.fieldset {
+    font-weight: normal !important;
+}
+
+#ui-datepicker-div {
+    z-index:2 !important;
+}
+/*th, td { white-space: nowrap; }*/

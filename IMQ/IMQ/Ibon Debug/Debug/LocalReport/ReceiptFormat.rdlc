@@ -1,0 +1,672 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition">
+  <DataSources>
+    <DataSource Name="SIIHCDBackOfficeEntities">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>c5943a10-4381-4daa-a595-9da1654be397</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <DataSets>
+    <DataSet Name="ds1">
+      <Fields>
+        <Field Name="AmountQty">
+          <DataField>AmountQty</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="AncestorID">
+          <DataField>AncestorID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="BatchID">
+          <DataField>BatchID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="BatchMovementNumber">
+          <DataField>BatchMovementNumber</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="BatchMovementReason">
+          <DataField>BatchMovementReason</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="BatchMovementReasonCode">
+          <DataField>BatchMovementReasonCode</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="BatchMovementReasonID">
+          <DataField>BatchMovementReasonID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="BatchMovementReasonType">
+          <DataField>BatchMovementReasonType</DataField>
+          <rd:TypeName>SII.HCD.BackOffice.Entities.BatchMovementReasonTypeEnum</rd:TypeName>
+        </Field>
+        <Field Name="BatchNumber">
+          <DataField>BatchNumber</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CustomerFirstName">
+          <DataField>CustomerFirstName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CustomerFullName">
+          <DataField>CustomerFullName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CustomerFullName2">
+          <DataField>CustomerFullName2</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CustomerID">
+          <DataField>CustomerID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="CustomerLastName">
+          <DataField>CustomerLastName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CustomerLastName2">
+          <DataField>CustomerLastName2</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="DBTimeStamp">
+          <DataField>DBTimeStamp</DataField>
+          <rd:TypeName>System.Int64</rd:TypeName>
+        </Field>
+        <Field Name="Description">
+          <DataField>Description</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="EditStatus">
+          <DataField>EditStatus</DataField>
+          <rd:TypeName>SII.Framework.Interfaces.EditStatusEntity</rd:TypeName>
+        </Field>
+        <Field Name="ID">
+          <DataField>ID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="IsVoid">
+          <DataField>IsVoid</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="LastUpdated">
+          <DataField>LastUpdated</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="ModifiedBy">
+          <DataField>ModifiedBy</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ModifiedByFirstName">
+          <DataField>ModifiedByFirstName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ModifiedByFullName">
+          <DataField>ModifiedByFullName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ModifiedByFullName2">
+          <DataField>ModifiedByFullName2</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ModifiedByLastName">
+          <DataField>ModifiedByLastName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ModifiedByLastName2">
+          <DataField>ModifiedByLastName2</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PaymentMethod">
+          <DataField>PaymentMethod</DataField>
+          <rd:TypeName>SII.HCD.BackOffice.Entities.PaymentMethodEnum</rd:TypeName>
+        </Field>
+        <Field Name="ReasonExplanation">
+          <DataField>ReasonExplanation</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="RegistrationDateTime">
+          <DataField>RegistrationDateTime</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="TenderID">
+          <DataField>TenderID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="TenderName">
+          <DataField>TenderName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>SIIHCDBackOfficeEntities</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <rd:DataSetInfo>
+        <rd:DataSetName>SII.HCD.BackOffice.Entities</rd:DataSetName>
+        <rd:TableName>BatchMovementEntity</rd:TableName>
+        <rd:ObjectDataSourceType>SII.HCD.BackOffice.Entities.BatchMovementEntity, SII.HCD.BackOffice.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+      </rd:DataSetInfo>
+    </DataSet>
+  </DataSets>
+  <Body>
+    <ReportItems>
+      <Line Name="Line1">
+        <Top>8.65195cm</Top>
+        <Left>1.25095cm</Left>
+        <Height>0cm</Height>
+        <Width>15.38521cm</Width>
+        <Style>
+          <Border>
+            <Style>Solid</Style>
+          </Border>
+        </Style>
+      </Line>
+      <Line Name="Line2">
+        <Top>16.81271cm</Top>
+        <Left>1.25095cm</Left>
+        <Height>0cm</Height>
+        <Width>15.38521cm</Width>
+        <ZIndex>1</ZIndex>
+        <Style>
+          <Border>
+            <Style>Solid</Style>
+          </Border>
+        </Style>
+      </Line>
+      <Rectangle Name="Rectangle1">
+        <ReportItems>
+          <Textbox Name="Textbox3">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Nº de RECIBO: </Value>
+                    <Style>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value>=First(Fields!BatchMovementNumber.Value, "ds1")</Value>
+                    <Style>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox3</rd:DefaultName>
+            <Top>0.77142cm</Top>
+            <Height>0.6cm</Height>
+            <Width>11.39cm</Width>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="RegistrationDateTime">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=First(Fields!RegistrationDateTime.Value, "ds1")</Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                      <Format>D</Format>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>RegistrationDateTime</rd:DefaultName>
+            <Top>1.71482cm</Top>
+            <Height>0.6cm</Height>
+            <Width>11.39cm</Width>
+            <ZIndex>1</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox6">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=iif((First(Fields!CustomerID.Value, "ds1")&gt;0),
+iif((First(Fields!BatchMovementReasonType.Value, "ds1")=1),
+String.Concat("Recibido de ", First(Fields!CustomerFullName.Value, "ds1").ToString(), " la cantidad de ", FormatCurrency(Abs(First(Fields!AmountQty.Value, "ds1"))), " en ", First(Fields!TenderName.Value, "ds1").ToString(), " por el concepto de ", 
+First(Fields!BatchMovementReason.Value, "ds1").ToString(), ". ", First(Fields!ReasonExplanation.Value, "ds1").ToString()),
+String.Concat("Entregado a ", First(Fields!CustomerFullName.Value, "ds1").ToString(), " la cantidad de ", FormatCurrency(Abs(First(Fields!AmountQty.Value, "ds1"))), " en ", First(Fields!TenderName.Value, "ds1").ToString(), " por el concepto de ", 
+First(Fields!BatchMovementReason.Value, "ds1").ToString(), ". ", First(Fields!ReasonExplanation.Value, "ds1").ToString())),
+iif((First(Fields!BatchMovementReasonType.Value, "ds1")=1),
+String.Concat(First(Fields!ModifiedByFullName.Value, "ds1").ToString(), " ha recibido la cantidad de ", FormatCurrency(Abs(First(Fields!AmountQty.Value, "ds1"))), " en ", First(Fields!TenderName.Value, "ds1").ToString(), " por el concepto de ", 
+First(Fields!BatchMovementReason.Value, "ds1").ToString(), ". ", First(Fields!ReasonExplanation.Value, "ds1").ToString()),
+String.Concat(First(Fields!ModifiedByFullName.Value, "ds1").ToString(), " ha entregado la cantidad de ", FormatCurrency(Abs(First(Fields!AmountQty.Value, "ds1"))), " en ", First(Fields!TenderName.Value, "ds1").ToString(), " por el concepto de ", 
+First(Fields!BatchMovementReason.Value, "ds1").ToString(), ". ", First(Fields!ReasonExplanation.Value, "ds1").ToString()))
+)</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox6</rd:DefaultName>
+            <Top>2.70288cm</Top>
+            <Height>2.13458cm</Height>
+            <Width>15.38521cm</Width>
+            <ZIndex>2</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox2">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Fdo.:</Value>
+                    <Style>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox2</rd:DefaultName>
+            <Top>5.01385cm</Top>
+            <Left>8.89cm</Left>
+            <Height>0.6cm</Height>
+            <Width>2.5cm</Width>
+            <ZIndex>3</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+        </ReportItems>
+        <KeepTogether>true</KeepTogether>
+        <Top>1.03195cm</Top>
+        <Left>1.25095cm</Left>
+        <Height>6.38528cm</Height>
+        <Width>15.38521cm</Width>
+        <ZIndex>2</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Rectangle>
+      <Rectangle Name="Rectangle2">
+        <ReportItems>
+          <Textbox Name="Textbox4">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Nº de RECIBO: </Value>
+                    <Style>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value>=First(Fields!BatchMovementNumber.Value, "ds1")</Value>
+                    <Style>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox3</rd:DefaultName>
+            <Top>0.77142cm</Top>
+            <Height>0.6cm</Height>
+            <Width>11.39cm</Width>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="RegistrationDateTime2">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=First(Fields!RegistrationDateTime.Value, "ds1")</Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                      <Format>D</Format>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>RegistrationDateTime</rd:DefaultName>
+            <Top>1.71482cm</Top>
+            <Height>0.6cm</Height>
+            <Width>11.39cm</Width>
+            <ZIndex>1</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox7">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=iif((First(Fields!CustomerID.Value, "ds1")&gt;0),
+iif((First(Fields!BatchMovementReasonType.Value, "ds1")=1),
+String.Concat("Recibido de ", First(Fields!CustomerFullName.Value, "ds1").ToString(), " la cantidad de ", FormatCurrency(Abs(First(Fields!AmountQty.Value, "ds1"))), " en ", First(Fields!TenderName.Value, "ds1").ToString(), " por el concepto de ", 
+First(Fields!BatchMovementReason.Value, "ds1").ToString(), ". ", First(Fields!ReasonExplanation.Value, "ds1").ToString()),
+String.Concat("Entregado a ", First(Fields!CustomerFullName.Value, "ds1").ToString(), " la cantidad de ", FormatCurrency(Abs(First(Fields!AmountQty.Value, "ds1"))), " en ", First(Fields!TenderName.Value, "ds1").ToString(), " por el concepto de ", 
+First(Fields!BatchMovementReason.Value, "ds1").ToString(), ". ", First(Fields!ReasonExplanation.Value, "ds1").ToString())),
+iif((First(Fields!BatchMovementReasonType.Value, "ds1")=1),
+String.Concat(First(Fields!ModifiedByFullName.Value, "ds1").ToString(), " ha recibido la cantidad de ", FormatCurrency(Abs(First(Fields!AmountQty.Value, "ds1"))), " en ", First(Fields!TenderName.Value, "ds1").ToString(), " por el concepto de ", 
+First(Fields!BatchMovementReason.Value, "ds1").ToString(), ". ", First(Fields!ReasonExplanation.Value, "ds1").ToString()),
+String.Concat(First(Fields!ModifiedByFullName.Value, "ds1").ToString(), " ha entregado la cantidad de ", FormatCurrency(Abs(First(Fields!AmountQty.Value, "ds1"))), " en ", First(Fields!TenderName.Value, "ds1").ToString(), " por el concepto de ", 
+First(Fields!BatchMovementReason.Value, "ds1").ToString(), ". ", First(Fields!ReasonExplanation.Value, "ds1").ToString()))
+)</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox6</rd:DefaultName>
+            <Top>2.70288cm</Top>
+            <Height>2.13458cm</Height>
+            <Width>15.38521cm</Width>
+            <ZIndex>2</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox5">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Fdo.:</Value>
+                    <Style>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox2</rd:DefaultName>
+            <Top>5.01385cm</Top>
+            <Left>8.89cm</Left>
+            <Height>0.6cm</Height>
+            <Width>2.5cm</Width>
+            <ZIndex>3</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+        </ReportItems>
+        <KeepTogether>true</KeepTogether>
+        <Top>8.79306cm</Top>
+        <Left>1.25095cm</Left>
+        <Height>6.38528cm</Height>
+        <Width>15.38521cm</Width>
+        <ZIndex>3</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Rectangle>
+      <Rectangle Name="Rectangle3">
+        <ReportItems>
+          <Textbox Name="Textbox8">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Nº de RECIBO: </Value>
+                    <Style>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value>=First(Fields!BatchMovementNumber.Value, "ds1")</Value>
+                    <Style>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox3</rd:DefaultName>
+            <Top>0.77142cm</Top>
+            <Height>0.6cm</Height>
+            <Width>11.39cm</Width>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="RegistrationDateTime3">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=First(Fields!RegistrationDateTime.Value, "ds1")</Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                      <Format>D</Format>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>RegistrationDateTime</rd:DefaultName>
+            <Top>1.71482cm</Top>
+            <Height>0.6cm</Height>
+            <Width>11.39cm</Width>
+            <ZIndex>1</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox9">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=iif((First(Fields!CustomerID.Value, "ds1")&gt;0),
+iif((First(Fields!BatchMovementReasonType.Value, "ds1")=1),
+String.Concat("Recibido de ", First(Fields!CustomerFullName.Value, "ds1").ToString(), " la cantidad de ", FormatCurrency(Abs(First(Fields!AmountQty.Value, "ds1"))), " en ", First(Fields!TenderName.Value, "ds1").ToString(), " por el concepto de ", 
+First(Fields!BatchMovementReason.Value, "ds1").ToString(), ". ", First(Fields!ReasonExplanation.Value, "ds1").ToString()),
+String.Concat("Entregado a ", First(Fields!CustomerFullName.Value, "ds1").ToString(), " la cantidad de ", FormatCurrency(Abs(First(Fields!AmountQty.Value, "ds1"))), " en ", First(Fields!TenderName.Value, "ds1").ToString(), " por el concepto de ", 
+First(Fields!BatchMovementReason.Value, "ds1").ToString(), ". ", First(Fields!ReasonExplanation.Value, "ds1").ToString())),
+iif((First(Fields!BatchMovementReasonType.Value, "ds1")=1),
+String.Concat(First(Fields!ModifiedByFullName.Value, "ds1").ToString(), " ha recibido la cantidad de ", FormatCurrency(Abs(First(Fields!AmountQty.Value, "ds1"))), " en ", First(Fields!TenderName.Value, "ds1").ToString(), " por el concepto de ", 
+First(Fields!BatchMovementReason.Value, "ds1").ToString(), ". ", First(Fields!ReasonExplanation.Value, "ds1").ToString()),
+String.Concat(First(Fields!ModifiedByFullName.Value, "ds1").ToString(), " ha entregado la cantidad de ", FormatCurrency(Abs(First(Fields!AmountQty.Value, "ds1"))), " en ", First(Fields!TenderName.Value, "ds1").ToString(), " por el concepto de ", 
+First(Fields!BatchMovementReason.Value, "ds1").ToString(), ". ", First(Fields!ReasonExplanation.Value, "ds1").ToString()))
+)</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox6</rd:DefaultName>
+            <Top>2.70288cm</Top>
+            <Height>2.13458cm</Height>
+            <Width>15.38521cm</Width>
+            <ZIndex>2</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox10">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Fdo.:</Value>
+                    <Style>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox2</rd:DefaultName>
+            <Top>5.01385cm</Top>
+            <Left>8.89cm</Left>
+            <Height>0.6cm</Height>
+            <Width>2.5cm</Width>
+            <ZIndex>3</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+        </ReportItems>
+        <KeepTogether>true</KeepTogether>
+        <Top>16.99407cm</Top>
+        <Left>1.25095cm</Left>
+        <Height>6.38528cm</Height>
+        <Width>15.38521cm</Width>
+        <ZIndex>4</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Rectangle>
+    </ReportItems>
+    <Height>25cm</Height>
+    <Style />
+  </Body>
+  <Width>18cm</Width>
+  <Page>
+    <PageHeight>29.7cm</PageHeight>
+    <PageWidth>21cm</PageWidth>
+    <LeftMargin>1cm</LeftMargin>
+    <RightMargin>1cm</RightMargin>
+    <TopMargin>2cm</TopMargin>
+    <BottomMargin>2cm</BottomMargin>
+    <ColumnSpacing>0.13cm</ColumnSpacing>
+    <Style />
+  </Page>
+  <Language>es</Language>
+  <rd:ReportID>06dcb11e-8be0-4982-b38a-7e835e87ffb9</rd:ReportID>
+  <rd:ReportUnitType>Cm</rd:ReportUnitType>
+</Report>

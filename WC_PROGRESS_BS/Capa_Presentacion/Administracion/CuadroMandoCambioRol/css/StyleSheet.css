@@ -1,0 +1,22 @@
+﻿
+.tile {
+    border:5px solid #428bca;
+    width:30%;
+    height:100px;    
+    text-align:center;
+    letter-spacing:2px;
+    display:table;
+    border-radius:10px;    
+}
+
+.tile span {
+    display:table-cell;
+    vertical-align:middle;        
+    width:88%;
+}
+
+.num {
+    background-color: #428bca;
+    font-size:30px;
+    color:#FFFFFF;
+}

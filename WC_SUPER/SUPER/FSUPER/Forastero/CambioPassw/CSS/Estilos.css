@@ -1,0 +1,162 @@
+﻿
+#divCambioPass
+{
+    background-color: #fff;
+    -pie-background: linear-gradient(top, #fff, #eee);
+    height: auto;
+    width: 400px;
+    margin: -150px 0 0 -230px;
+    padding: 30px;
+    position: absolute;
+    top: 15%;
+    left: 45%;
+    z-index: 0;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.2), 0 1px 1px rgba(0, 0, 0, .2), 0 3px 0 #fff, 0 4px 0 rgba(0, 0, 0, .2), 0 6px 0 #fff, 0 7px 0 rgba(0, 0, 0, .2);
+    -moz-box-shadow: 0 0 2px rgba(0, 0, 0, 0.2), 1px 1px 0 rgba(0, 0, 0, .1), 3px 3px 0 rgba(255, 255, 255, 1), 4px 4px 0 rgba(0, 0, 0, .1), 6px 6px 0 rgba(255, 255, 255, 1), 7px 7px 0 rgba(0, 0, 0, .1);
+    background-image: linear-gradient(top, #fff, #eee);/*ie 6-9 via PIE*/
+    /*Permite usar algunos atributos CSS3 en versiones de IE*/
+    behavior: url(../../PIE.htc);
+}
+
+/*Marco punteado*/
+#divCambioPass:before
+{
+    content: '';
+    position: absolute;
+    z-index: -1;
+    border: 1px dashed #ccc;
+    top: 5px;
+    bottom: 5px;
+    left: 5px;
+    right: 5px;
+    -moz-box-shadow: 0 0 0 1px #fff;
+    -webkit-box-shadow: 0 0 0 1px #fff;
+    box-shadow: 0 0 0 1px #fff;
+   
+}
+
+h1
+{
+    text-shadow: 0 1px 0 rgba(255, 255, 255, .7), 0px 2px 0 rgba(0, 0, 0, .5);
+    text-transform: uppercase;
+    text-align: center;    
+    margin: 0 0 30px 0;
+    letter-spacing: 4px;
+    font: normal 20px Verdana, Helvetica;
+    position: relative;
+}
+
+/*Imágenes de los inputs url(../../../Images/cambio-pass.png)*/
+input[type="text"],input[type="password"]   {        
+    /*background: #f1f1f1 url(https://extranet.ibermatica.com/Anonimo/images/cambio-pass.png) no-repeat;  */
+    background: #f1f1f1 url(../../Images/cambio-pass.png) no-repeat;  
+    padding: 10px 10px 10px 30px;
+    margin: 0 0 10px 0;
+    width: 250px; /* 353 + 2 + 45 = 400 */
+    border: 1px solid #ccc;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    -moz-box-shadow: 0 1px 1px #ccc inset, 0 1px 0 #fff;
+    -webkit-box-shadow: 0 1px 1px #ccc inset, 0 1px 0 #fff;
+    box-shadow: 0 1px 1px #ccc inset, 0 1px 0 #fff;
+    font: normal 12px Verdana, Helvetica;
+   
+   
+}
+
+#txtUser{background-position: 5px -8px !important;}
+#txtPasswAnt,#txtPasswAct,#txtRepPassw{background-position: 5px -58px !important;}
+
+/*FIN Imágenes de los inputs*/
+
+#txtUser,#txtPasswAnt,#txtPasswAct,#txtRepPassw
+{
+	color:#666;		
+	display:block;
+	margin-bottom:3px;	
+	font-weight:bold;
+}
+
+/*Estilo botones*/
+#btnGrabar,#btnSalir
+{		
+    background-color: #ffb94b;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#fddb6f), to(#ffb94b));
+    background-image: -webkit-linear-gradient(top, #fddb6f, #ffb94b);
+    background-image: -moz-linear-gradient(top, #fddb6f, #ffb94b);
+    background-image: -ms-linear-gradient(top, #fddb6f, #ffb94b);
+    background-image: -o-linear-gradient(top, #fddb6f, #ffb94b);
+    background-image: linear-gradient(top, #fddb6f, #ffb94b);
+    
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    
+    text-shadow: 0 1px 0 rgba(255,255,255,0.5);
+    
+     -moz-box-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.3) inset;
+     -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.3) inset;
+     box-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.3) inset;    
+    
+    border-width: 1px;
+    border-style: solid;
+    border-color: #d69e31 #e3a037 #d5982d #e3a037;
+    float: left;
+    height: 30px;
+    padding: 0;
+    width: 150px;
+    cursor: pointer;
+    font: bold 15px Arial, Helvetica;
+    color: #8f5a0a;
+	margin-top:5px;	
+	text-align:center;   	
+	
+}
+
+input[type="text"]:focus,input[type="password"]:focus
+{
+    border-width: 1px;
+    border-style: solid;
+    border-color: #d69e31 #e3a037 #d5982d #e3a037;
+}
+
+#btnGrabar:hover,#btnGrabar:focus,#btnSalir:hover,#btnSalir:focus
+{		
+    background-color: #fddb6f;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#ffb94b), to(#fddb6f));
+    background-image: -webkit-linear-gradient(top, #ffb94b, #fddb6f);
+    background-image: -moz-linear-gradient(top, #ffb94b, #fddb6f);
+    background-image: -ms-linear-gradient(top, #ffb94b, #fddb6f);
+    background-image: -o-linear-gradient(top, #ffb94b, #fddb6f);
+    background-image: linear-gradient(top, #ffb94b, #fddb6f);      
+}	
+
+#btnGrabar:active,#btnSalir:active,input[type="text"]:active,input[type="password"]:active
+{		
+    outline: none;
+   
+     -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;
+     -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;
+     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;	
+     
+    
+}
+
+#btnGrabar::-moz-focus-inner,#btnSalir::-moz-focus-inner
+{
+  border: none;  
+}
+
+/*FIN estilo botones*/
+
+
+.links{color:#666;text-decoration:none;font: normal 12px Verdana, Helvetica;}
+
+.links:hover {text-decoration:underline;}
+
+
+    

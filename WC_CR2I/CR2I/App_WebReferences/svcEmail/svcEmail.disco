@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="https://ibserviweb:8440/Robocor2Listener/svcEmail.asmx?wsdl" docRef="https://ibserviweb:8440/Robocor2Listener/svcEmail.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="https://ibserviweb:8440/Robocor2Listener/svcEmail.asmx" xmlns:q1="http://ROBOCOR2.ibermatica.com" binding="q1:svcEmailSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <soap address="https://ibserviweb:8440/Robocor2Listener/svcEmail.asmx" xmlns:q2="http://ROBOCOR2.ibermatica.com" binding="q2:svcEmailSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>

@@ -1,0 +1,1 @@
+alter table ReplenishmentOrder add CurrentLocationId int, CustomerEpisodeId int

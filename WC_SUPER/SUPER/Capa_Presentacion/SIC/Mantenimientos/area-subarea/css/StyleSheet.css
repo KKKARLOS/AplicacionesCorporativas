@@ -1,0 +1,128 @@
+﻿
+/*REVISAR PARA SACAR A GENÉRICO (TABLAS Y DATATABLES)*/
+table th {
+    background-color: #337ab7;
+    color: #fff;
+    text-align: center;
+    border: 1px solid #ddd;   
+    white-space: nowrap;
+}
+
+table tr {
+    cursor:pointer;
+}
+
+#tablaFigurasArea {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;    
+}
+
+#tablaFigurasArea thead, #tablaFigurasArea tbody, #tablaFigurasArea tr, #tablaFigurasArea td, #tablaFigurasArea th { display: block; }
+
+#tablaFigurasArea tr:after {
+    content: ' ';
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+
+
+#tablaFigurasArea tbody {
+    height: 30vh;
+    overflow-y: auto;
+}
+
+#tablaFigurasArea thead {
+    /* fallback */
+    width: 97%;
+    /* minus scroll bar width */
+    /*width: calc(100% - 17px);*/
+    width:100%;
+}
+
+#tablaFigurasArea tbody td:nth-child(1) {line-height:1.65em;}            
+#tablaFigurasArea tbody td:nth-child(1), #tablaFigurasArea thead th:nth-child(1) {
+    width: 55%;
+    float: left;    
+}
+
+#tablaFigurasArea tbody td:nth-child(2), #tablaFigurasArea thead th:nth-child(2) {
+    width: 15%;
+    float: left;
+    
+}
+
+#tablaFigurasArea tbody td:nth-child(3), #tablaFigurasArea thead th:nth-child(3) {
+    width: 15%;
+    float: left;
+    
+}
+
+#tablaFigurasArea tbody td:nth-child(4), #tablaFigurasArea thead th:nth-child(4) {
+    width: 15%;
+    float: left;
+    
+}
+
+#tablaFigurasArea tbody td:last-child, #tablaFigurasArea thead th:last-child {
+    border-right: none;
+}
+
+/*TABLA SUBAREA*/
+#tablaSubArea {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;    
+}
+
+#tablaSubArea thead, #tablaSubArea tbody, #tablaSubArea tr, #tablaSubArea td, #tablaSubArea th { display: block; }
+
+#tablaSubArea tr:after {
+    content: ' ';
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+
+
+#tablaSubArea tbody {
+    height: 30vh;
+    overflow-y: auto;
+}
+
+#tablaSubArea thead {
+    /* fallback */
+    width: 97%;
+    /* minus scroll bar width */
+    /*width: calc(100% - 17px);*/
+    width:100%;
+}
+
+#tablaSubArea tbody td:nth-child(1) {line-height:1.65em;}            
+#tablaSubArea tbody td:nth-child(1), #tablaSubArea thead th:nth-child(1) {
+    width: 55%;
+    float: left;    
+}
+
+#tablaSubArea tbody td:nth-child(2), #tablaSubArea thead th:nth-child(2) {
+    width: 15%;
+    float: left;
+    
+}
+
+#tablaSubArea tbody td:nth-child(3), #tablaSubArea thead th:nth-child(3) {
+    width: 15%;
+    float: left;
+    
+}
+
+#tablaSubArea tbody td:nth-child(4), #tablaSubArea thead th:nth-child(4) {
+    width: 15%;
+    float: left;
+    
+}
+
+#tablaSubArea tbody td:last-child, #tablaSubArea thead th:last-child {
+    border-right: none;
+}

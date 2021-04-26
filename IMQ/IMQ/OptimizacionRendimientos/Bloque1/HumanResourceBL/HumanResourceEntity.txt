@@ -1,0 +1,96 @@
+using System;
+using System.IO;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
+using Microsoft.Practices.EnterpriseLibrary.Validation.Validators;
+using SII.Framework.Interfaces;
+
+namespace SII.HCD.BackOffice.Entities
+{
+    [DataContract()]
+    [Serializable()]
+    public class HumanResourceEntity : IStatusEntity, ICloneable
+    {
+        #region Properties
+        [DataMember()]
+        public int ID { get; set; }
+        [DataMember()]
+        public PersonEntity Person { get; set; }
+        [DataMember()]
+        public bool AdmitNotification { get; set; }
+        [DataMember()]
+        public bool IncludingEmail { get; set; }
+        [DataMember()]
+        public string FileNumber { get; set; }
+        [DataMember()]
+        public bool HasAvailability { get; set; }
+        [DataMember()]
+        public HHRRProfileRelEntity[] Profiles { get; set; }
+        [DataMember()]
+        public PersonAvailPatternEntity[] AvailPatterns { get; set; }
+        [DataMember()]
+        public ResourceDeviceEntity[] AllocatedDevices { get; set; }
+        [DataMember()]
+        public PersonCareCenterAccessEntity[] CareCentersAccess { get; set; }
+
+
+        [DataMember()]
+        public DateTime LastUpdated { get; set; }
+        [DataMember()]
+        [StringLengthValidator(0, 256)]
+        public string ModifiedBy { get; set; }
+        [DataMember()]
+        public bool AllowNoDefaultIdentifier { get; set; }
+        [DataMember()]
+        public Int64 DBTimeStamp { get; set; }
+        [DataMember()]
+        public EditStatusEntity EditStatus { get; set; }
+        #endregion
+
+        #region Constructors
+        public HumanResourceEntity() : this(0, null, false, false, String.Empty, false, null, null, null, null, DateTime.MinValue, String.Empty, false, 0) { }
+
+        public HumanResourceEntity(int id, PersonEntity person, bool admitNotification, bool includingEmail, string fileNumber, bool hasAvailability, HHRRProfileRelEntity[] profiles,
+            PersonAvailPatternEntity[] availPatterns, ResourceDeviceEntity[] allocatedDevices, PersonCareCenterAccessEntity[] careCentersAccess,
+            DateTime lastUpdated, string modifiedBy, bool allowNoDefaultIdentifier, Int64 dbTimeStamp)
+        {
+            ID = id;
+            Person = person;
+            AdmitNotification = admitNotification;
+            IncludingEmail = includingEmail;
+            FileNumber = fileNumber;
+            HasAvailability = hasAvailability;
+            Profiles = profiles;
+            AvailPatterns = availPatterns;
+            AllocatedDevices = allocatedDevices;
+            CareCentersAccess = careCentersAccess;
+            LastUpdated = lastUpdated;
+            ModifiedBy = modifiedBy;
+            DBTimeStamp = dbTimeStamp;
+            AllowNoDefaultIdentifier = allowNoDefaultIdentifier;
+            EditStatus = new EditStatusEntity();
+        }
+        #endregion
+
+        #region ICloneable Members
+        public virtual object Clone()
+        {
+            object clonedObject = null;
+            MemoryStream ms = new MemoryStream();
+            try
+            {
+                BinaryFormatter bf = new BinaryFormatter();
+
+                bf.Serialize(ms, this);
+                ms.Seek(0, SeekOrigin.Begin);
+                clonedObject = bf.Deserialize(ms);
+            }
+            finally
+            {
+                ms.Close();
+            }
+            return clonedObject;
+        }
+        #endregion
+    }
+}

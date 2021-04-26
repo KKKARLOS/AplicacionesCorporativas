@@ -1,0 +1,57 @@
+using System;
+using System.Data;
+using System.Configuration;
+using System.Collections;
+using System.Web;
+using System.Web.Security;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Web.UI.WebControls.WebParts;
+using System.Web.UI.HtmlControls;
+using SUPER.Capa_Negocio;
+
+
+public partial class Default : System.Web.UI.Page
+{
+    public string sErrores = "";
+
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        try
+        {
+            if (Session["IDRED"] == null)
+            {
+                try
+                {
+                    Response.Redirect("~/SesionCaducadaModal.aspx", true);
+                }
+                catch (System.Threading.ThreadAbortException) { return; }
+            }
+
+            if (Request.QueryString["sD"] != null || Request.QueryString["sH"] != null)
+            {
+                if (Request.QueryString["sD"] != null)
+                {
+                    string sDesde = (Utilidades.decodpar(Request.QueryString["sD"].ToString()) != "") ? Utilidades.decodpar(Request.QueryString["sD"].ToString()) : Fechas.FechaAAnnomes(DateTime.Now).ToString();
+                    cboDesde.Value = int.Parse(sDesde.Substring(4, 2)).ToString();
+                    txtDesde.Text = sDesde.Substring(0, 4);
+                }
+                if (Request.QueryString["sH"] != null)
+                {
+                    string sHasta = (Utilidades.decodpar(Request.QueryString["sH"].ToString()) != "") ? Utilidades.decodpar(Request.QueryString["sH"].ToString()) : Fechas.FechaAAnnomes(DateTime.Now).ToString();
+                    cboHasta.Value = int.Parse(sHasta.Substring(4, 2)).ToString();
+                    txtHasta.Text = sHasta.Substring(0, 4);
+                }
+            }
+            else
+            {
+                txtDesde.Text = DateTime.Now.Year.ToString();
+                txtHasta.Text = DateTime.Now.Year.ToString();
+            }
+        }
+        catch (Exception ex)
+        {
+            sErrores += Errores.mostrarError("Error al obtener los datos", ex);
+        }
+    }
+}

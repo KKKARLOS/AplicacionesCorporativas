@@ -1,0 +1,8 @@
+﻿#tableOne {border-collapse:collapse; table-layout:fixed; width:800px; font:normal 11px arial; border:1px solid #aaa}
+#tableOne thead th {background:#aaa; color:#fff; border:1px solid #000; cursor:pointer}
+#tableOne tbody td {text-indent:5px; border:1px solid #aaa;}
+ 
+.ghostTd {width:auto; height:auto; padding:2px 8px; border:1px solid #000; position:absolute; font:normal 10px arial; background:#eee;}
+.dragging {background:#eee; color:#000}
+.hovering {background:#ccc; color:#555}
+ 

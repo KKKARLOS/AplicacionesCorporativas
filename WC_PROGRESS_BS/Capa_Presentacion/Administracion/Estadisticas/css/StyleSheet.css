@@ -1,0 +1,337 @@
+﻿
+ .container  {
+    width:970px !important;
+}
+
+.H22 {
+    height:22px;
+}
+
+.w100 {width:100px;}
+.w102 {width:102px;}
+.w105 {width:105px;}
+.w115 {width:115px;}
+.w110 {width:110px;}
+.w200 {width:200px;}
+.separador2 {width:2px;}
+    
+
+.pl {
+    text-align:left;
+    padding-left:0 !important;
+}
+
+
+.naranja {
+    color:#D58436;
+}
+
+
+
+#evaluador {
+    width: 349px;
+    padding-left:2px;
+}
+
+#divEvaluador {
+    margin-top: -50px;    
+}
+#lblEvaluador {
+    margin-left:-10px;
+    width:90px;
+    text-decoration:underline;
+}
+
+#divNivel {
+    margin-bottom: 10px;
+}
+
+#txtFantiguedad {
+    width: 80px;
+    text-align:center;
+}
+
+#divtxtFantiguedad, #divcboFantiguedad {
+    margin-top:25px;
+    float:right;
+    margin-bottom:10px;
+}
+
+#divSituacion {
+    margin-top: -15px;
+}
+
+#divSituacion span {
+    margin-left:2px;
+    margin-right:20px;
+}
+
+#tblProfesionales, #tblEvaluaciones {
+    margin-bottom:0;
+}
+
+#cboAntRef, #cboProfundizacion, #cboColectivo {
+    width: 160px
+}
+
+
+#divSituacion select {
+    width: 349px;    
+}
+
+/*MANO EN ELEMENTOS LISTA EVALUADORES*/
+#lisEvaluadores li {
+    cursor:pointer;
+}
+
+#lisEvaluadores .list-group-item{
+    /*padding: 0 15px;*/
+}
+
+
+/*ICONO PDF*/
+i.fa.fa-file-pdf-o {
+    color: #D22A2A;
+}
+
+/*ALINEACIÓN DERECHA DE CELDAS*/
+#tblProfesionales tbody > tr > td, #tblEvaluaciones tbody > tr > td  {
+    text-align:right;    
+}
+
+thead > tr > th {
+    text-align:right;
+}
+
+tbdFoto tbody > tr > td {
+    text-align:left;
+}
+
+/*tbdFoto thead > tr > th {
+    text-align:left;
+}
+#tblEvaluaciones >  tbody > tr  {
+    border-top:0;
+}*/
+
+#headertblFotos th {
+    text-align :left;
+}
+
+
+#tbody > tr > td:nth-child(1) {
+    text-align:left;
+}
+
+/*PANEL CON TÍTULO EN LA PARTE IZQUIERDA*/
+.panel {
+    position: relative;
+    border-radius:0;
+}
+
+#panelProfesionales {margin-bottom:0}
+    
+
+.panel-primary > .panel-cabeceraizquierda {
+    color: #fff;
+    background-color: #428bca;
+    border-color: #428bca;
+}
+
+
+.panel-cabeceraizquierda {
+    width: 42px;
+    padding: 10px 15px;
+    border-right: 1px solid transparent;
+    border-bottom: 1px solid transparent;   
+    float: left;
+    height: 100%;
+    position: absolute;
+}
+
+.panel-tituloizquierda {    
+    margin-bottom: 0;
+    margin-left: -5px;
+    font-size: 16px;
+    color: inherit;
+    -webkit-transform: rotate(-90deg);
+    -webkit-transform-origin: left top;
+    -moz-transform: rotate(-90deg);
+    -moz-transform-origin: left top;
+    -ms-transform: rotate(-90deg);
+    -ms-transform-origin: left top;
+    -o-transform: rotate(-90deg);
+    -o-transform-origin: left top;
+    transform: rotate(-90deg);
+    transform-origin: left top;
+    position: absolute;
+    white-space: nowrap;
+}
+
+#panelProfesionales .panel-tituloizquierda {
+    margin-top: 90px;
+}
+
+#panelEvaluaciones {
+    margin-bottom:10px !important;
+}
+
+
+#panelEvaluaciones .panel-tituloizquierda {
+    margin-top: 141px;
+    
+}
+
+
+#h3Profesionales {
+    margin-left: -12px;
+}
+
+#h3Dependientes {
+    margin-left: 5px;
+}
+
+.panel-contenido {
+    float: left;
+    margin-left: 45px;
+    padding: 15px;
+    padding-top:5px;
+    padding-bottom:0;
+}
+
+table > tbody > tr:nth-child(1) > td {
+    border-top:none;
+}
+
+#tblHeader {
+    margin-left:40px;
+}
+
+/*#tblProfesionales, #tblEvaluaciones{
+    height:147px;
+}*/
+
+i.fa.fa-file-excel-o {
+    margin-right:2px;
+}
+
+/*NO BORRAR TEXTO SELLO*/
+div.box
+{ 
+  /*border:solid 1px #333;*/
+  display:inline-block;
+  vertical-align:top;
+  box-sizing:border-box;
+  /*padding:10px;*/
+  color:#999;
+  position:relative;
+  margin-right:250px;
+}
+
+div.box.sello:after
+{
+    content:"27/06/2015";
+    position:absolute;
+    top:70px;
+    left:10px;
+    z-index:1;
+    font-family:Arial,sans-serif;
+    -webkit-transform: rotate(-45deg); /* Safari */
+    -moz-transform: rotate(-45deg); /* Firefox */
+    -ms-transform: rotate(-45deg); /* IE */
+    -o-transform: rotate(-45deg); /* Opera */
+    transform: rotate(-45deg);
+    font-size:40px;
+    color:#c00;
+    background:#fff;
+    border:solid 4px #c00;
+    padding:5px;
+    border-radius:5px;
+    zoom:1;
+    filter:alpha(opacity=20);
+    opacity:0.2;
+    -webkit-text-shadow: 0 0 2px #c00;
+    text-shadow: 0 0 2px #c00;
+    box-shadow: 0 0 2px #c00;
+}
+/*FIN NO BORRAR TEXTO SELLO*/
+
+#lisEvaluadores {
+    max-height:48vh;
+    overflow:auto;
+}
+
+#tbdFoto {
+    cursor:pointer;
+}
+
+#tbdFoto > tr.active {
+    background-color:#D8D8D8 !important;
+}
+
+/*Tenemos que heredar la clase activa del padre(tr)*/
+#tbdFoto > tr.active > td {
+    background-color:inherit;
+}
+
+#panelFotos {
+    max-height: 49vh;
+    overflow: auto;
+}
+
+#txtNombreFoto {
+    width: 475px;
+}
+
+/*Hacemos salto de línea en el caso de que el nombre de la foto no hubiera espacios*/
+#tbdFoto td:nth-child(1) {
+    word-break: break-word;
+}
+
+/*CALENDARIO DATEPICKER (para que la tabla se ajuste al 100%*/
+.ui-datepicker-calendar {
+  display: inline-table;
+}
+
+.textoSinEstilos {
+    color: #333333 !important;
+    text-decoration:none !important;
+}
+
+#lblEvaluador[disabled] {
+    opacity: 1 !important;
+}
+.fa.fa-file-pdf-o{
+    cursor:pointer;
+}
+
+#modal-evaluadores input {
+    width:150px;
+}
+
+#btnCancelar {
+    margin-left:7px;
+}
+
+.table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
+    padding:6px !important;
+}
+
+#btnRestablecer {
+    margin-left:85px;
+    margin-top:1px;
+}
+
+.spanFiltros4 {
+    margin-top:4px !important;
+    display:inline-block;
+}
+
+.glyphicon.glyphicon-info-sign {
+    margin-right:5px;
+}
+
+.transparent {
+    color:transparent !important;
+    cursor:default !important;
+}

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="05942d16-c13d-43dd-b8da-852b182ad63c" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://services.intranet.ibermatica/SUPER-CVT/svcSUPER.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="svcSUPER.disco" MetadataType="Disco" ID="9dca8882-aedf-4d04-b79c-5ad5bf46e538" SourceId="1" SourceUrl="http://services.intranet.ibermatica/SUPER-CVT/svcSUPER.svc?disco" />
+    <MetadataFile FileName="svcSUPER.xsd" MetadataType="Schema" ID="8bec5d87-570f-414e-8242-bdac26618db2" SourceId="1" SourceUrl="http://services.intranet.ibermatica/SUPER-CVT/svcSUPER.svc?xsd=xsd4" />
+    <MetadataFile FileName="svcSUPER.wsdl" MetadataType="Wsdl" ID="1f7b6cab-991e-453a-be92-b88d9eff1685" SourceId="1" SourceUrl="http://services.intranet.ibermatica/SUPER-CVT/svcSUPER.svc?wsdl" />
+    <MetadataFile FileName="svcSUPER1.xsd" MetadataType="Schema" ID="9370cdbc-0c19-44d7-9943-a80fed48ed6f" SourceId="1" SourceUrl="http://services.intranet.ibermatica/SUPER-CVT/svcSUPER.svc?xsd=xsd2" />
+    <MetadataFile FileName="svcSUPER2.xsd" MetadataType="Schema" ID="1d714c3d-660e-4141-b4d6-c4205fef0db9" SourceId="1" SourceUrl="http://services.intranet.ibermatica/SUPER-CVT/svcSUPER.svc?xsd=xsd1" />
+    <MetadataFile FileName="svcSUPER3.xsd" MetadataType="Schema" ID="04d6fd5c-e169-4399-8933-23c2a8ea5e12" SourceId="1" SourceUrl="http://services.intranet.ibermatica/SUPER-CVT/svcSUPER.svc?xsd=xsd0" />
+    <MetadataFile FileName="svcSUPER4.xsd" MetadataType="Schema" ID="91e7b1cf-7454-4d1e-a281-def1f3290272" SourceId="1" SourceUrl="http://services.intranet.ibermatica/SUPER-CVT/svcSUPER.svc?xsd=xsd5" />
+    <MetadataFile FileName="svcSUPER5.xsd" MetadataType="Schema" ID="5f75340d-00f1-4db9-ba66-2d5fdaa7af9c" SourceId="1" SourceUrl="http://services.intranet.ibermatica/SUPER-CVT/svcSUPER.svc?xsd=xsd3" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode url="/Capa_Presentacion/Home/Home.aspx" title="Home" description="" roles="*">
+    <siteMapNode title="Evaluaciones"  description="" resourceKey="fa fa-file-text" roles="PBAS,PEVA,PVIS">
+      <siteMapNode title="Mis evaluaciones" url="~/Capa_Presentacion/Evaluacion/MisEvaluaciones/Default.aspx" description="Mis evaluaciones" roles="PBAS"/>
+      <!--<siteMapNode title="Mis evaluaciones2" url="~/Capa_Presentacion/Evaluacion/MisEvaluaciones2/Default.aspx" description="Mis evaluaciones" roles="PBAS"/>-->
+      <siteMapNode title="Evaluaciones de mi equipo" url="~/Capa_Presentacion/Evaluacion/DeMiEquipo/Default.aspx"   description="Evaluaciones de mi equipo" roles="PEVA,PVIS" />
+      <siteMapNode title="Abrir nuevas evaluaciones"  url="~/Capa_Presentacion/Evaluacion/Abrir/Default.aspx" description="Abrir nuevas evaluaciones" roles="PEVA"/>
+      <siteMapNode title="Completar evaluaciones abiertas" url="~/Capa_Presentacion/Evaluacion/CompletarAbierta/Default.aspx" description="Completar evaluaciones abiertas" roles="PEVA"/>
+      <siteMapNode title="Estadísticas" url="~/Capa_Presentacion/Administracion/Estadisticas/Default.aspx?origen=EVA" description="" roles="PEVA"/>
+      <!--Se quitó a petición de RRRH-->
+      <!--<siteMapNode title="Buscar evaluaciones" url="~/Capa_Presentacion/Evaluacion/Busqueda/Default.aspx?origen=EVA" description="Consulta evaluaciones" roles="PEVA"/>-->
+    </siteMapNode>
+    <siteMapNode title="Equipo"  description=""  resourceKey="fa fa-users" roles="PEVA,PPFE">
+      <siteMapNode url="~/Capa_Presentacion/MiEquipo/Confirmarlo/Default.aspx" title="Confirmar mi equipo"  description="Confirmar mi equipo" roles="PEVA" />
+      <siteMapNode title="Tramitar salidas de mi equipo" url="~/Capa_Presentacion/MiEquipo/TramitarSalidas/Default.aspx" description="Tramitar salidas de mi equipo" roles="PEVA"/>
+      <siteMapNode title="Gestionar entradas a mi equipo" url="~/Capa_Presentacion/MiEquipo/GestIncorporaciones/Default.aspx" description="Gestionar entradas en trámite a mi equipo" roles="PEVA,PPFE"/>
+      <siteMapNode url="~/Capa_Presentacion/MiEquipo/ArbolDependencias/Default.aspx?origen=EVA" title="Árbol de dependencias"  description="" roles="PEVA"/>
+
+    </siteMapNode>
+
+    <siteMapNode title="Roles"  description=""  resourceKey="fa fa-cubes" roles="PEVA,PAPR">
+      <siteMapNode url="~/Capa_Presentacion/MiEquipo/SolicitarCambioRol/Default.aspx" title="Solicitar cambio de rol"  description="" roles="PEVA"/>
+      <siteMapNode url="~/Capa_Presentacion/MiEquipo/GestionarSolicitudCambioRol/Default.aspx" title="Gestionar solicitudes de cambio de rol"  description="" roles="PAPR"/>
+      <siteMapNode url="~/Capa_Presentacion/MiEquipo/DesgloseRol/Default.aspx?origen=EVA" title="Profesionales por rol"  description="" roles="PEVA"/>
+    </siteMapNode>
+
+    <siteMapNode title="Administración"  description=""  resourceKey="fa fa-cogs" roles="AADM,SADM,REC">
+      <siteMapNode url="~/Capa_Presentacion/Administracion/Mantenimientos/Reconexion/Default.aspx" title="Reconexión"  description="" roles="REC"/>
+      <siteMapNode url="~/Capa_Presentacion/Administracion/Mantenimientos/GestionCambioResponsable/Default.aspx" title="Cambiar evaluador"  description="" roles="AADM,SADM"/>
+      
+      <siteMapNode url="~/Capa_Presentacion/Administracion/CuadroMandoCambioRol/Default.aspx" title="Cuadro de mando para cambio de roles"  description="" roles="AADM,SADM">
+        <siteMapNode url="~/Capa_Presentacion/Administracion/CuadroMandoCambioRol/SolicitudesAprobadas/Default.aspx" title="Solicitudes aprobadas"  description="" roles="AADM,SADM"/>
+        <siteMapNode url="~/Capa_Presentacion/Administracion/CuadroMandoCambioRol/SolicitudesNoAprobadas/Default.aspx" title="Solicitudes rechazadas"  description="" roles="AADM,SADM"/>
+        <siteMapNode url="~/Capa_Presentacion/Administracion/CuadroMandoCambioRol/SolicitudesAprobadasStandby/Default.aspx" title="Solicitudes aprobadas en Stand by"  description="" roles="AADM,SADM"/>
+        <siteMapNode url="~/Capa_Presentacion/Administracion/CuadroMandoCambioRol/SolicitudesNoAprobadasStandby/Default.aspx" title="Solicitudes rechazadas en Stand by"  description="" roles="AADM,SADM"/>
+       </siteMapNode>
+
+      <siteMapNode title="Mantenimiento de maestros"  description="" roles="AADM,SADM">
+        <siteMapNode url="~/Capa_Presentacion/Administracion/Mantenimientos/Perfiles/Default.aspx" title="Perfiles"  description="" roles="AADM,SADM"/>
+        <siteMapNode url="~/Capa_Presentacion/Administracion/Mantenimientos/ComunidadProgess/Default.aspx" title="Comunidad Progress"  description="" roles="AADM,SADM"/>        
+        <siteMapNode url="~/Capa_Presentacion/Administracion/Mantenimientos/RolesAprobadores/Default.aspx" title="Roles aprobadores"  description="" roles="AADM,SADM"/>
+        <siteMapNode title="Antigüedad de referencia" url="~/Capa_Presentacion/Administracion/Mantenimientos/FechaAntiguedad/Default.aspx" description="" roles="AADM,SADM"/>
+        <siteMapNode title="Colectivo forzado" url="~/Capa_Presentacion/Administracion/Mantenimientos/ColectivoForzado/Default.aspx" description="" roles="AADM,SADM"/>
+        <siteMapNode url="~/Capa_Presentacion/Administracion/Mantenimientos/CategoriaColectivo/Default.aspx" title="Categoría profesional/Colectivo"  description="" roles="AADM,SADM"/>
+        <siteMapNode url="~/Capa_Presentacion/Administracion/Mantenimientos/ModeloFormulario/Default.aspx" title="Colectivo/Modelo de formulario"  description="" roles="AADM,SADM"/>
+        <siteMapNode url="~/Capa_Presentacion/Administracion/Mantenimientos/BulaDeAvisos/Default.aspx" title="Bula de avisos"  description="" roles="AADM,SADM"/>
+
+        <siteMapNode title="Visiones forzadas (no AD)"  description="" roles="AADM,SADM">
+          <siteMapNode title="Directas" url="~/Capa_Presentacion/Administracion/Mantenimientos/VisionesAjenasArbol/Default.aspx" description="" roles="AADM,SADM"/>
+          <siteMapNode title="Agregadas" url="~/Capa_Presentacion/Administracion/Mantenimientos/VisionesAjenasArbol2/Default.aspx" description="" roles="AADM,SADM"/>
+        </siteMapNode>
+        <!--<siteMapNode url="~/Capa_Presentacion/Administracion/Mantenimientos/ImagenHome/Default.aspx" title="Imagen Home"  description="" roles="AADM,SADM"/>-->
+        <siteMapNode url="~/Capa_Presentacion/Administracion/Mantenimientos/TemporadaProgress/Default.aspx" title="Temporada Progress"  description="" roles="AADM,SADM"/>
+
+
+      </siteMapNode>
+      <siteMapNode title="Buscar evaluaciones" url="~/Capa_Presentacion/Evaluacion/Busqueda/Default.aspx?origen=ADM" description="Consulta evaluaciones" roles="AADM,SADM"/>
+      <siteMapNode title="Estadísticas por evaluador" url="~/Capa_Presentacion/Administracion/Estadisticas/Default.aspx?origen=ADM" description="" roles="AADM,SADM"/>
+      <siteMapNode title="Estadísticas globales" url="~/Capa_Presentacion/Administracion/AdmEstadisticasRRHH/Default.aspx" description="" roles="AADM,SADM"/>
+      <siteMapNode title="Profesionales por rol" url="~/Capa_Presentacion/MiEquipo/DesgloseRol/Default.aspx?origen=ADM" description="" roles="AADM,SADM"/>
+      <siteMapNode url="~/Capa_Presentacion/Administracion/HistoricoRoles/Default.aspx" title="Histórico de roles"  description="" roles="AADM,SADM"/>
+      <siteMapNode title="Árbol de dependencias" url="~/Capa_Presentacion/MiEquipo/ArbolDependencias/Default.aspx?origen=ADM" description="" roles="AADM,SADM"/>
+      <siteMapNode title="Formación demandada" url="~/Capa_Presentacion/Administracion/FormacionDemandada/Default.aspx" description="" roles="AADM,SADM"/>
+
+
+    </siteMapNode>
+
+    <siteMapNode title="Ayuda"  description=""  resourceKey="fa fa-question" roles="*">
+      <siteMapNode title="Guía pantalla actual (F10)" url="" description="" roles="*">
+      </siteMapNode>
+
+      <siteMapNode title="Guía completa" url="" description="Guía completa" roles="*">
+
+        <siteMapNode title="Evaluaciones" url="" description="Evaluaciones" roles="*">
+          <siteMapNode title="Mis evaluaciones"  url="~/Docs/Ayudas/Evaluaciones/MisEvaluaciones.pdf" description="" roles="*"/>
+          <siteMapNode title="Evaluaciones de mi equipo" url="~/Docs/Ayudas/Evaluaciones/EvaluacionesDeMiEquipo.pdf"  description="" roles="*"/>
+          <siteMapNode title="Abrir nuevas evaluaciones" url="~/Docs/Ayudas/Evaluaciones/AbirNuevasEvaluaciones.pdf"  description="" roles="*"/>
+          <siteMapNode title="Completar evaluaciones abiertas" url="~/Docs/Ayudas/Evaluaciones/CompletarEvaluacionesAbiertas.pdf"  description="" roles="*"/>
+          <siteMapNode title="Estadísticas" url="~/Docs/Ayudas/Evaluaciones/Estadisticas.pdf"  description="" roles="*"/>
+        </siteMapNode>
+
+
+        <siteMapNode title="Equipo"  url="" description="" roles="*">
+          <siteMapNode title="Confirmar equipo"  url="~/Docs/Ayudas/Equipo/ConfirmarMiEquipo.pdf" description="" roles="*"/>
+          <siteMapNode title="Tramitar salidas de mi equipo"  url="~/Docs/Ayudas/Equipo/TramitarSalidasDeMiEquipo.pdf" description="" roles="*"/>
+          <siteMapNode title="Gestionar entradas a mi equipo"  url="~/Docs/Ayudas/Equipo/GestionarEntradasAMiEquipo.pdf" description="" roles="*"/>
+          <siteMapNode title="Árbol de dependencias"  url="~/Docs/Ayudas/Equipo/ArbolDeDependencias.pdf" description="" roles="*"/>
+        </siteMapNode>
+
+        <siteMapNode title="Roles"  url="" description="" roles="*">
+          <siteMapNode title="Solicitar cambio de rol"  url="~/Docs/Ayudas/Roles/SolicitarCambioDeRol.pdf" description="" roles="*"/>
+          <siteMapNode title="Gestionar solicitudes de cambio de rol"  url="~/Docs/Ayudas/Roles/GestionarSolicitudesDeCambioDeRol.pdf" description="" roles="*"/>
+          <siteMapNode title="Profesionales por rol"  url="~/Docs/Ayudas/Roles/ProfesionalesPorRol.pdf" description="" roles="*"/>
+        </siteMapNode>
+
+
+        <siteMapNode title="Administración"  url="" description="" roles="AADM,SADM">
+          <siteMapNode title="Cambiar evaluador"  url="~/Docs/Ayudas/Administracion/CambiarEvaluador.pdf" description="" roles="AADM,SADM"/>
+          <siteMapNode title="Buscar evaluaciones"  url="~/Docs/Ayudas/Administracion/BuscarEvaluaciones.pdf" description="" roles="AADM,SADM"/>
+          <siteMapNode title="Estadísticas por evaluador"  url="~/Docs/Ayudas/Administracion/EstadisticasPorEvaluador.pdf" description="" roles="AADM,SADM"/>
+          <siteMapNode title="Estadísticas globales"  url="~/Docs/Ayudas/Administracion/EstadisticasGlobales.pdf" description="" roles="AADM,SADM"/>
+          <siteMapNode title="Profesionales por rol"  url="~/Docs/Ayudas/Administracion/ProfesionalesPorRol-adm.pdf" description="" roles="AADM,SADM"/>
+          <siteMapNode title="Histórico de roles"  url="~/Docs/Ayudas/Administracion/HistoricoDeRoles.pdf" description="" roles="AADM,SADM"/>
+          <siteMapNode title="Árbol de dependencias"  url="~/Docs/Ayudas/Administracion/ArbolDeDependencias-adm.pdf" description="" roles="AADM,SADM"/>
+
+          <siteMapNode title="Mantenimiento de maestros"  url="" description="" roles="AADM,SADM">
+            <siteMapNode title="Perfiles"  url="~/Docs/Ayudas/Administracion/Perfiles.pdf" description="" roles="AADM,SADM"/>
+            <siteMapNode title="Comunidad Progress"  url="~/Docs/Ayudas/Administracion/ComunidadProgress.pdf" description="" roles="AADM,SADM"/>
+            <siteMapNode title="Colectivo forzado"  url="~/Docs/Ayudas/Administracion/ColectivoForzado.pdf" description="" roles="AADM,SADM"/>
+            <siteMapNode title="Antigüedad de referencia"  url="~/Docs/Ayudas/Administracion/AntiguedadDeReferencia.pdf" description="" roles="AADM,SADM"/>            
+            <siteMapNode url="~/Docs/Ayudas/Administracion/Categoriaprofesional-colectivo.pdf" title="Categoría profesional/Colectivo"  description="" roles="AADM,SADM"/>
+            <siteMapNode url="~/Docs/Ayudas/Administracion/Colectivo-modeloDeFormulario.pdf" title="Colectivo/Modelo de formulario"  description="" roles="AADM,SADM"/>
+            <siteMapNode url="~/Docs/Ayudas/Administracion/BulaDeAvisos.pdf" title="Bula de avisos"  description="" roles="AADM,SADM"/>
+            <siteMapNode url="~/Docs/Ayudas/Administracion/TemporadaProgress.pdf" title="Temporada Progress"  description="" roles="AADM,SADM"/>
+          
+          </siteMapNode>
+
+
+
+        </siteMapNode>
+
+
+      </siteMapNode>
+
+
+
+
+    </siteMapNode>
+
+  </siteMapNode>
+
+
+
+
+
+
+</siteMap>

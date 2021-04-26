@@ -1,0 +1,5 @@
+D:\Ibermatica\NET\WC_SUPER\WcfServSUPER\obj\Debug\ResolveAssemblyReference.cache
+D:\Ibermatica\NET\WC_SUPER\WcfServSUPER\bin\SUPER.dll
+D:\Ibermatica\NET\WC_SUPER\WcfServSUPER\bin\SUPER.pdb
+D:\Ibermatica\NET\WC_SUPER\WcfServSUPER\obj\Debug\SUPER.dll
+D:\Ibermatica\NET\WC_SUPER\WcfServSUPER\obj\Debug\SUPER.pdb

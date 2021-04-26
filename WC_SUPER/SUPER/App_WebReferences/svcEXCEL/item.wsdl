@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://IBOffice.ibermatica.com/EXCEL" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://IBOffice.ibermatica.com/EXCEL" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://IBOffice.ibermatica.com/EXCEL/Imports">
+      <xsd:import schemaLocation="http://ibservioffice:8450/IBOffice/svcEXCEL/?xsd=xsd0" namespace="http://IBOffice.ibermatica.com/EXCEL" />
+      <xsd:import schemaLocation="http://ibservioffice:8450/IBOffice/svcEXCEL/?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/IBOffice.code.Services" />
+      <xsd:import schemaLocation="http://ibservioffice:8450/IBOffice/svcEXCEL/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://ibservioffice:8450/IBOffice/svcEXCEL/?xsd=xsd2" />
+      <xsd:import schemaLocation="http://ibservioffice:8450/IBOffice/svcEXCEL/?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IsvcEXCEL_getExcelFromDataSet_InputMessage">
+    <wsdl:part name="parameters" element="tns:getExcelFromDataSet" />
+  </wsdl:message>
+  <wsdl:message name="IsvcEXCEL_getExcelFromDataSet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getExcelFromDataSetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IsvcEXCEL_getExcelFromDataSet_IBOfficeExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/IBOffice.code.Services" name="detail" element="q1:IBOfficeException" />
+  </wsdl:message>
+  <wsdl:message name="IsvcEXCEL_getExcelFrom2DimObjectArray_InputMessage">
+    <wsdl:part name="parameters" element="tns:getExcelFrom2DimObjectArray" />
+  </wsdl:message>
+  <wsdl:message name="IsvcEXCEL_getExcelFrom2DimObjectArray_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getExcelFrom2DimObjectArrayResponse" />
+  </wsdl:message>
+  <wsdl:message name="IsvcEXCEL_getExcelFrom2DimObjectArray_IBOfficeExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/IBOffice.code.Services" name="detail" element="q2:IBOfficeException" />
+  </wsdl:message>
+  <wsdl:message name="IsvcEXCEL_GetDataSetFromExcel_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataSetFromExcel" />
+  </wsdl:message>
+  <wsdl:message name="IsvcEXCEL_GetDataSetFromExcel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataSetFromExcelResponse" />
+  </wsdl:message>
+  <wsdl:message name="IsvcEXCEL_GetDataSetFromExcel_IBOfficeExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/IBOffice.code.Services" name="detail" element="q3:IBOfficeException" />
+  </wsdl:message>
+  <wsdl:portType name="IsvcEXCEL">
+    <wsdl:operation name="getExcelFromDataSet">
+      <wsdl:input wsaw:Action="http://IBOffice.ibermatica.com/EXCEL/IsvcEXCEL/getExcelFromDataSet" message="tns:IsvcEXCEL_getExcelFromDataSet_InputMessage" />
+      <wsdl:output wsaw:Action="http://IBOffice.ibermatica.com/EXCEL/IsvcEXCEL/getExcelFromDataSetResponse" message="tns:IsvcEXCEL_getExcelFromDataSet_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://IBOffice.ibermatica.com/EXCEL/IsvcEXCEL/getExcelFromDataSetIBOfficeExceptionFault" name="IBOfficeExceptionFault" message="tns:IsvcEXCEL_getExcelFromDataSet_IBOfficeExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getExcelFrom2DimObjectArray">
+      <wsdl:input wsaw:Action="http://IBOffice.ibermatica.com/EXCEL/IsvcEXCEL/getExcelFrom2DimObjectArray" message="tns:IsvcEXCEL_getExcelFrom2DimObjectArray_InputMessage" />
+      <wsdl:output wsaw:Action="http://IBOffice.ibermatica.com/EXCEL/IsvcEXCEL/getExcelFrom2DimObjectArrayResponse" message="tns:IsvcEXCEL_getExcelFrom2DimObjectArray_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://IBOffice.ibermatica.com/EXCEL/IsvcEXCEL/getExcelFrom2DimObjectArrayIBOfficeExceptionFault" name="IBOfficeExceptionFault" message="tns:IsvcEXCEL_getExcelFrom2DimObjectArray_IBOfficeExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataSetFromExcel">
+      <wsdl:input wsaw:Action="http://IBOffice.ibermatica.com/EXCEL/IsvcEXCEL/GetDataSetFromExcel" message="tns:IsvcEXCEL_GetDataSetFromExcel_InputMessage" />
+      <wsdl:output wsaw:Action="http://IBOffice.ibermatica.com/EXCEL/IsvcEXCEL/GetDataSetFromExcelResponse" message="tns:IsvcEXCEL_GetDataSetFromExcel_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://IBOffice.ibermatica.com/EXCEL/IsvcEXCEL/GetDataSetFromExcelIBOfficeExceptionFault" name="IBOfficeExceptionFault" message="tns:IsvcEXCEL_GetDataSetFromExcel_IBOfficeExceptionFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

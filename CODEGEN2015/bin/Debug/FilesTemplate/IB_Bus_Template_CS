@@ -1,0 +1,167 @@
+﻿using System;
+using System.Collections.Generic;
+
+#UsingNameSpace#
+
+/// <summary>
+/// Summary description for #ClassName#
+/// </summary>
+namespace #NameSpace# 
+{
+    public class #ClassName# : IDisposable
+    {
+    	#region Variables privadas
+		
+		private sqldblib.SqlServerSP cDblib = null;
+        private Guid classOwnerID = new Guid("#Guid#");
+        private bool disposed = false;
+		
+		#endregion
+		
+        #region Constructor
+		
+        public #ClassName#()
+			: base()
+        {
+			//OpenDbConn();
+        }
+		
+		public #ClassName#(sqldblib.SqlServerSP extcDblib)
+            : base()
+        {
+            AttachDbConn(extcDblib);
+        }
+		
+        #endregion       
+
+        #region Funciones públicas
+		
+		internal List<Models.#ClassName#> Catalogo(Models.#ClassName# o#ClassName#Filter)
+        {
+            OpenDbConn();
+
+			DAL.#ClassName# c#ClassName# = new DAL.#ClassName#(cDblib);
+            return c#ClassName#.Catalogo(o#ClassName#Filter);
+
+        }
+		
+		internal int Insert(Models.#ClassName# o#ClassName#)
+        {
+			Guid methodOwnerID = new Guid("#Guid#");
+			
+			OpenDbConn();
+			
+			if(cDblib.Transaction.ownerID.Equals(new Guid())) cDblib.beginTransaction(methodOwnerID);
+
+			try{
+				DAL.#ClassName# c#ClassName# = new DAL.#ClassName#(cDblib);
+                
+                int id#ClassName# = c#ClassName#.Insert(o#ClassName#);
+
+                //Finalizar transacción 
+                if (cDblib.Transaction.ownerID.Equals(methodOwnerID)) cDblib.commitTransaction(methodOwnerID);
+
+                return id#ClassName#;
+            }
+            catch(Exception ex){
+                //rollback
+                if (cDblib.Transaction.ownerID.Equals(methodOwnerID)) cDblib.rollbackTransaction(methodOwnerID);
+
+                throw ex;
+            }	
+		}
+
+        internal int Update(Models.#ClassName# o#ClassName#)
+        {
+			Guid methodOwnerID = new Guid("#Guid#");
+			
+			OpenDbConn();
+			
+			if(cDblib.Transaction.ownerID.Equals(new Guid())) cDblib.beginTransaction(methodOwnerID);
+
+			try{
+				DAL.#ClassName# c#ClassName# = new DAL.#ClassName#(cDblib);
+				
+				int result = c#ClassName#.Update(o#ClassName#);
+
+                //Finalizar transacción 
+                if (cDblib.Transaction.ownerID.Equals(methodOwnerID)) cDblib.commitTransaction(methodOwnerID);
+				
+				return result;
+			}
+            catch(Exception ex){
+                //rollback
+                if (cDblib.Transaction.ownerID.Equals(methodOwnerID)) cDblib.rollbackTransaction(methodOwnerID);
+
+                throw ex;
+            }
+        }
+
+        internal int Delete(#PKParameters#)
+        {
+			Guid methodOwnerID = new Guid("#Guid#");
+			
+			OpenDbConn();
+			
+			if(cDblib.Transaction.ownerID.Equals(new Guid())) cDblib.beginTransaction(methodOwnerID);
+
+			try{
+			
+				DAL.#ClassName# c#ClassName# = new DAL.#ClassName#(cDblib);
+				
+				int result = c#ClassName#.Delete(#DAPKParameters#);
+
+                //Finalizar transacción 
+                if (cDblib.Transaction.ownerID.Equals(methodOwnerID)) cDblib.commitTransaction(methodOwnerID);
+				
+				return result;
+			}
+            catch(Exception ex){
+                //rollback
+                if (cDblib.Transaction.ownerID.Equals(methodOwnerID)) cDblib.rollbackTransaction(methodOwnerID);
+
+                throw ex;
+            }
+        }
+
+        internal Models.#ClassName# Select(#PKParameters#)
+        {
+			OpenDbConn();
+			
+            DAL.#ClassName# c#ClassName# = new DAL.#ClassName#(cDblib);
+			return c#ClassName#.Select(#DAPKParameters#);
+        }
+
+		#endregion          
+		
+		#region Conexion base de datos y dispose
+        private void OpenDbConn()
+        {
+            if (cDblib == null)
+                cDblib = new IB.sqldblib.SqlServerSP(Shared.Database.GetConStr(), classOwnerID);
+        }
+        private void AttachDbConn(sqldblib.SqlServerSP extcDblib)
+        {
+            cDblib = extcDblib;
+        }
+        private void Dispose(bool disposing)
+        {
+            if (!this.disposed && disposing) if (cDblib != null && cDblib.OwnerID.Equals(classOwnerID)) cDblib.Dispose();
+            this.disposed = true;
+        }
+        public void Dispose()
+        {
+            Dispose(true);
+            GC.SuppressFinalize(this);
+        }
+        ~#ClassName#()
+        {
+            Dispose(false);
+        }
+		
+        #endregion
+
+    
+    }
+
+}

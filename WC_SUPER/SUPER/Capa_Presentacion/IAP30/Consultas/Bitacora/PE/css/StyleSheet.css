@@ -1,0 +1,244 @@
+﻿.fa-info-circle {
+    color: #adadad;
+    font-size: 20px;
+}
+.selector span i {
+    top: 4px;
+}
+
+.dataTables_scrollBody {
+    border: solid 1px #e4e2e2 !important;
+}
+
+.btn-inline-input {
+    height: 22px;
+    padding: 0 5px 0 5px;
+}
+
+#btnEliminarProyectos, #btnEliminarClientes {
+    padding-left:10px;
+}
+
+/*Datatable principal*/
+
+.fa-file-pdf-o {
+    color: red !important;
+}
+
+#btnExportar {
+    bottom: -5px;
+    left: 13px;
+}
+
+/*Reset de botones de datatables*/ 
+#tablaProyectos_wrapper .dt-buttons, #tablaProyectosSel_wrapper .dt-buttons {
+    margin-top: -7px;
+}
+
+#tablaProyectos_wrapper .dt-button, #tablaProyectosSel_wrapper .dt-button, #tablaResultados_wrapper .dt-button.selector_general {
+    border: none !important;
+    background-color: #ffffff !important;
+    background-image: none !important;
+}
+
+#tablaProyectos_wrapper .dt-button:active, #tablaProyectosSel_wrapper .dt-button:active, #tablaResultados_wrapper .dt-button.selector_general:active {
+    box-shadow: none !important;
+}
+
+/*Fin de reset de botones de datatables*/ 
+
+.container {
+    visibility: hidden;
+}
+
+div.datatables_wrapper {
+    width: 1082px;
+    margin: 0 auto;
+}
+
+.dataTables_filter {
+    float:left !important;
+}
+
+thead > tr > th, tbody > tr > td { 
+    white-space: nowrap; 
+}
+
+/*Super.css le da un margin que no nos interesa*/
+#lblDesde, #lblHasta {
+    margin-top: 0 !important;
+}
+
+ul.fk_lista:empty:after{
+  content: "<Todos>";
+}
+
+.leyenda {
+    margin-left: 15px;
+}
+
+.fa-diamond {
+    padding-left: 0 !important;
+}
+
+#listaProyectos, #listaClientes {
+    height: 50px;
+    overflow: auto
+}
+
+.fk_verde {
+    color: green;
+}
+.fk_rojo {
+    color: red;
+}
+
+/*Botonera*/
+
+#divBotones {
+    padding-right: 15px;
+    float: right;
+}
+
+/*Header fixed de la tabla de la pantalla*/
+/*Alto del contenedor de la tabla (tbody)*/
+.header-fixed > tbody {
+    overflow-y: auto;
+    max-height: 300px;
+}
+
+.fa-sort {
+    color: #ffffff;
+}
+
+.fa-sort-b {
+    color: black;
+}
+
+.fa-eraser:hover {
+    cursor: pointer;
+}
+
+#inputTotal {
+    margin: 0;
+}
+
+
+#divObtenerProyectos {
+        text-align: left;
+    }
+
+.activa {
+    background-color: #d9edf7 !important;
+}
+
+.activa>td.sorting_1 {
+    background-color: #d9edf7 !important;
+}
+
+.list-arrows {
+    padding-top: 40px;
+}
+
+#listaProyectos > .list-group-item, #listaClientes > .list-group-item {
+    padding-top:0;
+    padding-bottom:0;
+}
+
+#tablaProyectos tbody tr:hover, #tablaProyectosSel tbody tr:hover, #tablaCR tbody tr:hover {
+    cursor:pointer;
+}
+
+#tablaProyectos tbody tr td, #tablaProyectosSel tbody tr td {
+    padding-left: 2px !important;
+    padding-right: 2px !important;
+}
+
+#tablaProyectos_wrapper table.dataTable thead th, #tablaProyectos_wrapper table.dataTable thead td,
+#tablaProyectosSel_wrapper table.dataTable thead th, #tablaProyectosSel_wrapper table.dataTable thead td {
+    padding-left: 4px !important;
+}
+
+#tablaProyectos tbody tr td, #tablaProyectosSel tbody tr td {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+#grpQ3 {
+    padding-bottom: 15px;
+}
+
+@media (min-width: 768px) {
+
+    #proyectos-lisProyectos {
+        padding-right:0;
+        width: 45.833333337% !important;
+    }
+
+    #proyectos-Acciones {        
+        padding-left:0;
+        padding-right:0;
+        width: 8.333333326% !important;
+    }
+
+    #proyectos-Acciones div {        
+        padding-left:7px;
+        padding-right:7px;
+    }
+
+    #proyectos-lisSeleccionados {
+        padding-left:0;
+        width: 45.833333337% !important;
+    }
+
+}
+
+#leyendas > .fa {
+    padding-right: 2px;
+}
+
+/*Fin Modal selección de proyecto*/
+
+/*Modal Cialificador*/
+
+#tituCuali {
+    padding-left: 20px;
+}
+
+@media (min-width: 992px) {
+    #txtIdProyecto {
+	    margin-left: 7px;
+    }
+
+    #divTxtDesProyecto {
+	    padding-left: 0;
+        padding-right: 30px;
+    }
+}
+
+@media (max-width: 992px) {    
+
+    #txtNom {
+        margin-left: 13px;
+    }
+
+    #divObtenerProyectos {
+        text-align: center;
+    }
+
+}
+
+@media (max-width: 768px) {    
+
+    .float-right-sm {
+        float: none;
+    }
+
+    .list-arrows {
+        padding-top: 0;
+    }
+
+    .MT100 {
+        margin-top: 0;
+    }
+}

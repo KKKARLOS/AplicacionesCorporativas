@@ -1,0 +1,37 @@
+/* Cascading Style Sheet (CSS) for Calculator 1.6 */
+/* style settings for the display area */
+.numeric-display-holder {
+	/*background-color: #afc8b8;*/ /* the 'LCD-color' */
+	background-color: Transparent;
+    width: 120px;
+    height: 14px;
+	color: #343;
+	border: 0px;
+/*	border: 2px solid;
+    border-color: #aaa #ddd #ddd #aaa;*/
+	margin: 2px 0px 2px 1px;
+    padding: 2px 2px 3px 2px;
+    position:absolute;
+    top:18px;
+    left:18px;
+	}
+#lcd-symbols {
+	font-family: "Courier New", Courier, mono;
+    font-size: 10px;
+	padding: 0 1px 0 0;
+	float: right;
+	display: inline;
+	line-height: 10px;
+	margin: 0;
+	}
+.n_display {
+	/*background-color: #afc8b8;*/ /* the 'LCD-color' */
+	background-color: Transparent;
+    width: 108px;
+    border: 0;
+	margin: -1px 0 -2px 0;
+    padding: 0;
+	font-family: "Courier New", Courier, mono;
+    font-size: 14px;
+	float: left;
+	}

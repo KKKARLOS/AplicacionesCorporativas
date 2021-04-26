@@ -1,0 +1,64 @@
+<graph xaxisname='Meses' 
+       yaxisname='Actividad' 
+       hovercapbg='DEDEBE' 
+       hovercapborder='889E6D' 
+       rotateNames='0' 
+       animation='1' 
+       yAxisMaxValue='50' 
+       numdivlines='4' 
+       divLineColor='CCCCCC' 
+       divLineAlpha='80' 
+       decimalPrecision='0' 
+       showAlternateVGridColor='1' 
+       AlternateVGridAlpha='30' 
+       AlternateVGridColor='CCCCCC' 
+       caption='Actividad registrada' 
+       bgColor='D8E5EB'
+        >
+  <categories font='Arial' fontSize='11' fontColor='000000'>
+    <category name='Marzo 2010' hoverText=''/>
+    <category name='Febrero 2010' />
+    <category name='Enero 2010' />
+    <category name='Diciembre 2009' />
+    <category name='Noviembre 2009' />
+    <category name='Octubre 2009' />
+    <category name='Septiembre 2009' />
+    <category name='Agosto 2009' />
+    <category name='Julio 2009' />
+    <category name='Junio 2009' />
+    <category name='Mayo 2009' />
+    <category name='Abril 2009' />
+    <category name='Marzo 2009' />
+  </categories>
+  
+  <dataset seriesname='Propias' color='ff0033' alpha='70'>
+    <set value='43' link='JavaScript:alert(&quot;ale a jugar&quot;)' />
+    <set value='2' />
+    <set value='3' />
+    <set value='0' />
+    <set value='0' />
+    <set value='0' />
+    <set value='0' />
+    <set value='0' />
+    <set value='0' />
+    <set value='0' />
+    <set value='0' />
+    <set value='0' />
+    <set value='0' />
+  </dataset>
+  <dataset seriesname='En su nombre' color='000066' showValues='1' alpha='70'>
+    <set value='0' />
+    <set value='1' />
+    <set value='0' />
+    <set value='0' />
+    <set value='0' />
+    <set value='0' />
+    <set value='0' />
+    <set value='0' />
+    <set value='0' />
+    <set value='0' />
+    <set value='0' />
+    <set value='0' />
+    <set value='0' />
+  </dataset>
+</graph>

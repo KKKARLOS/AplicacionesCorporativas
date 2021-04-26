@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv='Expires' content='0' />
+    <meta http-equiv='Pragma' content='no-cache' />
+    <meta http-equiv='Cache-Control' content='no-cache' />
+
+    <title></title>
+    <script src="../../../../scripts/jquery-2.2.1.min.js"></script>
+    <script src="../../../../scripts/IB.js"></script>
+</head>
+<body>
+    <h2>Catalogo de acciones para un item del CRM</h2>
+    tipo <select id="itemorigen">
+            <option value="O" selected>Oportunidad</option>
+             <option value="E">Extensión</option>
+             <option value="P">Objetivo</option>
+
+    </select>
+    
+    ID <input type="text" id="iditemorigen" value="50520"/>
+    
+    login hermes <input type="text" id="loginhermes" value="JA_TOCINO" />
+    <br /><br />
+    <input type="button" value="PREVENTA" id="btnPreventa" />
+
+    <br/><br /><br /><br /><br />
+
+    <h2>Toda la información de preventa del usuario conectado</h2>
+    login hermes <input type="text" id="loginhermes2" value="JA_TOCINO" />
+    <br /><br />
+    <input type="button" value="Obtener" id="btnMiPreventa" />
+
+</body>
+
+<script>
+    $(document).ready(function () {
+
+        $("#btnPreventa").on("click", btnPreventa_onClick);
+        $("#btnMiPreventa").on("click", btnMiPreventa_onClick);
+    })
+
+    function btnPreventa_onClick(){
+
+        var itemorigen = $("#itemorigen option:selected").val();
+        var iditemorigen = $("#iditemorigen").val();
+        var loginhermes = $("#loginhermes").val();
+
+        var qs = IB.uri.encode("user=" + loginhermes + "&itemorigen=" + itemorigen + "&iditemorigen=" + iditemorigen + "&goto=detalleitem");
+        location.href = "../../login.ashx?" + qs;
+        
+    }
+
+    function btnMiPreventa_onClick() {
+
+        var loginhermes = $("#loginhermes2").val();
+
+        var qs = IB.uri.encode("user=" + loginhermes + "&goto=mipreventa");
+        location.href = "../../login.ashx?" + qs;
+
+    }
+</script>
+</html>

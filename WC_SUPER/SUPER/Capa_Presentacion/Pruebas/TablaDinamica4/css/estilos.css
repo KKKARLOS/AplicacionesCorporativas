@@ -1,0 +1,82 @@
+﻿#tblDatos tr, #tblDatosBody tr, #tblDimensiones tr, #tblMagnitudes tr, #tblVistas tr { height: 20px; }
+#tblDimensiones td, #tblMagnitudes td { padding: 0px 5px 0px 5px; }
+#tblDatos td, #tblDatosBody td { 
+    white-space: nowrap; 
+	border-collapse: separate;
+    border-spacing: 0px;
+	border: 1px solid #A6C3D2;
+	padding-left: 5px !important;
+    padding-right: 5px !important;
+}
+#tblDatos th { 
+    white-space: nowrap; 
+	border-collapse: separate;
+    border-spacing: 0px;
+	border: 1px solid #A6C3D2;
+}
+.tdnum { text-align:right; }
+#rowTituloDatos{
+    font-weight: bold;
+    font-size: 12px;
+    background-IMAGE: url('../../../../Images/imgFondoTitulo20.png');
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    display:table-row;
+    vertical-align:middle;
+}
+
+.ghostTd {width:auto; height:auto; padding:2px 8px; border:1px solid #000; position:absolute; font:normal 10px arial; background:#eee;}
+.dragging {background:#eee; color:#000}
+.hovering {background:#ccc; color:#555}
+ 
+.MagTit {
+    text-align:center; min-width:70px; /*width:70px !important;*/
+}
+.Mag {
+    text-align:right; min-width:70px; /*width:70px !important;*/
+}
+.MagPeriodo {
+    text-align:right; min-width:120px; /*width:70px !important;*/
+}
+.MagTitMes {
+    text-align:center; min-width:70px; /*width:70px !important;*/
+}
+.MagMes {
+    text-align:right; min-width:70px; /*width:70px !important;*/
+}
+.Dimension { min-width: 200px !important; }
+.move{
+    margin-right:10px;
+    cursor:move; vertical-align:middle; width:14px; height:14px;
+}
+.selector{
+    margin-left:5px;
+    cursor:pointer; vertical-align:middle;
+}
+
+.FGR1 { background-color: #e4e1e1; }
+.FGR2 { background-color: #f9f8f8; }
+
+.grip{
+	width:20px;
+	height:30px;
+	margin-top:-3px;
+	background-image:url('../img/grip.png');
+	margin-left:-5px;
+	position:relative;
+	z-index:88;
+	cursor:e-resize;
+}
+
+.grip:hover{
+	background-position-x:-20px;
+}
+
+.dragging .grip{
+	background-position-x:-40px;
+}
+
+.dotted{
+	background-image:url('../img/dotted.png');
+	background-repeat:repeat-y;
+}

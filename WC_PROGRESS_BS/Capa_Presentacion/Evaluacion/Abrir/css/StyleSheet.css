@@ -1,0 +1,306 @@
+﻿.container {
+    width: 970px !important;
+}
+
+/*Seguimiento*/
+#selEvaluados, #confNotificaciones, #finProceso {
+    display: inline-block;
+    position:relative;
+}
+
+
+/*Fin seguimiento*/
+
+/*BOTONES ANTERIOR Y SIGUIENTE*/
+ #divBotonesCapa1    {
+   margin-right:20px;
+}
+
+
+#divBotonesCapa2{
+    margin-right:15px;
+}
+
+#divBotonesCapa3 {
+    margin-right:13px;
+}
+
+
+/*FIN BOTONES ANTERIOR Y SIGUIENTE*/
+
+
+/*LISTA DUAL*/
+.dual-list .list-group {
+    margin-top: 16px;
+    max-height: 40vh;
+    overflow: auto;
+}
+
+.list-left li, .list-right li {
+    cursor: pointer;
+}
+
+li.list-group-item {
+    display: table;
+    width:100%;
+}
+
+.dual-list.list-left li {
+    padding:10px 5px 10px 25px;
+}
+            
+.dual-list.list-right li {
+    padding:10px 15px;
+}
+
+.dual-list li span.glyphicon{
+    margin-left:-20px;
+    display:inline-block;
+    width:20px;
+}
+
+.dual-list li i{
+    margin-left:-20px;
+    display:inline-block;
+    width:20px;
+}
+
+.list-arrows {
+    padding-top: 100px;
+}
+
+.list-arrows button {
+    margin-bottom: 20px;
+}
+
+div.input-group {
+    padding-right: 15px !important;
+}
+/*FIN LISTA DUAL*/
+span.glyphicon.glyphicon-new-window{
+    color: #b94a48;
+}
+
+i.fa.fa-compress{
+    color: #b94a48;
+}
+
+
+#divLeyendas {
+    padding-left:15px;
+}
+
+#divLeyendas i{
+    margin-left:5px;
+}
+
+#divLeyendas button{
+    margin-right:15px;
+}
+
+.padding10 {
+    padding:10px !important;
+}
+/*TIMELINE*/
+
+#timeline {
+    position: relative;
+    text-align: center;
+}
+
+#selEvaluados, #confNotificaciones, #finProceso {
+    display: inline-block;
+}
+
+#selEvaluados p {
+    position: absolute;
+    top: 18px;
+    left: 40px;
+    color: #000;
+}
+
+#confNotificaciones p {
+    position: absolute;
+    top: 18px;
+    left: 40px;
+    color: grey;
+}
+
+#finProceso p {
+    position: absolute;
+    top: 18px;
+    left: 40px;
+    color: grey;
+}
+/*FIN TIMELINE*/
+
+/*Segundo paso(segundo container)*/
+td textarea {
+    width:100%;
+}
+
+#capaPaso2 .panel-body{
+    max-height:40vh;
+    overflow:auto;
+}
+
+#tbdProfesionales > tr > td:nth-child(1){width:48%;}
+#tbdProfesionales > tr > td:nth-child(2){width:4%;}
+#tbdProfesionales > tr > td:nth-child(3){width:48%;}
+
+#tbdProfesionales > tr:nth-child(1) > td
+{
+    border-top:none !important;
+}
+
+div.panel-body {
+    padding:5px 15px 0px;
+}
+
+table.table {
+    margin-bottom:0px !important;
+}
+
+.fakeHeading .table > thead > tr > th {
+    border-bottom:none;
+}
+
+.fakeHeading .table > thead > tr > th:nth-child(1) {width:48%;padding-left:23px;}
+.fakeHeading .table > thead > tr > th:nth-child(2) {width:4%;}
+.fakeHeading .table > thead > tr > th:nth-child(3) {width:48%;}
+
+i.glyphicon.glyphicon-chevron-left {
+    margin-right:2px;
+}
+
+/*Fin segundo paso(segundo container)*/
+
+/*Tercer paso(tercer container)*/
+#contenedor {
+    position: relative;
+    text-align: center;
+}
+
+/*PANEL RESUMEN*/
+i.fa.fa-envelope.fa-lg.clickable  {
+    color: rgb(210, 210, 28);
+}
+
+#capaPaso3 .panel-body{
+    height:40vh;
+    overflow:auto;
+}
+
+#lisImpEvaluados {
+    margin-top:10px;
+    max-height:30vh;
+    overflow-y:auto;
+}
+#lisImpEvaluados i {
+    margin: 0 13px 0-3px;
+}
+
+
+
+#modal-imprimir .modal-dialog {
+    width:800px;
+}
+
+#modal-imprimir .modal-content p{
+    padding:0px 15px;
+}
+
+#tbdResumen td:nth-child(1) {
+    text-align:center;
+    width:10%;
+}
+#tbdResumen td:nth-child(2) {
+    width:90%;
+}
+/*Fin tercer paso(tercer container)*/
+
+
+
+/*NUEVO AJUSTE TABLE CON CABECERA RELATIVA AL TBODY*/
+#capaPaso2 {
+  position: relative;  
+  padding-top: 37px; 
+  
+}
+
+.alturacontenedor {
+  border: 1px solid #DDDDDD;
+  overflow-y: auto;
+  max-height: 55vh;
+}
+.alturacontenedor table {
+  border-spacing: 0;
+  width:100%;
+}
+
+
+#capaPaso2 td + td {
+  border-left:1px solid #eee;
+}
+#capaPaso2 td, th {
+  border-bottom:1px solid #eee;
+  background: #FFF;
+  color: #000;
+  padding: 10px 25px;
+}
+#capaPaso2 th {
+  height: 0;
+  line-height: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  color: transparent;
+  border: none;
+  white-space: nowrap;
+}
+#capaPaso2 th div{
+  position: absolute;
+  background: transparent;
+  color: #fff;
+  padding: 9px 25px;
+  top: 0;
+  margin-left: -25px;
+  line-height: normal;
+  border-left: 1px solid #800;
+}
+#capaPaso2 th:first-child div{
+  border: none;
+}
+
+#capaPaso2 div#th1 {
+    background-color: #428bca;
+    width:46%;
+}
+
+#capaPaso2 div#th2 {
+    background-color: #428bca;
+    width: 7%;
+    /*height:34px;*/
+}
+
+#capaPaso2 div#th3 {
+    background-color:#428bca;
+    width: 46.3%;
+}
+/*NUEVO AJUSTE TABLE CON CABECERA RELATIVA AL TBODY*/
+
+
+.tooltip-inner {
+    max-width: 200px;
+    /* If max-width does not work, try using width instead */
+    width: 200px; 
+}
+
+
+/*Para resoluciones mayores*/
+@media (min-width: 1200px) {
+    .container {
+        width:1170px !important;
+    }
+}
+
+

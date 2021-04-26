@@ -1,0 +1,123 @@
+using System;
+using System.Data;
+using System.Configuration;
+#UsingNameSpace#
+/// <summary>
+/// Summary description for #ClassName#
+/// </summary>
+namespace #NameSpace# 
+{
+    public class #ClassName#
+    {
+        #region PrivateVariables
+        private #ProviderType#Connection #ProviderType#Conn;
+        #endregion
+
+        #region Constructor
+        public #ClassName#()
+        {
+            //
+            // TODO: Add constructor logic here
+            //
+            if (#ProviderType#Conn == null)
+            {
+                #ProviderType#Conn = new #ProviderType#Connection();
+                #ProviderType#Conn.ConnectionString = ConfigurationManager.ConnectionStrings["#ProviderType#Provider"].ConnectionString;
+            }
+
+        }
+        #endregion
+
+        #region PrivateMethods
+
+        private void Open#ProviderType#Connection()
+        {
+            if (#ProviderType#Conn.State != ConnectionState.Open)
+            {
+                #ProviderType#Conn.Open();
+            }
+        }
+
+
+        private void Close#ProviderType#Connection()
+        {
+            if (#ProviderType#Conn.State == ConnectionState.Open)
+            {
+               #ProviderType#Conn.Close();
+            }
+        }
+
+        #endregion
+
+        #region PublicMethods
+        public DataSet GetDataSet(#ProviderType#Command #ProviderType#Comm)
+        {
+            #ProviderType#DataAdapter #ProviderType#DataAdp;
+            DataSet dsData;
+            try
+            {
+                #ProviderType#Comm.Connection = #ProviderType#Conn;
+                #ProviderType#DataAdp = new #ProviderType#DataAdapter(#ProviderType#Comm);
+                dsData = new DataSet();
+                #ProviderType#DataAdp.Fill(dsData);
+                return dsData;
+
+
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                #ProviderType#DataAdp = null;
+                dsData = null;
+            }
+        }
+
+
+        public int ExecuteNoneQuery(#ProviderType#Command #ProviderType#Comm)
+        {
+            try
+            {
+                Open#ProviderType#Connection();
+                #ProviderType#Comm.Connection = #ProviderType#Conn;
+                int i = #ProviderType#Comm.ExecuteNonQuery();
+                return i;
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                Close#ProviderType#Connection();
+            }
+        }
+
+
+        public Object ExecuteScalar(#ProviderType#Command #ProviderType#Comm)
+        {
+            try
+            {
+                Open#ProviderType#Connection();
+                #ProviderType#Comm.Connection = #ProviderType#Conn;
+                return #ProviderType#Comm.ExecuteScalar();
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                Close#ProviderType#Connection();
+            }
+        }
+
+        #endregion
+    }
+}
+

@@ -1,0 +1,53 @@
+﻿using IB.Progress.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Script.Services;
+using System.Web.Services;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+public partial class Capa_Presentacion_Home : System.Web.UI.Page
+{
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        try
+        {
+            IB.Progress.BLL.VALORACIONESPROGRESS valoracionesBLL = new IB.Progress.BLL.VALORACIONESPROGRESS();
+            List<VALORACIONESPROGRESS.TemporadaProgress> misvaloraciones = valoracionesBLL.TemporadaProgress();
+
+            anyoactual.InnerText = misvaloraciones[0].Temporada.ToString();
+            desde.InnerText = misvaloraciones[0].Desde.ToString().Substring(4) + "/" + misvaloraciones[0].Desde.ToString().Substring(0, 4);
+            hasta.InnerText = misvaloraciones[0].Hasta.ToString().Substring(4) + "/" + misvaloraciones[0].Hasta.ToString().Substring(0, 4);
+            valoracionesBLL.Dispose();
+        }
+        catch (Exception)
+        {
+            
+            throw;
+        }
+
+    }
+
+
+    /// <summary>
+    /// Envío de correo a 
+    /// </summary>
+    /// <param name="texto"></param>
+    [WebMethod]
+    [ScriptMethod(ResponseFormat = ResponseFormat.Json)]
+    public static void enviarCorreo (string texto)
+    {
+        try
+        {
+            Correo.Enviar("PROGRESS: Correo a la oficina técnica", texto, "otrrhh@ibermatica.com");            
+        }
+        catch (Exception ex)
+        {
+            
+            throw ex;
+        }
+    }
+    
+}

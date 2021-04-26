@@ -1,0 +1,30 @@
+﻿form label{ font-weight:normal;}
+
+/*Modificamos el alto de las cabeceras del datatable*/
+/*.dataTables_wrapper .dataTables_scrollHead table.dataTable thead tr th {padding: 5px 18px !important;}*/
+
+table th {
+    background-color: #337ab7;
+    color: #fff;
+    text-align: center;
+    border: 1px solid #ddd;   
+    white-space: nowrap;
+}
+
+#linkImputaciones {
+    margin-right:20px;
+}
+
+#jornadas {
+    margin-left:20px;
+}
+#euros {
+    margin-left:38px;
+}
+#h5Title {
+    margin-right:75px;
+}
+#btnInsert {
+    margin-top:-5px;
+    font-size:13px;
+}

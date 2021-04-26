@@ -1,0 +1,3 @@
+﻿#tblGeneral td { padding: 5px; }
+#tblTituloEscenarios td, #tblDatos td, #tblPieEscenarios td { padding: 0px 2px 0px 2px; }
+#tblDatos tr { height: 20px; }

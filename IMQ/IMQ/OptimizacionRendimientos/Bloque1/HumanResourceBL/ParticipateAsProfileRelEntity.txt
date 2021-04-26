@@ -1,0 +1,131 @@
+using System;
+using System.IO;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.Xml.Serialization;
+using SII.Framework.Interfaces;
+using CommonEntities = SII.HCD.Common.Entities;
+
+namespace SII.HCD.BackOffice.Entities
+{
+    [DataContract()]
+    [Serializable()]
+    public class ParticipateAsProfileRelEntity : IStatusEntity, ICloneable
+    {
+        #region Constructors
+        public ParticipateAsProfileRelEntity()
+            : this(0, 0, null, DateTime.Now, string.Empty, 0) { }
+
+        public ParticipateAsProfileRelEntity(int id, int profileID, ParticipateAsEntity participateAs,
+            DateTime lastUpdated, string modifiedBy, Int64 dbTimeStamp)
+        {
+            ID = id;
+            ProfileID = profileID;
+            ParticipateAs = participateAs;
+            LastUpdated = lastUpdated;
+            ModifiedBy = modifiedBy;
+            DBTimeStamp = dbTimeStamp;
+            EditStatus = new EditStatusEntity();
+        }
+        #endregion
+
+        #region Properties
+        [DataMember()]
+        public int ID { get; set; }
+
+        [DataMember()]
+        public int ProfileID { get; set; }
+        [DataMember]
+        public ParticipateAsEntity ParticipateAs { get; set; }
+        [DataMember]
+        public DateTime LastUpdated { get; set; }
+        [DataMember]
+        public string ModifiedBy { get; set; }
+
+        [DataMember()]
+        public Int64 DBTimeStamp { get; set; }
+        [DataMember()]
+        public EditStatusEntity EditStatus { get; set; }
+
+        [XmlIgnore]
+        public int ParticipateAsID
+        {
+            get
+            {
+                return ParticipateAs != null ? ParticipateAs.ID : 0;
+            }
+        }
+
+        [XmlIgnore]
+        public string ParticipateAsCode
+        {
+            get
+            {
+                return ParticipateAs != null ? ParticipateAs.Code : string.Empty;
+            }
+        }
+
+        [XmlIgnore]
+        public string ParticipateAsDescription
+        {
+            get
+            {
+                return ParticipateAs != null ? ParticipateAs.Description : string.Empty;
+            }
+        }
+
+        [XmlIgnore]
+        public string ParticipateAsProviderName
+        {
+            get
+            {
+                return ParticipateAs != null ? ParticipateAs.ProviderName : string.Empty;
+            }
+        }
+
+        [XmlIgnore]
+        public bool ParticipateAsInUse
+        {
+            get
+            {
+                return ParticipateAs != null ? ParticipateAs.InUse : false;
+            }
+        }
+
+        [XmlIgnore]
+        public CommonEntities.StatusEnum ParticipateAsStatus
+        {
+            get
+            {
+                return ParticipateAs != null ? ParticipateAs.Status : CommonEntities.StatusEnum.None;
+            }
+        }
+
+        #endregion
+
+        #region Public methods
+
+        #endregion
+
+        #region ICloneable Members
+        public virtual object Clone()
+        {
+            object clonedObject = null;
+            MemoryStream ms = new MemoryStream();
+            try
+            {
+                BinaryFormatter bf = new BinaryFormatter();
+
+                bf.Serialize(ms, this);
+                ms.Seek(0, SeekOrigin.Begin);
+                clonedObject = bf.Deserialize(ms);
+            }
+            finally
+            {
+                ms.Close();
+            }
+            return clonedObject;
+        }
+        #endregion
+    }
+}

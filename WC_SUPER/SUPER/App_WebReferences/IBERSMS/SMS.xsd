@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="EnviarSMS">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sUsuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sClave" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sNumero" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sTexto" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sAlfabeto" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EnviarSMSResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="EnviarSMSResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModificarClave">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sUsuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sClaveAntigua" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sClaveNueva" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModificarClaveResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ModificarClaveResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarEnvios">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sUsuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sClave" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sDesde" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sHasta" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarEnviosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ConsultarEnviosResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

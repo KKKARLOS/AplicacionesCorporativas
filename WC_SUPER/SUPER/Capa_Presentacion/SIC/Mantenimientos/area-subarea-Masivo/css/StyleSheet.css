@@ -1,0 +1,27 @@
+﻿
+table th {
+    background-color: #337ab7;
+    color: #fff;
+    text-align: center;
+    border: 1px solid #ddd;   
+    white-space: nowrap;
+}
+
+table tr {
+    cursor:pointer;
+}
+
+#ulPool {
+    height:35vh;
+    overflow:auto;
+    border:1px solid #ccc;
+}
+
+#tbdCopiarProf > tr.active {
+    background-color:#D8D8D8 !important;
+}
+
+/*Tenemos que heredar la clase activa del padre(tr)*/
+#tbdCopiarProf > tr.active > td {
+    background-color:inherit;
+}

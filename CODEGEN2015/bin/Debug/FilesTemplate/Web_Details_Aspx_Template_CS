@@ -1,0 +1,24 @@
+<%@ Page Language="#Language#" MasterPageFile="~/Master/#MasterPageName#.master" AutoEventWireup="true" CodeFile="#TableName#Details.aspx.#Ext#" Inherits="#TableName#Details" Title="#TableName# Details" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="cphContent" Runat="Server">
+<table  align="center" >
+            <tr>
+            <td>
+               #Content#
+            </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center">
+                    <asp:Button ID="btnSave" runat="server" OnClick="btnSave_Click" Text="Save" />&nbsp;
+                    <asp:Button ID="btnDelete" runat="server" Enabled="False" OnClick="btnDelete_Click" Text="Delete" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center">
+                    <asp:Label ID="lblError" runat="server"></asp:Label>
+                </td>
+            </tr>
+ </table>
+        
+</asp:Content>
+

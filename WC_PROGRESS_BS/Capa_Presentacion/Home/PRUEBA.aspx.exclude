@@ -1,0 +1,95 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="PRUEBA.aspx.cs" Inherits="Capa_Presentacion_Home_PRUEBA" %>
+
+<%@ Register Src="~/uc/CabeceraMenu.ascx" TagPrefix="uc1" TagName="CabeceraMenu" %>
+<%@ Register Src="~/uc/PieMenu.ascx" TagPrefix="uc1" TagName="PieMenu" %>
+
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <style>
+        #slideshow { 
+    margin: 50px auto; 
+    position: relative; 
+    width: 360px; 
+    height: 240px; 
+    padding: 10px; 
+    box-shadow: 0 0 20px rgba(0,0,0,0.4); 
+}
+
+#slideshow > div { 
+    position: absolute; 
+    top: 10px; 
+    left: 10px; 
+    right: 10px; 
+    bottom: 10px; 
+}
+    </style>
+</head>
+<body>
+    <uc1:CabeceraMenu runat="server" ID="CabeceraMenu" />
+    <form id="form1" runat="server">
+        <div id="slideshow">
+
+
+
+
+
+
+            <div>
+                <img src="../../imagenes/imagenHome1.png" class="img-responsive" />
+            </div>
+
+            <div>
+                <img src="../../imagenes/imgObjetividad.png" class="img-responsive" />
+            </div>
+
+            <div>
+                <img src="../../imagenes/imagenHome3.png" class="img-responsive" />
+            </div>
+            <div>
+                <img src="../../imagenes/imgCoherencia.png" class="img-responsive" />
+            </div>
+            <div>
+                <img src="../../imagenes/imagenHome1.png" class="img-responsive" />
+            </div>
+
+            <div>
+                <img src="../../imagenes/imgValor.png" class="img-responsive" />
+            </div>
+            <div>
+                <img src="../../imagenes/imagenHome3.png" class="img-responsive" />
+            </div>
+            <div>
+                <img src="../../imagenes/imgCalidad.png" class="img-responsive" />
+            </div>
+
+
+
+
+
+        </div>
+    </form>
+</body>
+
+
+   
+</html>
+<uc1:PieMenu runat="server" ID="PieMenu" />
+ <script>
+     $("#slideshow > div:gt(0)").hide();
+
+     setInterval(function () {
+         $('#slideshow > div:first')
+           .fadeOut(1000)
+           .next()
+           .fadeIn(1000)
+           .end()
+           .appendTo('#slideshow');
+     }, 3000);
+
+    </script>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="a0c5969c-d508-427d-b842-574a7d1c3672" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://ibservioffice:8450/IBOffice/svcEXCEL/" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="item.xsd" MetadataType="Schema" ID="dcda4241-78a7-426d-bf35-54f2e278954b" SourceId="1" SourceUrl="http://ibservioffice:8450/IBOffice/svcEXCEL/?xsd=xsd3" />
+    <MetadataFile FileName="item1.xsd" MetadataType="Schema" ID="864b6c33-393f-4451-9fdb-3acc0cbe35bf" SourceId="1" SourceUrl="http://ibservioffice:8450/IBOffice/svcEXCEL/?xsd=xsd0" />
+    <MetadataFile FileName="item.disco" MetadataType="Disco" ID="c529d6d7-f948-4174-aa2b-d00d68b0dc64" SourceId="1" SourceUrl="http://ibservioffice:8450/IBOffice/svcEXCEL/?disco" />
+    <MetadataFile FileName="item2.xsd" MetadataType="Schema" ID="a447b1ce-73ac-4c14-8eb8-614b9bd2603f" SourceId="1" SourceUrl="http://ibservioffice:8450/IBOffice/svcEXCEL/?xsd=xsd2" />
+    <MetadataFile FileName="item3.xsd" MetadataType="Schema" ID="df203c2d-5b94-4da9-bf29-dbc0fa97554f" SourceId="1" SourceUrl="http://ibservioffice:8450/IBOffice/svcEXCEL/?xsd=xsd1" />
+    <MetadataFile FileName="svcEXCEL.wsdl" MetadataType="Wsdl" ID="318d8942-f50d-4a49-9be4-1cc8b394d86d" SourceId="1" SourceUrl="http://ibservioffice:8450/IBOffice/svcEXCEL/?wsdl" />
+    <MetadataFile FileName="item.wsdl" MetadataType="Wsdl" ID="165b9464-34f5-457e-8808-fd8c79e51ad5" SourceId="1" SourceUrl="http://ibservioffice:8450/IBOffice/svcEXCEL/?wsdl=wsdl0" />
+    <MetadataFile FileName="item4.xsd" MetadataType="Schema" ID="d5de4ab6-5a03-4f24-b32a-4d0b5680fc45" SourceId="1" SourceUrl="http://ibservioffice:8450/IBOffice/svcEXCEL/?xsd=xsd4" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

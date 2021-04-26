@@ -1,0 +1,56 @@
+﻿#tblDatos TD{border-right: solid 1px #A6C3D2; padding-right:1px;}
+#tblTotales TD{border-right: solid 1px #A6C3D2; padding-right:1px;}
+
+#tblBodyFijo tr { height:20px; }
+#tblBodyMovil tr { height:20px; }
+#tblBodyMovil TD{border-right: solid 1px #A6C3D2; padding-right:1px;}
+
+.tdbr
+{
+    border-right: solid 1px #A6C3D2; 
+    padding-right:1px;
+}
+.tdbl
+{
+    border-left: solid 1px #A6C3D2;
+    padding-right:1px;
+}
+.tdbrl
+{
+    border-left: solid 1px #A6C3D2; 
+    border-right: solid 1px #A6C3D2; 
+}
+.OutCal
+{
+    WIDTH: 32px;
+    BORDER: #315d6b 1px solid;
+    PADDING: 0px 1px 0px 0px;
+    MARGIN: 0px 1px 0px 2px;
+    FONT-SIZE: 11px;
+    LEFT: 0px;
+    FONT-FAMILY: Arial, Helvetica, sans-serif;
+    TOP: 0px;
+    HEIGHT: 16px;
+    BACKGROUND-COLOR: #F58D8D;
+    TEXT-ALIGN: right
+}
+
+.htr 
+{
+    display: none;
+}
+
+.shtr .htr{
+    display: table-row;
+}
+
+.imgtr{
+    background-image: url('../../../../../images/plus.gif');
+}
+
+.shtr2 .imgtr{
+    background-image: url('../../../../../images/minus.gif');
+}
+
+
+

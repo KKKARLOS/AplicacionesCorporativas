@@ -1,0 +1,62 @@
+#region usings
+using System;
+using System.IO;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
+using SII.Framework.Interfaces;
+#endregion
+
+namespace SII.HCD.BackOffice.Entities
+{
+    [DataContract()]
+    [Serializable()]
+    public class PersonCategoryEntity : IStatusEntity, ICloneable
+    {
+        #region Properties
+        [DataMember()]
+        public int ID { get; set; }
+        [DataMember()]
+        public int PersonID { get; set; }
+        [DataMember()]
+        public CategoryEntity Category { get; set; }
+        [DataMember()]
+        public Int64 DBTimeStamp { get; set; }
+        [DataMember()]
+        public EditStatusEntity EditStatus { get; set; }
+        #endregion
+
+        #region Constructors
+        public PersonCategoryEntity() : this(0, 0, null, 0) { }
+
+        public PersonCategoryEntity(int id, int personID, CategoryEntity category, Int64 dbTimeStamp)
+        {
+            ID = id;
+            PersonID = personID;
+            Category = category;
+            DBTimeStamp = dbTimeStamp;
+            EditStatus = new EditStatusEntity();
+        }
+        #endregion
+
+        #region ICloneable Members
+        public virtual object Clone()
+        {
+            object clonedObject = null;
+            MemoryStream ms = new MemoryStream();
+            try
+            {
+                BinaryFormatter bf = new BinaryFormatter();
+
+                bf.Serialize(ms, this);
+                ms.Seek(0, SeekOrigin.Begin);
+                clonedObject = bf.Deserialize(ms);
+            }
+            finally
+            {
+                ms.Close();
+            }
+            return clonedObject;
+        }
+        #endregion
+    }
+}

@@ -1,0 +1,193 @@
+﻿/*Responsive de tabla principal*/
+/*
+#tabla {
+    width:1168px;
+    margin-bottom: 0;
+}
+
+#contenedor-tabla {
+    display:block;
+    overflow-x:scroll;
+    margin-bottom: 2rem;
+}
+*/
+
+.container {
+    visibility: hidden;
+}
+
+table th, table tfoot td { 
+    border-right: 1px solid #ddd;
+}
+
+/*Sobreescritura datatable buttons*/
+a.dt-button {
+    margin-right: 0 !important;
+}
+
+.txtProfesional {
+    vertical-align: super;
+}
+
+#frmDatos2 {
+    padding-bottom: 15px !important;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.fa-file-excel-o {
+    color:#1f985c;
+}
+
+@media (max-width: 767px) {
+    .form-group .col-xs-12 .input-group {
+        margin-top: 15px;
+        margin-bottom: 5px;
+    }
+}
+
+#divProf {
+    border: 1px solid #337ab7;
+    border-radius: 8px;
+    background-color: #f2f2f2;
+    margin-bottom:20px;
+}
+
+.ibox-title {
+    border-style: none solid none;
+    padding: 0px 15px 7px;
+}
+#myChart {
+    margin-top: 4.4rem;
+}
+
+#tabla2 {
+    /*min-width: 500px;*/
+}
+
+/*.dataTables_scrollBody {
+    max-height: 18vh !important;
+}*/
+
+#bodyTabla2 {
+    /*overflow-y: auto;*/
+    /*max-height: 12vh;*/
+}
+
+.fa-info-circle {
+    color: #adadad;
+    font-size: 20px;
+}
+
+/*Inicio Mikel*/
+.texto-tabla  {
+    font-size: 12px;
+    text-align: right;
+}
+#bodyTabla tr td:first-child, #bodyTabla tr td:nth-child(2),
+#bodyTabla2 tr td:first-child, #bodyTabla2 tr td:nth-child(2){
+    text-align: left;
+}
+.bg-info{
+    padding-right:10px !important;
+}
+#tabla_filter{
+    float:left;
+    font-size: 12px;
+    padding-left: 15px;
+}
+.colTabla
+{
+    /*border-left-style: solid;
+    border-left-width: 1px;
+    border-left-color: #569BBD;*/
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-top-color: #111;
+    background-color: #E4EFF3;
+}
+ 
+.colTabla1
+{
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-left-color: #111;
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-top-color: #111;
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-right-color: #111;
+    background-color: #E4EFF3;
+}
+
+.colTabla2
+{
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-top-color: #111;
+    background-color: #E4EFF3;   
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-right-color: #111; 
+}
+
+#tabla2 tr {
+    border-color: black;
+}
+
+.margentop5{
+    margin-top:5px;
+}
+/* fin Mikel*/
+.cabecera, pie {
+    color: #fff;
+}
+
+.celdaNum {
+    text-align: right;
+}
+.celdaTxtTotal {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+.celdaTxtTotal2 {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    text-align: right;
+}
+
+.celdaTotal {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+.img-center {margin:0 auto;}
+
+.oro {
+    color: gold;
+}
+
+.plata {
+    color: silver;
+}
+
+.leyenda {
+    padding: 5px;
+}
+
+#buscador {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    font-weight: normal;
+    width: 100%
+}
+
+/*Cambios para que en phone parezca un menú inferior*/
+@media (max-width: 992px) {
+    .leyenda {
+        margin-bottom: 20px;
+    }
+}

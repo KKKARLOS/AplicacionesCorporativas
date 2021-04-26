@@ -1,0 +1,61 @@
+﻿#divDialogos{
+    position:relative; 
+    visibility:hidden; 
+    margin-bottom:4px;
+    margin-left:20px; 
+    width:90px; 
+    height: 23px; 
+    padding-top:2px; 
+    padding-left:4px; 
+    display: inline-block; 
+    background-image:url(../../../../images/imgFondoAsuntoAbierto.png); 
+    background-repeat:no-repeat; 
+    cursor:pointer;
+}
+#imgDialogos{
+    vertical-align:middle; 
+    margin-left:4px; 
+    margin-top:2px;
+}
+#lblCountDialogosAbiertos{
+    width:23px; 
+    text-align:right; 
+    font:bold 14px Arial; 
+    color:#5894ae; 
+    vertical-align:bottom; 
+    margin-left:2px;
+}
+#divCountLeer{
+    visibility:hidden; 
+    position:absolute; 
+    top:-5px; 
+    left:55px; 
+    width:22px; 
+    height: 17px; 
+    font-family:Arial; 
+    color: White; 
+    font-size: 11px; 
+    vertical-align:middle; 
+    font-weight:bold; 
+    padding-top:3px; 
+    padding-left:5px; 
+    background-image:url(../../../../images/imgCountMsg1.png); 
+    background-repeat:no-repeat;
+}
+#divCountResponder{
+    visibility:hidden;
+    position:absolute;
+    top:12px; 
+    left:55px; 
+    width:22px; 
+    height: 17px; 
+    font-family:Arial; 
+    color: White; 
+    font-size: 11px; 
+    vertical-align:middle; 
+    font-weight:bold; 
+    padding-top:3px; 
+    padding-left:5px; 
+    background-image:url(../../../../images/imgCountMsg1.png); 
+    background-repeat:no-repeat;
+}

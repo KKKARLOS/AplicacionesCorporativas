@@ -1,0 +1,171 @@
+﻿/*body {
+}
+.row-modal {
+    margin-bottom: 15px;
+}
+
+.btn-default {
+    background-color: transparent;
+}
+
+.fa {
+    color: #adadad;
+}
+
+#pieTarea {
+        float: right;
+    }
+
+#divGrabar, #divSalir {
+    display: inline;
+}*/
+
+/*Pestaña General*/
+/*#idPE {
+    width: 65px;
+    text-align: center;
+}*/
+
+/*#txtPE{txtDatos
+    width: 250px;
+}*/
+
+/*#txtFase {
+    width: 280px;
+    margin-left: 24px;
+}*/
+
+/*#txtPT{
+    width: 318px;
+    margin-left: 24px;
+}*/
+
+/*#txtAct {
+     width: 280px;
+}*/
+/*
+.txtDatos{
+    width: 100px;
+    text-align: right;
+    float: right;
+}*/
+
+/*#txtNum {
+    width: 75px;     
+    text-align: center;   
+}*/
+
+/*#txtDen {
+    width: 470px;
+}*/
+
+/*.txtArea {
+    width: 100%;
+}*/
+
+
+/*#rowDesc {
+    margin-left: 0px;
+    margin-right: 0px;
+}*/
+
+/*Pestaña Documentación*/
+/*
+.linea:hover{
+    cursor: pointer;
+}
+
+.cabecera{
+    background-color: #337ab7;
+    color: #fff;
+    text-align: center    
+}
+
+.celdaHoras, .st-head-row, .st-key{
+    text-align: center;       
+}
+
+.table tbody tr.highlight td { 
+    background-color:  #e3dfdf;
+}
+
+#botonesDocu {
+    float: right;
+}
+
+.botonDocu {
+    display: inline;
+    font-size: 18px;    
+}
+
+.botonDocu:hover {
+    cursor: pointer;
+}
+
+#btnEliminar {
+    margin-left: 10px;
+}
+
+.fa-plus {
+    color: green;
+}
+
+.fa-trash {
+    color: red;
+}
+
+.cabecera {
+    width:25%;
+}
+
+    */
+
+@media (max-width: 992px) {
+    /*#txtFase, #txtPT, #txtAct, #txtDen {
+        margin-left: 0px;
+        width: 250px;
+    }*/
+
+}
+
+/*Cambios para que en phone parezca un menú inferior*/
+/*@media (max-width: 768px) {
+    #pieTarea {
+        float: none;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        background: #222;
+        width: 100%;
+        border-top: 1px solid #337ab7;
+        text-align: center;
+    }
+            
+    .btn-default-lite {
+        color: #f2f2f2;
+        border-color: transparent;
+        background-color: transparent;
+    }   
+
+    .fa {
+        color: #fff;
+    }
+
+    .btn-default-lite:hover .fa{     
+        color: #000;
+    }
+
+    #divGrabar{
+    margin-left: 20%
+}
+
+    #fieldsetDocu {
+        border: none !important;
+    }
+    
+    .st-head-row-main {
+        color: #fff;
+        background-color: #337ab7;;
+    }
+  
+}*/

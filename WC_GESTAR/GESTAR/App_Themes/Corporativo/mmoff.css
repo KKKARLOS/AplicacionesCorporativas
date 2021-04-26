@@ -1,0 +1,39 @@
+﻿#tblMsg td { padding: 0px 0px 0px 0px; }
+#tdIcono { padding: 0px 0px 0px 0px; width: 25px; text-align:center; vertical-align:top; }/*background-color: #ededed;*/
+#tdMsg5 { padding: 5px 5px 5px 10px; } /*background-color: #ededed;*/
+
+.tdMsg1Inf { width: 6px; height: 11px; background-image:url('../../Capa_Presentacion/UserControls/Msg/Images/Information/img01.png'); background-repeat: no-repeat; }
+.tdMsg2Inf { height: 11px; background-image: url('../../Capa_Presentacion/UserControls/Msg/Images/Information/img02.png'); background-repeat: repeat-x; }
+.tdMsg3Inf { width: 11px; height: 11px; background-image: url('../../Capa_Presentacion/UserControls/Msg/Images/Information/img03.png'); background-repeat: no-repeat; }
+.tdMsg4Inf { width: 6px; background-image: url('../../Capa_Presentacion/UserControls/Msg/Images/Information/img04.png'); background-repeat: repeat-y; }
+.tdMsg6Inf { width: 11px; background-image: url('../../Capa_Presentacion/UserControls/Msg/Images/Information/img05.png'); background-repeat: repeat-y; }
+.tdMsg7Inf { width: 6px; height: 10px; background-image: url('../../Capa_Presentacion/UserControls/Msg/Images/Information/img06.png'); background-repeat: no-repeat; }
+.tdMsg8Inf { height: 10px; background-image: url('../../Capa_Presentacion/UserControls/Msg/Images/Information/img07.png'); background-repeat: repeat-x; }
+.tdMsg9Inf { width: 11px; height: 10px; background-image: url('../../Capa_Presentacion/UserControls/Msg/Images/Information/img08.png'); background-repeat: no-repeat; }
+
+.tdMsg1War { width: 6px; height: 11px; background-image: url('../../Capa_Presentacion/UserControls/Msg/Images/Warning/img01.png'); background-repeat: no-repeat; }
+.tdMsg2War { height: 11px; background-image: url('../../Capa_Presentacion/UserControls/Msg/Images/Warning/img02.png'); background-repeat: repeat-x; }
+.tdMsg3War { width: 11px; height: 11px; background-image: url('../../Capa_Presentacion/UserControls/Msg/Images/Warning/img03.png'); background-repeat: no-repeat; }
+.tdMsg4War { width: 6px; background-image: url('../../Capa_Presentacion/UserControls/Msg/Images/Warning/img04.png'); background-repeat: repeat-y; }
+.tdMsg6War { width: 11px; background-image: url('../../Capa_Presentacion/UserControls/Msg/Images/Warning/img05.png'); background-repeat: repeat-y; }
+.tdMsg7War { width: 6px; height: 10px; background-image: url('../../Capa_Presentacion/UserControls/Msg/Images/Warning/img06.png'); background-repeat: no-repeat; }
+.tdMsg8War { height: 10px; background-image: url('../../Capa_Presentacion/UserControls/Msg/Images/Warning/img07.png'); background-repeat: repeat-x; }
+.tdMsg9War { width: 11px; height: 10px; background-image: url('../../Capa_Presentacion/UserControls/Msg/Images/Warning/img08.png'); background-repeat: no-repeat; }
+
+.tdMsg1Suc { width: 6px; height: 11px; background-image: url('../../Capa_Presentacion/UserControls/Msg/Images/Success/img01.png'); background-repeat: no-repeat; }
+.tdMsg2Suc { height: 11px; background-image: url('../../Capa_Presentacion/UserControls/Msg/Images/Success/img02.png'); background-repeat: repeat-x; }
+.tdMsg3Suc { width: 11px; height: 11px; background-image: url('../../Capa_Presentacion/UserControls/Msg/Images/Success/img03.png'); background-repeat: no-repeat; }
+.tdMsg4Suc { width: 6px; background-image: url('../../Capa_Presentacion/UserControls/Msg/Images/Success/img04.png'); background-repeat: repeat-y; }
+.tdMsg6Suc { width: 11px; background-image: url('../../Capa_Presentacion/UserControls/Msg/Images/Success/img05.png'); background-repeat: repeat-y; }
+.tdMsg7Suc { width: 6px; height: 10px; background-image: url('../../Capa_Presentacion/UserControls/Msg/Images/Success/img06.png'); background-repeat: no-repeat; }
+.tdMsg8Suc { height: 10px; background-image: url('../../Capa_Presentacion/UserControls/Msg/Images/Success/img07.png'); background-repeat: repeat-x; }
+.tdMsg9Suc { width: 11px; height: 10px; background-image: url('../../Capa_Presentacion/UserControls/Msg/Images/Success/img08.png'); background-repeat: no-repeat; }
+
+.tdMsg1Err { width: 6px; height: 11px; background-image: url('../../Capa_Presentacion/UserControls/Msg/Images/Error/img01.png'); background-repeat: no-repeat; }
+.tdMsg2Err { height: 11px; background-image: url('../../Capa_Presentacion/UserControls/Msg/Images/Error/img02.png'); background-repeat: repeat-x; }
+.tdMsg3Err { width: 11px; height: 11px; background-image: url('../../Capa_Presentacion/UserControls/Msg/Images/Error/img03.png'); background-repeat: no-repeat; }
+.tdMsg4Err { width: 6px; background-image: url('../../Capa_Presentacion/UserControls/Msg/Images/Error/img04.png'); background-repeat: repeat-y; }
+.tdMsg6Err { width: 11px; background-image: url('../../Capa_Presentacion/UserControls/Msg/Images/Error/img05.png'); background-repeat: repeat-y; }
+.tdMsg7Err { width: 6px; height: 10px; background-image: url('../../Capa_Presentacion/UserControls/Msg/Images/Error/img06.png'); background-repeat: no-repeat; }
+.tdMsg8Err { height: 10px; background-image: url('../../Capa_Presentacion/UserControls/Msg/Images/Error/img07.png'); background-repeat: repeat-x; }
+.tdMsg9Err { width: 11px; height: 10px; background-image: url('../../Capa_Presentacion/UserControls/Msg/Images/Error/img08.png'); background-repeat: no-repeat; }

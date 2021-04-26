@@ -1,0 +1,71 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Plantilla.master.cs" Inherits="Plantilla" %>
+<%@ Register Src="../Capa_Presentacion/UserControls/Menu.ascx" TagName="Menu" TagPrefix="uc2" %>
+<%@ Register Src="../Capa_Presentacion/UserControls/Cabecera/cabecera.ascx" TagName="cabecera" TagPrefix="uc1" %>
+<%@ Register Src="../Capa_Presentacion/UserControls/Session.ascx" TagName="mensajeSession" TagPrefix="uc3" %>
+<%@ Register Src="../Capa_Presentacion/UserControls/Procesando.ascx" TagName="Procesando" TagPrefix="ucproc" %>
+<%@ Register Src="../Capa_Presentacion/UserControls/Msg/mmoff.ascx" TagName="mmoff" TagPrefix="uc_mmoff" %>
+	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+	<html xmlns="http://www.w3.org/1999/xhtml">
+	<head runat="server" id="HeaderMaster">
+    </head>
+<body style="overflow:hidden" onload="setMenu();res();mostrarErrores();init();ocultarProcesando();" onbeforeunload="unload();mostrarProcesando();">
+    <form id="frmDatos" name="frmDatos" runat="server">
+    <ucproc:Procesando ID="Procesando" runat="server" />    
+    <script type="text/javascript">
+    <!--
+	    $I("procesando").style.top = (document.body.clientHeight/2) -50;
+	    $I("procesando").style.left = (document.body.clientWidth/2) -76;
+	    $I("procesando").style.visibility = "visible";
+        var strServer = "<% =Session["strServer"].ToString() %>";
+        var nResolucion = <% =nResolucion.ToString() %>;
+        var intSession = <%=Session.Timeout%>;  //Caducidad en min.
+    -->
+    </script>
+    <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr><td colspan="2"><uc1:cabecera id="Cabecera1" runat="server"></uc1:cabecera></td></tr>
+        <tr style="height:25px;"><td colspan="2" class="fondoMenu"><nobr id="nbrMenu" style="display:none"><uc2:Menu ID="Menu1" runat="server" /></nobr></td></tr>
+        <tr>
+            <td width="65%" class="texto" style="border-bottom-color: #569BBD;
+                        border-bottom-style: solid;
+                        border-bottom-width: 1px;
+                        padding-bottom: 2px;
+                        background-color: #E6EEF2; height: 22px;">
+                &nbsp;&nbsp;&nbsp;<asp:SiteMapPath ID="SiteMapPath1" runat="server" CssClass="texto" Font-Names="Arial" Font-Size="11px" ForeColor="#3E6779" EnableViewState="False" PathSeparator="  >  " Font-Underline="False">
+                    <NodeStyle CssClass="texto" Font-Bold="False" Font-Names="Arial" Font-Size="11px"
+                        Font-Strikeout="False" Font-Underline="False" ForeColor="#3E6779" />
+                </asp:SiteMapPath>
+            </td>
+            <td width="35%" align=right style="border-bottom-color: #569BBD;
+                        border-bottom-style: solid;
+                        border-bottom-width: 1px;
+                        padding-bottom: 2px;
+                        background-color: #E6EEF2; height: 22px;"><nobr>
+            <asp:Label ID="lblSession" CssClass="texto" runat="server" Text="" />&nbsp;&nbsp;</nobr>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="border-bottom-color: #569BBD; 
+                        border-bottom-style: solid; 
+                        border-bottom-width: 1px;">
+                <asp:ContentPlaceHolder ID="CPHB" runat="server">
+                    </asp:ContentPlaceHolder>
+                
+            </td>
+        </tr>
+        <tr><td colspan="2">
+    <div style="padding:10px;" class="texto">
+        <asp:contentplaceholder id="CPHC" runat="server">
+        </asp:contentplaceholder>
+    </div>
+    </td></tr>
+    <tr><td colspan="2"></td></tr>
+    </table>
+    <uc3:mensajeSession ID="MensajeSession" runat="server" />
+    <uc_mmoff:mmoff ID="mmoff1" runat="server" />
+    <iframe id="iFrmSession" name="iFrmSession" frameborder="0" src="<% =Session["strServer"].ToString() %>MasterPages/ControlSesion.aspx" width="10px" height="10px" style="visibility:hidden"></iframe>
+    <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server"  SiteMapProvider="xmlSiteMapMenu" StartingNodeOffset="0" ShowStartingNode=false />
+    &nbsp;<asp:TextBox ID="hdnErrores" runat="server" ReadOnly=true style="visibility:hidden"></asp:TextBox>
+    </form>
+    <asp:ContentPlaceHolder ID="CPHD" runat="server"></asp:ContentPlaceHolder>    
+    </body>
+</html>

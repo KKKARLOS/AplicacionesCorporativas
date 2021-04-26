@@ -1,0 +1,50 @@
+using System;
+using System.IO;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
+using SII.HCD.Common.Entities;
+
+namespace SII.HCD.BackOffice.Entities
+{
+    [DataContract()]
+    [Serializable()]
+    public class ProfileEntity : ProfileBaseEntity, ICloneable
+    {
+        #region Properties
+        [DataMember()]
+        public ParticipateAsProfileRelEntity[] ParticipateAsRels { get; set; }
+        #endregion
+
+        #region Constructors
+        public ProfileEntity() : this(0, 0, String.Empty, String.Empty, null, string.Empty, StatusEnum.Active, DateTime.Now, string.Empty, 0) { }
+
+        public ProfileEntity(int id, int categoryID, string code, string name, ParticipateAsProfileRelEntity[] participateAsRels,
+            string categoryName, StatusEnum status, DateTime lastUpdated, string modifiedBy, Int64 dbTimeStamp)
+            : base(id, categoryID, categoryName, code, name, status, lastUpdated, modifiedBy, dbTimeStamp)
+        {
+            ParticipateAsRels = participateAsRels;
+        }
+        #endregion
+
+        #region ICloneable Members
+        public new object Clone()
+        {
+            object clonedObject = null;
+            MemoryStream ms = new MemoryStream();
+            try
+            {
+                BinaryFormatter bf = new BinaryFormatter();
+
+                bf.Serialize(ms, this);
+                ms.Seek(0, SeekOrigin.Begin);
+                clonedObject = bf.Deserialize(ms);
+            }
+            finally
+            {
+                ms.Close();
+            }
+            return clonedObject;
+        }
+        #endregion
+    }
+}

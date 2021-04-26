@@ -1,0 +1,97 @@
+﻿	#dragDropContainer ul{	/* General rules for all <ul> */
+		margin-top:0px;
+		margin-left:0px;
+		margin-bottom:0px;
+		padding:0px;
+	}
+	#allItems li,#dragContent li,li#indicateDestination{	/* Movable items, i.e. <LI> */
+		list-style-type:none;
+		height:18px;
+		width: 80px;
+		/*padding:2px;
+		margin-bottom:2px;*/
+		/*border:solid 1px navy;*/
+		display: inline-block;
+		cursor:pointer;
+	}
+
+	#allItems
+	{
+        margin: 0px;
+        padding: 0px;
+	}
+	#allItems li#J { width: 60px; }
+	#allItems li#M { width: 60px; }	
+	
+	li#indicateDestination{	/* Box indicating where content will be dropped - i.e. the one you use if you don't use arrow */
+		border:1px solid #317082;	
+		background-color:#FFF;
+	}
+
+	/* LEFT COLUMN CSS */
+	#listOfItems{	/* Small box in right column ,i.e <ul> */
+        margin: 0px;
+        padding: 0px;
+	}
+	#listOfItems li{	/* Small box in right column ,i.e <ul> */
+        display: inline-block;
+        margin-right: 2px;
+	}
+	/* END LEFT COLUMN CSS */
+	
+	#dragDropContainer .mouseover{	/* Mouse over effect DIV box in right column */
+		background-color:#E2EBED;
+		border:1px solid #317082;
+		height:18px;
+		padding:0px 0px 0px 0px;
+		margin:0px 0px 0px 0px;
+	}
+	
+	/* Start main container CSS */
+	
+	#mainContainer div{	/* Parent <div> of small boxes */
+		float:left;
+		padding:0px 0px 0px 0px;
+		margin:0px 0px 0px 0px;
+		height:20px;
+		width:98%;
+	}
+	#mainContainer div ul{
+		/*margin-left:10px;*/
+        margin: 0px;
+        padding:0px;
+        /*padding-top: 2px;*/
+	}	
+	
+	#mainContainer ul{	/* Small box in right column ,i.e <ul> */
+		width:100%;
+		border:0px;	
+		margin:0px;
+	}
+	
+	#mainContainer li{	/* Small box in right column ,i.e <ul> */
+        display: inline-block;
+        margin-right: 2px;
+		vertical-align:bottom;
+	}
+	
+	
+	#dragContent{	/* Drag container */
+		position:absolute;
+		width:90px;
+		height:20px;
+		display:none;
+		margin:0px;
+		padding:0px;
+		z-index:2000;
+	}
+
+	#dragDropIndicator{	/* DIV for the small arrow */
+		position:absolute;
+		width:7px;
+		height:10px;
+		display:none;
+		z-index:1000;
+		margin:0px;
+		padding:0px;
+	}

@@ -1,0 +1,162 @@
+﻿body {
+}
+
+.txtCampo{	
+    width:100%;
+    margin-bottom: 5px;
+    resize: none;
+    padding-left:10px;
+}
+
+.txtId{
+    width:15%;
+    display: inline;
+}
+
+.txtDes{	
+    width: 84.6%;
+    display: inline;
+}
+
+label{
+    font-weight:normal;
+}
+
+.inline{
+    display: table-cell;
+    padding-right:10px;
+}
+
+.cabecera {
+    background-color: #337ab7;
+    color: #fff;
+    text-align: center;
+}
+
+.centrado{
+    text-align:center;
+}
+
+#botonesDocu{
+    float:right;
+}
+
+.botonTabla {
+    display: inline-block;
+    font-size: 18px;
+}
+
+.botonTabla:hover {
+    cursor: pointer;
+}
+
+#botonesTarea{
+    float:right;
+}
+
+.botonTabla:hover {
+    cursor: pointer;
+}
+
+/*Modal documentación*/
+
+.lblCaract {
+    margin-left: 80px;
+}
+
+/*Para la lista de profesionales*/
+.panel-body{
+	padding:0px;
+}
+
+#lisProfesionales.dual-list .list-group, #lisCR.dual-list .list-group, #lisEmpresas.dual-list .list-group {
+    margin-top: 8px;
+    max-height: 35vh;
+    overflow: auto;
+    margin-bottom: 10px;
+}
+
+#lisProfesionales2.dual-list .list-group, #lisCR.dual-list .list-group, #lisEmpresas.dual-list .list-group {
+    margin-top: 8px;
+    max-height: 35vh;
+    overflow: auto;
+    margin-bottom: 10px;
+}
+
+
+.list-arrows {
+    padding-top: 40px;
+}
+
+.dual-list li {
+    padding: 0 15px;
+}
+li.list-group-item {
+    display: table;
+    width: 100%;
+}
+.list-left li, .list-right li {
+    cursor: pointer;
+    height: 24px;
+    font-size: 14px;
+}
+
+/*Cambios para que en phone parezca un menú inferior*/
+@media (max-width: 768px) {
+    #pieTarea {
+        float: none;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        background: #222;
+        width: 100%;
+        border-top: 1px solid #337ab7;
+        text-align: center;
+        z-index: 10000;
+    }
+
+    .btn-default-lite {
+        color: #f2f2f2;
+        border-color: transparent;
+        background-color: transparent;
+    }
+
+    .fa :not(fa-diamond) {
+        color: #fff;
+    }
+
+    .btn-default-lite:hover .fa {
+        color: #000;
+    }
+
+    /*Reverse de icono font awesome*/
+
+    .fa-share-square-o-rev:before {
+        content: "\f045";
+    }
+
+    .fa-share-square-o-rev {
+        -moz-transform: scaleX(-1);
+        -o-transform: scaleX(-1);
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+        filter: FlipH;
+        -ms-filter: "FlipH";
+    }
+
+    #divSalir {
+        margin-left: 20%;
+    }
+
+    /*Estilos para las tablas stacktable*/
+
+    .st-key {
+        background-color: #e6e6e6;
+        text-align: left;
+        width: 25%;
+    }
+
+    .st-val {
+        text-align: left;
+    }
+}

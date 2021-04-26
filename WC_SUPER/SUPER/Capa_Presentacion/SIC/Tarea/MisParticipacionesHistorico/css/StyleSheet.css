@@ -1,0 +1,37 @@
+﻿
+form label{font-weight: normal;}
+
+/*Pendiente probarlo bien para hacerlo genérico*/
+.dataTables_scrollBody thead tr, .DTFC_LeftBodyLiner thead tr {
+    visibility:collapse !important;
+}
+
+.DTFC_LeftBodyLiner {
+    overflow-x:hidden;
+}
+/*FIN Pendiente probarlo bien para hacerlo genérico*/
+
+.btn-inline-input {
+    height: 22px;
+    padding: 0 5px 0 5px;
+}
+
+.fieldset .list-group-item {
+    padding: 0 5px 0 5px;
+}
+
+.fieldset {
+    margin: 0 15px 0 15px !important;
+    padding: 5px !important;
+}
+.fieldset-container-scroll {
+    height:10vh;
+    overflow-y:auto;
+}
+legend.fieldset {
+    font-weight: normal !important;
+}
+
+#ui-datepicker-div {
+    z-index:2 !important;
+}

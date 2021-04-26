@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="c3aa894b-7fe3-40b8-8c5f-f6e8b6b64d4c" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://services.intranet.ibermatica/SendPack/Sendpack.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="SendPack.disco" MetadataType="Disco" ID="75a8c78e-56a5-41ed-aa90-184bba5da985" SourceId="1" SourceUrl="http://services.intranet.ibermatica/SendPack/SendPack.svc?disco" />
+    <MetadataFile FileName="SendPack.wsdl" MetadataType="Wsdl" ID="23ba734e-f299-4044-8c4a-fd06cf8d1ecd" SourceId="1" SourceUrl="http://services.intranet.ibermatica/SendPack/SendPack.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="SendPack1.wsdl" MetadataType="Wsdl" ID="1dd3b532-27c1-4b9e-9626-fadd4ef8a7e1" SourceId="1" SourceUrl="http://services.intranet.ibermatica/SendPack/SendPack.svc?wsdl" />
+    <MetadataFile FileName="SendPack.xsd" MetadataType="Schema" ID="da8e48ff-a839-4811-89a1-e789a7c45421" SourceId="1" SourceUrl="http://services.intranet.ibermatica/SendPack/SendPack.svc?xsd=xsd2" />
+    <MetadataFile FileName="SendPack1.xsd" MetadataType="Schema" ID="b04755bf-3314-48cc-9074-d7612d5c002d" SourceId="1" SourceUrl="http://services.intranet.ibermatica/SendPack/SendPack.svc?xsd=xsd3" />
+    <MetadataFile FileName="SendPack2.xsd" MetadataType="Schema" ID="443e4b96-de6c-4fa4-9d59-a0aa20fde864" SourceId="1" SourceUrl="http://services.intranet.ibermatica/SendPack/SendPack.svc?xsd=xsd0" />
+    <MetadataFile FileName="SendPack3.xsd" MetadataType="Schema" ID="fce6fb55-9183-48d9-890f-84fc7e92eff4" SourceId="1" SourceUrl="http://services.intranet.ibermatica/SendPack/SendPack.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

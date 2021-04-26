@@ -1,0 +1,187 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
+
+#UsingNameSpace#
+
+/// <summary>
+/// Summary description for #ClassName#
+/// </summary>
+
+namespace #NameSpace# 
+{
+    
+    internal class #ClassName# 
+    {
+    	#region variables privadas y constructor
+		private sqldblib.SqlServerSP cDblib;
+		#PrivateVariables#
+		
+        private enum enumDBFields : byte
+        {
+			#PrivateEnumDBFields#
+        }
+
+        internal #ClassName#(sqldblib.SqlServerSP extcDblib)
+        {
+            if(extcDblib == null)
+                throw new Exception("Exception en el constructor DAL. Objeto dblib no instanciado.");
+
+            if (extcDblib.Connection.State != System.Data.ConnectionState.Open)
+                throw new Exception("Exception en el constructor DAL. Se perdió la conexión a la base de datos.");
+
+            cDblib = extcDblib;
+        }
+			
+		#endregion
+	
+		#region funciones publicas
+		/// <summary>
+        /// Inserta un #ClassName#
+        /// </summary>
+		internal int Insert(#InsertParameters#)
+        {
+			try
+			{
+				#InsertEnumParameters#
+
+				return (int)cDblib.Execute(#InsertCommandText#, dbparams);
+			}
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+		
+		/// <summary>
+        /// Obtiene un #ClassName# a partir del id
+        /// </summary>
+        internal Models.#SelectReturnType# Select(#PKParameters#)
+        {
+            Models.#SelectReturnType# #SelectDBReturn# = null;
+            IDataReader dr = null;
+
+            try
+            {
+				#PKDBParameters#
+
+				dr = cDblib.DataReader(#SelectCommandText#, dbparams);
+				if (dr.Read())
+				{
+					#SelectDBMapping#
+				}
+				return #SelectDBReturn#;
+				
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                if (dr != null)
+                {
+                    if (!dr.IsClosed) dr.Close();
+                    dr.Dispose();
+                }
+            }
+        }
+		
+		/// <summary>
+        /// Actualiza un #ClassName# a partir del id
+        /// </summary>
+		internal int Update(Models.#ClassName# o#ClassName#)
+        {
+			try
+			{
+				#UpdateEnumParameters#
+                           
+				return (int)cDblib.Execute(#UpdateCommandText#, dbparams);
+			}
+			catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+		
+		/// <summary>
+        /// Elimina un #ClassName# a partir del id
+        /// </summary>
+        internal int Delete(#PKParameters#)
+        {
+			try
+			{
+				#PKDBParameters#
+            
+				return (int)cDblib.Execute(#DeleteCommandText#, dbparams);
+			}
+			catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+		/// <summary>
+        /// Obtiene todos los #ClassName#
+        /// </summary>
+		internal List<Models.#ClassName#> Catalogo(Models.#ClassName# o#ClassName#Filter)
+		{
+			Models.#ClassName# o#ClassName# = null;
+            List<Models.#ClassName#> lst = new List<Models.#ClassName#>();
+            IDataReader dr = null;
+
+            try
+            {
+				#SelectAllDBParameters#
+
+				dr = cDblib.DataReader(#SelectAllCommandText#, dbparams);
+				while (dr.Read())
+				{
+					#SelectDBMapping#
+                    lst.Add(o#ClassName#);
+
+				}
+				return lst;
+			
+			}
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                if (dr != null)
+                {
+                    if (!dr.IsClosed) dr.Close();
+                    dr.Dispose();
+                }
+            }
+		}
+		
+		#endregion
+		
+		#region funciones privadas
+		private SqlParameter Param(enumDBFields dbField, object value)
+        {
+            SqlParameter dbParam = null;
+            string paramName = null;
+            SqlDbType paramType = default(SqlDbType);
+            int paramSize = 0;
+			ParameterDirection paramDirection = ParameterDirection.Input;
+			
+			#EnumDBInf#
+
+            dbParam = cDblib.dbParameter(paramName, paramType, paramSize);
+            dbParam.Direction = paramDirection;
+            if (paramDirection == ParameterDirection.Input | paramDirection == ParameterDirection.InputOutput) dbParam.Value = value;
+
+            return dbParam;
+
+        }
+		
+		#endregion
+    
+    }
+
+}

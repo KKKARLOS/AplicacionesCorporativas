@@ -1,0 +1,97 @@
+Bloque 1
+---------
+
+  D:\Area\Proyectos\IMQ\src-Optimizacion\SII.HCD.BackOffice.DA\HumanResourceDA.cs(227):                		DataSet ds = SqlHelper.ExecuteDataset("ObtenerHumanResourceEntity", aParam); ok
+  D:\Area\Proyectos\IMQ\src-Optimizacion\SII.HCD.BackOffice.DA\OrganizationDA.cs(269):                		DataSet ds = SqlHelper.ExecuteDataset("ObtenerOrganizationEntity", aParam); ok
+  D:\Area\Proyectos\IMQ\src-Optimizacion\SII.HCD.BackOffice.DA\PersonDA.cs(1321):                			DataSet ds = SqlHelper.ExecuteDataset("ObtenerPersonEntity", aParam); ok
+  D:\Area\Proyectos\IMQ\src-Optimizacion\SII.HCD.BackOffice.DA\PersonDA.cs(1350):            				SqlDataReader dr = SqlHelper.ExecuteSqlDataReader("Obtener_PersonID_From_HumanResource", aParam);
+  D:\Area\Proyectos\IMQ\src-Optimizacion\SII.HCD.BackOffice.DA\PersonDA.cs(1365):            				SqlDataReader dr = SqlHelper.ExecuteSqlDataReader("Obtener_PersonID_From_CustomerContactPerson", aParam);
+  D:\Area\Proyectos\IMQ\src-Optimizacion\SII.HCD.BackOffice.DA\PersonDA.cs(1379):            				SqlDataReader dr = SqlHelper.ExecuteSqlDataReader("Obtener_PersonID_From_NOK", aParam);
+  D:\Area\Proyectos\IMQ\src-Optimizacion\SII.HCD.BackOffice.DA\PersonDA.cs(1393):            				SqlDataReader dr = SqlHelper.ExecuteSqlDataReader("Obtener_PersonID_From_Customer", aParam);
+  
+  REVISAR
+  D:\Area\Proyectos\IMQ\src-Optimizacion\SII.HCD.Administrative.DA\CustomerContactOrganizationDA.cs(122):   DataSet ds = SqlHelper.ExecuteDataset("Obtener_CustomerContactOrganizations_Entity", aParam)
+  (borrar procedimiento)
+  
+  D:\Area\Proyectos\IMQ\src-Optimizacion\SII.HCD.Administrative.DA\CustomerContactOrganizationDA.cs(160):   DataSet ds = SqlHelper.ExecuteDataset("Obtener_CustomerContactPerson_Entity", aParam);
+  
+  
+  D:\Area\Proyectos\IMQ\src-Optimizacion\SII.HCD.Administrative.DA\CustomerContactPersonDA.cs(135):         DataSet ds = SqlHelper.ExecuteDataset("Obtener_CustomerContactPerson_Entity", aParam);
+  D:\Area\Proyectos\IMQ\src-Optimizacion\SII.HCD.Administrative.DA\CustomerDA.cs(295):                		DataSet ds = SqlHelper.ExecuteDataset("ObtenerCustomerEntity", aParam);
+  D:\Area\Proyectos\IMQ\src-Optimizacion\SII.HCD.Administrative.DA\CustomerDA.cs(410):                		DataSet ds = SqlHelper.ExecuteDataset("Obtener_Customer_Entity", aParam);
+  D:\Area\Proyectos\IMQ\src-Optimizacion\SII.HCD.Administrative.DA\NOKDA.cs(136):                			DataSet ds = SqlHelper.ExecuteDataset("Obtener_NOK_Kinship_Entity", aParam);
+
+Bloque2
+--------
+
+  D:\Area\Proyectos\IMQ\src-Optimizacion\SII.HCD.Administrative.DA\CustomerPreAssessmentDA.cs(225):         DataSet ds = SqlHelper.ExecuteDataset("ObtenerCustomerPreAssessmentEntity", aParam);
+  D:\Area\Proyectos\IMQ\src-Optimizacion\SII.HCD.Administrative.DA\CustomerEpisodeBL.cs(531)				DataSet ds = this.Gateway.ExecuteStoredProcedureDataSet("ObtenerFullCustomerEpisodeEntity"
+  D:\Area\Proyectos\IMQ\src-Optimizacion\SII.HCD.Administrative.DA\CustomerOrderRequestBL.cs				DataSet ds = this.Gateway.ExecuteStoredProcedureDataSet("ObtenerCustomerOrderRequestEntity"
+  D:\Area\Proyectos\IMQ\src-Optimizacion\SII.HCD.Administrative.DA\CustomerOrderRequestBL.cs  				DataSet ds = this.Gateway.ExecuteStoredProcedureDataSet("ObtenerCustomerOrderRequestEntity_ByParentCustomerOrderRequestID",
+  D:\Area\Proyectos\IMQ\src-Optimizacion\SII.HCD.Administrative.DA\CustomerObservationBL.cs 				DataSet ds = this.Gateway.ExecuteStoredProcedureDataSet("ObtenerRegisteredLayoutEntity_ByCustomerAndOrderRequest",
+  GetByParentCustomerOrderRequestID
+  
+  
+  
+  
+  
+        public DataSet GetByID(int id)
+        {
+            try
+            {
+                DataSet ds = this.Gateway.ExecuteStoredProcedureDataSet("ObtenerHumanResourceEntity",
+                    new StoredProcInParam("HumanResourceID", DbType.Int32, id)
+                    );
+
+                if (ds.Tables.Count != 0)
+                {
+                    int i = 0;
+
+                    ds.Tables[i++].TableName = BackOffice.Entities.TableNames.HumanResourceTable;
+                    ds.Tables[i++].TableName = BackOffice.Entities.TableNames.HHRRProfileRelTable;
+                    ds.Tables[i++].TableName = BackOffice.Entities.TableNames.ProfileTable;
+                    ds.Tables[i++].TableName = BackOffice.Entities.TableNames.ParticipateAsProfileRelTable;
+                    ds.Tables[i++].TableName = BackOffice.Entities.TableNames.ParticipateAsTable;
+                    ds.Tables[i++].TableName = BackOffice.Entities.TableNames.ResourceDeviceRelTable;
+                    ds.Tables[i++].TableName = BackOffice.Entities.TableNames.DeviceTable;
+                    ds.Tables[i++].TableName = BackOffice.Entities.TableNames.DeviceTypeTable;
+                    ds.Tables[i++].TableName = BackOffice.Entities.TableNames.PersonAvailPatternTable;
+                    ds.Tables[i++].TableName = BackOffice.Entities.TableNames.AvailPatternTable;
+                    ds.Tables[i++].TableName = BackOffice.Entities.TableNames.AvailabilityTable;
+                    ds.Tables[i++].TableName = BackOffice.Entities.TableNames.PersonCareCenterAccessTable;
+
+                    return ds;
+                }
+                else return null;
+            }
+            catch (Exception ex)
+            {
+                if (ExceptionPolicy.HandleException(ex, ExceptionPolicies.DataAccess)) throw;
+                else return null;
+            }
+        }
+		
+		
+		
+                using (IDataReader reader = this.Gateway.ExecuteStoredProcedureReader("",
+                        new StoredProcInParam("EACElementID", DbType.Int32, elementID),
+                        new StoredProcInParam("Status", DbType.Int32, (int)status),
+                        new StoredProcInParam("ModifiedBy", DbType.String, modifiedBy)))	
+                {
+                    return (IsEmptyReader(reader)) ? 0 : SIIConvert.ToInteger(reader["ID"].ToString());
+                }			
+
+
+		public int GetLocationTypeID(string locationTypeCode)
+        {
+            if (string.IsNullOrEmpty(locationTypeCode))
+                throw new ArgumentNullException("locationTypeCode");
+
+            using (IDataReader reader = this.Gateway.ExecuteQueryReader(SQLProvider.OccupancyRate_GetLocationIDByCode,
+                    new StoredProcInParam("LocationTypeCode", DbType.String, locationTypeCode)))
+            {
+                return (IsEmptyReader(reader))
+                    ? 0
+                    : reader["ID"] as int? ?? 0;
+            }
+        }

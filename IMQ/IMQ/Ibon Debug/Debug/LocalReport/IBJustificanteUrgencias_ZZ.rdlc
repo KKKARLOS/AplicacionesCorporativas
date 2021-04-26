@@ -1,0 +1,1344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition">
+  <DataSources>
+    <DataSource Name="SIIHCDAdministrativeEntities">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>594c0aaf-a58a-43df-a4ae-8098de7016f0</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <DataSets>
+    <DataSet Name="CustomerProcessEntity">
+      <Fields>
+        <Field Name="AdmissionType">
+          <DataField>AdmissionType</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Age">
+          <DataField>Age</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="AssistanceService">
+          <DataField>AssistanceService</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="AssistanceServiceID">
+          <DataField>AssistanceServiceID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="AttendingPhysician">
+          <DataField>AttendingPhysician</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="AttendingPhysicianID">
+          <DataField>AttendingPhysicianID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="AvailableProcessSteps">
+          <DataField>AvailableProcessSteps</DataField>
+          <rd:TypeName>System.Int64</rd:TypeName>
+        </Field>
+        <Field Name="Bed">
+          <DataField>Bed</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="BedID">
+          <DataField>BedID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="BirthDate">
+          <DataField>BirthDate</DataField>
+          <rd:TypeName>System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="Building">
+          <DataField>Building</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="BuildingID">
+          <DataField>BuildingID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="CareCenterID">
+          <DataField>CareCenterID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="CareCenterName">
+          <DataField>CareCenterName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CEStatus">
+          <DataField>CEStatus</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CHNumber">
+          <DataField>CHNumber</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="City">
+          <DataField>City</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ClassificationID">
+          <DataField>ClassificationID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="ClassificationName">
+          <DataField>ClassificationName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CloseDateTime">
+          <DataField>CloseDateTime</DataField>
+          <rd:TypeName>System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="Codified">
+          <DataField>Codified</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="CodifiedExported">
+          <DataField>CodifiedExported</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="CPStatus">
+          <DataField>CPStatus</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CurrentLocationID">
+          <DataField>CurrentLocationID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="CurrentLocationName">
+          <DataField>CurrentLocationName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CustomerEpisodeDate">
+          <DataField>CustomerEpisodeDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="CustomerEpisodeEndDate">
+          <DataField>CustomerEpisodeEndDate</DataField>
+          <rd:TypeName>System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="CustomerEpisodeID">
+          <DataField>CustomerEpisodeID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="CustomerEpisodeNumber">
+          <DataField>CustomerEpisodeNumber</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CustomerFullName">
+          <DataField>CustomerFullName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CustomerFullName2">
+          <DataField>CustomerFullName2</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CustomerID">
+          <DataField>CustomerID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="CustomerIdentifierConfidentiality">
+          <DataField>CustomerIdentifierConfidentiality</DataField>
+          <rd:TypeName>SII.HCD.BackOffice.Entities.PersonConfidentialityEnum</rd:TypeName>
+        </Field>
+        <Field Name="CustomerIdentifierConfidentialityDef">
+          <DataField>CustomerIdentifierConfidentialityDef</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CustomerNameConfidentiality">
+          <DataField>CustomerNameConfidentiality</DataField>
+          <rd:TypeName>SII.HCD.BackOffice.Entities.PersonConfidentialityEnum</rd:TypeName>
+        </Field>
+        <Field Name="CustomerNameConfidentialityDef">
+          <DataField>CustomerNameConfidentialityDef</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CustomerPolicyNumber">
+          <DataField>CustomerPolicyNumber</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CustomerSpecialCategories">
+          <DataField>CustomerSpecialCategories</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="CustomerTariffID">
+          <DataField>CustomerTariffID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="DBTimeStamp">
+          <DataField>DBTimeStamp</DataField>
+          <rd:TypeName>System.Int64</rd:TypeName>
+        </Field>
+        <Field Name="DeathDateTime">
+          <DataField>DeathDateTime</DataField>
+          <rd:TypeName>System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="DeathReason">
+          <DataField>DeathReason</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="DebtQty">
+          <DataField>DebtQty</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="DefaultIdentifier">
+          <DataField>DefaultIdentifier</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="DefaultTelephone">
+          <DataField>DefaultTelephone</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="DischargeAssistanceService">
+          <DataField>DischargeAssistanceService</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="DischargeFacilityName">
+          <DataField>DischargeFacilityName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="EditStatus">
+          <DataField>EditStatus</DataField>
+          <rd:TypeName>SII.Framework.Interfaces.EditStatusEntity</rd:TypeName>
+        </Field>
+        <Field Name="EmailAddress">
+          <DataField>EmailAddress</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="EpisodeCase">
+          <DataField>EpisodeCase</DataField>
+          <rd:TypeName>SII.HCD.BackOffice.Entities.EpisodeCaseEnum</rd:TypeName>
+        </Field>
+        <Field Name="EpisodeLeaveReason">
+          <DataField>EpisodeLeaveReason</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="EpisodeLeaveReasonID">
+          <DataField>EpisodeLeaveReasonID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="EpisodeReason">
+          <DataField>EpisodeReason</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="EpisodeReasonID">
+          <DataField>EpisodeReasonID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="EpisodeStatus">
+          <DataField>EpisodeStatus</DataField>
+          <rd:TypeName>SII.HCD.Common.Entities.StatusEnum</rd:TypeName>
+        </Field>
+        <Field Name="EpisodeTypeID">
+          <DataField>EpisodeTypeID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="EpisodeTypeName">
+          <DataField>EpisodeTypeName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ExportedDateTime">
+          <DataField>ExportedDateTime</DataField>
+          <rd:TypeName>System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="ExternalEpisodeNumber">
+          <DataField>ExternalEpisodeNumber</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Facility">
+          <DataField>Facility</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FacilityID">
+          <DataField>FacilityID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="FirstAssistanceDegree">
+          <DataField>FirstAssistanceDegree</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FirstAssistanceDegreeColor">
+          <DataField>FirstAssistanceDegreeColor</DataField>
+          <rd:TypeName>System.Drawing.Color</rd:TypeName>
+        </Field>
+        <Field Name="FirstAssistanceDegreeDT">
+          <DataField>FirstAssistanceDegreeDT</DataField>
+          <rd:TypeName>System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="FirstAssistanceDegreeLevel">
+          <DataField>FirstAssistanceDegreeLevel</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="FirstInsurerID">
+          <DataField>FirstInsurerID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="FirstInsurerName">
+          <DataField>FirstInsurerName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FirstName">
+          <DataField>FirstName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FirstSignificantReason">
+          <DataField>FirstSignificantReason</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Floor">
+          <DataField>Floor</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FloorID">
+          <DataField>FloorID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="FullAddress">
+          <DataField>FullAddress</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="HasMorphologies">
+          <DataField>HasMorphologies</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="HasMorphologyCodes">
+          <DataField>HasMorphologyCodes</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="HasObstetricProcedures">
+          <DataField>HasObstetricProcedures</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="HasOtherCategories">
+          <DataField>HasOtherCategories</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="HasOtherDiagnosis">
+          <DataField>HasOtherDiagnosis</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="HasOtherDRGs">
+          <DataField>HasOtherDRGs</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="HasOtherMDCs">
+          <DataField>HasOtherMDCs</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="HasOtherProcedures">
+          <DataField>HasOtherProcedures</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="HasReservation">
+          <DataField>HasReservation</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="HasSurgicalProcedures">
+          <DataField>HasSurgicalProcedures</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ID">
+          <DataField>ID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="IdentificationNumber">
+          <DataField>IdentificationNumber</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Image">
+          <DataField>Image</DataField>
+          <rd:TypeName>System.Drawing.Image</rd:TypeName>
+        </Field>
+        <Field Name="ImageData">
+          <DataField>ImageData</DataField>
+          <rd:TypeName>System.Byte[]</rd:TypeName>
+        </Field>
+        <Field Name="ImageID">
+          <DataField>ImageID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="InterPointOfCare">
+          <DataField>InterPointOfCare</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="InterPointOfCareID">
+          <DataField>InterPointOfCareID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="LastAssistanceDegree">
+          <DataField>LastAssistanceDegree</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="LastAssistanceDegreeColor">
+          <DataField>LastAssistanceDegreeColor</DataField>
+          <rd:TypeName>System.Drawing.Color</rd:TypeName>
+        </Field>
+        <Field Name="LastAssistanceDegreeDT">
+          <DataField>LastAssistanceDegreeDT</DataField>
+          <rd:TypeName>System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="LastAssistanceDegreeLevel">
+          <DataField>LastAssistanceDegreeLevel</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="LastName">
+          <DataField>LastName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="LastName2">
+          <DataField>LastName2</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="LastSignificantReason">
+          <DataField>LastSignificantReason</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="LastTransferEntryNumber">
+          <DataField>LastTransferEntryNumber</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="LastTransferEntryService">
+          <DataField>LastTransferEntryService</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="LastTransferEntryServiceID">
+          <DataField>LastTransferEntryServiceID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="LastUpdated">
+          <DataField>LastUpdated</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="MedEpisodeDischargeDateTime">
+          <DataField>MedEpisodeDischargeDateTime</DataField>
+          <rd:TypeName>System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="MedEpisodePhysicianDischargeID">
+          <DataField>MedEpisodePhysicianDischargeID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="MedicalSpecialtyCode">
+          <DataField>MedicalSpecialtyCode</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="MedicalSpecialtyID">
+          <DataField>MedicalSpecialtyID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="MedicalSpecialtyName">
+          <DataField>MedicalSpecialtyName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ModifiedBy">
+          <DataField>ModifiedBy</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Origin">
+          <DataField>Origin</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PersonID">
+          <DataField>PersonID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="PhFirstName">
+          <DataField>PhFirstName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PhLastName">
+          <DataField>PhLastName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PhLastName2">
+          <DataField>PhLastName2</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PhWorkGroup">
+          <DataField>PhWorkGroup</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PhWorkGroupID">
+          <DataField>PhWorkGroupID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="PointOfCare">
+          <DataField>PointOfCare</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PointOfCareID">
+          <DataField>PointOfCareID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="PredeccesorEpisodeCase">
+          <DataField>PredeccesorEpisodeCase</DataField>
+          <rd:TypeName>SII.HCD.BackOffice.Entities.EpisodeCaseEnum</rd:TypeName>
+        </Field>
+        <Field Name="PrimaryDiagnosis">
+          <DataField>PrimaryDiagnosis</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PrimaryDRG">
+          <DataField>PrimaryDRG</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PrimaryDRGWeight">
+          <DataField>PrimaryDRGWeight</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="PrimaryProcedure">
+          <DataField>PrimaryProcedure</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ProcessChartID">
+          <DataField>ProcessChartID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="ProcessChartName">
+          <DataField>ProcessChartName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ProfileID">
+          <DataField>ProfileID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="ProfileName">
+          <DataField>ProfileName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="RegistrationDateTime">
+          <DataField>RegistrationDateTime</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="RelatedMedEpisodeClosed">
+          <DataField>RelatedMedEpisodeClosed</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="RelatedMedEpisodeDischarge">
+          <DataField>RelatedMedEpisodeDischarge</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="Room">
+          <DataField>Room</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="RoomID">
+          <DataField>RoomID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="SecondPhysician">
+          <DataField>SecondPhysician</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Sex">
+          <DataField>Sex</DataField>
+          <rd:TypeName>SII.HCD.BackOffice.Entities.SexEnum</rd:TypeName>
+        </Field>
+        <Field Name="SexDef">
+          <DataField>SexDef</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Status">
+          <DataField>Status</DataField>
+          <rd:TypeName>SII.HCD.Common.Entities.StatusEnum</rd:TypeName>
+        </Field>
+        <Field Name="UnitService">
+          <DataField>UnitService</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="UnitServiceID">
+          <DataField>UnitServiceID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="UrgentContact">
+          <DataField>UrgentContact</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>SIIHCDAdministrativeEntities</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <rd:DataSetInfo>
+        <rd:DataSetName>SII.HCD.Administrative.Entities</rd:DataSetName>
+        <rd:TableName>CustomerProcessEntity</rd:TableName>
+        <rd:ObjectDataSourceType>SII.HCD.Administrative.Entities.CustomerProcessEntity, SII.HCD.Administrative.Entities, Version=2.1.14029.1, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+      </rd:DataSetInfo>
+    </DataSet>
+  </DataSets>
+  <Body>
+    <ReportItems>
+      <Textbox Name="Textbox15">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value />
+                <Style>
+                  <FontSize>14pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Bertaratze - Egiaztagiria</Value>
+                <Style>
+                  <FontSize>14pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value />
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontSize>14pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <LeftIndent>0cm</LeftIndent>
+            <RightIndent>0cm</RightIndent>
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value />
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontSize>14pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <LeftIndent>0cm</LeftIndent>
+            <RightIndent>0cm</RightIndent>
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox1</rd:DefaultName>
+        <Top>3.25221cm</Top>
+        <Left>1.79975cm</Left>
+        <Height>2.02875cm</Height>
+        <Width>7.1582cm</Width>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox16">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Behean zehaztutako pertsona, IMQ Zorrotzaurre Klinikan, izateko, ondoren adierazitako epealdian egon,   dela   jakinarazi   nahi   dugu,   dagozkion ondoreetarako:</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontSize>11pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox2</rd:DefaultName>
+        <Top>6.83867cm</Top>
+        <Left>1.26cm</Left>
+        <Height>2.84896cm</Height>
+        <Width>8.53775cm</Width>
+        <ZIndex>1</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox17">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value />
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontSize>14pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Justificante de asistencia </Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontSize>14pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value />
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontSize>14pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <LeftIndent>0cm</LeftIndent>
+            <RightIndent>0cm</RightIndent>
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value />
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontSize>14pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <LeftIndent>0cm</LeftIndent>
+            <RightIndent>0cm</RightIndent>
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox1</rd:DefaultName>
+        <Top>3.25221cm</Top>
+        <Left>11.00991cm</Left>
+        <Height>2.02875cm</Height>
+        <Width>6.40718cm</Width>
+        <ZIndex>2</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox18">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Se hace constar a los efectos oportunos que la persona detallada a continuación, ha acudido a Clínica  IMQ  Zorrotzaurre   para   ser   asistida, permaneciendo en el mismo en el  intervalo  de tiempo detallado posteriormente:</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontSize>11pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox2</rd:DefaultName>
+        <Top>6.86513cm</Top>
+        <Left>10.05741cm</Left>
+        <Height>2.8225cm</Height>
+        <Width>8.76198cm</Width>
+        <ZIndex>3</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox20">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>="BILBAO, " &amp; Year(Today()) &amp; " - " &amp; Switch(DateTime.Today.Month = 1, "Urtarrila / Enero",
+DateTime.Today.Month = 2, "Otsaila / Febrero",
+DateTime.Today.Month = 3, "Martxoa / Marzo",
+DateTime.Today.Month = 4, "Apirila / Abril",
+DateTime.Today.Month = 5, "Maiatza / Mayo",
+DateTime.Today.Month = 6,"Ekaina / Junio" ,
+DateTime.Today.Month = 7, "Uztaila / Julio",
+DateTime.Today.Month = 8, "Abuztua / Agosto",
+DateTime.Today.Month = 9, "Iraila / Septiembre",
+DateTime.Today.Month = 10, "Urria / Octubre",
+DateTime.Today.Month = 11, "Azaroa / Noviembre",
+DateTime.Today.Month = 12, "Abendua / Diciembre") &amp; " - " &amp; Day(Today())</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox20</rd:DefaultName>
+        <Top>18.22526cm</Top>
+        <Left>6.7476cm</Left>
+        <Height>0.6cm</Height>
+        <Width>10.94466cm</Width>
+        <ZIndex>4</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox44">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Ingresatzen data / Fecha de ingreso:</Value>
+                <MarkupType>HTML</MarkupType>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <LineHeight>15pt</LineHeight>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox2</rd:DefaultName>
+        <Top>12.69206cm</Top>
+        <Left>1.26cm</Left>
+        <Height>0.6cm</Height>
+        <Width>5.97105cm</Width>
+        <ZIndex>5</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox45">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!CustomerFullName.Value, "CustomerProcessEntity")</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontWeight>Bold</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox2</rd:DefaultName>
+        <Top>12.03916cm</Top>
+        <Left>4.95411cm</Left>
+        <Height>0.6cm</Height>
+        <Width>7.1825cm</Width>
+        <ZIndex>6</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox46">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Pazientea / Paciente:</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox2</rd:DefaultName>
+        <Top>12.02857cm</Top>
+        <Left>1.26cm</Left>
+        <Height>0.6cm</Height>
+        <Width>3.6425cm</Width>
+        <ZIndex>7</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox47">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Format(First(Fields!CustomerEpisodeDate.Value, "CustomerProcessEntity"), "dd/MM/yyyy")</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox2</rd:DefaultName>
+        <Top>12.69559cm</Top>
+        <Left>7.24694cm</Left>
+        <Height>0.6cm</Height>
+        <Width>3.91629cm</Width>
+        <ZIndex>8</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox50">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Altaren data / Fecha de alta:</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox2</rd:DefaultName>
+        <Top>13.94473cm</Top>
+        <Left>1.26cm</Left>
+        <Height>0.6cm</Height>
+        <Width>4.62146cm</Width>
+        <ZIndex>9</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox48">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Format(First(Fields!CustomerEpisodeEndDate.Value, "CustomerProcessEntity"), "dd/MM/yyyy")</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox2</rd:DefaultName>
+        <Top>13.97648cm</Top>
+        <Left>5.88146cm</Left>
+        <Height>0.6cm</Height>
+        <Width>3.91629cm</Width>
+        <ZIndex>10</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox51">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Irteera ordua / Hora de salida:</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox2</rd:DefaultName>
+        <Top>14.60442cm</Top>
+        <Left>1.26cm</Left>
+        <Height>0.6cm</Height>
+        <Width>4.92398cm</Width>
+        <ZIndex>11</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox49">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Format(First(Fields!CustomerEpisodeEndDate.Value, "CustomerProcessEntity"), "hh:mm")</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox2</rd:DefaultName>
+        <Top>14.60442cm</Top>
+        <Left>6.19896cm</Left>
+        <Height>0.6cm</Height>
+        <Width>3.91629cm</Width>
+        <ZIndex>12</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox52">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Sarrera ordua / Hora de entrada:</Value>
+                <MarkupType>HTML</MarkupType>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <LineHeight>15pt</LineHeight>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox2</rd:DefaultName>
+        <Top>13.30592cm</Top>
+        <Left>1.26cm</Left>
+        <Height>0.6cm</Height>
+        <Width>5.97105cm</Width>
+        <ZIndex>13</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox53">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Format(First(Fields!CustomerEpisodeDate.Value, "CustomerProcessEntity"), "hh:mm")</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox2</rd:DefaultName>
+        <Top>13.34121cm</Top>
+        <Left>7.24694cm</Left>
+        <Height>0.6cm</Height>
+        <Width>3.91629cm</Width>
+        <ZIndex>14</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+    </ReportItems>
+    <Height>19.63563cm</Height>
+    <Style>
+      <Border />
+    </Style>
+  </Body>
+  <ReportParameters>
+    <ReportParameter Name="CustomerFullName">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="DoctorFullName">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="StartDateEpisode">
+      <DataType>DateTime</DataType>
+      <Nullable>true</Nullable>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+  </ReportParameters>
+  <Width>19.8482cm</Width>
+  <Page>
+    <PageHeader>
+      <Height>5.14583cm</Height>
+      <PrintOnFirstPage>true</PrintOnFirstPage>
+      <PrintOnLastPage>true</PrintOnLastPage>
+      <ReportItems>
+        <Textbox Name="Textbox10">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>C/ Ballets Olaeta, 4</Value>
+                  <Style>
+                    <FontSize>9pt</FontSize>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>48014 BILBAO</Value>
+                  <Style>
+                    <FontSize>9pt</FontSize>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>BIZKAIA</Value>
+                  <Style>
+                    <FontSize>9pt</FontSize>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>Tel.: 944755000</Value>
+                  <Style>
+                    <FontSize>9pt</FontSize>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox9</rd:DefaultName>
+          <Top>2.99788cm</Top>
+          <Left>0.9425cm</Left>
+          <Height>1.71125cm</Height>
+          <Width>5.27812cm</Width>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Image Name="Image1">
+          <Source>Embedded</Source>
+          <Value>logo_zorrotzaurre</Value>
+          <Sizing>FitProportional</Sizing>
+          <Top>0.5207cm</Top>
+          <Left>0.94739cm</Left>
+          <Height>1.94624cm</Height>
+          <Width>6.50021cm</Width>
+          <ZIndex>1</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+          </Style>
+        </Image>
+      </ReportItems>
+      <Style>
+        <Border>
+          <Style>None</Style>
+        </Border>
+      </Style>
+    </PageHeader>
+    <PageHeight>29.7cm</PageHeight>
+    <PageWidth>21cm</PageWidth>
+    <LeftMargin>0.5cm</LeftMargin>
+    <RightMargin>0.5cm</RightMargin>
+    <TopMargin>0.5cm</TopMargin>
+    <BottomMargin>0.5cm</BottomMargin>
+    <ColumnSpacing>0.13cm</ColumnSpacing>
+    <Style />
+  </Page>
+  <EmbeddedImages>
+    <EmbeddedImage Name="logo_zorrotzaurre">
+      <MIMEType>image/png</MIMEType>
+      <ImageData>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</ImageData>
+    </EmbeddedImage>
+  </EmbeddedImages>
+  <rd:ReportID>6167b1be-68d9-4378-9f77-45e7b5c4a867</rd:ReportID>
+  <rd:ReportUnitType>Cm</rd:ReportUnitType>
+</Report>

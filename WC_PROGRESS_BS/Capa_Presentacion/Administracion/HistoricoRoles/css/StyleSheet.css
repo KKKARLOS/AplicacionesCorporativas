@@ -1,0 +1,79 @@
+﻿/*HEADER FIXED*/
+.header-fixed {
+    width: 100%;
+}
+
+    .header-fixed > thead,
+    .header-fixed > tbody,
+    .header-fixed > thead > tr,
+    .header-fixed > tbody > tr,
+    .header-fixed > thead > tr > th,
+    .header-fixed > tbody > tr > td {
+        display: block;
+    }
+
+
+
+thead {
+    width: 100%; /* scrollbar is average 1em/16px width, remove it from thead width */
+}
+
+.header-fixed > tbody > tr:after,
+.header-fixed > thead > tr:after {
+    content: ' ';
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+
+/*Alto del contenedor de la tabla (tbody)*/
+.header-fixed > tbody {
+    overflow-y: auto;
+    height: 38vh;
+}
+
+/*COLUMNA 1*/
+
+.header-fixed > tbody > tr > td:nth-child(1) {
+    width: 40%;
+    float: left;
+}
+
+.header-fixed > thead > tr > th:nth-child(1) {
+    width: 39.9%;
+    float: left;
+}
+/*COLUMNA 2*/
+.header-fixed > tbody > tr > td:nth-child(2) {
+    width: 40%;
+    float: left;
+}
+
+.header-fixed > thead > tr > th:nth-child(2) {
+    width: 39.9%;
+    float: left;
+}
+
+/*COLUMNA 3*/
+.header-fixed > tbody > tr > td:nth-child(3) {
+    width: 20%;
+    float: left;
+}
+
+.header-fixed > thead > tr > th:nth-child(3) {
+    width: 20%;
+    float: left;
+}
+
+
+/*FIN HEADER FIXED*/
+
+/*.table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
+    padding: 6px !important;
+}*/
+
+
+#btnRestablecer {
+    margin-left: 45px;
+    margin-top: 1px;
+}

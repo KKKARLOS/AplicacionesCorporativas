@@ -1,0 +1,18 @@
+﻿#tblEstructura td, #tblCentroCoste td input[type=checkbox] {
+    margin: 0px 0px 0px 5px; 
+    padding: 0px;   
+}
+
+#tblEstructura tr, #tblCentroCoste tr{ height:20px;  }
+
+.cursiva{ font-style:italic;}
+
+/*#ui-id-1 {height:36px !Important;}*/
+
+.ui-expandir {
+    background-image: url('../../../../Images/imgPlusAzul.png') !Important;
+}
+
+.ui-contraer {
+    background-image: url('../../../../Images/imgMinusAzul.png') !Important;
+}

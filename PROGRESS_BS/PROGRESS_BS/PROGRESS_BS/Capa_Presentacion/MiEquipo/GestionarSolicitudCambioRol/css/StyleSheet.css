@@ -1,0 +1,99 @@
+﻿ .container  {
+    width:970px !important;
+}
+
+.table > tbody > tr > td {    
+    padding-top:4px !important;
+    padding-bottom:4px !important;
+}
+
+
+
+/*HEADER FIXED*/
+.header-fixed {
+    width: 100%;
+}
+
+    .header-fixed > thead,
+    .header-fixed > tbody,
+    .header-fixed > thead > tr,
+    .header-fixed > tbody > tr,
+    .header-fixed > thead > tr > th,
+    .header-fixed > tbody > tr > td {
+        display: block;
+    }
+
+
+
+thead {
+    width: 100%; /* scrollbar is average 1em/16px width, remove it from thead width */
+}
+
+.header-fixed > tbody > tr:after,
+.header-fixed > thead > tr:after {
+    content: ' ';
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+
+/*Alto del contenedor de la tabla (tbody)*/
+.header-fixed > tbody {
+    overflow-y: auto;
+    height: 55vh;
+}
+
+    /*COLUMNA 1*/
+
+.header-fixed > tbody > tr > td:nth-child(1) {
+    width: 35%;
+    float: left;
+}
+
+.header-fixed > thead > tr > th:nth-child(1) {
+    width: 35%;
+    float: left;
+}
+/*COLUMNA 2*/
+.header-fixed > tbody > tr > td:nth-child(2) {
+    width: 30%;
+    float: left;
+}
+
+.header-fixed > thead > tr > th:nth-child(2) {
+    width: 30%;
+    float: left;
+}
+
+/*COLUMNA 3*/
+.header-fixed > tbody > tr > td:nth-child(3) {
+    width: 30%;
+    float: left;
+}
+
+.header-fixed > thead > tr > th:nth-child(3) {
+    width: 30%;
+    float: left;
+}
+
+/*COLUMNA 4*/
+.header-fixed > tbody > tr > td:nth-child(4) {
+    width: 5%;
+    float: left;
+}
+
+.header-fixed > thead > tr > th:nth-child(4) {
+    width: 5%;
+    float: left;
+}
+
+/*FIN HEADER FIXED*/
+
+
+
+/*Para resoluciones mayores*/
+@media (min-width: 1200px) {
+    .container {
+        width:1170px !important;
+    }
+}

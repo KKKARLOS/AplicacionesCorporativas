@@ -1,0 +1,99 @@
+﻿#Menu_imgDiamante { margin-top: 10px; padding-left: 10px;}
+.row-cabecera {margin-right: 0px; margin-left: 0px;}
+.menu-fijo {
+    padding: 0;
+    position: fixed;   
+    z-index: 1030;
+    width: 100%;
+}
+.fixedBar {
+    background-color: #f2f2f2;
+    width: 100%;
+    position: fixed;
+    z-index: 1000;    
+    padding-left: 10px;
+    font-size:0.85em;
+}
+.navbar-inverse .navbar-nav > li > a {color: #222 !important; }
+.navbar-inverse .navbar-nav > .open > a,
+.navbar-inverse .navbar-nav > .open > a:hover,
+.navbar-inverse .navbar-nav > .open > a:focus {
+    background-color: #d9d5d5;
+    color: #222;
+}
+.navbar-nav > li > a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    line-height: 20px;
+}
+#textoSuper {
+    margin-top: 20px;
+    margin-left: 20px;
+    color: #fff;
+    font-size: 22px;    
+}
+#divUsuarioConectado {margin-left:10%;}
+#Menu_navBreadcrumbs {top:100px}
+#logoIbermatica {margin-right:20px; margin-top:10px;}
+#main-nav {margin-top:11px;border-top: 6px solid #222;}
+#main-nav span {font-size:0.8em;}    
+#main-nav a {cursor:pointer;}    
+#Menu_ulPrincipal {padding: 0 10px !important; border-bottom:1px solid !important;}
+
+#divUsuarioConectado > span {
+    color:white;
+}
+
+.guia, #lblSession, #barraDerecha {
+    margin-right:10px;
+}
+
+#barraDerechaxs {
+    margin-right:10px; 
+    height:20px;
+    margin-top:28px;
+}
+
+#Menu_navGuia {
+    margin-top:0px;
+}
+
+/******MEDIA QUERIES*********/
+@media only screen and (min-width : 768px) {
+    /*Hacemos la barra más pequeña*/
+    ul.nav.navbar-nav { margin-left: 30px;height: 40px; }                  
+    .navbar-nav > li > a { padding-top: 10px; } 
+    #logoSuper {margin-top:5px}
+}
+
+/*Responsive para movil*/
+@media only screen and (max-width : 767px) {
+    #logoSuper {width: 88px;height: auto;}
+    #textoSuper { margin-top: 0;font-size: 12px;}
+    #textoUsuario {
+        margin-left: 20px;
+        margin-top: 0;
+        font-size: 12px;
+    }
+    #logoIbermatica {
+        float: left;      
+        width: 88px;
+        height: auto;
+    }
+    #textoFecha {
+        font-size: 12px;
+        margin-left: 20px;
+        margin-top: 0;
+        width: 100%;
+    }
+    .fixedBar { margin-top: 15px; font-size: 10px; }
+    /*Hay que incluir esto para que el menu se vea bien en móvil*/
+    /*Hay que cambiar el posicionamiento*/
+    .menu-fijo {
+        padding: 0;
+        position: relative;   
+        z-index: 1010;
+        width: 100%;
+    }
+    #Menu_navGuia {position:relative !important;}
+}

@@ -1,0 +1,179 @@
+using System;
+using System.Data;
+using System.Configuration;
+using System.Collections;
+using System.Web;
+using System.Web.Security;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Web.UI.WebControls.WebParts;
+using System.Web.UI.HtmlControls;
+#UsingNameSpace#
+
+public partial class #TableName#Details : BaseWebForm
+{
+
+    #region Method
+     protected override void LoadDate()
+    {
+        int #TableName#Id = GetId();
+         #region Edit
+        if (#TableName#Id > 0)
+        {
+            #BusClass# obj#BusClass#;
+            #DOClass# obj#DOClass#;
+         
+            try
+            {
+                obj#BusClass# = new #BusClass#();
+                obj#DOClass# =new  #DOClass#();
+                obj#DOClass#.#TableName#Id=#TableName#Id;
+                obj#DOClass# =obj#BusClass#.Select(obj#DOClass#);
+                
+                #SetControlsValues#
+              
+           }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+             obj#BusClass# = null;
+             obj#DOClass# = null;
+               
+            }
+        }
+        #endregion
+    }
+     protected override int GetId()
+    {
+        int #TableName#Id = 0;
+        if (Request.QueryString["#TableName#Id"] != null)
+        {
+         int.TryParse(Request.QueryString["#TableName#Id"].ToString(), out #TableName#Id);
+            //enable Button Delete 
+            btnDelete.Enabled = true;
+           
+        }
+        return #TableName#Id;
+    }
+    
+    protected override void FillLists()
+    {
+    }
+    
+     protected override void AddValidations()
+     {
+     }
+    #endregion
+
+    #region Event
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        lblError.Text = "";
+        try
+        {
+            AddValidations();
+            if (!IsPostBack)
+            {
+                FillLists();
+                LoadDate();
+            }
+        }
+
+        catch (Exception ex)
+        {
+             LogException(ex, lblError);
+        }
+    }
+    protected void btnSave_Click(object sender, EventArgs e)
+    {
+       #BusClass# obj#BusClass#;
+       #DOClass# obj#DOClass#;
+ 
+        int #TableName#Id;
+        int Result;
+
+        try
+        {
+           obj#BusClass# = new #BusClass#();
+           obj#DOClass# = new #DOClass#();
+           #GetControlsValues#
+           #TableName#Id=GetId();
+            if (#TableName#Id < 1)
+            {
+                //1-insert  #TableName#
+               Result= obj#BusClass#.Insert(obj#DOClass#);
+               #TableName#Id=Result;
+            }
+            else
+            {
+                //1-update  #TableName#
+               obj#DOClass#.#TableName#Id =#TableName#Id;
+               Result = obj#BusClass#.Update(obj#DOClass#);
+            }
+
+          if (Result > -1)
+            {
+                AfterSave(Result, lblError, "#TableName#Search.aspx");
+
+            }
+            else if (Result == -100)
+            {
+               // lblError.Text = Resources.#TableName#.#TableName#Exists;
+            }
+            else
+            {
+               // lblError.Text = Resources.#TableName#.#TableName#Error;
+            }
+         }
+        catch (Exception ex)
+        {
+            LogException(ex, lblError);
+        }
+        finally
+        {
+            obj#BusClass# = null;
+            obj#DOClass# = null;
+       
+        }
+    }
+    protected void btnDelete_Click(object sender, EventArgs e)
+    {
+        #BusClass# obj#BusClass#;
+        #DOClass# obj#DOClass#;
+        int #TableName#Id;
+
+        try
+        {
+            obj#BusClass# = new #BusClass#();
+            obj#DOClass#  = new #DOClass#();
+            #TableName#Id = GetId();
+            int Result = -1;
+            if ( #TableName#Id > 0)
+            {
+                //1-Delete  User
+                obj#DOClass#.#TableName#Id=#TableName#Id;
+               Result= obj#BusClass#.Delete(obj#DOClass#);
+
+            }
+             AfterDelete(Result, lblError, "#TableName#Search.aspx");
+        }
+
+        catch (Exception ex)
+        {
+            LogException(ex, lblError);
+        }
+        finally
+        {
+            obj#BusClass# = null;
+            obj#DOClass# = null;
+
+        }
+    }
+     #endregion
+
+  
+  
+}

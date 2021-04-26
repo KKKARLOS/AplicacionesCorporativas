@@ -1,0 +1,54 @@
+﻿/*LISTA DUAL*/
+.container {
+    width:970px !important;
+}
+#lisProfesionales.dual-list .list-group, #lisCR.dual-list .list-group, #lisEmpresas.dual-list .list-group {
+    margin-top: 8px;
+    max-height: 35vh;
+    overflow: auto;
+    margin-bottom:10px;
+}
+
+.list-left li, .list-right li {
+    cursor: pointer;
+    height: 24px;
+    font-size: 14px;
+}
+
+.list-group {
+    margin-bottom:0 !important;
+}
+
+li.list-group-item {
+    display: table;
+    width:100%;
+}
+
+.dual-list li {
+    padding: 0 15px;
+            
+}
+
+.list-arrows {
+    padding-top: 40px;
+}
+
+.list-arrows button {
+    margin-bottom: 20px;
+}
+
+div.input-group {
+    padding-right: 15px !important;
+}
+
+#lisProfesionales2.dual-list .list-group , #lisCR2.dual-list .list-group , #lisEmpresas2.dual-list .list-group  {
+    max-height: 35vh;
+    overflow:auto;
+    margin-top: 8px;
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px !important;
+    }
+}

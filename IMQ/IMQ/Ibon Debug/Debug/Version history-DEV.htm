@@ -1,0 +1,229 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>HCDIS Version history</title>
+    <link rel="stylesheet" type="text/css" href="styles/Site.css"/>
+</head>
+<body>
+<h1>HCDIS Version History</h1>
+
+<br />
+<h2>14/02/2012: Version 2.1</h2>
+<ul>
+<li>Despliegue de versión inicial post-migración desde HCDIS</li>
+</ul>
+
+<h2>06/11/2013: Version 2.1.13344.1</h2>
+<ul>
+<li>Añadido mantenimientos de tipos de muestras: lista/selección y edición.</li>
+<li>Añadido mantenimientos de especímenes: lista/selección y edición.</li>
+<li>Añadido mantenimientos de muestras de especímenes materiales: lista/selección y edición.</li>
+<li>Se incluyen nuevas funcionalidades de las cabeceras de las vistas que muestran los datos demograficos y de episodios del paciente.</li>
+<li>Se realizan correcciones varias en la vista de Triage.</li>
+<li>Se realizan correcciones varias en la vista de Censo Administrativo de Pacientes.</li>
+<li>Se corrige un problema en el recálculo de precios en la vista de definición de cargos con valores 0.</li>
+<li>Se ha bloqueado de forma predefinida el dimensionamiento manual de filas en los grids de la aplicación.</li>
+<li>En el mantenimiento de rutinas, asociación de cargos a dispositivos y servicios dietéticos y su tratamiento en la actividad asistencial.</li>
+<li>En Realización, asociación de servicios dietéticos y partes del cuerpo en la rutina a realizar.</li>
+<li>Se corrige un problema en la representación de Observaciones individuales.</li>
+<li>Se realizan correcciones en la vista CustomerProcessListView para evitar errores de columnas de grids.</li>
+<li>Se soluciona la incompatibilidad con el asistente de importación de metadatos de servicios de Visual Studio que impedia el correcto funcionamiento con servicios de actividad.</li>
+<li>Se modifica el funcionamiento en el cálculo de estancias para que los límites de horas definidos a 00:00 generen siempre una estancia completa.</li>
+<li>Se activa la cita por orden medica.</li>
+<li>Se activa la recepción por orden medica.</li>
+<li>Se activa la funcionalidad de la Estación diagnóstica y/o tratamiento.</li>
+
+<li>Se incorporan instaladores de la aplicación</li>
+<li>Se incluye la opción de definir la carpeta de despliegue del cliente HCDIS en el instalador del lanzador</li>
+<li>Se modifica el algoritmo de cálculo de anchura de columnas en los grids para mejorar la visualización de la información que contienen.</li>
+<li>Se modifica la lista de pacientes de procesos para que no oculte el estado cuando un paciente es seleccionado</li>
+<li>Se modifica la lista de pacientes en ventana de cargos a cuenta para que no oculte el estado cuando un paciente es seleccionado</li>
+<li>Corregidas vistas con grids que solo aplican en tema predeterminado y no el que se haya seleccionado</li>
+<li>Se permite configurar el tema de grids predeterminado</li>
+<li>Modificado la forma en que los grids con múltiples bandas muestran el icono de expansión. Si no hay filas dependientes, no se muestra</li>
+<li>Modificado el botón de estado "Por episodios" en la lista de pacientes del proceso de gestión de cargos, análisis de cobertura y albaranes para que sea más significativo.</li>
+<li>Se incluye una nueva columna en el censo de pacientes del proceso de cargos a cuenta que incluye información de si un episodio está enlazado con otro</li>
+<li>Se modifican los iconos de incidencias en análisis de cobertura para que sean homogéneos en toda la aplicación</li>
+<li>Se modifica la ordenación de los albaranes propuestos en el proceso de análisis de cobertura</li>
+<li>Se resalta la información principal del árbol de cargos en el proceso de análisis de cobertura</li>
+<li>Se colapsan los cargos procesados correctamente al realizar el análisis de cobertura, quedando desplegados solo aquellos con incidencias.</li>
+<li>Mejoras en las barrar de herramientas para evitar movimientnos y parpadeos.</li>
+<li>Se mueve el botón de confirmar albaranes generados en el proceso de análisis de cobertura a la barra de herramientas.</li>
+<li>Se modifica el árbol de cargos de análisis de cobertura para que independientemente de los filtro usados, nunca desaparezcan los episodios que se están procesando</li>
+<li>Se habilita el doble-click para seleccionas un cargo en la ventana de añadir cargos manuales en el proceso de análisis de cobertura</li>
+<li>Se restringe el número de columnas mostradas de forma predeterminada en el grid de cargos manuales del proceso de análisis de cobertura.</li>
+<li>Se cambia el color de fondo en las columnas editables en el grid de cargos manuales del proceso de análisis de cobertura para distinguirlas de las no editables.</li>
+
+<li>Arreglos en el Deshabilitado y Habilitado de los botones de la barra de herramientas en la vista de analisis de cobertura.</li>
+<li>Se permite Cambiar  el episodio, la fecha, la ubicación y editar desde el listado de cargos en la vista de analisis de cobertura.</li>
+<li>El botón de mas ubicaciones en el menú desplegable o cambiar ubicación de la barra de herramientas en la vista de analisis de cobertura te lleva a la vista de jerarquía y te permite seleccionar cualquier ubicación de la jerarquía.</li>
+<li>Deshabilitado la ordenación a nivel de columnas del árbol en la vista de analisis de cobertura.</li>
+<li>Cambio en la representación de la descripción de los iconos en el árbol y en el gris de cargos en la vista de analisis de cobertura.</li>
+<li>Cambio en la representación de la descripción de los iconos en el árbol del análisis de cobertura en la vista de analisis de cobertura.</li>
+<li>Añadir cargos manuales. Solo se permite los cargos configurados en el paso de análisis de cobertura que se configuran en el proceso al que corresponde el episodio del paciente en la vista de analisis de cobertura.</li>
+<li>Mejoras de visualización y usabilidad de la vista de análisis de cobertura.</li>
+<li>Añadir la posibilidad de modificar descripción en la edición de cargos manuales en la vista de ediccion de cargos. </li>
+<li>Las columnas editables se representan con fondo blanco en la vista de ediccion de cargos.</li>
+<li>Cambio en el Algoritmo en la carga del árbol donde aparece los nodos colapsados si la los albaranes ya están facturados. Expande los que están pendientes o autorizados a no facturar en la vista de albaranes.</li>
+<li>El botón de borrado de albarán se habilita si el albarán no está facturado y se ha dado permiso en el paso de albarán del proceso al que corresponde el episodio del paciente en la vista de albaranes.</li>
+<li>El análisis de facturación se realiza sobre las reglas añadidas en el paso de factura del proceso al que correspondiente los pacientes seleccionados.</li>
+<li>Cambio en la representación de la descripción de los iconos en el árbol albaranes en la vista de albarenes</li>
+<li>Mejoras de visualización y usabilidad de la vista de albaranes</li>
+<li>Solo se permite seleccionar las reglas que están configuradas en el paso de facturación de los procesos al que corresponde el episodio de los pacientes seleccionados en la vista de albaranes.</li>
+<li>Mejoras de visualización y usabilidad de la vista de albaranes.</li>
+<li>Ya no se permite relacionar las reglas con los procesos en la vista de acuerdos de facturación de aseguradora.</li>
+</ul>
+
+<h2>11/12/2013: Version 2.1.13351.1</h2>
+<ul>
+<li>Añadir la posibilidad de modificar el tipo impuesto en la edición de cargos manuales en la vista de ediccion de cargos. </li>
+<li>Se permite ir a la vista de edición de albaranes y modificar en los albaranes el total, impuesto y los costes segun las condiciones de los acuerdos asociados en la vista de edición de albaran. </li>
+<li>El botón de modificar albarán se habilita si el albarán no está facturado y se ha dado permiso en el paso de albarán del proceso al que corresponde el episodio del paciente.</li>
+<li>Las columnas editables tendran el fondo en blanco en la vista de edición de albaranes. </li>
+<li>Se añade a los instaladores capacidad para respetar las configuraciones más comunes en las actualizaciones</li>
+<li>Se añade nueva bibioteca de iconos al catálogo de recursos</li>
+<li>Se corrige un problema de agrupación de cargos en albaranes en el proceso de análisis de cobertura</li>
+<li>Se permite añadir albaranes manuales en la vista de albaranes. </li>
+<li>Mejoras de visualización y usabilidad de la vista de albaranes</li>
+<li>Mejoras de visualización en la vista de edicion de albaranes.</li>
+<li>Nueva funcionalidad de Números de Historia Clínica por Centro de Cuidado.</li>
+<li>Visualización correcta de los Números de historia del paciente por centro en la vista de registro de paciente.</li>
+<li>Eliminación de la opcion de definir servico de cargo para que se genere el cargo en la solicitud del servicio o recurso en la vista de edicion del servico de cargo y en la vista de asistente de servico de cargo.</li>
+<li>Control de borrado y modificaciones en entidades asociadas a condiciones de acuerdos</li>
+<li>Control de borrado de ubicaciones.</li>
+<li>Correcciones en el asistente para copia de acuerdos. Se da funcionalidad al botón de edición.</li>
+<li>Añadido cambio de descripción en asistente para copia de acuerdos.</li>
+<li>Cambio iconos en jerarquía de condiciones. </li>
+<li>Incluida la propiedad “Procesar Siempre” en condiciones de acuerdos</li>
+<li>Corrección en el color del árbol de vista de admisión</li>
+<li>Añadido soporte para condiciones exclusivas que siempre se cumplen</li>
+<li>Corregido problema que generaba totales de albaranes que incluían impuestos</li>
+</ul>
+
+<h2>17/12/2013: Version 2.1.13352.1</h2>
+<ul>
+<li>Mejoras de visualización en la vista de traslados.</li>
+<li>El boton de cambio de servico solo aparece cuando el proceso tiene configurado mas de un servico. Vista de traslado.</li>
+<li>En la opcion de cambio de servico se cargan los servico configurados en el proceso menos el seleccionado servico actual. Vista de traslado.</li>
+<li>En los combos de tipo de ubicación y ubicación se muestran seleccionado con la configuracion por defecto del proceso. Vista de traslado.</li>
+<li>Se muestran todos los pasos a los que tiene permiso el usuario aunque en el proceso se haya marcado como no visible. Vista de Diagnostico.</li>
+<li>Mejora de visualizacion en la agenda de la edicion de ubicaciones.</li>
+<li>Mejora de visualizacion en la agenda de la edicion de equipos.</li>
+<li>Mejora de visualizacion en la agenda de la edicion de medicos.</li>
+<li>Mejora de visualizacion en la agenda de la edicion de recursos humanos.</li>
+<li>Mejora de visualizacion en la vista de disponibilidad de ubicaciones.</li>
+<li>El combo de centro asistenciales en la vista de censo de pacientes se carga con los centros quer tiene autorizado el usuario y estan configurados en el proceso.</li>
+<li>Carga correctas de las ubicaciones en la vista de disponibilidad de ubicaciones cuando se lanza desde la vista de traslado en la opción Alta/traslado Hospilalización.</li>
+<li>El proceso de análisis de cobertura analiza las condiciones marcadas para procesar siempre, independientemente de que no haya cargos disponibles.</li>
+</ul>
+
+<h2>18/12/2013: Version 2.1.13361.1</h2>
+<ul>
+<li>Se incluye en el instalador bibliotecas de acceso a medicamentos</li>    
+<li>Se añade soporte al instalador para eliminar configuraciones obsoletas al sincronizar los ficheros de configuración</li>    
+<li>Corregido problema en la edición de servicios de dieta</li>
+<li>Se añaden los identificadores por defecto y alternativos en modo simple para que se muestren y editen en la vista</li>
+<li>Se añaden los teléfonos definidos por metadatos en modo simple para que se muestren y editen en la vista</li>
+<li>Se corrige el error de no mostrar la edad de forma correcta</li>
+<li>Se corrige el error de actualizacion de los datos de interes y la LOPD</li>
+<li>Corregido problema en la edición de servicios de dieta</li>
+<li>Se corrigen los errores de presentación</li>
+</ul>
+
+<h2>27/12/2013: Version 2.1.14007.1</h2>
+<ul>
+<li>Se incluyen las siguientes vistas base para diferentes perfiles</li>
+<li>Aparecen todas las vistas a las que se configure por defecto para todos los roles de un mismo usuario. Sólo una vez.</li>
+<li>Vista de acceso a la codificación y a la exportacion de los CMBD</li>
+<li>Se han añadido nuevos elementos (columnas) de información para que muestren la información solicitad incluida la información del triaje</li>
+<li>Se ha preparado el servicio según acuerdos para la presentacion del censo de pacientes requerido por Indigo</li>
+<li>Se ha configurado para que sólo se cree el número de HC en aquellos centros que disponga de la configuración y que además el paciente tenga al menos un proceso en dicho centro</li>
+<li>Se ha documentado la información y los servicios para la migración de episodios</li>
+<li>Correcciones en la gestión de exclusividad del proceso de análisis de cobertura</li>
+<li>Se amplia la funcionalidad de análisis de cobertura para gestionar acuerdos obligatorios de tipo no forfait</li>
+<li>Se corrige un problema en la validación de exclusividades en análisis de cobertura de tipo forfait</li>
+<li>Se añade soporte de creación de albaranes vacios de tipo NO forfait cuando se cumplen las condiciones requeridas</li>
+<li>Creación de un instalador específico para servicios a medida para Ibermática
+</li>
+</ul>
+
+<h2>07/01/2014: Version 2.1.14027.1</h2>
+<ul>
+<li>Se incluyen las siguientes vistas base para diferentes perfiles</li>
+<li>Aparecen todas las vistas a las que se configure por defecto para todos los roles de un mismo usuario. Sólo una vez.</li>
+<li>Vista de acceso a la codificación y a la exportacion de los CMBD</li>
+<li>Se han añadido nuevos elementos (columnas) de información para que muestren la información solicitad incluida la información del triaje</li>
+<li>Se ha preparado el servicio según acuerdos para la presentacion del censo de pacientes requerido por Indigo</li>
+<li>Se ha configurado para que sólo se cree el número de HC en aquellos centros que disponga de la configuración y que además el paciente tenga al menos un proceso en dicho centro</li>
+<li>Se ha documentado la información y los servicios para la migración de episodios</li>
+<li>Correcciones en la gestión de exclusividad del proceso de análisis de cobertura</li>
+<li>Se añade soporte de creación de albaranes vacios de tipo NO forfait cuando se cumplen las condiciones requeridas</li>
+<li>Creación de un instalador específico para servicios a medida para Ibermática</li>
+
+<li>Modificación de la funcionalidad de la pantalla de formas de administración</li>
+<li>Modificación de la funcionalidad de la pantalla de clasificación de partes del cuerpo</li>
+<li>Modificación de la funcionalidad del addin de lectura de tarjetas sanitarias</li>
+<li>Modificación de la funcionalidad de la pantalla de formas de conceptos de partes del cuerpo</li>
+<li>Modificación de la funcionalidad de la pantalla de precauciones</li>
+<li>Ampliación de la entidades de albaran para soportar añadidos de albaranes manuales</li>
+<li>En el proceso de impresión de documentos, en caso de no tener asignado una impresora específica, se selecciona automáticamente la predeterinada</li>
+<li>Modificada la identificación de albaranes por su código en vez de por su identificador histórico en el proceso de análisis de cobertura</li>
+<li>Modificada la pantalla de selección de acuerdos para que no aparecezcan ahora los Acuerdos Assistenciales que se hayan deshabilitado en el su definición. 
+Además si el Episodio no tiene aseguradora seleccionada, al entrar en la pantalla de selección de acuerdos, la pestaña de Acuerdos de Aseguradora no se visualizará.</li>
+<li>Modificación de las restricciones de deshabilitado de un centro asistencial.</li>
+<li>Modificación de la funcionalidad de la pantalla de servicios dietéticos y complementos de servicios dietéticos para selección múltiple.</li>
+<li>Añadida la funcionalidad de selección de impresora predeterminada en preimpresos.</li>
+<li>Mejoras en el proceso de generación de albaranes.</li>
+<li>Añadida funcionalidad de agrupación de grupos de cargos similares en vista de análisis de cobertura.</li>
+<li>Añadida funcionalidad de agrupación de grupos de líneas albaranes generados similares en vista de análisis de cobertura.</li>
+<li>Añadida funcionalidad de agrupación de grupos de líneas albaranes generados similares en vista de facturación de albaranes.</li>
+<li>Añadido botón de limpieza en ventana de disponibilidades.</li>
+<li>Modificaciones en vistas de registro y admisión para incluir busquedas externas y por tarjeta sanitaria</li>
+<li>Incluidos controles adicionales sobre el cambio de estado de ubicaciones</li>
+<li>Modificación de vistas de contraindicaciones</li>
+<li>Incluidas vistas nuevas de histórico de interfaces y registro de sucesos</li>
+<li>Al hacer reposiciones de solicitudes de enfermeria, si estas no se sirve ninguna linea no se relacionan con la reposición para poder ser otra vez servidas o eliminadas.</li>
+<li>El botón de modificar albarán en la vista de albaranes se habilita una vez seleccionado el episodio del paciente y se ha dado permiso en el paso de albarán del proceso al que corresponde el episodio del paciente.</li>
+<li>En la vista de edición de albaranes añadir albaranes manuales desde menus desplegables en la barra de herramientas. </li>
+<li>En la vista de edición de albarnes se permitira borrar, si en el paso de albaranes del proceso correspondiente al episodio del paciente se permite borrar de albaranes, marcar como no facturable o facturables los albaranes.</li>
+<li>Se elimina la posibilidad de modificar albaranes generados en el analisis de cobertura.</li>
+<li>Los albaranes manuales se podra modificar codigo, nombre, descripcion, precio unitario, unidad, tipo de impuestos, descuentos.</li> 
+<li>En la edición de albarnes las columnas de costes inicialmente no aparecen pero habra un boton para mostrarlos si el usuario tiene permiso para verlos.</li>
+<li>Mejoras de visualización y usabilidad en la vista de edición de albaranes.</li>
+<li>En la vista de Estación diagnóstica y/o tratamiento mostrarar las solicitudes de ordenes medicas reservadas</li>
+<li>En la vista de Estación diagnóstica y/o tratamiento se ha añadido un boton para generar reservas de ordenes medicas.</li>
+</ul>
+
+<h2>27/02/2014: Version 2.1.14069.1</h2>
+<ul>
+<li>Busquedas por nº de historia (CHNumber) en registro.</li>
+<li>Definición filtros de procesos exclusivos. (Vista de edición de mapas de procesos)</li>
+<li>Aplicación de filtros de procesos exclusivos. (Vista de registro)</li>
+<li>Marcaje de duplicados en Vista de registro</li>
+<li>Gestión de búsqueda de fusionados por nº de historia en Vista de registro</li>
+<li>Optimización del guardado de episodios</li>
+<li>Optimización del guardado del alta de episodios.</li>
+<li>Gestión automática según configuración de proceso de los planes asistenciales del paciente en el alta.</li>
+<li>Proceso de abortar alta</li>
+<li>Gestión de plan asistencias en el proceso de alta.</li>
+<li>Optimizaciones en el proceso de alta.</li>
+<li>Añadida funcionalizad para abortar un alta.</li>
+<li>Mejorado soporte de selección de reglas de facturación</li>
+<li>Se ha incluido la posibilidad de confirmar la facturación e imprimir de forma directa en el proceso de facturación</li>
+<li>Se ha eliminado la presentación de ubicaciones deshabilitadas en la jerarquía de ubicaciones en la vista de disponibilidades</li>
+<li>Se ha añadido un nuevo estado mantenimiento que sustituye al anterior [Cancelado]</li>
+<li>Se ha corregido un problema en la selección de una ubicación recientemente liberada en el proceso de admisión</li>
+<li>Se ha añadido la posibilidad de bloquear habitaciones de forma múltiple</li>
+<li>Se muestra la clasificación de ubicaciones en todas las ubicaciones, tante en la vista de disponibilidades o en la jerarquía.</li>
+<li>Añadida la posibilidad de bloquear y desbloquear ubicaciones desde la vista de disponibilidades</li>
+<li>Se ha añadido el motivo de cambio de estado en la vista de disponibilidades</li>
+<li>Se ha añadido información contextual asociada a los recursos que amplía la información básica</li>
+</ul>
+
+
+<h2>10/03/2014: Version [En curso]</h2>
+<ul>
+
+</ul>
+</body>
+</html>

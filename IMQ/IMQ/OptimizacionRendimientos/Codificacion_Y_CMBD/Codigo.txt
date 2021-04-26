@@ -1,0 +1,290 @@
+MDSExportListViewPresenter.cs        
+		
+		private CustomerCodificationDTO[] GetMDSCustomerProcess(int[] careCenterIDs, int[] processChartIDs, BasicProcessStepsEnum selectedStep,
+            DateTime? FromDate, DateTime? ToDate, MixedCodificationStatusEnum codificationStatus, string transferReason, out bool maxRecordsExceded)
+        {
+            maxRecordsExceded = false;
+            if (processChartIDs == null || careCenterIDs == null) return null;
+
+            CustomerCodificationProxy proxy = ProxyManager.Get<CustomerCodificationProxy>();
+            try
+            {
+                CustomerCodificationDTO[] result = proxy.GetMDSCustomerCodification(processChartIDs,
+                        selectedStep, CommonEntities.StatusEnum.Closed, null, careCenterIDs, 0,
+                        (FromDate != null) ? FromDate.Value.Date : (DateTime?)null,
+                        (ToDate != null) ? ToDate.Value.Date.AddDays(1).AddMilliseconds(-10) : (DateTime?)null,
+                        transferReason, codificationStatus,
+                        out maxRecordsExceded);
+                proxy.Close();
+
+                return result;
+            }
+            catch
+            {
+                proxy.Abort();
+                throw;
+            }
+        }
+		
+CustomerCodificationBL.cs		
+		
+        public CustomerCodificationDTO[] GetMDSCustomerCodification(int[] processChartIDs,
+            BasicProcessStepsEnum step, CommonEntities.StatusEnum status,
+            int[] locations, int[] careCenterIDs, int assistanceServiceID,
+            DateTime? startDateTime, DateTime? endDateTime,
+            string transferReason, MixedCodificationStatusEnum codificationStatus,
+            out Boolean maxRecordsExceded)
+        {
+            maxRecordsExceded = false;
+            try
+            {
+                //AdministrativeConfigurationSection administrativeConfig = FrameworkConfigurationService<AdministrativeConfigurationSection>.GetSection("administrative") as AdministrativeConfigurationSection;
+                //int maxRows = administrativeConfig.EntitySettings.CustomerCodificationEntity.MaxRows;
+                //if (maxRows == 0) { maxRows = Int32.MaxValue; }
+
+                ////////////////////////////////////////////////////////////////////////////
+                ///
+                /// AQUI REVISAR CON ALBERTO PARA OPTMIZAR TODO LO QUE SE PUEDA
+                ///
+                ////////////////////////////////////////////////////////////////////////////
+
+                DataSet ds = _customerCodificationDA.GetMDSCustomerCodification(0, processChartIDs, step, status, locations,
+                    careCenterIDs, assistanceServiceID, startDateTime, endDateTime, transferReason, codificationStatus);
+                if ((ds != null)
+                    && ds.Tables.Contains(SII.HCD.Administrative.Entities.TableNames.CustomerCodificationTable)
+                    && (ds.Tables[SII.HCD.Administrative.Entities.TableNames.CustomerCodificationTable].Rows.Count > 0))
+                {
+                    CustomerCodificationDTOAdvancedAdapter ccaa = new CustomerCodificationDTOAdvancedAdapter();
+                    return ccaa.GetData(ds);
+                }
+                return null;
+            }
+            catch (Exception ex)
+            {
+                if (ExceptionPolicy.HandleException(ex, ExceptionPolicies.Service)) throw;
+                return null;
+            }
+        }	
+
+CustomerCodificationDA.cs	
+		
+        public DataSet GetMDSCustomerCodification(int maxRows, int[] processChartIDs,
+                BasicProcessStepsEnum step, CommonEntities.StatusEnum status,
+                int[] locations, int[] careCenterIDs, int assistanceServiceID,
+                DateTime? startDateTime, DateTime? endDateTime, string transferReason,
+                MixedCodificationStatusEnum codificationStatus)
+        {
+            try
+            {
+                return this.Gateway.ExecuteStoredProcedureDataSet("GetMDSCustomerCodification", 
+                    SII.HCD.Administrative.Entities.TableNames.CustomerCodificationTable,
+                    600,
+
+                    new StoredProcInParam("Step", DbType.Int32, (step != null) ? (int)step : (int)BasicProcessStepsEnum.None),
+                    new StoredProcInParam("Status", DbType.Int32, (status != null) ? (int)status : (int)CommonEntities.StatusEnum.None),
+                    new StoredProcInParam("AssistanceService", DbType.Int32, assistanceServiceID),
+                    new StoredProcInParam("CodificationStatus", DbType.Int32, (codificationStatus != null) ? (int)codificationStatus : (int)MixedCodificationStatusEnum.None),
+                    new StoredProcInParam("TransferReason", DbType.String, transferReason),
+
+                    new StoredProcInParam("StartDateTime", DbType.DateTime, startDateTime),
+                    new StoredProcInParam("EndDateTime", DbType.DateTime, endDateTime),
+
+                    new StoredProcInTVPIntegerParam("TVPProcessChartIDs", processChartIDs),
+                    new StoredProcInTVPIntegerParam("TVPLocations", locations),
+                    new StoredProcInTVPIntegerParam("TVPCareCenterIDs", careCenterIDs)
+                    );
+            }
+            catch (Exception ex)
+            {
+                if (ExceptionPolicy.HandleException(ex, ExceptionPolicies.DataAccess)) throw;
+                else return null;
+            }
+        }
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+CustomerCodificationDTOAdvancedAdapter
+
+
+using System;
+using SII.HCD.Common.Entities;
+using SII.HCD.Misc;
+using CommonEntities = SII.HCD.Common.Entities;
+
+namespace SII.HCD.Administrative.Entities
+{
+    public class CustomerCodificationDTOAdvancedAdapter
+        : EntityAdvancedAdapterBase<CustomerCodificationDTO>
+    {
+        #region Fields
+        //Here add dependent entities adapters 
+        #endregion
+
+        #region Constructors
+        public CustomerCodificationDTOAdvancedAdapter() : base(TableNames.CustomerCodificationTable) { }
+
+        public CustomerCodificationDTOAdvancedAdapter(string tableName) : base(tableName) { }
+        #endregion
+
+        #region EntityAdvancedAdapterBase members
+        public override CustomerCodificationDTO GetInfo(
+            System.Data.DataRow row, System.Data.DataSet dataset)
+        {
+            if (row == null)
+                return null;
+				
+	SET @sSql = 'SELECT DISTINCT' + @NewLine
+	+ 'CP.[ID] CustomerProcessID,CP.[ProcessChartID], CP.[CareCenterID], 
+	
+	CODCPSR.CurrentStepID CustomerCodificationID,' + @NewLine
+	+ 'CP.[CustomerEpisodeID], LEVCPSR.CurrentStepID CustomerLeaveID,CP.[CustomerID], CP.[PersonID], OCC.[Name] CareCenterName,' + @NewLine
+	+ 'PC.[Name] ProcessChartName,ET.[Description] EpisodeTypeName,ISNULL(CRCH.CHNumber,C.CHNumber) CHNumber,' + @NewLine
+	+ 'SD.Sex, P.FirstName,P.LastName,P.LastName2,SD.BirthDate,SD.DeathDateTime,' + @NewLine
+	+ 'CE.EpisodeNumber CustomerEpisodeNumber,CE.StartDateTime CustomerEpisodeDate,' + @NewLine
+	
+	+ 'ISNULL((SELECT TOP 1 ER.FullySpecifiedName' + @NewLine
+            return new CustomerCodificationDTO(
+                row["CustomerProcessID"] as int? ?? 0,
+                row["ProcessChartID"] as int? ?? 0,
+                row["CareCenterID"] as int? ?? 0,
+                row["CustomerCodificationID"] as int? ?? 0,
+                row["CustomerEpisodeID"] as int? ?? 0,
+                row["CustomerLeaveID"] as int? ?? 0,
+                row["CustomerID"] as int? ?? 0,
+                row["PersonID"] as int? ?? 0,
+                row["CareCenterName"] as string ?? string.Empty,
+                row["ProcessChartName"] as string ?? string.Empty,
+                row["EpisodeTypeName"] as string ?? string.Empty,
+                row["CHNumber"] as string ?? string.Empty,
+                SII.HCD.BackOffice.Entities.SexEnumNames.GetName(GetEnum<SII.HCD.BackOffice.Entities.SexEnum>(row["Sex"])),
+                row["FirstName"] as string ?? string.Empty,
+                row["LastName"] as string ?? string.Empty,
+                row["LastName2"] as string ?? string.Empty,
+                DateUtils.GetAgeDes(row["BirthDate"] as DateTime? ?? null, null),
+                row["DeathDateTime"] as DateTime? ?? null,
+                row["CustomerEpisodeNumber"] as string ?? string.Empty,
+                row["CustomerEpisodeDate"] as DateTime? ?? DateTime.Now,
+                row["EpisodeReason"] as string ?? string.Empty,
+                row["AssistanceService"] as string ?? string.Empty,
+                row["Origin"] as string ?? string.Empty,
+                row["CustomerEpisodeEndDate"] as DateTime? ?? null,
+                row["EpisodeLeaveReason"] as string ?? string.Empty,
+                row["DischargeAssistanceService"] as string ?? string.Empty,
+                row["DischargeFacilityName"] as string ?? string.Empty,
+                GetEnum<CommonEntities.StatusEnum>(row["CustomerCodificationStatus"]),
+                row["PrimaryDiagnosis"] as string ?? string.Empty,
+                row["HasOtherDiagnosis"] as bool? ?? false,
+                row["IncludePreviousEpisodes"] as bool? ?? false,
+                row["HasMorphologies"] as bool? ?? false,
+                row["HasSurgicalProcedures"] as bool? ?? false,
+                row["HasObstetricProcedures"] as bool? ?? false,
+                row["HasOtherProcedures"] as bool? ?? false,
+                row["PrimaryMDC"] as string ?? string.Empty,
+                row["HasOtherMDCs"] as bool? ?? false,
+                row["PrimaryDRG"] as string ?? string.Empty,
+                row["HasOtherDRGs"] as bool? ?? false,
+                row["PrimaryDRGWeight"] as double? ?? 0,
+                row["RelatedCost"] as decimal? ?? 0,
+                row["Explanation"] as string ?? string.Empty,
+                row["RegistrationDateTime"] as DateTime? ?? null,
+                row["ConfirmedDateTime"] as DateTime? ?? null,
+                row["ExportedDateTime"] as DateTime? ?? null
+            );
+        }
+        #endregion
+    }
+}
+
+
+namespace SII.HCD.Common.Entities
+{
+    public abstract class EntityAdvancedAdapterBase<EntityName> where EntityName : class, new()
+    {
+        public EntityAdvancedAdapterBase(string mainTableName);
+
+        protected Dictionary<string, object> AdapterRepository { get; set; }
+        public string TableName { get; }
+
+        public virtual EntityName GetByID(int id, DataSet dataset);
+        protected EntityAdapter GetChildAdapter<EntityAdapter, Entity>(string mainTableName = null)
+            where EntityAdapter : EntityAdvancedAdapterBase<Entity>, new()
+            where Entity : class, new();
+        public virtual EntityName[] GetData(DataSet dataset);
+        public virtual EntityName[] GetData(DataRow[] rows, DataSet dataset);
+        protected virtual EnumType GetEnum<EnumType>(object value);
+        protected virtual EnumType GetEnum<EnumType>(object value, EnumType defaultValue);
+        public virtual EntityName[] GetFilteredData(Predicate<DataRow> rowFilter, DataSet dataset);
+        public virtual EntityName GetFirst(Predicate<DataRow> rowFilter, DataSet dataset);
+        public virtual EntityName GetFirstOrDefault(Predicate<DataRow> rowFilter, DataSet dataset);
+        public abstract EntityName GetInfo(DataRow row, DataSet dataset);
+        protected virtual DataRow[] GetMainRows(DataSet dataset);
+    }
+}
+	
+	
+SUPER	
+        internal List<Models.TipoAsunto> Catalogo(string t384_destipo, Nullable<int> t384_idtipo, Nullable<byte> t384_orden, byte nOrden, byte nAscDesc)
+        {
+            Models.TipoAsunto oTipoAsunto = null;
+            List<Models.TipoAsunto> lst = new List<Models.TipoAsunto>();
+            IDataReader dr = null;
+
+            try
+            {
+                SqlParameter[] dbparams = new SqlParameter[5] {
+                    Param(enumDBFields.T384_destipo, t384_destipo),
+                    Param(enumDBFields.T384_idtipo, t384_idtipo),
+                    Param(enumDBFields.T384_orden, t384_orden),
+                    Param(enumDBFields.nOrden, nOrden),
+                    Param(enumDBFields.nAscDesc, nAscDesc)
+                };
+
+                dr = cDblib.DataReader("SUP_TIPOASUNTO_C", dbparams);
+                while (dr.Read())
+                {
+                    oTipoAsunto = new Models.TipoAsunto();
+                    oTipoAsunto.T384_destipo = Convert.ToString(dr["T384_destipo"]);
+                    oTipoAsunto.T384_idtipo = Convert.ToInt32(dr["T384_idtipo"]);
+                    oTipoAsunto.T384_orden = Convert.ToByte(dr["T384_orden"]);
+
+                    lst.Add(oTipoAsunto);
+
+                }
+                return lst;
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                if (dr != null)
+                {
+                    if (!dr.IsClosed) dr.Close();
+                    dr.Dispose();
+                }
+            }
+        }	
+		
+		
+----------------
+
+public static SqlDataReader ......
+
+	dr = SqlHelper.ExecuteSqlDataReader("SUP_CAMPOPT_CAT", aParam);		
+	
+
+
+
+            if (customerCodification.Morphologies != null)
+            {
+                List<CodedMorphologyEntity> Morphologies = new List<CodedMorphologyEntity>();
+                foreach (CodedMorphologyEntity morphology in customerCodification.Morphologies)
+                {
+                    if (!((morphology.EditStatus.Value == StatusEntityValue.Deleted) || (morphology.EditStatus.Value == StatusEntityValue.NewAndDeleted)))
+                    {
+                        morphology.EditStatus.Reset();
+                        Morphologies.Add(morphology);
+                    }
+                }
+                customerCodification.Morphologies = Morphologies.ToArray();
+            }	

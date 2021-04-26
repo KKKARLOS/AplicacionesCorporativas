@@ -1,0 +1,29 @@
+﻿.container {
+    visibility: hidden;
+}
+
+.sinPadding {
+    padding:0;
+}
+
+@media only screen and (min-width: 992px) {
+
+    .fieldset{
+        margin: 0 -1.5em 0.5em 0 !important;
+    }
+
+    #datosTarea{
+        display: -webkit-box; 
+    }
+
+    #desTarea{
+        width: 670px!important;
+    }
+}
+
+@media only screen and (min-width: 1200px) {    
+    
+    #desTarea{
+         width: 850px!important;
+    }
+}

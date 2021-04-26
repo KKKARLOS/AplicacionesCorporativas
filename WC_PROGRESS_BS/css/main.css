@@ -1,0 +1,300 @@
+﻿/**********************************ESTILOS GENÉRICOS************************************************/
+body
+{          
+    padding-top: 40px;
+    background: #f2f2f2;
+}
+    
+textarea {
+    resize: none;
+}
+
+.mostrar {
+    display:block;
+}
+.ocultar {
+    display:none;
+}
+
+.input-xs {    
+    height: 20px !important;    
+    font-size:12px;
+}
+
+/*Anchos porcentuales*/
+.WP26 {
+    width:26%;
+}
+
+/*Paddings*/
+.pad10 {
+    padding:10px !important;
+}
+
+.MT5 {
+    margin-top:5px;
+}
+
+
+/*Sobreescribir fila seleccionada genérica de Bootstrap*/
+.list-group-item.active, .list-group-item.active:hover, .list-group-item.active:focus {
+    background-color:#D8D8D8 !important;
+    color: #000;
+    border-color:#FFF;
+}
+
+
+/*CAJA SOMBREADA PARA TEXTOS*/
+.cajaTexto {
+    border: 1px solid #d4d4d4;
+    border-radius: 10px;
+    padding: 0 5px 5px 5px;
+    color: #666;
+    -webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.175);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.175);   
+}
+
+.cajaH5 {
+    border: 1px solid #ccc;
+    padding: 10px;
+    color: #666;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/*Sobreescribimos la clase Badge de Bootstrap. Siempre hacerlo aquí, en el main*/
+.badge.badgeRojo {
+     background-color: rgb(195, 15, 15);
+}
+
+
+
+/*Estilos para los Fieldset y Legend*/
+.fieldset {
+    border: 1px solid #ddd !important;
+    padding: 0 1.4em 0.4em 1.4em !important;
+    margin: 0 0 0.5em 0 !important;
+    -webkit-box-shadow:  0px 0px 0px 0px #000;
+            box-shadow:  0px 0px 0px 0px #000;
+}
+
+legend.fieldset {
+    font-size: 12px !important;
+    font-weight: bold !important;
+    text-align: left !important;
+    width:auto;
+    padding:0 10px;
+    border-bottom:none;
+    margin-bottom:5px !important;
+}
+/*FIN Estilos para los Fieldset y Legend*/
+
+
+/**********************************FIN ESTILOS GENÉRICOS**************************************************/
+
+
+.bck-primary{
+    background-color: #428bca;
+    color:#fff;
+}
+
+
+.bck-ibermatica{
+    background-color: #428bca;
+    color:#fff;
+    border-color:#428bca;
+    border:1px solid #428bca;
+}
+
+/*Ajustes para el control Jquery DATATABLE (Estaba desalineado)*/
+ table.dataTable thead th, table.dataTable thead td {
+    padding: 10px 10px;
+}
+
+
+/************************************ESTILOS CABECERA MENU*******************************************************/
+#logoIbermatica {
+  margin-right: 18px;
+  margin-top:6px;
+}
+ /*Color de la fuente de la barra de navegación*/
+.navbar-inverse .navbar-nav > li > a {
+    color: #E2E0E0 !important;
+}
+
+ul.nav.navbar-nav {
+    margin:5px 0 0 30px;        
+}
+/*Barra de migas y cerrar sesión*/
+.fixedBar {
+    background-color: #f2f2f2;
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+    margin-top: 20px;
+    padding-left: 10px;
+}
+
+a#cerrarSesion {
+    cursor:pointer;
+    color:#428bca;
+}
+
+
+/*Creamos un pequeño espacio entre los icon fonts y el texto del navbar*/
+nav .fa {
+    margin-right: 4px;
+}
+
+/*Para agregar subniveles de Dropdown (por defecto Bootstrap no lo ofrece)*/
+.dropdown-submenu{position:relative;}
+.dropdown-submenu>.dropdown-menu{top:0;left:80%;margin-top:-6px;margin-left:-1px;-webkit-border-radius:0 6px 6px 6px;-moz-border-radius:0 6px 6px 6px;border-radius:0 6px 6px 6px;}
+.dropdown-submenu:hover>.dropdown-menu{display:block;}
+.dropdown-submenu>a:after{display:block;content:" ";float:right;width:0;height:0;border-color:transparent;border-style:solid;border-width:5px 0 5px 5px;border-left-color:#cccccc;margin-top:5px;margin-right:-10px;}
+.dropdown-submenu:hover>a:after{border-left-color:#ffffff;}
+.dropdown-submenu.pull-left{float:none;}.dropdown-submenu.pull-left>.dropdown-menu{left:-100%;margin-left:10px;-webkit-border-radius:6px 0 6px 6px;-moz-border-radius:6px 0 6px 6px;border-radius:6px 0 6px 6px;}
+/*Fin Subniveles de Dropdown*/
+
+/**Migas de pan*/
+/*nav #divmenu a, span#CabeceraMenu_SiteMap1 {
+    cursor:pointer;
+}*/
+
+nav #divmenu a {
+    cursor:pointer;
+}
+
+a:not([href]) {
+    cursor:default;
+    text-decoration:none;
+    color:#000;
+}
+/**Migas de pan*/
+
+/*******************FIN ESTILOS CABECERA MENU**********************************************/
+/*********************ESTILOS ALERT BOOTSTRAP**********************************************/
+.bsAlert {
+    position: fixed;
+    top: 45%;
+    text-align:center;
+    z-index: 9999;
+}
+
+.bsAlert .close {
+    margin-left:10px;
+}
+/******************FIN ESTILOS ALERT BOOTSTRAP**********************************************/
+
+/*Fuentes*/
+@font-face {
+    font-family: 'Scriptina';
+    src: url('../fonts/firmaEvaluado/Scriptina.eot');
+    src: url('../fonts/firmaEvaluado/Scriptina.eot?#iefix') format('embedded-opentype'), url('../fonts/firmaEvaluado/Scriptina.woff2') format('woff2'), url('../fonts/firmaEvaluado/Scriptina.woff') format('woff'), url('../fonts/firmaEvaluado/Scriptina.ttf') format('truetype'), url('../fonts/firmaEvaluado/Scriptina.svg#Scriptina') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'FeliX';
+    src: url('../fonts/firmaEvaluador/FeliX.eot');
+    src: url('../fonts/firmaEvaluador/FeliX.eot?#iefix') format('embedded-opentype'), url('../fonts/firmaEvaluador/FeliX.woff2') format('woff2'), url('../fonts/firmaEvaluador/FeliX.woff') format('woff'), url('../fonts/firmaEvaluador/FeliX.ttf') format('truetype'), url('../fonts/firmaEvaluador/FeliX.svg#FeliX') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.fontSizeCabeceras {
+    font-size: 16px;    
+    font-weight: 500;    
+}
+
+/*Fuentes*/
+
+/***************************************Anchos********************************************/
+.W80 {width:80px;}
+.W160 {width:160px;}
+.W240 {width:240px;}
+.W250 {width:250px;}
+.W280 {width:280px;}
+.W320 {width:320px;}
+.W350 {width: 350px;}
+/***************************************Anchos********************************************/
+
+.H90 {
+    height:90px;
+}
+
+
+
+/**************************************Márgenes*******************************************/
+.ML50 {margin-left: 50px;}
+.ML60 {margin-left: 60px;}
+
+.MR13{margin-right:13px;}
+.MR100{margin-right:100px;}
+
+
+.MT-5 {margin-top:-5px;}
+.MT-10 {margin-top: 10px;}
+.MT-20 {margin-top: 20px;}
+.MB-10 {margin-bottom: 10px;}
+.MB-20 {margin-bottom: 20px;}
+.MT25 {margin-top:25px;}
+
+
+
+
+
+.margenCabecerasOrdenables {
+    margin-left:10px;   
+}
+
+/**************************************Márgenes*******************************************/
+
+/**************************************Paddings*******************************************/
+.PL5 {padding-left:5px;}
+.PL10 {padding-left:10px;}
+/**************************************Paddings*******************************************/
+
+/******************************Divider del cabecera menu**********************************/
+#CabeceraMenu_ulPrincipal div.divider {
+    margin:5px 10px;
+}
+/******************************Divider del cabecera menu**********************************/
+
+.table.table-striped {
+    border:1px solid #428bca;
+}
+
+
+/*COLORES*/
+.verde {
+    color:green;
+}
+
+.azul {
+    color:blue;
+}
+
+.hrColor {
+    border-top: 1px solid #3f7abc !important
+}
+
+.filaPar {
+    background-color:#428bca;
+}
+
+.spanFiltros {
+    display:inline-block;
+    margin-top:3px;
+}
+
+
+/*Listas duales padding*/
+.dual-list.list-left li {
+    padding:10px 5px 10px 25px !important;
+}
+            
+.dual-list.list-right li {
+    padding:10px 15px !important;
+}

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode url="~" title="" description="">
+    <siteMapNode title="Archivo" roles="*" >
+      <siteMapNode url="~/Capa_Presentacion/Archivo/Reconexion/Default.aspx" roles="DIS" title="Reconexión" description="Opción de reconectarse como otro usuario" />
+      <siteMapNode url="javascript:salir();" roles="*" title="Salir" description="Salir de la aplicación" />
+    </siteMapNode>
+    <siteMapNode title="Gestión" roles="I,C,F,M,U">
+      <siteMapNode url="~/Capa_Presentacion/Gestion/MisLineas/Default.aspx" roles="U" title="Mis líneas" description="Mis líneas" />
+      <siteMapNode title="Inventario" roles="C,I">
+        <siteMapNode url="~/Capa_Presentacion/Gestion/Inventario/Busqueda/Default.aspx" roles="C,I" title="Mantenimiento" description="" />
+        <siteMapNode url="~/Capa_Presentacion/Gestion/Inventario/ReasignLineaResponsable/Default.aspx" roles="C" title="Reasignación de líneas" description="Reasignación de líneas" />
+        <siteMapNode url="~/Capa_Presentacion/Gestion/Inventario/Cuadre/Default.aspx" roles="C" title="Cuadre" description="" />
+      </siteMapNode>
+      <siteMapNode title="Facturación" roles="F">
+        <siteMapNode url="~/Capa_Presentacion/Gestion/Facturacion/CargaFichero/Default.aspx" roles="F" title="Carga" description="" />
+        <siteMapNode url="~/Capa_Presentacion/Gestion/Facturacion/ComunicacionConsumo/Default.aspx" roles="F" title="Comunicación de consumos" description="" />
+        <siteMapNode url="~/Capa_Presentacion/Gestion/Facturacion/PrevisualizaFactura/Default.aspx" roles="X" title="Previsualización de facturas-líneas" description="" />
+      </siteMapNode>
+      <siteMapNode url="~/Capa_Presentacion/Gestion/Medios/Default.aspx" roles="M,I" title="Medios" description="Medios" />
+    </siteMapNode>
+    <siteMapNode title="ADM" roles="A">
+      <siteMapNode title="Mantenimientos" roles="*">
+        <siteMapNode url="~/Capa_Presentacion/ADM/Mantenimientos/Figuras/Default.aspx" roles="*" title="Figuras" description="" />
+        <siteMapNode url="~/Capa_Presentacion/ADM/Mantenimientos/Medios/Default.aspx" roles="*" title="Medios" description="" />
+        <siteMapNode url="~/Capa_Presentacion/ADM/Mantenimientos/TipoTarjeta/Default.aspx" roles="*" title="Tipos de tarjeta" description="" />
+          <siteMapNode url="~/Capa_Presentacion/ADM/Mantenimientos/Avisos/Default.aspx" roles="X" title="Avisos de correo" description="" />
+        <siteMapNode url="~/Capa_Presentacion/ADM/Mantenimientos/TarifaDeDatos/Catalogo/Default.aspx" roles="*" title="Perfil-Tarifa" description="" />
+      </siteMapNode>
+    </siteMapNode>
+
+  </siteMapNode>
+</siteMap>

@@ -1,0 +1,46 @@
+﻿.TitCal
+{
+    text-align:center;
+    width:25px;
+}
+.TDCal
+{
+    text-align:center;
+    cursor: pointer;
+}
+.TDCalSel
+{
+    text-align:center;
+    cursor: pointer;
+    BACKGROUND-COLOR: #9EBBCB;
+}
+.textoCalFinde
+{
+    text-align:center;
+    cursor: pointer;
+    COLOR: #F14E4E;
+}
+.textoCal
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    COLOR: #315D6B;
+    FONT-FAMILY: Arial, Helvetica, sans-serif;
+    TEXT-DECORATION: none;
+}
+.textoCalFes
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    COLOR: #F14E4E;
+    FONT-FAMILY: Arial, Helvetica, sans-serif;
+    TEXT-DECORATION: none;
+}
+.Horas
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 8px;
+    COLOR: #000000;
+    FONT-FAMILY: Arial, Helvetica, sans-serif;
+    TEXT-DECORATION: none
+}

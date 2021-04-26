@@ -1,0 +1,321 @@
+﻿/*Se sobreescribe la propiedad position de la clase sr-only ya que debido a su position absolute, en safari 
+  al expandir todas las líneas, las no visibles por la altura de la tabla ocupan espacio en el navegador y 
+  genera un scroll de pantalla.*/
+.sr-only {
+  position:fixed;
+}
+
+.container {
+    visibility:hidden;
+}
+
+.cebreaTareaHard{
+	background-color: #ffff84;
+}
+.cebreaTareaSoft{
+	background-color: #ffffc6;
+}
+.cebreaConsumoHard{
+	background-color: #e0fce2;
+}
+.cebreaConsumoSoft{
+	background-color: #f2fbf3;
+}
+.fa-info-circle {
+    color: #adadad;
+    font-size: 20px;
+}
+.ibox-title {
+    border-style: none solid none;
+    padding: 0px 15px 7px;
+}
+table tbody tr.selected {
+    background-color: #e8e5e5 !important;
+}
+/*Criterios de selección  #d9edf7 */
+/*
+#txtDesde {
+    width: 77px;
+    text-align: center;
+    display: inline;
+}
+
+#txtHasta {
+    width: 77px;
+    text-align: center;
+    margin-left: 6px;
+    display: inline;
+}
+*/
+#selModo {
+    width: 100%;
+}
+
+#icoBomb {
+    vertical-align: bottom;
+}
+
+/*Header fixed de la tabla de la pantalla*/
+/*Alto del contenedor de la tabla (tbody)*/
+
+table {
+    table-layout:fixed;
+}
+
+.div-table-content {
+    overflow-y: auto;
+    max-height: 62vh;
+    overflow-x: hidden;
+    /*width: 1200px;*/
+}
+
+#tblDatos {
+    margin-bottom: 0;     
+}
+
+#tablaCabecera, #tablaPie {
+    margin-bottom: 0;
+    /*width: 1200px;*/ 
+}
+
+/*COLUMNA 1*/
+.cabeceraFija > tr > td:nth-child(1) {
+    width: 82%;
+    float: left;
+}
+
+.cabeceraFija > tr > th:nth-child(1) {
+    width: 82%;
+    float: left;
+}
+
+
+/*COLUMNA 2*/
+.cabeceraFija > tr > td:nth-child(2) {
+    width: 9%;
+    float: left;
+}
+
+.cabeceraFija > tr > th:nth-child(2) {
+    width: 9%;
+    float: left;
+}
+
+/*COLUMNA 3*/
+.cabeceraFija > tr > td:nth-child(3) {
+    width: 9%;
+    float: left;
+}
+
+.cabeceraFija > tr > th:nth-child(3) {
+    width: 9%;
+    float: left;
+}
+
+/*FIN HEADER FIXED*/
+
+.fk-elementosvacios:after {
+    content: '\00A0';
+}
+
+#pieTabla:hover {
+    background-color: #d9edf7;
+}
+
+.celdaTxtTotal {
+    padding-top: 3px !important;
+    padding-bottom: 2px !important;
+    font-weight:bold;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+}
+
+.celdaTotal {
+    padding-top: 3px !important;
+    padding-bottom: 2px !important;
+    text-align: right;
+    font-weight:bold;
+}
+.table-bordered {
+    border: 0px solid #ddd;
+}
+table-no-border > thead > tr > th,
+.table-no-border > thead > tr > td,
+.table-no-border > tbody > tr > td,
+.table-no-border > tfoot > tr > td,
+.table-no-border > tbody,
+.table-no-border > thead,
+.table-no-border > tfoot {
+    border-top: none !important;
+    border-bottom: none !important;
+}
+
+/*.linea:hover, .fk-label:hover, .fk-FC:hover {
+    cursor: pointer;
+}*/
+
+.linea:hover, .fk-FC:hover {
+    cursor: pointer;
+}
+
+/*Clases jerarquia de proyectos*/
+#niveles{
+    margin-left: 10px;
+}
+
+.Nivel1 {
+    vertical-align: middle;
+}
+
+.Nivel2 {
+    vertical-align: middle !important; 
+    padding-left: 15px !important; 
+}
+
+.Nivel3 {
+    vertical-align: middle !important;  
+    padding-left: 20px !important; 
+}
+
+.Nivel4 {
+    vertical-align: middle !important;
+    padding-left: 25px !important;
+}
+
+.Nivel5 {
+    vertical-align: middle !important; 
+    padding-left: 30px !important; 
+}
+
+.FC-C {
+    vertical-align: middle !important; 
+    padding-left: 60px !important; 
+}
+#indicator{
+	display:none;
+}
+#btnExportExcel {
+    margin-bottom: 5px;
+    margin-right: 0px;
+}
+#btnGuia {
+    margin-top: 5px;
+}
+#btn-fondo {
+    background-color: #FFFFFF;
+}
+
+@media only screen and (max-width: 992px) and (min-width: 768px) {
+    .form-horizontal .control-label {
+        text-align: right;
+    }
+
+}   
+
+@media only screen and (max-width: 768px) {
+    .col-sm-offset-0 {
+        margin-left: 0px;
+    }
+    .form-group .col-xs-12 label,  .form-group .col-xs-12 a {
+        margin-top: 0px;
+        margin-bottom: 3px;
+    }   
+
+}
+@media only screen and (max-width: 992px) {
+	@media (max-width: 992px) {   
+		#indicator{
+			display: block;
+		}
+
+        /*COLUMNA 1*/
+        .cabeceraFija > tr > td:nth-child(1) {
+            width: 60%;
+            float: left;
+        }
+
+        .cabeceraFija > tr > th:nth-child(1) {
+            width: 60%;
+            float: left;
+        }
+
+
+        /*COLUMNA 2*/
+        .cabeceraFija > tr > td:nth-child(2) {
+            width: 20%;
+            float: left;
+        }
+
+        .cabeceraFija > tr > th:nth-child(2) {
+            width: 20%;
+            float: left;
+        }
+
+        /*COLUMNA 3*/
+        .cabeceraFija > tr > td:nth-child(3) {
+            width: 20%;
+            float: left;
+        }
+
+        .cabeceraFija > tr > th:nth-child(3) {
+            width: 20%;
+            float: left;
+        }
+	}
+}
+
+/*@media (max-height: 838px) {
+    .div-table-content {
+        max-height: 50vh;
+    }
+}
+
+@media (max-height: 752px) {
+    .div-table-content {
+        max-height: 45vh;
+    }
+}
+
+@media (max-height: 705px) {
+    .div-table-content {
+        max-height: 40vh;
+    }
+}
+
+@media (max-height: 628px) {
+    .div-table-content {
+        max-height: 20vh;
+    }
+}*/
+
+@media (max-height: 920px) {
+    .div-table-content {
+        max-height: 55vh;
+    }
+}
+
+@media (max-height: 838px) {
+    .div-table-content {
+        max-height: 50vh;
+    }
+}
+
+@media (max-height: 752px) {
+    .div-table-content {
+        max-height: 45vh;
+    }
+}
+
+/*@media (max-height: 703px) {
+    .div-table-content {
+        max-height: 45vh;
+    }
+}*/
+
+@media (max-height: 628px) {
+    .div-table-content {
+        max-height: 35vh;
+    }
+}
+

@@ -1,0 +1,109 @@
+﻿var IB = IB || {};
+IB.SUPER = IB.SUPER || {};
+
+var nIndiceProy = -1;
+var iNumFilas = 0, iAvisoAct = 0;
+var dat;
+
+$(document).ready(function () {
+
+    //Mostramos la foto del usuario
+    if (imgFotoBase64 != "") {
+        if (IB.SUPER.FichaUsuario) {
+            var o = IB.SUPER.FichaUsuario;
+            o.init();
+        }
+    }
+
+    //Habilitamos los botones de acceso basándonos en el menu de navegación (roles website.map)
+    if (IB.SUPER.BotoneraAcceso) {
+        var o = IB.SUPER.BotoneraAcceso;
+        o.init();
+    }
+
+    //Comprobamos si se ha cargado el fichero novedades.js   
+    if (IB.SUPER.Novedades) {
+        var n = IB.SUPER.Novedades;
+        n.init();
+    }
+
+    //25/05/2015 Petición de Javi Asenjo. Para verificar si la petición de entrada a SUPER viene del CURVIT viejo
+    //en cuyo caso se le redirije a la pantala de CVT->MiCV
+    if (typeof hdnVieneDeCurvitViejo != "undefined") {
+        if (hdnVieneDeCurvitViejo == "S") {
+            var c = IB.SUPER.Curvit;
+            c.abrirCV();
+        }
+    }
+
+    //TODO REVISAR mensajes informativos
+    if (sMensajeMMOFF != "") {
+        if (sRP != "" || sIG != "") IB.bserror.bsAlert("info", "Mensaje informativo", sMensajeMMOFF);
+        else IB.bserror.bsAlert("info", "Mensaje informativo", sMensajeMMOFF);
+    }
+
+    //Si hay avisos, los mostramos y permitimos conservarlos o eliminarlos
+    if (IB.SUPER.Avisos) {
+        var a = IB.SUPER.Avisos;
+        a.init();
+    }
+
+
+    ObtenerAccionesPendientesV2();
+
+    //todo revisar acciones pendientes
+    //Si hay filas de acciones pendientes y el sUsuarioSeleccionado es disntinto de ""
+    //if (sUsuarioSeleccionado != "" && $I("tblLinksAP") != null && $I("tblLinksAP").rows.length > 0) {        
+    //    $I("AccPen_divAP").style.display = "block";        
+    //} else if (sUsuarioSeleccionado == "") {
+    //    //Llamada ajax para obtener acciones pendientes del usuario
+    //    getAccionesPendientes();
+    //}
+
+    ////todo revisar (en Super puedes tener varios usuarios, si es así... debes elegir con cual entrar)
+    //if (bMultiusuario && sUsuarioSeleccionado == "0") {
+    //    mostrarProcesando();
+    //    var strEnlace = strServer + "Capa_Presentacion/Inicio/getUsuario.aspx";
+    //    modalDialog.Show(strEnlace, self, sSize(1010, 240))
+    //        .then(function (ret) {
+    //            if (ret != null) {
+    //                location.href = strServer + "Default.aspx?iu=" + codpar(ret);
+    //                //return; //El return detiene el location.href en Chrome.
+    //            }
+    //            else {
+    //                if (!bBienvenidaMostrada)
+    //                    modalDialog.Close(window, null);
+    //            }
+    //        });
+    //    window.focus();
+    //    ocultarProcesando();
+    //}
+    //else {
+    //    //Mostrar mensaje de bienvenida
+    //    if (!bBienvenidaMostrada && bMostrarMensajeBienvenida) {
+            
+    //        //llamar a mostrar mensaje de bienvenida
+    //        if (sMB != "M") setTimeout("mostrarOcultarPestVertical()", nTiempoMensajeBienvenida * 1000);
+    //    }
+    //}
+    
+    //FIN todo revisar acciones pendientes
+})
+
+function ObtenerAccionesPendientesV2() {
+    $.ajax({
+        url: "Default.aspx/ObtenerAccionesPendientesV2",
+        type: "POST",
+        async: true,
+        contentType: "application/json; charset=utf-8",
+        dataType: "json",
+        timeout: 20000,
+        success: function (result) {
+            if (JSON.parse(result.d).length > 0)
+                $("#spanNumAcciones").html(JSON.parse(result.d).length);
+        },
+        error: function (ex, status) {
+            //TODO MOSTRAR ERROR
+        }
+    });
+}

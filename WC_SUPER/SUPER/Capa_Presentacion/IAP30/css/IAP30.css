@@ -1,0 +1,854 @@
+﻿html { font-size: 62.5%; }
+
+/*Aumento del resalte del teclado*/
+/*:focus{
+    outline: 2.5px solid #23527C !important;
+    outline-color: #23527C !important;
+    border-radius: 3px !important;    
+}*/
+
+body {
+    padding-top: 4rem;
+    background: #f2f2f2;
+    font-size: 1.3rem !important;
+    font-family: Arial;
+    
+}
+
+.modal-open {
+    position: fixed;
+    width: 100%;
+}
+
+/*Listas*/
+
+.modal-body .list-group-item.activa:hover {
+    background-color: #d9edf7 !important;
+}
+
+/*Clases daterangepicker*/
+.daterangepicker {
+    font-size: 1em;
+    background-color: #e9e9e9 !important;
+}
+
+.calendar {
+    border:solid 1px #e9e9e9;
+}
+
+.daterangepicker .daterangepicker_input i {
+    top: 4px !important;
+}
+
+.calendar-table .table-condensed {
+    table-layout: inherit;
+    border-collapse: separate;
+    border-spacing: 1px;
+}
+
+.month {
+    text-transform: capitalize
+}
+
+.applyBtn, .applyBtn:focus, .applyBtn:active {
+    background-color:#333 !important;
+    border-color:#333 !important;
+}
+
+.applyBtn:hover {
+    background-color:#474747 !important;
+    border-color:#333 !important;
+}
+
+.daterangepicker td, .daterangepicker th {
+    border-radius: 0 !important;
+    width:auto !important;
+    border:1px solid #c5c5c5 !important;
+    padding: 1px !important;
+    margin: 1px !important;
+    background-color: #f9f9f9;
+}
+
+.calendar-table tr:first-child th {
+    background-color: #e9e9e9;    
+    border-spacing: 0 !important;
+}
+
+.calendar-table tr:nth-child(2) th {
+    background-color: #fff;    
+    border: 0 !important;
+}
+
+.off {
+    visibility: hidden;
+}
+
+.today {
+    background-color: #fffa90 !important;
+    color:#000 !important;
+}
+
+.today:hover {
+    background-color: #dbd783 !important;
+}
+
+.daterangepicker td.active, .daterangepicker td.active:hover {
+    background-color: #007fff !important;
+    color: #fff !important;
+}
+
+.calendar-table .fa-chevron-left::before {
+    content: "\f137";
+}
+
+.calendar-table .fa-chevron-right::before {
+    content: "\f138";
+}
+
+.daterangepicker.ltr .calendar.left .calendar-table {
+    padding-right: 4px !important;
+}
+/*Fin clases daterangepicker*/
+
+.ibox-content, .blockquote {
+    padding-bottom: 0px !important;
+}
+
+.modal-header {
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+/*Lo coge de SUPER.css*/
+/*.modal-body-sn {
+    position: relative;
+    padding: 80px;
+}
+
+.modal-header {
+    color: #525252;
+    background-color: #e6e6e6;
+    border-bottom-color: grey;
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.modal-footer {
+    background-color: #e6e6e6;
+    border-top-color: grey;
+    -webkit-border-bottom-left-radius: 5px;
+    -webkit-border-bottom-right-radius: 5px;
+    -moz-border-radius-bottomleft: 5px;
+    -moz-border-radius-bottomright: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}*/
+
+.marco {
+    min-height: 20px;
+    padding: 19px;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+}
+
+.marcoBorde {
+    min-height: 20px;
+    padding: 19px;
+    border: 1px solid #e3e3e3;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+}
+
+.oculto {
+    text-indent: -999em;
+}
+
+.ocultar {
+    display:none;
+}
+
+/*Ocultar información de pantalla pero de forma que esté visible para los lectores de pantalla*/
+.hiddenStructure {
+    OVERFLOW: hidden; 
+    BORDER-TOP: medium none; 
+    HEIGHT: 1px; 
+    BORDER-RIGHT: medium none; 
+    WIDTH: 1px; 
+    BACKGROUND: none transparent scroll repeat 0% 0%; 
+    BORDER-BOTTOM: medium none; 
+    POSITION: absolute; 
+    PADDING-BOTTOM: 0px; 
+    PADDING-TOP: 0px; 
+    PADDING-LEFT: 0px; 
+    LEFT: -11000px; 
+    MARGIN: -1px 0px 0px -1px; 
+    BORDER-LEFT: medium none; 
+    DISPLAY: block; 
+    PADDING-RIGHT: 0px
+}
+
+
+/*Anula las propiedades de label*/
+.fk-label{
+    display: initial;
+    max-width: inherit;
+    margin-bottom: 0;
+    font-weight: normal;
+}
+
+/*Color de la fuente de la barra de navegación*/
+.navbar-inverse .navbar-nav > li > a {
+    color: #222 !important;
+}
+
+/*Para agregar subniveles de Dropdown*/
+.dropdown-submenu {
+    position: relative;
+}
+
+    .dropdown-submenu > .dropdown-menu {
+        top: 0;
+        left: 100%;
+        margin-top: -6px;
+        margin-left: -1px;
+        -webkit-border-radius: 0 6px 6px 6px;
+        -moz-border-radius: 0 6px 6px 6px;
+        border-radius: 0 6px 6px 6px;
+    }
+
+    .dropdown-submenu:hover > .dropdown-menu {
+        display: block;
+    }
+
+    .dropdown-submenu > a:after {
+        display: block;
+        content: " ";
+        float: right;
+        width: 0;
+        height: 0;
+        border-color: transparent;
+        border-style: solid;
+        border-width: 5px 0 5px 5px;
+        border-left-color: #cccccc;
+        margin-top: 5px;
+        margin-right: -10px;
+    }
+
+    .dropdown-submenu:hover > a:after {
+        border-left-color: #000;
+    }
+
+    .dropdown-submenu.pull-left {
+        float: none;
+    }
+
+        .dropdown-submenu.pull-left > .dropdown-menu {
+            left: -100%;
+            margin-left: 10px;
+            -webkit-border-radius: 6px 0 6px 6px;
+            -moz-border-radius: 6px 0 6px 6px;
+            border-radius: 6px 0 6px 6px;
+        }
+/*Fin Subniveles de Dropdown*/
+
+/*No dejamos redimensionar txtareas*/
+.txtArea {
+    resize: none;
+}
+
+nav #divmenu a {
+    cursor: pointer;
+}
+
+a:not([href]) {
+    cursor: default;
+    text-decoration: none;
+    color: #000;
+}
+
+a:not([href]).collapse-link {
+    cursor: pointer;
+}
+
+div.divider {
+    margin: 5px 10px;
+}
+
+.cebreada {
+    background-color: #f9f9f9;
+}
+
+    /*.cebreada:hover {
+        background-color: #e6e6e6 !important;
+    }*/
+
+.txtIcono{
+     font-size: 1.2rem;
+     font-weight: bold;
+     color:#23527c;
+}
+
+.navbar-nav > li > a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    line-height: 20px;
+}
+
+/*Creamos un pequeño espacio entre los nombres de la cabecera del menú y su flecha*/
+.caret {
+    margin-left: 6px;
+}
+
+/*Estilos para las tablas de proyectos*/
+
+.fa-stack-linea {
+    height: 21px !important;
+    width: 21px !important;
+    margin-right: 5px;
+}
+
+.fa-diamond-verde {
+    color: green !important;
+    font-weight: bold !important;
+}
+
+.fa-diamond-rojo {
+    color: red !important;
+    font-weight: bold !important;
+}
+
+.fa-diamond-naranja {
+    color: orange !important;
+    font-weight: bold !important;
+}
+
+.fa-diamond-gris {
+    color: grey !important;
+    font-weight: bold !important;
+}
+
+.fa-diamond-amarillo {
+    color: #e0e004 !important;
+    font-weight: bold !important;
+}
+
+.circuloLinea {
+    color: #23527C !important;
+    height: 21px !important;
+    width: 21px !important;
+}
+
+    .circuloLinea:before {
+        left: 5px;
+        position: absolute;
+        top: -8px;
+    }
+
+
+.letraLinea {
+    font-size: 1.2rem !important;
+    color: white !important;
+    left: 2px !important;
+    position: absolute !important;
+    top: -8px !important;
+}
+
+.fa-diamond{
+    padding-left: 5px;
+}    
+
+/*Estilos para los input de formularios*/
+form label{
+    font-weight:normal;
+    margin-bottom:10px;
+}
+
+/*Header fixed común a todas las tablas*/
+
+/*HEADER FIXED*/
+.header-fixed {
+    width: 100%;  
+}
+
+    .header-fixed > thead,
+    .header-fixed > tbody,
+    .header-fixed > tfoot,
+    .header-fixed > thead > tr,
+    .header-fixed > tbody > tr,
+    .header-fixed > tfoot > tr,
+    .header-fixed > thead > tr > th,
+    .header-fixed > tbody > tr > td,
+    .header-fixed > tfoot > tr > td {
+        display: block;
+    }
+
+
+
+thead, tfoot {
+    width: 100%; /* scrollbar is average 1em/16px width, remove it from thead width */
+}
+
+.header-fixed > tbody > tr:after,
+.header-fixed > thead > tr:after,
+.header-fixed > tfoot > tr:after {
+    content: ' ';
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+
+/*Más tamaños para font-awesome*/
+
+.fa-1-5x {
+    font-size: 1.5em;
+    /*font-size: 2.4rem;*/
+
+}
+
+.fa-2-5x {
+    /*font-size: 2.5em;*/
+    font-size:4rem;
+}
+
+/*Arreglos de padding y margin*/
+
+.no-padding {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+}
+
+.no-padding-left {
+    padding-left: 0 !important;
+}
+
+.no-padding-right {
+    padding-right: 0 !important;
+}
+
+.no-padding-top {
+    padding-top: 0 !important;
+}
+
+.no-padding-left-xs {
+    padding-left: 15px;
+}
+
+.no-padding-right-xs {
+    padding-left: 15px;
+}
+
+.no-padding-left-md {
+    padding-left: 0 !important;
+}
+
+.no-margin {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.margin-bottom {
+    margin-bottom: 10px;
+}
+
+.margin-top {
+    margin-top: 10px;
+}
+
+.text-left {
+    text-align: left !important;
+}
+
+.txtLink {
+    color: #23527c;
+}
+
+.txtLink:hover {
+    cursor: pointer;
+}
+
+.txtLinkU {
+    color: #23527c;
+    text-decoration: underline;
+}
+
+.txtLinkU:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.link {
+    color: #337ab7;
+}
+
+.link:hover {
+    color: #23527c;
+    cursor: pointer;
+}
+
+.linkU {
+    color: #337ab7;
+}
+
+.linkU:hover {
+    color: #23527c;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+abbr[title] {
+    border-bottom: none !important;
+    cursor: none !important;
+}
+
+.table-no-border>thead>tr>th, 
+.table-no-border>tbody>tr>th, 
+.table-no-border>tfoot>tr>th, 
+.table-no-border>thead>tr>td, 
+.table-no-border>tbody>tr>td, 
+.table-no-border>tfoot>tr>td,
+.table-no-border>tbody,
+.table-no-border>thead,
+.table-no-border>tfoot{
+  border-top: none !important; 
+  border-bottom: none !important; 
+}
+
+.fk-elementosvacios:after {
+    content: '\00A0';
+}
+
+/*Selector de profundidad del arbol*/
+.fa-square-1 { 
+    transform: scale(0.5,0.5); 
+    vertical-align: bottom;
+    margin-bottom: -6px;
+    color: black !important;
+}
+
+.fa-square-2 { 
+    transform: scale(0.5,1); 
+    margin-bottom: -3px;
+    vertical-align: bottom;
+    color: black !important;
+}
+
+.fa-square-3 { 
+    transform: scale(0.5,1.5); 
+    margin-bottom: -1px;
+    vertical-align: bottom;
+    color: black !important;
+}
+
+.fa-square-4 { 
+    transform: scale(0.5,2); 
+     margin-bottom: 2px;
+    vertical-align: bottom;
+    color: black !important;
+}
+.fa-square-5 { 
+    transform: scale(0.5,2.3); 
+     margin-bottom: 2px;
+    vertical-align: bottom;
+    color: black !important;
+}
+.nivelVerde
+{
+    color:#59ad4c !important;
+    background-color:#59ad4c;
+}
+.nivelGris
+{
+    color:#dbd9d9 !important;
+    background-color:#dbd9d9;
+}
+
+.btn-blanco {
+    background: #FFFFFF;
+    border-color: #FFFFFF;
+}
+
+.btn-blanco:hover,  .btn-blanco:active, .btn-blanco:focus, .btn-blanco:target {
+    border-color: #FFFFFF !important;
+    outline:0 !important;
+}
+
+.btn-fondo {
+    background: #F2F2F2;
+    border-color: #F2F2F2;
+}
+/*Reset de Pseudoclases*/
+#nivel1:hover, #nivel2:hover, #nivel3:hover, #nivel4:hover,
+#nivel1:focus, #nivel2:focus, #nivel3:focus, #nivel4:focus,
+#nivel1:active, #nivel2:active, #nivel3:active, #nivel4:active,
+#nivel1:visited, #nivel2:visited, #nivel3:visited, #nivel4:visited,
+#nivel1:link, #nivel2:link, #nivel3:link, #nivel4:link 
+{
+    outline:none;
+    background-color: #FFFFFF;        
+}
+
+.fa-file-excel-o {
+    color: #3c763d;
+}
+
+.fa-file-excel-o:hover {
+    color: #375438;
+    cursor: pointer;
+}
+
+/*Cambio de tamaño de fuente para h2*/
+
+h1 {
+    font-size: 18px;
+}
+
+h2 {
+    font-size: 18px;
+}
+
+/*Cambio de color en los elementos a para que el contraste sea accesible*/
+
+a {
+    color: #23527c;
+}
+
+/*Modificamos el alto de las cabeceras del datatable*/
+.dataTables_wrapper .dataTables_scrollHead table.dataTable thead tr th {
+    padding-top: 3px !important;
+    padding-bottom: 3px !important;    
+}
+
+/*.dataTables_wrapper .dataTables_scrollHead table.dataTable thead tr th:nth-child(1) { border-right:1px solid;}*/
+.dataTables_wrapper.no-footer .dataTables_scrollBody {border-bottom: 1px solid #DDD !important;}
+
+table.dataTable tbody tr.selected {
+    background-color: #d9edf7 !important;
+}
+
+table.dataTable tbody tr.selected>.sorting_1 {
+    background-color: #d9edf7 !important;
+}
+
+
+/*Estilos popover*/
+.popover-title {
+    background-color: #d9edf7;
+}
+
+.popover{
+    max-width: 80%; /* Max Width of the popover (depending on the container!) */
+}
+
+/*Datepicker*/
+.ui-datepicker {
+    z-index:10000!important;
+}
+
+/*MEDIA QUERIES*/
+
+@media only screen and (min-width : 768px) {
+    /*Hacemos la barra más pequeña*/
+    ul.nav.navbar-nav {
+        margin-left: 30px;
+        height: 40px;
+    }
+
+    .navbar-nav > li > a {
+        padding-top: 10px;
+    }
+
+    .dropdown {
+        height: 40px;
+    }
+   
+}
+
+@media only screen and (min-width : 768px) and (max-width : 992px) {
+    .form-horizontal .control-label {
+        text-align: left;
+    }
+    
+}
+
+/*Responsive para movil*/
+@media only screen and (max-width : 767px) {
+
+    nav #divmenu a {
+        color: #000;
+    }
+
+    .dropdown-submenu > a:after {
+        border-left-color: #000;
+    }
+
+    .dropdown-submenu:hover > a:after {
+        border-left-color: #000;
+    }
+
+    .navbar-header {
+    }
+
+    #logoSuper {
+        width: 88px;
+        height: auto;
+    }
+
+    #textoSuper {
+        margin-top: 0;
+        font-size: 1.2rem;
+    }
+
+    #textoUsuario {
+        margin-left: 20px;
+        margin-top: 0;
+        font-size: 1.2rem;
+    }
+
+    #logoIbermatica {
+        float: left;
+        width: 100px;
+        height: auto;
+        width: 88px;
+        height: auto;
+    }
+
+    .divlogoIbermatica {
+        float: left;
+    }
+
+    #textoFecha {
+        font-size: 1.2rem;
+        margin-left: 20px;
+        margin-top: 0;
+        width: 100%;
+    }
+
+    .fixedBar {
+        margin-top: 15px;
+        font-size: 1rem;
+    }
+
+    /*Estilos para las tablas stacktable*/
+    .st-head-row-main {
+        color: #fff;
+        background-color: #337ab7;
+        text-align:center;
+    }
+
+    .st-head-row {
+        text-align:center;
+    }
+
+    .margin-bottom-xs {
+        margin-bottom: 15px;
+    }
+    
+    .no-padding-xs {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }    
+
+    .no-padding-left-xs {
+        padding-left: 0 !important;
+    }
+
+    .no-padding-right-xs {
+        padding-right: 0 !important;
+    }
+
+    .no-padding-left-md {
+        padding-left: 15px;
+    }
+
+    .text-center-xs {
+        text-align: center;
+    }
+
+    .ibox-content, .blockquote {
+        padding-bottom: 20px !important;
+    }
+    
+}
+
+/*Responsive para movil*/
+@media only screen and (min-width : 992px) {
+
+    .margin-bottom-sm {
+        margin-bottom: 15px;
+    }
+
+    .no-padding-sm {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }    
+
+    .no-padding-left-sm {
+        padding-left: 0 !important;
+    }
+
+    .no-padding-right-sm {
+        padding-right: 0 !important;
+    }
+
+    .text-right-sm {
+        text-align: right;
+    }
+}
+
+/*Responsive para movil*/
+@media only screen and (max-width : 992px) {
+
+    .margin-bottom-xs-sm {
+        margin-bottom: 15px;
+    }
+
+    .no-padding-xs-sm {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }    
+
+    .no-padding-left-xs-sm {
+        padding-left: 0 !important;
+    }
+
+    .no-padding-right-xs-sm {
+        padding-right: 0 !important;
+    }
+
+    .text-centert-xs-sm {
+        text-align: center;
+    }
+}
+
+/*Responsive para movil*/
+@media only screen and (max-width : 1200px) {
+
+    .margin-bottom-xs-sm-md {
+        margin-bottom: 15px;
+    }
+
+    .no-padding-xs-sm-md {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }    
+
+    .no-padding-left-xs-sm-md {
+        padding-left: 0 !important;
+    }
+
+    .no-padding-right-xs-sm-md {
+        padding-right: 0 !important;
+    }
+}
+
+.dataTables_scrollHeadInner{padding-left: 0px;}

@@ -1,0 +1,106 @@
+﻿body {
+}
+
+.inline{
+    display: table-cell;
+    padding-right:10px;
+}
+
+.inline{
+    display: table-cell;
+    padding-right:10px;
+}
+
+.cabecera {
+    background-color: #337ab7;
+    color: #fff;
+    text-align: center;
+}
+
+.centrado{
+    text-align:center;
+}
+
+#botonesAsunto {
+    float: right;
+}
+
+#botonesAccion {
+    float: right;
+}
+
+.botonTabla {
+    display: inline;
+    font-size: 18px;
+}
+
+.botonTabla:hover {
+    cursor: pointer;
+}
+
+/*Cambios para que en phone parezca un menú inferior*/
+@media (max-width: 768px) {
+    #pieTarea {
+        float: none;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        background: #222;
+        width: 100%;
+        border-top: 1px solid #337ab7;
+        text-align: center;
+        z-index:10000;
+    }
+
+    .btn-default-lite {
+        color: #f2f2f2;
+        border-color: transparent;
+        background-color: transparent;
+    }
+
+    .fa :not(fa-diamond) {
+        color: #fff;
+    }
+
+    .btn-default-lite:hover .fa {
+        color: #000;
+    }
+
+    /*Reverse de icono font awesome*/
+
+    .fa-share-square-o-rev:before {
+        content: "\f045";
+    }
+
+    .fa-share-square-o-rev {
+        -moz-transform: scaleX(-1);
+        -o-transform: scaleX(-1);
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+        filter: FlipH;
+        -ms-filter: "FlipH";
+    }
+
+    #divSalir {
+        margin-left: 20%;
+    }
+
+     .txtId{
+    width:20%;
+    }
+    .txtDes{	
+    width: 78%;
+    }   
+
+     /*Estilos para las tablas stacktable*/   
+
+    .st-key{
+        background-color:#e6e6e6;
+        text-align:left;
+        width:25%;
+    }
+
+    .st-val{
+        text-align:left;
+    }
+}

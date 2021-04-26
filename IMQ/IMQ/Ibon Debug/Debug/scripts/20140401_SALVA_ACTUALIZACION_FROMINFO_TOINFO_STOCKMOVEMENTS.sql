@@ -1,0 +1,1 @@
+UPDATE StockMovement SET ToLocationID=FromLocationID, ToInfo=FromInfo, FromLocationID=ToLocationID, FromInfo=ToInfo WHERE MovementType=5 AND FromLocationID>0

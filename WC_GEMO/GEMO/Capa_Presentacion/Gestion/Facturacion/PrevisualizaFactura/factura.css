@@ -1,0 +1,53 @@
+.fondoPapel
+{
+    BACKGROUND-IMAGE: url(../../../../images/papel.gif);
+}
+.bordet
+{
+	BORDER-TOP: #5894ae 1px solid; 
+}
+.bordel
+{
+	BORDER-LEFT: #5894ae 1px solid; 
+}
+.bordelr
+{
+	BORDER-LEFT: #5894ae 1px solid; 
+	BORDER-RIGHT: #5894ae 1px solid; 
+}
+.bordelrb
+{
+	BORDER-LEFT: #5894ae 1px solid; 
+	BORDER-RIGHT: #5894ae 1px solid; 
+	BORDER-BOTTOM: #5894ae 1px solid;	
+}
+.bordeltb
+{
+	BORDER-LEFT: #5894ae 1px solid; 
+	BORDER-TOP: #5894ae 1px solid; 
+	BORDER-BOTTOM: #5894ae 1px solid;		
+}
+.bordeltb2
+{
+	BORDER-TOP: #5894ae 2px solid; 
+	BORDER-LEFT: #5894ae 2px solid; 
+	BORDER-BOTTOM: #5894ae 2px solid;		
+}
+.bordes
+{
+	BORDER-LEFT: #5894ae 1px solid; 
+	BORDER-TOP: #5894ae 1px solid; 
+	BORDER-RIGHT: #5894ae 1px solid; 
+	BORDER-BOTTOM: #5894ae 1px solid;	
+}
+.bordes2
+{
+	BORDER-LEFT: #5894ae 2px solid; 
+	BORDER-TOP: #5894ae 2px solid; 
+	BORDER-RIGHT: #5894ae 2px solid; 
+	BORDER-BOTTOM: #5894ae 2px solid;	
+}
+.negri
+{
+    font-weight: bold; 
+}

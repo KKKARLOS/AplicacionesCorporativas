@@ -1,0 +1,237 @@
+﻿
+.container {
+    width : 970px !important;
+}
+
+
+/*tr.active {
+    background-color: rgb(80,132,159);
+}*/
+
+#tblgetFicepi .list-group-item {
+    /*padding: 0 15px;*/
+}
+
+#modal-ficepi input {
+    width:150px;
+}
+
+table > thead > tr > th {
+    border-bottom:0 !important;
+}
+
+.tooltip-inner {    
+    display:inline;
+}
+
+#spanEvalAbierta {
+    margin-left:5px;
+    margin-right:10px;
+    color:#666;
+}
+
+#spanEvalEnCurso {
+    margin-left:5px;
+    color:#666;
+}
+
+a[data-toggle=popover]:hover {
+    text-decoration:none;
+}
+
+/*tblMiEquipo HEADER FIXED*/
+#tblMiEquipo.header-fixed {
+    width: 100%;
+}
+
+    #tblMiEquipo.header-fixed > thead,
+    #tblMiEquipo.header-fixed > tbody,
+    #tblMiEquipo.header-fixed > thead > tr,
+    #tblMiEquipo.header-fixed > tbody > tr,
+    #tblMiEquipo.header-fixed > thead > tr > th,
+    #tblMiEquipo.header-fixed > tbody > tr > td {
+        display: block;
+    }
+
+
+
+#tblMiEquipo thead {
+    width: 100%; /* scrollbar is average 1em/16px width, remove it from thead width */
+}
+
+#tblMiEquipo.header-fixed > tbody > tr:after,
+#tblMiEquipo.header-fixed > thead > tr:after {
+    content: ' ';
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+
+
+
+/*Alto del contenedor de la tabla (tbody)*/
+#tblMiEquipo.header-fixed > tbody {
+    overflow-y: auto;
+    height: 40vh;
+}
+
+/*COLUMNA 1*/
+
+#tblMiEquipo.header-fixed > tbody > tr > td:nth-child(1) {
+    width: 10%;
+    float: left;
+    height:29px;
+}
+
+#tblMiEquipo.header-fixed > thead > tr > th:nth-child(1) {
+    width: 10%;
+    float: left;
+    height:29px;
+}
+
+
+/*COLUMNA 2*/
+#tblMiEquipo.header-fixed > tbody > tr > td:nth-child(2) {
+    width: 90%;
+    float: left;
+}
+
+#tblMiEquipo.header-fixed > thead > tr > th:nth-child(2) {
+    width: 90%;
+    float: left;
+}
+
+
+/*FIN tblMiEquipo HEADER FIXED*/
+
+
+/*tablaSalidasEnTramite HEADER FIXED*/
+
+#tablaSalidasEnTramite.header-fixed {
+    width: 100%;
+}
+
+    #tablaSalidasEnTramite.header-fixed > thead,
+    #tablaSalidasEnTramite.header-fixed > tbody,
+    #tablaSalidasEnTramite.header-fixed > thead > tr,
+    #tablaSalidasEnTramite.header-fixed > tbody > tr,
+    #tablaSalidasEnTramite.header-fixed > thead > tr > th,
+    #tablaSalidasEnTramite.header-fixed > tbody > tr > td {
+        display: block;
+    }
+
+
+#tablaSalidasEnTramite thead {
+    width: 100%; /* scrollbar is average 1em/16px width, remove it from thead width */
+}
+
+#tablaSalidasEnTramite.header-fixed > tbody > tr:after,
+#tablaSalidasEnTramite.header-fixed > thead > tr:after {
+    content: ' ';
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+
+/*Alto del contenedor de la tabla (tbody)*/
+#tablaSalidasEnTramite.header-fixed > tbody {
+    overflow-y: auto;
+    height: 40vh;
+}
+
+
+
+/*COLUMNA 1*/
+
+#tablaSalidasEnTramite.header-fixed > tbody > tr > td:nth-child(1) {
+    width: 5%;
+    float: left;
+    
+}
+
+#tablaSalidasEnTramite.header-fixed > thead > tr > th:nth-child(1) {
+    width: 4.5%;
+    float: left;
+    
+}
+
+
+/*COLUMNA 2*/
+#tablaSalidasEnTramite.header-fixed > tbody > tr > td:nth-child(2) {
+    width: 35%;
+    float: left;
+}
+
+#tablaSalidasEnTramite.header-fixed > thead > tr > th:nth-child(2) {
+    width: 35%;
+    float: left;
+}
+
+/*COLUMNA 3*/
+#tablaSalidasEnTramite.header-fixed > tbody > tr > td:nth-child(3) {
+    width: 35%;
+    float: left;
+}
+
+#tablaSalidasEnTramite.header-fixed > thead > tr > th:nth-child(3) {
+    width: 35.5%;
+    float: left;
+}
+
+
+/*COLUMNA 4*/
+#tablaSalidasEnTramite.header-fixed > tbody > tr > td:nth-child(4) {
+    width: 15%;
+    float: left;
+}
+
+#tablaSalidasEnTramite.header-fixed > thead > tr > th:nth-child(4) {
+    width: 15%;
+    float: left;
+}
+
+
+/*COLUMNA 5*/
+#tablaSalidasEnTramite.header-fixed > tbody > tr > td:nth-child(5) {
+    width: 5%;
+    float: left;
+}
+
+#tablaSalidasEnTramite.header-fixed > thead > tr > th:nth-child(5) {
+    width: 5%;
+    float: left;
+}
+
+/*COLUMNA 6*/
+#tablaSalidasEnTramite.header-fixed > tbody > tr > td:nth-child(6) {
+    width: 5%;
+    float: left;
+}
+
+#tablaSalidasEnTramite.header-fixed > thead > tr > th:nth-child(6   ) {
+    width: 5%;
+    float: left;
+}
+
+
+/*FIN tablaSalidasEnTramite HEADER FIXED*/
+
+
+@media only screen and (max-device-height:768px){
+    #divpieTablaMiEquipo span, #divpietablaSalidas span {
+        font-size:0.9em;
+    }
+
+    #tblMiEquipo.header-fixed > tbody, #tablaSalidasEnTramite.header-fixed > tbody {
+        overflow-y: auto;
+        max-height: 320px;
+    }
+    
+}
+
+
+@media (min-width: 1200px) {
+    .container {
+        width:1170px !important;
+    }
+}

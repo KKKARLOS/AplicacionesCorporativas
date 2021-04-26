@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://ibWEBCORP01:102/SendPack" elementFormDefault="qualified" targetNamespace="http://ibWEBCORP01:102/SendPack" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://services.intranet.ibermatica/SendPack/SendPack.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/Message" />
+  <xs:element name="Saludar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sMensaje" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaludarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaludarResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Ficheros">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.microsoft.com/Message" name="Contenido" type="q1:StreamBody" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NombreFichero" nillable="true" type="xs:string" />
+  <xs:element name="sXml" nillable="true" type="xs:string" />
+  <xs:element name="CrearPaqueteIberDok">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sXML" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CrearPaqueteIberDokResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CrearPaqueteIberDokResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CrearPaqueteMulti">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sXML" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CrearPaqueteMultiResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CrearPaqueteMultiResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

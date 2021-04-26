@@ -1,0 +1,111 @@
+<%@ Master Language="#Language#" AutoEventWireup="true" CodeFile="#MasterPageName#.master.#Ext#" Inherits="#MasterPageName#" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head id="Head1" runat="server">
+    <title>#Title#</title>
+    <!--<meta http-equiv="Content-Type" content="text/html; charset=windows-1256"/>-->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta http-equiv="content-language" content="en" />
+    <meta name="robots" content="noindex,nofollow" />
+    
+    <script language="javascript" type="text/javascript" src="../Design/Custom/Js/jsValidation.js"></script>
+    <script type="text/javascript" language="javascript" src="../Design/Custom/js/jsToggle.js"></script>
+    <link href="../Design/Custom/css/cssCustom.css" rel="stylesheet" type="text/css" />
+    <link href="../Design/Custom/css/cssToggle.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+    <asp:ScriptManager ID="ScriptManager1" runat="server" EnablePartialRendering="true" />
+
+    <table width="100%">
+    
+    
+    <tr valign="top"><td align="center">
+     <!-- Start Header-->
+              
+   
+    <!-- Start End-->
+    </td></tr>
+   
+   <tr><td style="text-align: center">
+    <asp:LinkButton ID="lbtnLogout" runat="server" CausesValidation="False" OnClick="lbtnLogout_Click">Logout</asp:LinkButton>
+   </td></tr>
+   
+    <tr valign="top"><td align="right">
+    <!-- Start Content-->
+    <div>
+                        <asp:UpdatePanel ID="upContents" runat="server" UpdateMode="Conditional">
+                    <ContentTemplate>
+                        <asp:ContentPlaceHolder ID="cphWelcome" runat="server">
+                        </asp:ContentPlaceHolder>
+                        <asp:Panel ID="pnlContent" runat="server">
+                            <h2>
+                                <asp:ContentPlaceHolder ID="cphMainTitle" runat="server">
+                                </asp:ContentPlaceHolder>
+                            </h2>
+                            <!-- Start Content-->
+                            <table cellpadding="0" cellspacing="0" border="0" style="width: 100%">
+                                <tr>
+                                    <td style="text-align: center">
+                                        <asp:UpdateProgress ID="UpdateProgress1" runat="server">
+                                            <ProgressTemplate>
+                                                <img alt="Loading..." src="../Design/Custom/img/13-0.gif" />
+                                            </ProgressTemplate>
+                                        </asp:UpdateProgress>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="contentHeaderCls">
+                                        <asp:ContentPlaceHolder ID="cphContentHeader" runat="server" EnableViewState="False">
+                                        </asp:ContentPlaceHolder>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="contentCls" align="center">
+                                        <asp:ContentPlaceHolder ID="cphContent" runat="server">
+                                        </asp:ContentPlaceHolder>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="contentErrCls">
+                                        <asp:Panel ID="Panel1" EnableTheming="false" runat="server" CssClass="contentErrCls">
+                                            <asp:ContentPlaceHolder ID="cphContentError" runat="server" EnableViewState="False">
+                                            </asp:ContentPlaceHolder>
+                                        </asp:Panel>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="contentFooterCls">
+                                        <asp:ContentPlaceHolder ID="cphContentFooter" runat="server" EnableViewState="False">
+                                        </asp:ContentPlaceHolder>
+                                    </td>
+                                </tr>
+                            </table>
+                            <!-- End Content-->
+                        </asp:Panel>
+                    </ContentTemplate>
+                    <Triggers>
+                        <asp:AsyncPostBackTrigger ControlID="lbtnLogout" EventName="Click" />
+                    </Triggers>
+                </asp:UpdatePanel>
+
+    </div>
+    <!-- End Content-->
+    </td></tr>
+    
+     <tr><td align="center">
+     <!--Start Footer-->
+            <p> &copy; 2009 <a href="#">Web site </a>, All Rights Reserved &reg;</p>
+            <p> Design by <a href="http://www.CompanyName.com/">CompanyName</a></p>
+     <!--End Footer-->
+      </td></tr>
+      
+    </table>
+    </form>
+</body>
+</html>

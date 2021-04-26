@@ -1,0 +1,1 @@
+UPDATE AssistanceServiceType SET Encoder='' WHERE Encoder IS NULL
